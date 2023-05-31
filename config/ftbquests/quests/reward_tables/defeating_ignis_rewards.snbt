@@ -1,0 +1,11 @@
+{
+	icon: "cataclysm:ignitium_ingot"
+	id: "70E31EE2B9855831"
+	loot_size: 1
+	order_index: 2
+	rewards: [
+		{ item: "cataclysm:the_incinerator" }
+		{ item: "cataclysm:bulwark_of_the_flame" }
+	]
+	title: "Defeating Ignis Rewards"
+}

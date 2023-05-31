@@ -1,0 +1,70 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "neapolitan"
+	group: "2B2D0B6DE31DE8D3"
+	icon: "neapolitan:neapolitan_ice_cream"
+	id: "6BF5EA41CA24F285"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: ["You'll need ice for your ice cream, duh."]
+			hide: true
+			id: "6265AEBA4D3C0F38"
+			subtitle: "Ice ice baby!"
+			tasks: [{
+				count: 16L
+				id: "3B1434986AE3E22D"
+				item: "neapolitan:ice_cubes"
+				type: "item"
+			}]
+			title: "Get some Ice Cubes"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6265AEBA4D3C0F38"]
+			id: "38CE988AFE4F4A0B"
+			subtitle: "Ice cream."
+			tasks: [
+				{
+					id: "2A07C02370544444"
+					item: "neapolitan:vanilla_ice_cream"
+					type: "item"
+				}
+				{
+					id: "7000AA5F61B8F066"
+					item: "neapolitan:strawberry_ice_cream"
+					type: "item"
+				}
+				{
+					id: "66DA885FC66839E3"
+					item: "neapolitan:mint_ice_cream"
+					type: "item"
+				}
+				{
+					id: "723C05A2F7CDFDE8"
+					item: "neapolitan:banana_ice_cream"
+					type: "item"
+				}
+				{
+					id: "27096F2604791E5D"
+					item: "neapolitan:chocolate_ice_cream"
+					type: "item"
+				}
+				{
+					id: "68FE0DF535670122"
+					item: "neapolitan:adzuki_ice_cream"
+					type: "item"
+				}
+			]
+			title: "The Foundational Flavors of Ice Cream"
+			x: 0.0d
+			y: 1.5d
+		}
+	]
+	subtitle: ["Do I need to explain what desert is to you?"]
+	title: "Neapolitan"
+}

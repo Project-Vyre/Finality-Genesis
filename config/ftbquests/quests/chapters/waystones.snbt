@@ -1,0 +1,31 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "waystones"
+	group: "668E3EA3A7A91B79"
+	icon: "waystones:waystone"
+	id: "7B42218EE9C68EED"
+	order_index: 5
+	quest_links: [ ]
+	quests: [{
+		dependencies: ["4A691BB889286C89"]
+		description: [
+			"I have tuned the Waystones to use inverse XP cost."
+			""
+			"What that means is that short distance travelling is more expensive than far distance travel."
+		]
+		hide: true
+		id: "28B7627A51CCF476"
+		subtitle: "Pillars that allow you to teleport anywhere."
+		tasks: [{
+			id: "322A07AEC349A181"
+			item: "waystones:waystone"
+			type: "item"
+		}]
+		title: "Introduction to Waystones"
+		x: 0.0d
+		y: 0.0d
+	}]
+	subtitle: ["For far distance travelling! You'll probably enable cheats anyway."]
+	title: "Waystones"
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Light Blue Concrete",
+    "colors": [
+      "65cee1",
+      "2180b9"
+    ],
+    "ingredient": {
+      "item": "minecraft:light_blue_concrete"
+    },
+    "materialCount": 16384
+  }

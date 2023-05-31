@@ -1,0 +1,11 @@
+{
+  "name": "Andesite Alloy",
+  "colors": [
+    "b4c1b8",
+    "505351"
+  ],
+  "ingredient": {
+    "item": "create:andesite_alloy_block"
+  },
+  "materialCount": 16384
+}

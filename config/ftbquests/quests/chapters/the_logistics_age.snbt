@@ -1,0 +1,216 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "hexagon"
+	filename: "the_logistics_age"
+	group: "3C9BBC0C470CAD02"
+	icon: "create:sturdy_sheet"
+	id: "09172D2003D40DFB"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"4EBF56E85BA4465B"
+				"74D7B43284EC2A17"
+			]
+			id: "380BBE8807028E85"
+			tasks: [{
+				id: "4A6D87A1F2823BF6"
+				item: "create:powdered_obsidian"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["380BBE8807028E85"]
+			id: "21FC5AC2E0CDDE4B"
+			tasks: [{
+				id: "23410F6CB50DD939"
+				item: "create:railway_casing"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["21FC5AC2E0CDDE4B"]
+			id: "46B9DFD1359A3A4B"
+			tasks: [{
+				id: "086BAE2D00284A66"
+				item: "create:controls"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["21FC5AC2E0CDDE4B"]
+			id: "3C73E3B24ECBB5C0"
+			tasks: [{
+				id: "46F211C39C4EC2FF"
+				item: "create:track"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["21FC5AC2E0CDDE4B"]
+			id: "336CBBA29E835DE8"
+			tasks: [{
+				id: "6813A2CFE39EAAF9"
+				item: "create:track_station"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["21FC5AC2E0CDDE4B"]
+			id: "17D9C61828BFDFA5"
+			tasks: [{
+				id: "1AB241008D9ECB8D"
+				item: "create:track_signal"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["21FC5AC2E0CDDE4B"]
+			id: "40022FB548D45DF9"
+			tasks: [{
+				id: "56AD6E489E21C8FF"
+				item: "create:track_observer"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["16FA2F3F79C9F5B3"]
+			id: "24722EECAA289CB0"
+			tasks: [{
+				id: "76D0811DE15C6D7A"
+				item: "create:schedule"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["6BCDDC8851A0617E"]
+			id: "6CC2889C1007396B"
+			tasks: [{
+				id: "2A6FF44E0B94D0C3"
+				item: "create:portable_storage_interface"
+				type: "item"
+			}]
+			x: 3.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["2A1F1209201F3019"]
+			id: "58080704872BEA56"
+			tasks: [{
+				id: "38DD171448757286"
+				item: "create:portable_fluid_interface"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["46B9DFD1359A3A4B"]
+			id: "1276D71DA58225C8"
+			tasks: [{
+				id: "66959DF4F1F2B472"
+				item: "create:black_seat"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["46B9DFD1359A3A4B"]
+			id: "58E1B63247282586"
+			tasks: [{
+				id: "4F56073683B3020D"
+				item: "create:train_door"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["46B9DFD1359A3A4B"]
+			id: "00BF05444781B576"
+			tasks: [{
+				id: "7DD6B37122FC386D"
+				item: "create:train_trapdoor"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0194851298AADB65"]
+			id: "3BF2C329B98FCB15"
+			tasks: [{
+				id: "2C85B3958624BB81"
+				item: "create:nixie_tube"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["2E4CFF3F7A4508AB"]
+			id: "74D7B43284EC2A17"
+			tasks: [{
+				count: 2L
+				id: "4FCA30BE3138A4B6"
+				item: "create:crushing_wheel"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["770AD4193CC23EA3"]
+			id: "0FCDCC354E965F07"
+			tasks: [{
+				id: "35820763BF9EE6F9"
+				item: "create:item_vault"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["762E4AB54C6B5D42"]
+			id: "12C5A74E1E540E84"
+			tasks: [{
+				id: "364A6BF5AF55021F"
+				item: "create:fluid_tank"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0194851298AADB65"]
+			id: "2596644C3A4894E8"
+			tasks: [{
+				id: "232AC005C62840A9"
+				item: "create:display_board"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -1.5d
+		}
+	]
+	subtitle: ["Have fun designing your logistics network!"]
+	title: "Logistics Age"
+}

@@ -1,0 +1,274 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "cataclysm"
+	group: "6855847200ADBE3A"
+	icon: "cataclysm:altar_of_fire"
+	id: "44955FEF08EBF071"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["60980DE71E4A4AE5"]
+			description: ["Be prepared. I suggest Fire Resistance and Health Regeneration potions."]
+			icon: {
+				Count: 1b
+				id: "cataclysm:infernal_forge"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "64BA40D2E7AEA557"
+			shape: "square"
+			subtitle: "Defeat the Netherite Monstrosity and acquire the Infernal Forge."
+			tasks: [
+				{
+					icon: "minecraft:map"
+					id: "5A7FC957A3598262"
+					structure: "cataclysm:soul_black_smith"
+					type: "structure"
+				}
+				{
+					entity: "cataclysm:netherite_monstrosity"
+					icon: {
+						Count: 1b
+						id: "cataclysm:infernal_forge"
+						tag: {
+							Damage: 0
+						}
+					}
+					id: "374265EEE77EF98A"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Locate the Soul Forge."
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			icon: "minecraft:netherrack"
+			id: "60980DE71E4A4AE5"
+			shape: "square"
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				id: "45F025CD8082443F"
+				type: "dimension"
+			}]
+			title: "Visit the Nether"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["64BA40D2E7AEA557"]
+			description: ["Choose a reward afterwards, just to make it easier for you."]
+			icon: "cataclysm:the_incinerator"
+			id: "133B009011D05C41"
+			rewards: [{
+				exclude_from_claim_all: true
+				icon: "cataclysm:ignitium_ingot"
+				id: "2E2B7831ECF3B1F0"
+				table_id: 8134379311085213745L
+				type: "choice"
+			}]
+			shape: "square"
+			subtitle: "Defeat Ignis."
+			tasks: [
+				{
+					id: "1F4211FE4CACED2F"
+					structure: "cataclysm:burning_arena"
+					type: "structure"
+				}
+				{
+					entity: "cataclysm:ignis"
+					icon: "cataclysm:the_incinerator"
+					id: "1D0CC36DB1778C3E"
+					type: "kill"
+					value: 1L
+				}
+				{
+					count: 3L
+					id: "6AF86BF264049062"
+					item: "cataclysm:ignitium_ingot"
+					type: "item"
+				}
+			]
+			title: "Locate the Burning Arena."
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			icon: "minecraft:end_portal_frame"
+			id: "1A028F6237ABDEAC"
+			shape: "square"
+			tasks: [{
+				dimension: "minecraft:the_end"
+				id: "2F2F53C75FF1DEC2"
+				type: "dimension"
+			}]
+			title: "Visit the End"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3CAA949A0C1A688A"]
+			icon: "cataclysm:gauntlet_of_guard"
+			id: "718AC83467E9FB0F"
+			shape: "square"
+			subtitle: "Win the battle and earn the Gauntlet of Guard."
+			tasks: [
+				{
+					icon: "minecraft:map"
+					id: "50367CB432DA8705"
+					structure: "cataclysm:ruined_citadel"
+					type: "structure"
+				}
+				{
+					id: "2F4E862B622B316B"
+					item: "cataclysm:gauntlet_of_guard"
+					type: "item"
+				}
+			]
+			title: "The Ruined Citadel - Boss Fight"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			icon: "minecraft:nether_star"
+			id: "0747981239EC0227"
+			shape: "square"
+			subtitle: "It needs a heart of power to be activated."
+			tasks: [{
+				id: "21ECB42B533B1FD7"
+				item: "minecraft:nether_star"
+				type: "item"
+			}]
+			title: "Acquire the Heart of the Harbinger"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0747981239EC0227"]
+			icon: "minecraft:deepslate_bricks"
+			id: "656C306BB7FF0758"
+			shape: "square"
+			subtitle: "Give the Harbinger its heart, then prepare for the worst."
+			tasks: [
+				{
+					icon: {
+						Count: 1b
+						id: "explorerscompass:explorerscompass"
+						tag: { }
+					}
+					id: "71997328F6DFED11"
+					structure: "cataclysm:ancient_factory"
+					type: "structure"
+				}
+				{
+					icon: "extendedcrafting:flux_star"
+					id: "4878248FE14BB992"
+					observe_type: 0
+					timer: 0L
+					title: "Find the Harbinger"
+					to_observe: "cataclysm:the_harbinger"
+					type: "observation"
+				}
+				{
+					id: "4F974AC0C8A4B0CD"
+					item: "cataclysm:wither_assault_shoulder_weapon"
+					type: "item"
+				}
+			]
+			title: "Locate the Ancient Factory."
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1A028F6237ABDEAC"]
+			icon: "cataclysm:void_core"
+			id: "3CAA949A0C1A688A"
+			shape: "square"
+			subtitle: "Acquire the Void Core while you are still there."
+			tasks: [
+				{
+					icon: "minecraft:map"
+					id: "21C33F64C6E59917"
+					structure: "cataclysm:ruined_citadel"
+					type: "structure"
+				}
+				{
+					id: "1762BC34A7A087F4"
+					item: "cataclysm:void_core"
+					type: "item"
+				}
+			]
+			title: "Locate the Ruined Citadel."
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["656C306BB7FF0758"]
+			id: "6F799476F9E6E69A"
+			shape: "square"
+			subtitle: "Now bring harmony between your tools of destruction."
+			tasks: [{
+				id: "37DAC70D45F38E35"
+				item: "cataclysm:mechanical_fusion_anvil"
+				type: "item"
+			}]
+			title: "Create the Fusion Anvil"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6F799476F9E6E69A"]
+			id: "458D846250812A82"
+			shape: "square"
+			tasks: [{
+				id: "4EC290963C93788D"
+				item: {
+					Count: 1b
+					id: "cataclysm:void_forge"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6F799476F9E6E69A"]
+			id: "2DA38B93D5B1B658"
+			shape: "square"
+			tasks: [{
+				id: "220340EF1CB9034E"
+				item: "cataclysm:gauntlet_of_bulwark"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6F799476F9E6E69A"]
+			id: "5860DCD8D31E9DEA"
+			shape: "square"
+			tasks: [{
+				id: "67FF31CFCA37B51D"
+				item: "cataclysm:void_assault_shoulder_weapon"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+	]
+	subtitle: ["A lot of boss fights and indestructible tools!"]
+	title: "Cataclysm"
+}

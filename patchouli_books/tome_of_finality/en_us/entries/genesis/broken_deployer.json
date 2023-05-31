@@ -1,0 +1,15 @@
+{
+    "name": "Create Deployer Fix",
+    "icon": "create:deployer",
+    "category": "patchouli:genesis",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "$(4)As of modpack version 0.5.9b this entry no longer applies.$() You claim a chunk, and notice that Create's Deployers are not working inside your claimed chunk. How do you fix this? Thankfully, it's a simple fix. $(br2)Open your inventory, then click the FTB Teams icon which is located on the top left corner, next to the FTB Quests book."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Click that icon, then look for a Gear icon that is on the top right corner of that window. It should say Settings when your mouse is hovering over it. Do you see the setting labelled as $(d)Allied Fake Player Names/IDs$()? Click that, then add deployer to the list. JUST deployer, that's it. Then make sure you click the green checkmark on the very top right corner all the way through both menus. This should fix the problem, I tested it myself."
+        }
+    ]
+}

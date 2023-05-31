@@ -1,0 +1,153 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "storage_management"
+	group: "668E3EA3A7A91B79"
+	hide_quest_details_until_startable: true
+	icon: "minecraft:chest"
+	id: "32CC85BACCD9E454"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: ["You are free to utilize whatever storage methods you feel best suit your needs."]
+			hide: true
+			id: "1229F8883A381F07"
+			size: 1.5d
+			subtitle: "There are many options for storage. Sophisticated Storage, Backpacks, Iron Chests, etc."
+			tasks: [{
+				id: "6F00A5E440FE9504"
+				title: "Everything Storage checkmark"
+				type: "checkmark"
+			}]
+			title: "Introduction to Storage Management"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1229F8883A381F07"]
+			description: [
+				"The older Ender Storage mod had some issues when writing new recipes."
+				""
+				"To upgrade Ender Chest capacity, right click with either Ender Pearls or Ender Eyes."
+				""
+				"To bind Ender Chests or Ender Tanks, right click on them with a Diamond."
+			]
+			id: "537EBAE5E0065751"
+			subtitle: "These mods are made by shetiphian."
+			tasks: [{
+				id: "01F2D5DD6B7417BA"
+				item: "minecraft:ender_chest"
+				type: "item"
+			}]
+			title: "Introduction to EnderChests and EnderTanks"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["537EBAE5E0065751"]
+			id: "124DCED733F1F423"
+			tasks: [{
+				id: "34EA586AB3034F06"
+				item: {
+					Count: 1b
+					id: "enderchests:ender_chest"
+					tag: {
+						code: "000"
+						owner: "all"
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["537EBAE5E0065751"]
+			id: "42D2219C7161A185"
+			tasks: [{
+				id: "2DDDFDA5D66FF258"
+				item: {
+					Count: 1b
+					id: "endertanks:ender_tank"
+					tag: {
+						code: "000"
+						owner: "all"
+					}
+				}
+				type: "item"
+			}]
+			x: 1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["42D2219C7161A185"]
+			id: "2328A84037C87D9F"
+			tasks: [{
+				id: "4EEF4A44A98F2C6B"
+				item: {
+					Count: 1b
+					id: "endertanks:ender_bucket"
+					tag: {
+						code: "000"
+						mode: "normal"
+						owner: "all"
+					}
+				}
+				type: "item"
+			}]
+			x: 1.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["7B6F4E63BE0885B6"]
+			id: "72664E72295EA82F"
+			tasks: [{
+				id: "24DAC654429C17A4"
+				item: {
+					Count: 1b
+					id: "enderchests:ender_bag"
+					tag: {
+						code: "000"
+						open: 0b
+						owner: "all"
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["537EBAE5E0065751"]
+			id: "7B6F4E63BE0885B6"
+			tasks: [{
+				id: "1E2F4E2E6FFA5FD7"
+				item: {
+					Count: 1b
+					id: "enderchests:ender_pouch"
+					tag: {
+						open: 0b
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1229F8883A381F07"]
+			id: "0621698FB6DA317F"
+			tasks: [{
+				id: "230EA0E4CF27ED33"
+				item: "cloudstorage:guide_book"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+	]
+	subtitle: ["Organization is your best friend."]
+	title: "Storage Management"
+}

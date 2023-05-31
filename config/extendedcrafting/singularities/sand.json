@@ -1,0 +1,11 @@
+{
+    "name": "Sand",
+    "colors": [
+      "e3e0c0",
+      "ccbb8e"
+    ],
+    "ingredient": {
+      "item": "minecraft:sand"
+    },
+    "materialCount": 16777216
+  }

@@ -1,0 +1,16 @@
+{
+    "name": "Some Assembly Required",
+    "icon": "some_assembly_required:bread_slice",
+    "category": "patchouli:sustenance",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This entry is a work in progress. Juni Knytt has showcased some potentially game-breaking sandwiches. $(br2)Just to provide context, you can apply potion effects to your sandwiches... and each potion will be a separate layer on that sandwich. Can you imagine HOW USEFUL this is??"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "some_assembly_required:sandwiching_station",
+            "text": "$(li)Step 1: Make Bread. $(li)Step 2: Either send the bread through Create's Mechanical Saw or cut it yourself with a Farmer's Delight knife. $(li)Step 3: Place Bread Slice on station. $(li)Step 4: ASSEMBLE... YOUR SANDWICH!"
+        }
+    ]
+}

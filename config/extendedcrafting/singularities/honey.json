@@ -1,0 +1,11 @@
+{
+  "name": "Honey",
+  "colors": [
+    "f7db28",
+    "d26a2a"
+  ],
+  "ingredient": {
+    "item": "minecraft:honey_block"
+  },
+  "materialCount": 16384
+}

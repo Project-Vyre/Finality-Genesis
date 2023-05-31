@@ -1,0 +1,11 @@
+{
+    "name": "Magenta Concrete",
+    "colors": [
+      "cc72c8",
+      "9d2d94"
+    ],
+    "ingredient": {
+      "item": "minecraft:magenta_concrete"
+    },
+    "materialCount": 16384
+  }

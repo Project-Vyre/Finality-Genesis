@@ -1,0 +1,11 @@
+{
+  "name": "Sea Lantern",
+  "colors": [
+    "529680",
+    "48635b"
+  ],
+  "ingredient": {
+    "item": "minecraft:sea_lantern"
+  },
+  "materialCount": 2048
+}

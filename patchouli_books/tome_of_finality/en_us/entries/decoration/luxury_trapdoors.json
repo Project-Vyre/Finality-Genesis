@@ -1,0 +1,36 @@
+{
+    "name": "Luxury Trapdoors",
+    "icon": "supplementaries:gold_trapdoor",
+    "category": "patchouli:decoration",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This entry contains the crafting recipes for the luxury trapdoors from Supplementaries."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "supplementaries:gold_trapdoor",
+            "text": "It's a golden trapdoor, what did you expect?"
+        },
+        {
+            "type": "patchouli:smithing",
+            "recipe": "supplementaries:netherite_trapdoor",
+            "text": "You'll probably be fine while flexing this. $(br2)Did I mention you can lock the Netherite Trapdoor?"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "supplementaries:key",
+            "text": "Supplementaries lets you lock and unlock stuff with this key."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "supplementaries:silver_trapdoor",
+            "text": "It's a silver trapdoor. $(br2)Behaves like an Iron Door."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "supplementaries:lead_trapdoor",
+            "text": "It's a lead trapdoor. $(br2)Takes multiple clicks to open."
+        }
+    ]
+}

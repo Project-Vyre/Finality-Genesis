@@ -1,0 +1,11 @@
+{
+  "name": "Ender Pearl",
+  "colors": [
+    "2bcbaf",
+    "032620"
+  ],
+  "ingredient": {
+    "item": "minecraft:ender_pearl"
+  },
+  "materialCount": 16384
+}

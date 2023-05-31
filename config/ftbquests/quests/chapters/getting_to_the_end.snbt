@@ -1,0 +1,359 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "getting_to_the_end"
+	group: ""
+	icon: "minecraft:end_portal_frame"
+	id: "316C9BB1844BE86C"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"4A691BB889286C89"
+				"4E9DB5E5DA145FB7"
+			]
+			hide: true
+			icon: "minecraft:end_portal_frame"
+			id: "34BBD9B70AE0AAB1"
+			shape: "octagon"
+			size: 2.5d
+			subtitle: "All I can say is... good luck."
+			tasks: [{
+				dimension: "minecraft:the_end"
+				icon: "minecraft:end_stone"
+				id: "5098C9DA205BDE8A"
+				type: "dimension"
+			}]
+			title: "Unlocking The End"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "168D0120F150BC28"
+			subtitle: "Find me in buried treasure."
+			tasks: [{
+				id: "1D30C9F6ACAE3CF3"
+				item: {
+					Count: 1b
+					id: "endrem:black_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Acquire the Black Eye"
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "5AF53749F917D429"
+			subtitle: "Find me in igloos."
+			tasks: [{
+				id: "0540213F44030BB9"
+				item: {
+					Count: 1b
+					id: "endrem:cold_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "2E2C02E5BD9E21F7"
+			subtitle: "Find me where I stalk villagers."
+			tasks: [{
+				id: "0109D61CAE58079B"
+				item: {
+					Count: 1b
+					id: "endrem:corrupted_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "6C0BCC3A430B9FEB"
+			subtitle: "Find me in ancient mineshafts."
+			tasks: [{
+				id: "15891D2C744D8AC0"
+				item: {
+					Count: 1b
+					id: "endrem:lost_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 1.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "58C3EE597C33E90D"
+			subtitle: "Find me in the Nether Fortress."
+			tasks: [{
+				id: "19761F1D28E842C1"
+				item: {
+					Count: 1b
+					id: "endrem:nether_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "68BDA11046E98486"
+			subtitle: "Find me in ancient desert temples."
+			tasks: [{
+				id: "60F672CEB7CF7B50"
+				item: {
+					Count: 1b
+					id: "endrem:old_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "685B2504CF4E9E26"
+			subtitle: "Find me in the temple that contains malicious redstone."
+			tasks: [{
+				id: "5EEC9A6676F1B84B"
+				item: {
+					Count: 1b
+					id: "endrem:rogue_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 2.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "65816DD85625C60E"
+			subtitle: "Find me in a Bastion."
+			tasks: [{
+				id: "0906B32D7A49EE41"
+				item: {
+					Count: 1b
+					id: "endrem:cursed_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "3262C302262A1AAC"
+			subtitle: "Acquire me from a Master Cleric."
+			tasks: [{
+				id: "6233B553452828BE"
+				item: {
+					Count: 1b
+					id: "endrem:evil_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "1013541B6EC52CEF"
+			subtitle: "I am responsible for many deaths in the ocean ruins."
+			tasks: [{
+				id: "76E62C364A2792E9"
+				item: {
+					Count: 1b
+					id: "endrem:guardian_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -2.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "66725960700B2323"
+			subtitle: "I am used by someone with ill intentions."
+			tasks: [{
+				id: "153F6A1E52466B39"
+				item: {
+					Count: 1b
+					id: "endrem:magical_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Acquire the Magical Eye"
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "3FFB8D0ADC19BCA1"
+			subtitle: "I bring destruction to the world."
+			tasks: [{
+				id: "7E3DB1DAC40B0F03"
+				item: {
+					Count: 1b
+					id: "endrem:wither_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Acquire the Wither Eye"
+			x: -2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "021DAFFB5B6C41D7"
+			subtitle: "I was once part of a master of potion brewing."
+			tasks: [{
+				id: "7E1F35FAC6DF89A7"
+				item: {
+					Count: 1b
+					id: "endrem:witch_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				only_from_crafting: true
+				type: "item"
+			}]
+			x: -1.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "3F991D3B86EFF9EE"
+			subtitle: "I am made from the soul of a horse turned skeletal."
+			tasks: [{
+				id: "3289A7711479BCE1"
+				item: {
+					Count: 1b
+					id: "endrem:undead_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "3939C50171FAD48A"
+			subtitle: "I can only be created from your aquatic adventures."
+			tasks: [{
+				id: "1C7BB2EBEF9AC5A0"
+				item: {
+					Count: 1b
+					id: "endrem:exotic_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				only_from_crafting: true
+				type: "item"
+			}]
+			x: 1.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "7E7D888C64FD0E69"
+			subtitle: "Origins unkown, maybe from a tome of ancient knowledge?"
+			tasks: [{
+				id: "2D593506152BC546"
+				item: {
+					Count: 1b
+					id: "endrem:cryptic_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "4E9DB5E5DA145FB7"
+			subtitle: "You won't get to the End that easily, however."
+			tasks: [{
+				advancement: "minecraft:story/follow_ender_eye"
+				criterion: ""
+				id: "41ADDCD19E1253FF"
+				type: "advancement"
+			}]
+			title: "Find a Stronghold"
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["It's a bit... complicated."]
+	title: "Getting to the End"
+}

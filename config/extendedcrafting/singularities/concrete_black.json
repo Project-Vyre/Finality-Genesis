@@ -1,0 +1,11 @@
+{
+    "name": "Black Concrete",
+    "colors": [
+      "37373d",
+      "07090e"
+    ],
+    "ingredient": {
+      "item": "minecraft:black_concrete"
+    },
+    "materialCount": 16384
+  }

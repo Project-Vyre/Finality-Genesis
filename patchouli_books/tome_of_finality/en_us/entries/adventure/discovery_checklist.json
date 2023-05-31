@@ -1,0 +1,11 @@
+{
+    "name": "Structure Checklist",
+    "icon": "minecraft:compass",
+    "category": "patchouli:adventure",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Placeholder text"
+        }
+    ]
+}

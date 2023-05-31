@@ -1,0 +1,11 @@
+{
+    "name": "Gray Concrete",
+    "colors": [
+      "5e6b6f",
+      "33363a"
+    ],
+    "ingredient": {
+      "item": "minecraft:gray_concrete"
+    },
+    "materialCount": 16384
+  }

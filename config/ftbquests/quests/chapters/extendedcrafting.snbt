@@ -1,0 +1,1103 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "extendedcrafting"
+	group: "65124948534FAE42"
+	icon: "extendedcrafting:the_ultimate_catalyst"
+	id: "15317D0AF9607D6E"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "2CB2E91CC3F2E9ED"
+			size: 1.5d
+			subtitle: "I am not responsible for your sanity."
+			tasks: [{
+				count: 256L
+				id: "7EAEFF51C74C69AA"
+				item: "extendedcrafting:black_iron_ingot"
+				type: "item"
+			}]
+			title: "Extended Foundation: Black Iron"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["25F4763D264E9271"]
+			id: "0E5B39A55CBAE78E"
+			tasks: [{
+				id: "66291B8207E1E321"
+				item: "extendedcrafting:basic_table"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7616F583D81F9C0E"]
+			id: "083DF82C61A3EAE7"
+			tasks: [{
+				id: "3DFF8E926BD92208"
+				item: "extendedcrafting:advanced_table"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["72439E1B44C8DD82"]
+			id: "1BE58E8EF7E826CD"
+			tasks: [{
+				id: "5B7E81323E9B63F9"
+				item: "extendedcrafting:elite_table"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["290F3137DCCABA89"]
+			id: "433C49762CAABA46"
+			tasks: [{
+				id: "5006437672B1362A"
+				item: "extendedcrafting:ultimate_table"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1BE58E8EF7E826CD"]
+			id: "67AAA3FF496222BC"
+			tasks: [{
+				id: "4D4B164FA1842BF2"
+				item: "extendedcrafting:crystaltine_ingot"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0BBF19CE9F70604C"]
+			id: "64107820104E0A51"
+			tasks: [{
+				id: "0B9CFD537E6BC9EC"
+				item: "extendedcrafting:crystaltine_catalyst"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["64107820104E0A51"]
+			id: "1AB2ABF73B22F41F"
+			tasks: [{
+				id: "7EE6D85DDABC86C8"
+				item: "upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2CB2E91CC3F2E9ED"]
+			id: "7BCC25C5994A939B"
+			tasks: [{
+				id: "47BDCC55C8DEAEEB"
+				item: "extendedcrafting:luminessence"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7BCC25C5994A939B"]
+			id: "048CAB1D1C256A53"
+			tasks: [{
+				id: "63FB43C1B875CF88"
+				item: "extendedcrafting:basic_component"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["048CAB1D1C256A53"]
+			id: "20A687BFA1703204"
+			tasks: [{
+				id: "57D7D23292D9E681"
+				item: "extendedcrafting:advanced_component"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["20A687BFA1703204"]
+			id: "6B67D718E91C70D7"
+			tasks: [{
+				id: "39CE850E065A1779"
+				item: "extendedcrafting:elite_component"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6B67D718E91C70D7"]
+			id: "27C2BF9CBC2D9F66"
+			tasks: [{
+				id: "1ABFD8C1EFF4A696"
+				item: "extendedcrafting:ultimate_component"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["2CB2E91CC3F2E9ED"]
+			id: "2ECBC57F086F9900"
+			subtitle: "You will also need a lot of this."
+			tasks: [{
+				id: "3CECBE0FD44FDAC4"
+				item: "extendedcrafting:black_iron_slate"
+				type: "item"
+			}]
+			title: "Extended Foundation: Black Iron Slates"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["048CAB1D1C256A53"]
+			id: "25F4763D264E9271"
+			tasks: [{
+				id: "439958B76A98F0D5"
+				item: "extendedcrafting:basic_catalyst"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["20A687BFA1703204"]
+			id: "7616F583D81F9C0E"
+			tasks: [{
+				id: "281A63589F28E297"
+				item: "extendedcrafting:advanced_catalyst"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6B67D718E91C70D7"]
+			id: "72439E1B44C8DD82"
+			tasks: [{
+				id: "5A2C4C166904A412"
+				item: "extendedcrafting:elite_catalyst"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["27C2BF9CBC2D9F66"]
+			id: "290F3137DCCABA89"
+			tasks: [{
+				id: "1C72806C7B5D91EF"
+				item: "extendedcrafting:ultimate_catalyst"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["2CB2E91CC3F2E9ED"]
+			icon: "extendedcrafting:ender_crafter"
+			id: "2CAFE36DDBF4EE0B"
+			tasks: [
+				{
+					id: "2061A323CC5D2DB5"
+					item: "extendedcrafting:ender_crafter"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "27EEA369C8F67DC0"
+					item: "extendedcrafting:ender_alternator"
+					type: "item"
+				}
+			]
+			title: "Introduction to Ender Crafting"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["2CAFE36DDBF4EE0B"]
+			id: "6FB40999C14811D2"
+			tasks: [{
+				id: "1EC4C8B0C1877BFB"
+				item: "extendedcrafting:ender_star"
+				type: "item"
+			}]
+			title: "Create an Ender Star"
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["6FB40999C14811D2"]
+			id: "4DCA3CCD99D333DE"
+			tasks: [{
+				id: "545D079A6DB81E38"
+				item: "extendedcrafting:enhanced_ender_ingot"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["4DCA3CCD99D333DE"]
+			id: "254FB879F17C8301"
+			tasks: [{
+				id: "7A3158013F627488"
+				item: "extendedcrafting:enhanced_ender_component"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["254FB879F17C8301"]
+			id: "40B012B14613C37D"
+			tasks: [{
+				id: "791265D13F9AC151"
+				item: "extendedcrafting:enhanced_ender_catalyst"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["67AAA3FF496222BC"]
+			id: "0BBF19CE9F70604C"
+			tasks: [{
+				id: "1C6E1147D7FC915D"
+				item: "extendedcrafting:crystaltine_component"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"05990BE9403D64C5"
+				"1AB2ABF73B22F41F"
+			]
+			id: "2CAF0E63123AE0EE"
+			shape: "rsquare"
+			size: 1.5d
+			subtitle: "You probably don't have a life, do you?"
+			tasks: [{
+				id: "6DDC2B34DFA64A32"
+				item: "upgradednetherite_creative:creative_upgraded_netherite_ingot"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["290F3137DCCABA89"]
+			id: "49B7301C0778939C"
+			subtitle: "This needs just a few million Fe to power constantly..."
+			tasks: [{
+				id: "4A4D223AEF888CE6"
+				item: "extendedcrafting:compressor"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["256A6D42E6BF34CF"]
+			id: "2B164A5913C8CFC3"
+			tasks: [{
+				id: "4420894F80226BB3"
+				item: "extendedcrafting:the_ultimate_nugget"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["2B164A5913C8CFC3"]
+			id: "5EA8501C174020C9"
+			tasks: [{
+				id: "36E83882E4ABDDE0"
+				item: "extendedcrafting:the_ultimate_ingot"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["5EA8501C174020C9"]
+			id: "204B27719A5E6F86"
+			tasks: [{
+				id: "4D250B07344FF4C9"
+				item: "extendedcrafting:the_ultimate_component"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["204B27719A5E6F86"]
+			id: "05990BE9403D64C5"
+			tasks: [{
+				id: "35AFBFD2744DAA8E"
+				item: "extendedcrafting:the_ultimate_catalyst"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"396C011CB85BF2BE"
+				"10C5617EDE63879E"
+				"69FB20F23EFB13C5"
+				"56548410351F5DF0"
+			]
+			id: "256A6D42E6BF34CF"
+			size: 1.5d
+			subtitle: "Don't tell me there is more..."
+			tasks: [{
+				id: "150A114A201C10CA"
+				item: "extendedcrafting:ultimate_singularity"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["2ECBC57F086F9900"]
+			id: "131FA998F750B262"
+			subtitle: "This is the basis of two ExtendedCrafting crafting stations."
+			tasks: [{
+				id: "1871A892B560D90C"
+				item: "extendedcrafting:frame"
+				type: "item"
+			}]
+			title: "Extended Foundation: Black Iron Frame"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7BCC25C5994A939B"]
+			id: "0FCADC573ADDF8DF"
+			tasks: [{
+				id: "4489CD291BC4B402"
+				item: "extendedcrafting:redstone_component"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0FCADC573ADDF8DF"]
+			id: "078DA756A6DEA68D"
+			tasks: [{
+				id: "3135372D3FA78974"
+				item: "extendedcrafting:redstone_catalyst"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0FCADC573ADDF8DF"]
+			id: "72A39996B85AC4FC"
+			tasks: [{
+				id: "3A97B89F4E4F7343"
+				item: "extendedcrafting:basic_auto_table"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["72A39996B85AC4FC"]
+			id: "48BE685B33678442"
+			tasks: [{
+				id: "63B809E0BDC590A2"
+				item: "extendedcrafting:advanced_auto_table"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["48BE685B33678442"]
+			id: "5B054D3F5D776BFF"
+			tasks: [{
+				id: "5E8DA49D1006E16F"
+				item: "extendedcrafting:elite_auto_table"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5B054D3F5D776BFF"]
+			id: "5C29B52AFDB3AC12"
+			tasks: [{
+				id: "1E2AF922107F17E3"
+				item: "extendedcrafting:ultimate_auto_table"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["2CB2E91CC3F2E9ED"]
+			id: "4E60F5754BF80F8E"
+			subtitle: "Pedestals are required for the Crafting Core to function."
+			tasks: [{
+				count: 16L
+				id: "25A0C6571D4944B7"
+				item: "extendedcrafting:pedestal"
+				type: "item"
+			}]
+			title: "Combination Crafting: Pedestals"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4E60F5754BF80F8E"]
+			id: "6D03DF841E989F16"
+			subtitle: "Combination recipes go brrrrr"
+			tasks: [{
+				id: "493A8C6D76811996"
+				item: "extendedcrafting:crafting_core"
+				type: "item"
+			}]
+			title: "Combination Crafting: The Crafting Core"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["49B7301C0778939C"]
+			id: "396C011CB85BF2BE"
+			shape: "square"
+			subtitle: "Ultra compressed concrete."
+			tasks: [
+				{
+					id: "50349D4617A08662"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_black"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "2B5D83B5377763F8"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_white"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "05340B9A57D2382D"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_pink"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "1C4079DC0B3107EB"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_orange"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "389A5F2BEE4949D8"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_red"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "24355F3992E95FB8"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_gray"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "3186787FC3166A29"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_brown"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "2BD0C4AB036810D7"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_cyan"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "31C60EBD21DE6AAA"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_green"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "54C272522CE2CAF6"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_light_gray"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "6248B62923782FAA"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_light_blue"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "2984E64FAF65EAC0"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_lime"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "1863D11C47C33085"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_yellow"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "74DF5C91B4937D32"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_blue"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "5330CB80749448C4"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_magenta"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "6E531558FA043A5D"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_purple"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			title: "Vanilla Concrete Singularities"
+			x: 5.5d
+			y: 12.0d
+		}
+		{
+			dependencies: ["49B7301C0778939C"]
+			id: "56548410351F5DF0"
+			shape: "gear"
+			subtitle: "Are you still sane?"
+			tasks: [
+				{
+					id: "7E4B54ACC428C542"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:precision_mechanism"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "6EA4D175A2E1D608"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:rose_quartz"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "18AD489536EA599A"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:brass"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "63583110D9686851"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:electron_tube"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "21DDDAE6BBBE8847"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:framed_glass"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "158F922BB4CD3283"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:zinc"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "396AA2364441AE28"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:sturdy_sheet"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "4129BD81D0454F2A"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:train_track"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			title: "Create Singularities"
+			x: 7.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["49B7301C0778939C"]
+			id: "69FB20F23EFB13C5"
+			shape: "square"
+			subtitle: "I'm sorry, how much iron?"
+			tasks: [
+				{
+					id: "66C7BA50D74F85A4"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:coal"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "1ED03AA50F222CEC"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:iron"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "14D300499B031B89"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:gold"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "1CE2B063D2D9ADC0"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:diamond"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "42336FC5C77EADE6"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:emerald"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "44B7BB23781C301D"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:copper"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "6EAAB3F085878960"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:netherite"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "32FE6311739C24F0"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:amethyst"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "2B9D5EDC05EFC8EF"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:redstone"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "2C59DC9578D06A42"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:quartz"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "62E0162EC7F0E513"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:glowstone"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "7681C78BA9CAE48C"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:lapis_lazuli"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			title: "Vanilla Valuable Singularities"
+			x: 2.5d
+			y: 12.0d
+		}
+		{
+			dependencies: ["49B7301C0778939C"]
+			id: "10C5617EDE63879E"
+			shape: "square"
+			subtitle: "Cobble cobble cobble!"
+			tasks: [
+				{
+					id: "54427EC77696762A"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:cobblestone"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "3558C2B0C454FF18"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:sand"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "310F31888F543F8D"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:coarse_dirt"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "674D79220D314F89"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:blue_ice"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "1E5A9BD35C3293AD"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:sea_lantern"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "32CCBDC4C7CD5D45"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:gunpowder"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "4723B347B26FECC9"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:honey"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "0FC0AA28124B03BB"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:ender_pearl"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			title: "Vanilla Nature Singularities"
+			x: 4.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["7BCC25C5994A939B"]
+			id: "096B404864264126"
+			tasks: [{
+				id: "2E5F5718EE8F8216"
+				item: "extendedcrafting:ender_component"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["096B404864264126"]
+			id: "0BEBA6C1439E8AA1"
+			tasks: [{
+				id: "1EF8C9A762C313E8"
+				item: "extendedcrafting:ender_catalyst"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["05990BE9403D64C5"]
+			id: "2169920C949FBF9B"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "03AAB0D18125F2D7"
+				item: "create:handheld_worldshaper"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 14.0d
+		}
+	]
+	subtitle: [
+		"Work in progress."
+		"The progression is there, however."
+	]
+	title: "ExtendedCrafting"
+}

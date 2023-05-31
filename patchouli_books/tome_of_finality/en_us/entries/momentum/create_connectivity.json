@@ -1,0 +1,36 @@
+{
+    "name": "Connectivity",
+    "icon": "create:large_cogwheel",
+    "category": "patchouli:momentum",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This entry contains information as well as advice on the many methods of connectivity to Create's appliances and more. $(br2)As a general rule of thumb when it comes to using cogwheels, take into account what direction they are rotating to avoid future building headaches."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:cogwheel",
+            "text": "Placeholder text"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:large_cogwheel",
+            "text": "Placeholder text"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:shaft",
+            "text": "Placeholder text"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:belt_connector",
+            "text": "Placeholder text"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:gearbox",
+            "text": "Placeholder text"
+        }
+    ]
+}

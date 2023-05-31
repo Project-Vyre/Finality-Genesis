@@ -1,0 +1,11 @@
+{
+    "name": "Train Track",
+    "colors": [
+        "606060",
+        "85573e"
+    ],
+    "ingredient": {
+      "item": "create:track"
+    },
+    "materialCount": 16384
+  }

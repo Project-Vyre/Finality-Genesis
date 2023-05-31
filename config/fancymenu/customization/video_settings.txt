@@ -1,0 +1,78 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screens.VideoSettingsScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  orientation = bottom-centered
+  enable_scrolling = false
+  shadow = true
+  scale = 1.0
+  source = Set GUI scale to 2 for the best experience!
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = -121
+  width = 242
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = dcd6a4ec-c953-457a-99c0-0572ab5266691682309105491
+  y = -49
+  [loading_requirement_group:gui_scale2_detect] = [group_mode:or]
+  alignment = centered
+  [loading_requirement:fancymenu_loading_requirement_is_gui_scale][requirement_mode:if][group:gui_scale2_detect][req_id:8d3d0a4c-c982-4540-84c9-8416c9c826f71682308951084] = >2.0
+  base_color = #b1a0ff
+  height = 19
+  [loading_requirement:fancymenu_loading_requirement_is_gui_scale][requirement_mode:if][group:gui_scale2_detect][req_id:ab0404d4-7c5f-4a64-9a61-668e0b7805991682308971839] = <2.0
+}
+
+customization {
+  orientation = bottom-centered
+  enable_scrolling = true
+  shadow = true
+  scale = 1.0
+  source = Friendly reminder that Fullscreen mode %n%provides the best performance!
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = 175
+  width = 207
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 3dc928ba-2f21-48bd-bf4c-17b22fe324931683368130969
+  y = -273
+  alignment = left
+  base_color = #b1a0ff
+  height = 31
+}
+
+customization {
+  orientation = bottom-centered
+  enable_scrolling = true
+  shadow = true
+  scale = 1.0
+  source = Disabling Mipmap Levels helped improve performance%n%when looking at certain dungeon structures.
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = 175
+  width = 278
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 9ea6f65c-b041-49ce-a147-f71b6814e73e1683584082997
+  y = -232
+  alignment = left
+  base_color = #b1a0ff
+  height = 31
+}
+

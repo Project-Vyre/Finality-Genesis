@@ -1,0 +1,83 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "farmers_delight"
+	group: "2B2D0B6DE31DE8D3"
+	icon: "farmersdelight:cabbage_crate"
+	id: "2FD109D9011BFAE5"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			icon: {
+				Count: 1b
+				id: "farmersdelight:iron_knife"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "3A93D1DBD84B9F94"
+			subtitle: "Lots of variety!"
+			tasks: [
+				{
+					id: "70E8926E0FB8ECBA"
+					item: "farmersdelight:cutting_board"
+					type: "item"
+				}
+				{
+					id: "6ECEE0D864B9648E"
+					item: {
+						Count: 1b
+						id: "farmersdelight:flint_knife"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Introduction to Farmer's Delight"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3A93D1DBD84B9F94"]
+			icon: "farmersdelight:stove"
+			id: "44D0D68F582B8418"
+			subtitle: "You're actually cooking!"
+			tasks: [
+				{
+					id: "2A0346B712C4176C"
+					item: "farmersdelight:cooking_pot"
+					type: "item"
+				}
+				{
+					id: "6AABC61E5A4A04DA"
+					item: {
+						Count: 1b
+						id: "farmersdelight:skillet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "25A1F6489B8246BA"
+					item: "farmersdelight:stove"
+					type: "item"
+				}
+			]
+			title: "Home Cooking"
+			x: 0.0d
+			y: 2.0d
+		}
+	]
+	subtitle: [
+		"Not my cabbages!!"
+		"Please tell me you remember this quote ;-;"
+	]
+	title: "Farmer's Delight"
+}

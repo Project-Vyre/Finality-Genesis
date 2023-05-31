@@ -1,0 +1,7 @@
+{
+    "pack": {
+        "description": "Tome of Finality",
+        "pack_format": 9,
+        "_comment": "Giving the Tome of Finality to player."
+    }
+}

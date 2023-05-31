@@ -1,0 +1,11 @@
+{
+    "name": "Purple Concrete",
+    "colors": [
+      "9743bf",
+      "5d1d90"
+    ],
+    "ingredient": {
+      "item": "minecraft:purple_concrete"
+    },
+    "materialCount": 16384
+  }

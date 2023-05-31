@@ -1,0 +1,325 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "supplementaries"
+	group: "4B44486C4CFAE9FB"
+	icon: "supplementaries:globe"
+	id: "381F32629FB523CD"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: ["Here's a free soul sconce once you make the regular variant."]
+			hide: true
+			id: "4A2CFDD09FF7A975"
+			rewards: [{
+				count: 16
+				id: "6894CAF8AC0FA0DE"
+				item: "supplementaries:sconce_soul"
+				type: "item"
+			}]
+			subtitle: "They look cooler!"
+			tasks: [{
+				count: 16L
+				id: "374445A1897F9DC2"
+				item: "supplementaries:sconce"
+				type: "item"
+			}]
+			title: "Better torches!"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			id: "2DC6790BD0A55A6E"
+			rewards: [
+				{
+					count: 64
+					id: "6348AB39274C26B0"
+					item: "quark:gold_bars"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "199C70FC86868DF7"
+					item: "minecraft:iron_bars"
+					type: "item"
+				}
+			]
+			subtitle: "If you loved using Iron Bars or Gold Bars as walls, here you go!"
+			tasks: [
+				{
+					id: "0C86F593220A6BD6"
+					item: "supplementaries:gold_gate"
+					type: "item"
+				}
+				{
+					id: "771E07F876E9D84A"
+					item: "supplementaries:iron_gate"
+					type: "item"
+				}
+			]
+			title: "Yes, gates."
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			description: [
+				"Have an excessive amount of precious metals? Then these doors are for you!"
+				""
+				"Gold doors function like normal doors."
+				""
+				"Silver doors can't be opened manually."
+				""
+				"Lead doors take three clicks to open manually."
+			]
+			id: "79560D87C0BCD280"
+			subtitle: "I'm sure you'll be fineee"
+			tasks: [
+				{
+					id: "2D4E2B9AE870E115"
+					item: "supplementaries:netherite_door"
+					type: "item"
+				}
+				{
+					id: "2BA7AC969BB99939"
+					item: "supplementaries:gold_door"
+					type: "item"
+				}
+				{
+					id: "27031331138D5973"
+					item: "supplementaries:silver_door"
+					type: "item"
+				}
+				{
+					id: "0D1F7DF4EEA1B425"
+					item: "supplementaries:lead_door"
+					type: "item"
+				}
+			]
+			title: "Luxury Doors!"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			description: ["Perfect for adding secret Mechanical Piston doors, though it might be useless since Jade reveals all..."]
+			id: "4D7D29F3E7D7AC0D"
+			subtitle: "Pull the lever Kronk!"
+			tasks: [{
+				id: "2739559FD5F3E922"
+				item: "supplementaries:sconce_lever"
+				type: "item"
+			}]
+			title: "Make the secret torch lever!"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			id: "1FC391DB2B32DCA3"
+			subtitle: "Cool tiling, right?"
+			tasks: [
+				{
+					id: "4CD7945E95E0E618"
+					item: "supplementaries:checker_block"
+					type: "item"
+				}
+				{
+					id: "1829059B434F2E93"
+					item: "supplementaries:stone_tile"
+					type: "item"
+				}
+				{
+					id: "39EC06C14BA182FD"
+					item: "supplementaries:blackstone_tile"
+					type: "item"
+				}
+			]
+			title: "The Floor is Lava!"
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			id: "13B519BF572FDE45"
+			subtitle: "Try some of these lamps for your base."
+			tasks: [
+				{
+					id: "677A7F9D4EAF0219"
+					item: "supplementaries:stone_lamp"
+					type: "item"
+				}
+				{
+					id: "60C2AC1F3D70DDE7"
+					item: "supplementaries:blackstone_lamp"
+					type: "item"
+				}
+				{
+					id: "213BF27B7580699D"
+					item: "supplementaries:deepslate_lamp"
+					type: "item"
+				}
+				{
+					id: "5DA8B52557889EE0"
+					item: "supplementaries:end_stone_lamp"
+					type: "item"
+				}
+			]
+			title: "All the Lamps!"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["79560D87C0BCD280"]
+			description: ["Follows the same functions to their door counterparts."]
+			id: "0090CBE54F86A72F"
+			subtitle: "You'll be fine...?"
+			tasks: [
+				{
+					id: "2AC877DDE919D839"
+					item: "supplementaries:netherite_trapdoor"
+					type: "item"
+				}
+				{
+					id: "222D611B74E5FB73"
+					item: "supplementaries:gold_trapdoor"
+					type: "item"
+				}
+				{
+					id: "37AB041C931401AB"
+					item: "supplementaries:silver_trapdoor"
+					type: "item"
+				}
+				{
+					id: "69A122A0D0C5B87A"
+					item: "supplementaries:lead_trapdoor"
+					type: "item"
+				}
+			]
+			title: "Luxury Trapdoors!"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			id: "6015E8BC02BDF285"
+			subtitle: "Something other than torches, plus they look nicer."
+			tasks: [
+				{
+					id: "3781EA2EAD053AEF"
+					item: "supplementaries:copper_lantern"
+					type: "item"
+				}
+				{
+					id: "5D70E8C49B3752A0"
+					item: "supplementaries:brass_lantern"
+					type: "item"
+				}
+				{
+					id: "6BB4E9732B371B47"
+					item: "supplementaries:crimson_lantern"
+					type: "item"
+				}
+			]
+			title: "A Sample of Lanterns"
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			description: ["Here's your solution! This is but only a small sample of the different types of glass to suit your needs."]
+			id: "2E14DBAD40BFF1AD"
+			subtitle: "Tired of vanilla windows made of glass blocks that don't have connected textures?"
+			tasks: [
+				{
+					count: 9L
+					id: "4296B2F5A65FBDDE"
+					item: "create:framed_glass"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "4D2D6430A37DCD80"
+					item: "create:ornate_iron_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "4F18CE6450A6A4C0"
+					item: "create:oak_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "21E7BC2289774195"
+					item: "create:spruce_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "17DDF28D0238D604"
+					item: "create:birch_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "697D67091EC55331"
+					item: "create:jungle_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "2CC1BE7C6E405E60"
+					item: "create:acacia_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "2FC5F9B09D3E6D84"
+					item: "create:dark_oak_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "677E9E56686C3F4D"
+					item: "create:crimson_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "014AB88B75889CF8"
+					item: "create:warped_window"
+					type: "item"
+				}
+			]
+			title: "Windows for Days"
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			id: "37E684B79EB69A62"
+			subtitle: "You are running out of time. *distorted clock chime*"
+			tasks: [
+				{
+					id: "4DB29FB044FF9824"
+					item: "supplementaries:clock_block"
+					type: "item"
+				}
+				{
+					id: "346CC917503ABEA1"
+					item: "create:cuckoo_clock"
+					type: "item"
+				}
+			]
+			title: "Keeping Track of Time"
+			x: 0.0d
+			y: -1.5d
+		}
+	]
+	subtitle: ["A lot more decorative blocks."]
+	title: "Spice it Up!"
+}

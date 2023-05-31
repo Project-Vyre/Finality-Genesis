@@ -1,0 +1,20 @@
+{
+	icon: "enigmaticlegacy:loot_generator"
+	id: "31085A00576C4313"
+	loot_size: 1
+	order_index: 1
+	rewards: [
+		{ item: "enigmaticlegacy:magnet_ring" }
+		{ item: "enigmaticlegacy:mega_sponge" }
+		{ item: "enigmaticlegacy:ender_ring" }
+		{
+			item: {
+				Count: 1b
+				id: "enigmaticlegacy:architect_eye"
+				tag: { }
+			}
+		}
+		{ item: "enigmaticlegacy:golem_heart" }
+	]
+	title: "Enigmatic Legacy Starter Pack"
+}

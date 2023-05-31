@@ -1,0 +1,1965 @@
+To refresh this file, delete it and run /reload command again! Last updated: May 26, 2023, 7:12:49 PM
+
+#minecraft:has_structure/nether_fortress
+- #minecraft:is_nether (from Default)
+
+#forge:is_slope
+- minecraft:savanna_plateau (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:wooded_badlands (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:meadow (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:grove (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:snowy_slopes (from forge-1.19.2-43.2.11-universal.jar)
+
+#alexsmobs:skreechers_can_spawn_wardens
+- minecraft:deep_dark (from alexsmobs-1.21.1.jar)
+
+#supplementaries:has_cave_urns
+- #minecraft:is_overworld (from Supplementaries Generated Pack)
+
+#idas:collections/idasvanilla_jungles
+- minecraft:jungle (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:rocky_jungle? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:tropical_jungle? (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:collections/idassavannas
+- minecraft:savanna (from idas_forge-1.7.3+1.19.2.jar)
+- minecraft:savanna_plateau (from idas_forge-1.7.3+1.19.2.jar)
+- minecraft:windswept_savanna (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:arid_highlands? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:hot_shrubland? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:sakura_grove? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:sakura_valley? (from idas_forge-1.7.3+1.19.2.jar)
+- forge:savanna? (from idas_forge-1.7.3+1.19.2.jar)
+- c:savanna? (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:has_structure/mineshaft
+- #minecraft:is_ocean (from Default)
+- #minecraft:is_river (from Default)
+- #minecraft:is_beach (from Default)
+- #minecraft:is_mountain (from Default)
+- #minecraft:is_hill (from Default)
+- #minecraft:is_taiga (from Default)
+- #minecraft:is_jungle (from Default)
+- #minecraft:is_forest (from Default)
+- minecraft:stony_shore (from Default)
+- minecraft:mushroom_fields (from Default)
+- minecraft:ice_spikes (from Default)
+- minecraft:windswept_savanna (from Default)
+- minecraft:desert (from Default)
+- minecraft:savanna (from Default)
+- minecraft:snowy_plains (from Default)
+- minecraft:plains (from Default)
+- minecraft:sunflower_plains (from Default)
+- minecraft:swamp (from Default)
+- minecraft:mangrove_swamp (from Default)
+- minecraft:savanna_plateau (from Default)
+- minecraft:dripstone_caves (from Default)
+- minecraft:lush_caves (from Default)
+- #minecraft:is_ocean (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- #minecraft:is_river (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- #minecraft:is_beach (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- #minecraft:is_mountain (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- #minecraft:is_hill (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- #minecraft:is_taiga (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- #minecraft:is_jungle (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- #minecraft:is_forest (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:stony_shore (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:mushroom_fields (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:ice_spikes (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:windswept_savanna (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:desert (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:savanna (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:snowy_plains (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:plains (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:sunflower_plains (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:swamp (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:savanna_plateau (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:dripstone_caves (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:lush_caves (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:ancient_dead_coral_reef (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:haunted_forest (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:haunted_lakes (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:eroded_haunted_forest (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:deep_dark_forest (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+
+#graveyard:nightmare_spawns
+- #forge:is_plains (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_snowy (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_sandy (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_wasteland (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_dry/overworld (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_swamp (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#ars_nouveau:archwood_biome
+- ars_nouveau:archwood_forest (from ars_nouveau-1.19.2-3.13.4.jar)
+
+#minecraft:has_structure/jungle_temple
+- minecraft:bamboo_jungle (from Default)
+- minecraft:jungle (from Default)
+
+#graveyard:has_structure/small_desert_graveyard
+- minecraft:desert (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#alexsmobs:spawns_red_gusters
+- #minecraft:is_badlands (from alexsmobs-1.21.1.jar)
+
+#yungsbridges:collections/badlands
+- #minecraft:is_badlands (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- terralith:savanna_badlands? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- byg:atacama_desert? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- #forge:is_mesa? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- #c:in_mesa? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- #forge:is_badlands? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- #c:badlands? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+
+#idas:collections/idasplains
+- minecraft:plains (from idas_forge-1.7.3+1.19.2.jar)
+- minecraft:sunflower_plains (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:brushland? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:highlands? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:steppe? (from idas_forge-1.7.3+1.19.2.jar)
+- forge:plains? (from idas_forge-1.7.3+1.19.2.jar)
+- c:plains? (from idas_forge-1.7.3+1.19.2.jar)
+
+#graveyard_biomes:has_structure/mushroom_biomes
+- graveyard_biomes:deep_dark_forest (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+
+#minecraft:is_jungle
+- minecraft:bamboo_jungle (from Default)
+- minecraft:jungle (from Default)
+- minecraft:sparse_jungle (from Default)
+
+#minecraft:is_ocean
+- #minecraft:is_deep_ocean (from Default)
+- minecraft:frozen_ocean (from Default)
+- minecraft:ocean (from Default)
+- minecraft:cold_ocean (from Default)
+- minecraft:lukewarm_ocean (from Default)
+- minecraft:warm_ocean (from Default)
+
+#yungsbridges:collections/savanna
+- #minecraft:is_savanna (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- terralith:arid_highlands? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- terralith:hot_shrubland? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- terralith:sakura_grove? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- terralith:sakura_valley? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- projectvibrantjourneys:baobab_fields? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- #forge:is_savanna? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- #c:savanna? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+
+#idas:has_structure/hauntedhouse_biomes
+- #idas:collections/idasregular_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasany_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasspooky_forests (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:collections/idasnether
+- #minecraft:is_nether (from idas_forge-1.7.3+1.19.2.jar)
+- forge:nether? (from idas_forge-1.7.3+1.19.2.jar)
+- c:nether? (from idas_forge-1.7.3+1.19.2.jar)
+- c:in_nether? (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:collections/idasbirch_forests
+- minecraft:birch_forest (from idas_forge-1.7.3+1.19.2.jar)
+- minecraft:old_growth_birch_forest (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:birch_taiga? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:blooming_valley? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:temperate_highlands? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:aspen_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:temperate_grove? (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:has_structure/abandonedhouse_biomes
+- #idas:collections/idasregular_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasbirch_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasplains (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasmeadows (from idas_forge-1.7.3+1.19.2.jar)
+
+#forge:is_cold
+- #forge:is_cold/overworld (from forge-1.19.2-43.2.11-universal.jar)
+- #forge:is_cold/nether? (from forge-1.19.2-43.2.11-universal.jar)
+- #forge:is_cold/end (from forge-1.19.2-43.2.11-universal.jar)
+
+#yungsextras:has_structure/vanilla_desert_well
+- minecraft:desert (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+- #forge:is_desert? (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+- #c:desert? (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+- terralith:lush_desert? (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+- biomesoplenty:lush_desert? (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+- projectvibrantjourneys:desert_shrubland? (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+- projectvibrantjourneys:verdant_sands? (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+
+#forge:is_sparse/overworld
+- minecraft:windswept_forest (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:savanna (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:savanna_plateau (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:wooded_badlands (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:snowy_slopes (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:jagged_peaks (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:frozen_peaks (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:windswept_gravelly_hills (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:windswept_savanna (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:eroded_badlands (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:dripstone_caves (from forge-1.19.2-43.2.11-universal.jar)
+
+#yungsextras:has_structure/desert_decorations
+- minecraft:desert (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+- #forge:is_desert? (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+- #c:desert? (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+- terralith:lush_desert? (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+- biomesoplenty:lush_desert? (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+- projectvibrantjourneys:desert_shrubland? (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+- projectvibrantjourneys:verdant_sands? (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+
+#idas:collections/idasnether_warped_forests
+- minecraft:warped_forest (from idas_forge-1.7.3+1.19.2.jar)
+
+#forge:is_overworld
+- quark:glimmering_weald (from Quark-3.4-402.jar)
+
+#minecraft:has_structure/ocean_ruin_cold
+- minecraft:frozen_ocean (from Default)
+- minecraft:cold_ocean (from Default)
+- minecraft:ocean (from Default)
+- minecraft:deep_frozen_ocean (from Default)
+- minecraft:deep_cold_ocean (from Default)
+- minecraft:deep_ocean (from Default)
+
+#idas:collections/idasvanilla_deserts
+- minecraft:desert (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:ancient_sands? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:desert_oasis? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:desert_spires? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:lush_desert? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:sandstone_valley? (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:produces_corals_from_bonemeal
+- minecraft:warm_ocean (from Default)
+
+#forge:is_desert
+- minecraft:desert (from forge-1.19.2-43.2.11-universal.jar)
+
+#minecraft:has_structure/stronghold
+- #minecraft:is_overworld (from Default)
+
+#idas:has_structure/farmhouse_biomes
+- #idas:collections/idasplains (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idastaigas (from idas_forge-1.7.3+1.19.2.jar)
+
+#blue_skies:everdawn
+- blue_skies:unorthodox_valley (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:shaded_woodlands (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:crystal_dunes (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:sunset_maple_forest (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:rising_creek (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:moonlit_reservoir (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:crystal_roughs (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:searing_grassland (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:crescent_orchard (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:crescent_orchard_lake (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:crystal_dunes_spikes (from blue_skies-1.19.2-1.3.20.jar)
+
+#minecraft:has_structure/mineshaft_mesa
+- #minecraft:is_badlands (from Default)
+
+#minecraft:has_structure/ancient_city
+- minecraft:deep_dark (from Default)
+
+#forge:is_peak
+- minecraft:jagged_peaks (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:frozen_peaks (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:stony_peaks (from forge-1.19.2-43.2.11-universal.jar)
+
+#minecraft:has_structure/shipwreck
+- #minecraft:is_ocean (from Default)
+- #minecraft:is_ocean (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:ancient_dead_coral_reef (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+
+#forge:is_wet/overworld
+- minecraft:swamp (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:jungle (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:sparse_jungle (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:beach (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:bamboo_jungle (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:lush_caves (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:mangrove_swamp (from forge-1.19.2-43.2.11-universal.jar)
+
+#graveyard:has_structure/small_graveyard
+- #forge:is_plains (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:meadow (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:blooming_plateau? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:blooming_valley? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#minecraft:is_hill
+- minecraft:windswept_hills (from Default)
+- minecraft:windswept_forest (from Default)
+- minecraft:windswept_gravelly_hills (from Default)
+
+#idas:collections/idassnowy_forests
+- minecraft:snowy_taiga (from idas_forge-1.7.3+1.19.2.jar)
+- minecraft:grove (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:snowy_maple_woods? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:snowy_coniferous_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:muskeg? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:rainbow_hills? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:frosted_taiga? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:frosted_coniferous_forest? (from idas_forge-1.7.3+1.19.2.jar)
+
+#alexsmobs:spawns_desert_crocodiles
+- #forge:is_sandy (from alexsmobs-1.21.1.jar)
+
+#forge:is_wet
+- #forge:is_wet/overworld (from forge-1.19.2-43.2.11-universal.jar)
+- #forge:is_wet/nether? (from forge-1.19.2-43.2.11-universal.jar)
+- #forge:is_wet/end? (from forge-1.19.2-43.2.11-universal.jar)
+
+#forge:is_cold/end
+- minecraft:the_end (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:small_end_islands (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:end_midlands (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:end_highlands (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:end_barrens (from forge-1.19.2-43.2.11-universal.jar)
+
+#betterdungeons:has_structure/skeleton_dungeon
+- #minecraft:is_mountain (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_badlands (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_hill (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_taiga (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_jungle (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_jungle? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:in_jungle? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_forest (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_forest? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:forest? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:stony_shore (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:mushroom_fields (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_mushroom? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:mushroom? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:ice_spikes (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:frozen_peaks (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #byg:is_icy? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_icy? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:icy? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:desert (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_desert? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:desert? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:savanna (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:savanna_plateau (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:windswept_savanna (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_savanna? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:savanna? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_badlands (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_mesa? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:in_mesa? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_badlands? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:badlands? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:snowy_plains (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:plains (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:plains? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:sunflower_plains (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:snowy_taiga (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:snowy_slopes (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:jagged_peaks (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:swamp (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:dripstone_caves (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:lush_caves (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+
+#idas:has_structure/sunken_ship_biomes
+- #idas:collections/idasdeep_oceans (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:has_structure/tinkers_workshop_biomes
+- #idas:collections/idasregular_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasbirch_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasplains (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasmeadows (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:has_structure/oak_biomes
+- #idas:collections/idasmeadows (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasregular_forests (from idas_forge-1.7.3+1.19.2.jar)
+
+#waystones:is_swamp
+- minecraft:swamp (from waystones-forge-1.19.2-11.4.0.jar)
+- minecraft:mangrove_swamp (from waystones-forge-1.19.2-11.4.0.jar)
+
+#graveyard:has_structure/ruins
+- #forge:is_dense/overworld (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:forest (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#forge:is_mountain
+- #forge:is_peak (from forge-1.19.2-43.2.11-universal.jar)
+- #forge:is_slope (from forge-1.19.2-43.2.11-universal.jar)
+
+#betterdungeons:has_structure/small_nether_dungeon
+- #minecraft:is_nether (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+
+#bettermineshafts:has_structure/better_mineshaft_oak
+- minecraft:plains (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- minecraft:sunflower_plains (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- minecraft:swamp (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- minecraft:meadow (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:brushland? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- projectvibrantjourneys:prairie? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #c:plains? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+
+#idas:has_structure/black_desert_biomes
+- #idas:collections/idasblack_deserts (from idas_forge-1.7.3+1.19.2.jar)
+
+#ars_nouveau:no_mob_spawn
+- #forge:is_mushroom (from ars_nouveau-1.19.2-3.13.4.jar)
+- minecraft:deep_dark (from ars_nouveau-1.19.2-3.13.4.jar)
+
+#betterdeserttemples:has_structure/better_desert_temple
+- minecraft:desert (from YungsBetterDesertTemples-1.19.2-Forge-2.2.2.jar)
+- #forge:is_desert? (from YungsBetterDesertTemples-1.19.2-Forge-2.2.2.jar)
+- #c:desert? (from YungsBetterDesertTemples-1.19.2-Forge-2.2.2.jar)
+- terralith:lush_desert? (from YungsBetterDesertTemples-1.19.2-Forge-2.2.2.jar)
+- biomesoplenty:lush_desert? (from YungsBetterDesertTemples-1.19.2-Forge-2.2.2.jar)
+- projectvibrantjourneys:desert_shrubland? (from YungsBetterDesertTemples-1.19.2-Forge-2.2.2.jar)
+- projectvibrantjourneys:verdant_sands? (from YungsBetterDesertTemples-1.19.2-Forge-2.2.2.jar)
+
+#blue_skies:shade_monitor/pink
+- blue_skies:shaded_woodlands (from blue_skies-1.19.2-1.3.20.jar)
+
+#minecraft:has_structure/ruined_portal_ocean
+- #minecraft:is_ocean (from Default)
+
+#idas:collections/idasbadlands
+- #minecraft:is_badlands (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:savanna_badlands? (from idas_forge-1.7.3+1.19.2.jar)
+- forge:mesa? (from idas_forge-1.7.3+1.19.2.jar)
+- c:mesa? (from idas_forge-1.7.3+1.19.2.jar)
+- forge:badlands? (from idas_forge-1.7.3+1.19.2.jar)
+- c:badlands? (from idas_forge-1.7.3+1.19.2.jar)
+
+#forge:is_rare
+- minecraft:mushroom_fields (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:sparse_jungle (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:savanna_plateau (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:sunflower_plains (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:windswept_gravelly_hills (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:flower_forest (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:ice_spikes (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:old_growth_birch_forest (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:old_growth_spruce_taiga (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:windswept_savanna (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:eroded_badlands (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:bamboo_jungle (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:deep_dark (from forge-1.19.2-43.2.11-universal.jar)
+- quark:glimmering_weald (from Quark-3.4-402.jar)
+
+#minecraft:is_deep_ocean
+- minecraft:deep_frozen_ocean (from Default)
+- minecraft:deep_cold_ocean (from Default)
+- minecraft:deep_ocean (from Default)
+- minecraft:deep_lukewarm_ocean (from Default)
+
+#idas:has_structure/nether_biomes
+- #idas:collections/idasnether (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:has_structure/hermits_hollow_biomes
+- #idas:collections/idasregular_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasplains (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasbirch_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasmeadows (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idashills (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:is_nether
+- minecraft:nether_wastes (from Default)
+- minecraft:soul_sand_valley (from Default)
+- minecraft:crimson_forest (from Default)
+- minecraft:warped_forest (from Default)
+- minecraft:basalt_deltas (from Default)
+
+#idas:has_structure/desert_biomes
+- minecraft:desert (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasdeserts (from idas_forge-1.7.3+1.19.2.jar)
+
+#bettermineshafts:has_structure/better_mineshaft_mushroom
+- minecraft:mushroom_fields (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #forge:is_mushroom? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #c:mushroom? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- biomesoplenty:fungal_jungle? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+
+#idas:collections/idasswamps
+- minecraft:swamp (from idas_forge-1.7.3+1.19.2.jar)
+- forge:swamp? (from idas_forge-1.7.3+1.19.2.jar)
+- c:swamp? (from idas_forge-1.7.3+1.19.2.jar)
+
+#forge:is_dry
+- #forge:is_dry/overworld (from forge-1.19.2-43.2.11-universal.jar)
+- #forge:is_dry/nether (from forge-1.19.2-43.2.11-universal.jar)
+- #forge:is_dry/end (from forge-1.19.2-43.2.11-universal.jar)
+
+#blue_skies:everbright
+- blue_skies:calming_skies (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:brightlands (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:slushlands (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:frostbitten_forest (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:peeking_ocean (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:midday_shore (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:snow_covered_pines (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:deep_peeking_ocean (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:brisk_meadow (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:polar_highland (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:frostbitten_forest_clearing (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:brumble_forest (from blue_skies-1.19.2-1.3.20.jar)
+
+#idas:collections/idastaigas
+- minecraft:taiga (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:alpine_highlands? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:birch_taiga? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:cloud_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:forested_highlands? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:lavender_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:lavender_valley? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:lush_valley? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:moonlight_grove? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:moonlight_valley? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:rocky_shrubland? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:siberian_grove? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:siberian_taiga? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:shield? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:shrubland? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:temperate_highlands? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:wintry_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:yellowstone? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:jade_cliffs? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:mediterranean_taiga? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:dead_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:old_growth_dead_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:autumnal_taiga? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:canadian_shield? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:maple_taiga? (from idas_forge-1.7.3+1.19.2.jar)
+- forge:coniferous? (from idas_forge-1.7.3+1.19.2.jar)
+- c:coniferous? (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:has_structure/necromancers_spire_biomes
+- #idas:collections/idasnether (from idas_forge-1.7.3+1.19.2.jar)
+
+#forge:is_cave
+- minecraft:lush_caves (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:dripstone_caves (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:deep_dark (from forge-1.19.2-43.2.11-universal.jar)
+
+#idas:has_structure/fishermans_lodge_biomes
+- #idas:collections/idasrivers (from idas_forge-1.7.3+1.19.2.jar)
+
+#cloudstorage:has_big_balloons
+- #minecraft:is_ocean (from cloudstorage-1.3.4-1.19.2.jar)
+- #minecraft:is_beach (from cloudstorage-1.3.4-1.19.2.jar)
+- #minecraft:is_river (from cloudstorage-1.3.4-1.19.2.jar)
+- #minecraft:has_structure/mineshaft (from cloudstorage-1.3.4-1.19.2.jar)
+- #minecraft:has_structure/stronghold (from cloudstorage-1.3.4-1.19.2.jar)
+
+#idas:has_structure/jungle_biomes
+- #idas:collections/idasjungles (from idas_forge-1.7.3+1.19.2.jar)
+
+#alexsmobs:spawns_white_mantis_shrimp
+- minecraft:mangrove_swamp (from alexsmobs-1.21.1.jar)
+
+#minecraft:more_frequent_drowned_spawns
+- #minecraft:is_river (from Default)
+
+#minecraft:has_structure/village_desert
+- minecraft:desert (from Default)
+
+#minecraft:is_forest
+- minecraft:forest (from Default)
+- minecraft:flower_forest (from Default)
+- minecraft:birch_forest (from Default)
+- minecraft:old_growth_birch_forest (from Default)
+- minecraft:dark_forest (from Default)
+- minecraft:grove (from Default)
+- #ars_nouveau:archwood_biome (from ars_nouveau-1.19.2-3.13.4.jar)
+
+#ad_astra:has_structure/lunarian_village_biomes
+- ad_astra:lunar_wastelands (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#idas:collections/idasmeadows
+- minecraft:meadow (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:blooming_plateau? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:blooming_valley? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:field? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:highland? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:highland_moor? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:rocky_shrubland? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:clover_patch? (from idas_forge-1.7.3+1.19.2.jar)
+
+#supplementaries:has_way_signs
+- #minecraft:is_overworld (from Supplementaries Generated Pack)
+
+#idas:has_structure/bopredwood_biomes
+- biomesoplenty:redwood_forest (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:has_structure/witches_treestump_biomes
+- #idas:collections/idasregular_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasspooky_forests (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:has_structure/sunken_ship_coral_biomes
+- minecraft:warm_ocean (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:has_structure/acacia_biomes
+- #idas:collections/idassavannas (from idas_forge-1.7.3+1.19.2.jar)
+
+#betterdungeons:has_structure/zombie_dungeon
+- #minecraft:is_mountain (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_badlands (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_hill (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_taiga (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_jungle (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_jungle? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:in_jungle? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_forest (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_forest? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:forest? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:stony_shore (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:mushroom_fields (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_mushroom? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:mushroom? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:ice_spikes (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:frozen_peaks (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #byg:is_icy? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_icy? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:icy? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:desert (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_desert? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:desert? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:savanna (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:savanna_plateau (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:windswept_savanna (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_savanna? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:savanna? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_badlands (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_mesa? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:in_mesa? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_badlands? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:badlands? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:snowy_plains (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:plains (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:plains? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:sunflower_plains (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:snowy_taiga (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:snowy_slopes (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:jagged_peaks (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:swamp (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:dripstone_caves (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:lush_caves (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+
+#minecraft:allows_tropical_fish_spawns_at_any_height
+- minecraft:lush_caves (from Default)
+
+#idas:has_structure/ancient_portal_biomes
+- #idas:collections/idasany_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasbadlands (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idascaves (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasdeserts (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasgiant_taigas (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idashills (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasicy (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasjungles (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasmeadows (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasmountains (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasmushrooms (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasplains (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idassavannas (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idassnowy_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idassnowy_plains (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idassnowy_mountains (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasswamps (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idastaigas (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasmeadows (from idas_forge-1.7.3+1.19.2.jar)
+
+#supplementaries:has_basalt_ash
+- minecraft:basalt_deltas (from Supplementaries Generated Pack)
+
+#minecraft:polar_bears_spawn_on_alternate_blocks
+- minecraft:frozen_ocean (from Default)
+- minecraft:deep_frozen_ocean (from Default)
+
+#minecraft:has_structure/village_plains
+- minecraft:plains (from Default)
+- minecraft:meadow (from Default)
+- #ars_nouveau:archwood_biome (from ars_nouveau-1.19.2-3.13.4.jar)
+
+#idas:collections/idashills
+- #minecraft:is_hill (from idas_forge-1.7.3+1.19.2.jar)
+- forge:hills? (from idas_forge-1.7.3+1.19.2.jar)
+- c:hills? (from idas_forge-1.7.3+1.19.2.jar)
+- c:extreme_hills? (from idas_forge-1.7.3+1.19.2.jar)
+
+#ad_astra:has_structure/mars_temple_biomes
+- ad_astra:martian_wastelands (from ad_astra-forge-1.19.2-1.12.6.jar)
+- ad_astra:martian_canyon_creek (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#forge:is_coniferous
+- minecraft:taiga (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:snowy_taiga (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:old_growth_pine_taiga (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:grove (from forge-1.19.2-43.2.11-universal.jar)
+
+#waystones:is_mushroom
+- minecraft:mushroom_fields (from waystones-forge-1.19.2-11.4.0.jar)
+
+#forge:is_snowy
+- minecraft:frozen_ocean (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:frozen_river (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:snowy_plains (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:snowy_beach (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:snowy_taiga (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:grove (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:snowy_slopes (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:jagged_peaks (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:frozen_peaks (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:ice_spikes (from forge-1.19.2-43.2.11-universal.jar)
+
+#graveyard:revenant_spawns
+- #forge:is_cold/overworld (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_snowy (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:snowy_taiga (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#graveyard:has_structure/haunted_house
+- minecraft:dark_forest (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_swamp (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:old_growth_pine_taiga (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:old_growth_spruce_taiga (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:moonlight_valley? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:cloud_forest? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:haunted_lakes? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#ad_astra:has_structure/venus_bullet_biomes
+- ad_astra:venus_wastelands (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#minecraft:has_structure/swamp_hut
+- minecraft:swamp (from Default)
+- minecraft:swamp (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:haunted_lakes (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+
+#idas:has_structure/red_desert_biomes
+- #idas:collections/idasbadlands (from idas_forge-1.7.3+1.19.2.jar)
+
+#graveyard:reaper_spawns
+- #forge:is_spooky (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#forge:is_water
+- #minecraft:is_ocean (from forge-1.19.2-43.2.11-universal.jar)
+- #minecraft:is_river (from forge-1.19.2-43.2.11-universal.jar)
+
+#minecraft:has_structure/ruined_portal_nether
+- #minecraft:is_nether (from Default)
+
+#bettermineshafts:has_structure/better_mineshaft_acacia
+- minecraft:savanna (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- minecraft:savanna_plateau (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #forge:is_savanna? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #c:savanna? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:arid_highlands? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:hot_shrubland? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:sakura_grove? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:sakura_valley? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- projectvibrantjourneys:baobab_fields? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+
+#minecraft:only_allows_snow_and_gold_rabbits
+- minecraft:desert (from Default)
+
+#idas:collections/idasicy
+- minecraft:ice_spikes (from idas_forge-1.7.3+1.19.2.jar)
+- minecraft:frozen_peaks (from idas_forge-1.7.3+1.19.2.jar)
+- byg:shattered_glacier? (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:stronghold_biased_to
+- minecraft:plains (from Default)
+- minecraft:sunflower_plains (from Default)
+- minecraft:snowy_plains (from Default)
+- minecraft:ice_spikes (from Default)
+- minecraft:desert (from Default)
+- minecraft:forest (from Default)
+- minecraft:flower_forest (from Default)
+- minecraft:birch_forest (from Default)
+- minecraft:dark_forest (from Default)
+- minecraft:old_growth_birch_forest (from Default)
+- minecraft:old_growth_pine_taiga (from Default)
+- minecraft:old_growth_spruce_taiga (from Default)
+- minecraft:taiga (from Default)
+- minecraft:snowy_taiga (from Default)
+- minecraft:savanna (from Default)
+- minecraft:savanna_plateau (from Default)
+- minecraft:windswept_hills (from Default)
+- minecraft:windswept_gravelly_hills (from Default)
+- minecraft:windswept_forest (from Default)
+- minecraft:windswept_savanna (from Default)
+- minecraft:jungle (from Default)
+- minecraft:sparse_jungle (from Default)
+- minecraft:bamboo_jungle (from Default)
+- minecraft:badlands (from Default)
+- minecraft:eroded_badlands (from Default)
+- minecraft:wooded_badlands (from Default)
+- minecraft:meadow (from Default)
+- minecraft:grove (from Default)
+- minecraft:snowy_slopes (from Default)
+- minecraft:frozen_peaks (from Default)
+- minecraft:jagged_peaks (from Default)
+- minecraft:stony_peaks (from Default)
+- minecraft:mushroom_fields (from Default)
+- minecraft:dripstone_caves (from Default)
+- minecraft:lush_caves (from Default)
+
+#forge:is_magical
+- quark:glimmering_weald (from Quark-3.4-402.jar)
+
+#forge:is_dry/nether
+- minecraft:nether_wastes (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:soul_sand_valley (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:crimson_forest (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:warped_forest (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:basalt_deltas (from forge-1.19.2-43.2.11-universal.jar)
+
+#minecraft:is_beach
+- minecraft:beach (from Default)
+- minecraft:snowy_beach (from Default)
+
+#minecraft:has_structure/ruined_portal_standard
+- #minecraft:is_beach (from Default)
+- #minecraft:is_river (from Default)
+- #minecraft:is_taiga (from Default)
+- #minecraft:is_forest (from Default)
+- minecraft:mushroom_fields (from Default)
+- minecraft:ice_spikes (from Default)
+- minecraft:dripstone_caves (from Default)
+- minecraft:lush_caves (from Default)
+- minecraft:savanna (from Default)
+- minecraft:snowy_plains (from Default)
+- minecraft:plains (from Default)
+- minecraft:sunflower_plains (from Default)
+- #minecraft:is_beach (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- #minecraft:is_river (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- #minecraft:is_taiga (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- #minecraft:is_forest (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:mushroom_fields (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:ice_spikes (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:dripstone_caves (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:lush_caves (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:savanna (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:snowy_plains (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:plains (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:sunflower_plains (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:eroded_haunted_forest (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:haunted_forest (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+
+#idas:collections/idasdeserts
+- minecraft:desert (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:ancient_sands? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:desert_oasis? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:desert_spires? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:lush_desert? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:red_oasis? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:sandstone_valley? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:mojave_desert? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:lush_desert? (from idas_forge-1.7.3+1.19.2.jar)
+- forge:sandy? (from idas_forge-1.7.3+1.19.2.jar)
+- c:sandy? (from idas_forge-1.7.3+1.19.2.jar)
+- forge:desert? (from idas_forge-1.7.3+1.19.2.jar)
+- c:desert? (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:has_structure/pillager_outpost
+- minecraft:desert (from Default)
+- minecraft:plains (from Default)
+- minecraft:savanna (from Default)
+- minecraft:snowy_plains (from Default)
+- minecraft:taiga (from Default)
+- #minecraft:is_mountain (from Default)
+- minecraft:grove (from Default)
+
+#idas:collections/idassnowy_plains
+- minecraft:snowy_plains (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:alpine_grove? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:cold_shrubland? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:snowy_badlands? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:snowy_shield? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:snowy_fir_clearing? (from idas_forge-1.7.3+1.19.2.jar)
+- forge:snowy? (from idas_forge-1.7.3+1.19.2.jar)
+- c:snowy? (from idas_forge-1.7.3+1.19.2.jar)
+- c:snowy_plains? (from idas_forge-1.7.3+1.19.2.jar)
+
+#forge:is_sparse
+- #forge:is_sparse/overworld (from forge-1.19.2-43.2.11-universal.jar)
+- #forge:is_sparse/nether? (from forge-1.19.2-43.2.11-universal.jar)
+- #forge:is_sparse/end? (from forge-1.19.2-43.2.11-universal.jar)
+
+#forge:is_swamp
+- minecraft:swamp (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:mangrove_swamp (from forge-1.19.2-43.2.11-universal.jar)
+
+#minecraft:is_mountain
+- minecraft:meadow (from Default)
+- minecraft:frozen_peaks (from Default)
+- minecraft:jagged_peaks (from Default)
+- minecraft:stony_peaks (from Default)
+- minecraft:snowy_slopes (from Default)
+
+#idas:has_structure/forest_biomes
+- #idas:collections/idasregular_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasbirch_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasany_forests (from idas_forge-1.7.3+1.19.2.jar)
+
+#graveyard:has_structure/mushroom_grave
+- #forge:is_mushroom (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:jungle (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:sparse_jungle (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:bamboo_jungle (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_swamp (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#blue_skies:shade_monitor/purple
+- blue_skies:unorthodox_valley (from blue_skies-1.19.2-1.3.20.jar)
+
+#graveyard:has_structure/dead_tree
+- minecraft:forest (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_dense/overworld (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_coniferous (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_swamp (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#idas:collections/idaswindswept_deserts
+- byg:windswept_desert? (from idas_forge-1.7.3+1.19.2.jar)
+
+#cataclysm:has_structure/ruined_citadel_biomes
+- minecraft:end_highlands (from L_Enders_Cataclysm-0.84-1.19.2.jar)
+- minecraft:end_midlands (from L_Enders_Cataclysm-0.84-1.19.2.jar)
+
+#minecraft:is_badlands
+- minecraft:badlands (from Default)
+- minecraft:eroded_badlands (from Default)
+- minecraft:wooded_badlands (from Default)
+
+#idas:has_structure/wizardtower_biomes
+- #idas:collections/idasregular_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasbirch_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasspooky_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasplains (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasmeadows (from idas_forge-1.7.3+1.19.2.jar)
+
+#forge:is_dry/end
+- minecraft:the_end (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:small_end_islands (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:end_midlands (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:end_highlands (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:end_barrens (from forge-1.19.2-43.2.11-universal.jar)
+
+#graveyard:has_structure/small_grave
+- minecraft:forest (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_plains (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_coniferous (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_dense/overworld (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:blooming_plateau? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:blooming_valley? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#minecraft:has_structure/nether_fossil
+- minecraft:soul_sand_valley (from Default)
+- minecraft:soul_sand_valley (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:ancient_dead_coral_reef (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:eroded_haunted_forest (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+
+#graveyard:has_structure/large_graveyard
+- minecraft:taiga (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:snowy_taiga (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_plains (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:forested_highlands? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:lush_valley? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:shield? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:shield_clearing? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:wintry_forest? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:haunted_forest? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#yungsbridges:collections/taiga
+- minecraft:taiga (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- terralith:cloud_forest? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- terralith:forested_highlands? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- terralith:lavender_forest? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- terralith:lavender_valley? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- terralith:moonlight_grove? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- terralith:moonlight_valley? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- terralith:rocky_shrubland? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- terralith:shrubland? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- terralith:wintry_forest? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- biomesoplenty:jade_cliffs? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- biomesoplenty:mediterranean_taiga? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- biomesoplenty:dead_forest? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- biomesoplenty:old_growth_dead_forest? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- byg:autumnal_taiga? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- byg:canadian_shield? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- byg:maple_taiga? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- projectvibrantjourneys:boreal_forest? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- projectvibrantjourneys:crystal_lakes? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+
+#idas:has_structure/winter_wagon_biomes
+- #idas:collections/idassnowy_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idassnowy_plains (from idas_forge-1.7.3+1.19.2.jar)
+
+#forge:is_cold/overworld
+- minecraft:taiga (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:frozen_ocean (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:frozen_river (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:snowy_plains (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:snowy_beach (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:snowy_taiga (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:old_growth_pine_taiga (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:grove (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:snowy_slopes (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:jagged_peaks (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:frozen_peaks (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:cold_ocean (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:deep_cold_ocean (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:deep_frozen_ocean (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:ice_spikes (from forge-1.19.2-43.2.11-universal.jar)
+
+#minecraft:has_structure/end_city
+- minecraft:end_highlands (from Default)
+- minecraft:end_midlands (from Default)
+
+#idas:collections/idasgiant_taigas
+- minecraft:old_growth_pine_taiga (from idas_forge-1.7.3+1.19.2.jar)
+- minecraft:old_growth_spruce_taiga (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:redwood_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:redwood_thicket? (from idas_forge-1.7.3+1.19.2.jar)
+
+#forge:is_dense/overworld
+- minecraft:jungle (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:dark_forest (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:old_growth_birch_forest (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:old_growth_spruce_taiga (from forge-1.19.2-43.2.11-universal.jar)
+
+#yungsbridges:has_structure/bridge
+- #minecraft:is_river (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- #c:river? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+
+#idas:has_structure/bazaar_biomes
+- minecraft:desert (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasdeserts (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:has_structure/bastion_remnant
+- minecraft:crimson_forest (from Default)
+- minecraft:nether_wastes (from Default)
+- minecraft:soul_sand_valley (from Default)
+- minecraft:warped_forest (from Default)
+
+#idas:collections/idasmountains
+- #minecraft:is_mountain (from idas_forge-1.7.3+1.19.2.jar)
+- forge:mountain? (from idas_forge-1.7.3+1.19.2.jar)
+- c:mountain? (from idas_forge-1.7.3+1.19.2.jar)
+- c:mountain_peak? (from idas_forge-1.7.3+1.19.2.jar)
+- c:mountain_slope? (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:has_structure/ruined_portal_mountain
+- #minecraft:is_badlands (from Default)
+- #minecraft:is_hill (from Default)
+- minecraft:savanna_plateau (from Default)
+- minecraft:windswept_savanna (from Default)
+- minecraft:stony_shore (from Default)
+- #minecraft:is_mountain (from Default)
+
+#idas:has_structure/beekeepers_house_biomes
+- #idas:collections/idasmeadows (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasplains (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasbirch_forests (from idas_forge-1.7.3+1.19.2.jar)
+
+#graveyard:skeleton_creeper_spawns
+- #forge:is_cold/overworld (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_dense/overworld (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_dry/overworld (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_hot/overworld (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_sparse/overworld (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_wet/overworld (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#idas:has_structure/vanilla_jungle_biomes
+- #idas:collections/idasjungles (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:water_on_map_outlines
+- #minecraft:is_ocean (from Default)
+- #minecraft:is_river (from Default)
+- minecraft:swamp (from Default)
+- minecraft:mangrove_swamp (from Default)
+
+#minecraft:is_river
+- minecraft:river (from Default)
+- minecraft:frozen_river (from Default)
+
+#ars_nouveau:berry_spawn
+- #minecraft:is_taiga (from ars_nouveau-1.19.2-3.13.4.jar)
+- ars_nouveau:archwood_forest (from ars_nouveau-1.19.2-3.13.4.jar)
+
+#alexsmobs:spawns_nether_tarantula_hawks
+- #minecraft:is_nether (from alexsmobs-1.21.1.jar)
+
+#idas:collections/idasdark_oak_forests
+- minecraft:dark_forest (from idas_forge-1.7.3+1.19.2.jar)
+
+#betterwitchhuts:has_structure/better_witch_hut
+- minecraft:swamp (from YungsBetterWitchHuts-1.19.2-Forge-2.1.0.jar)
+- minecraft:mangrove_swamp (from YungsBetterWitchHuts-1.19.2-Forge-2.1.0.jar)
+- #forge:is_swamp? (from YungsBetterWitchHuts-1.19.2-Forge-2.1.0.jar)
+- #c:swamp? (from YungsBetterWitchHuts-1.19.2-Forge-2.1.0.jar)
+
+#cataclysm:has_structure/burning_arena_biomes
+- minecraft:nether_wastes (from L_Enders_Cataclysm-0.84-1.19.2.jar)
+
+#bettermineshafts:has_structure/better_mineshaft_lush
+- minecraft:lush_caves (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+
+#idas:collections/idassnowy_mountains
+- minecraft:snowy_slopes (from idas_forge-1.7.3+1.19.2.jar)
+
+#forge:is_hot/nether
+- minecraft:nether_wastes (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:soul_sand_valley (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:crimson_forest (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:warped_forest (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:basalt_deltas (from forge-1.19.2-43.2.11-universal.jar)
+
+#ad_astra:has_structure/pygro_village_biomes
+- ad_astra:venus_wastelands (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#graveyard:ghoul_spawns
+- #forge:is_coniferous (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_dense/overworld (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- #forge:is_swamp (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#ad_astra:has_structure/moon_dungeon_biomes
+- ad_astra:lunar_wastelands (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#ad_astra:has_structure/pygro_tower_biomes
+- ad_astra:venus_wastelands (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#forge:is_hot/overworld
+- minecraft:desert (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:jungle (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:sparse_jungle (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:savanna (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:savanna_plateau (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:stony_peaks (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:warm_ocean (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:windswept_savanna (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:eroded_badlands (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:bamboo_jungle (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:mangrove_swamp (from forge-1.19.2-43.2.11-universal.jar)
+
+#idas:has_structure/byg_redwood_biomes
+- byg:redwood_thicket (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:collections/idasflower_forests
+- minecraft:flower_forest (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:blooming_plateau? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:blooming_valley? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:sakura_valley? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:sakura_grove? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:cherry_blossom_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:allium_fields? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:amaranth_fields? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:rose_fields? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:cherry_blossom_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:orchard? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:cherry_blossom_grove? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:lavender_field? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:lavender_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- c:flower_forests? (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:has_structure/buried_treasure
+- #minecraft:is_beach (from Default)
+
+#idas:collections/idasnether_wastes
+- minecraft:nether_wastes (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:collections/idasspooky_forests
+- minecraft:dark_forest (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:ice_marsh? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:lavender_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:mirage_isles? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:moonlight_grove? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:orchid_swamp? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:rocky_shrubland? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:siberian_grove? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:siberian_taiga? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:ancient_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:ebony_woods? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:ominous_woods? (from idas_forge-1.7.3+1.19.2.jar)
+- vampirism:vampire_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- forge:spooky? (from idas_forge-1.7.3+1.19.2.jar)
+- c:spooky? (from idas_forge-1.7.3+1.19.2.jar)
+- forge:dead? (from idas_forge-1.7.3+1.19.2.jar)
+- c:dead? (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:collections/idasnether_basalts
+- minecraft:basalt_deltas (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:collections/idascaves
+- minecraft:dripstone_caves (from idas_forge-1.7.3+1.19.2.jar)
+- minecraft:lush_caves (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:cave/frostfire_caves? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:cave/ice_caves? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:cave/fungal_caves? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:cave/desert_caves? (from idas_forge-1.7.3+1.19.2.jar)
+- forge:underground? (from idas_forge-1.7.3+1.19.2.jar)
+- c:underground? (from idas_forge-1.7.3+1.19.2.jar)
+- c:caves? (from idas_forge-1.7.3+1.19.2.jar)
+
+#blue_skies:shade_monitor/white
+- blue_skies:crystal_dunes (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:crystal_dunes_spikes (from blue_skies-1.19.2-1.3.20.jar)
+
+#idas:collections/idasmushrooms
+- minecraft:mushroom_fields (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:fungal_jungle? (from idas_forge-1.7.3+1.19.2.jar)
+- forge:mushroom? (from idas_forge-1.7.3+1.19.2.jar)
+- c:mushroom? (from idas_forge-1.7.3+1.19.2.jar)
+
+#yungsextras:has_structure/swamp_structures
+- minecraft:swamp (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+- minecraft:mangrove_swamp (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+- #forge:is_swamp? (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+- #c:swamp? (from YungsExtras-1.19.2-Forge-3.1.0.jar)
+
+#blue_skies:shade_monitor/snowy_blue
+- #blue_skies:everbright (from blue_skies-1.19.2-1.3.20.jar)
+
+#idas:has_structure/redhorn_guild_biomes
+- #idas:collections/idasregular_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idastaigas (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasgiant_taigas (from idas_forge-1.7.3+1.19.2.jar)
+
+#blue_skies:shade_monitor/muddy_purple
+- blue_skies:moonlit_reservoir (from blue_skies-1.19.2-1.3.20.jar)
+
+#minecraft:is_savanna
+- minecraft:savanna (from Default)
+- minecraft:savanna_plateau (from Default)
+- minecraft:windswept_savanna (from Default)
+
+#idas:has_structure/polar_bear_den_biomes
+- #idas:collections/idassnowy_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idassnowy_plains (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasicy (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idassnowy_mountains (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:collections/idasregular_forests
+- minecraft:forest (from idas_forge-1.7.3+1.19.2.jar)
+- byg:red_oak_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:temperate_rainforest? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:orchard? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:autumnal_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:cherry_blossom_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:cherry_blossom_grove? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:orchard? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:seasonal_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:woodland? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:old_growth_woodland? (from idas_forge-1.7.3+1.19.2.jar)
+
+#graveyard:has_structure/giant_mushroom
+- #forge:is_mushroom (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#bettermineshafts:has_structure/better_mineshaft_dripstone
+- minecraft:dripstone_caves (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+
+#forge:is_hot
+- #forge:is_hot/overworld (from forge-1.19.2-43.2.11-universal.jar)
+- #forge:is_hot/nether (from forge-1.19.2-43.2.11-universal.jar)
+- #forge:is_hot/end? (from forge-1.19.2-43.2.11-universal.jar)
+
+#minecraft:has_structure/igloo
+- minecraft:snowy_taiga (from Default)
+- minecraft:snowy_plains (from Default)
+- minecraft:snowy_slopes (from Default)
+
+#minecraft:has_structure/shipwreck_beached
+- #minecraft:is_beach (from Default)
+- #minecraft:is_beach (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:ancient_dead_coral_reef (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+
+#bettermineshafts:has_structure/better_mineshaft_mesa
+- #minecraft:is_badlands (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #forge:is_mesa? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #c:in_mesa? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #forge:is_badlands? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #c:badlands? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+
+#blue_skies:shade_monitor/red
+- blue_skies:sunset_maple_forest (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:searing_grassland (from blue_skies-1.19.2-1.3.20.jar)
+
+#idas:collections/idasdeep_oceans
+- #minecraft:is_deep_ocean (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:has_structure/treetop_tavern_biomes
+- #idas:collections/idasjungles (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:has_structure/orange_desert_biomes
+- #idas:collections/idasorange_deserts (from idas_forge-1.7.3+1.19.2.jar)
+
+#betterwitchhuts:has_structure/witch_circle
+- minecraft:swamp (from YungsBetterWitchHuts-1.19.2-Forge-2.1.0.jar)
+- #forge:is_swamp? (from YungsBetterWitchHuts-1.19.2-Forge-2.1.0.jar)
+- #c:swamp? (from YungsBetterWitchHuts-1.19.2-Forge-2.1.0.jar)
+
+#waystones:is_desert
+- minecraft:desert (from waystones-forge-1.19.2-11.4.0.jar)
+
+#minecraft:allows_surface_slime_spawns
+- minecraft:swamp (from Default)
+- minecraft:mangrove_swamp (from Default)
+
+#forge:is_plains
+- minecraft:plains (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:snowy_plains (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:meadow (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:sunflower_plains (from forge-1.19.2-43.2.11-universal.jar)
+
+#minecraft:required_ocean_monument_surrounding
+- #minecraft:is_ocean (from Default)
+- #minecraft:is_river (from Default)
+
+#betterdungeons:has_structure/small_dungeon
+- #minecraft:is_mountain (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_badlands (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_hill (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_taiga (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_jungle (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_jungle? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:in_jungle? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_forest (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_forest? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:forest? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:stony_shore (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:mushroom_fields (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_mushroom? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:mushroom? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:ice_spikes (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:frozen_peaks (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #byg:is_icy? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_icy? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:icy? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:desert (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_desert? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:desert? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:savanna (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:savanna_plateau (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:windswept_savanna (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_savanna? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:savanna? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_badlands (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_mesa? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:in_mesa? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_badlands? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:badlands? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:snowy_plains (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:plains (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:plains? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:sunflower_plains (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:snowy_taiga (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:snowy_slopes (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:jagged_peaks (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:swamp (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:dripstone_caves (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:lush_caves (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+
+#integrated_stronghold:has_structure/integrated_stronghold
+- #minecraft:is_mountain (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #minecraft:is_badlands (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #forge:is_mesa? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #c:in_mesa? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #forge:is_badlands? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #minecraft:is_hill (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #minecraft:is_taiga (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #minecraft:is_jungle (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #forge:is_jungle? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #c:in_jungle? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #minecraft:is_forest (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #forge:is_forest? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #c:forest? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- minecraft:stony_shore (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- minecraft:mushroom_fields (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #forge:is_mushroom? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #c:mushroom? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- minecraft:ice_spikes (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #byg:is_icy? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #forge:is_icy? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #c:icy? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- minecraft:desert (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #forge:is_desert? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #c:desert? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- minecraft:savanna (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- minecraft:snowy_plains (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- minecraft:plains (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #c:plains? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- minecraft:sunflower_plains (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- minecraft:swamp (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- minecraft:savanna (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- minecraft:savanna_plateau (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #forge:is_savanna? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- #c:savanna? (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- minecraft:windswept_savanna (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- minecraft:dripstone_caves (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+- minecraft:lush_caves (from integrated_stronghold_forge-1.0.1+1.19.2.jar)
+
+#minecraft:has_structure/ocean_monument
+- #minecraft:is_deep_ocean (from Default)
+
+#idas:has_structure/dark_oak_biomes
+- #idas:collections/idasdark_oak_forests (from idas_forge-1.7.3+1.19.2.jar)
+
+#forge:is_sandy
+- minecraft:desert (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:beach (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:badlands (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:wooded_badlands (from forge-1.19.2-43.2.11-universal.jar)
+
+#bettermineshafts:has_structure/better_mineshaft_spruce_snowy
+- minecraft:snowy_taiga (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- minecraft:snowy_plains (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- minecraft:snowy_slopes (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- minecraft:jagged_peaks (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:cold_shrubland? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:rocky_shrubland? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:wintry_forest? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+
+#minecraft:has_structure/ruined_portal_jungle
+- #minecraft:is_jungle (from Default)
+
+#idas:collections/idasrivers
+- minecraft:river (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:has_structure/vanilla_desert_biomes
+- #idas:collections/idasvanilla_deserts (from idas_forge-1.7.3+1.19.2.jar)
+
+#bettermineshafts:has_structure/better_mineshaft_red_desert
+- #minecraft:is_badlands (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #forge:is_badlands? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #c:badlands? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+
+#minecraft:plays_underwater_music
+- #minecraft:is_ocean (from Default)
+- #minecraft:is_river (from Default)
+
+#idas:collections/idasbeaches
+- #minecraft:is_beach (from idas_forge-1.7.3+1.19.2.jar)
+- forge:beach? (from idas_forge-1.7.3+1.19.2.jar)
+- c:beach? (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:has_structure/desert_pyramid
+- minecraft:desert (from Default)
+
+#graveyard:has_structure/crypt
+- #forge:is_underground (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#cataclysm:has_structure/soul_black_smith_biomes
+- minecraft:crimson_forest (from L_Enders_Cataclysm-0.84-1.19.2.jar)
+- minecraft:nether_wastes (from L_Enders_Cataclysm-0.84-1.19.2.jar)
+- minecraft:soul_sand_valley (from L_Enders_Cataclysm-0.84-1.19.2.jar)
+- minecraft:warped_forest (from L_Enders_Cataclysm-0.84-1.19.2.jar)
+
+#blue_skies:dripstones_drip_lava
+- blue_skies:searing_grassland (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:sunset_maple_forest (from blue_skies-1.19.2-1.3.20.jar)
+- #minecraft:is_nether (from blue_skies-1.19.2-1.3.20.jar)
+
+#forge:is_plateau
+- minecraft:savanna_plateau (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:wooded_badlands (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:meadow (from forge-1.19.2-43.2.11-universal.jar)
+
+#forge:is_lush
+- minecraft:lush_caves (from forge-1.19.2-43.2.11-universal.jar)
+
+#idas:collections/idasorange_deserts
+- biomesoplenty:lush_desert? (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:has_structure/apothecary_abode_biomes
+- #idas:collections/idasspooky_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasgiant_trees (from idas_forge-1.7.3+1.19.2.jar)
+
+#forge:is_dry/overworld
+- minecraft:desert (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:badlands (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:wooded_badlands (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:windswept_savanna (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:eroded_badlands (from forge-1.19.2-43.2.11-universal.jar)
+
+#graveyard:has_structure/lich_prison
+- minecraft:warm_ocean (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:lukewarm_ocean (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:deep_lukewarm_ocean (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:ocean (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:deep_ocean (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#idas:collections/idasblack_deserts
+- biomesoplenty:burnt_forest? (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:has_structure/woodland_mansion
+- minecraft:dark_forest (from Default)
+- minecraft:dark_forest (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:deep_dark_forest (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+
+#graveyard:has_structure/altar
+- minecraft:snowy_plains (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:ice_spikes (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#forge:is_void
+- minecraft:the_void (from forge-1.19.2-43.2.11-universal.jar)
+
+#idas:collections/idasnether_crimson_forests
+- minecraft:crimson_forest (from idas_forge-1.7.3+1.19.2.jar)
+
+#bettermineshafts:has_structure/better_mineshaft_ice
+- minecraft:ice_spikes (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- minecraft:frozen_peaks (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #byg:is_icy? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #forge:is_icy? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #c:icy? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+
+#idas:has_structure/windswept_desert_biomes
+- #idas:collections/idaswindswept_deserts (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:has_structure/ocean_ruin_warm
+- minecraft:lukewarm_ocean (from Default)
+- minecraft:warm_ocean (from Default)
+- minecraft:deep_lukewarm_ocean (from Default)
+- minecraft:lukewarm_ocean (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:warm_ocean (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- minecraft:deep_lukewarm_ocean (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:ancient_dead_coral_reef (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+
+#idas:has_structure/spruce_biomes
+- #idas:collections/idastaigas (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:has_structure/ancient_mines_biomes
+- #idas:collections/idashills (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasrocky_mountains (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasmountains (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:collections/idasany_forests
+- #minecraft:is_forest (from idas_forge-1.7.3+1.19.2.jar)
+- forge:forest? (from idas_forge-1.7.3+1.19.2.jar)
+- c:forest? (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:has_structure/bopmohogany_biomes
+- biomesoplenty:rainforest (from idas_forge-1.7.3+1.19.2.jar)
+
+#betteroceanmonuments:has_structure/better_ocean_monument
+- #minecraft:is_deep_ocean (from YungsBetterOceanMonuments-1.19.2-Forge-2.1.0.jar)
+- #c:deep_ocean? (from YungsBetterOceanMonuments-1.19.2-Forge-2.1.0.jar)
+
+#forge:is_mushroom
+- minecraft:mushroom_fields (from forge-1.19.2-43.2.11-universal.jar)
+- quark:glimmering_weald (from Quark-3.4-402.jar)
+
+#blue_skies:shade_monitor/white_and_purple
+- blue_skies:crystal_roughs (from blue_skies-1.19.2-1.3.20.jar)
+
+#blue_skies:has_sandstorms
+- blue_skies:crystal_dunes (from blue_skies-1.19.2-1.3.20.jar)
+- blue_skies:crystal_dunes_spikes (from blue_skies-1.19.2-1.3.20.jar)
+
+#betterdungeons:has_structure/spider_dungeon
+- #minecraft:is_mountain (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_badlands (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_hill (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_taiga (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_jungle (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_jungle? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:in_jungle? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_forest (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_forest? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:forest? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:stony_shore (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:mushroom_fields (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_mushroom? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:mushroom? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:ice_spikes (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:frozen_peaks (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #byg:is_icy? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_icy? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:icy? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:desert (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_desert? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:desert? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:savanna (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:savanna_plateau (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:windswept_savanna (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_savanna? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:savanna? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #minecraft:is_badlands (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_mesa? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:in_mesa? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #forge:is_badlands? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:badlands? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:snowy_plains (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:plains (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- #c:plains? (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:sunflower_plains (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:snowy_taiga (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:snowy_slopes (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:jagged_peaks (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:swamp (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:dripstone_caves (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+- minecraft:lush_caves (from YungsBetterDungeons-1.19.2-Forge-3.2.2.jar)
+
+#minecraft:is_overworld
+- minecraft:mushroom_fields (from Default)
+- minecraft:deep_frozen_ocean (from Default)
+- minecraft:frozen_ocean (from Default)
+- minecraft:deep_cold_ocean (from Default)
+- minecraft:cold_ocean (from Default)
+- minecraft:deep_ocean (from Default)
+- minecraft:ocean (from Default)
+- minecraft:deep_lukewarm_ocean (from Default)
+- minecraft:lukewarm_ocean (from Default)
+- minecraft:warm_ocean (from Default)
+- minecraft:stony_shore (from Default)
+- minecraft:swamp (from Default)
+- minecraft:mangrove_swamp (from Default)
+- minecraft:snowy_slopes (from Default)
+- minecraft:snowy_plains (from Default)
+- minecraft:snowy_beach (from Default)
+- minecraft:windswept_gravelly_hills (from Default)
+- minecraft:grove (from Default)
+- minecraft:windswept_hills (from Default)
+- minecraft:snowy_taiga (from Default)
+- minecraft:windswept_forest (from Default)
+- minecraft:taiga (from Default)
+- minecraft:plains (from Default)
+- minecraft:meadow (from Default)
+- minecraft:beach (from Default)
+- minecraft:forest (from Default)
+- minecraft:old_growth_spruce_taiga (from Default)
+- minecraft:flower_forest (from Default)
+- minecraft:birch_forest (from Default)
+- minecraft:dark_forest (from Default)
+- minecraft:savanna_plateau (from Default)
+- minecraft:savanna (from Default)
+- minecraft:jungle (from Default)
+- minecraft:badlands (from Default)
+- minecraft:desert (from Default)
+- minecraft:wooded_badlands (from Default)
+- minecraft:jagged_peaks (from Default)
+- minecraft:stony_peaks (from Default)
+- minecraft:frozen_river (from Default)
+- minecraft:river (from Default)
+- minecraft:ice_spikes (from Default)
+- minecraft:old_growth_pine_taiga (from Default)
+- minecraft:sunflower_plains (from Default)
+- minecraft:old_growth_birch_forest (from Default)
+- minecraft:sparse_jungle (from Default)
+- minecraft:bamboo_jungle (from Default)
+- minecraft:eroded_badlands (from Default)
+- minecraft:windswept_savanna (from Default)
+- minecraft:frozen_peaks (from Default)
+- minecraft:dripstone_caves (from Default)
+- minecraft:lush_caves (from Default)
+- minecraft:deep_dark (from Default)
+- #ars_nouveau:archwood_biome (from ars_nouveau-1.19.2-3.13.4.jar)
+- quark:glimmering_weald (from Quark-3.4-402.jar)
+
+#minecraft:has_structure/village_savanna
+- minecraft:savanna (from Default)
+
+#minecraft:without_patrol_spawns
+- minecraft:mushroom_fields (from Default)
+
+#minecraft:has_structure/village_taiga
+- minecraft:taiga (from Default)
+
+#idas:collections/idasend_voids
+- minecraft:small_end_islands (from idas_forge-1.7.3+1.19.2.jar)
+- minecraft:end_barrens (from idas_forge-1.7.3+1.19.2.jar)
+
+#aquamirae:ice_maze
+- minecraft:deep_frozen_ocean (from aquamirae-6.API15.jar)
+
+#idas:has_structure/ruins_of_the_deep_biomes
+- #idas:collections/idasregular_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasbirch_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasplains (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasmeadows (from idas_forge-1.7.3+1.19.2.jar)
+
+#ars_nouveau:summon_spawn
+- #minecraft:is_overworld (from ars_nouveau-1.19.2-3.13.4.jar)
+
+#graveyard:has_structure/small_mountain_grave
+- #forge:is_mountain (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:painted_mountains? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:rocky_mountains? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:haze_mountain? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:mountain_steppe? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#idas:collections/idasgiant_trees
+- minecraft:old_growth_pine_taiga (from idas_forge-1.7.3+1.19.2.jar)
+- minecraft:old_growth_spruce_taiga (from idas_forge-1.7.3+1.19.2.jar)
+- minecraft:bamboo_jungle (from idas_forge-1.7.3+1.19.2.jar)
+- minecraft:jungle (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:amethyst_rainforest? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:forested_highlands? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:jungle_mountains? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:rocky_jungle? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:orchard? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:cika_woods? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:coniferous_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:coniferous_forest_hills? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:cherry_blossom_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:tropical_rainforest? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:tropical_rainforest_hills? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:redwood_thicket? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:ebony_woods? (from idas_forge-1.7.3+1.19.2.jar)
+- byg:ebony_hills? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:redwood_forest? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:coniferous_forest? (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:has_closer_water_fog
+- minecraft:swamp (from Default)
+- minecraft:mangrove_swamp (from Default)
+
+#alexsmobs:spawns_soul_gusters
+- minecraft:soul_sand_valley (from alexsmobs-1.21.1.jar)
+
+#idas:collections/idasoceans
+- #minecraft:is_ocean (from idas_forge-1.7.3+1.19.2.jar)
+- #minecraft:is_deep_ocean (from idas_forge-1.7.3+1.19.2.jar)
+- forge:ocean? (from idas_forge-1.7.3+1.19.2.jar)
+- c:ocean? (from idas_forge-1.7.3+1.19.2.jar)
+
+#supplementaries:has_wild_flax
+- #minecraft:is_overworld (from Supplementaries Generated Pack)
+
+#minecraft:without_wandering_trader_spawns
+- minecraft:the_void (from Default)
+
+#minecraft:has_structure/ruined_portal_desert
+- minecraft:desert (from Default)
+
+#forge:is_dense
+- #forge:is_dense/overworld (from forge-1.19.2-43.2.11-universal.jar)
+- #forge:is_dense/nether? (from forge-1.19.2-43.2.11-universal.jar)
+- #forge:is_dense/end? (from forge-1.19.2-43.2.11-universal.jar)
+
+#minecraft:has_structure/ruined_portal_swamp
+- minecraft:swamp (from Default)
+- minecraft:mangrove_swamp (from Default)
+- minecraft:swamp (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:haunted_lakes (from The_Graveyard_Biomes_1.4_(FORGE)_for_1.19.2.jar)
+
+#idas:collections/idasend_island_land
+- minecraft:end_highlands (from idas_forge-1.7.3+1.19.2.jar)
+- minecraft:end_midlands (from idas_forge-1.7.3+1.19.2.jar)
+- forge:end? (from idas_forge-1.7.3+1.19.2.jar)
+- c:in_the_end? (from idas_forge-1.7.3+1.19.2.jar)
+- c:end_islands? (from idas_forge-1.7.3+1.19.2.jar)
+
+#bettermineshafts:has_structure/better_mineshaft_desert
+- minecraft:desert (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #forge:is_desert? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #c:desert? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:lush_desert? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- biomesoplenty:lush_desert? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- projectvibrantjourneys:desert_shrubland? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- projectvibrantjourneys:verdant_sands? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+
+#minecraft:spawns_cold_variant_frogs
+- minecraft:snowy_plains (from Default)
+- minecraft:ice_spikes (from Default)
+- minecraft:frozen_peaks (from Default)
+- minecraft:jagged_peaks (from Default)
+- minecraft:snowy_slopes (from Default)
+- minecraft:frozen_ocean (from Default)
+- minecraft:deep_frozen_ocean (from Default)
+- minecraft:grove (from Default)
+- minecraft:deep_dark (from Default)
+- minecraft:frozen_river (from Default)
+- minecraft:snowy_taiga (from Default)
+- minecraft:snowy_beach (from Default)
+- #minecraft:is_end (from Default)
+
+#cataclysm:has_structure/ancient_factory_biomes
+- #forge:is_underground (from L_Enders_Cataclysm-0.84-1.19.2.jar)
+
+#idas:collections/idasnether_souls
+- minecraft:soul_sand_valley (from idas_forge-1.7.3+1.19.2.jar)
+
+#bettermineshafts:has_structure/better_mineshaft_jungle
+- #minecraft:is_jungle (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #forge:is_jungle? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #c:in_jungle? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+
+#minecraft:is_end
+- minecraft:the_end (from Default)
+- minecraft:end_highlands (from Default)
+- minecraft:end_midlands (from Default)
+- minecraft:small_end_islands (from Default)
+- minecraft:end_barrens (from Default)
+
+#forge:is_underground
+- #forge:is_cave (from forge-1.19.2-43.2.11-universal.jar)
+- quark:glimmering_weald (from Quark-3.4-402.jar)
+
+#ad_astra:has_structure/meteor_biomes
+- #minecraft:is_jungle (from ad_astra-forge-1.19.2-1.12.6.jar)
+- #minecraft:is_forest (from ad_astra-forge-1.19.2-1.12.6.jar)
+- #minecraft:is_taiga (from ad_astra-forge-1.19.2-1.12.6.jar)
+- minecraft:desert (from ad_astra-forge-1.19.2-1.12.6.jar)
+- minecraft:plains (from ad_astra-forge-1.19.2-1.12.6.jar)
+- minecraft:snowy_plains (from ad_astra-forge-1.19.2-1.12.6.jar)
+- minecraft:sunflower_plains (from ad_astra-forge-1.19.2-1.12.6.jar)
+- minecraft:savanna (from ad_astra-forge-1.19.2-1.12.6.jar)
+- minecraft:savanna_plateau (from ad_astra-forge-1.19.2-1.12.6.jar)
+- minecraft:windswept_savanna (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#minecraft:without_zombie_sieges
+- minecraft:mushroom_fields (from Default)
+
+#idas:has_structure/bygmohogany_biomes
+- byg:tropical_rainforest (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:is_taiga
+- minecraft:taiga (from Default)
+- minecraft:snowy_taiga (from Default)
+- minecraft:old_growth_pine_taiga (from Default)
+- minecraft:old_growth_spruce_taiga (from Default)
+
+#idas:has_structure/birch_biomes
+- #idas:collections/idasbirch_forests (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:spawns_warm_variant_frogs
+- minecraft:desert (from Default)
+- minecraft:warm_ocean (from Default)
+- #minecraft:is_jungle (from Default)
+- #minecraft:is_savanna (from Default)
+- #minecraft:is_nether (from Default)
+- #minecraft:is_badlands (from Default)
+- minecraft:mangrove_swamp (from Default)
+
+#graveyard:has_structure/small_savanna_grave
+- #forge:is_dry/overworld (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:savanna_badlands? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:savanna_slopes? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:fractured_savanna? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#minecraft:mineshaft_blocking
+- minecraft:deep_dark (from Default)
+
+#forge:is_wasteland
+- minecraft:snowy_plains (from forge-1.19.2-43.2.11-universal.jar)
+
+#bettermineshafts:has_structure/better_mineshaft_spruce
+- #minecraft:is_taiga (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:cloud_forest? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:forested_highlands? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:lavender_forest? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:lavender_valley? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:moonlight_grove? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:moonlight_valley? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- terralith:shrubland? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- biomesoplenty:jade_cliffs? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- biomesoplenty:mediterranean_taiga? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- biomesoplenty:dead_forest? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- biomesoplenty:old_growth_dead_forest? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- byg:autumnal_taiga? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- byg:canadian_shield? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- byg:maple_taiga? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- projectvibrantjourneys:boreal_forest? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- projectvibrantjourneys:crystal_lakes? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+
+#idas:collections/idasjungles
+- #minecraft:is_jungle (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:amethyst_rainforest? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:rocky_jungle? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:tropical_jungle? (from idas_forge-1.7.3+1.19.2.jar)
+- forge:jungle? (from idas_forge-1.7.3+1.19.2.jar)
+- c:jungle? (from idas_forge-1.7.3+1.19.2.jar)
+
+#minecraft:has_structure/village_snowy
+- minecraft:snowy_plains (from Default)
+
+#alexsmobs:spawns_white_seals
+- #forge:is_snowy (from alexsmobs-1.21.1.jar)
+
+#idas:has_structure/pillager_fortress_biomes
+- #idas:collections/idasplains (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasgiant_trees (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idastaigas (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasmeadows (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasflower_forests (from idas_forge-1.7.3+1.19.2.jar)
+
+#graveyard:has_structure/medium_graveyard
+- minecraft:forest (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:flower_forest (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:windswept_forest (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:brushland? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:blooming_valley? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:temperate_highlands? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- graveyard_biomes:eroded_haunted_forest? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#idas:has_structure/bearclaw_inn_biomes
+- #idas:collections/idasregular_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idastaigas (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasgiant_taigas (from idas_forge-1.7.3+1.19.2.jar)
+
+#idas:collections/idasstony_shores
+- minecraft:stony_shore (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:gravel_desert? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:cold_desert? (from idas_forge-1.7.3+1.19.2.jar)
+- c:stony_shores? (from idas_forge-1.7.3+1.19.2.jar)
+
+#graveyard:has_structure/memorial_tree
+- minecraft:old_growth_birch_forest (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- minecraft:birch_forest (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+- terralith:birch_taiga? (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#ad_astra:has_structure/oil_well_biomes
+- #minecraft:is_ocean (from ad_astra-forge-1.19.2-1.12.6.jar)
+- #minecraft:is_deep_ocean (from ad_astra-forge-1.19.2-1.12.6.jar)
+- minecraft:swamp (from ad_astra-forge-1.19.2-1.12.6.jar)
+
+#bettermineshafts:has_structure/better_mineshaft_overgrown
+- #minecraft:is_forest (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #forge:is_forest? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- #c:forest? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- byg:red_oak_forest? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- byg:temperate_rainforest? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- byg:orchard? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- byg:autumnal_forest? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- byg:cherry_blossom_forest? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- biomesoplenty:cherry_blossom_grove? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- biomesoplenty:orchard? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- biomesoplenty:seasonal_forest? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- biomesoplenty:woodland? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- biomesoplenty:old_growth_woodland? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+- magicalforest:magical_forest? (from YungsBetterMineshafts-1.19.2-Forge-3.2.0.jar)
+
+#idas:has_structure/hunters_cabin_biomes
+- #idas:collections/idasregular_forests (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idastaigas (from idas_forge-1.7.3+1.19.2.jar)
+- #idas:collections/idasgiant_taigas (from idas_forge-1.7.3+1.19.2.jar)
+
+#yungsbridges:collections/jungle
+- #minecraft:is_jungle (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- #forge:is_jungle? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+- #c:in_jungle? (from YungsBridges-1.19.2-Forge-3.1.0.jar)
+
+#minecraft:reduce_water_ambient_spawns
+- #minecraft:is_river (from Default)
+
+#graveyard:has_structure/small_desert_grave
+- minecraft:desert (from The_Graveyard_2.5.2_(FORGE)_for_1.19.2.jar)
+
+#alexsmobs:spawns_huge_catfish
+- #forge:is_swamp (from alexsmobs-1.21.1.jar)
+
+#forge:is_spooky
+- minecraft:dark_forest (from forge-1.19.2-43.2.11-universal.jar)
+- minecraft:deep_dark (from forge-1.19.2-43.2.11-universal.jar)
+
+#idas:collections/idasrocky_mountains
+- terralith:amethyst_canyon? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:basalt_cliffs? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:emerald_peaks? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:granite_cliffs? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:haze_mountain? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:mountain_steppe? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:painted_mountains? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:rocky_mountains? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:shield_clearing? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:steppe? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:stony_spires? (from idas_forge-1.7.3+1.19.2.jar)
+- terralith:valley_clearing? (from idas_forge-1.7.3+1.19.2.jar)
+- biomesoplenty:crag? (from idas_forge-1.7.3+1.19.2.jar)

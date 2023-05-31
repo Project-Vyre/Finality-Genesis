@@ -1,0 +1,49 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screens.SoundOptionsScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  orientation = element
+  shape = rectangle
+  color = #000000aa
+  orientation_element = dc756f37-127e-4522-a09c-f1b4049b55ec1682709794229
+  x = -8
+  width = 238
+  action = addshape
+  actionid = 3cd94290-2bbb-4342-ab6b-2af6424ba6fa1684151434557
+  y = -6
+  height = 46
+}
+
+customization {
+  orientation = element
+  enable_scrolling = false
+  shadow = true
+  scale = 1.0
+  source = Don't disable the Music audio track entirely %n%as some mods do have boss soundtracks%n%and custom environmental soundtracks.
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  orientation_element = vanillabtn:345176
+  x = -234
+  width = 222
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = dc756f37-127e-4522-a09c-f1b4049b55ec1682709794229
+  y = 5
+  alignment = left
+  base_color = #b1a0ff
+  height = 39
+}
+

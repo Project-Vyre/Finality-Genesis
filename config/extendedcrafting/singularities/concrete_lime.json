@@ -1,0 +1,11 @@
+{
+    "name": "Lime Concrete",
+    "colors": [
+      "a9d072",
+      "589e17"
+    ],
+    "ingredient": {
+      "item": "minecraft:lime_concrete"
+    },
+    "materialCount": 16384
+  }

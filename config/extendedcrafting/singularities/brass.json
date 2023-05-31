@@ -1,0 +1,11 @@
+{
+  "name": "Brass",
+  "colors": [
+    "f2c16d",
+    "724c2b"
+  ],
+  "ingredient": {
+    "item": "create:brass_block"
+  },
+  "materialCount": 8192
+}

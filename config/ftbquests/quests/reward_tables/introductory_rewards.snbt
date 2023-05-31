@@ -1,0 +1,27 @@
+{
+	icon: {
+		Count: 1b
+		id: "minecraft:wooden_sword"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "5C53005B8CEE4C42"
+	loot_size: 1
+	order_index: 6
+	rewards: [
+		{ count: 32, item: "minecraft:torch", weight: 2.0f }
+		{ item: "torchmaster:megatorch" }
+		{
+			item: {
+				Count: 1b
+				id: "minecraft:shield"
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+		{ count: 64, item: "minecraft:leather", weight: 2.0f }
+	]
+	title: "Introductory Rewards"
+}

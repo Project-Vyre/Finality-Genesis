@@ -1,0 +1,327 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "apotheosis"
+	group: "6855847200ADBE3A"
+	icon: "apotheosis:gem_dust"
+	id: "6354312DFE41C7F0"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["7D3FA3191B051D55"]
+			id: "0EB2D84D0683C5C5"
+			subtitle: "Gem Dust has lots of utility."
+			tasks: [{
+				id: "65F2DD9E96FBF7C6"
+				item: "apotheosis:gem_dust"
+				type: "item"
+			}]
+			title: "Congrats! You sacrificed your item to the dark gods!"
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["5D79BD5D3D87DA08"]
+			icon: "minecraft:anvil"
+			id: "7D3FA3191B051D55"
+			subtitle: "Sacrifice the stuff to get materials for the powerful stuff, got it?"
+			tasks: [{
+				id: "5ACF7B37EC1AE02D"
+				item: "apotheosis:gem_dust"
+				type: "item"
+			}]
+			title: "Smash your valuables with a falling anvil."
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["0EB2D84D0683C5C5"]
+			description: ["This salvages Affixed items and converts them into Rarity Materials."]
+			id: "0CC888B34808370F"
+			subtitle: "It is really important."
+			tasks: [{
+				id: "27739486D76BF9B6"
+				item: "apotheosis:salvaging_table"
+				type: "item"
+			}]
+			title: "Make a Salvaging Table, it's important."
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0CC888B34808370F"]
+			id: "376556B76A4D12A5"
+			subtitle: "Tier 1 Rarity Material"
+			tasks: [{
+				id: "54A4CAE1B702579F"
+				item: "apotheosis:common_material"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0CC888B34808370F"]
+			id: "4E3FAA48FA11E177"
+			subtitle: "Tier 2 Rarity Material"
+			tasks: [{
+				id: "1A8CF8C68C5CEA21"
+				item: "apotheosis:uncommon_material"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0CC888B34808370F"]
+			id: "72AD6FF2F61C7FD8"
+			subtitle: "Tier 3 Rarity Material"
+			tasks: [{
+				id: "5CEAD17407372A2D"
+				item: "apotheosis:rare_material"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0CC888B34808370F"]
+			id: "20FEAD12447CB2E2"
+			subtitle: "Tier 4 Rarity Material"
+			tasks: [{
+				id: "427A80F86A86FF10"
+				item: "apotheosis:epic_material"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0CC888B34808370F"]
+			id: "7A6003AA26F89F01"
+			subtitle: "Tier 5 Rarity Material"
+			tasks: [{
+				id: "0F13BC80426AE023"
+				item: "apotheosis:mythic_material"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0EB2D84D0683C5C5"]
+			description: [
+				"This item allows you to keep the gem but it destroys the Affixed item."
+				""
+				"Use it in a Smithing Table."
+			]
+			id: "292255F2891C4C7F"
+			subtitle: "The gem is saved, but the item is gone!"
+			tasks: [{
+				id: "0D863DF077349F1F"
+				item: "apotheosis:vial_of_extraction"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0EB2D84D0683C5C5"]
+			description: [
+				"This item allows you to remove the gem and destroy it instead of the Affixed item."
+				""
+				"Use it in a Smithing Table."
+			]
+			id: "7C48CEAB862B2C27"
+			subtitle: "You monster, what have you done?"
+			tasks: [{
+				id: "7093EDBEAC46001D"
+				item: "apotheosis:vial_of_expulsion"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "5D79BD5D3D87DA08"
+			shape: "rsquare"
+			subtitle: "This book explains Apotheosis things, please use it."
+			tasks: [{
+				id: "00C04831E4FA7E9B"
+				item: {
+					Count: 1b
+					id: "patchouli:guide_book"
+					tag: {
+						"patchouli:book": "apotheosis:apoth_chronicle"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"00C04831E4FA7E9B"
+				"4A691BB889286C89"
+			]
+			description: [
+				"This Enchanting Table is significantly more powerful."
+				""
+				"Use different bookshelves in order to modify the levels of the 3 different aspects of Apotheosis enchanting: Eterna, Quanta and Arcana."
+			]
+			hide: true
+			id: "411F865E038E7A2E"
+			subtitle: "It's cooler!"
+			tasks: [{
+				id: "412F89A109102D9D"
+				item: "minecraft:enchanting_table"
+				title: "Enchanting Table acquired!"
+				type: "item"
+			}]
+			title: "This is not your ordinary enchanting table!"
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "3280E79F2CD74B0F"
+			tasks: [{
+				id: "5C4DCC02B451CBDC"
+				item: "apotheosis:helmet_tome"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "2095D6224E18FB5E"
+			tasks: [{
+				id: "431CA9DABFADA285"
+				item: "apotheosis:chestplate_tome"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "03A8F69CDB1B4D04"
+			tasks: [{
+				id: "006835D5484ABAAC"
+				item: "apotheosis:boots_tome"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "2DD02CF38762C5DF"
+			tasks: [{
+				id: "3C60DAF45F05032B"
+				item: "apotheosis:leggings_tome"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "16310D4341177DBD"
+			tasks: [{
+				id: "7081D86E3D085F86"
+				item: "apotheosis:weapon_tome"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "5986BE189515A09D"
+			tasks: [{
+				id: "36E31F9DDE90BA5F"
+				item: "apotheosis:pickaxe_tome"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "099E7DE85728EF7B"
+			tasks: [{
+				id: "560839E3AE9CC993"
+				item: "apotheosis:fishing_tome"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "08DE4E031180931E"
+			tasks: [{
+				id: "2FD0B15CA52C1042"
+				item: "apotheosis:bow_tome"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "5B78B34045FCF7C5"
+			tasks: [{
+				id: "4F5280D1C12F9C38"
+				item: "apotheosis:scrap_tome"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "437A1B22B98D1CB4"
+			tasks: [{
+				id: "454AAD0DEDC24BA6"
+				item: "apotheosis:other_tome"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["411F865E038E7A2E"]
+			description: ["You can make the most powerful tools imaginable, don't say I warned you."]
+			id: "3718E49C5B96FBFA"
+			subtitle: "This is where things get VERY interesting."
+			tasks: [{
+				id: "46BECAA580019513"
+				item: "apotheosis:reforging_table"
+				type: "item"
+			}]
+			title: "Create the Reforging Table"
+			x: 0.0d
+			y: 11.0d
+		}
+	]
+	subtitle: ["Apotheosis is that one mod that makes everything powerful."]
+	title: "Apotheosis"
+}

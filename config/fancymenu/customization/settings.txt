@@ -1,0 +1,78 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screens.OptionsScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  orientation = bottom-centered
+  enable_scrolling = true
+  shadow = false
+  scale = 1.0
+  source = {"placeholder":"drippy_cpu_info"}%n%{"placeholder":"drippy_gpu_info"}%n%{"placeholder":"drippy_java_vm"} {"placeholder":"drippy_java_version"}
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = -199
+  width = 398
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 7dc474c8-9a5d-496c-ada8-a4e541df048e1682307935492
+  y = -40
+  alignment = centered
+  base_color = #b1a0ff
+  height = 40
+}
+
+customization {
+  orientation = bottom-left
+  enable_scrolling = false
+  shadow = false
+  scale = 1.0
+  source = Used: {"placeholder":"usedram"} MB%n%Max allocated: {"placeholder":"maxram"} MB
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = 2
+  width = 200
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = e764b518-aa65-4259-9617-be59b37efb371682308396509
+  y = -24
+  alignment = left
+  base_color = #b1a0ff
+  height = 24
+}
+
+customization {
+  orientation = mid-centered
+  enable_scrolling = true
+  shadow = true
+  scale = 1.0
+  source = Set GUI scale to 2 for the best experience!
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = -121
+  width = 242
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 34541fff-bee1-4568-8597-ea3c637131931682309069604
+  y = -23
+  [loading_requirement_group:gui_scale2_detect] = [group_mode:or]
+  alignment = centered
+  [loading_requirement:fancymenu_loading_requirement_is_gui_scale][requirement_mode:if][group:gui_scale2_detect][req_id:8d3d0a4c-c982-4540-84c9-8416c9c826f71682308951084] = >2.0
+  base_color = #b1a0ff
+  height = 19
+  [loading_requirement:fancymenu_loading_requirement_is_gui_scale][requirement_mode:if][group:gui_scale2_detect][req_id:ab0404d4-7c5f-4a64-9a61-668e0b7805991682308971839] = <2.0
+}
+

@@ -1,0 +1,236 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "the_brass_age"
+	group: "3C9BBC0C470CAD02"
+	icon: "create:brass_ingot"
+	id: "568C41E5163D525F"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["67B3F409A2928F28"]
+			hide: true
+			id: "080D5F8006422F75"
+			tasks: [{
+				id: "1ACB41756B28FD04"
+				item: "create:brass_ingot"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["080D5F8006422F75"]
+			id: "4EEEFC8FA44732FC"
+			tasks: [{
+				id: "7DF73154519A1DD6"
+				item: "create:brass_casing"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4968755DF97B9F34"]
+			hide: true
+			id: "04C50CA2ED478E1F"
+			tasks: [{
+				id: "2A901053C046138C"
+				item: "create:electron_tube"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["04C50CA2ED478E1F"]
+			id: "6CBF1743473EC8E1"
+			tasks: [{
+				id: "7709EB36A44F7F72"
+				item: "create:mechanical_crafter"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["518A1959C88C6E85"]
+			id: "0C77088939A23CBB"
+			tasks: [{
+				id: "5B0B3D85D90F4A35"
+				item: "create:mechanical_arm"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0F8883072FD3C1E3"]
+			hide: true
+			id: "518A1959C88C6E85"
+			tasks: [{
+				id: "0B5F9D1581972248"
+				item: "create:precision_mechanism"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"518A1959C88C6E85"
+				"6CBF1743473EC8E1"
+			]
+			id: "23532EE43480C347"
+			tasks: [{
+				id: "206C1BD3A03B7DA4"
+				item: "create:wand_of_symmetry"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"518A1959C88C6E85"
+				"6CBF1743473EC8E1"
+			]
+			id: "316613F9D228B868"
+			tasks: [{
+				id: "2A455EA0EBBACE3B"
+				item: {
+					Count: 1b
+					id: "create:potato_cannon"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 2.5d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"518A1959C88C6E85"
+				"6CBF1743473EC8E1"
+			]
+			id: "7C61D96AEB4992DB"
+			tasks: [{
+				id: "1692E6D8CBB9D701"
+				item: {
+					Count: 1b
+					id: "create:extendo_grip"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 1.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["0836B99BC4CDDFAF"]
+			id: "28C0E8F818D3A77C"
+			tasks: [
+				{
+					id: "2BD49893F3BDC7AB"
+					item: "create:pulse_repeater"
+					type: "item"
+				}
+				{
+					id: "618D4938241DE7E9"
+					item: "create:pulse_extender"
+					type: "item"
+				}
+				{
+					id: "2650E3085C001576"
+					item: "create:redstone_contact"
+					type: "item"
+				}
+				{
+					id: "0A6A0E94AA850D36"
+					item: "create:powered_toggle_latch"
+					type: "item"
+				}
+			]
+			title: "Smart Redstone!"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["080D5F8006422F75"]
+			id: "0836B99BC4CDDFAF"
+			tasks: [{
+				id: "1BD3597FD79961D4"
+				item: "create:brass_sheet"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["66792EAE2E5FCEA0"]
+			id: "4270F43E8261EAA4"
+			tasks: [{
+				id: "38E1F14B1EB889F6"
+				item: "create:linked_controller"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["518A1959C88C6E85"]
+			id: "759E2987B6551AE8"
+			subtitle: "Engineers hate this!"
+			tasks: [{
+				id: "4E83664209C15CEB"
+				item: "create:rotation_speed_controller"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4EEEFC8FA44732FC"]
+			id: "66792EAE2E5FCEA0"
+			tasks: [{
+				id: "37CD728C4CC69D01"
+				item: "create:redstone_link"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"4FB460BEBF001DC7"
+				"04C50CA2ED478E1F"
+			]
+			id: "49402C7F1E6D2D9D"
+			tasks: [{
+				id: "704F2DD367D3F34B"
+				item: "create:deployer"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0836B99BC4CDDFAF"]
+			id: "4FB460BEBF001DC7"
+			tasks: [{
+				id: "41E654FD5BA900F3"
+				item: "create:brass_hand"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+	]
+	subtitle: ["Computation and intelligence."]
+	title: "Brass Age"
+}

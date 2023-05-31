@@ -1,0 +1,8 @@
+{
+	icon: "ars_nouveau:manipulation_essence"
+	id: "4808BC00F1F9BD10"
+	loot_size: 1
+	order_index: 4
+	rewards: [ ]
+	title: "Manipulation Essence Rewards"
+}

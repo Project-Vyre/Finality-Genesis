@@ -1,0 +1,11 @@
+{
+  "name": "Sturdy Sheet",
+  "colors": [
+      "6f6d80",
+      "292936"
+  ],
+  "ingredient": {
+    "item": "create:sturdy_sheet"
+  },
+  "materialCount": 8192
+}

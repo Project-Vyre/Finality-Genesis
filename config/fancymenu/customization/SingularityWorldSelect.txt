@@ -1,0 +1,33 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screens.worldselection.SelectWorldScreen
+  randomgroup = 1
+  renderorder = background
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  restart_on_load = false
+  name = singularity_animation
+  action = animatebackground
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  orientation = mid-centered
+  shape = rectangle
+  color = #000000aa
+  x = -187
+  width = 375
+  action = addshape
+  actionid = f97f05fb-192d-4f18-b102-d381cb2bd7301679445186752
+  y = -229
+  height = 419
+}
+
