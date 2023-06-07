@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
             ],
             "results": [
               {
-                "item": "create:extendedcrafting:the_ultimate_ingot"
+                "item": "extendedcrafting:the_ultimate_ingot"
               }
             ]
           },
@@ -46,7 +46,7 @@ ServerEvents.recipes(event => {
                 "item": "extendedcrafting:the_ultimate_ingot"
               },
               {
-                "item": "extendedcrafting:the_ultimate_catalyst"
+                "item": "extendedcrafting:the_ultimate_ingot"
               }
             ],
             "results": [
@@ -123,7 +123,7 @@ ServerEvents.recipes(event => {
           }
         ],
         "loops": 16
-    }).id('finality:creativerite_ingot_json')
+    }).id('finality:extendedcrafting/jsonaneurysm_seq/creativerite_ingot')
     /*
     event.recipes.createSequencedAssembly([
         Item.of('upgradednetherite_creative:creative_upgraded_netherite_ingot').withChance(25.0),

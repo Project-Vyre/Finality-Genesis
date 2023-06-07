@@ -1,0 +1,28 @@
+{
+  "mobs": [
+    {
+      "name": "graveyard:corrupted_pillager",
+      "weight": 10
+    },
+    {
+      "name": "graveyard:corrupted_vindicator",
+      "weight": 10
+    },
+    {
+      "name": "graveyard:ghoul",
+      "weight": 10
+    },
+    {
+      "name": "graveyard:nightmare",
+      "weight": 5
+    },
+    {
+      "name": "graveyard:acolyte",
+      "weight": 5
+    },
+    {
+      "name": "quark:forgotten",
+      "weight": 5
+    }
+  ]
+}

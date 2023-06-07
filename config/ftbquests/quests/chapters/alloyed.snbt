@@ -1,0 +1,24 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "alloyed"
+	group: "3C9BBC0C470CAD02"
+	id: "0F381A8A6B9B61B7"
+	order_index: 4
+	quest_links: [ ]
+	quests: [{
+		dependencies: ["4A691BB889286C89"]
+		hide: true
+		id: "3C20FAA708ED61DA"
+		shape: "rsquare"
+		subtitle: "Please wait for MythrilBagels to fix the mod on 1.19.2, thank you!"
+		tasks: [{
+			id: "5EDA1F7472669EE0"
+			title: "Create Alloyed is broken at the moment!"
+			type: "checkmark"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "Alloyed"
+}

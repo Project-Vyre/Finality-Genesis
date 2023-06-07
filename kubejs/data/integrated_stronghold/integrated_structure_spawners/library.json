@@ -1,0 +1,16 @@
+{
+  "mobs": [
+    {
+      "name": "minecraft:cave_spider",
+      "weight": 20
+    },
+    {
+      "name": "alexsmobs:centipede_head",
+      "weight": 15
+    },
+    {
+      "name": "minecraft:spider",
+      "weight": 5
+    }
+  ]
+}e

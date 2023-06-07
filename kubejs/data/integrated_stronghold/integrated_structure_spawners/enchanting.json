@@ -1,0 +1,24 @@
+{
+  "mobs": [
+    {
+      "name": "graveyard:acolyte",
+      "weight": 10
+    },
+    {
+      "name": "graveyard:ghoul",
+      "weight": 10
+    },
+    {
+      "name": "graveyard:revenant",
+      "weight": 5
+    },
+    {
+      "name": "graveyard:nightmare",
+      "weight": 5
+    },
+    {
+      "name": "quark:forgotten",
+      "weight": 5
+    }
+  ]
+}

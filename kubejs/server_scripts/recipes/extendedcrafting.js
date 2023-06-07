@@ -23,6 +23,54 @@ ServerEvents.recipes(event => {
         S: 'extendedcrafting:ender_star',
         O: 'minecraft:obsidian'
     }).id('finality:beacon')
+    event.custom({ // script original scripts below while kjs create is being developed
+        type: 'create:mechanical_crafting',
+        acceptMirrored: false,
+        key: {
+            L: { item: 'minecraft:lapis_lazuli' },
+            D: { item: 'minecraft:diamond' },
+            I: { item: 'minecraft:iron_ingot' },
+            S: { item: 'minecraft:nether_star' },
+            G: { item: 'minecraft:gold_ingot' }
+        },
+        pattern: [
+            'DLLLLLD',
+            'DGISIGD',
+            'DGISIGD',
+            'DLLLLLD'
+        ], 
+        result: {
+            count: 4,
+            item: 'extendedcrafting:crystaltine_ingot'
+        }
+    }).id('finality:extendedcrafting/json_mechanical/crystaltine_ingot_translate')
+    event.custom ({ // world shaper jsonified
+        type: 'create:mechanical_crafting',
+        acceptMirrored: false,
+        key: {
+            C: { item: 'extendedcrafting:the_ultimate_catalyst' },
+            S: { item: 'create:sturdy_sheet' },
+            U: { item: 'extendedcrafting:ultimate_singularity' },
+            P: { item: 'create:precision_mechanism' },
+            I: { item: 'extendedcrafting:the_ultimate_ingot' }
+        },
+        pattern: [
+            'CPUSSS',
+            'II    '
+        ],
+        result: { item: 'create:handheld_worldshaper' }
+    }).id('finality:extendedcrafting/json_mechanical/create_worldshaper')
+    event.custom({
+        type: 'create:crushing',
+        ingredients: [
+            { item: 'extendedcrafting:ultimate_singularity' }
+        ],
+        processingTime: 1200,
+        results: [
+            { item: 'extendedcrafting:the_ultimate_nugget' },
+            { item: 'extendedcrafting:the_ultimate_nugget', chance: 0.25 }
+        ]
+    }).id('finality:extendedcrafting/json_crushing/the_ultimate_nugget')
     /* Disabled until kubejs create is updated
     event.recipes.createMechanicalCrafting(Item.of('4x extendedcrafting:crystaltine_ingot'), [
         'DLLLLLD',
@@ -70,6 +118,84 @@ ServerEvents.recipes(event => {
         }
     }).id('finality:end_crystal')
     // sequenced assembly singularities
+    /* nope nope NOPE not doing JSON 
+    event.custom({ transitionalItem:{ "item": "extendedcrafting:singularity", "count": 1 },
+    loops: 16, 
+    sequence: [
+        { "type": "create:filling", "ingredients": [
+            { "item": "extendedcrafting:singularity" },
+            { "fluid": "minecraft:water", "nbt": {}, "amount": 25 }
+        ],
+    "results": [
+        { "item": "extendedcrafting:singularity" }
+    ],  
+    }, { "type": "create:deploying", "ingredients": [
+            { "item": "extendedcrafting:singularity" },
+            { "item": "minecraft:blue_ice" }
+        ], 
+    "results": [
+        { "item": "extendedcrafting:singularity" }
+    ],  
+    }, { "type": "create:pressing", "ingredients": [
+            { "item": "extendedcrafting:singularity"}
+    ], 
+    "results": [
+        { "item": "extendedcrafting:singularity" }
+    ],  
+    }, { "type": "create:pressing", "ingredients": [
+            { "item": "extendedcrafting:singularity" }
+    ], 
+    "results":[
+        { "item": "extendedcrafting:singularity" }
+    ],  
+    }, { "type":"create:pressing", "ingredients": [
+        { "item": "extendedcrafting:singularity" }
+    ], 
+    "results": [
+        {"item": "extendedcrafting:singularity" }
+    ],  }], ingredient:{ "item":"minecraft:blue_ice" }, type: "create:sequenced_assembly", 
+    results:[
+        { "item": "extendedcrafting:singularity", "count": 1, "nbt": "{Id:\"extendedcrafting:blue_ice\"}" }
+    ]}).id('finality:extendedcrafting/jsonaneurysm_seq/blue_ice_singularity')
+    event.custom({ transitionalItem:{ "item": "extendedcrafting:singularity", "count": 1 },
+    loops: 16, 
+    sequence: [
+        { "type": "create:filling", "ingredients": [
+            { "item": "extendedcrafting:singularity" },
+            { "fluid": "minecraft:water", "nbt": {}, "amount": 25 }
+        ],
+    "results": [
+        { "item": "extendedcrafting:singularity" }
+    ],  
+    }, { "type": "create:deploying", "ingredients": [
+            { "item": "extendedcrafting:singularity" },
+            { "item": "minecraft:blue_ice" }
+        ], 
+    "results": [
+        { "item": "extendedcrafting:singularity" }
+    ],  
+    }, { "type": "create:pressing", "ingredients": [
+            { "item": "extendedcrafting:singularity"}
+    ], 
+    "results": [
+        { "item": "extendedcrafting:singularity" }
+    ],  
+    }, { "type": "create:pressing", "ingredients": [
+            { "item": "extendedcrafting:singularity" }
+    ], 
+    "results":[
+        { "item": "extendedcrafting:singularity" }
+    ],  
+    }, { "type":"create:pressing", "ingredients": [
+        { "item": "extendedcrafting:singularity" }
+    ], 
+    "results": [
+        {"item": "extendedcrafting:singularity" }
+    ],  }], ingredient:{ "item":"minecraft:blue_ice" }, type: "create:sequenced_assembly", 
+    results:[
+        { "item": "extendedcrafting:singularity", "count": 1, "nbt": "{Id:\"extendedcrafting:blue_ice\"}" }
+    ]}).id('finality:extendedcrafting/jsonaneurysm_seq/blue_ice_singularity')
+    */
     /* Disabled until kubejs create is updated
     event.recipes.createSequencedAssembly([
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:blue_ice"}')

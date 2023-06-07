@@ -116,6 +116,11 @@ customization {
 }
 
 customization {
+  identifier = %id=604346%
+  action = hidebutton
+}
+
+customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_accessibility_button%
   orientation = element
   orientation_element = 3d46971e-9005-41ee-8b4f-2ec8219a39d41682306825930
@@ -324,7 +329,7 @@ customization {
   actionid = 6933b74a-1382-4bf0-9292-fd7ae16d24201679852528355
   action = addsplash
   y = 120
-  text = Zoglin!?
+  text = Ingots!
 }
 
 customization {
@@ -375,7 +380,7 @@ customization {
   scale = 40
   headrotationy = 0.0
   headrotationx = 0.0
-  skinurl = http://textures.minecraft.net/texture/bf12ac35994af158ccbddcc359eaf85a87c537ec878edf08d2d7b0661c7463ab
+  skinurl = http://textures.minecraft.net/texture/3306dd70d8b91cb6442181b54b258241a448c4dbf07cfe0709c17eda762be76e
   showname = false
   crouching = false
   follow_mouse = true
@@ -438,7 +443,7 @@ customization {
 customization {
   orientation = bottom-centered
   restartbackgroundanimations = true
-  buttonaction = openlink;https://github.com/CelestialAbyss/Finality-Minecraft-Things/wiki/Finality-1.18.2-Changelog%btnaction_splitter_fm%
+  buttonaction = openlink;https://project-vyre.github.io/finality-wiki/docs/changelog_genesis%btnaction_splitter_fm%
   backgroundhovered = config/fancymenu/assets/images/big_buttons_hover.png
   label = Changelog
   loopbackgroundanimations = true
@@ -460,10 +465,5 @@ customization {
   actionid = 78452ab9-99a5-45c3-a693-413c8a4b0d631684574611391
   y = 13
   height = 100
-}
-
-customization {
-  identifier = %id=604346%
-  action = hidebutton
 }
 

@@ -1,6 +1,6 @@
 {
     "name": "Introduction to Energy",
-    "icon": "thermal:energy_cell",
+    "icon": "createaddition:modular_accumulator",
     "category": "patchouli:technology",
     "pages": [
         {

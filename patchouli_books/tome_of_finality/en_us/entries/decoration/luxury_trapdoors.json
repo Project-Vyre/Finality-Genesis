@@ -21,16 +21,6 @@
             "type": "patchouli:crafting",
             "recipe": "supplementaries:key",
             "text": "Supplementaries lets you lock and unlock stuff with this key."
-        },
-        {
-            "type": "patchouli:crafting",
-            "recipe": "supplementaries:silver_trapdoor",
-            "text": "It's a silver trapdoor. $(br2)Behaves like an Iron Door."
-        },
-        {
-            "type": "patchouli:crafting",
-            "recipe": "supplementaries:lead_trapdoor",
-            "text": "It's a lead trapdoor. $(br2)Takes multiple clicks to open."
         }
     ]
 }

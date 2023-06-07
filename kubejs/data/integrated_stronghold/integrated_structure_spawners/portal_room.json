@@ -1,0 +1,12 @@
+{
+  "mobs": [
+    {
+      "name": "graveyard:nightmare",
+      "weight": 5
+    },
+    {
+      "name": "quark:forgotten",
+      "weight": 5
+    }
+  ]
+}

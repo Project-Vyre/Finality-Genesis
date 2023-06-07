@@ -7,8 +7,8 @@
         {
             "type": "patchouli:link",
             "text": "This entry contains useful links such as the modpack's wiki / changelog. $(br2)If you did not see the button on the main menu, here it is below.",
-            "url": "https://github.com/CelestialAbyss/Finality-Minecraft-Things/wiki",
-            "link_text": "GitHub Wiki"
+            "url": "https://project-vyre.github.io/finality-wiki/",
+            "link_text": "Modpack Wiki"
         },
         {
             "type": "patchouli:text",

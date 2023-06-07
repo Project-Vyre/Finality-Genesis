@@ -1,0 +1,16 @@
+{
+  "mobs": [
+    {
+      "name": "alexsmobs:centipede_head",
+      "weight": 10
+    },
+    {
+      "name": "minecraft:skeleton",
+      "weight": 10
+    },
+    {
+      "name": "quark:forgotten",
+      "weight": 5
+    }
+  ]
+}
