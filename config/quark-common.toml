@@ -38,7 +38,7 @@
 	"Enable Onboarding" = true
 	#Set to false to disable the behavior where quark will automatically hide any disabled items
 	"Hide Disabled Content" = true
-	#Set to false to disable Quark's item info when viweing recipe/uses for an item in JEI
+	#Set to false to disable Quark's item info when viewing recipe/uses for an item in JEI
 	"Enable Jei Item Info" = true
 	#For JEI info purposes, add any items here to specifically disable their JEI info from Quark. Note that Quark already only shows info that's relevant to which features are enabled
 	"Suppressed Info" = []
@@ -457,6 +457,10 @@
 		"Desert Temple Weight" = 8
 		"Item Quality" = 0
 		"Apply Cost" = 5
+		#Whether you can blend runes of each of the 'primary' colors plus white to create rainbow runes.
+		"Rainbow Rune Craftable" = true
+		#Whether you can blend runes of the 'primary' colors to create other colors of rune.
+		"Color Blending Runes" = true
 
 	[tools.bottled_cloud]
 		"Cloud Level Bottom" = 191
@@ -483,6 +487,8 @@
 		"Curse Gear" = false
 		#Allows combining tomes with normal books
 		"Combine With Books" = true
+		#Whether a sanity check is performed on the valid enchantments. If this is turned off, enchantments such as Silk Touch will be allowed to generate Ancient Tomes, if explicitly added to the Valid Enchantments.
+		"Sanity Check" = true
 
 	[tools.ambient_discs]
 		"Drop On Spider Kill" = true
@@ -536,6 +542,7 @@
 	"Better Elytra Rocket" = true
 	"Automatic Recipe Unlock" = true
 	"Armed Armor Stands" = true
+	"Sponges Better" = true
 
 	[tweaks.utility_recipes]
 		#Can any wool color be dyed?
@@ -717,6 +724,14 @@
 		"Disable Recipe Book" = false
 		#If enabled, advancements granting recipes will be stopped from loading, potentially reducing the lagspike on first world join.
 		"Filter Recipe Advancements" = true
+
+	[tweaks.sponges_better]
+		#The maximum number of water tiles that a sponge can soak up. Vanilla default is 64.
+		#Allowed values: [64,)
+		"Maximum Water Drain" = 256
+		#The maximum number of water tiles that a sponge can 'crawl along' for draining. Vanilla default is 6.
+		#Allowed values: [6,)
+		"Maximum Crawl Distance" = 10
 
 [world]
 	"Spiral Spires" = true
@@ -1617,6 +1632,10 @@
 		"Enable Dimension Locked Elytra" = true
 		"Non Griefing Entities" = ["minecraft:creeper", "minecraft:enderman"]
 		"Elytra Allowed Dimensions" = ["minecraft:the_end"]
+		#Makes falling blocks not able to be duped via dimension crossing
+		"Disable Falling Block Dupe" = true
+		#Fixes several piston physics exploits, most notably including TNT duping
+		"Disable Piston Physics Exploits" = true
 
 	[experimental.enchantments_begone]
 		"Enchantments To Begone" = []
@@ -1696,7 +1715,7 @@
 		"Allow Books" = true
 		#Set this to true to allow treasure enchantments to be rolled as pieces
 		"Allow Treasures" = false
-		#Add specific enchantments to matrix enchanter. Meant for treasure ones
+		#Any treasure enchantment IDs here will be able to appear in books in matrix enchanting
 		"Treasure Whitelist" = []
 		#Set to false to disable the tooltip for items with pending enchantments
 		"Show Tooltip" = true

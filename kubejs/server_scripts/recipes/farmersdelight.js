@@ -31,7 +31,8 @@ ServerEvents.recipes(event => {
         W: 'minecraft:wooden_shovel'
     }).id('finality:farmersdelight_cooking_pot')
     // hashtag minecraft:wooden_slabs does not work apparently so this is how it is going to be
-    /*Disabled until kubejs create is updated
+    // KubeJS Create has now been updated, enjoy
+    // Disabled until kubejs create is updated
     event.recipes.createCutting(fdBoard, [Item.of(oak)]).processingTime(100).id('finality:farmersdelight_cutting_board_oak')
     event.recipes.createCutting(fdBoard, [Item.of(spruce)]).processingTime(100).id('finality:farmersdelight_cutting_board_spruce')
     event.recipes.createCutting(fdBoard, [Item.of(jungle)]).processingTime(100).id('finality:farmersdelight_cutting_board_jungle')
@@ -39,5 +40,4 @@ ServerEvents.recipes(event => {
     event.recipes.createCutting(fdBoard, [Item.of(darkoak)]).processingTime(100).id('finality:farmersdelight_cutting_board_dark_oak')
     event.recipes.createCutting(fdBoard, [Item.of(crimson)]).processingTime(100).id('finality:farmersdelight_cutting_board_crimson')
     event.recipes.createCutting(fdBoard, [Item.of(warped)]).processingTime(100).id('finality:farmersdelight_cutting_board_warped')
-    */
 })
