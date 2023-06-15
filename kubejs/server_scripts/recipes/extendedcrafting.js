@@ -115,6 +115,30 @@ ServerEvents.recipes(event => {
             item: 'minecraft:end_crystal'
         }
     }).id('finality:end_crystal')
+    // singularity creation step 1
+    event.recipes.createMechanicalCrafting('finality:dormant_singularity_core', [
+        ' EEEEE ',
+        'EEEEEEE',
+        'EEEEEEE',
+        'EEEEEEE',
+        'EEEEEEE',
+        'EEEEEEE',
+        ' EEEEE '
+    ], {
+        E: 'minecraft:crying_obsidian'
+    }).id('finality:dormant_singularity_core')
+    // singularity step 2
+    event.recipes.createCompacting(Fluid.of('finality:condensed_universal_entropy', 1000), ['9x minecraft:crying_obsidian']).id('finality:condensing_universe_essence')
+    // singularity step 3 (new method)
+    event.recipes.createSequencedAssembly([
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:andesite_alloy"}')
+    ], 'finality:dormant_singularity_core', [
+        event.recipes.createFilling('finality:incomplete_andesite_singularity_core', ['finality:incomplete_andesite_singularity_core', Fluid.of('finality:condensed_universal_entropy', 250)]),
+        event.recipes.createDeploying('finality:incomplete_andesite_singularity_core', ['finality:incomplete_andesite_singularity_core', 'create:andesite_alloy_block']),
+        event.recipes.createPressing('finality:incomplete_andesite_singularity_core', 'finality:incomplete_andesite_singularity_core'),
+        event.recipes.createDeploying('finality:incomplete_andesite_singularity_core', ['finality:incomplete_andesite_singularity_core', 'create:andesite_alloy_block']),
+        event.recipes.createPressing('finality:incomplete_andesite_singularity_core', 'finality:incomplete_andesite_singularity_core')
+    ]).transitionalItem('finality:incomplete_andesite_singularity_core').loops(64).id('finality:andesite_alloy_singularity')
     // sequenced assembly singularities
     event.recipes.createSequencedAssembly([
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:andesite_alloy"}')
