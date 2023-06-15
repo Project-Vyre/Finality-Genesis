@@ -128,7 +128,7 @@ ServerEvents.recipes(event => {
         E: 'minecraft:crying_obsidian'
     }).id('finality:dormant_singularity_core')
     // singularity step 2
-    event.recipes.createCompacting(Fluid.of('finality:condensed_universal_entropy', 1000), ['9x minecraft:crying_obsidian']).id('finality:condensing_universe_essence')
+    event.recipes.createCompacting([Fluid.of('finality:condensed_universal_entropy', 1000)], ['9x minecraft:crying_obsidian']).id('finality:condensing_universe_essence')
     // singularity step 3 (new method)
     event.recipes.createSequencedAssembly([
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:andesite_alloy"}')
@@ -140,6 +140,7 @@ ServerEvents.recipes(event => {
         event.recipes.createPressing('finality:incomplete_andesite_singularity_core', 'finality:incomplete_andesite_singularity_core')
     ]).transitionalItem('finality:incomplete_andesite_singularity_core').loops(64).id('finality:andesite_alloy_singularity')
     // sequenced assembly singularities
+    /*
     event.recipes.createSequencedAssembly([
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:andesite_alloy"}')
     ],'create:andesite_alloy',[
@@ -149,6 +150,7 @@ ServerEvents.recipes(event => {
         event.recipes.createPressing('finality:andesite_singularity_core', 'finality:andesite_singularity_core'),
         event.recipes.createPressing('finality:andesite_singularity_core', 'finality:andesite_singularity_core')
     ]).transitionalItem('finality:andesite_singularity_core').loops(16).id('finality:andesite_alloy_singularity')
+    */
     event.recipes.createSequencedAssembly([
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:blue_ice"}')
     ],'minecraft:blue_ice',[
