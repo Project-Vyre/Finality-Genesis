@@ -14,7 +14,7 @@ ServerEvents.recipes(event => {
     event.remove({output: 'waystones:warp_dust'})
     event.remove({id: 'pickletweaks:watering_can'})
     event.remove({id: 'pickletweaks:reinforced_watering_can'})
-	event.shapeless(Item.of('patchouli:guide_book', '{"patchouli:book":"patchouli:tome_of_finality"}'), ['#forge:rods/wooden', '#forge:rods/wooden']).id('finality:documentation_book')
+	event.shapeless(Item.of('patchouli:guide_book', '{"patchouli:book":"patchouli:tome_of_finality"}'), ['#forge:rods/wooden', '#forge:rods/wooden']).id('finality:documentation_book')  
 })
 
 ServerEvents.tags('item', event => {
