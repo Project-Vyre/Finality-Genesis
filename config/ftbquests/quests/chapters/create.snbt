@@ -206,7 +206,15 @@
 		}
 		{
 			dependencies: ["3FF3FB9AC560FD61"]
-			description: ["As of Create 0.5.1, regular waterwheels can only output 256su at 8 RPM."]
+			description: [
+				"As of Create 0.5.1, regular water wheels can only output &3256su&r at &a8&r RPM."
+				""
+				"If your water wheels are only capable of outputting 128su, press Esc then click on the button with golden goggles."
+				""
+				"Click Configure... < Gameplay Settings < Kinetics < Stress Values < Capacity < "
+				""
+				"Then set the value for Water Wheel to 32.0 or simply click the reset button that looks like a browser refresh button."
+			]
 			icon: "create:water_wheel"
 			id: "7D464E248ADF8C04"
 			shape: "hexagon"
@@ -1578,7 +1586,7 @@
 		}
 		{
 			dependencies: ["7D464E248ADF8C04"]
-			description: ["Some helpful information that you will probably skip over: Large Waterwheels output the maximum of &3512su&r at &a4&r RPM"]
+			description: ["Some helpful information that you will probably skip over: Large Waterwheels output the maximum of &3512su&r at &a4&r RPM."]
 			id: "6B91B516A2B08FAB"
 			shape: "hexagon"
 			subtitle: "Biiiig waterwheels."
