@@ -329,7 +329,7 @@ customization {
   actionid = 6933b74a-1382-4bf0-9292-fd7ae16d24201679852528355
   action = addsplash
   y = 120
-  text = Ingots!
+  text = Age of Wonders is better!
 }
 
 customization {
@@ -337,20 +337,20 @@ customization {
   enable_scrolling = true
   shadow = true
   scale = 1.0
-  source = Menu Soundtrack Credits:%n%[menu1.ogg] Heart of the Wicked - Cjbeards%n%[menu2.ogg] From the Shadows - Cjbeards%n%[menu3.ogg] Cubeponk -  Cjbeards & Fayr%n%[menu4.ogg] Mirror Mirror - Cjbeards%n%%n%From the Cjbeards Music Usage spreadsheet: %n%All my music is royalty-free to use for YouTube and streaming, %n%and most of my music (See the "Credits & Free Use" sheet) is %n%also royalty-free to use for film, advertisements, video games, %n%etc. but you must give credit in the proper way and to the right %n%people.%n%%n%A note from the modpack author, CelestialAbyss:%n%All the songs listed above are Free to Use, but I will extensively %n%give credit where it is due. Links to the songs are attached on %n%the modpack's GitHub wiki page.
+  source = https://raw.githubusercontent.com/Project-Vyre/finality-fm-live/main/index.txt
   text_border = 0
   case_mode = normal
-  source_mode = direct
+  source_mode = web
   line_spacing = 1
   orientation_element = 0974a763-21a2-43f4-b2dd-98277087e3c61681331594374
   x = 0
-  width = 332
+  width = 333
   action = custom_layout_element:fancymenu_customization_item_text
   actionid = c6a5ba67-5f26-4523-9582-c75375abd0ca1681318824420
-  y = -86
+  y = -130
   alignment = left
   base_color = #FFEB8C
-  height = 83
+  height = 128
 }
 
 customization {
