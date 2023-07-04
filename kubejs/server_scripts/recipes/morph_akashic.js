@@ -1,6 +1,5 @@
 ServerEvents.recipes(event => {
     event.remove({id:'morphtool:tool'})
-    event.remove({id:'akashictome:tome'})
     event.custom({
         type: 'extendedcrafting:shaped_table',
         pattern: [
@@ -20,6 +19,10 @@ ServerEvents.recipes(event => {
         },
         result: 'morphtool:tool'
     }).id('finality:morph_tool')
+})
+
+/* Recipe needs rework, this might have been too expensive.
+ServerEvents.recipes(event => {
     event.custom({
         type: 'extendedcrafting:combination',
         powerCost: 1000,
@@ -42,3 +45,4 @@ ServerEvents.recipes(event => {
         }
     }).id('finality:akashic_tome')
 })
+*/
