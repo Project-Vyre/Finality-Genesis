@@ -31,6 +31,7 @@ XaeroWorldMap
 # Ignore files
 .curseclient
 .qmenu_opened.marker
+*.log
 imgui.ini
 knownkeys.txt
 minecraftinstance.json
