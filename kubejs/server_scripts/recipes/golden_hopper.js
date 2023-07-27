@@ -9,5 +9,5 @@ ServerEvents.recipes(event => {
         C: 'minecraft:comparator',
         H: 'minecraft:hopper',
         R: 'minecraft:redstone'
-    }).id('finality:golden_hopper')
+    }).id('goldenhopper:golden_hopper')
 })

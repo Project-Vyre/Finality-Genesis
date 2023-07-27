@@ -1,24 +1,23 @@
 // requires ad astra and kjs 119 and above
-ServerEvents.recipes(e => {
-    e.remove({id: 'ad_astra:recipes/nasa_workbench' })
-    e.recipes.createMechanicalCrafting('ad_astra:nasa_workbench', [
-        'QATAQ',
-        'POYOP',
-        'PYUYP',
-        'POEOP',
-        'RSSSR'
+ServerEvents.recipes(event => {
+    event.recipes.createMechanicalCrafting('ad_astra:nasa_workbench', [
+        'QLTLQ',
+        'SCACS',
+        'SAEAS',
+        'SCNCS',
+        'BIIIB'
     ], {
         Q: 'create:rose_quartz_lamp',
-        A: 'create:analog_lever',
+        L: 'create:analog_lever',
         T: 'create:powered_toggle_latch',
-        P: '#forge:plates/steel',
-        O: 'extendedcrafting:redstone_component',
-        Y: 'extendedcrafting:redstone_catalyst',
-        U: 'extendedcrafting:ultimate_auto_table',
-        E: 'extendedcrafting:enhanced_redstone_catalyst',
-        R: 'minecraft:redstone_block',
-        S: '#forge:storage_blocks/steel'
-    }).id('finality:ad_astra/mechanical/nasa_workbench')
+        S: 'ad_astra:steel_plate',
+        C: 'extendedcrafting:redstone_component',
+        A: 'extendedcrafting:redstone_catalyst',
+        E: 'extendedcrafting:ultimate_auto_table',
+        N: 'extendedcrafting:enhanced_redstone_catalyst',
+        B: 'minecraft:redstone_block',
+        I: 'ad_astra:steel_block'
+    }).id('ad_astra:recipes/nasa_workbench')
 })
 
 /*

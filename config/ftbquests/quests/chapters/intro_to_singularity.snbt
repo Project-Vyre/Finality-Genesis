@@ -9,7 +9,7 @@
 		click: ""
 		corner: false
 		dev: false
-		height: 3.0d
+		height: 2.8106701366297986d
 		hover: [ ]
 		image: "minecraft:textures/gui/presets/packtitle.png"
 		rotation: 0.0d

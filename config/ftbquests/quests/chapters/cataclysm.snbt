@@ -5,7 +5,7 @@
 	group: "6855847200ADBE3A"
 	icon: "cataclysm:altar_of_fire"
 	id: "44955FEF08EBF071"
-	order_index: 3
+	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
@@ -43,8 +43,8 @@
 				}
 			]
 			title: "Locate the Soul Forge."
-			x: -1.5d
-			y: 1.5d
+			x: -3.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
@@ -96,7 +96,7 @@
 				}
 			]
 			title: "Locate the Burning Arena."
-			x: -1.5d
+			x: -3.0d
 			y: 3.0d
 		}
 		{
@@ -134,7 +134,7 @@
 				}
 			]
 			title: "The Ruined Citadel - Boss Fight"
-			x: 1.5d
+			x: 3.0d
 			y: 3.0d
 		}
 		{
@@ -161,11 +161,7 @@
 			subtitle: "Give the Harbinger its heart, then prepare for the worst."
 			tasks: [
 				{
-					icon: {
-						Count: 1b
-						id: "explorerscompass:explorerscompass"
-						tag: { }
-					}
+					icon: "cataclysm:emp"
 					id: "71997328F6DFED11"
 					structure: "cataclysm:ancient_factory"
 					type: "structure"
@@ -173,7 +169,7 @@
 				{
 					icon: "extendedcrafting:flux_star"
 					id: "4878248FE14BB992"
-					observe_type: 0
+					observe_type: 5
 					timer: 0L
 					title: "Find the Harbinger"
 					to_observe: "cataclysm:the_harbinger"
@@ -209,8 +205,8 @@
 				}
 			]
 			title: "Locate the Ruined Citadel."
-			x: 1.5d
-			y: 1.5d
+			x: 3.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["656C306BB7FF0758"]
@@ -267,6 +263,84 @@
 			}]
 			x: 0.0d
 			y: 6.0d
+		}
+		{
+			dependencies: [
+				"4A691BB889286C89"
+				"5335BF00DB2A8CCE"
+			]
+			hide: true
+			id: "4179D9074E74A11B"
+			shape: "square"
+			tasks: [{
+				icon: "cataclysm:chiseled_stone_brick_pillar"
+				id: "39FD9536C33D32DA"
+				structure: "cataclysm:sunken_city"
+				title: "Locate the Sunken City"
+				type: "structure"
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: ["&d&lYou have been warned.&r&r"]
+			hide: true
+			id: "5335BF00DB2A8CCE"
+			shape: "square"
+			subtitle: "Come prepared, or face certain death."
+			tasks: [{
+				id: "674414D33A9EEC90"
+				item: "cataclysm:abyssal_sacrifice"
+				type: "item"
+			}]
+			title: "Create the Abyssal Sacrifice"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4179D9074E74A11B"]
+			description: ["&d&lI did tell you to come prepared both for the altar activation AND a boss fight of your life.&r&r"]
+			id: "2FB0CBAD2F6C47FC"
+			shape: "square"
+			subtitle: "Remember that Abyssal Sacrifice?"
+			tasks: [{
+				icon: "cataclysm:altar_of_abyss"
+				id: "3A27F9EDD9160283"
+				observe_type: 0
+				timer: 0L
+				title: "Summon the Leviathan..."
+				to_observe: "cataclysm:altar_of_abyss"
+				type: "observation"
+			}]
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["2FB0CBAD2F6C47FC"]
+			description: [
+				"Tame and heal the baby leviathan with some tropical fish. "
+				""
+				"Please try to protect it at all costs ;-;"
+			]
+			id: "7B41C8C1C7837774"
+			shape: "square"
+			subtitle: "Also, you now have a baby leviathan in your possession now."
+			tasks: [
+				{
+					id: "77FAD21A4E3989F4"
+					item: "cataclysm:tidal_claws"
+					type: "item"
+				}
+				{
+					id: "72EB65397C97EBE9"
+					item: "cataclysm:abyssal_egg"
+					type: "item"
+				}
+			]
+			title: "Victory at last!"
+			x: 0.0d
+			y: -6.0d
 		}
 	]
 	subtitle: ["A lot of boss fights and indestructible tools!"]

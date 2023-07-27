@@ -12,35 +12,6 @@
 	#BossMusic(on/off)
 	"BossMusic(on/off)" = true
 
-["Weapon Cooldown"]
-	#Bulwark of the Flame's Cooldown
-	#Range: 0 ~ 1000000
-	BulwarkOfTheFlameCooldown = 80
-	#Gauntlet of Bulwark's Cooldown
-	#Range: 0 ~ 1000000
-	GauntletOfBulwarkCooldown = 80
-	#Infernal Forge's Cooldown
-	#Range: 0 ~ 1000000
-	InfernalForgeCooldown = 80
-	#Void Forge's Cooldown
-	#Range: 0 ~ 1000000
-	VoidForgeCooldown = 120
-	#The Incinerator's Cooldown
-	#Range: 0 ~ 1000000
-	TheIncineratorCooldown = 400
-	#Wither Assault Shoulder Weapon's Missile Cooldown
-	#Range: 0 ~ 1000000
-	WASWMissileCooldown = 40
-	#Wither Assault Shoulder Weapon's Howitzer Cooldown
-	#Range: 0 ~ 1000000
-	WASWHowitzerCooldown = 100
-	#Void Assault Shoulder Weapon's Cooldown
-	#Range: 0 ~ 1000000
-	VASWCooldown = 120
-	#Void Core's Cooldown
-	#Range: 0 ~ 1000000
-	VoidCoreCooldown = 160
-
 ["Entity damage"]
 	#Void Rune's Damage
 	#Range: 0.0 ~ 1000000.0
@@ -72,6 +43,21 @@
 	#Lava bomb's Radius
 	#Range: 1 ~ 7
 	Lavabombradius = 2
+	#Lionfish Spike's Damage
+	#Range: 0.0 ~ 1000000.0
+	LionfishSpikedamage = 4.0
+	#Dimensional Rift's Damage
+	#Range: 0.0 ~ 1000000.0
+	DimensionalRiftdamage = 10.0
+	#Abyss Blast's Damage
+	#Range: 0.0 ~ 1000000.0
+	AbyssBlastdamage = 10.0
+	#Abyss Blast's Hp Damage
+	#Range: 0.0 ~ 1.0
+	AbyssBlastHpdamage = 0.1
+	#Abyss Orb's Damage
+	#Range: 0.0 ~ 1000000.0
+	AbyssOrbdamage = 4.0
 
 ["Ender Guardian"]
 	#EnderGuardian's Health Multiplier
@@ -115,6 +101,9 @@
 	#EnderGuardianBlockBreaking radius
 	#Range: 0 ~ 20
 	"EnderGuardianBlockBreaking Z" = 15
+	#Guardian's music volume
+	#Range: 0.0 ~ 1.0
+	"Guardian's Music Volume" = 0.5
 
 ["Netherite Monstrosity"]
 	#Monstrosity's Lavabomb magazine.
@@ -140,6 +129,9 @@
 	#Monstrosity's Immune to Long distance attack range.
 	#Range: 1.0 ~ 1000000.0
 	"Monstrosity's prevent attacks from far away Range" = 18.0
+	#Monstrosity's music volume
+	#Range: 0.0 ~ 1.0
+	"Monstrosity's Music Volume" = 0.5
 
 ["Ender Golem"]
 	#Ender Golem's block breaking ignore the MobGriefing
@@ -169,6 +161,9 @@
 	IgnisDamageCap = 20
 	#Ignis's cracked block breaking ignore the MobGriefing
 	IgnisBlockBreaking = true
+	#Ignis's music volume
+	#Range: 0.0 ~ 1.0
+	"Ignis's Music Volume" = 0.5
 
 [revenant]
 	#Revenant's Health Multiplier
@@ -196,4 +191,71 @@
 	#The Harbinger's charge attack Hp Damage
 	#Range: 0.0 ~ 1.0
 	"The Harbinger's charge attack Hp Damage" = 0.06
+	#The Harbinger's music volume
+	#Range: 0.0 ~ 1.0
+	"The Harbinger's Music Volume" = 0.5
+
+[Weapon]
+	#Armor Infinity Durability(on/off)
+	"Armor Infinity Durability(on/off)" = true
+	#Bulwark of the Flame's Cooldown
+	#Range: 0 ~ 1000000
+	BulwarkOfTheFlameCooldown = 80
+	#Gauntlet of Bulwark's Cooldown
+	#Range: 0 ~ 1000000
+	GauntletOfBulwarkCooldown = 80
+	#Infernal Forge's Cooldown
+	#Range: 0 ~ 1000000
+	InfernalForgeCooldown = 80
+	#Void Forge's Cooldown
+	#Range: 0 ~ 1000000
+	VoidForgeCooldown = 120
+	#The Incinerator's Cooldown
+	#Range: 0 ~ 1000000
+	TheIncineratorCooldown = 400
+	#Wither Assault Shoulder Weapon's Missile Cooldown
+	#Range: 0 ~ 1000000
+	WASWMissileCooldown = 40
+	#Wither Assault Shoulder Weapon's Howitzer Cooldown
+	#Range: 0 ~ 1000000
+	WASWHowitzerCooldown = 100
+	#Void Assault Shoulder Weapon's Cooldown
+	#Range: 0 ~ 1000000
+	VASWCooldown = 120
+	#Void Core's Cooldown
+	#Range: 0 ~ 1000000
+	VoidCoreCooldown = 160
+
+["The Leviathan"]
+	#Leviathan's Health Multiplier
+	#Range: 0.0 ~ 1000000.0
+	LeviathanHealthMultiplier = 1.0
+	#Leviathan's Damage Multiplier
+	#Range: 0.0 ~ 1000000.0
+	LeviathanDamageMultiplier = 1.0
+	#Leviathan's Immune to Long distance attack range.
+	#Range: 1.0 ~ 1000000.0
+	"Leviathan's prevent attacks from far away Range" = 38.0
+	#Leviathan's Bite Hp Damage
+	#Range: 0.0 ~ 1.0
+	"Leviathan's Bite Hp Damage" = 0.1
+	#Leviathan's Rush Hp Damage
+	#Range: 0.0 ~ 1.0
+	"Leviathan's Rush Hp Damage" = 0.05
+	#Leviathan's TailSwing Hp Damage
+	#Range: 0.0 ~ 1.0
+	"Leviathan's TailSwing Hp Damage" = 0.08
+	#Leviathan's Tentacle Hp Damage
+	#Range: 0.0 ~ 1.0
+	"Leviathan's Tentacle Hp Damage" = 0.03
+	#Leviathan's DamageCap
+	#Range: 0 ~ 1000000
+	LeviathanDamageCap = 20
+	#Leviathan's block breaking ignore the MobGriefing
+	LeviathanBlockBreaking = true
+	#Leviathan Immune Out of Water
+	LeviathanImmuneOutofWater = true
+	#The Leviathan's music volume
+	#Range: 0.0 ~ 1.0
+	"The Leviathan's Music Volume" = 0.5
 

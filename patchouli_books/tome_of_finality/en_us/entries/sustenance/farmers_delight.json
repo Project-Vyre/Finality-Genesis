@@ -1,7 +1,7 @@
 {
     "name": "Farmer's Delight",
     "icon": "farmersdelight:skillet",
-    "category": "patchouli:sustenance",
+    "category": "patchouli:sustenance/delightful_cooking",
     "pages": [
         {
             "type": "patchouli:text",

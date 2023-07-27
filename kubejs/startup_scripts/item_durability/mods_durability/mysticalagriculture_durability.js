@@ -1,3 +1,5 @@
+let ARMOR = ['helmet','chestplate','leggings','boots']
+let TOOLS = ['sword', 'shovel', 'pickaxe', 'axe', 'hoe']
 let inferium_durability = 2048
 let prudentium_durability = 4096
 let tertium_durability = 4096

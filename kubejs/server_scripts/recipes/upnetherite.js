@@ -20,12 +20,12 @@ ServerEvents.recipes(event => {
         'mysticalagriculture:prosperity_shard',
         'minecraft:netherite_block',
         'minecraft:ancient_debris'
-        ],'upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot',[
-            event.recipes.createFilling('extendedcrafting:the_ultimate_ingot', ['extendedcrafting:the_ultimate_ingot', Fluid.of('minecraft:lava', 500)]),
-            event.recipes.createDeploying('extendedcrafting:the_ultimate_ingot', ['extendedcrafting:the_ultimate_ingot','extendedcrafting:the_ultimate_catalyst']),
-            event.recipes.createPressing('extendedcrafting:the_ultimate_ingot','extendedcrafting:the_ultimate_ingot'),
-            event.recipes.createPressing('extendedcrafting:the_ultimate_ingot','extendedcrafting:the_ultimate_ingot'),
-            event.recipes.createPressing('extendedcrafting:the_ultimate_ingot','extendedcrafting:the_ultimate_ingot')
+    ], 'upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot', [
+        event.recipes.createFilling('extendedcrafting:the_ultimate_ingot', ['extendedcrafting:the_ultimate_ingot', Fluid.of('minecraft:lava', 500)]),
+        event.recipes.createDeploying('extendedcrafting:the_ultimate_ingot', ['extendedcrafting:the_ultimate_ingot','extendedcrafting:the_ultimate_catalyst']),
+        event.recipes.createPressing('extendedcrafting:the_ultimate_ingot','extendedcrafting:the_ultimate_ingot'),
+        event.recipes.createPressing('extendedcrafting:the_ultimate_ingot','extendedcrafting:the_ultimate_ingot'),
+        event.recipes.createPressing('extendedcrafting:the_ultimate_ingot','extendedcrafting:the_ultimate_ingot')
     ]).transitionalItem('extendedcrafting:the_ultimate_ingot').loops(16).id('finality:creativerite_ingot')
     // creativerite smithing
     // output left, inputs right
@@ -45,119 +45,4 @@ ServerEvents.recipes(event => {
     event.smithing('upgradednetherite_items:creative_upgraded_netherite_totem','upgradednetherite_items:ultimate_upgraded_netherite_totem','upgradednetherite_creative:creative_upgraded_netherite_ingot').id('finality:creativerite_totem')
     event.smithing('upgradednetherite_creative:creative_upgraded_netherite_horse_armor','upgradednetherite_ultimate:ultimate_upgraded_netherite_horse_armor','upgradednetherite_creative:creative_upgraded_netherite_ingot').id('finality:creativerite_horse_armor')
     event.smithing('upgradednetherite_creative:creative_upgraded_netherite_shield','upgradednetherite_ultimate:ultimate_upgraded_netherite_shield','upgradednetherite_creative:creative_upgraded_netherite_ingot').id('finality:creativerite_shield')
-    /* get this cursed code out of here
-    event.custom({
-        "type": "create:sequenced_assembly",
-        "ingredient": {
-            "item": "upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot"
-        },
-        "transitionalItem": {
-          "item": "extendedcrafting:the_ultimate_ingot"
-        },
-        "sequence": [
-          {
-            "type": "create:filling",
-            "ingredients": [
-              {
-                "item": "extendedcrafting:the_ultimate_ingot"
-              },
-              {
-                "fluid": "minecraft:lava",
-                "nbt": {},
-                "amount": 500
-              }
-            ],
-            "results": [
-              {
-                "item": "extendedcrafting:the_ultimate_ingot"
-              }
-            ]
-          },
-          {
-            "type": "create:deploying",
-            "ingredients": [
-              {
-                "item": "extendedcrafting:the_ultimate_ingot"
-              },
-              {
-                "item": "extendedcrafting:the_ultimate_ingot"
-              }
-            ],
-            "results": [
-              {
-                "item": "extendedcrafting:the_ultimate_ingot"
-              }
-            ]
-          },
-          {
-            "type": "create:pressing",
-            "ingredients": [
-              {
-                "item": "extendedcrafting:the_ultimate_ingot"
-              }
-            ],
-            "results": [
-              {
-                "item": "extendedcrafting:the_ultimate_ingot"
-              }
-            ]
-          },
-          {
-            "type": "create:pressing",
-            "ingredients": [
-              {
-                "item": "extendedcrafting:the_ultimate_ingot"
-              }
-            ],
-            "results": [
-              {
-                "item": "extendedcrafting:the_ultimate_ingot"
-              }
-            ]
-          },
-          {
-            "type": "create:pressing",
-            "ingredients": [
-              {
-                "item": "extendedcrafting:the_ultimate_ingot"
-              }
-            ],
-            "results": [
-              {
-                "item": "extendedcrafting:the_ultimate_ingot"
-              }
-            ]
-          }
-        ],
-        "results": [
-          {
-            "item": "upgradednetherite_creative:creative_upgraded_netherite_ingot",
-            "chance": 25.0
-          },
-          {
-            "item": "extendedcrafting:singularity",
-            "nbt": {
-                "Id": "extendedcrafting:netherite"
-            },
-            "chance": 25.0
-          },
-          {
-            "item": "minecraft:netherite_ingot",
-            "count": 8,
-            "chance": 25.0
-          },
-          {
-            "item": "mysticalagriculture:prosperity_shard"
-          },
-          {
-            "item": "minecraft:netherite_block"
-          },
-          {
-            "item": "minecraft:ancient_debris"
-          }
-        ],
-        "loops": 16
-    }).id('finality:extendedcrafting/jsonaneurysm_seq/creativerite_ingot')
-    */
 })
-

@@ -1,0 +1,7 @@
+
+[Gameplay]
+	#Range: 0.0 ~ 10.0
+	"Lightning Chance" = 0.1
+	#Range: 0.0 ~ 100.0
+	"Fusebox Breakage Chance" = 1.0
+

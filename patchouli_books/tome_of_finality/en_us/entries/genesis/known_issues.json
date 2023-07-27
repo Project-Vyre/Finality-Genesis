@@ -1,7 +1,7 @@
 {
     "name": "Known Issues",
-    "icon": "create:steam_whistle",
-    "category": "patchouli:genesis",
+    "icon": "minecraft:netherrack",
+    "category": "patchouli:genesis/introduction",
     "priority": true,
     "sortnum": 4,
     "pages": [

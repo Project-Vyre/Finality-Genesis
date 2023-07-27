@@ -1,7 +1,7 @@
 {
     "name": "Create Delicacies",
     "icon": "create:honeyed_apple",
-    "category": "patchouli:sustenance",
+    "category": "patchouli:sustenance/create_food",
     "pages": [
         {
             "type": "patchouli:text",

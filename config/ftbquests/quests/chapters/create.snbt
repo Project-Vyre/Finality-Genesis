@@ -11,11 +11,15 @@
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
 			description: [
-				"Firstly, I want you to use Create's built-in tutorial system called Ponder which is easily accessible by pressing and holding W. Please thoroughly watch them and don't skim through. You can also click the buttons below to identify individual blocks or to slow down the mini tutorial."
+				"Firstly, I want you to use Create's built-in tutorial system called Ponder which is easily accessible by pressing and holding W."
+				""
+				"Please thoroughly watch them and don't skim through. You can also click the buttons below to identify individual blocks or to slow down the mini tutorial."
 				""
 				"To get things started, find some Iron Ore. Zinc Ore can be substituted in place of the Iron Nuggets but it can ONLY be mined with an Iron Pickaxe or higher and is needed to make Brass, so keep that in mind."
 				""
-				"You can also use Zinc Nuggets instead, but Zinc itself is not renewable in vanilla Create... but this isn't vanilla Create. Zinc IS renewable now thanks to meee"
+				"You can also use Zinc Nuggets instead, but Zinc itself is not renewable in vanilla Create... but this isn't vanilla Create."
+				""
+				"Zinc is renewable in this modpack."
 			]
 			icon: "create:andesite_alloy"
 			id: "57A69334C4D4299A"
@@ -53,8 +57,10 @@
 				"57A69334C4D4299A"
 				"654CC532C1F17209"
 			]
+			description: ["Hold [w] to Ponder to learn more!"]
 			hide: true
 			id: "157C4AD3062BC31A"
+			shape: "rsquare"
 			subtitle: "Convenient for holding items so they don't despawn."
 			tasks: [{
 				id: "17BEDDF08AA14B60"
@@ -87,7 +93,13 @@
 					item: "create:andesite_alloy"
 					type: "item"
 				}
+				{
+					id: "71A30507FED7D236"
+					item: "create:clipboard"
+					type: "item"
+				}
 			]
+			shape: "rsquare"
 			subtitle: "Very important material. Plus it looks nice! Don't mind the pun."
 			tasks: [{
 				id: "654CC532C1F17209"
@@ -100,6 +112,7 @@
 		}
 		{
 			dependencies: ["157C4AD3062BC31A"]
+			description: ["Hold [w] to Ponder to learn more!"]
 			icon: "create:mechanical_press"
 			id: "62D55614D95E7356"
 			rewards: [
@@ -155,6 +168,7 @@
 		{
 			dependencies: ["57A69334C4D4299A"]
 			id: "527A4B10DDE51E37"
+			shape: "rsquare"
 			subtitle: "Create the Basin, an integral component for the Mechanical Mixer."
 			tasks: [{
 				id: "074F12DE8761901F"
@@ -180,7 +194,7 @@
 			}]
 			title: "The Mixer"
 			x: 6.0d
-			y: -4.0d
+			y: -6.5d
 		}
 		{
 			dependencies: ["249F8A4FAEB5CDDE"]
@@ -202,19 +216,11 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -10.0d
+			y: -9.5d
 		}
 		{
-			dependencies: ["3FF3FB9AC560FD61"]
-			description: [
-				"As of Create 0.5.1, regular water wheels can only output &3256su&r at &a8&r RPM."
-				""
-				"If your water wheels are only capable of outputting 128su, press Esc then click on the button with golden goggles."
-				""
-				"Click Configure... < Gameplay Settings < Kinetics < Stress Values < Capacity < "
-				""
-				"Then set the value for Water Wheel to 32.0 or simply click the reset button that looks like a browser refresh button."
-			]
+			dependencies: ["249F8A4FAEB5CDDE"]
+			description: ["As of Create 0.5.1, Water Wheels now output 256su at 8 RPM."]
 			icon: "create:water_wheel"
 			id: "7D464E248ADF8C04"
 			shape: "hexagon"
@@ -224,9 +230,8 @@
 				item: "create:water_wheel"
 				type: "item"
 			}]
-			title: "The Water Wheel"
 			x: 2.5d
-			y: -10.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["57A69334C4D4299A"]
@@ -242,6 +247,7 @@
 		{
 			dependencies: ["62D55614D95E7356"]
 			id: "770AD4193CC23EA3"
+			subtitle: "A foundational ingredient."
 			tasks: [{
 				id: "4968755DF97B9F34"
 				item: "create:iron_sheet"
@@ -253,17 +259,19 @@
 		{
 			dependencies: ["62D55614D95E7356"]
 			id: "2E386081E5302CF5"
+			subtitle: "A foundational ingredient."
 			tasks: [{
 				id: "38B3DD686D998467"
 				item: "create:copper_sheet"
 				type: "item"
 			}]
 			x: -8.5d
-			y: 0.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["62D55614D95E7356"]
 			id: "00DA4B8905FE3CAF"
+			subtitle: "A useful ingredient for logic components and more."
 			tasks: [{
 				id: "56467B6E0BF1289B"
 				item: "create:brass_sheet"
@@ -275,6 +283,7 @@
 		{
 			dependencies: ["62D55614D95E7356"]
 			id: "75E673394451C2F4"
+			subtitle: "A very useful ingredient."
 			tasks: [{
 				id: "0F8883072FD3C1E3"
 				item: "create:golden_sheet"
@@ -285,7 +294,11 @@
 		}
 		{
 			dependencies: ["0044994A32BC5631"]
-			description: ["Conveyor belts are essential if you want to transport items or want a cheaper alternative to Chain Drives for transferring rotational power (Su) over long distances."]
+			description: [
+				"Conveyor belts are essential if you want to transport items or want a cheaper alternative to Chain Drives for transferring rotational power (Su) over long distances."
+				""
+				"Hold [w] to Ponder to learn more!"
+			]
 			id: "3E68ADF888E6E99E"
 			subtitle: "Mechanical Belts are very useful."
 			tasks: [{
@@ -330,6 +343,8 @@
 				"Step 3: Right click either the Blaze spawner or a Blaze with an Empty Blaze Burner."
 				""
 				"Step 4: Enjoy your sentient fireplace! Did I mention that they can drive Create's trains too?"
+				""
+				"Hold [w] to Ponder to learn more!"
 			]
 			hide: true
 			id: "23744C5D8A153163"
@@ -345,6 +360,11 @@
 		}
 		{
 			dependencies: ["031AE396FB6DDD76"]
+			description: [
+				"Blaze Burners are a very reliable heat source."
+				""
+				"Click on the recipe then Hold [w] while hovering on the Blaze Burner to Ponder to learn more."
+			]
 			id: "1565E97748B8B342"
 			shape: "hexagon"
 			subtitle: "You will need more for other purposes."
@@ -391,7 +411,13 @@
 		}
 		{
 			dependencies: ["6D8C28D34ABF7636"]
+			description: [
+				"Unlike Mechanical Belts which can't rotate mid-way or at the endpoints, Encased Chain Drives do just that."
+				""
+				"They are also not limited by the default 20 block range that Mechanical Belts do."
+			]
 			id: "1DBC16B691A15476"
+			subtitle: "Far more flexible than Mechanical Belts in terms of relaying kinetic energy."
 			tasks: [{
 				id: "1E129C8B985D4588"
 				item: "create:encased_chain_drive"
@@ -408,8 +434,8 @@
 				item: "create:adjustable_chain_gearshift"
 				type: "item"
 			}]
-			x: 20.5d
-			y: 3.5d
+			x: 22.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["0194851298AADB65"]
@@ -429,14 +455,15 @@
 				}
 			]
 			title: "The Smart Hand"
-			x: 21.0d
-			y: 2.5d
+			x: 23.0d
+			y: 4.5d
 		}
 		{
 			dependencies: [
 				"0044994A32BC5631"
 				"5FFC63500CF7754D"
 			]
+			description: ["Hold [w] to Ponder to learn more!"]
 			hide: true
 			id: "068660484145BE87"
 			subtitle: "Splitting items intelligently."
@@ -470,8 +497,8 @@
 				type: "item"
 			}]
 			title: "The Smart and Precise Gearshift"
-			x: 20.5d
-			y: 1.5d
+			x: 22.5d
+			y: 3.5d
 		}
 		{
 			dependencies: [
@@ -509,6 +536,7 @@
 				"0044994A32BC5631"
 				"5FFC63500CF7754D"
 			]
+			description: ["Hold [w] to Ponder to learn more!"]
 			hide: true
 			id: "42A8249377616678"
 			subtitle: "Managing items intelligently."
@@ -529,9 +557,11 @@
 				"7D7D96030BC1CDC1"
 			]
 			description: [
-				"Smart Chutes have an inventory size of 64 and have the ability to filter items, just not in specific kuantities."
+				"Smart Chutes have an inventory size of 64 and have the ability to filter items, just not in specific quantities."
 				""
 				"Chutes below a connected Smart Chute at the top will also accept a stack size of 64, as long as the items are received through a Smart Chute at the top."
+				""
+				"If you saw kuantities previously, my Q key was broken."
 			]
 			hide: true
 			id: "1D08D9144CE10BCA"
@@ -547,6 +577,7 @@
 		{
 			dependencies: ["770AD4193CC23EA3"]
 			id: "7D7D96030BC1CDC1"
+			subtitle: "Vertical item transportation!"
 			tasks: [{
 				id: "5CC08ACE604AFED8"
 				item: "create:chute"
@@ -583,6 +614,7 @@
 		{
 			dependencies: ["75E673394451C2F4"]
 			id: "18B37484A6C7F37E"
+			subtitle: "Quite an important component."
 			tasks: [{
 				id: "1406D000426425FC"
 				item: "create:precision_mechanism"
@@ -594,6 +626,7 @@
 		{
 			dependencies: ["75E673394451C2F4"]
 			id: "328DCAF24F6DF4C5"
+			subtitle: "It really helps you see Create related info at all times!"
 			tasks: [{
 				id: "239A73F5073D197C"
 				item: "create:goggles"
@@ -604,6 +637,11 @@
 		}
 		{
 			dependencies: ["75E673394451C2F4"]
+			description: [
+				"By default, has a maximum range of 32 blocks."
+				""
+				"Hold [w] to Ponder to learn more!"
+			]
 			id: "3ED7372ADB1D3FE7"
 			subtitle: "Don't stand on it, seriously."
 			tasks: [{
@@ -623,7 +661,7 @@
 				type: "item"
 			}]
 			x: -10.0d
-			y: 0.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["6AC32180F67385D6"]
@@ -634,7 +672,7 @@
 				type: "item"
 			}]
 			x: -11.5d
-			y: 0.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["2E386081E5302CF5"]
@@ -646,7 +684,7 @@
 				type: "item"
 			}]
 			x: -9.5d
-			y: -0.5d
+			y: 0.5d
 		}
 		{
 			dependencies: ["75E673394451C2F4"]
@@ -667,8 +705,16 @@
 				"1406D000426425FC"
 				"18B37484A6C7F37E"
 			]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Mechanical Arms may be slow in your eyes, but they are able to deposit directly into Basins without the use of Andesite or Brass funnels."
+				""
+				"They can also reach then take and deposit fuel for your Blaze Burners that sit under your boiler precisely. It's neat!"
+			]
 			hide: true
 			id: "0352B65BF524BA37"
+			subtitle: "Achievement unlocked: Busy Hands"
 			tasks: [{
 				id: "054C34E3E5E37622"
 				item: "create:mechanical_arm"
@@ -679,7 +725,9 @@
 		}
 		{
 			dependencies: ["00DA4B8905FE3CAF"]
+			description: ["Used in making the Deployer and Extendo Grip in base Create."]
 			id: "5DD3DEBA65F73267"
+			subtitle: "A very handy component!"
 			tasks: [{
 				id: "52BEB8DC279F6D3A"
 				item: "create:brass_hand"
@@ -690,6 +738,11 @@
 		}
 		{
 			dependencies: ["0CD722C2B48DF862"]
+			description: [
+				"You can fully automate potions after being brewed with a Mechanical Mixer."
+				""
+				"Hold [w] to Ponder to learn more!"
+			]
 			id: "16B642E5E7DBE75D"
 			subtitle: "Automated pouring!"
 			tasks: [{
@@ -707,8 +760,10 @@
 				"054BC637EF86609C"
 			]
 			hide: true
+			icon: "create:railway_casing"
 			id: "1E0CDA1ED53FACEE"
-			subtitle: "Unlocking the Logistics Age"
+			shape: "hexagon"
+			subtitle: "Begin the age of the train network."
 			tasks: [
 				{
 					id: "187B0F4E6388C3EC"
@@ -723,8 +778,9 @@
 					type: "item"
 				}
 			]
+			title: "Beginning of the Logistics Age"
 			x: 14.0d
-			y: -0.5d
+			y: 2.5d
 		}
 		{
 			dependencies: ["2E4CFF3F7A4508AB"]
@@ -736,8 +792,8 @@
 				type: "item"
 			}]
 			title: "Casually Crushed Obsidian"
-			x: 16.0d
-			y: 0.0d
+			x: 17.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["2FF7795C03DDC67B"]
@@ -745,8 +801,12 @@
 				"You can use two gearboxes with a shaft in between to make them rotate opposite directions to be able to crush stuff."
 				""
 				"Also, you can place them horizontally to be able to be used in a production line."
+				""
+				"Hold [w] to Ponder to learn more!"
 			]
 			id: "2E4CFF3F7A4508AB"
+			shape: "octagon"
+			size: 1.5d
 			subtitle: "A pair of giants."
 			tasks: [{
 				count: 2L
@@ -755,13 +815,18 @@
 				type: "item"
 			}]
 			title: "Create the Crushing Wheels"
-			x: 15.5d
+			x: 17.5d
 			y: -1.0d
 		}
 		{
 			dependencies: [
 				"054BC637EF86609C"
 				"0194851298AADB65"
+			]
+			description: [
+				"They also have the power to compress the fabric of the universe, mechanically."
+				""
+				"You will see what I mean later."
 			]
 			hide: true
 			id: "2FF7795C03DDC67B"
@@ -774,7 +839,7 @@
 				type: "item"
 			}]
 			title: "Mechanical Crafter Power!"
-			x: 17.0d
+			x: 19.0d
 			y: -2.5d
 		}
 		{
@@ -789,8 +854,8 @@
 				item: "create:sturdy_sheet"
 				type: "item"
 			}]
-			x: 15.0d
-			y: 1.0d
+			x: 17.5d
+			y: 2.5d
 		}
 		{
 			dependencies: ["1E0CDA1ED53FACEE"]
@@ -801,18 +866,24 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 0.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["1E0CDA1ED53FACEE"]
+			description: [
+				"You will also need TWO of them for bi-directionality on your trains. One oriented forwards and one oriented backwards."
+				""
+				"Hold [w] to Ponder to learn more!"
+			]
 			id: "0D86C2F010562CE2"
+			subtitle: "Well, what did you expect? You need controls!"
 			tasks: [{
 				id: "15F21DE8F3B64025"
 				item: "create:controls"
 				type: "item"
 			}]
 			x: 11.5d
-			y: -0.5d
+			y: 2.5d
 		}
 		{
 			dependencies: ["1ABCB56633B96C2B"]
@@ -834,13 +905,27 @@
 		}
 		{
 			dependencies: ["6D8C28D34ABF7636"]
+			description: [
+				"Create's Millstones are very good at refining things."
+				""
+				"You can even get 2-3 sugar for each sugar cane processed!"
+			]
 			id: "79F980EE4DAB682D"
-			rewards: [{
-				count: 16
-				id: "31D5846AD6B0A65F"
-				item: "minecraft:wheat_seeds"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 16
+					id: "31D5846AD6B0A65F"
+					item: "minecraft:wheat_seeds"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "7BA745B69BC8065A"
+					item: "minecraft:sugar_cane"
+					type: "item"
+				}
+			]
+			subtitle: "Refinement on a small scale."
 			tasks: [{
 				id: "26329C95CA373C91"
 				item: "create:millstone"
@@ -851,6 +936,15 @@
 		}
 		{
 			dependencies: ["79F980EE4DAB682D"]
+			description: [
+				"Wheat flour can be used to make Bread in two ways."
+				""
+				"You have the option of using 3 wheat flour in one Basin filled with 1,000mb of Water to make Dough, but the water is consumed in this process."
+				""
+				"The other method is using Bulk Washing on the Wheat Flour on a moving Mechanical Belt production line."
+				""
+				"Just keep in mind that additional Encased Fans aimed at the same block is the only way of speeding up this process."
+			]
 			id: "1EC1E1E64C630B96"
 			subtitle: "Wheat can be now be refined further."
 			tasks: [{
@@ -878,7 +972,13 @@
 		}
 		{
 			dependencies: ["26D176C88B664911"]
+			description: [
+				"Encased Fans are very useful for a lot of things."
+				""
+				"Hold [w] to Ponder and see how to use them."
+			]
 			id: "38E2EE3F3F2C2E6C"
+			subtitle: "I believe I can fly!"
 			tasks: [{
 				id: "7FBE092BD3DC3EC2"
 				item: "create:encased_fan"
@@ -889,6 +989,15 @@
 		}
 		{
 			dependencies: ["1EC1E1E64C630B96"]
+			description: [
+				"Soooo, you finally got here."
+				""
+				"What do you do to Dough in real life? You bake it."
+				""
+				"You bake it automatically by using a Campfire in front of an Encased Fan."
+				""
+				"&cDO NOT USE LAVA TO BAKE YOUR DOUGH!&r"
+			]
 			id: "3A0AE21655B5678E"
 			subtitle: "Prepare some dough."
 			tasks: [{
@@ -901,62 +1010,57 @@
 			y: -6.0d
 		}
 		{
-			dependencies: ["4196F75FB2342B67"]
+			dependencies: [
+				"4196F75FB2342B67"
+				"0B28CEE35831A75F"
+			]
+			description: ["Time to get to polishing with your Sand Paper!"]
+			hide: true
 			id: "4946DBA60513DCE3"
+			subtitle: "Looks like it needs to be polished first before it can be used..."
 			tasks: [{
 				id: "1F73E22F97327F1A"
 				item: "create:rose_quartz"
 				type: "item"
 			}]
 			title: "Electron Tube - Part 1"
-			x: 15.5d
-			y: 4.0d
+			x: 8.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["4946DBA60513DCE3"]
 			id: "2A56BEC8A6D0E102"
-			subtitle: "Time to get to polishing!"
+			subtitle: "An important component for smarter things."
 			tasks: [{
 				id: "22C85B6112E91D2B"
 				item: "create:polished_rose_quartz"
 				type: "item"
 			}]
 			title: "Electron Tube - Part 2"
-			x: 17.0d
-			y: 4.0d
+			x: 9.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["2BDE2710088B452C"]
+			description: ["Hold [Shift] for a summary on how to use."]
 			hide: true
 			id: "4196F75FB2342B67"
 			subtitle: "The first step in making Electron Tubes."
-			tasks: [
-				{
-					id: "6515E9AECCF5EC65"
-					item: {
-						Count: 1b
-						id: "create:sand_paper"
-						tag: {
-							Damage: 0
-						}
+			tasks: [{
+				id: "6515E9AECCF5EC65"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "create:sandpaper"
 					}
-					type: "item"
 				}
-				{
-					id: "04130E20BE2371B3"
-					item: {
-						Count: 1b
-						id: "create:red_sand_paper"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-			]
+				title: "Any #create:sandpaper"
+				type: "item"
+			}]
 			title: "Craft some Sandpaper"
-			x: 15.5d
-			y: 5.5d
+			x: 6.5d
+			y: 4.5d
 		}
 		{
 			dependencies: [
@@ -980,12 +1084,14 @@
 				type: "item"
 			}]
 			title: "Create an Electron Tube"
-			x: 17.0d
-			y: 2.5d
+			x: 19.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["7D7D96030BC1CDC1"]
+			description: ["Hold [w] to Ponder to learn more!"]
 			id: "2A1F1209201F3019"
+			subtitle: "Contraption fluid inventory output and input."
 			tasks: [{
 				id: "6B4178561BE8854C"
 				item: "create:portable_fluid_interface"
@@ -996,7 +1102,9 @@
 		}
 		{
 			dependencies: ["7D7D96030BC1CDC1"]
+			description: ["Hold [w] to Ponder to learn more!"]
 			id: "6BCDDC8851A0617E"
+			subtitle: "Contraption item inventory output and input."
 			tasks: [{
 				id: "7027944D7A8B01E3"
 				item: "create:portable_storage_interface"
@@ -1007,6 +1115,7 @@
 		}
 		{
 			dependencies: ["0044994A32BC5631"]
+			description: ["Hold [w] to Ponder to learn more!"]
 			id: "5DB5C71834CFBC1D"
 			subtitle: "The basic funnel with no filtering capabilities. Can only manage 1 item at a time."
 			tasks: [{
@@ -1020,6 +1129,7 @@
 		}
 		{
 			dependencies: ["0044994A32BC5631"]
+			description: ["Hold [w] to Ponder to learn more!"]
 			id: "280A50D0712F4D78"
 			subtitle: "Takes a stack of items and splits off exactly 1 item into an adjacent Mechanical Belt."
 			tasks: [{
@@ -1034,6 +1144,7 @@
 		{
 			dependencies: ["770AD4193CC23EA3"]
 			id: "4F6A720B7612E455"
+			subtitle: "This is what holds multiple minecarts together."
 			tasks: [{
 				id: "25DA028BA82B35F4"
 				item: "create:minecart_coupling"
@@ -1045,6 +1156,7 @@
 		{
 			dependencies: ["770AD4193CC23EA3"]
 			id: "224178669A9DC1DA"
+			subtitle: "A required component for the Mechanical Mixer."
 			tasks: [{
 				id: "7142BF3C27D824F4"
 				item: "create:whisk"
@@ -1056,6 +1168,7 @@
 		{
 			dependencies: ["770AD4193CC23EA3"]
 			id: "26D176C88B664911"
+			subtitle: "How am I supposed to create wind?"
 			tasks: [{
 				id: "765790D3C2086453"
 				item: "create:propeller"
@@ -1073,7 +1186,7 @@
 				type: "item"
 			}]
 			x: -9.5d
-			y: 1.5d
+			y: -1.5d
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
@@ -1106,7 +1219,7 @@
 			}]
 			title: "Windmill Basics"
 			x: 3.5d
-			y: -5.0d
+			y: -5.5d
 		}
 		{
 			dependencies: ["076DA8BCE27D0E11"]
@@ -1114,18 +1227,24 @@
 			shape: "hexagon"
 			subtitle: "The amount of Sail Frames required for a maximum strength Windmill..."
 			tasks: [{
-				count: 128L
+				count: 124L
 				id: "4FF0828AAFBBE7D7"
 				item: "create:white_sail"
 				type: "item"
 			}]
 			title: "The Strongest Breeze"
 			x: 3.5d
-			y: -6.5d
+			y: -7.0d
 		}
 		{
 			dependencies: ["6D8C28D34ABF7636"]
+			description: [
+				"This can break mostly everything, including wood and cactus blocks."
+				""
+				"Just make sure you are using Mechanical Saws instead for automating a tree farm as they are unique in their full tree harvest mechanic."
+			]
 			id: "10ADF400E8F057F1"
+			subtitle: "Very versatile in mining blocks and highly dependent on rotation speed."
 			tasks: [{
 				id: "316FDFDA5B7C8C2D"
 				item: "create:mechanical_drill"
@@ -1138,6 +1257,11 @@
 			dependencies: [
 				"76DE1DB31C32A913"
 				"75E673394451C2F4"
+			]
+			description: [
+				"Used for rotation and adjustment of certain blocks. Also allows direct inventory pickup on Shift + Right click while looking at a Create related block."
+				""
+				"Hold [Shift] for a summary on how to use."
 			]
 			id: "515DBB49AEF66282"
 			shape: "octagon"
@@ -1158,6 +1282,8 @@
 				"I highly recommend fully watching the Ponder tutorials for every item to increase your understanding."
 				""
 				"Hopefully you find yourself enlightened with how much you can do with Create, despite how \"inefficient\" it is compared to other tech mods."
+				""
+				"Remember to Hold [w] to Ponder!"
 			]
 			hide: true
 			icon: "create:schematic_and_quill"
@@ -1175,6 +1301,7 @@
 		}
 		{
 			dependencies: ["57A69334C4D4299A"]
+			description: ["Hold [w] to Ponder for more info."]
 			id: "1FD38190A8A47E9C"
 			subtitle: "The Mechanical Piston can't extend without this."
 			tasks: [{
@@ -1206,13 +1333,18 @@
 					item: "minecraft:furnace_minecart"
 					type: "item"
 				}
+				{
+					id: "6D8B3CCE5D12E6E7"
+					item: "minecraft:minecart"
+					type: "item"
+				}
 			]
 			x: -1.0d
 			y: -3.5d
 		}
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
-			icon: "minecraft:copper_ingot"
+			icon: "create:copper_casing"
 			id: "0CD722C2B48DF862"
 			rewards: [{
 				count: 36
@@ -1262,8 +1394,8 @@
 				item: "create:content_observer"
 				type: "item"
 			}]
-			x: 20.0d
-			y: 0.5d
+			x: 22.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["1D75F7EBD23D3988"]
@@ -1274,8 +1406,8 @@
 				item: "create:stockpile_switch"
 				type: "item"
 			}]
-			x: 20.0d
-			y: -1.0d
+			x: 22.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["054BC637EF86609C"]
@@ -1298,8 +1430,8 @@
 				type: "item"
 			}]
 			title: "Big Ben"
-			x: 19.0d
-			y: 0.0d
+			x: 21.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["6D8C28D34ABF7636"]
@@ -1317,7 +1449,9 @@
 				"6D8C28D34ABF7636"
 				"1FD38190A8A47E9C"
 			]
+			description: ["It just does not get any smoother than this."]
 			id: "22BAD50143A6422B"
+			subtitle: "Flex on your friends who still use vanilla pistons!"
 			tasks: [{
 				id: "1EA7D455412FAE39"
 				item: "create:mechanical_piston"
@@ -1365,13 +1499,18 @@
 		}
 		{
 			dependencies: ["7ED3366AD5222F93"]
+			description: [
+				"Please do not break the first blaze spawner you see!"
+				""
+				"You can make an unlimited amount of Blaze Burners from a single blaze spawner."
+			]
 			id: "05A06882A2170564"
 			shape: "hexagon"
 			subtitle: "It has valuables, but you're looking for a Blaze spawner."
 			tasks: [{
 				icon: "minecraft:nether_bricks"
 				id: "7EF2F9F8166D05E3"
-				structure: "minecraft:fortress"
+				structure: "betterfortresses:fortress"
 				type: "structure"
 			}]
 			title: "Find a Nether Fortress"
@@ -1410,7 +1549,15 @@
 		}
 		{
 			dependencies: ["75E673394451C2F4"]
+			description: [
+				"Has a default maximum range of 10 blocks."
+				""
+				"Hold Alt to open the Toolbox interface and move your mouse to change selection."
+				""
+				"Hold [Shift] for a summary on how to use."
+			]
 			id: "57D6D3AF17AE4DD1"
+			subtitle: "Magically accessible without direct access!"
 			tasks: [{
 				id: "1DB9CFD6B2F25D54"
 				item: "create:brown_toolbox"
@@ -1421,7 +1568,14 @@
 		}
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
+			description: ["Safety should be your priority when riding your contraptions."]
 			id: "785FCB4A92E19D32"
+			rewards: [{
+				count: 256
+				id: "26DEF9F4CF46BB15"
+				item: "minecraft:string"
+				type: "item"
+			}]
 			subtitle: "Make a seat."
 			tasks: [{
 				id: "4E08251400F4301C"
@@ -1429,7 +1583,7 @@
 				type: "item"
 			}]
 			title: "Take a Seat!"
-			x: 2.5d
+			x: 2.0d
 			y: 0.0d
 		}
 		{
@@ -1442,10 +1596,11 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: -1.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["0CD722C2B48DF862"]
+			description: ["Hold [w] to Ponder to learn more!"]
 			id: "60839EAF324E7086"
 			subtitle: "Useful if you want to drain buckets from a milk farm, lava farm and more."
 			tasks: [{
@@ -1459,6 +1614,7 @@
 		}
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
+			description: ["Hold [w] to Ponder to learn more!"]
 			id: "24D7FAA4E3EFAD39"
 			subtitle: "It is a very useful redstone component."
 			tasks: [{
@@ -1467,8 +1623,8 @@
 				type: "item"
 			}]
 			title: "Craft the Powered Toggle Latch"
-			x: 2.5d
-			y: -1.0d
+			x: 1.5d
+			y: -1.5d
 		}
 		{
 			dependencies: ["0194851298AADB65"]
@@ -1488,8 +1644,8 @@
 				}
 			]
 			title: "Behold! The mighty Display Board!"
-			x: 19.0d
-			y: 5.0d
+			x: 21.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["0194851298AADB65"]
@@ -1507,8 +1663,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 20.0d
-			y: 4.5d
+			x: 22.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["2FF7795C03DDC67B"]
@@ -1524,7 +1680,7 @@
 				}
 				type: "item"
 			}]
-			x: 17.0d
+			x: 19.0d
 			y: -4.5d
 		}
 		{
@@ -1535,7 +1691,7 @@
 				item: "create:wand_of_symmetry"
 				type: "item"
 			}]
-			x: 18.5d
+			x: 20.5d
 			y: -4.0d
 		}
 		{
@@ -1552,7 +1708,7 @@
 				}
 				type: "item"
 			}]
-			x: 19.0d
+			x: 21.0d
 			y: -2.5d
 		}
 		{
@@ -1585,22 +1741,8 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["7D464E248ADF8C04"]
-			description: ["Some helpful information that you will probably skip over: Large Waterwheels output the maximum of &3512su&r at &a4&r RPM."]
-			id: "6B91B516A2B08FAB"
-			shape: "hexagon"
-			subtitle: "Biiiig waterwheels."
-			tasks: [{
-				id: "478EF0FA0225FD35"
-				item: "create:large_water_wheel"
-				type: "item"
-			}]
-			title: "Water Wheels, upgraded!"
-			x: 0.5d
-			y: -10.0d
-		}
-		{
 			dependencies: ["0CD722C2B48DF862"]
+			description: ["Want to swim and work underwater freely? Then this gear is for you!"]
 			icon: {
 				Count: 1b
 				id: "create:copper_diving_helmet"
@@ -1608,10 +1750,11 @@
 					Damage: 0
 				}
 			}
-			id: "3EC420EBA3F072EA"
+			id: "61624301D1511BB0"
+			subtitle: "For underwater exploration."
 			tasks: [
 				{
-					id: "31740E2F3B89BBB6"
+					id: "5CCDCE989856C5E8"
 					item: {
 						Count: 1b
 						id: "create:copper_diving_helmet"
@@ -1622,7 +1765,7 @@
 					type: "item"
 				}
 				{
-					id: "6A4F894BE5A1ABB5"
+					id: "252A5F4E6868400E"
 					item: {
 						Count: 1b
 						id: "create:copper_backtank"
@@ -1633,7 +1776,7 @@
 					type: "item"
 				}
 				{
-					id: "0288BA172F00FB1F"
+					id: "6A0F7E0635343EEF"
 					item: {
 						Count: 1b
 						id: "create:copper_diving_boots"
@@ -1644,12 +1787,13 @@
 					type: "item"
 				}
 			]
-			title: "Gone Diving!"
+			title: "Gone diving!"
 			x: -4.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["3EC420EBA3F072EA"]
+			dependencies: ["61624301D1511BB0"]
+			description: ["The Netherite Diving gear can only grant full lava immunity when your backtank is filled with SOME pressurized air."]
 			icon: {
 				Count: 1b
 				id: "create:netherite_diving_helmet"
@@ -1657,11 +1801,11 @@
 					Damage: 0
 				}
 			}
-			id: "118165BB7641E814"
+			id: "41753F371DB962BC"
 			subtitle: "Gone swimming in the lava oceans of the Nether."
 			tasks: [
 				{
-					id: "334830C9DD5C294C"
+					id: "571271BC7D901D0A"
 					item: {
 						Count: 1b
 						id: "create:netherite_diving_helmet"
@@ -1672,7 +1816,7 @@
 					type: "item"
 				}
 				{
-					id: "2FDBB9E2899EBA07"
+					id: "74EB887FB5B3ED52"
 					item: {
 						Count: 1b
 						id: "create:netherite_backtank"
@@ -1683,7 +1827,7 @@
 					type: "item"
 				}
 				{
-					id: "221999CCC0D12F65"
+					id: "77A05EED1E75FCDD"
 					item: {
 						Count: 1b
 						id: "minecraft:netherite_leggings"
@@ -1694,7 +1838,7 @@
 					type: "item"
 				}
 				{
-					id: "05E84EC4B1CCFF53"
+					id: "0239A1EACF2F157E"
 					item: {
 						Count: 1b
 						id: "create:netherite_diving_boots"
@@ -1708,6 +1852,72 @@
 			title: "Lava Diving!"
 			x: -5.5d
 			y: 0.0d
+		}
+		{
+			dependencies: ["7D464E248ADF8C04"]
+			description: ["Some helpful information that you will probably skip over: Large Waterwheels output the maximum of &3512su&r at &a4&r RPM."]
+			id: "4EDF41B3F8B25734"
+			shape: "hexagon"
+			subtitle: "Biiiig waterwheels."
+			tasks: [{
+				id: "4B8FB2A1A25071A9"
+				item: "create:large_water_wheel"
+				type: "item"
+			}]
+			title: "Water Wheels, upgraded!"
+			x: 2.5d
+			y: -6.5d
+		}
+		{
+			dependencies: [
+				"054BC637EF86609C"
+				"32AD37AC33F00FD7"
+			]
+			hide: true
+			id: "73F456AE957F4002"
+			subtitle: "Elevators made easy."
+			tasks: [{
+				id: "5510DE2F5AC3C19F"
+				item: "create:elevator_pulley"
+				type: "item"
+			}]
+			x: 13.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2E4CFF3F7A4508AB"]
+			description: [
+				"Mechanical Rollers are extremely useful when it comes to clearing the way for your new train network."
+				""
+				"Hold [w] to Ponder to learn more!"
+			]
+			id: "6E890DBBA3FFA4B3"
+			shape: "rsquare"
+			subtitle: "Need to clear the way?"
+			tasks: [{
+				id: "473E12E9C8E7C782"
+				item: "create:mechanical_roller"
+				type: "item"
+			}]
+			x: 15.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["24D7FAA4E3EFAD39"]
+			description: [
+				"They can also be used with the Elevator Pulley to designate floors."
+				""
+				"Hold [w] to Ponder to learn more!"
+			]
+			id: "205BAFFFECA72D1E"
+			subtitle: "This has many uses, trust me."
+			tasks: [{
+				id: "32AD37AC33F00FD7"
+				item: "create:redstone_contact"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.5d
 		}
 	]
 	subtitle: [

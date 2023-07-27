@@ -28,7 +28,7 @@ ServerEvents.recipes(event => {
             result: {
                 item: 'endrem:exotic_eye'
             }
-        }).id('endrem:ritual_exotic_eye')
+    }).id('endrem:ritual_exotic_eye')
     event.custom({
         type: 'extendedcrafting:combination',
         powerCost: 100000,

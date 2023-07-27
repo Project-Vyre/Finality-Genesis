@@ -5,7 +5,7 @@
 	group: "6855847200ADBE3A"
 	icon: "mysticalagriculture:infusion_altar"
 	id: "2C5FF9AF6ACD1D02"
-	order_index: 6
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
@@ -37,7 +37,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["6E3E85ECD7204B4D"]
+			dependencies: ["3CCEE62A9B6D8F1E"]
 			id: "013A53FA6B5EA594"
 			tasks: [{
 				id: "56B96EC3B1857503"
@@ -45,31 +45,44 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 4.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["3ED54EFC2FC65E99"]
 			description: ["Please craft the Mystical Agriculture Guide Book. The documentation is extensive."]
 			icon: "mysticalagriculture:inferium_essence"
 			id: "6E3E85ECD7204B4D"
+			rewards: [{
+				id: "42E3D9FD9C715D81"
+				item: {
+					Count: 1b
+					id: "patchouli:guide_book"
+					tag: {
+						"patchouli:book": "mysticalagriculture:guide"
+					}
+				}
+				type: "item"
+			}]
 			tasks: [
 				{
+					count: 4L
 					id: "432A834B17F1F711"
 					item: "mysticalagriculture:inferium_essence"
 					type: "item"
 				}
 				{
-					id: "3F65123B7AD92251"
-					item: {
-						Count: 1b
-						id: "patchouli:guide_book"
-						tag: {
-							"patchouli:book": "mysticalagriculture:guide"
-						}
-					}
+					count: 4L
+					id: "4B1F5A472B7174E7"
+					item: "mysticalagriculture:prosperity_shard"
+					type: "item"
+				}
+				{
+					id: "445F0203F76952E7"
+					item: "minecraft:diamond"
 					type: "item"
 				}
 			]
+			title: "Inferium Tier"
 			x: 0.0d
 			y: 2.0d
 		}
@@ -82,7 +95,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 6.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["3E607B69558203C0"]
@@ -93,18 +106,34 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 8.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["58621F2AF6BAED27"]
+			icon: "mysticalagriculture:supremium_essence"
 			id: "6366BD8019526248"
-			tasks: [{
-				id: "41989A0CAA146393"
-				item: "mysticalagriculture:supremium_essence"
-				type: "item"
-			}]
+			tasks: [
+				{
+					count: 4L
+					id: "41989A0CAA146393"
+					item: "mysticalagriculture:supremium_essence"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "201692B1A824B58E"
+					item: "mysticalagriculture:prosperity_shard"
+					type: "item"
+				}
+				{
+					id: "643B7F8CF140D67F"
+					item: "mysticalagriculture:supremium_gemstone"
+					type: "item"
+				}
+			]
+			title: "Supremium Tier"
 			x: 0.0d
-			y: 10.0d
+			y: 11.0d
 		}
 		{
 			dependencies: ["3ED54EFC2FC65E99"]
@@ -178,7 +207,7 @@
 			}]
 			title: "Acquire the Prudentium Watering Can"
 			x: 1.5d
-			y: 4.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["3E607B69558203C0"]
@@ -198,7 +227,7 @@
 			}]
 			title: "Acquire the Tertium Watering Can"
 			x: 1.5d
-			y: 6.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["58621F2AF6BAED27"]
@@ -216,7 +245,7 @@
 				type: "item"
 			}]
 			x: 1.5d
-			y: 8.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["6366BD8019526248"]
@@ -234,7 +263,7 @@
 				type: "item"
 			}]
 			x: 1.5d
-			y: 10.0d
+			y: 11.0d
 		}
 		{
 			dependencies: ["013A53FA6B5EA594"]
@@ -245,7 +274,7 @@
 				type: "item"
 			}]
 			x: -1.5d
-			y: 4.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["3E607B69558203C0"]
@@ -256,7 +285,7 @@
 				type: "item"
 			}]
 			x: -1.5d
-			y: 6.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["6366BD8019526248"]
@@ -267,7 +296,7 @@
 				type: "item"
 			}]
 			x: -1.5d
-			y: 10.0d
+			y: 11.0d
 		}
 		{
 			dependencies: ["58621F2AF6BAED27"]
@@ -278,7 +307,117 @@
 				type: "item"
 			}]
 			x: -1.5d
-			y: 8.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7FCED8481DFD9F1A"]
+			id: "565247CBE2F92DFC"
+			tasks: [{
+				id: "51734AEB2D37913A"
+				item: "mysticalagradditions:insanium_essence"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 12.5d
+		}
+		{
+			dependencies: ["6E3E85ECD7204B4D"]
+			id: "3CCEE62A9B6D8F1E"
+			subtitle: "This is needed to start your journey with infinite automation."
+			tasks: [{
+				id: "4D0908889BD441B1"
+				item: {
+					Count: 1b
+					id: "mysticalagriculture:infusion_crystal"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "The Infusion Crystal"
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["6366BD8019526248"]
+			id: "7FCED8481DFD9F1A"
+			tasks: [{
+				id: "582F7F1F135F79C2"
+				item: "mysticalagriculture:master_infusion_crystal"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["58CA3D354248FD48"]
+			id: "56CAF75A6D448B6B"
+			subtitle: "...to awaken Supremium."
+			tasks: [{
+				id: "1A30855437DABFB2"
+				item: "mysticalagriculture:awakening_altar"
+				type: "item"
+			}]
+			title: "The Awakening Altar"
+			x: 0.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["7FCED8481DFD9F1A"]
+			id: "58CA3D354248FD48"
+			subtitle: "Combine the four elemental essences..."
+			tasks: [{
+				id: "5FE3741B5E790D81"
+				item: "mysticalagriculture:cognizant_dust"
+				type: "item"
+			}]
+			title: "The Beginning of the Awakening"
+			x: 0.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["56CAF75A6D448B6B"]
+			id: "1EA2DBDBC4162FF7"
+			subtitle: "You will need these."
+			tasks: [{
+				count: 4L
+				id: "2DA999E631F1247D"
+				item: "mysticalagriculture:awakening_pedestal"
+				type: "item"
+			}]
+			title: "Awakening Pedestals"
+			x: -2.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["56CAF75A6D448B6B"]
+			id: "07AE6D26E63D8748"
+			subtitle: "You will also need these."
+			tasks: [{
+				count: 4L
+				id: "51A655FC70FA573F"
+				item: "mysticalagriculture:essence_vessel"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"1EA2DBDBC4162FF7"
+				"56CAF75A6D448B6B"
+				"07AE6D26E63D8748"
+			]
+			id: "4EFA3A0E86295629"
+			tasks: [{
+				id: "1E2BE6E7335A92F0"
+				item: "mysticalagriculture:awakened_supremium_essence"
+				type: "item"
+			}]
+			title: "Awakened Tier"
+			x: 0.0d
+			y: 18.0d
 		}
 	]
 	subtitle: [

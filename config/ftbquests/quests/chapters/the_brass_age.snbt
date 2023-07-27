@@ -82,54 +82,39 @@
 				"518A1959C88C6E85"
 				"6CBF1743473EC8E1"
 			]
-			id: "23532EE43480C347"
-			tasks: [{
-				id: "206C1BD3A03B7DA4"
-				item: "create:wand_of_symmetry"
-				type: "item"
-			}]
-			x: 3.5d
-			y: 3.5d
-		}
-		{
-			dependencies: [
-				"518A1959C88C6E85"
-				"6CBF1743473EC8E1"
-			]
 			id: "316613F9D228B868"
-			tasks: [{
-				id: "2A455EA0EBBACE3B"
-				item: {
-					Count: 1b
-					id: "create:potato_cannon"
-					tag: {
-						Damage: 0
+			tasks: [
+				{
+					id: "2A455EA0EBBACE3B"
+					item: {
+						Count: 1b
+						id: "create:potato_cannon"
+						tag: {
+							Damage: 0
+						}
 					}
+					type: "item"
 				}
-				type: "item"
-			}]
-			x: 2.5d
-			y: 3.5d
-		}
-		{
-			dependencies: [
-				"518A1959C88C6E85"
-				"6CBF1743473EC8E1"
+				{
+					id: "03FD31A85FE14ECA"
+					item: {
+						Count: 1b
+						id: "create:extendo_grip"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3C8C9185AF596197"
+					item: "create:wand_of_symmetry"
+					type: "item"
+				}
 			]
-			id: "7C61D96AEB4992DB"
-			tasks: [{
-				id: "1692E6D8CBB9D701"
-				item: {
-					Count: 1b
-					id: "create:extendo_grip"
-					tag: {
-						Damage: 0
-					}
-				}
-				type: "item"
-			}]
-			x: 1.5d
-			y: 3.5d
+			title: "Curiosities"
+			x: 2.5d
+			y: 2.5d
 		}
 		{
 			dependencies: ["0836B99BC4CDDFAF"]
