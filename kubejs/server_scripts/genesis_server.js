@@ -151,25 +151,21 @@ ServerEvents.recipes(event => {
         S: 'extendedcrafting:black_iron_ingot'
     }).id('finality:crafting/final_hoe')
     STONEPLATES.forEach(stone => {
-        event.stonecutting(`${stone}_pressure_plate`, `${stone}_slab`).id(`minecraft:${stone}_pressure_plate`)
+        event.stonecutting(`minecraft:${stone}_pressure_plate`, `minecraft:${stone}_slab`).id(`minecraft:${stone}_pressure_plate`)
+        event.recipes.create.cutting([`minecraft:${stone}_pressure_plate`, `minecraft:${stone}_slab`], `${stone}`).id(`finality:${stone}_pressure_plate`)
     })
     WOODPLATES.forEach(wood => {
-        event.stonecutting(`${wood}_pressure_plate`, `${wood}_slab`).id(`minecraft:${wood}_pressure_plate`)
+        event.stonecutting(`minecraft:${wood}_pressure_plate`, `minecraft:${wood}_slab`).id(`minecraft:${wood}_pressure_plate`)
+        event.recipes.create.cutting([`minecraft:${wood}_pressure_plate`, `minecraft:${wood}_slab`], `${wood}_planks`).id(`finality:${wood}_pressure_plate`)
     })
-    STONEPLATES.forEach(stone => {
-        event.recipes.create.cutting([`${stone}_pressure_plate`, `${stone}_slab`], `${stone}`).id(`finality:${stone}_pressure_plate`)
-    })
-    WOODPLATES.forEach(wood => {
-        event.recipes.create.cutting([`${wood}_pressure_plate`, `${wood}_slab`], `${wood}_planks`).id(`finality:${wood}_pressure_plate`)
-    })
-    event.shaped('light_weighted_pressure_plate', [
+    event.shaped('minecraft:light_weighted_pressure_plate', [
         'G',
         'R'
     ], {
         G: 'create:golden_sheet',
         R: 'minecraft:redstone'
     }).id('minecraft:light_weighted_pressure_plate')
-    event.shaped('heavy_weighted_pressure_plate', [
+    event.shaped('minecraft:heavy_weighted_pressure_plate', [
         'G',
         'R'
     ], {
