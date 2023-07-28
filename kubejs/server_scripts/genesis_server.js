@@ -172,6 +172,7 @@ ServerEvents.recipes(event => {
         G: 'create:iron_sheet',
         R: 'minecraft:redstone'
     }).id('minecraft:heavy_weighted_pressure_plate')
+    event.shapeless('create:mechanical_piston', ['supplementaries:soap', 'create:sticky_mechanical_piston']).id('finality:mechanical_piston_soap_washing')
 })
 
 ServerEvents.tags('item', event => {

@@ -97,6 +97,7 @@ JEIEvents.information(event => {
 	event.addItem('cataclysm:burning_ashes', ['Used to summon Ignis.'])
 	event.addItem('minecraft:nether_star', ['If you find a deactivated and mechanical version of the Wither, give it a Nether Star.', 'Also extensively used in certain recipes.'])
 	event.addItem('cataclysm:abyssal_sacrifice', ['Required to summon the Leviathan.', 'Use on the Altar of Abyss located in the Sunken City.'])
+	event.addItem('cataclysm:abyssal_egg', ['Does not require anything special to hatch, simply place it down.', 'You will have to wait a while for the egg to hatch.'])
 	event.addItem('minecraft:ender_eye', ['There is a certain eye that can only be acquired from enchanting.', 'It is very rare, however.'])
 	event.addItem('endrem:black_eye', ['Can be found in lost treasure chests.'])
 	event.addItem('endrem:cold_eye', ['Found in igloos.'])

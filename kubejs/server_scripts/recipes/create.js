@@ -81,6 +81,9 @@ ServerEvents.recipes(event => {
 	event.recipes.createHaunting(['minecraft:deepslate'], 'minecraft:andesite').id('finality:andesite_haunting')
 	event.recipes.createHaunting(['minecraft:crying_obsidian'], 'minecraft:obsidian').id('finality:obsidian_haunting')
 	event.recipes.createHaunting(['minecraft:name_tag'], 'minecraft:writable_book').id('finality:soul_nametag')
+	// splashing
+	event.recipes.createSplashing(['minecraft:piston'], ['minecraft:sticky_piston']).id('finality:sticky_piston_splashing')
+	event.recipes.createSplashing(['create:mechanical_piston'], ['create:sticky_mechanical_piston']).id('finality:sticky_mechanical_piston_splashing')
 	// mixing 
 	event.recipes.createMixing([
 		'minecraft:coarse_dirt'
