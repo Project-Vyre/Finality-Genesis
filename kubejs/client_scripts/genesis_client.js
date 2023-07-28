@@ -74,6 +74,8 @@ let MYSHIDE = [
 	'awakened_draconium',
 	'neutronium',
 	'nitro_crystal',
+	'sulfur',
+	'lead'
 ]
 JEIEvents.hideItems(event => {
 	// Hide items in JEI here
