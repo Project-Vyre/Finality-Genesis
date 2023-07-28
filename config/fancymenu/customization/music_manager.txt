@@ -15,7 +15,7 @@ customization {
 
 customization {
   [loading_requirement:fancymenu_loading_requirement_is_world_loaded][requirement_mode:if_not][req_id:3380d618-918e-4135-b887-d8e469df2bf61682981914659] = 
-  orientation = mid-centered
+  orientation = top-centered
   channel = music
   audio_source:c6494a00-af0d-4660-918b-d698dddd96101682981602154 = resourcepacks/Finality Genesis Resources/assets/minecraft/sounds/music/menu/menu3.ogg;EXTERNAL_LOCAL;100;0
   audio_source:6bfdbf5c-9d60-4ea1-91b6-82a425709a0e1682981595973 = resourcepacks/Finality Genesis Resources/assets/minecraft/sounds/music/menu/menu2.ogg;EXTERNAL_LOCAL;100;0
@@ -26,8 +26,32 @@ customization {
   width = 50
   action = custom_layout_element:fancymenu_extension:audio_item
   actionid = b3036c15-7a45-4558-a042-16a0b6821d751682981884968
-  y = -25
+  y = 0
   once_per_session = false
   height = 50
+}
+
+customization {
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:1080p_gui_scale_check][req_id:a13ea318-2708-4da5-9c58-c59d0b7da2b51690521293114] = 1920
+  orientation = mid-centered
+  enable_scrolling = false
+  shadow = true
+  [loading_requirement:fancymenu_loading_requirement_is_fullscreen][requirement_mode:if][group:1080p_gui_scale_check][req_id:84e71578-ff53-4c46-9840-8dabcc2294231690521263252] = 
+  [loading_requirement:fancymenu_loading_requirement_is_window_height][requirement_mode:if][group:1080p_gui_scale_check][req_id:fc14659e-a73e-4a45-9ba5-6c31955929cf1690521307619] = 1080
+  scale = 3.0
+  source = Use GUI scale of 2 for the best experience.%n%Use GUI scale of 2 for the best experience.%n%Use GUI scale of 2 for the best experience.
+  text_border = 0
+  case_mode = normal
+  [loading_requirement_group:1080p_gui_scale_check] = [group_mode:and]
+  source_mode = direct
+  line_spacing = 1
+  x = -364
+  width = 729
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 7c61829f-09a8-4ee2-95eb-e08c67d539ca1690521087058
+  y = -49
+  [loading_requirement:fancymenu_loading_requirement_is_gui_scale][requirement_mode:if_not][group:1080p_gui_scale_check][req_id:7762fdc9-f28f-4973-8511-333dc902b8a81690521328979] = 2.0
+  alignment = centered
+  height = 98
 }
 
