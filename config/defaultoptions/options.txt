@@ -14,7 +14,7 @@ reducedDebugInfo:false
 showSubtitles:true
 directionalAudio:true
 touchscreen:false
-fullscreen:false
+fullscreen:true
 bobView:true
 toggleCrouch:false
 toggleSprint:false
@@ -31,14 +31,14 @@ simulationDistance:12
 entityDistanceScaling:1.0
 guiScale:2
 particles:1
-maxFps:120
+maxFps:260
 graphicsMode:1
 ao:2
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:"true"
-resourcePacks:["vanilla","mod_resources","Supplementaries Generated Pack","quark:emote_resources","loadmyresources.hiddenpack","create:legacy_copper","file/Finality Genesis Resources"]
-incompatibleResourcePacks:["quark:emote_resources","loadmyresources.hiddenpack"]
+resourcePacks:["vanilla","mod_resources","Supplementaries Generated Pack","quark:emote_resources","loadmyresources.hiddenpack","create:legacy_copper","file/Nicer-Rain-1.0.0.zip","file/Enhanced Audio r5.zip","file/Finality Genesis Resources"]
+incompatibleResourcePacks:["quark:emote_resources","loadmyresources.hiddenpack","file/Nicer-Rain-1.0.0.zip"]
 lastServer:
 lang:en_us
 soundDevice:"OpenAL Soft on Wave Link Game (Elgato Wave:3)"
