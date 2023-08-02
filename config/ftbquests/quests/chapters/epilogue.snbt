@@ -1,0 +1,160 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "epilogue"
+	group: ""
+	icon: "kubejs:awakened_singularity_core"
+	id: "3D91EE1209DFA21C"
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 64.0d
+		hover: [ ]
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4EBF56E85BA4465B"]
+			id: "7BFEF80899790FC7"
+			subtitle: "Surprised you've made it this far."
+			tasks: [{
+				id: "4C847275ABA5869F"
+				item: "kubejs:dormant_singularity_core"
+				type: "item"
+			}]
+			x: 3.4013605443306005E-4d
+			y: -21.551700680272106d
+		}
+		{
+			dependencies: ["7BFEF80899790FC7"]
+			id: "441B6755C6E69725"
+			shape: "circle"
+			size: 3.0d
+			subtitle: "Are you out of your mind?"
+			tasks: [{
+				id: "09EF7D15277FEB92"
+				item: "kubejs:awakened_singularity_core"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["441B6755C6E69725"]
+			id: "1F8515F209C98116"
+			subtitle: "Let's start with the easiest one, shall we?"
+			tasks: [{
+				id: "781C616780708BED"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:coal"
+					}
+				}
+				type: "item"
+			}]
+			x: 3.4013605443306005E-4d
+			y: -14.612925170068024d
+		}
+		{
+			id: "01A8004472B9F446"
+			tasks: [{
+				id: "716C4AAB2675A2FC"
+				item: "create:handheld_worldshaper"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1F8515F209C98116"]
+			id: "634CF0AB7722167E"
+			tasks: [{
+				id: "749BB0B63485E853"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:copper"
+					}
+				}
+				type: "item"
+			}]
+			x: -3.474489795918359d
+			y: -18.11734693877549d
+		}
+		{
+			dependencies: ["1F8515F209C98116"]
+			id: "6441CF7A7EB2A425"
+			tasks: [{
+				id: "50A3755D5BC3CA49"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:amethyst"
+					}
+				}
+				type: "item"
+			}]
+			x: 3.484693877551024d
+			y: -18.137755102040792d
+		}
+		{
+			dependencies: ["634CF0AB7722167E"]
+			id: "002A7969EC03C1EC"
+			tasks: [{
+				id: "08E5007CF006F958"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:iron"
+					}
+				}
+				type: "item"
+			}]
+			x: -6.959183673469397d
+			y: -18.117346938775498d
+		}
+		{
+			id: "123D0E0F69B73A88"
+			tasks: [{
+				id: "2F6C1657E021958E"
+				item: "extendedcrafting:ultimate_singularity"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -7.0d
+		}
+		{
+			id: "20A1026E727547FE"
+			tasks: [{
+				id: "237E1F6A414719EF"
+				item: "extendedcrafting:the_ultimate_nugget"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -5.0d
+		}
+		{
+			id: "53850BE8EF49D0AF"
+			tasks: [{
+				id: "362078F1C8534BB7"
+				item: "extendedcrafting:the_ultimate_ingot"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.5d
+		}
+	]
+	title: "Epilogue"
+}

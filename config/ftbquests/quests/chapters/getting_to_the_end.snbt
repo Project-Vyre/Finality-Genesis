@@ -5,7 +5,19 @@
 	group: ""
 	icon: "minecraft:end_portal_frame"
 	id: "316C9BB1844BE86C"
-	order_index: 1
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 144.0d
+		hover: [ ]
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 144.0d
+		x: 0.0d
+		y: 3.0d
+	}]
+	order_index: 5
 	quest_links: [ ]
 	quests: [
 		{

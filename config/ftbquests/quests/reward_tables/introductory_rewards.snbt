@@ -8,7 +8,7 @@
 	}
 	id: "5C53005B8CEE4C42"
 	loot_size: 1
-	order_index: 6
+	order_index: 4
 	rewards: [
 		{ count: 32, item: "minecraft:torch", weight: 2.0f }
 		{ item: "torchmaster:megatorch" }

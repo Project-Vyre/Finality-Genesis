@@ -319,6 +319,26 @@
 			x: 0.0d
 			y: -1.5d
 		}
+		{
+			dependencies: ["4D7D29F3E7D7AC0D"]
+			description: ["You can make spooky dark iron decorations with this stuff."]
+			id: "51E52655B6A6B78A"
+			rewards: [{
+				count: 9
+				id: "31349043EF7D0A7C"
+				item: "graveyard:dark_iron_block"
+				type: "item"
+			}]
+			subtitle: "This is mostly used for decorative purposes."
+			tasks: [{
+				id: "2BF1C78F5E339158"
+				item: "graveyard:corruption"
+				type: "item"
+			}]
+			title: "Corrupted Decoration"
+			x: -3.0d
+			y: 0.0d
+		}
 	]
 	subtitle: ["A lot more decorative blocks."]
 	title: "Spice it Up!"

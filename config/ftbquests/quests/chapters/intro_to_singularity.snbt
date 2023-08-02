@@ -22,14 +22,15 @@
 	quests: [
 		{
 			description: [
-				"If you wish to play the modpack on its intended difficulty, set the difficulty to Hard. For obvious reasons, this is optional."
+				"If you wish to play the modpack on its intended difficulty, set the difficulty to &cHard&r. For obvious reasons, this is optional."
+				""
+				"Quests on this chapter are not expected to be completed on the first few days."
 				""
 				"The rest of the chapters can be accessed after you click the checkmark here and move your cursor to the left edge of your screen."
 				""
-				"If you lose the Tome of Finality, it is reclaimable from Emergency Items (broken heart icon) on the right. You can also craft the guidebook with two sticks!"
+				"If you lose the &5Tome of Finality&r, it is reclaimable from Emergency Items (broken heart icon) on the right. You can also craft the guidebook with two sticks!"
 				""
 				"Also, take the time now to SET YOUR KEYBINDS, only if you want to."
-				""
 			]
 			icon: {
 				Count: 1b
@@ -48,18 +49,35 @@
 			shape: "rsquare"
 			size: 1.5d
 			subtitle: "Click me to check the description of this button."
-			tasks: [{
-				id: "10D0DC144CD6061E"
-				title: "You have acknowledged the button."
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "10D0DC144CD6061E"
+					title: "You have acknowledged the button."
+					type: "checkmark"
+				}
+				{
+					id: "69C9A8653C2DA100"
+					item: {
+						Count: 1b
+						id: "minecraft:wooden_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
 			title: "Hi! Welcome to Finality."
 			x: 0.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			description: ["Once you wear the Ring of the Seven Curses, it is bound to you... eternally."]
+			description: [
+				"Once you wear the &l&4Ring of the Seven Curses&r, it is bound to you... &ceternally&r."
+				""
+				"Keep an eye out for extra shiny loot that may grant you special abilities!"
+			]
 			hide: true
 			icon: {
 				Count: 1b
@@ -70,7 +88,6 @@
 			}
 			id: "6EEDB74144BCAD6C"
 			rewards: [{
-				exclude_from_claim_all: true
 				id: "63B4F8ECA1B5F39F"
 				table_id: 3533172865185366803L
 				type: "random"
@@ -191,21 +208,23 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			description: [
-				"Press O to open the config interface for Inventory HUD+"
-				""
-				"Press I to show a preview of your inventory."
-				""
-				"You can also now repair your tools in the crafting grid, so you won't have to throw away your items."
-			]
+			description: ["You can now repair your tools in the crafting grid, so you won't have to throw away your tools."]
 			hide: true
 			icon: "extendedcrafting:handheld_table"
 			id: "0AE06EB85B6E1CB6"
-			rewards: [{
-				id: "6AECAF1DB1A11A84"
-				item: "minecraft:raw_iron_block"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "6AECAF1DB1A11A84"
+					item: "minecraft:raw_iron_block"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "376E44019CCE136C"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+			]
 			shape: "rsquare"
 			subtitle: "No really, they are very convenient."
 			tasks: [
@@ -220,90 +239,147 @@
 					item: "minecraft:campfire"
 					type: "item"
 				}
+				{
+					id: "6102D3B71CF616FF"
+					item: {
+						Count: 1b
+						id: "minecraft:stone_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6D0C51FCA5C0A1D2"
+					title: "Make sure to make an FTB Teams party to synchronize quest progress!"
+					type: "checkmark"
+				}
 			]
-			title: "Convenient Utilities"
+			title: "Convenient Utilities Ch.1"
 			x: 0.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["0AE06EB85B6E1CB6"]
 			description: [
-				"To add a book to it, simply combine them in the crafting table. You can have as many as you want, including duplicates."
+				"Instructions on how to use the Eccentric Tome are located in its tooltip. &b<wave>You're welcome!</wave>&r"
 				""
-				"To transform the tome into another mod's documentation book that is added to it, simply right click and pick the book you want from the menu."
-				""
-				"To untransform back into the tome, punch the air."
-				""
-				"To remove stored books, transform the Tome into the book to remove, then sneak and press your \"drop\" key."
-				""
-				"You can use a transformed Tome for crafting, but you probably shouldn't, since you'll lose all other attached items. So... DON'T USE IT FOR CRAFTING!"
-				""
-				"Just a warning in advance: Items will have a custom name after removing items from the Akashic Tome or Morph Tool, so be sure to clear the custom name in brackets before putting it back!"
-				""
-				"Use an Anvil and put some spaces after clearing the name to clear the custom name."
+				"As for Farmer's Delight tools, obviously you will need a knife to use the cutting board."
 			]
+			icon: {
+				Count: 1b
+				id: "eccentrictome:tome"
+				tag: {
+					"eccentrictome:mods": { }
+				}
+			}
 			id: "2EF808209CCECE6A"
 			shape: "rsquare"
 			subtitle: "Scientia Consolidationis"
-			tasks: [{
-				id: "781047FC0FE342C3"
-				item: "akashictome:tome"
-				only_from_crafting: true
-				type: "item"
-			}]
-			title: "Convenient Utilities Ch.2 - The Akashic Tome"
-			x: -1.0d
-			y: 2.5d
+			tasks: [
+				{
+					id: "781047FC0FE342C3"
+					item: {
+						Count: 1b
+						id: "eccentrictome:tome"
+						tag: {
+							"eccentrictome:mods": { }
+						}
+					}
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "045F99F148F9E24C"
+					item: "farmersdelight:cutting_board"
+					type: "item"
+				}
+				{
+					id: "446D17BA62CD3F0B"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "farmersdelight:tools/knives"
+						}
+					}
+					title: "Any #farmersdelight:tools/knives"
+					type: "item"
+				}
+				{
+					id: "1277B528ADC1D6F8"
+					item: {
+						Count: 1b
+						id: "farmersdelight:skillet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "7C06B649A52E60C0"
+					item: "farmersdelight:cooking_pot"
+					type: "item"
+				}
+				{
+					id: "0C4AF3D94C5361F1"
+					item: "farmersdelight:stove"
+					type: "item"
+				}
+			]
+			title: "Convenient Utilities Ch.2"
+			x: -1.5d
+			y: 1.5d
 		}
 		{
-			dependencies: ["0AE06EB85B6E1CB6"]
+			dependencies: ["2EF808209CCECE6A"]
 			description: [
-				"Whenever you look at a block from the same mod as that wrench-like item, the Morphing Tool will turn into it."
+				"Travel Anchors are very versatile and provide instantaneous travel in any direction with the Travel Staff."
 				""
-				"You can use a morphed Tool for crafting, but you probably shouldn't, since you'll lose all other attached items."
+				"Think of the Tempad device as a personal waystone with a cooldown. It is very effective and customizable as well!"
 				""
-				"To remove attached items, transform the Tool into the item you want to remove, then sneak and press your \"drop\" key."
-				""
-				"Just a warning in advance: Items will have a custom name after removing items from the Akashic Tome or Morph Tool, so be sure to clear the custom name in brackets before putting it back!"
-				""
-				"Use an Anvil and put some spaces after clearing the name to clear the custom name."
+				"This quest also has a hidden step, but it requires you to get to The End first."
 			]
-			id: "09134C5108A1B870"
-			shape: "rsquare"
-			subtitle: "Clave Absolutio"
-			tasks: [{
-				id: "7AF4F455B45035C8"
-				item: "morphtool:tool"
-				only_from_crafting: true
-				type: "item"
-			}]
-			title: "Convenient Utilities Ch.2 - The Morph Tool"
-			x: 1.0d
-			y: 2.5d
-		}
-		{
-			dependencies: [
-				"09134C5108A1B870"
-				"2EF808209CCECE6A"
-			]
-			description: ["Think of this device as a personal waystone with a long cooldown. It is very effective and customizable!"]
 			icon: "tempad:tempad"
 			id: "5E5E9241EB84A4E9"
 			shape: "rsquare"
 			subtitle: "For all time. Always."
-			tasks: [{
-				id: "265931DE467928C8"
-				item: "tempad:tempad"
-				only_from_crafting: true
-				type: "item"
-			}]
-			title: "Craft the Tempad"
-			x: 0.0d
-			y: 3.5d
+			tasks: [
+				{
+					id: "265931DE467928C8"
+					item: "tempad:tempad"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "555201282747EC85"
+					item: "travelanchors:travel_anchor"
+					type: "item"
+				}
+				{
+					id: "447EE71ED57A4615"
+					item: "travelanchors:travel_staff"
+					type: "item"
+				}
+				{
+					id: "1BFC7D3D442BB60F"
+					item: "waystones:waystone"
+					type: "item"
+				}
+			]
+			title: "Convenient Utilities Ch.3"
+			x: -3.0d
+			y: 1.5d
 		}
 		{
-			dependencies: ["5E5E9241EB84A4E9"]
+			dependencies: [
+				"5E5E9241EB84A4E9"
+				"5098C9DA205BDE8A"
+			]
 			description: ["Unlimited teleports, for all time."]
+			hide: true
 			icon: "tempad:he_who_remains_tempad"
 			id: "38EC0E607FAE4543"
 			shape: "rsquare"
@@ -314,10 +390,284 @@
 				type: "item"
 			}]
 			title: "He who remains..."
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0AE06EB85B6E1CB6"]
+			description: [
+				"If you're lost, just play as if it is regular Minecraft."
+				""
+				"It's just that it is Minecraft with a lot more... &c<wave>dangers</wave>&r."
+			]
+			icon: {
+				Count: 1b
+				id: "minecraft:iron_pickaxe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "03F919758AA7E318"
+			rewards: [
+				{
+					count: 3
+					id: "358E2A2CFE70CDBE"
+					item: "minecraft:raw_gold_block"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "622143AAC4E8F062"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "I hope you have at least a base set up by now."
+			tasks: [{
+				id: "142AB5886E71101E"
+				item: {
+					Count: 1b
+					id: "minecraft:iron_pickaxe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Getting somewhere..."
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0AE06EB85B6E1CB6"]
+			description: [
+				"This is also &overy&r important..."
+				""
+				"<rainb>Hold [w] to Ponder to learn more!</rainb>"
+				""
+				"You can also access the <rainb>Ponder Index</rainb> from your Esc menu!"
+				""
+				"A few tips for getting into Create..."
+				""
+				"- Some <rainb>Ponder</rainb> views have &o&lmultiple scenes&r&r, so be sure to look at the bottom of your screen to see if there is a &lnext arrow&r."
+				""
+				"- Andesite, iron, copper and zinc are important. You will especially need andesite and iron."
+				""
+				"- Many useless vanilla items may no longer be useless when refined through Create's methods. For example, gravel."
+				""
+				"- Plan ahead with your logistics and the direction of your rotational force."
+			]
+			icon: "create:andesite_alloy"
+			id: "65FC712C5D7E312D"
+			shape: "rsquare"
+			subtitle: "Creating your foundation..."
+			tasks: [{
+				id: "580921EB09A555A0"
+				title: "Ready to proceed and unlock the Age of Creation? Click me to confirm."
+				type: "checkmark"
+			}]
+			title: "Introduction to Create"
 			x: 0.0d
-			y: 5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["65FC712C5D7E312D"]
+			description: [
+				"So you made your very first &7Andesite Alloy&r ingot, what do you do now?"
+				""
+				"Make another &7Andesite Alloy&r and make a Shaft and get some planks and make a &3Water Wheel&r."
+				""
+				"&3Water Wheels&r are Create's &aearly game&r power source and will help you get started."
+				""
+				"If you are wondering how to make &7Andesite Casing&r, it's a simple task... Simply &6right click&r a &l&9stripped log&r&r with an &7Andesite Alloy&r in your hand."
+				""
+				"&7Andesite Casing&r is extremely useful and is an important ingredient for many of Create's items, so be sure to always have spares!"
+			]
+			icon: "create:water_wheel"
+			id: "4D2C0C096BDDDBDC"
+			shape: "rsquare"
+			subtitle: "What do I do now?"
+			tasks: [
+				{
+					id: "738DBA7337E8F0C3"
+					item: "create:shaft"
+					type: "item"
+				}
+				{
+					id: "13993AEFDDD9F08B"
+					item: "create:water_wheel"
+					type: "item"
+				}
+				{
+					id: "327A7CA344B94EE1"
+					item: "create:andesite_casing"
+					type: "item"
+				}
+				{
+					id: "199424675C00AD0E"
+					title: "Ready to proceed? Click me to confirm."
+					type: "checkmark"
+				}
+			]
+			title: "Introduction to Create Ch.2"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4D2C0C096BDDDBDC"]
+			description: [
+				"The Mechanical Press has a very involved crafting tree, so please refer to the &l&6Age of Creation&r chapter on the &bleft hand side&r in the quests drawer. "
+				""
+				"There's a small white arrow on the very edge of your screen if you have not seen it already."
+				""
+				"-+-"
+				""
+				"This concludes the introduction to Create."
+			]
+			icon: "create:mechanical_press"
+			id: "5AFC2DD137BD9CEE"
+			shape: "rsquare"
+			subtitle: "The Mechanical Press is a very useful item, trust me on this."
+			title: "Introduction to Create Ch.3"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["03F919758AA7E318"]
+			description: ["Once you complete this quest, a chapter page will be unlocked."]
+			icon: {
+				Count: 1b
+				id: "minecraft:diamond_pickaxe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "13186E7B0D6B6115"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "0FBF701F50C3B651"
+				table_id: 7771384237349930739L
+				type: "random"
+			}]
+			shape: "rsquare"
+			subtitle: "Be prepared."
+			tasks: [{
+				id: "080DD5B7DA2CF335"
+				item: {
+					Count: 1b
+					id: "minecraft:diamond_pickaxe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "The Vanilla Endgoal: Diamonds"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["13186E7B0D6B6115"]
+			icon: "minecraft:compass"
+			id: "650B5FD6B6CAD69C"
+			shape: "rsquare"
+			subtitle: "For both explorers and those who seek a certain biome."
+			tasks: [
+				{
+					id: "3BF5145CA2BFA938"
+					item: {
+						Count: 1b
+						id: "naturescompass:naturescompass"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "0305240C1F21BE52"
+					item: {
+						Count: 1b
+						id: "explorerscompass:explorerscompass"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "Useful Guidance"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"For far distance travelling! You'll probably enable cheats anyway."
+				""
+				"Just to let you know we have tuned the Waystones to use inverse XP cost."
+				""
+				"What that means is that short distance travelling is more expensive than far distance travel."
+			]
+			hide: true
+			hide_dependency_lines: true
+			id: "6CF276144FAF7265"
+			shape: "rsquare"
+			subtitle: "Pillars that allow you to teleport anywhere."
+			tasks: [{
+				id: "08294138E415A8CD"
+				item: "waystones:waystone"
+				type: "item"
+			}]
+			title: "Introduction to Waystones"
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"Well, don't be worried about that."
+				""
+				"Dried Kelp Blocks can be compressed to make Coal with the help of an &6active&r Blaze Burner."
+				""
+				"Coal Blocks can be compressed to make Diamonds with the help of a &bsuperheated&r Blaze Burner."
+				""
+				"Netherite is also now renewable with the use of Crushing Wheels."
+			]
+			hide_dependency_lines: true
+			icon: "minecraft:coal_block"
+			id: "0B185A46D4C2A558"
+			shape: "rsquare"
+			subtitle: "Worried about running out of materials?"
+			tasks: [
+				{
+					id: "50344CAB6CFC2ADA"
+					item: "minecraft:coal"
+					type: "item"
+				}
+				{
+					id: "7636931033E3AEE3"
+					item: "minecraft:coal_block"
+					type: "item"
+				}
+				{
+					id: "6CB9E98C2793DF71"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "5615AE22BD72CECF"
+					item: "minecraft:diamond_block"
+					type: "item"
+				}
+				{
+					id: "3EC1D4E2D48C55FD"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+			]
+			title: "A Heads Up: Infinite Materials"
+			x: 1.5d
+			y: -1.5d
 		}
 	]
-	subtitle: ["This is just the introduction..."]
+	subtitle: ["This chapter serves both as an introduction and some awareness of utilities."]
 	title: "Humble beginnings..."
 }

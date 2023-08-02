@@ -1,0 +1,12 @@
+{
+	id: "635A5E93AA0CD3DF"
+	loot_size: 4
+	order_index: 8
+	rewards: [
+		{ item: "minecraft:raw_iron", random_bonus: 1, weight: 3.0f }
+		{ item: "minecraft:raw_copper", random_bonus: 1, weight: 7.0f }
+		{ item: "create:raw_zinc", random_bonus: 1, weight: 3.0f }
+		{ item: "minecraft:raw_gold", random_bonus: 1, weight: 2.0f }
+	]
+	title: "Quad Ore"
+}

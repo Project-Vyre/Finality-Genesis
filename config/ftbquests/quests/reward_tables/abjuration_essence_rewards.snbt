@@ -1,8 +1,0 @@
-{
-	icon: "ars_nouveau:abjuration_essence"
-	id: "7E292E6D16DFD5F6"
-	loot_size: 1
-	order_index: 3
-	rewards: [{ item: "ars_nouveau:glyph_dispel" }]
-	title: "Abjuration Essence Rewards"
-}
