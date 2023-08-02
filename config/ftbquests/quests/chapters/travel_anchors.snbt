@@ -23,7 +23,7 @@
 			tasks: [{
 				icon: "travelanchors:travel_staff"
 				id: "63D12F76B2BAAE04"
-				item: "travel_anchors:travel_staff"
+				item: "travelanchors:travel_staff"
 				type: "item"
 			}]
 			title: "The Travel Staff"

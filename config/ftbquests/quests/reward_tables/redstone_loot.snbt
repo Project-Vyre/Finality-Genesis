@@ -1,0 +1,19 @@
+{
+	icon: {
+		Count: 1b
+		id: "extendedcrafting:singularity"
+		tag: {
+			Id: "extendedcrafting:redstone"
+		}
+	}
+	id: "7F95D81A424900CF"
+	loot_size: 1
+	order_index: 7
+	rewards: [
+		{ item: "minecraft:redstone_ore", random_bonus: 8, weight: 3.0f }
+		{ item: "minecraft:deepslate_redstone_ore", random_bonus: 15, weight: 4.0f }
+		{ item: "minecraft:redstone", random_bonus: 31, weight: 2.0f }
+		{ item: "minecraft:redstone_block", random_bonus: 8 }
+	]
+	title: "Redstone Loot"
+}

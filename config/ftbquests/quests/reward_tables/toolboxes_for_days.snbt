@@ -1,0 +1,24 @@
+{
+	icon: "create:black_toolbox"
+	id: "1CC050657E3C5575"
+	loot_size: 1
+	order_index: 9
+	rewards: [
+		{ item: "create:white_toolbox" }
+		{ item: "create:orange_toolbox" }
+		{ item: "create:magenta_toolbox" }
+		{ item: "create:light_blue_toolbox" }
+		{ item: "create:yellow_toolbox" }
+		{ item: "create:lime_toolbox" }
+		{ item: "create:pink_toolbox" }
+		{ item: "create:gray_toolbox" }
+		{ item: "create:light_gray_toolbox" }
+		{ item: "create:cyan_toolbox" }
+		{ item: "create:purple_toolbox" }
+		{ item: "create:blue_toolbox" }
+		{ item: "create:green_toolbox" }
+		{ item: "create:red_toolbox" }
+		{ item: "create:black_toolbox" }
+	]
+	title: "Toolboxes for Days"
+}

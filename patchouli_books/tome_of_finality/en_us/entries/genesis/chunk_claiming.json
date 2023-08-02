@@ -1,7 +1,7 @@
 {
     "name": "Chunk Claiming 101",
     "icon": "minecraft:map",
-    "category": "patchouli:genesis",
+    "category": "patchouli:genesis/tips",
     "pages": [
         {
             "type": "patchouli:text",

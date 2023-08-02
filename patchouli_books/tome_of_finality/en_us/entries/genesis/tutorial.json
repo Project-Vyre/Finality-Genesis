@@ -1,7 +1,7 @@
 {
     "name": "Humble Beginnings",
-    "icon": "minecraft:writable_book",
-    "category": "patchouli:genesis",
+    "icon": "minecraft:dirt",
+    "category": "patchouli:genesis/introduction",
     "priority": true,
     "sortnum": 1,
     "pages": [

@@ -1,0 +1,7 @@
+{
+    "name": "Momentum",
+    "description": "Create momentum to get started with your journey. Infinitum creatio. $(br)All entries here are related to Create which does have a built in tutorial system called Ponder which is accessible by holding [W] on individual items OR clicking the goggles icon in the pause menu.",
+    "icon": "create:mechanical_crafter",
+    "flag": "mod:create",
+    "sortnum": 1
+}

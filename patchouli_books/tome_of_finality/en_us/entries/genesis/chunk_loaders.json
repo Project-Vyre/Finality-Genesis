@@ -1,7 +1,7 @@
 {
     "name": "Chunk Loaders 101",
     "icon": "chunkloaders:ultimate_chunk_loader",
-    "category": "patchouli:genesis",
+    "category": "patchouli:genesis/tips",
     "pages": [
         {
             "type": "patchouli:text",

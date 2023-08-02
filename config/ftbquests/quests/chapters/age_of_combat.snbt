@@ -1,0 +1,599 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "cataclysm"
+	group: ""
+	icon: "cataclysm:altar_of_fire"
+	id: "44955FEF08EBF071"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["60980DE71E4A4AE5"]
+			description: ["Be prepared. I suggest Fire Resistance and Health Regeneration potions."]
+			icon: {
+				Count: 1b
+				id: "cataclysm:infernal_forge"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "64BA40D2E7AEA557"
+			shape: "square"
+			subtitle: "Defeat the Netherite Monstrosity and acquire the Infernal Forge."
+			tasks: [
+				{
+					icon: "minecraft:map"
+					id: "5A7FC957A3598262"
+					structure: "cataclysm:soul_black_smith"
+					type: "structure"
+				}
+				{
+					entity: "cataclysm:netherite_monstrosity"
+					icon: {
+						Count: 1b
+						id: "cataclysm:infernal_forge"
+						tag: {
+							Damage: 0
+						}
+					}
+					id: "374265EEE77EF98A"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Locate the Soul Forge."
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["54378BE3AEDD91A3"]
+			hide: true
+			icon: "minecraft:netherrack"
+			id: "60980DE71E4A4AE5"
+			shape: "square"
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				id: "45F025CD8082443F"
+				type: "dimension"
+			}]
+			title: "Visit the Nether"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["64BA40D2E7AEA557"]
+			description: ["Choose a reward afterwards, just to make it easier for you."]
+			icon: "cataclysm:the_incinerator"
+			id: "133B009011D05C41"
+			rewards: [{
+				exclude_from_claim_all: true
+				icon: "cataclysm:ignitium_ingot"
+				id: "2E2B7831ECF3B1F0"
+				table_id: 8134379311085213745L
+				type: "choice"
+			}]
+			shape: "square"
+			subtitle: "Defeat Ignis."
+			tasks: [
+				{
+					id: "1F4211FE4CACED2F"
+					structure: "cataclysm:burning_arena"
+					type: "structure"
+				}
+				{
+					entity: "cataclysm:ignis"
+					icon: "cataclysm:the_incinerator"
+					id: "1D0CC36DB1778C3E"
+					type: "kill"
+					value: 1L
+				}
+				{
+					count: 3L
+					id: "6AF86BF264049062"
+					item: "cataclysm:ignitium_ingot"
+					type: "item"
+				}
+			]
+			title: "Locate the Burning Arena."
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["54378BE3AEDD91A3"]
+			hide: true
+			icon: "minecraft:end_portal_frame"
+			id: "1A028F6237ABDEAC"
+			shape: "square"
+			tasks: [{
+				dimension: "minecraft:the_end"
+				id: "2F2F53C75FF1DEC2"
+				type: "dimension"
+			}]
+			title: "Visit the End"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3CAA949A0C1A688A"]
+			icon: "cataclysm:gauntlet_of_guard"
+			id: "718AC83467E9FB0F"
+			shape: "square"
+			subtitle: "Win the battle and earn the Gauntlet of Guard."
+			tasks: [
+				{
+					icon: "minecraft:map"
+					id: "50367CB432DA8705"
+					structure: "cataclysm:ruined_citadel"
+					type: "structure"
+				}
+				{
+					id: "2F4E862B622B316B"
+					item: "cataclysm:gauntlet_of_guard"
+					type: "item"
+				}
+			]
+			title: "The Ruined Citadel - Boss Fight"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["54378BE3AEDD91A3"]
+			hide: true
+			icon: "minecraft:nether_star"
+			id: "0747981239EC0227"
+			shape: "square"
+			subtitle: "It needs a heart of power to be activated."
+			tasks: [{
+				id: "21ECB42B533B1FD7"
+				item: "minecraft:nether_star"
+				type: "item"
+			}]
+			title: "Acquire the Heart of the Harbinger"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0747981239EC0227"]
+			icon: "minecraft:deepslate_bricks"
+			id: "656C306BB7FF0758"
+			shape: "square"
+			subtitle: "Give the Harbinger its heart, then prepare for the worst."
+			tasks: [
+				{
+					icon: "cataclysm:emp"
+					id: "71997328F6DFED11"
+					structure: "cataclysm:ancient_factory"
+					type: "structure"
+				}
+				{
+					icon: "extendedcrafting:flux_star"
+					id: "4878248FE14BB992"
+					observe_type: 5
+					timer: 0L
+					title: "Find the Harbinger"
+					to_observe: "cataclysm:the_harbinger"
+					type: "observation"
+				}
+				{
+					id: "4F974AC0C8A4B0CD"
+					item: "cataclysm:wither_assault_shoulder_weapon"
+					type: "item"
+				}
+			]
+			title: "Locate the Ancient Factory."
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1A028F6237ABDEAC"]
+			icon: "cataclysm:void_core"
+			id: "3CAA949A0C1A688A"
+			shape: "square"
+			subtitle: "Acquire the Void Core while you are still there."
+			tasks: [
+				{
+					icon: "minecraft:map"
+					id: "21C33F64C6E59917"
+					structure: "cataclysm:ruined_citadel"
+					type: "structure"
+				}
+				{
+					id: "1762BC34A7A087F4"
+					item: "cataclysm:void_core"
+					type: "item"
+				}
+			]
+			title: "Locate the Ruined Citadel."
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["656C306BB7FF0758"]
+			id: "6F799476F9E6E69A"
+			shape: "square"
+			subtitle: "Now bring harmony between your tools of destruction."
+			tasks: [{
+				id: "37DAC70D45F38E35"
+				item: "cataclysm:mechanical_fusion_anvil"
+				type: "item"
+			}]
+			title: "Create the Fusion Anvil"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6F799476F9E6E69A"]
+			id: "458D846250812A82"
+			shape: "square"
+			tasks: [{
+				id: "4EC290963C93788D"
+				item: {
+					Count: 1b
+					id: "cataclysm:void_forge"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6F799476F9E6E69A"]
+			id: "2DA38B93D5B1B658"
+			shape: "square"
+			tasks: [{
+				id: "220340EF1CB9034E"
+				item: "cataclysm:gauntlet_of_bulwark"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6F799476F9E6E69A"]
+			id: "5860DCD8D31E9DEA"
+			shape: "square"
+			tasks: [{
+				id: "67FF31CFCA37B51D"
+				item: "cataclysm:void_assault_shoulder_weapon"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"4A691BB889286C89"
+				"5335BF00DB2A8CCE"
+			]
+			hide: true
+			id: "4179D9074E74A11B"
+			shape: "square"
+			tasks: [{
+				icon: "cataclysm:chiseled_stone_brick_pillar"
+				id: "39FD9536C33D32DA"
+				structure: "cataclysm:sunken_city"
+				title: "Locate the Sunken City"
+				type: "structure"
+			}]
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["54378BE3AEDD91A3"]
+			description: ["&d&lYou have been warned.&r&r"]
+			hide: true
+			id: "5335BF00DB2A8CCE"
+			shape: "square"
+			subtitle: "Come prepared, or face certain death."
+			tasks: [{
+				id: "674414D33A9EEC90"
+				item: "cataclysm:abyssal_sacrifice"
+				type: "item"
+			}]
+			title: "Create the Abyssal Sacrifice"
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4179D9074E74A11B"]
+			description: ["&d&lI did tell you to come prepared both for the altar activation AND a boss fight of your life.&r&r"]
+			id: "2FB0CBAD2F6C47FC"
+			shape: "square"
+			subtitle: "Remember that Abyssal Sacrifice?"
+			tasks: [{
+				icon: "cataclysm:altar_of_abyss"
+				id: "3A27F9EDD9160283"
+				observe_type: 0
+				timer: 0L
+				title: "Summon the Leviathan..."
+				to_observe: "cataclysm:altar_of_abyss"
+				type: "observation"
+			}]
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["2FB0CBAD2F6C47FC"]
+			description: [
+				"Tame and heal the baby leviathan with some tropical fish. "
+				""
+				"Please try to protect it at all costs ;-;"
+			]
+			icon: "cataclysm:tidal_claws"
+			id: "7B41C8C1C7837774"
+			shape: "square"
+			subtitle: "Also, you now have a baby leviathan in your possession now."
+			tasks: [
+				{
+					id: "77FAD21A4E3989F4"
+					item: "cataclysm:tidal_claws"
+					type: "item"
+				}
+				{
+					id: "72EB65397C97EBE9"
+					item: "cataclysm:abyssal_egg"
+					type: "item"
+				}
+			]
+			title: "Victory at last!"
+			x: 0.0d
+			y: -9.0d
+		}
+		{
+			dependencies: ["54378BE3AEDD91A3"]
+			description: [
+				"It's cold."
+				""
+				"-+-"
+				""
+				"The water is also pretty cold, so take that into consideration."
+			]
+			icon: "aquamirae:ship_graveyard_echo"
+			id: "1F272782D97392B4"
+			subtitle: "Something new lurks in the deep."
+			tasks: [{
+				biome: "minecraft:deep_frozen_ocean"
+				icon: "minecraft:packed_ice"
+				id: "6D3CFB6CF95E34F5"
+				title: "Suit up."
+				type: "biome"
+			}]
+			title: "Find the Frozen Ocean biome."
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["54378BE3AEDD91A3"]
+			description: [
+				"An aura of evil whispers into your ear as you hold the bone dagger in your hand..."
+				""
+				"&c<shake>Villagers...</shake>&r"
+				""
+				"Be sure to hold a glass bottle in your off hand while doing this."
+			]
+			icon: {
+				Count: 1b
+				id: "graveyard:bone_dagger"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "6F037916B715DB4A"
+			subtitle: "Darkness, corruption, death."
+			tasks: [
+				{
+					id: "711F57784616066C"
+					item: {
+						Count: 1b
+						id: "graveyard:bone_dagger"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "68549626B02A5A9A"
+					item: "minecraft:glass_bottle"
+					type: "item"
+				}
+			]
+			title: "Darkness lies ahead..."
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["13186E7B0D6B6115"]
+			id: "54378BE3AEDD91A3"
+			subtitle: "Might want some preparation first."
+			tasks: [{
+				id: "622A03DC3FD49769"
+				title: "Are you ready?"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1F272782D97392B4"]
+			id: "1827BFE975828E04"
+			subtitle: "You feel vibrations under the ice..."
+			tasks: [{
+				entity: "aquamirae:maze_mother"
+				icon: "aquamirae:abyssal_amethyst"
+				id: "6C581B3A0CC0D3CF"
+				title: "Kill the Mother of the Maze."
+				type: "kill"
+				value: 1L
+			}]
+			title: "The Feeling of Unease"
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1827BFE975828E04"]
+			description: [
+				"Make sure you are prepared with the Terrible Sword. "
+				""
+				"It is the one of the few weapons that can actually defeat her and put an end to her suffering."
+			]
+			id: "2585B4FAFCED0F46"
+			subtitle: "The curse of immortality."
+			tasks: [{
+				id: "7019C49A5665F93A"
+				item: {
+					Count: 1b
+					id: "aquamirae:terrible_sword"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Putting the Captain to Rest - Pt.1"
+			x: -1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["2585B4FAFCED0F46"]
+			id: "5A2CC1979870B934"
+			subtitle: "With the sound of the horn, Captain Cornelia appears."
+			tasks: [{
+				id: "599B259962BE460E"
+				item: "aquamirae:shell_horn"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["6F037916B715DB4A"]
+			id: "50A418AC861A047A"
+			subtitle: "<shake>Good...</shake>"
+			tasks: [{
+				id: "6EDB30B985968A28"
+				item: "graveyard:vial_of_blood"
+				type: "item"
+			}]
+			title: "<shake>Fill a vessel with the blood of the innocent...</shake>"
+			x: 1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"50A418AC861A047A"
+				"6F037916B715DB4A"
+			]
+			description: [
+				"You will need the upper, middle and lower components."
+				""
+				"You will need to find the three bone staff pieces from a special structure."
+			]
+			id: "5AE1F898C6178F11"
+			subtitle: "More whispers in your ear..."
+			tasks: [
+				{
+					id: "4F1F5ADC79DFD998"
+					item: "graveyard:upper_bone_staff"
+					type: "item"
+				}
+				{
+					id: "56A9FB3A2DBD88E2"
+					item: "graveyard:middle_bone_staff"
+					type: "item"
+				}
+				{
+					id: "1B04D93B8E788FB3"
+					item: "graveyard:lower_bone_staff"
+					type: "item"
+				}
+			]
+			title: "<shake>Find the fragments...</shake>"
+			x: 1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["5AE1F898C6178F11"]
+			description: [
+				"Once you get on the island, place the bone staff fragments in order in front of the altar. The blocks stand out very easily."
+				""
+				"Lastly, pour the vial of blood onto the altar block."
+				""
+				"The bone staff you recieve shall serve you for eternity."
+			]
+			id: "658C5775199D9B27"
+			subtitle: "Good luck."
+			tasks: [{
+				icon: "graveyard:altar"
+				id: "701870952F2664C9"
+				observe_type: 0
+				timer: 0L
+				to_observe: "minecraft:bedrock"
+				type: "observation"
+			}]
+			title: "Find the forbidden island..."
+			x: 1.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["658C5775199D9B27"]
+			id: "3C13DBF4676EC6A7"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "290ADDC4BCCF82CD"
+				table_id: 103743719166323827L
+				type: "random"
+			}]
+			subtitle: "It is too late to turn back now."
+			tasks: [{
+				icon: "graveyard:skeleton_hand"
+				id: "39E76B1BE77A926D"
+				observe_type: 5
+				timer: 0L
+				to_observe: "graveyard:lich"
+				type: "observation"
+			}]
+			title: "Eliminate the Lich."
+			x: 1.5d
+			y: -7.5d
+		}
+		{
+			dependencies: ["5A2CC1979870B934"]
+			description: ["Next thing to do is to find a Frozen Chest."]
+			icon: "aquamirae:frozen_key"
+			id: "6EE87D9FBE754FED"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "63918631BB8D7B04"
+				table_id: 103743719166323827L
+				type: "random"
+			}]
+			subtitle: "You have acquired the Frozen Key, congratulations."
+			tasks: [
+				{
+					id: "7F260BFFEC214A47"
+					item: "aquamirae:frozen_key"
+					type: "item"
+				}
+				{
+					icon: "aquamirae:frozen_chest"
+					id: "1B9C9351DF331EBC"
+					observe_type: 0
+					timer: 0L
+					title: "It's yours to claim."
+					to_observe: "aquamirae:frozen_chest"
+					type: "observation"
+				}
+			]
+			title: "Frozen Treasures"
+			x: -1.5d
+			y: -7.5d
+		}
+	]
+	subtitle: ["A lot of boss fights and indestructible tools!"]
+	title: "Age of Combat"
+}

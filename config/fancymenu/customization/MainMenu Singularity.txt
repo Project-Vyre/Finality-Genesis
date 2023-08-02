@@ -249,6 +249,17 @@ customization {
 }
 
 customization {
+  path = config/fancymenu/assets/images/packtitle.png
+  orientation = top-centered
+  x = -225
+  width = 451
+  action = addtexture
+  actionid = 374a68e0-63df-40f9-ad03-a02d5100905b1690412178910
+  y = 1
+  height = 156
+}
+
+customization {
   orientation = top-left
   hidden = false
   x = 346
@@ -272,7 +283,7 @@ customization {
 
 customization {
   orientation = top-left
-  hidden = false
+  hidden = true
   x = 731
   width = 228
   action = deep_customization_element:title_screen_forge_copyright
@@ -321,15 +332,15 @@ customization {
   basecolor = #FFEB8C
   shadow = true
   rotation = 0.0
-  scale = 1.0
+  scale = 2.0
   refresh = true
   bouncing = true
   vanilla-like = true
-  x = -27
+  x = -54
   actionid = 6933b74a-1382-4bf0-9292-fd7ae16d24201679852528355
   action = addsplash
-  y = 120
-  text = Age of Wonders is better!
+  y = 165
+  text = Save the world – stay inside!
 }
 
 customization {
@@ -337,7 +348,7 @@ customization {
   enable_scrolling = true
   shadow = true
   scale = 1.0
-  source = https://raw.githubusercontent.com/Project-Vyre/finality-fm-live/main/index.txt
+  source = https://raw.githubusercontent.com/Project-Vyre/finality-fm-live/main/finality-genesis.txt
   text_border = 0
   case_mode = normal
   source_mode = web
@@ -454,16 +465,5 @@ customization {
   y = -23
   backgroundnormal = config/fancymenu/assets/images/big_buttons.png
   height = 20
-}
-
-customization {
-  path = config/fancymenu/assets/images/packtitle.png
-  orientation = top-centered
-  x = -133
-  width = 266
-  action = addtexture
-  actionid = 78452ab9-99a5-45c3-a693-413c8a4b0d631684574611391
-  y = 13
-  height = 100
 }
 

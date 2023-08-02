@@ -1,7 +1,7 @@
 {
-    "name": "Advice for Players",
+    "name": "Advice for Noobs",
     "icon": "minecraft:writable_book",
-    "category": "patchouli:genesis",
+    "category": "patchouli:genesis/introduction",
     "priority": true,
     "sortnum": 2,
     "pages": [
@@ -19,7 +19,7 @@
         },
         {
             "type": "patchouli:text",
-            "text": "$(li)Iron, copper, gold and diamonds are easily obtainable AND renewable with the presence of Mystical Agriculture. USE THEM!$(li2)You can also find Inferium Essence throughout the Overworld. Get much of it as you can! $(li)Press L (the default keybind for Achievements) to reveal achievements, if you don't already know that."
+            "text": "$(li)Iron, copper, gold and diamonds are easily obtainable AND renewable with the custom recipes in this modpack. USE THEM!$(li2)You can also find Inferium Essence throughout the Overworld. Get much of it as you can! $(li)Press L (the default keybind for Achievements) to reveal achievements, if you don't already know that."
         },
         {
             "type": "patchouli:spotlight",
@@ -29,12 +29,7 @@
         {
             "type": "patchouli:spotlight",
             "item": "morphtool:tool",
-            "text": "This item consolidates all wrenches, very useful."
-        },
-        {
-            "type": "patchouli:spotlight",
-            "item": "akashictome:tome",
-            "text": "This item consolidates all books, very useful. For some people, not so much."
+            "text": "This item consolidates all tools, it is very useful."
         }
     ]
 }

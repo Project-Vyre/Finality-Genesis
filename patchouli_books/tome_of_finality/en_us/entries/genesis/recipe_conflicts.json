@@ -1,7 +1,7 @@
 {
     "name": "Recipe Conflicts",
     "icon": "minecraft:writable_book",
-    "category": "patchouli:genesis",
+    "category": "patchouli:genesis/introduction",
     "priority": true,
     "sortnum": 3,
     "pages": [

@@ -73,4 +73,13 @@ ItemEvents.tooltip(event => {
         text.add(2, Text.of('§6You can now shoot Void Howitzer projectiles which now create a tsunami of void spikes on impact.'))
         text.add(3, Text.of('§5Original tooltip text below for translation purposes. - CelestialAbyss'))
     })
+    event.addAdvanced('cataclysm:tidal_claws', (item, advanced, text) => {
+        text.add(1, Text.of('§6Left click to attack multiple entities with a single tentacle.'))
+        text.add(2, Text.of('§6Right click to use as a grappling hook.'))
+        text.add(3, Text.of('§5Original tooltip text below for translation purposes. - CelestialAbyss'))
+    })
+    event.addAdvanced('cataclysm:abyssal_egg', (item, advanced, text) => {
+        text.add(1, Text.of('§6You emerge as victor, but now you have an egg in your possession.'))
+        text.add(2, Text.of('§6Probably best to make sure you have some tropical fish to feed your adorable Leviathan once it hatches.'))
+    })
 })

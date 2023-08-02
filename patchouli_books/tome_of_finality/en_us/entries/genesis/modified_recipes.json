@@ -1,0 +1,36 @@
+{
+    "name": "Modified Recipes",
+    "icon": "extendedcrafting:basic_table",
+    "category": "patchouli:genesis/introduction",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This entry contains all the modified vanilla Minecraft recipes, for your convenience. This was all done to better integrate Create and ExtendedCrafting."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "minecraft:bucket",
+            "text": "Recipe status: Finalized."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "minecraft:compass",
+            "text": "Recipe status: May revise in the future."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "minecraft:clock",
+            "text": "Recipe status: Unlikely to change in the future."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "minecraft:piston",
+            "text": "Recipe status: Finalized."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "minecraft:beacon",
+            "text": "Recipe status: Finalized."
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 {
     "name": "Introduction to Energy",
-    "icon": "createaddition:modular_accumulator",
-    "category": "patchouli:technology",
+    "icon": "minecraft:command_block",
+    "category": "patchouli:technology/energy_intro",
     "pages": [
         {
             "type": "patchouli:text",
@@ -9,7 +9,7 @@
         },
         {
             "type": "patchouli:text",
-            "text": "The two easiest options for generating FE would be the following blocks: $(li)Alternator (Create Crafts & Additions) $(br2)You can then store this energy with either the Accumulator or a Redstone Flux Cell. $(br2)You can see the items individually over the next few pages."
+            "text": "The two easiest options for generating FE would be the following blocks: $(li)Alternator (Create Crafts & Additions) $(li)Stirling Dynamo (Thermal Series) $(br2)You can then store this energy with either the Accumulator or a Redstone Flux Cell. $(br2)You can see the items individually over the next few pages."
         },
         {
             "type": "patchouli:spotlight",

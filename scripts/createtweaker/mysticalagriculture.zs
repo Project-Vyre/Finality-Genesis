@@ -1,2 +1,0 @@
-import mods.createtweaker.CrushingRecipe;
-<recipetype:create:crushing>.addRecipe("zen_renew_prosperity", [<item:mysticalagriculture:prosperity_shard>, <item:mysticalagriculture:prosperity_seed_base> % 0.009765625], <item:extendedcrafting:ultimate_singularity>, 250);

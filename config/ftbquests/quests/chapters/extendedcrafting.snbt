@@ -687,7 +687,7 @@
 				}
 			]
 			title: "Vanilla Concrete Singularities"
-			x: 5.5d
+			x: 6.5d
 			y: 12.0d
 		}
 		{
@@ -794,7 +794,7 @@
 				}
 			]
 			title: "Create Singularities"
-			x: 7.0d
+			x: 1.5d
 			y: 12.0d
 		}
 		{
@@ -949,7 +949,7 @@
 				}
 			]
 			title: "Vanilla Valuable Singularities"
-			x: 2.5d
+			x: 3.0d
 			y: 12.0d
 		}
 		{
@@ -1056,7 +1056,7 @@
 				}
 			]
 			title: "Vanilla Nature Singularities"
-			x: 4.0d
+			x: 5.0d
 			y: 12.0d
 		}
 		{

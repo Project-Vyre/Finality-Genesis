@@ -86,14 +86,8 @@
     "advanced_auto_table": true,
     "compressor": true
   },
-  "ars_nouveau": {
-    "mob_jar": true
-  },
   "jadeaddons": {
     "equipment_requirement": ""
-  },
-  "projecte": {
-    "emc_provider": true
   },
   "shetiphiancore": {
     "hud.rgb16": true,

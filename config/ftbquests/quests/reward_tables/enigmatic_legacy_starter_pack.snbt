@@ -10,7 +10,7 @@
 		{
 			item: {
 				Count: 1b
-				id: "enigmaticlegacy:architect_eye"
+				id: "enigmaticlegacy:enigmatic_eye"
 				tag: { }
 			}
 		}

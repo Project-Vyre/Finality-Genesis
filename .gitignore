@@ -24,13 +24,16 @@ saves/
 schematics/
 screenshots/
 XaeroWaypoints/
-XaeroWaypoints_BACKUP032021
-XaeroWorldMap
+XaeroWaypoints_BACKUP032021/
+XaeroWorldMap/
+modernfix/
+jei/world/local/
 
 
 # Ignore files
 .curseclient
 .qmenu_opened.marker
+*.log
 imgui.ini
 knownkeys.txt
 minecraftinstance.json
@@ -44,3 +47,4 @@ usernamecache.json
 enigmatic_persistence.dat
 servers.dat
 servers.essential.dat
+bookmark.ini

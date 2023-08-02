@@ -77,6 +77,17 @@
         "value": 10000000
       }
     },
+    "apotheosis:healing_received": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 10,
+        "value": 10
+      }
+    },
     "obscure_api:resilience": {
       "enabled": false,
       "min": {
@@ -154,6 +165,17 @@
         "value": 10000000
       }
     },
+    "apotheosis:prot_pierce": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 34,
+        "value": 34
+      }
+    },
     "obscure_api:magic_resistance": {
       "enabled": false,
       "min": {
@@ -163,6 +185,28 @@
       "max": {
         "default": 100,
         "value": 10000000
+      }
+    },
+    "apotheosis:armor_pierce": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 1000,
+        "value": 1000
+      }
+    },
+    "apotheosis:prot_shred": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 1,
+        "value": 1
       }
     },
     "ars_nouveau:ars_nouveau.perk.saturation": {
@@ -352,6 +396,17 @@
         "value": 10000000
       }
     },
+    "apotheosis:dodge_chance": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 1,
+        "value": 1
+      }
+    },
     "obscure_api:parry": {
       "enabled": false,
       "min": {
@@ -526,6 +581,17 @@
       "max": {
         "default": 1,
         "value": 10000000
+      }
+    },
+    "apotheosis:armor_shred": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2,
+        "value": 2
       }
     },
     "obscure_api:critical_damage": {

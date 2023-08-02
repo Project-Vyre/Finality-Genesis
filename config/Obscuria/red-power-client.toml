@@ -1,0 +1,18 @@
+
+[Graphic]
+	"Render Wires" = true
+	#Range: 32 ~ 512
+	"Render Distance" = 128
+	#Determines the maximum number of segments for each wire.
+	#Decreasing this value will increase performance
+	#Range: 5 ~ 100
+	Quality = 30
+	#Determines the wire render vector.
+	#Doesn't affect performance
+	#Range: 0.0 ~ 10.0
+	"Base Sagging" = 2.0
+	#Determines the wire scale.
+	#Doesn't affect performance
+	#Range: 0.1 ~ 2.0
+	"Base Thickness" = 0.7
+

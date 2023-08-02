@@ -1673,7 +1673,7 @@
 	"Matrix Enchanting" = false
 	Magnets = true
 	Crate = true
-	Backpack = true
+	Backpack = false
 
 	[oddities.totem_of_holding]
 		#Set this to false to remove the behaviour where totems destroy themselves if the player dies again.

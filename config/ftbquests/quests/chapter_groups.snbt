@@ -1,6 +1,5 @@
 {
 	chapter_groups: [
-		{ id: "3C9BBC0C470CAD02", title: "Create" }
 		{ id: "668E3EA3A7A91B79", title: "Useful Utilities" }
 		{ id: "6855847200ADBE3A", title: "The World" }
 		{ id: "2B2D0B6DE31DE8D3", title: "Sustenance" }

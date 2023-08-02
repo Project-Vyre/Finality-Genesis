@@ -106,6 +106,26 @@
 			x: -1.5d
 			y: -1.5d
 		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "328308DEFA3C37CB"
+			subtitle: "You can now make your sentient fireplace into a sentient stovetop. Pretty neat right?"
+			tasks: [{
+				id: "2B84D889789E42AD"
+				item: {
+					Count: 1b
+					ForgeCaps: {
+						Parent: { }
+					}
+					id: "create_central_kitchen:cooking_guide"
+				}
+				type: "item"
+			}]
+			title: "Create the Cooking Guide"
+			x: 0.0d
+			y: 1.5d
+		}
 	]
 	subtitle: ["Yes, Create has food items."]
 	title: "Create Delicacies"
