@@ -181,24 +181,28 @@ ServerEvents.recipes(event => {
         'minecraft:wet_sponge'
     ]).id('finality:sponge_squeezing')
     event.recipes.createCompacting([
-        'minecraft:diamond'
+        'minecraft:diamond',
+        Item.of('create:experience_nugget').withChance(0.05)
     ], [
         Item.of('minecraft:coal_block', 1),
         Fluid.of('minecraft:lava', 250)
     ]).superheated().id('finality:renew_diamond')
     event.recipes.createCompacting([
-        'minecraft:diamond_block'
+        'minecraft:diamond_block',
+        Item.of('create:experience_nugget').withChance(0.25)
     ], [
         Item.of('minecraft:coal_block', 9),
         Fluid.of('minecraft:lava', 250)
     ]).superheated().id('finality:renew_diamond_bulk')
     event.recipes.createCompacting([
-        'minecraft:coal'
+        'minecraft:coal',
+        Item.of('create:experience_nugget').withChance(0.05)
     ], [
         Item.of('minecraft:dried_kelp_block', 1)
     ]).heated().id('finality:renew_coal')
     event.recipes.createCompacting([
-        'minecraft:coal_block'
+        'minecraft:coal_block',
+        Item.of('create:experience_nugget').withChance(0.25)
     ], [
         Item.of('minecraft:dried_kelp_block', 9)
     ]).heated().id('finality:renew_coal_bulk')
@@ -252,6 +256,10 @@ ServerEvents.recipes(event => {
         'minecraft:cobblestone',
         Fluid.of('create:potion', 250, '{Potion: "minecraft:strong_healing"}')
     ]).id('finality:living_flesh_stone')
+    event.recipes.createFilling('minecraft:netherite_ingot', [
+        'minecraft:netherite_scrap',
+        Fluid.of('kubejs:molten_gold', 250)
+    ]).id('minecraft:netherite_ingot')
     // haunting
     event.recipes.createHaunting(['minecraft:deepslate'], 'minecraft:andesite').id('finality:andesite_haunting')
     event.recipes.createHaunting(['minecraft:crying_obsidian'], 'minecraft:obsidian').id('finality:obsidian_haunting')
@@ -262,27 +270,19 @@ ServerEvents.recipes(event => {
     // blasting
     event.blasting('create:zinc_block', 'create:raw_zinc_block').id('finality:zinc_block_blasting_compat')
     // mixing 
-    event.recipes.createMixing([
-        'minecraft:coarse_dirt'
-    ], [
+    event.recipes.createMixing(['minecraft:coarse_dirt'], [
         'minecraft:dirt', 'minecraft:gravel'
     ]).id('finality:coarse_dirt')
-    // Be3Al2(SiO3)6
-    event.recipes.createMixing([
-        'minecraft:emerald'
-    ], [
-        'minecraft:quartz',
-        'minecraft:glass',
-        '3x minecraft:iron_nugget'
-    ]).superheated().id('finality:renew_emerald')
-    // Thank you to FunnyMan4579 on the official Create Discord for giving me this idea :3
-    event.recipes.createMixing([
-        'minecraft:nether_gold_ore'
-    ], [
+    event.recipes.createMixing([Fluid.of('kubejs:molten_gold', 250)], ['minecraft:gold_ingot']).heated().id('finality:gold_ingot_melting')
+    event.recipes.createMixing(['minecraft:netherite_ingot'], [Item.of('minecraft:netherite_scrap', 4), Fluid.of('kubejs:molten_gold', 1000)]).heated().id('finality:netherite_ingot_from_mixing')
+    event.recipes.createMixing(['minecraft:emerald'], [
+        'minecraft:quartz', 'minecraft:glass', '3x minecraft:iron_nugget'
+    ]).superheated().id('finality:renew_emerald') // Be3Al2(SiO3)6
+    event.recipes.createMixing(['minecraft:nether_gold_ore'], [
         'create:cinder_flour',
         '18x minecraft:gold_nugget',
         Fluid.of('minecraft:lava', 250)
-    ]).id('finality:nether_gold_ore_deco')
+    ]).id('finality:nether_gold_ore_deco') // Thank you to FunnyMan4579 on the official Create Discord for giving me this idea :3
 })
 
 ServerEvents.tags('item', event => {
@@ -337,21 +337,33 @@ const set = {
 
 const sets = [set];
 // Need to figure out how to set this up for EntityEvents.hurt()
-PlayerEvents.tick(e => {
-    const { headArmorItem, chestArmorItem, legsArmorItem, feetArmorItem } = e.player;
-    if (e.player.level.time % 100 == 0) {
+PlayerEvents.tick(check => {
+    const { HD, CH, LG, FT } = check.player;
+    if (check.player.level.time % 100 == 0) {
         for (let armorSet in sets) {
-            if (headArmorItem.id === sets[armorSet].name + '_helmet'
-                && chestArmorItem.id === sets[armorSet].name + '_chestplate'
-                && legsArmorItem.id === sets[armorSet].name + '_leggings'
-                && feetArmorItem.id === sets[armorSet].name + '_boots') {
+            if (HD.id === sets[armorSet].name + '_helmet' &&
+                CH.id === sets[armorSet].name + '_chestplate' &&
+                LG.id === sets[armorSet].name + '_leggings' &&
+                FT.id === sets[armorSet].name + '_boots'
+                ) {
                 for (let x in sets[armorSet].effects) {
-                    e.player.potionEffects.add(sets[armorSet].effects[x].effect, sets[armorSet].effects[x].duration, sets[armorSet].effects[x].amplifier);
+                    check.player.potionEffects.add(
+                        sets[armorSet].effects[x].effect,
+                        sets[armorSet].effects[x].duration,
+                        sets[armorSet].effects[x].amplifier
+                    );
                 }
             };
         }
     };
 });
+
+EntityEvents.hurt(event => {
+    if (event.entity.player.headArmorItem('kubejs:final_helmet')) {
+        console.log('69')
+        event.cancel()
+    }
+})
 
 // EntityEvents.hurt(event => {
 //     if (event.entity.player.armorSlots() === 'kubejs:final_helmet' && 'kubejs:final_chestplate' && 'kubejs:final_leggings' && 'kubejs:final_boots') {

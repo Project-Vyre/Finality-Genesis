@@ -79,7 +79,7 @@ StartupEvents.registry('block', event => {
 StartupEvents.registry('fluid', event => {
 	// work in progress .stillTexture('finality:block/still_entropy').flowingTexture('finality:block/flowing_entropy')
 	event.create('kubejs:condensed_universal_entropy').displayName('<rainb>Condensed Universal Entropy</rainb>').thickTexture(0x7800FF).bucketColor(0x7800FF).luminosity(15)
-	event.create('kubejs:molten_gold').displayName('§6 Molten Gold').thickTexture(0xFDF55F).bucketColor(0xFDF55F).luminosity(15).temperature(1000)
+	event.create('kubejs:molten_gold').displayName('§6Molten Gold').thickTexture(0xFDF55F).bucketColor(0xFDF55F).luminosity(15).temperature(2000)
 	event.create('kubejs:inferior_infusion_essence').displayName('§eInferior Infusion Essence§r').thickTexture(0xACCF00).bucketColor(0xACCF00).luminosity(7)
 	event.create('kubejs:supreme_infusion_essence').displayName('§eSupreme Infusion Essence§r').thickTexture(0xFC0000).bucketColor(0xFC0000).luminosity(15)
 })

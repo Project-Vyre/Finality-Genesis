@@ -282,4 +282,19 @@ ServerEvents.recipes(event => {
             R: `create:${insert}`
         }).id(`finality:${insert}singularity`)
     })
+    event.recipes.createSequencedAssembly([
+        Item.of('kubejs:entropy_mechanism').withChance(100.0),
+        Item.of('create:precision_mechanism').withChance(75.0),
+        Item.of('minecraft:netherite_block').withChance(10.0),
+        Item.of('minecraft:crying_obsidian').withChance(10.0),
+        Item.of('minecraft:repeating_command_block').withChance(10.0),
+        'minecraft:grass_block'
+    ], 'create:precision_mechanism', [
+        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:awakened_singularity_core']),
+        event.recipes.createFilling('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', Fluid.of('kubejs:condensed_universal_entropy', 1000)]),
+        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'create:sequenced_gearshift']),
+        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'extendedcrafting:crystaltine_nugget']),
+        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'create:experience_nugget']),
+        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'extendedcrafting:the_ultimate_nugget'])
+    ]).transitionalItem('kubejs:incomplete_entropy_mechanism').loops(512).id('finality:entropy_mechanism_creation')
 })
