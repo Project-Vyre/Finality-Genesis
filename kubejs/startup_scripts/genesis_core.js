@@ -58,6 +58,8 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
 		event.create(`kubejs:incomplete_concrete_${color}_singularity`, 'create:sequenced_assembly').displayName(`§dIncomplete ${DYE[color]} Concrete Singularity`).texture(`kubejs:item/incomplete_singularities/concrete/incomplete_concrete_${color}`).maxStackSize(1)
 	})
 	event.create('kubejs:omnipotent_alloy').texture('kubejs:item/final_ingot').displayName('<rainb>High Entropy Alloy</rainb>').maxStackSize(64).fireResistant(true).group('miscellaneous')
+	event.create('kubejs:incomplete_entropy_mechanism', 'create:sequenced_assembly').displayName('<rainb>Incomplete Entropy Mechanism</rainb>').texture('kubejs:item/incomplete_entropy_mechanism').maxStackSize(1)
+	event.create('kubejs:entropy_mechanism').displayName('<rainb>Entropy Mechanism').texture('kubejs:item/entropy_mechanism').maxStackSize(64)
 	// tools
 	event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_items').displayName('§l<rainb>Particula Eversorem</rainb>').texture('kubejs:item/final_pickaxe').maxStackSize(1).fireResistant(true).group('tools')
 	event.create('kubejs:final_axe', 'axe').tier('final_items').displayName('§l<rainb>Natura Exitium</rainb>').texture('kubejs:item/final_axe').maxStackSize(1).fireResistant(true).group('tools')
