@@ -1,11 +1,27 @@
 // priority: 0
 Platform.mods.kubejs.name = 'Finality'
+
 console.info('Registering Finality items...')
 
-let NATR = ['blue_ice', 'sand', 'coarse_dirt', 'cobblestone']
-let CMAT = ['andesite_alloy', 'zinc', 'copper', 'brass', 'rose_quartz', 'framed_glass', 'precision_mechanism', 'sturdy_sheet', 'track']
 // let DYE = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 // let DISPLAY_COLOR = ['White', 'Orange', 'Magenta', 'Light Blue', 'Lime', 'Pink', 'Purple', 'Light Gray', 'Gray', 'Cyan', 'Brown', 'Green', 'Blue', 'Red', 'Black', 'Yellow']
+let NATR = {
+	blue_ice: 'Blue Ice',
+	sand: 'Sand',
+	coarse_dirt: 'Coarse Dirt',
+	cobblestone: 'Cobblestone'
+}
+let CMAT = {
+	andesite_alloy: 'Andesite Alloy',
+	zinc: 'Zinc',
+	copper: 'Copper',
+	brass: 'Brass',
+	rose_quartz: 'Rose Quartz',
+	framed_glass: 'Framed Glass',
+	precision_mechanism: 'Precision Mechanism',
+	sturdy_sheet: 'Sturdy Sheet',
+	track: 'Track'
+}
 let DYE = {
 	black: 'Black',
 	gray: 'Gray',
@@ -29,57 +45,41 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
 	event.create('kubejs:trident_prong').texture('kubejs:item/trident_prong').maxStackSize(64)
 	event.create('kubejs:construction_core_iron').displayName('§fActivated Construction Iron Core').texture('kubejs:item/construction_iron').maxStackSize(16)
 	event.create('kubejs:construction_core_diamond').displayName('§bActivated Construction Diamond Crystal').texture('kubejs:item/construction_diamond').maxStackSize(16)
-	// minecraft core forgot what was supposed to be here
-	// singularity related
-	event.create('kubejs:dormant_singularity_core').texture('kubejs:item/dormant_singularity_core').maxStackSize(16)
-	event.create('kubejs:awakened_singularity_core').texture('kubejs:item/awakened_singularity_core').maxStackSize(8)
-	/*
-	INCOMPLETE SINGULARITIES
-	for use for making a singularity. dormant core to incomplete core to singularity
-	follow format .create('kubejs:', 'create:sequenced_assembly).displayName().texture().maxStackSize(1)
-	*/
-	NATR.forEach(material => event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').texture(`kubejs:item/incomplete_singularities/nature/incomplete_${material}`).maxStackSize(1))
-	CMAT.forEach(material => event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').texture(`kubejs:item/incomplete_singularities/incomplete_${material}`).maxStackSize(1))
-	Object.keys(DYE).forEach(color => { // replace with Color.DYE.forEach() on 1902+ as the Colors automatically has all 16 MC colors
+	event.create('kubejs:dormant_singularity_core').displayName('§d<shake>Dormant Singularity Core</shake>').texture('kubejs:item/dormant_singularity_core').maxStackSize(16)
+	event.create('kubejs:awakened_singularity_core').displayName('<shake><rainb>Awakened Singularity Core</rainb></shake>').texture('kubejs:item/awakened_singularity_core').maxStackSize(8)
+	Object.keys(NATR).forEach(material => {
+		event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`Incomplete ${NATR[material]}`).texture(`kubejs:item/incomplete_singularities/nature/incomplete_${material}`).maxStackSize(1)
+	})
+	Object.keys(CMAT).forEach(material => {
+		event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`Incomplete ${CMAT[material]}`).texture(`kubejs:item/incomplete_singularities/incomplete_${material}`).maxStackSize(1)
+	})
+	// replace with Color.DYE.forEach() on 1902+ as the Colors automatically has all 16 MC colors
+	Object.keys(DYE).forEach(color => {
 		event.create(`kubejs:incomplete_concrete_${color}_singularity`, 'create:sequenced_assembly').displayName(`§dIncomplete ${DYE[color]} Concrete Singularity`).texture(`kubejs:item/incomplete_singularities/concrete/incomplete_concrete_${color}`).maxStackSize(1)
 	})
-	/*
-	ACTIVATED SINGULARITY CORES
-	follow format .displayName().texture().maxStackSize(1)
-	*/
-	// activated singularity cores
-	// work in progressevent.create('finality:andesite_singularity_core').displayName('Andesite Singularity Core').texture('finality:item/andesite_core').maxStackSize(8)
-	event.create('kubejs:omnipotent_alloy').texture('kubejs:item/final_ingot').displayName('High Entropy Alloy').maxStackSize(64).fireResistant(true).group('miscellaneous')
+	event.create('kubejs:omnipotent_alloy').texture('kubejs:item/final_ingot').displayName('<rainb>High Entropy Alloy</rainb>').maxStackSize(64).fireResistant(true).group('miscellaneous')
 	// tools
-	event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_items').displayName('Particula Eversorem').texture('kubejs:item/final_pickaxe').maxStackSize(1).fireResistant(true).group('tools')
-	event.create('kubejs:final_axe', 'axe').tier('final_items').displayName('Natura Exitium').texture('kubejs:item/final_axe').maxStackSize(1).fireResistant(true).group('tools')
-	event.create('kubejs:final_shovel', 'shovel').tier('final_items').displayName('Terra Confractus').texture('kubejs:item/final_shovel').maxStackSize(1).fireResistant(true).group('tools')
-	event.create('kubejs:final_hoe', 'hoe').tier('final_items').displayName('Agricola Manus').texture('kubejs:item/final_hoe').maxStackSize(1).fireResistant(true).group('tools')
+	event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_items').displayName('§l<rainb>Particula Eversorem</rainb>').texture('kubejs:item/final_pickaxe').maxStackSize(1).fireResistant(true).group('tools')
+	event.create('kubejs:final_axe', 'axe').tier('final_items').displayName('§l<rainb>Natura Exitium</rainb>').texture('kubejs:item/final_axe').maxStackSize(1).fireResistant(true).group('tools')
+	event.create('kubejs:final_shovel', 'shovel').tier('final_items').displayName('§l<rainb>Terra Confractus</rainb>').texture('kubejs:item/final_shovel').maxStackSize(1).fireResistant(true).group('tools')
+	event.create('kubejs:final_hoe', 'hoe').tier('final_items').displayName('§l<rainb>Agricola Manus</rainb>').texture('kubejs:item/final_hoe').maxStackSize(1).fireResistant(true).group('tools')
 	// weapons
-	event.create('kubejs:final_sword', 'sword').tier('final_items').displayName('Corevis Ultimatum').texture('kubejs:item/final_sword').maxStackSize(1).fireResistant(true).group('combat')
+	event.create('kubejs:final_sword', 'sword').tier('final_items').displayName('§l<rainb>Corevis Ultimatum</rainb>').texture('kubejs:item/final_sword').maxStackSize(1).fireResistant(true).group('combat')
 	// armor
-	event.create('kubejs:final_helmet', 'helmet').tier('final_armor').displayName('Conscientia Oculi').texture('kubejs:item/final_helmet').maxStackSize(1).fireResistant(true).group('combat')
-	event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor').displayName('Vitale Cordis').texture('kubejs:item/final_chestplate').maxStackSize(1).fireResistant(true).group('combat')
-	event.create('kubejs:final_leggings', 'leggings').tier('final_armor').displayName('Universum Motus').texture('kubejs:item/final_leggings').maxStackSize(1).fireResistant(true).group('combat')
-	event.create('kubejs:final_boots', 'boots').tier('final_armor').displayName('Gravitas Anchoram').texture('kubejs:item/final_boots').maxStackSize(1).fireResistant(true).group('combat')
+	event.create('kubejs:final_helmet', 'helmet').tier('final_armor').displayName('§l<rainb>Conscientia Oculi</rainb>').texture('kubejs:item/final_helmet').maxStackSize(1).fireResistant(true).group('combat')
+	event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor').displayName('§l<rainb>Vitale Cordis</rainb>').texture('kubejs:item/final_chestplate').maxStackSize(1).fireResistant(true).group('combat')
+	event.create('kubejs:final_leggings', 'leggings').tier('final_armor').displayName('§l<rainb>Universum Motus</rainb>').texture('kubejs:item/final_leggings').maxStackSize(1).fireResistant(true).group('combat')
+	event.create('kubejs:final_boots', 'boots').tier('final_armor').displayName('§l<rainb>Gravitas Anchoram</rainb>').texture('kubejs:item/final_boots').maxStackSize(1).fireResistant(true).group('combat')
 })
 StartupEvents.registry('block', event => { 
 	// Register new blocks here event.create('example_block').material('wood').hardness(1.0).displayName('Example Block')
 })
 StartupEvents.registry('fluid', event => {
-	event.create('kubejs:condensed_universal_entropy')
-		.displayName('§dCondensed Universal Entropy')
-		.thickTexture(0x7800FF)
-		.bucketColor(0x7800FF)
-		.luminosity(14) // work in progress .stillTexture('finality:block/still_entropy').flowingTexture('finality:block/flowing_entropy')
-	event.create('kubejs:inferior_infusion_essence')
-		.displayName('§eInferior Infusion Essence')
-		.thickTexture(0xACCF00)
-		.bucketColor(0xACCF00)
-	event.create('kubejs:supreme_infusion_essence')
-		.displayName('§eSupreme Infusion Essence')
-		.thickTexture(0xFC0000)
-		.bucketColor(0xFC0000)
+	// work in progress .stillTexture('finality:block/still_entropy').flowingTexture('finality:block/flowing_entropy')
+	event.create('kubejs:condensed_universal_entropy').displayName('<rainb>Condensed Universal Entropy</rainb>').thickTexture(0x7800FF).bucketColor(0x7800FF).luminosity(15)
+	event.create('kubejs:molten_gold').displayName('§6 Molten Gold').thickTexture(0xFDF55F).bucketColor(0xFDF55F).luminosity(15).temperature(1000)
+	event.create('kubejs:inferior_infusion_essence').displayName('§eInferior Infusion Essence§r').thickTexture(0xACCF00).bucketColor(0xACCF00).luminosity(7)
+	event.create('kubejs:supreme_infusion_essence').displayName('§eSupreme Infusion Essence§r').thickTexture(0xFC0000).bucketColor(0xFC0000).luminosity(15)
 })
 // tiers
 ItemEvents.toolTierRegistry(event => {
@@ -126,6 +126,9 @@ ItemEvents.modification(event => {
     TOOLS.forEach(tool => event.modify(`netherite_${tool}`, item => {
         item.maxDamage = 2048
     }))
+	event.modify('eccentrictome:tome', item => {
+		item.fireResistant = true
+	})
     // Armor durability is synchronized because it does not make sense as to why armor pieces have different durabilities.
     ARMOR.forEach(armor => event.modify(`leather_${armor}`, item => {
         item.maxDamage = 128
