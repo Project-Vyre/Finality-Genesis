@@ -42,7 +42,7 @@ ServerEvents.recipes(event => {
         C: 'extendedcrafting:the_ultimate_catalyst',
         S: 'create:sturdy_sheet',
         U: 'extendedcrafting:ultimate_singularity',
-        P: 'create:precision_mechanism',
+        P: 'kubejs:entropy_mechanism',
         I: 'extendedcrafting:the_ultimate_ingot'
     }).id('finality:create_worldshaper')
     // modified vanilla recipes 
