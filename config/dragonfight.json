@@ -5,7 +5,7 @@
   },
   "crystalRespawnTimeModifier": {
     "desc:": "Modifies crystal respawn time, 0.5 = spawns twice as fast, 2 = twice as slow. default:1.0",
-    "crystalRespawnTimeModifier": 1.0
+    "crystalRespawnTimeModifier": 2.0
   },
   "lightningExplosionDensity": {
     "desc:": "Modifies lightning and explosion density, 0.5 = half as many, 2 = twice as many. default:1.0",
@@ -38,7 +38,7 @@
   "spawnwhilelanded": {
     "desc:": "List of mobs spawning while the dragon is sitting in the middle, intended to be melee and not vulnerable to ranged: e.g. format :  [\"minecraft:zombie\", \"minecraft:creeper\"]",
     "spawnwhilelanded": [
-      "minecraft:enderman", "grimoireofgaia:banshee", "graveyard:nightmare"
+      "minecraft:enderman", "grimoireofgaia:banshee", "graveyard:nightmare", "grimoireofgaia:wither_cow", "grimoireofgaia:spriggan"
     ]
   }
 }
