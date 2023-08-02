@@ -4,8 +4,8 @@
 	filename: "cataclysm"
 	group: ""
 	icon: "cataclysm:altar_of_fire"
-	id: "6ED1DF743B23E2FA"
-	order_index: 4
+	id: "44955FEF08EBF071"
+	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
@@ -18,13 +18,13 @@
 					Damage: 0
 				}
 			}
-			id: "6599BD613713C717"
+			id: "64BA40D2E7AEA557"
 			shape: "square"
 			subtitle: "Defeat the Netherite Monstrosity and acquire the Infernal Forge."
 			tasks: [
 				{
 					icon: "minecraft:map"
-					id: "412C7BB8516A9817"
+					id: "5A7FC957A3598262"
 					structure: "cataclysm:soul_black_smith"
 					type: "structure"
 				}
@@ -37,7 +37,7 @@
 							Damage: 0
 						}
 					}
-					id: "05921BBAD0365144"
+					id: "374265EEE77EF98A"
 					type: "kill"
 					value: 1L
 				}
@@ -50,11 +50,11 @@
 			dependencies: ["54378BE3AEDD91A3"]
 			hide: true
 			icon: "minecraft:netherrack"
-			id: "302DFD81E3896451"
+			id: "60980DE71E4A4AE5"
 			shape: "square"
 			tasks: [{
 				dimension: "minecraft:the_nether"
-				id: "27FF2CDDDE56553B"
+				id: "45F025CD8082443F"
 				type: "dimension"
 			}]
 			title: "Visit the Nether"
@@ -65,11 +65,11 @@
 			dependencies: ["64BA40D2E7AEA557"]
 			description: ["Choose a reward afterwards, just to make it easier for you."]
 			icon: "cataclysm:the_incinerator"
-			id: "44688F0BBF9E059A"
+			id: "133B009011D05C41"
 			rewards: [{
 				exclude_from_claim_all: true
 				icon: "cataclysm:ignitium_ingot"
-				id: "2A494675C56A0B38"
+				id: "2E2B7831ECF3B1F0"
 				table_id: 8134379311085213745L
 				type: "choice"
 			}]
@@ -77,20 +77,20 @@
 			subtitle: "Defeat Ignis."
 			tasks: [
 				{
-					id: "6618ED5D563E88C9"
+					id: "1F4211FE4CACED2F"
 					structure: "cataclysm:burning_arena"
 					type: "structure"
 				}
 				{
 					entity: "cataclysm:ignis"
 					icon: "cataclysm:the_incinerator"
-					id: "4E65FB9F3FD0915B"
+					id: "1D0CC36DB1778C3E"
 					type: "kill"
 					value: 1L
 				}
 				{
 					count: 3L
-					id: "6F2205889EF435D6"
+					id: "6AF86BF264049062"
 					item: "cataclysm:ignitium_ingot"
 					type: "item"
 				}
@@ -103,11 +103,11 @@
 			dependencies: ["54378BE3AEDD91A3"]
 			hide: true
 			icon: "minecraft:end_portal_frame"
-			id: "722763B8DB32F068"
+			id: "1A028F6237ABDEAC"
 			shape: "square"
 			tasks: [{
 				dimension: "minecraft:the_end"
-				id: "21ACD04E0B57A897"
+				id: "2F2F53C75FF1DEC2"
 				type: "dimension"
 			}]
 			title: "Visit the End"
@@ -117,18 +117,18 @@
 		{
 			dependencies: ["3CAA949A0C1A688A"]
 			icon: "cataclysm:gauntlet_of_guard"
-			id: "2FEDD9A2F80CFF34"
+			id: "718AC83467E9FB0F"
 			shape: "square"
 			subtitle: "Win the battle and earn the Gauntlet of Guard."
 			tasks: [
 				{
 					icon: "minecraft:map"
-					id: "214E3ED92F0EA50D"
+					id: "50367CB432DA8705"
 					structure: "cataclysm:ruined_citadel"
 					type: "structure"
 				}
 				{
-					id: "2F9F5D75662DBC07"
+					id: "2F4E862B622B316B"
 					item: "cataclysm:gauntlet_of_guard"
 					type: "item"
 				}
@@ -141,11 +141,11 @@
 			dependencies: ["54378BE3AEDD91A3"]
 			hide: true
 			icon: "minecraft:nether_star"
-			id: "45509B2203BE42FD"
+			id: "0747981239EC0227"
 			shape: "square"
 			subtitle: "It needs a heart of power to be activated."
 			tasks: [{
-				id: "6883863F5B7E4FD2"
+				id: "21ECB42B533B1FD7"
 				item: "minecraft:nether_star"
 				type: "item"
 			}]
@@ -156,19 +156,19 @@
 		{
 			dependencies: ["0747981239EC0227"]
 			icon: "minecraft:deepslate_bricks"
-			id: "23B1B9D3DF866473"
+			id: "656C306BB7FF0758"
 			shape: "square"
 			subtitle: "Give the Harbinger its heart, then prepare for the worst."
 			tasks: [
 				{
 					icon: "cataclysm:emp"
-					id: "510EBCF2EC3304EB"
+					id: "71997328F6DFED11"
 					structure: "cataclysm:ancient_factory"
 					type: "structure"
 				}
 				{
 					icon: "extendedcrafting:flux_star"
-					id: "66F4A8A221084DB4"
+					id: "4878248FE14BB992"
 					observe_type: 5
 					timer: 0L
 					title: "Find the Harbinger"
@@ -176,7 +176,7 @@
 					type: "observation"
 				}
 				{
-					id: "4E0C742D2FD85C41"
+					id: "4F974AC0C8A4B0CD"
 					item: "cataclysm:wither_assault_shoulder_weapon"
 					type: "item"
 				}
@@ -188,18 +188,18 @@
 		{
 			dependencies: ["1A028F6237ABDEAC"]
 			icon: "cataclysm:void_core"
-			id: "0270D99A6FF239FD"
+			id: "3CAA949A0C1A688A"
 			shape: "square"
 			subtitle: "Acquire the Void Core while you are still there."
 			tasks: [
 				{
 					icon: "minecraft:map"
-					id: "78DC4209CB28E740"
+					id: "21C33F64C6E59917"
 					structure: "cataclysm:ruined_citadel"
 					type: "structure"
 				}
 				{
-					id: "64BBEDAACA51283D"
+					id: "1762BC34A7A087F4"
 					item: "cataclysm:void_core"
 					type: "item"
 				}
@@ -210,11 +210,11 @@
 		}
 		{
 			dependencies: ["656C306BB7FF0758"]
-			id: "4311D2FECD71B1E2"
+			id: "6F799476F9E6E69A"
 			shape: "square"
 			subtitle: "Now bring harmony between your tools of destruction."
 			tasks: [{
-				id: "7735260F18B8901E"
+				id: "37DAC70D45F38E35"
 				item: "cataclysm:mechanical_fusion_anvil"
 				type: "item"
 			}]
@@ -224,10 +224,10 @@
 		}
 		{
 			dependencies: ["6F799476F9E6E69A"]
-			id: "1FDCBF047DDB4874"
+			id: "458D846250812A82"
 			shape: "square"
 			tasks: [{
-				id: "276C6501D5627381"
+				id: "4EC290963C93788D"
 				item: {
 					Count: 1b
 					id: "cataclysm:void_forge"
@@ -242,10 +242,10 @@
 		}
 		{
 			dependencies: ["6F799476F9E6E69A"]
-			id: "1BFA3AF0EEEEE598"
+			id: "2DA38B93D5B1B658"
 			shape: "square"
 			tasks: [{
-				id: "70F2D4588D66AF3F"
+				id: "220340EF1CB9034E"
 				item: "cataclysm:gauntlet_of_bulwark"
 				type: "item"
 			}]
@@ -254,10 +254,10 @@
 		}
 		{
 			dependencies: ["6F799476F9E6E69A"]
-			id: "59769A4FB59EAA7A"
+			id: "5860DCD8D31E9DEA"
 			shape: "square"
 			tasks: [{
-				id: "7E7B822DF3A00D2D"
+				id: "67FF31CFCA37B51D"
 				item: "cataclysm:void_assault_shoulder_weapon"
 				type: "item"
 			}]
@@ -270,11 +270,11 @@
 				"5335BF00DB2A8CCE"
 			]
 			hide: true
-			id: "40F4450F161CD48C"
+			id: "4179D9074E74A11B"
 			shape: "square"
 			tasks: [{
 				icon: "cataclysm:chiseled_stone_brick_pillar"
-				id: "65AFAB6325AB083E"
+				id: "39FD9536C33D32DA"
 				structure: "cataclysm:sunken_city"
 				title: "Locate the Sunken City"
 				type: "structure"
@@ -286,11 +286,11 @@
 			dependencies: ["54378BE3AEDD91A3"]
 			description: ["&d&lYou have been warned.&r&r"]
 			hide: true
-			id: "7FED8FA30975DA47"
+			id: "5335BF00DB2A8CCE"
 			shape: "square"
 			subtitle: "Come prepared, or face certain death."
 			tasks: [{
-				id: "6D93B14D3DB8E8C6"
+				id: "674414D33A9EEC90"
 				item: "cataclysm:abyssal_sacrifice"
 				type: "item"
 			}]
@@ -301,12 +301,12 @@
 		{
 			dependencies: ["4179D9074E74A11B"]
 			description: ["&d&lI did tell you to come prepared both for the altar activation AND a boss fight of your life.&r&r"]
-			id: "7E8E4EC69E82C803"
+			id: "2FB0CBAD2F6C47FC"
 			shape: "square"
 			subtitle: "Remember that Abyssal Sacrifice?"
 			tasks: [{
 				icon: "cataclysm:altar_of_abyss"
-				id: "146E07A321A1B116"
+				id: "3A27F9EDD9160283"
 				observe_type: 0
 				timer: 0L
 				title: "Summon the Leviathan..."
@@ -324,17 +324,17 @@
 				"Please try to protect it at all costs ;-;"
 			]
 			icon: "cataclysm:tidal_claws"
-			id: "7C6DA089C84E2DC5"
+			id: "7B41C8C1C7837774"
 			shape: "square"
 			subtitle: "Also, you now have a baby leviathan in your possession now."
 			tasks: [
 				{
-					id: "57EA526FB6024A92"
+					id: "77FAD21A4E3989F4"
 					item: "cataclysm:tidal_claws"
 					type: "item"
 				}
 				{
-					id: "3522989A3CD0DE4F"
+					id: "72EB65397C97EBE9"
 					item: "cataclysm:abyssal_egg"
 					type: "item"
 				}
@@ -353,12 +353,12 @@
 				"The water is also pretty cold, so take that into consideration."
 			]
 			icon: "aquamirae:ship_graveyard_echo"
-			id: "6BD66CC5885A9B78"
+			id: "1F272782D97392B4"
 			subtitle: "Something new lurks in the deep."
 			tasks: [{
 				biome: "minecraft:deep_frozen_ocean"
 				icon: "minecraft:packed_ice"
-				id: "70EE210513AF47A6"
+				id: "6D3CFB6CF95E34F5"
 				title: "Suit up."
 				type: "biome"
 			}]
@@ -382,11 +382,11 @@
 					Damage: 0
 				}
 			}
-			id: "321D8EBD9A8CFADA"
+			id: "6F037916B715DB4A"
 			subtitle: "Darkness, corruption, death."
 			tasks: [
 				{
-					id: "0AE4C98F365D6176"
+					id: "711F57784616066C"
 					item: {
 						Count: 1b
 						id: "graveyard:bone_dagger"
@@ -397,7 +397,7 @@
 					type: "item"
 				}
 				{
-					id: "4EDB0CD03389EDAF"
+					id: "68549626B02A5A9A"
 					item: "minecraft:glass_bottle"
 					type: "item"
 				}
@@ -408,10 +408,10 @@
 		}
 		{
 			dependencies: ["13186E7B0D6B6115"]
-			id: "7FC2A82BDC1AC782"
+			id: "54378BE3AEDD91A3"
 			subtitle: "Might want some preparation first."
 			tasks: [{
-				id: "77A8ED49D424F8A5"
+				id: "622A03DC3FD49769"
 				title: "Are you ready?"
 				type: "checkmark"
 			}]
@@ -420,12 +420,12 @@
 		}
 		{
 			dependencies: ["1F272782D97392B4"]
-			id: "45956AC5BD333EDF"
+			id: "1827BFE975828E04"
 			subtitle: "You feel vibrations under the ice..."
 			tasks: [{
 				entity: "aquamirae:maze_mother"
 				icon: "aquamirae:abyssal_amethyst"
-				id: "621BACC400F76C0F"
+				id: "6C581B3A0CC0D3CF"
 				title: "Kill the Mother of the Maze."
 				type: "kill"
 				value: 1L
@@ -441,10 +441,10 @@
 				""
 				"It is the one of the few weapons that can actually defeat her and put an end to her suffering."
 			]
-			id: "3D620B546BACE640"
+			id: "2585B4FAFCED0F46"
 			subtitle: "The curse of immortality."
 			tasks: [{
-				id: "5B8E62168604AAE5"
+				id: "7019C49A5665F93A"
 				item: {
 					Count: 1b
 					id: "aquamirae:terrible_sword"
@@ -460,10 +460,10 @@
 		}
 		{
 			dependencies: ["2585B4FAFCED0F46"]
-			id: "2E5FFAE7E57772A3"
+			id: "5A2CC1979870B934"
 			subtitle: "With the sound of the horn, Captain Cornelia appears."
 			tasks: [{
-				id: "659CE69B3CFFF20A"
+				id: "599B259962BE460E"
 				item: "aquamirae:shell_horn"
 				type: "item"
 			}]
@@ -472,10 +472,10 @@
 		}
 		{
 			dependencies: ["6F037916B715DB4A"]
-			id: "0D7E75A0069891C2"
+			id: "50A418AC861A047A"
 			subtitle: "<shake>Good...</shake>"
 			tasks: [{
-				id: "7CD923B90914C9F1"
+				id: "6EDB30B985968A28"
 				item: "graveyard:vial_of_blood"
 				type: "item"
 			}]
@@ -493,21 +493,21 @@
 				""
 				"You will need to find the three bone staff pieces from a special structure."
 			]
-			id: "1D3753AE98C83028"
+			id: "5AE1F898C6178F11"
 			subtitle: "More whispers in your ear..."
 			tasks: [
 				{
-					id: "21FE1D51AD532CAF"
+					id: "4F1F5ADC79DFD998"
 					item: "graveyard:upper_bone_staff"
 					type: "item"
 				}
 				{
-					id: "786C58BFE1CBEE47"
+					id: "56A9FB3A2DBD88E2"
 					item: "graveyard:middle_bone_staff"
 					type: "item"
 				}
 				{
-					id: "40D5B4BAE9508178"
+					id: "1B04D93B8E788FB3"
 					item: "graveyard:lower_bone_staff"
 					type: "item"
 				}
@@ -525,11 +525,11 @@
 				""
 				"The bone staff you recieve shall serve you for eternity."
 			]
-			id: "27A1582FFB974EFE"
+			id: "658C5775199D9B27"
 			subtitle: "Good luck."
 			tasks: [{
 				icon: "graveyard:altar"
-				id: "3A8AF8A7914135E9"
+				id: "701870952F2664C9"
 				observe_type: 0
 				timer: 0L
 				to_observe: "minecraft:bedrock"
@@ -541,17 +541,17 @@
 		}
 		{
 			dependencies: ["658C5775199D9B27"]
-			id: "446A1261417EFE12"
+			id: "3C13DBF4676EC6A7"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "5BCBBBA1B70DDBA0"
+				id: "290ADDC4BCCF82CD"
 				table_id: 103743719166323827L
 				type: "random"
 			}]
 			subtitle: "It is too late to turn back now."
 			tasks: [{
 				icon: "graveyard:skeleton_hand"
-				id: "47C7D353DBAF8E9B"
+				id: "39E76B1BE77A926D"
 				observe_type: 5
 				timer: 0L
 				to_observe: "graveyard:lich"
@@ -565,23 +565,23 @@
 			dependencies: ["5A2CC1979870B934"]
 			description: ["Next thing to do is to find a Frozen Chest."]
 			icon: "aquamirae:frozen_key"
-			id: "3EE6905A3F2643CA"
+			id: "6EE87D9FBE754FED"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "10619378C924F347"
+				id: "63918631BB8D7B04"
 				table_id: 103743719166323827L
 				type: "random"
 			}]
 			subtitle: "You have acquired the Frozen Key, congratulations."
 			tasks: [
 				{
-					id: "3365F471CE052E41"
+					id: "7F260BFFEC214A47"
 					item: "aquamirae:frozen_key"
 					type: "item"
 				}
 				{
 					icon: "aquamirae:frozen_chest"
-					id: "51A23B7BB154B02D"
+					id: "1B9C9351DF331EBC"
 					observe_type: 0
 					timer: 0L
 					title: "It's yours to claim."

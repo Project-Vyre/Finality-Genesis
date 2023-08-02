@@ -136,6 +136,7 @@
 			y: -7.0d
 		}
 		{
+			dependencies: ["123D0E0F69B73A88"]
 			id: "20A1026E727547FE"
 			tasks: [{
 				id: "237E1F6A414719EF"
@@ -146,6 +147,7 @@
 			y: -5.0d
 		}
 		{
+			dependencies: ["20A1026E727547FE"]
 			id: "53850BE8EF49D0AF"
 			tasks: [{
 				id: "362078F1C8534BB7"
@@ -154,6 +156,23 @@
 			}]
 			x: 0.0d
 			y: -3.5d
+		}
+		{
+			dependencies: ["6441CF7A7EB2A425"]
+			id: "17243E628EAA6146"
+			tasks: [{
+				id: "15FFA94B3269F3B7"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:coarse_dirt"
+					}
+				}
+				type: "item"
+			}]
+			x: 6.960544217687072d
+			y: -18.109863945578248d
 		}
 	]
 	title: "Epilogue"

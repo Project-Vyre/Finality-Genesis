@@ -472,68 +472,6 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["65FC712C5D7E312D"]
-			description: [
-				"So you made your very first &7Andesite Alloy&r ingot, what do you do now?"
-				""
-				"Make another &7Andesite Alloy&r and make a Shaft and get some planks and make a &3Water Wheel&r."
-				""
-				"&3Water Wheels&r are Create's &aearly game&r power source and will help you get started."
-				""
-				"If you are wondering how to make &7Andesite Casing&r, it's a simple task... Simply &6right click&r a &l&9stripped log&r&r with an &7Andesite Alloy&r in your hand."
-				""
-				"&7Andesite Casing&r is extremely useful and is an important ingredient for many of Create's items, so be sure to always have spares!"
-			]
-			icon: "create:water_wheel"
-			id: "4D2C0C096BDDDBDC"
-			shape: "rsquare"
-			subtitle: "What do I do now?"
-			tasks: [
-				{
-					id: "738DBA7337E8F0C3"
-					item: "create:shaft"
-					type: "item"
-				}
-				{
-					id: "13993AEFDDD9F08B"
-					item: "create:water_wheel"
-					type: "item"
-				}
-				{
-					id: "327A7CA344B94EE1"
-					item: "create:andesite_casing"
-					type: "item"
-				}
-				{
-					id: "199424675C00AD0E"
-					title: "Ready to proceed? Click me to confirm."
-					type: "checkmark"
-				}
-			]
-			title: "Introduction to Create Ch.2"
-			x: 0.0d
-			y: 4.5d
-		}
-		{
-			dependencies: ["4D2C0C096BDDDBDC"]
-			description: [
-				"The Mechanical Press has a very involved crafting tree, so please refer to the &l&6Age of Creation&r chapter on the &bleft hand side&r in the quests drawer. "
-				""
-				"There's a small white arrow on the very edge of your screen if you have not seen it already."
-				""
-				"-+-"
-				""
-				"This concludes the introduction to Create."
-			]
-			icon: "create:mechanical_press"
-			id: "5AFC2DD137BD9CEE"
-			shape: "rsquare"
-			subtitle: "The Mechanical Press is a very useful item, trust me on this."
-			title: "Introduction to Create Ch.3"
-			x: 0.0d
-			y: 6.0d
-		}
-		{
 			dependencies: ["03F919758AA7E318"]
 			description: ["Once you complete this quest, a chapter page will be unlocked."]
 			icon: {
@@ -631,6 +569,7 @@
 				""
 				"Netherite is also now renewable with the use of Crushing Wheels."
 			]
+			hide: true
 			hide_dependency_lines: true
 			icon: "minecraft:coal_block"
 			id: "0B185A46D4C2A558"
