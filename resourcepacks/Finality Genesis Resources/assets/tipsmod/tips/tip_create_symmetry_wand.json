@@ -1,0 +1,16 @@
+{
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "create"
+        }
+    ],
+    "title": {
+        "text": "Create Tip",
+        "bold": true,
+        "color": "gold"
+  },
+  "tip": {
+    "text": "The Wand of Symmetry is multi-purpose! You can use it to build your structures symmetrically with any of the options or quickly excavate an area with the Octagonal setting. Just keep in mind the more blocks that are broken at a time, the quicker your tool durability is used up."
+  }
+}
