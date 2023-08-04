@@ -1,0 +1,11 @@
+{
+  "name": "Red Sand",
+  "colors": [
+    "d97b30",
+    "ac5712"
+  ],
+  "ingredient": {
+    "item": "minecraft:red_sand"
+  },
+  "materialCount": 16384
+}
