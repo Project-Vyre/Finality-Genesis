@@ -74,9 +74,13 @@
 		}
 		{
 			dependencies: ["53850BE8EF49D0AF"]
-			description: ["Shaping the world, forever."]
+			description: [
+				"At last, you have reached enlightenment. However, a question remains as you look at the recipe."
+				""
+				"Where do you get the command blocks? Well, they're an unintended side effect as the result of breaking the game's rules soooo yeah."
+			]
 			id: "01A8004472B9F446"
-			subtitle: "At last, you have reached enlightenment."
+			subtitle: "Shaping the world, forever."
 			tasks: [{
 				id: "716C4AAB2675A2FC"
 				item: "create:handheld_worldshaper"

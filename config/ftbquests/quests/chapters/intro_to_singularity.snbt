@@ -403,6 +403,11 @@
 					title: "The omni-directional teleportation rod!"
 					type: "item"
 				}
+				{
+					id: "1BDA8E7D4D6D138E"
+					item: "torchmaster:megatorch"
+					type: "item"
+				}
 			]
 			title: "Convenient Utilities Ch.3"
 			x: -3.0d
@@ -661,6 +666,44 @@
 			title: "A Heads Up: Infinite Materials"
 			x: 1.5d
 			y: -1.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			hide_dependency_lines: true
+			id: "4843FF760BED67F6"
+			rewards: [{
+				id: "02616E76E4F48105"
+				item: "pickletweaks:diamond_apple"
+				type: "item"
+			}]
+			shape: "rsquare"
+			subtitle: "Like the menu music? Well, now they are here."
+			tasks: [
+				{
+					id: "4732ED31EBC116AD"
+					item: "minecraft:music_disc_chirp"
+					type: "item"
+				}
+				{
+					id: "530BC0BAFD50D8EA"
+					item: "minecraft:music_disc_5"
+					type: "item"
+				}
+				{
+					id: "680DBF9C531E0997"
+					item: "minecraft:music_disc_11"
+					type: "item"
+				}
+				{
+					id: "6E40E0580F9E273D"
+					item: "minecraft:music_disc_13"
+					type: "item"
+				}
+			]
+			title: "Menu Music Discs"
+			x: 0.0d
+			y: 4.5d
 		}
 	]
 	subtitle: ["This chapter serves both as an introduction and some awareness of utilities."]

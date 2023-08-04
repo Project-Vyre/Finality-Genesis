@@ -333,28 +333,33 @@ const set = {
     "effects": [
         {
             "effect": "saturation",
-            "duration": 999,
+            "duration": 400,
             "amplifier": 255
         },
         {
             "effect": "haste",
-            "duration": 999,
+            "duration": 400,
             "amplifier": 2
         },
         {
             "effect": "strength",
-            "duration": 999,
+            "duration": 400,
             "amplifier": 255
         },
         {
             "effect": "speed",
-            "duration": 999,
-            "amplifier": 255
+            "duration": 400,
+            "amplifier": 3
         },
         {
             "effect": "jump_boost",
-            "duration": 999,
+            "duration": 400,
             "amplifier": 3
+        },
+        {
+            "effect": "luck",
+            "duration": 400,
+            "amplifier": 5
         }
     ]
 }
