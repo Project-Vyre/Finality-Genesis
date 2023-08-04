@@ -14,9 +14,9 @@ customization {
 }
 
 customization {
-  [loading_requirement:fancymenu_loading_requirement_is_world_loaded][requirement_mode:if_not][req_id:3380d618-918e-4135-b887-d8e469df2bf61682981914659] = 
   orientation = mid-centered
-  channel = music
+  [loading_requirement:fancymenu_loading_requirement_is_world_loaded][requirement_mode:if_not][req_id:ac8ea68e-9b00-41c4-8719-d80121251b501691181789776] = 
+  channel = record
   audio_source:c6494a00-af0d-4660-918b-d698dddd96101682981602154 = resourcepacks/Finality Genesis Resources/assets/minecraft/sounds/music/menu/menu3.ogg;EXTERNAL_LOCAL;100;0
   audio_source:6bfdbf5c-9d60-4ea1-91b6-82a425709a0e1682981595973 = resourcepacks/Finality Genesis Resources/assets/minecraft/sounds/music/menu/menu2.ogg;EXTERNAL_LOCAL;100;0
   audio_source:7fb0b7d8-d60e-4038-8b13-1b2ae5eab72e1682981574935 = resourcepacks/Finality Genesis Resources/assets/minecraft/sounds/music/menu/menu1.ogg;EXTERNAL_LOCAL;100;0

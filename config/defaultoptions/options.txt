@@ -33,7 +33,7 @@ guiScale:2
 particles:0
 maxFps:260
 graphicsMode:1
-ao:2
+ao:1
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:"true"
@@ -77,7 +77,7 @@ showAutosaveIndicator:true
 allowServerListing:true
 chatPreview:1
 onlyShowSecureChat:false
-soundCategory_master:0.5066225
+soundCategory_master:0.50165564
 soundCategory_music:0.25704226
 soundCategory_record:1.0
 soundCategory_weather:0.75352114
