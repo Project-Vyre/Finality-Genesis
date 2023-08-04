@@ -28,9 +28,21 @@
 				""
 				"The rest of the chapters can be accessed after you click the checkmark here and move your cursor to the left edge of your screen."
 				""
+				"Also, take the time now to SET YOUR KEYBINDS, only if you want to."
+				""
+				"If you are playing with friends, please do not forget to make a party with FTB Teams! Press E to open your inventory and look for three person figures on the top left corner."
+				""
+				"This modpack is not complete, but the end goal is reachable."
+				""
+				"{@pagebreak}"
+				""
+				"Thinking of no longer using Patchouli for the guide book..."
+				""
+				"-+-"
+				""
 				"If you lose the &5Tome of Finality&r, it is reclaimable from Emergency Items (broken heart icon) on the right. You can also craft the guidebook with two sticks!"
 				""
-				"Also, take the time now to SET YOUR KEYBINDS, only if you want to."
+				"However, the book is not finished and won't be for a while. There is some info that isn't present in FTB Quests, however."
 			]
 			icon: {
 				Count: 1b
@@ -172,7 +184,15 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			description: ["You're welcome~"]
+			description: [
+				"You're welcome~"
+				""
+				"Another thing, I have added Apotheosis gem crushing with Create's Millstone and Crushing Wheels, so have fun with making the most over powered tools to ever exist with it. Gem dust galore!"
+				""
+				"Let's just say my friends during playtesting showed me a shovel that he made deleting entire chunks to prove this fact."
+				""
+				"If you are questioning the chanced drops, it's actually because Create assigns a percent to each item in the item stack."
+			]
 			hide: true
 			id: "5693356D2578CF5E"
 			rewards: [{
@@ -336,11 +356,29 @@
 		{
 			dependencies: ["2EF808209CCECE6A"]
 			description: [
-				"Travel Anchors are very versatile and provide instantaneous travel in any direction with the Travel Staff."
+				"About Tempad:"
 				""
-				"Think of the Tempad device as a personal waystone with a cooldown. It is very effective and customizable as well!"
+				"Think of the &dTempad&r device as a personal waystone with a cooldown. It is very effective and customizable as well!"
 				""
 				"This quest also has a hidden step, but it requires you to get to The End first."
+				""
+				"{@pagebreak}"
+				""
+				"About Travel Anchors:"
+				""
+				"Teleporter elevators, but omni-directional!"
+				""
+				"&3Travel Anchors&r are very versatile and provide instantaneous travel in any direction with the &3Travel Staff&r. "
+				""
+				"They are also more reasonably priced compared to OpenBlocks Elevator which use just wool and an ender pearl in the middle."
+				""
+				"You can also get the Teleportation enchantment which allows you to utilize your tools as a &3Travel Staff&r."
+				""
+				"If you want to increase the range, get the Range enchantment. Just make sure the enchanted book has the Travel Anchors mod ID."
+				""
+				"-+-"
+				""
+				"To unlock the Travel Anchor to rename it, use a stick!"
 			]
 			icon: "tempad:tempad"
 			id: "5E5E9241EB84A4E9"
@@ -356,16 +394,13 @@
 				{
 					id: "555201282747EC85"
 					item: "travelanchors:travel_anchor"
+					title: "This is the Travel Anchor. You can name it too!"
 					type: "item"
 				}
 				{
 					id: "447EE71ED57A4615"
 					item: "travelanchors:travel_staff"
-					type: "item"
-				}
-				{
-					id: "1BFC7D3D442BB60F"
-					item: "waystones:waystone"
+					title: "The omni-directional teleportation rod!"
 					type: "item"
 				}
 			]
@@ -448,7 +483,7 @@
 				""
 				"You can also access the <rainb>Ponder Index</rainb> from your Esc menu!"
 				""
-				"A few tips for getting into Create..."
+				"Go to the next page for tips for getting into Create and Apotheosis related information..."
 				""
 				"- Some <rainb>Ponder</rainb> views have &o&lmultiple scenes&r&r, so be sure to look at the bottom of your screen to see if there is a &lnext arrow&r."
 				""
@@ -473,7 +508,11 @@
 		}
 		{
 			dependencies: ["03F919758AA7E318"]
-			description: ["Once you complete this quest, a chapter page will be unlocked."]
+			description: [
+				"Once you complete this quest, a chapter page will be unlocked."
+				""
+				"I can only hope that you have made the appropriate preparations for combat."
+			]
 			icon: {
 				Count: 1b
 				id: "minecraft:diamond_pickaxe"
@@ -563,11 +602,13 @@
 			description: [
 				"Well, don't be worried about that."
 				""
-				"Dried Kelp Blocks can be compressed to make Coal with the help of an &6active&r Blaze Burner."
+				"&2Dried Kelp Blocks&r can be compressed to make Coal with the help of an &6active&r Blaze Burner."
 				""
-				"Coal Blocks can be compressed to make Diamonds with the help of a &bsuperheated&r Blaze Burner."
+				"&7Coal Blocks&r can be compressed to make Diamonds with the help of a &bsuperheated&r Blaze Burner."
 				""
-				"Netherite is also now renewable with the use of Crushing Wheels."
+				"&8Netherite&r is also now renewable with the use of Crushing Wheels by crushing &4Netherrack&r."
+				""
+				"Netherrack can now be renewed with &cInstant Health II&r potions, fully automated."
 			]
 			hide: true
 			hide_dependency_lines: true
@@ -599,6 +640,21 @@
 				{
 					id: "3EC1D4E2D48C55FD"
 					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+				{
+					id: "3ADE27B161EAF455"
+					item: "minecraft:deepslate"
+					type: "item"
+				}
+				{
+					id: "2FC324B035EC0BBC"
+					item: "minecraft:tuff"
+					type: "item"
+				}
+				{
+					id: "3EA870622004D7BE"
+					item: "minecraft:netherrack"
 					type: "item"
 				}
 			]

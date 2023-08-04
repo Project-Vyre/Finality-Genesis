@@ -5,6 +5,18 @@
 	group: ""
 	icon: "create:brass_hand"
 	id: "62E40BF215C76563"
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 36.0d
+		hover: [ ]
+		image: "minecraft:textures/gui/presets/create_quests.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
 	order_index: 1
 	quest_links: [ ]
 	quests: [
@@ -121,7 +133,11 @@
 		}
 		{
 			dependencies: ["157C4AD3062BC31A"]
-			description: ["Hold [w] to Ponder to learn more!"]
+			description: [
+				"The Mechanical Press has a very involved recipe tree, so expect to use it a lot."
+				""
+				"Hold [w] to Ponder to learn more!"
+			]
 			icon: "create:mechanical_press"
 			id: "62D55614D95E7356"
 			rewards: [{
@@ -131,7 +147,7 @@
 				type: "loot"
 			}]
 			shape: "rsquare"
-			subtitle: "The Mechanical Press is very useful."
+			subtitle: "The Mechanical Press is very useful, trust me on this."
 			tasks: [{
 				id: "78AB1F02F29D15E3"
 				item: "create:mechanical_press"
@@ -165,6 +181,11 @@
 			dependencies: [
 				"76DE1DB31C32A913"
 				"527A4B10DDE51E37"
+			]
+			description: [
+				"The Mechanical Mixer has a very involved recipe tree, expect to use it very frequently!"
+				""
+				"Hold [w] to Ponder to learn more!"
 			]
 			id: "400260FDC774443B"
 			shape: "rsquare"
@@ -228,7 +249,11 @@
 		}
 		{
 			dependencies: ["249F8A4FAEB5CDDE"]
-			description: ["As of Create 0.5.1, Water Wheels now output &3256su&r at &a8 RPM&r."]
+			description: [
+				"As of Create 0.5.1, Water Wheels now output &3256su&r at &a8 RPM&r."
+				""
+				"Covering additional sides will &lnot&r give you additional &3su&r or speed. Soul sand also no longer increases speed."
+			]
 			icon: "create:water_wheel"
 			id: "7D464E248ADF8C04"
 			rewards: [{
@@ -472,6 +497,7 @@
 				"0194851298AADB65"
 				"1E129C8B985D4588"
 			]
+			hide: true
 			id: "1006DEF6267D3741"
 			subtitle: "Gear ratios without cogwheels!"
 			tasks: [{
@@ -872,7 +898,7 @@
 			]
 			id: "2E4CFF3F7A4508AB"
 			shape: "octagon"
-			size: 1.5d
+			size: 2.0d
 			subtitle: "A pair of giants."
 			tasks: [{
 				count: 2L
@@ -1389,6 +1415,11 @@
 		}
 		{
 			dependencies: ["249F8A4FAEB5CDDE"]
+			description: [
+				"Did I mention they can independently rotate by themselves and serve as your rotary wheat farm without any external help?"
+				""
+				"Just be sure to keep the speed down, you don't want the Windmill Bearing to break space time and reality, do you?"
+			]
 			id: "076DA8BCE27D0E11"
 			rewards: [{
 				count: 4
@@ -1888,7 +1919,15 @@
 		}
 		{
 			dependencies: ["0CD722C2B48DF862"]
-			description: ["Hold [w] to Ponder to learn more!"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Did you know a Basin can directly spout fluid into an Item Drain? "
+				""
+				"This bypasses the need to use the Smart Fluid Pipe as you could right click the Basin's recipe filter with a Chocolate Bucket to filter it out."
+				""
+				"However, for potion making you will need to set a recipe filter first beforehand."
+			]
 			id: "60839EAF324E7086"
 			subtitle: "Useful if you want to drain buckets from a milk farm, lava farm and more."
 			tasks: [{
@@ -2159,6 +2198,8 @@
 				"Here is some helpful information that you will probably skip over: "
 				""
 				"Large Waterwheels output the maximum of &3512su&r at &a4 RPM&r."
+				""
+				"Covering additional sides will &lnot&r give you additional &3su&r or speed. Soul sand also no longer increases speed."
 			]
 			id: "4EDF41B3F8B25734"
 			rewards: [
@@ -2295,6 +2336,7 @@
 				""
 				"It is a perfect reflection of yourself, condensed into the form of a brass hand."
 			]
+			hide: true
 			id: "7ECC22C059800186"
 			rewards: [{
 				exclude_from_claim_all: true
