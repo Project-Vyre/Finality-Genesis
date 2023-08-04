@@ -390,31 +390,31 @@ PlayerEvents.tick(check => {
 //     
 // })
 
-EntityEvents.death('minecraft:wither', event => {
-    event.player.notify(Notification.make(toast => {
-        toast.text = [
-            Text.of("The Wither has been killed!").bold(),
-            Text.of('subtitle')
-        ]
-        toast.icon = 'minecraft:wither_skeleton_skull'
-        toast.outlineColor = '#006055'
-        toast.backgroundColor = '#1b3a1b'
-        toast.borderColor = '#267523'
-    }))
-})
-
-BlockEvents.rightClicked('minecraft:bedrock', event => {
-    event.entity.notify(Notification.make(n => {
-        n.text = [
-            'Why?',
-            'subtitle'
-        ]
-        n.icon = 'minecraft:bedrock'
-        n.outlineColor = '#006055'
-        n.backgroundColor = '#1b3a1b'
-        n.borderColor = '#267523'
-    }))
-})
+// EntityEvents.death('minecraft:wither', event => {
+//     event.player.notify(Notification.make(toast => {
+//         toast.text = [
+//             Text.of("The Wither has been killed!").bold(),
+//             Text.of('subtitle')
+//         ]
+//         toast.icon = 'minecraft:wither_skeleton_skull'
+//         toast.outlineColor = '#006055'
+//         toast.backgroundColor = '#1b3a1b'
+//         toast.borderColor = '#267523'
+//     }))
+// })
+// 
+// BlockEvents.rightClicked('minecraft:bedrock', event => {
+//     event.entity.notify(Notification.make(n => {
+//         n.text = [
+//             'Why?',
+//             'subtitle'
+//         ]
+//         n.icon = 'minecraft:bedrock'
+//         n.outlineColor = '#006055'
+//         n.backgroundColor = '#1b3a1b'
+//         n.borderColor = '#267523'
+//     }))
+// })
 
 // EntityEvents.death('minecraft:wither', event => event.player.notify({
 //     itemIcon: 'minecraft:wither_skeleton_skull',
