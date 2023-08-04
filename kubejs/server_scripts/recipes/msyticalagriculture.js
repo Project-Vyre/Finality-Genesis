@@ -1,3 +1,5 @@
+// requires: mysticalagriculture
+
 ServerEvents.recipes(event => {
     // infusion essence
     event.recipes.createMixing([Fluid.of('kubejs:inferior_infusion_essence', 250)], [

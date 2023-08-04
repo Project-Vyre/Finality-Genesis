@@ -1,3 +1,6 @@
+// requires: enderchests
+// requires: endertanks
+
 ServerEvents.recipes(event => {
     event.remove({id: 'enderchests:ender_bag'})
     event.remove({id: 'endertanks:bucket'})

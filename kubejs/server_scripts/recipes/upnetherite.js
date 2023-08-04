@@ -1,3 +1,7 @@
+// requires: upgradednetherite
+// requires: upgradednetherite_ultimate
+// requires: upgradednetherite_creative
+
 ServerEvents.recipes(event => {
     event.remove({id: 'upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot'})
     event.shapeless('upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot',[

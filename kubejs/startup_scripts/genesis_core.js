@@ -8,8 +8,13 @@ console.info('Registering Finality items...')
 let NATR = {
 	blue_ice: 'Blue Ice',
 	sand: 'Sand',
+	red_sand: 'Red Sand',
 	coarse_dirt: 'Coarse Dirt',
-	cobblestone: 'Cobblestone'
+	cobblestone: 'Cobblestone',
+	tinted_glass: 'Tinted Glass',
+	soul_sand: 'Soul Sand',
+	soul_soil: 'Soul Soil',
+	end_crystal: 'End Crystal'
 }
 let CMAT = {
 	andesite_alloy: 'Andesite Alloy',
@@ -20,7 +25,9 @@ let CMAT = {
 	framed_glass: 'Framed Glass',
 	precision_mechanism: 'Precision Mechanism',
 	sturdy_sheet: 'Sturdy Sheet',
-	track: 'Track'
+	track: 'Track',
+	chocolate: 'Chocolate',
+	builders_tea: "Builder's Tea"
 }
 let DYE = {
 	black: 'Black',
@@ -40,6 +47,14 @@ let DYE = {
 	purple: 'Purple',
 	magenta: 'Magenta'
 }
+let CMD = {
+	command_block: 'Command Block',
+	chain_command_block: 'Chain Command Block',
+	repeating_command_block: 'Repeating Command Block'
+}
+let TOOLS = ['sword','shovel','pickaxe','axe','hoe']
+let ARMOR = ['helmet','chestplate','leggings','boots']
+let DIVING = ['diving_helmet','diving_boots']
 StartupEvents.registry('item', event => { // Register new items here event.create('example_item').displayName('Example Item')
 	event.create('kubejs:trident_pole').texture('kubejs:item/trident_pole').maxStackSize(64)
 	event.create('kubejs:trident_prong').texture('kubejs:item/trident_prong').maxStackSize(64)
@@ -48,14 +63,14 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
 	event.create('kubejs:dormant_singularity_core').displayName('§d<shake>Dormant Singularity Core</shake>').texture('kubejs:item/dormant_singularity_core').maxStackSize(16)
 	event.create('kubejs:awakened_singularity_core').displayName('<shake><rainb>Awakened Singularity Core</rainb></shake>').texture('kubejs:item/awakened_singularity_core').maxStackSize(8)
 	Object.keys(NATR).forEach(material => {
-		event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`Incomplete ${NATR[material]}`).texture(`kubejs:item/incomplete_singularities/nature/incomplete_${material}`).maxStackSize(1)
+		event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${NATR[material]} Singularity`).texture(`kubejs:item/incomplete_singularities/nature/incomplete_${material}`).maxStackSize(1)
 	})
 	Object.keys(CMAT).forEach(material => {
-		event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`Incomplete ${CMAT[material]}`).texture(`kubejs:item/incomplete_singularities/incomplete_${material}`).maxStackSize(1)
+		event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${CMAT[material]} Singularity`).texture(`kubejs:item/incomplete_singularities/incomplete_${material}`).maxStackSize(1)
 	})
 	// replace with Color.DYE.forEach() on 1902+ as the Colors automatically has all 16 MC colors
 	Object.keys(DYE).forEach(color => {
-		event.create(`kubejs:incomplete_concrete_${color}_singularity`, 'create:sequenced_assembly').displayName(`§dIncomplete ${DYE[color]} Concrete Singularity`).texture(`kubejs:item/incomplete_singularities/concrete/incomplete_concrete_${color}`).maxStackSize(1)
+		event.create(`kubejs:incomplete_concrete_${color}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${DYE[color]} Concrete Singularity`).texture(`kubejs:item/incomplete_singularities/concrete/incomplete_concrete_${color}`).maxStackSize(1)
 	})
 	event.create('kubejs:omnipotent_alloy').texture('kubejs:item/final_ingot').displayName('<rainb>High Entropy Alloy</rainb>').maxStackSize(64).fireResistant(true).group('miscellaneous')
 	event.create('kubejs:incomplete_entropy_mechanism', 'create:sequenced_assembly').displayName('<rainb>Incomplete Entropy Mechanism</rainb>').texture('kubejs:item/incomplete_entropy_mechanism').maxStackSize(1)
@@ -75,6 +90,9 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
 })
 StartupEvents.registry('block', event => { 
 	// Register new blocks here event.create('example_block').material('wood').hardness(1.0).displayName('Example Block')
+	Object.keys(CMD).forEach(insert => {
+		event.create(`kubejs:${insert}`).displayName(`<rainb>${CMD[insert]}</rainb>`).textureAll(`kubejs:block/${insert}`).material('metal').hardness(500).requiresTool(true)
+	})
 })
 StartupEvents.registry('fluid', event => {
 	// work in progress .stillTexture('finality:block/still_entropy').flowingTexture('finality:block/flowing_entropy')
@@ -86,7 +104,7 @@ StartupEvents.registry('fluid', event => {
 // tiers
 ItemEvents.toolTierRegistry(event => {
 	event.add('final_items', tier => {
-		tier.uses = -1 
+		tier.uses = -1
 		tier.speed = 255.0
 		tier.attackDamageBonus = 65.0
 		tier.level = 5
@@ -95,17 +113,14 @@ ItemEvents.toolTierRegistry(event => {
 })
 ItemEvents.armorTierRegistry(event => {
 	event.add('final_armor', tier => {
-	  	tier.durabilityMultiplier = -1 // Each slot will be multiplied with [13, 15, 16, 11]
-	  	tier.slotProtections = [999999, 999999, 999999, 999999] // Slot indicies are [FEET, LEGS, BODY, HEAD]
+	  	tier.durabilityMultiplier = -1
+	  	tier.slotProtections = [999999, 999999, 999999, 999999]
 	  	tier.enchantmentValue = 30
 	  	tier.equipSound = 'minecraft:item.armor.equip_netherite'
-	  	tier.toughness = 999999 // diamond has 2.0, netherite 3.0
+	  	tier.toughness = 999999
 	  	tier.knockbackResistance = 5.0
 	})
 })
-let TOOLS = ['sword','shovel','pickaxe','axe','hoe']
-let ARMOR = ['helmet','chestplate','leggings','boots']
-let DIVING = ['diving_helmet','diving_boots']
 ItemEvents.modification(event => {
     TOOLS.forEach(tool => event.modify(`wooden_${tool}`, item => {
         item.maxDamage = 16

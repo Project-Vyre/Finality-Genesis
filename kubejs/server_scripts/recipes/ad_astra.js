@@ -1,4 +1,6 @@
-// requires ad astra and kjs 119 and above
+// requires: ad_astra 
+// and kjs 119 and above
+
 ServerEvents.recipes(event => {
     event.recipes.createMechanicalCrafting('ad_astra:nasa_workbench', [
         'QLTLQ',

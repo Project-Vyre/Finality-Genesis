@@ -1,4 +1,5 @@
 // priority: 0
+// requires: create
 
 console.info('Implementing Finality recipes and compats...')
 
@@ -83,7 +84,7 @@ ServerEvents.recipes(event => {
         'minecraft:diamond',
         'minecraft:amethyst_shard',
         Fluid.of('kubejs:condensed_universal_entropy', 500)
-    ]).id('finality:mixing/omnipotent_alloy')
+    ]).superheated().id('finality:mixing/omnipotent_alloy')
     event.shaped('kubejs:final_helmet', [
         'EEE',
         'E E'
@@ -151,12 +152,16 @@ ServerEvents.recipes(event => {
         S: 'extendedcrafting:black_iron_ingot'
     }).id('finality:crafting/final_hoe')
     STONEPLATES.forEach(stone => {
-        event.stonecutting(`minecraft:${stone}_pressure_plate`, `minecraft:${stone}_slab`).id(`minecraft:${stone}_pressure_plate`)
-        event.recipes.create.cutting([`minecraft:${stone}_pressure_plate`, `minecraft:${stone}_slab`], `${stone}`).id(`finality:${stone}_pressure_plate`)
+        event.recipes.create.cutting([
+            `minecraft:${stone}_pressure_plate`,
+            `minecraft:${stone}_slab`
+        ], `${stone}`).processingTime(50).id(`finality:${stone}_pressure_plate`)
     })
     WOODPLATES.forEach(wood => {
-        event.stonecutting(`minecraft:${wood}_pressure_plate`, `minecraft:${wood}_slab`).id(`minecraft:${wood}_pressure_plate`)
-        event.recipes.create.cutting([`minecraft:${wood}_pressure_plate`, `minecraft:${wood}_slab`], `${wood}_planks`).id(`finality:${wood}_pressure_plate`)
+        event.recipes.create.cutting([
+            `minecraft:${wood}_pressure_plate`,
+            `minecraft:${wood}_slab`
+        ], `${wood}_planks`).processingTime(50).id(`finality:${wood}_pressure_plate`)
     })
     event.shaped('minecraft:light_weighted_pressure_plate', [
         'G',
@@ -172,7 +177,12 @@ ServerEvents.recipes(event => {
         G: 'create:iron_sheet',
         R: 'minecraft:redstone'
     }).id('minecraft:heavy_weighted_pressure_plate')
-    event.shapeless('create:mechanical_piston', ['supplementaries:soap', 'create:sticky_mechanical_piston']).id('finality:mechanical_piston_soap_washing')
+    event.shapeless('create:mechanical_piston', [
+        'supplementaries:soap', 'create:sticky_mechanical_piston'
+    ]).id('finality:mechanical_piston_soap_washing')
+    event.recipes.createItemApplication('minecraft:tinted_glass', [
+        '#forge:glass/colorless', 'minecraft:amethyst_shard'
+    ]).id('minecraft:tinted_glass')
     // compacting
     event.recipes.createCompacting([
         'minecraft:sponge',
@@ -254,7 +264,7 @@ ServerEvents.recipes(event => {
     // filling
     event.recipes.createFilling('minecraft:netherrack', [
         'minecraft:cobblestone',
-        Fluid.of('create:potion', 250, '{Potion: "minecraft:strong_healing"}')
+        Fluid.of('create:potion', 250, '{Bottle: "REGULAR", Potion: "minecraft:strong_healing"}'),
     ]).id('finality:living_flesh_stone')
     event.recipes.createFilling('minecraft:netherite_ingot', [
         'minecraft:netherite_scrap',
@@ -309,6 +319,15 @@ ServerEvents.loaded(event => {
 
 })
 
+EntityEvents.hurt(event => {
+    if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
+        event.player.getChestArmorItem() === 'kubejs:final_chestplate' &&
+        event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
+        event.player.getFeetArmorItem() === 'kubejs:final_boots'
+    ) {
+        event.cancel()
+    }
+})
 const set = {
     "name": "kubejs:final",
     "effects": [
@@ -318,33 +337,36 @@ const set = {
             "amplifier": 255
         },
         {
-            "effect": "regeneration",
+            "effect": "haste",
+            "duration": 999,
+            "amplifier": 2
+        },
+        {
+            "effect": "strength",
             "duration": 999,
             "amplifier": 255
         },
         {
-            "effect": "instant_health",
+            "effect": "speed",
             "duration": 999,
             "amplifier": 255
         },
         {
-            "effect": "resistance",
+            "effect": "jump_boost",
             "duration": 999,
-            "amplifier": 255
-        },
+            "amplifier": 3
+        }
     ]
 }
-
 const sets = [set];
-// Need to figure out how to set this up for EntityEvents.hurt()
 PlayerEvents.tick(check => {
-    const { HD, CH, LG, FT } = check.player;
+    const { headArmorItem, chestArmorItem, legsArmorItem, feetArmorItem } = check.player;
     if (check.player.level.time % 100 == 0) {
         for (let armorSet in sets) {
-            if (HD.id === sets[armorSet].name + '_helmet' &&
-                CH.id === sets[armorSet].name + '_chestplate' &&
-                LG.id === sets[armorSet].name + '_leggings' &&
-                FT.id === sets[armorSet].name + '_boots'
+            if (headArmorItem.id === sets[armorSet].name + '_helmet' &&
+                chestArmorItem.id === sets[armorSet].name + '_chestplate' &&
+                legsArmorItem.id === sets[armorSet].name + '_leggings' &&
+                feetArmorItem.id === sets[armorSet].name + '_boots'
                 ) {
                 for (let x in sets[armorSet].effects) {
                     check.player.potionEffects.add(
@@ -357,21 +379,6 @@ PlayerEvents.tick(check => {
         }
     };
 });
-
-EntityEvents.hurt(event => {
-    if (event.entity.player.headArmorItem('kubejs:final_helmet')) {
-        console.log('69')
-        event.cancel()
-    }
-})
-
-// EntityEvents.hurt(event => {
-//     if (event.entity.player.armorSlots() === 'kubejs:final_helmet' && 'kubejs:final_chestplate' && 'kubejs:final_leggings' && 'kubejs:final_boots') {
-//         console.log('69')
-//         event.cancel()
-//     }
-// })
-
 // let CLOCK = 0
 // let sentience = [repairHint, worldMaintenance, ]
 // ServerEvents.tick(event => {

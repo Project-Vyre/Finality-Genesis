@@ -1,3 +1,5 @@
+// requires: mob_grinding_utils
+
 ServerEvents.recipes(event => {
     event.remove({id: 'mob_grinding_utils:recipe_fan'})
     event.custom({
