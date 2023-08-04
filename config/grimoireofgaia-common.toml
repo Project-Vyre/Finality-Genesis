@@ -8,17 +8,17 @@
 	#Hostile day mobs will no longer attack players on sight [default: false]
 	passiveHostileMobs = false
 	#Stop befriended mobs from despawning [Default: false]
-	friendlyPersistence = false
+	friendlyPersistence = true
 
 #Attribute settings
 [Attributes]
 
 	#Tier 1
 	[Attributes.Tier1]
-		#Defines the health of Tier 1 Gaia mobs (50 = half, 200 = double) [40 = 20 Hearts]
+		#Defines the health of Tier 1 Gaia mobs [40 = 20 Hearts]
 		#Range: > 1
 		tier1maxHealth = 40
-		#Defines the attack damage of Tier 1 Gaia mobs (50 = half, 200 = double) [4 = 2 Hearts]
+		#Defines the attack damage of Tier 1 Gaia mobs [4 = 2 Hearts]
 		#Range: > 1
 		tier1attackDamage = 4
 		#Defines the maximum amount of hits required to defeat Tier 1 Gaia mobs (0 = disable)
@@ -27,10 +27,10 @@
 
 	#Tier 2
 	[Attributes.Tier2]
-		#Defines the health of Tier 2 Gaia mobs (50 = half, 200 = double) [80 = 40 Hearts]
+		#Defines the health of Tier 2 Gaia mobs [80 = 40 Hearts]
 		#Range: > 1
 		tier2maxHealth = 80
-		#Defines the attack damage of Tier 2 Gaia mobs (50 = half, 200 = double) [8 = 4 Hearts]
+		#Defines the attack damage of Tier 2 Gaia mobs [8 = 4 Hearts]
 		#Range: > 1
 		tier2attackDamage = 8
 		#Defines the maximum amount of hits required to defeat Tier 2 Gaia mobs (0 = disable)
@@ -39,10 +39,10 @@
 
 	#Tier 3
 	[Attributes.Tier3]
-		#Defines the health of Tier 3 Gaia mobs (50 = half, 200 = double) [160 = 80 Hearts]
+		#Defines the health of Tier 3 Gaia mobs [160 = 80 Hearts]
 		#Range: > 1
 		tier3maxHealth = 160
-		#Defines the attack damage of Tier 3 Gaia mobs (50 = half, 200 = double) [12 = 6 Hearts]
+		#Defines the attack damage of Tier 3 Gaia mobs [12 = 6 Hearts]
 		#Range: > 1
 		tier3attackDamage = 12
 		#Defines the maximum amount of hits required to defeat Tier 3 Gaia mobs (0 = disable)
