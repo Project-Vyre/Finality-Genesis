@@ -1,0 +1,11 @@
+{
+  "name": "Builder's Tea",
+  "colors": [
+    "e28568",
+    "306815"
+  ],
+  "ingredient": {
+    "item": "create:builders_tea"
+  },
+  "materialCount": 1024
+}

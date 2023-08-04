@@ -1,3 +1,5 @@
+// requires: farmersdelight
+
 let oak = 'minecraft:oak_slab'
 let spruce = 'minecraft:spruce_slab'
 let birch = 'minecraft:birch_slab'

@@ -10,7 +10,7 @@ customization-meta {
 
 customization {
   restart_on_load = false
-  name = singularity_animation
+  name = genesis_singularity
   action = animatebackground
 }
 

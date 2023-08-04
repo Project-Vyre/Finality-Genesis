@@ -18,7 +18,6 @@ localconfigs/
 logs/
 mods/
 profileImage/
-resourcepacks/
 resources/
 saves/
 schematics/
@@ -39,6 +38,7 @@ knownkeys.txt
 minecraftinstance.json
 patchouli_data.json
 rhino.local.properties
+*.zip
 
 usercache.json
 usernamecache.json

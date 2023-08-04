@@ -5,7 +5,7 @@
 	group: "668E3EA3A7A91B79"
 	icon: "mob_grinding_utils:saw_upgrade_sharpness"
 	id: "2935A426660B95CA"
-	order_index: 2
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
@@ -53,17 +53,6 @@
 		}
 		{
 			dependencies: ["1B5B598C60C348CA"]
-			id: "5A8B07CA0CDE2BC8"
-			tasks: [{
-				id: "2D2F6F006F4C4E28"
-				item: "mysticalagriculture:witherproof_glass"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1B5B598C60C348CA"]
 			id: "365F742943814677"
 			subtitle: "Convenient succ"
 			tasks: [{
@@ -72,6 +61,17 @@
 				type: "item"
 			}]
 			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["327CC8722CC1247C"]
+			id: "1C02537AB8BCF036"
+			tasks: [{
+				id: "117846F21CFBFAFB"
+				item: "mob_grinding_utils:wither_muffler"
+				type: "item"
+			}]
+			x: -3.0d
 			y: 0.0d
 		}
 	]

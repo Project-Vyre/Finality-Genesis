@@ -14,6 +14,7 @@
 			description: ["Upon wearing the ring, this branch will unlock."]
 			icon: "enigmaticlegacy:cursed_ring"
 			id: "208774AE7914F294"
+			optional: true
 			shape: "octagon"
 			size: 1.5d
 			subtitle: "To put on the ring, or to not put on the ring?"

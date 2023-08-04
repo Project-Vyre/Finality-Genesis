@@ -1,3 +1,6 @@
+// requires: tempad
+// requires: extendedcrafting
+
 ServerEvents.recipes(event => {
     event.remove({id: 'tempad:tempad'})
     event.shaped('tempad:tempad', [

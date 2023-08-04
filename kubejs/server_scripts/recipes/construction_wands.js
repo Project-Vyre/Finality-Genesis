@@ -18,7 +18,7 @@ ServerEvents.recipes(event => {
         'S  '
     ], {
         S: 'minecraft:stick',
-        D: 'kubejs:construction_core_iron'
+        D: 'kubejs:construction_core_diamond'
     }).id('finality:constructionwand_diamond')
     event.shaped('constructionwand:iron_wand',[
         '  D',
@@ -26,6 +26,6 @@ ServerEvents.recipes(event => {
         'S  '
     ], {
         S: 'minecraft:stick',
-        D: 'kubejs:construction_core_diamond'
+        D: 'kubejs:construction_core_iron'
     }).id('finality:constructionwand_iron')
 })

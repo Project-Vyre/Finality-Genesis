@@ -1,3 +1,5 @@
+// requires: endrem
+
 ServerEvents.recipes(event => {
     event.remove({id: 'endrem:exotic_eye'})
     event.remove({id: 'endrem:witch_eye'})

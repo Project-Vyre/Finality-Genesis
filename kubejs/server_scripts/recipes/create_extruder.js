@@ -1,3 +1,5 @@
+// requires: create_mechanical_extruder
+
 let ORESTONES = {
     asurine: 'create:raw_zinc_block',
     crimsite: 'minecraft:raw_iron_block',

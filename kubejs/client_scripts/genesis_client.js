@@ -130,7 +130,7 @@ ItemEvents.tooltip(event => {
             text.add(Component.lightPurple("- Overseers of Finality"))
         }
     }))
-    event.addAdvanced(['minecraft:wooden_pickaxe', 'minecraft:stone_pickaxe'], (item, advanced, text) => {
+    event.addAdvanced(['minecraft:wooden_pickaxe', 'minecraft:stone_pickaxe', 'minecraft:iron_pickaxe'], (item, advanced, text) => {
         if (!event.shift) {
             text.add(1, [Text.of('Hold ').gold(), Text.of('[Shift] ').yellow(), Text.of('to see more info.').gold()])
         } else {
@@ -142,14 +142,14 @@ ItemEvents.tooltip(event => {
                 Text.of('.').white()
             ])
             text.add(2, [
-                Text.of('This also applies to ').white(),
+                Text.of('If you are wondering.. yes, this also applies to ').white(),
                 Text.of('Diamond ').aqua(),
                 Text.of('and ').white(),
                 Text.of('Netherite ').darkGray(),
-                Text.of('tools as well.').white()
+                Text.of('and other tools as well.').white()
             ])
             text.add(3, [
-                'This hint will only show up on wooden and stone pickaxes, so try to remember this!'
+                'This hint will only show up on wooden, stone and iron pickaxes, so try to remember this!'
             ])
         }
     })
@@ -217,5 +217,18 @@ ItemEvents.tooltip(event => {
             text.add(5, ['To remove items from the reality breaking pocket universe within this book, simply crouch and drop with the item you want to remove.'])
             text.add(6, Text.red('<shake>DO NOT USE AS A CRAFTING INGREDIENT OR YOU WILL LOSE ALL STORED ITEMS!</shake>').bold(true))
         }
+    })
+    event.addAdvanced('tempad:tempad', (item, advanced, text) => {
+        text.add(1, [
+            Text.of('Has ').darkPurple(),
+            Text.of('unlimited uses. ').lightPurple(),
+            Text.of('Enjoy!').darkPurple()
+        ])
+    })
+    event.addAdvanced('tempad:he_who_remains_tempad', (item, advanced, text) => {
+        text.add(1, [
+            Text.of('The property of ').darkPurple(),
+            Text.of('"He Who Remains"').lightPurple()
+        ])
     })
 })

@@ -28,8 +28,8 @@
         },
         {
             "type": "patchouli:spotlight",
-            "item": "morphtool:tool",
-            "text": "This item consolidates all tools, it is very useful."
+            "item": "eccentrictome:tome",
+            "text": "This item consolidates a lot of items and books. It is very useful."
         }
     ]
 }

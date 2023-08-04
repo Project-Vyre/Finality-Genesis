@@ -1,3 +1,6 @@
+// requires: enigmaticlegacy
+// requires: extendedcrafting
+
 ServerEvents.recipes(event => {
     event.custom({
         type: 'extendedcrafting:combination',

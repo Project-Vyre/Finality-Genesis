@@ -1,0 +1,11 @@
+{
+    "name": "Chocolate",
+    "colors": [
+      "E68A65",
+      "632B35"
+    ],
+    "ingredient": {
+      "item": "create:bar_of_chocolate"
+    },
+    "materialCount": 16384
+  }

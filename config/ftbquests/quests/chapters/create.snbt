@@ -4,8 +4,20 @@
 	filename: "create"
 	group: ""
 	icon: "create:brass_hand"
-	id: "7BD61C618D1B3AFB"
-	order_index: 2
+	id: "62E40BF215C76563"
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 36.0d
+		hover: [ ]
+		image: "minecraft:textures/gui/presets/create_quests.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
@@ -24,17 +36,17 @@
 				"&7Andesite Casing&r is extremely useful and is an important ingredient for many of Create's items, so be sure to always have spares!"
 			]
 			icon: "create:andesite_alloy"
-			id: "6EBEFE3F0461DD62"
+			id: "57A69334C4D4299A"
 			rewards: [
 				{
-					id: "48463A3257F89635"
+					id: "5AB6A9EB9EE654BF"
 					item: "create:clipboard"
 					title: "Use me as your To-Do list to help you remember things!"
 					type: "item"
 				}
 				{
 					exclude_from_claim_all: true
-					id: "51D1C8CB482EB4C7"
+					id: "72653388C1D3E5E7"
 					table_id: 7477086534417165542L
 					type: "random"
 				}
@@ -43,23 +55,23 @@
 			tasks: [
 				{
 					count: 2L
-					id: "2F0871F676AB6A08"
+					id: "20A2F110261941C6"
 					item: "minecraft:andesite"
 					type: "item"
 				}
 				{
 					count: 2L
-					id: "2FE9932C1E455AE5"
+					id: "71EF3B59B4B398E7"
 					item: "minecraft:iron_nugget"
 					type: "item"
 				}
 				{
-					id: "1408A4A0AF33173B"
+					id: "6E65BE51052A8124"
 					item: "create:andesite_alloy"
 					type: "item"
 				}
 				{
-					id: "525B98B031F2896F"
+					id: "129B0365A1EF634C"
 					title: "Begin the Andesite Age. Click me to claim your rewards!"
 					type: "checkmark"
 				}
@@ -75,17 +87,17 @@
 			]
 			description: ["Hold [w] to Ponder to learn more!"]
 			hide: true
-			id: "1C1479F91E5E8A50"
+			id: "157C4AD3062BC31A"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "1B4B9DB7085222DD"
+				id: "7AF6E0F9ADACA5CA"
 				table_id: 7477086534417165542L
 				type: "random"
 			}]
 			shape: "rsquare"
 			subtitle: "Convenient for holding items so they don't despawn."
 			tasks: [{
-				id: "00455237E82D2EB1"
+				id: "17BEDDF08AA14B60"
 				item: "create:depot"
 				type: "item"
 			}]
@@ -101,17 +113,17 @@
 				""
 				"This process can be automated of course, with a Mechanical Saw and Deployer setup, but we'll get into that later."
 			]
-			id: "6CDFFACF033CC6AA"
+			id: "6D8C28D34ABF7636"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "29BFCFD830D0D9AB"
+				id: "49BD66DB70DD1367"
 				table_id: 7477086534417165542L
 				type: "random"
 			}]
 			shape: "hexagon"
 			subtitle: "Very important material. Plus it looks nice! Don't mind the pun."
 			tasks: [{
-				id: "1B827D153CA7564D"
+				id: "654CC532C1F17209"
 				item: "create:andesite_casing"
 				type: "item"
 			}]
@@ -121,19 +133,23 @@
 		}
 		{
 			dependencies: ["157C4AD3062BC31A"]
-			description: ["Hold [w] to Ponder to learn more!"]
+			description: [
+				"The Mechanical Press has a very involved recipe tree, so expect to use it a lot."
+				""
+				"Hold [w] to Ponder to learn more!"
+			]
 			icon: "create:mechanical_press"
-			id: "132EC8A3E2801D4A"
+			id: "62D55614D95E7356"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "718A72AD37145D82"
+				id: "6308F85FFE0B1BF8"
 				table_id: 7159138545964995551L
 				type: "loot"
 			}]
 			shape: "rsquare"
-			subtitle: "The Mechanical Press is very useful."
+			subtitle: "The Mechanical Press is very useful, trust me on this."
 			tasks: [{
-				id: "3287F39C21AE72DC"
+				id: "78AB1F02F29D15E3"
 				item: "create:mechanical_press"
 				type: "item"
 			}]
@@ -143,17 +159,17 @@
 		}
 		{
 			dependencies: ["57A69334C4D4299A"]
-			id: "6D44ED744453D242"
+			id: "527A4B10DDE51E37"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "59F9F6331FE2A7DF"
+				id: "4C70994C553AC9B3"
 				table_id: 7477086534417165542L
 				type: "random"
 			}]
 			shape: "rsquare"
 			subtitle: "Create the Basin, an integral component for the Mechanical Mixer."
 			tasks: [{
-				id: "7A065310384F8D01"
+				id: "074F12DE8761901F"
 				item: "create:basin"
 				type: "item"
 			}]
@@ -166,11 +182,16 @@
 				"76DE1DB31C32A913"
 				"527A4B10DDE51E37"
 			]
-			id: "30BCCD6DC47AC6D3"
+			description: [
+				"The Mechanical Mixer has a very involved recipe tree, expect to use it very frequently!"
+				""
+				"Hold [w] to Ponder to learn more!"
+			]
+			id: "400260FDC774443B"
 			shape: "rsquare"
 			subtitle: "Automated mixing, highly multi-purpose!"
 			tasks: [{
-				id: "261D50B668372DCA"
+				id: "64522091ABF7D72A"
 				item: "create:mechanical_mixer"
 				type: "item"
 			}]
@@ -187,15 +208,15 @@
 				""
 				"This is explained in the Ponder tutorial for Create's cogwheels."
 			]
-			id: "7C6A7E5937B913E8"
+			id: "76DE1DB31C32A913"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "74607F68EA30DEB2"
+				id: "28D46303F421578D"
 				table_id: 7477086534417165542L
 				type: "random"
 			}]
 			tasks: [{
-				id: "3DB7A6A69E0B3A96"
+				id: "41601DFCB348DDD7"
 				item: "create:cogwheel"
 				type: "item"
 			}]
@@ -211,15 +232,15 @@
 				""
 				"This is explained in the Ponder tutorial for Create's cogwheels."
 			]
-			id: "6B499FD7FDE10551"
+			id: "3FF3FB9AC560FD61"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "7BF86CF16D90ECAD"
+				id: "0C5D881A93081DC6"
 				table_id: 7771384237349930739L
 				type: "random"
 			}]
 			tasks: [{
-				id: "6C6EC1C51BC6A86D"
+				id: "13ACDF0716E431C1"
 				item: "create:large_cogwheel"
 				type: "item"
 			}]
@@ -228,19 +249,23 @@
 		}
 		{
 			dependencies: ["249F8A4FAEB5CDDE"]
-			description: ["As of Create 0.5.1, Water Wheels now output &3256su&r at &a8 RPM&r."]
+			description: [
+				"As of Create 0.5.1, Water Wheels now output &3256su&r at &a8 RPM&r."
+				""
+				"Covering additional sides will &lnot&r give you additional &3su&r or speed. Soul sand also no longer increases speed."
+			]
 			icon: "create:water_wheel"
-			id: "3CAA2CADC57706EF"
+			id: "7D464E248ADF8C04"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "3808E2983D3DDD49"
+				id: "2914FD6783F25645"
 				table_id: 7477086534417165542L
 				type: "random"
 			}]
 			shape: "hexagon"
 			subtitle: "An easy but weak source of rotational power."
 			tasks: [{
-				id: "2C0404463F373114"
+				id: "269222C04CEA8B71"
 				item: "create:water_wheel"
 				type: "item"
 			}]
@@ -249,15 +274,15 @@
 		}
 		{
 			dependencies: ["57A69334C4D4299A"]
-			id: "1D5A3C1FEF54ADA4"
+			id: "249F8A4FAEB5CDDE"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "5E00C5421ED5A694"
+				id: "5B63F674BE35DCDA"
 				table_id: 7477086534417165542L
 				type: "random"
 			}]
 			tasks: [{
-				id: "38BB5B0F789A452B"
+				id: "2A7932E0191CB3B8"
 				item: "create:shaft"
 				type: "item"
 			}]
@@ -266,10 +291,10 @@
 		}
 		{
 			dependencies: ["62D55614D95E7356"]
-			id: "3D3637911B229F02"
+			id: "770AD4193CC23EA3"
 			subtitle: "A foundational ingredient."
 			tasks: [{
-				id: "425FA26BCDFD332D"
+				id: "4968755DF97B9F34"
 				item: "create:iron_sheet"
 				type: "item"
 			}]
@@ -278,10 +303,10 @@
 		}
 		{
 			dependencies: ["62D55614D95E7356"]
-			id: "67DE0001256E5221"
+			id: "2E386081E5302CF5"
 			subtitle: "A foundational ingredient."
 			tasks: [{
-				id: "5AC90708B77EEDB3"
+				id: "38B3DD686D998467"
 				item: "create:copper_sheet"
 				type: "item"
 			}]
@@ -290,10 +315,10 @@
 		}
 		{
 			dependencies: ["62D55614D95E7356"]
-			id: "0935DC688AC42169"
+			id: "00DA4B8905FE3CAF"
 			subtitle: "A useful ingredient for logic components and more."
 			tasks: [{
-				id: "699A5C2F6A002082"
+				id: "56467B6E0BF1289B"
 				item: "create:brass_sheet"
 				type: "item"
 			}]
@@ -302,10 +327,10 @@
 		}
 		{
 			dependencies: ["62D55614D95E7356"]
-			id: "4204119F56EB7C6B"
+			id: "75E673394451C2F4"
 			subtitle: "A very useful ingredient."
 			tasks: [{
-				id: "12442A0A49604A30"
+				id: "0F8883072FD3C1E3"
 				item: "create:golden_sheet"
 				type: "item"
 			}]
@@ -319,10 +344,10 @@
 				""
 				"Hold [w] to Ponder to learn more!"
 			]
-			id: "1685D558C469FD1C"
+			id: "3E68ADF888E6E99E"
 			subtitle: "Mechanical Belts are very useful."
 			tasks: [{
-				id: "046811E720DC5C0C"
+				id: "0ACC90A18CD1E0BA"
 				item: "create:belt_connector"
 				type: "item"
 			}]
@@ -332,17 +357,17 @@
 		}
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
-			id: "05B06B233C01BAF8"
+			id: "0044994A32BC5631"
 			rewards: [{
 				count: 32
-				id: "251122924E777D03"
+				id: "67D49E8F98961615"
 				item: "minecraft:dried_kelp_block"
 				type: "item"
 			}]
 			subtitle: "Dried kelp is food, but it's also a material."
 			tasks: [{
 				count: 6L
-				id: "3F886941FD80E995"
+				id: "123DE1FFA1F95BC7"
 				item: "minecraft:dried_kelp"
 				type: "item"
 			}]
@@ -369,16 +394,16 @@
 				"Hold [w] to Ponder to learn more!"
 			]
 			hide: true
-			id: "54CFB1F5C3E70E55"
+			id: "23744C5D8A153163"
 			rewards: [{
-				id: "0813F9B28F80B97F"
+				id: "12E55DAB35AF24DA"
 				item: "minecraft:diamond"
 				type: "item"
 			}]
 			shape: "hexagon"
 			subtitle: "You got it, now what?"
 			tasks: [{
-				id: "7056A80D938FF9A6"
+				id: "39F16EECF25DED7C"
 				item: "create:empty_blaze_burner"
 				type: "item"
 			}]
@@ -392,17 +417,17 @@
 				""
 				"Click on the recipe then Hold [w] while hovering on the Blaze Burner to Ponder to learn more."
 			]
-			id: "78433C3C1264E42C"
+			id: "1565E97748B8B342"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "29B168A207AA43CB"
+				id: "65BFD9B4334851D3"
 				table_id: 3533172865185366803L
 				type: "random"
 			}]
 			shape: "hexagon"
 			subtitle: "You will need more for other purposes."
 			tasks: [{
-				id: "6E2C771DB4BF32C8"
+				id: "4A3C4765A986ABCA"
 				item: "create:blaze_burner"
 				title: "Acquire a sentient fireplace."
 				type: "item"
@@ -417,12 +442,12 @@
 				"400260FDC774443B"
 			]
 			hide: true
-			id: "260B599DA88A9301"
+			id: "3AF368FDC6BEC625"
 			size: 1.5d
 			subtitle: "Making some brass requires some setup..."
 			tasks: [{
 				count: 2L
-				id: "45BE5466429FCE6F"
+				id: "67B3F409A2928F28"
 				item: "create:brass_ingot"
 				type: "item"
 			}]
@@ -432,10 +457,10 @@
 		}
 		{
 			dependencies: ["76DE1DB31C32A913"]
-			id: "62769E2AFEB18D9D"
+			id: "1CF9859D66D393AC"
 			subtitle: "An easy method of routing shafts vertically if you rotate them with a Wrench."
 			tasks: [{
-				id: "6B135998D5754151"
+				id: "01AE4850A2D6DE1B"
 				item: "create:gearbox"
 				type: "item"
 			}]
@@ -451,16 +476,16 @@
 				""
 				"They are also not limited by the default 20 block range that Mechanical Belts do."
 			]
-			id: "1452562A98A6C3FD"
+			id: "1DBC16B691A15476"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "5319C8E354F9BE24"
+				id: "04FDA8C43888FE69"
 				table_id: 7477086534417165542L
 				type: "random"
 			}]
 			subtitle: "Far more flexible than Mechanical Belts in terms of relaying kinetic energy."
 			tasks: [{
-				id: "3DFE5CC496C72EFA"
+				id: "1E129C8B985D4588"
 				item: "create:encased_chain_drive"
 				type: "item"
 			}]
@@ -472,10 +497,11 @@
 				"0194851298AADB65"
 				"1E129C8B985D4588"
 			]
-			id: "37E9E7598E488BF1"
+			hide: true
+			id: "1006DEF6267D3741"
 			subtitle: "Gear ratios without cogwheels!"
 			tasks: [{
-				id: "09A1F396E89356F1"
+				id: "22132BA00C57A9B9"
 				item: "create:adjustable_chain_gearshift"
 				type: "item"
 			}]
@@ -489,11 +515,11 @@
 			]
 			description: ["Hold [w] to Ponder to learn more!"]
 			hide: true
-			id: "44451DC92AD5D54E"
+			id: "068660484145BE87"
 			subtitle: "Splitting items intelligently."
 			tasks: [{
 				count: 2L
-				id: "6E1F72ACB54B6079"
+				id: "4486E08E99A0DDD1"
 				item: "create:brass_tunnel"
 				type: "item"
 			}]
@@ -509,16 +535,16 @@
 				""
 				"I can't tell you &levery&r situation this can be used in."
 			]
-			id: "4685A8F0D326EC9C"
+			id: "5082C1012024ED2D"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "23F0041D489CE0B2"
+				id: "217302D92364572C"
 				table_id: 7771384237349930739L
 				type: "random"
 			}]
 			subtitle: "UNO Reverse!"
 			tasks: [{
-				id: "5288DF4E1B0D38E8"
+				id: "53A06909BD9B47FC"
 				item: "create:gearshift"
 				type: "item"
 			}]
@@ -528,10 +554,10 @@
 		}
 		{
 			dependencies: ["0194851298AADB65"]
-			id: "34C3BE9B7CD19A66"
+			id: "7EE9C850EF4C9BDC"
 			subtitle: "The smart and precise Sequenced Gearshift."
 			tasks: [{
-				id: "3F2FF798976D9A7A"
+				id: "47A4649D15EE3D15"
 				item: "create:sequenced_gearshift"
 				type: "item"
 			}]
@@ -546,15 +572,15 @@
 				"3AF368FDC6BEC625"
 			]
 			hide: true
-			id: "74E82FCF3CE34D31"
+			id: "054BC637EF86609C"
 			rewards: [
 				{
-					id: "4B129A5FC4BC865D"
+					id: "66D13D19DCC16AD2"
 					item: "minecraft:raw_copper_block"
 					type: "item"
 				}
 				{
-					id: "7C14F0358B3E13C1"
+					id: "520C4CB40F2EA31F"
 					item: "create:raw_zinc_block"
 					type: "item"
 				}
@@ -563,7 +589,7 @@
 			size: 1.2d
 			subtitle: "Smarter components!"
 			tasks: [{
-				id: "117B3F23A1FE0336"
+				id: "6FA06A383C2E878E"
 				item: "create:brass_casing"
 				type: "item"
 			}]
@@ -578,11 +604,11 @@
 			]
 			description: ["Hold [w] to Ponder to learn more!"]
 			hide: true
-			id: "1462674D98739D1D"
+			id: "42A8249377616678"
 			subtitle: "Managing items intelligently."
 			tasks: [{
 				count: 2L
-				id: "6441ADA3EE7BE605"
+				id: "41FC57734A2F322C"
 				item: "create:brass_funnel"
 				type: "item"
 			}]
@@ -604,10 +630,10 @@
 				"If you saw kuantities previously, my Q key was broken."
 			]
 			hide: true
-			id: "1ECFBC64FE5B537C"
+			id: "1D08D9144CE10BCA"
 			subtitle: "The smarter Chute."
 			tasks: [{
-				id: "1BC391DC0639E300"
+				id: "43E52C183B4389FE"
 				item: "create:smart_chute"
 				type: "item"
 			}]
@@ -616,10 +642,10 @@
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
-			id: "53DF2C45CFC113C0"
+			id: "7D7D96030BC1CDC1"
 			subtitle: "Vertical item transportation!"
 			tasks: [{
-				id: "22ED65739C570B04"
+				id: "5CC08ACE604AFED8"
 				item: "create:chute"
 				type: "item"
 			}]
@@ -629,10 +655,10 @@
 		{
 			dependencies: ["770AD4193CC23EA3"]
 			description: ["Use it on Create's Trains, make a rotating Item Vault wheel... the limit is your imagination."]
-			id: "6EDAB9F192D543D1"
+			id: "3C188F3CFEB46683"
 			subtitle: "Think of it as a very large chest that can be transported to places."
 			tasks: [{
-				id: "6DF2F0FFC0B283B5"
+				id: "21E4A0186BB381B3"
 				item: "create:item_vault"
 				type: "item"
 			}]
@@ -642,9 +668,9 @@
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
-			id: "0A16AE9B95A866B9"
+			id: "6129B7088CC965FA"
 			tasks: [{
-				id: "47D46023D6579148"
+				id: "03F0BC34B4571A88"
 				item: "create:mechanical_saw"
 				type: "item"
 			}]
@@ -653,10 +679,10 @@
 		}
 		{
 			dependencies: ["75E673394451C2F4"]
-			id: "4F4A83608EF9ECDF"
+			id: "18B37484A6C7F37E"
 			subtitle: "Quite an important component."
 			tasks: [{
-				id: "5CC79ED1A21C372A"
+				id: "1406D000426425FC"
 				item: "create:precision_mechanism"
 				type: "item"
 			}]
@@ -665,10 +691,10 @@
 		}
 		{
 			dependencies: ["75E673394451C2F4"]
-			id: "5840E1C7537BF762"
+			id: "328DCAF24F6DF4C5"
 			subtitle: "It really helps you see Create related info at all times!"
 			tasks: [{
-				id: "4CD1E63F304EA132"
+				id: "239A73F5073D197C"
 				item: "create:goggles"
 				type: "item"
 			}]
@@ -682,10 +708,10 @@
 				""
 				"By default, has a maximum range of 32 blocks."
 			]
-			id: "257946675B2AAC56"
+			id: "3ED7372ADB1D3FE7"
 			subtitle: "Don't stand on it, seriously."
 			tasks: [{
-				id: "6692E4560E1D9B4B"
+				id: "44EBA221A09B76FD"
 				item: "create:weighted_ejector"
 				type: "item"
 			}]
@@ -694,9 +720,9 @@
 		}
 		{
 			dependencies: ["2E386081E5302CF5"]
-			id: "0B7D8C1832D832E8"
+			id: "6AC32180F67385D6"
 			tasks: [{
-				id: "29950D340F063610"
+				id: "12202DAEFFEB3B44"
 				item: "create:fluid_pipe"
 				type: "item"
 			}]
@@ -705,10 +731,10 @@
 		}
 		{
 			dependencies: ["6AC32180F67385D6"]
-			id: "6A2BC26904BCFE6C"
+			id: "046D0A0ADA6236A8"
 			subtitle: "You have the puuump."
 			tasks: [{
-				id: "7AB7C1E2F33B2271"
+				id: "531FBFD8F57470D1"
 				item: "create:mechanical_pump"
 				type: "item"
 			}]
@@ -717,10 +743,10 @@
 		}
 		{
 			dependencies: ["2E386081E5302CF5"]
-			id: "03CED624B2C3889A"
+			id: "762E4AB54C6B5D42"
 			shape: "octagon"
 			tasks: [{
-				id: "3ECB86CCD2E48EFC"
+				id: "478F08FED908E253"
 				item: "create:fluid_tank"
 				type: "item"
 			}]
@@ -739,10 +765,10 @@
 				"You should have 1x Blaze Burner after completing the quest for it from the right side region of this chapter space, which is why 8x Blaze Burners are only being requested."
 			]
 			icon: "create:steam_engine"
-			id: "44FA1020F55D68E0"
+			id: "4EC7951A5F29EE1A"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "68CAECC0EBDE259A"
+				id: "5DC0967F307BA583"
 				table_id: 103743719166323827L
 				type: "random"
 			}]
@@ -750,13 +776,13 @@
 			subtitle: "The strongest source of rotational power."
 			tasks: [
 				{
-					id: "6BBC5782BFB21898"
+					id: "2C90C07728BDBA24"
 					item: "create:steam_engine"
 					type: "item"
 				}
 				{
 					count: 8L
-					id: "4D638423870E98D9"
+					id: "1735EB44C69C1DC9"
 					item: "create:blaze_burner"
 					type: "item"
 				}
@@ -779,10 +805,10 @@
 				"They can also reach then take and deposit fuel for your Blaze Burners that sit under your boiler precisely. It's neat!"
 			]
 			hide: true
-			id: "2D58E00854DEFC30"
+			id: "0352B65BF524BA37"
 			subtitle: "Achievement unlocked: Busy Hands"
 			tasks: [{
-				id: "233EE2566B914A7A"
+				id: "054C34E3E5E37622"
 				item: "create:mechanical_arm"
 				type: "item"
 			}]
@@ -792,10 +818,10 @@
 		{
 			dependencies: ["00DA4B8905FE3CAF"]
 			description: ["Used in making the Deployer and Extendo Grip in base Create."]
-			id: "32CB693D5FEABF56"
+			id: "5DD3DEBA65F73267"
 			subtitle: "A very handy component!"
 			tasks: [{
-				id: "251B13DD78A69DA4"
+				id: "52BEB8DC279F6D3A"
 				item: "create:brass_hand"
 				type: "item"
 			}]
@@ -809,10 +835,10 @@
 				""
 				"Hold [w] to Ponder to learn more!"
 			]
-			id: "1EF0AC3936630E22"
+			id: "16B642E5E7DBE75D"
 			subtitle: "Automated pouring!"
 			tasks: [{
-				id: "16B743F26AAD970D"
+				id: "5526AF6D60A35374"
 				item: "create:spout"
 				type: "item"
 			}]
@@ -827,18 +853,18 @@
 			]
 			hide: true
 			icon: "create:railway_casing"
-			id: "4947357EEC9F0C29"
+			id: "1E0CDA1ED53FACEE"
 			shape: "hexagon"
 			subtitle: "Begin the age of the train network."
 			tasks: [
 				{
-					id: "0E2A13154B332961"
+					id: "187B0F4E6388C3EC"
 					item: "create:railway_casing"
 					type: "item"
 				}
 				{
 					count: 128L
-					id: "78C8628D2CFDEDFC"
+					id: "56EA74D47605B4E2"
 					item: "create:track"
 					title: "Make a lot of tracks, you'll need them."
 					type: "item"
@@ -850,10 +876,10 @@
 		}
 		{
 			dependencies: ["2E4CFF3F7A4508AB"]
-			id: "3DAD2E2C37DF650B"
+			id: "4EBF56E85BA4465B"
 			subtitle: "Powdered Obsidian is an important component to Sturdy Sheets."
 			tasks: [{
-				id: "116D634FE4F67716"
+				id: "777D61B53D3FF020"
 				item: "create:powdered_obsidian"
 				type: "item"
 			}]
@@ -870,13 +896,13 @@
 				""
 				"Hold [w] to Ponder to learn more!"
 			]
-			id: "02480B0A17E91E0E"
+			id: "2E4CFF3F7A4508AB"
 			shape: "octagon"
-			size: 1.5d
+			size: 2.0d
 			subtitle: "A pair of giants."
 			tasks: [{
 				count: 2L
-				id: "059EA712AB447E0E"
+				id: "147CD7D3F7E5697F"
 				item: "create:crushing_wheel"
 				type: "item"
 			}]
@@ -897,10 +923,10 @@
 				"You will see what I mean later."
 			]
 			hide: true
-			id: "399B083D89250711"
+			id: "2FF7795C03DDC67B"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "7F40E60FD2C4A3E4"
+				id: "3FDAA28CFC2179BC"
 				table_id: 103743719166323827L
 				type: "random"
 			}]
@@ -908,7 +934,7 @@
 			size: 2.0d
 			subtitle: "Crafting huge things."
 			tasks: [{
-				id: "4246606EA3A53930"
+				id: "65511F53C5D74053"
 				item: "create:mechanical_crafter"
 				type: "item"
 			}]
@@ -922,10 +948,10 @@
 				"4EBF56E85BA4465B"
 			]
 			hide: true
-			id: "367229AAD40B8CDC"
+			id: "16FA2F3F79C9F5B3"
 			subtitle: "The material for everything train related."
 			tasks: [{
-				id: "5A0A6952E4F0BB34"
+				id: "2314125F47BB10F2"
 				item: "create:sturdy_sheet"
 				type: "item"
 			}]
@@ -935,21 +961,21 @@
 		{
 			dependencies: ["1E0CDA1ED53FACEE"]
 			icon: "create:track_station"
-			id: "21F03AC481B295DF"
+			id: "383978292CA1C392"
 			subtitle: "Logistic train network essentials."
 			tasks: [
 				{
-					id: "414E67F84D6E1674"
+					id: "7F01A90315258F8B"
 					item: "create:track_station"
 					type: "item"
 				}
 				{
-					id: "6B2331CD7E2FE657"
+					id: "11E9327BD0347341"
 					item: "create:track_signal"
 					type: "item"
 				}
 				{
-					id: "71A90B59F05F7B9E"
+					id: "592B1BD8D68AB7FB"
 					item: "create:track_observer"
 					type: "item"
 				}
@@ -968,22 +994,22 @@
 				"You will also need someone to drive your trains... why not assign one of your blazes to be the train conductor?"
 			]
 			icon: "create:controls"
-			id: "1DC2625FFF2D3ABF"
+			id: "0D86C2F010562CE2"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "037B6EB93CFEC68A"
+				id: "30B1707DFE423CE3"
 				table_id: 103743719166323827L
 				type: "random"
 			}]
 			subtitle: "Well, what did you expect? You need controls!"
 			tasks: [
 				{
-					id: "7B7C9239373931EB"
+					id: "15F21DE8F3B64025"
 					item: "create:controls"
 					type: "item"
 				}
 				{
-					id: "361E08EE21067A63"
+					id: "2D96DE8A957A9EF4"
 					item: "create:schedule"
 					type: "item"
 				}
@@ -1002,17 +1028,17 @@
 					Damage: 0
 				}
 			}
-			id: "464C804E3A979133"
+			id: "7C14DC327046D141"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "6A38CEFB79DD99A0"
+				id: "009210FA3AC21FA9"
 				table_id: 7771384237349930739L
 				type: "random"
 			}]
 			subtitle: "These utilities allow you to move ENTIRE structures."
 			tasks: [
 				{
-					id: "6FA0776404E6C112"
+					id: "0B0EFAF6239C249D"
 					item: {
 						Count: 1b
 						id: "create:super_glue"
@@ -1023,7 +1049,7 @@
 					type: "item"
 				}
 				{
-					id: "09EB4C7A4F96F6CF"
+					id: "57F6A0BB06B3C1B6"
 					item: "create:sticker"
 					type: "item"
 				}
@@ -1045,30 +1071,30 @@
 				""
 				"Millstones are also unable to process ore blocks."
 			]
-			id: "6BF6D7FC256B3A59"
+			id: "79F980EE4DAB682D"
 			rewards: [
 				{
 					count: 16
-					id: "272D3EC3500F22AC"
+					id: "31D5846AD6B0A65F"
 					item: "minecraft:wheat_seeds"
 					type: "item"
 				}
 				{
 					count: 16
-					id: "4CD044721716A886"
+					id: "7BA745B69BC8065A"
 					item: "minecraft:sugar_cane"
 					type: "item"
 				}
 				{
 					exclude_from_claim_all: true
-					id: "11B37FA4A93120DE"
+					id: "33ED1628F14B9836"
 					table_id: 7477086534417165542L
 					type: "random"
 				}
 			]
 			subtitle: "Refinement on a small scale."
 			tasks: [{
-				id: "1874DBEA96E880A7"
+				id: "26329C95CA373C91"
 				item: "create:millstone"
 				type: "item"
 			}]
@@ -1087,15 +1113,15 @@
 				""
 				"Just keep in mind that additional Encased Fans aimed at the same block is the only way of speeding up this process."
 			]
-			id: "62412D25B1EE259A"
+			id: "1EC1E1E64C630B96"
 			rewards: [{
-				id: "458E4F66C4F0E93F"
+				id: "4D1530196DF6B127"
 				type: "xp_levels"
 				xp_levels: 5
 			}]
 			subtitle: "Wheat can be now be refined further."
 			tasks: [{
-				id: "797D991C3AC49B8E"
+				id: "13099E6F5FCC596F"
 				item: "create:wheat_flour"
 				type: "item"
 			}]
@@ -1110,21 +1136,21 @@
 				""
 				"They also directly give you Lime Dye which is used in the creation of Slime Balls."
 			]
-			id: "163D03CCACE1093E"
+			id: "1ABCB56633B96C2B"
 			rewards: [
 				{
-					id: "632276FDE35F23B6"
+					id: "6EEA27A337DAAE0D"
 					item: "minecraft:sea_pickle"
 					type: "item"
 				}
 				{
 					exclude_from_claim_all: true
-					id: "0F657282BAC197A7"
+					id: "5E26F55142CA1A3E"
 					table_id: 4958094920791629302L
 					type: "choice"
 				}
 				{
-					id: "5C4BCBC45A8B92D7"
+					id: "327349C8EECB2300"
 					type: "xp_levels"
 					xp_levels: 10
 				}
@@ -1132,7 +1158,7 @@
 			subtitle: "Create some slimeballs using the dough you created from earlier."
 			tasks: [{
 				count: 9L
-				id: "5E6854ECE382CDAB"
+				id: "74DFBB9EC6BF2E0B"
 				item: "minecraft:slime_ball"
 				type: "item"
 			}]
@@ -1147,10 +1173,10 @@
 				""
 				"Hold [w] to Ponder and see how to use them."
 			]
-			id: "04EAB2EC42F33320"
+			id: "38E2EE3F3F2C2E6C"
 			subtitle: "I believe I can fly!"
 			tasks: [{
-				id: "6B16BAD1ED358ADF"
+				id: "7FBE092BD3DC3EC2"
 				item: "create:encased_fan"
 				type: "item"
 			}]
@@ -1168,16 +1194,16 @@
 				""
 				"&c&lDO NOT USE <shake>LAVA</shake> TO BAKE YOUR DOUGH!&r&r"
 			]
-			id: "0BF9596BF638696C"
+			id: "3A0AE21655B5678E"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "4E695D187D1654EF"
+				id: "41CC70CFDDAF6CD3"
 				table_id: 7771384237349930739L
 				type: "random"
 			}]
 			subtitle: "Prepare some dough."
 			tasks: [{
-				id: "3AAAA36C78E2D025"
+				id: "5A7DD92171EFE75A"
 				item: "create:dough"
 				type: "item"
 			}]
@@ -1192,10 +1218,10 @@
 			]
 			description: ["Time to get to polishing with your Sand Paper!"]
 			hide: true
-			id: "588E2845398F8DA8"
+			id: "4946DBA60513DCE3"
 			subtitle: "Looks like it needs to be polished first before it can be used..."
 			tasks: [{
-				id: "78838CAFD55E3FDB"
+				id: "1F73E22F97327F1A"
 				item: "create:rose_quartz"
 				type: "item"
 			}]
@@ -1205,10 +1231,10 @@
 		}
 		{
 			dependencies: ["4946DBA60513DCE3"]
-			id: "41EC8B84711E8206"
+			id: "2A56BEC8A6D0E102"
 			subtitle: "An important component for smarter things."
 			tasks: [{
-				id: "5856EAB544FC515F"
+				id: "22C85B6112E91D2B"
 				item: "create:polished_rose_quartz"
 				type: "item"
 			}]
@@ -1230,10 +1256,10 @@
 					Damage: 0
 				}
 			}
-			id: "318D001D7CC3C05E"
+			id: "4196F75FB2342B67"
 			subtitle: "The first step in making Electron Tubes."
 			tasks: [{
-				id: "0A1E2E69502478CC"
+				id: "6515E9AECCF5EC65"
 				item: {
 					Count: 1b
 					id: "itemfilters:tag"
@@ -1255,17 +1281,17 @@
 				"4968755DF97B9F34"
 			]
 			hide: true
-			id: "2598F791CE399BB7"
+			id: "0194851298AADB65"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "68E3FD5984357AAF"
+				id: "3C5E3B7D5E0801F0"
 				table_id: 9193491821639565519L
 				type: "random"
 			}]
 			size: 1.5d
 			subtitle: "Computers took up entire buildings previously."
 			tasks: [{
-				id: "4ADFDCBE953C984A"
+				id: "5FFC63500CF7754D"
 				item: "create:electron_tube"
 				type: "item"
 			}]
@@ -1276,10 +1302,10 @@
 		{
 			dependencies: ["7D7D96030BC1CDC1"]
 			description: ["Hold [w] to Ponder to learn more!"]
-			id: "4AF28914654E2E5E"
+			id: "2A1F1209201F3019"
 			subtitle: "Contraption fluid inventory output and input."
 			tasks: [{
-				id: "3E2D7C03C4268DB5"
+				id: "6B4178561BE8854C"
 				item: "create:portable_fluid_interface"
 				type: "item"
 			}]
@@ -1289,10 +1315,10 @@
 		{
 			dependencies: ["7D7D96030BC1CDC1"]
 			description: ["Hold [w] to Ponder to learn more!"]
-			id: "1418094FA9CDE251"
+			id: "6BCDDC8851A0617E"
 			subtitle: "Contraption item inventory output and input."
 			tasks: [{
-				id: "5B8CE805BDB52A78"
+				id: "7027944D7A8B01E3"
 				item: "create:portable_storage_interface"
 				type: "item"
 			}]
@@ -1302,11 +1328,11 @@
 		{
 			dependencies: ["0044994A32BC5631"]
 			description: ["Hold [w] to Ponder to learn more!"]
-			id: "307DC04895A24CCD"
+			id: "5DB5C71834CFBC1D"
 			subtitle: "The basic funnel with no filtering capabilities. Can only manage 1 item at a time."
 			tasks: [{
 				count: 2L
-				id: "0B207F2EE18BFE92"
+				id: "1F5875FF4C17B443"
 				item: "create:andesite_funnel"
 				type: "item"
 			}]
@@ -1316,11 +1342,11 @@
 		{
 			dependencies: ["0044994A32BC5631"]
 			description: ["Hold [w] to Ponder to learn more!"]
-			id: "07A35B202223BF34"
+			id: "280A50D0712F4D78"
 			subtitle: "Takes a stack of items and splits off exactly 1 item into an adjacent Mechanical Belt."
 			tasks: [{
 				count: 2L
-				id: "06B42CC3BF3B15C7"
+				id: "6CFAE0B8F2952E31"
 				item: "create:andesite_tunnel"
 				type: "item"
 			}]
@@ -1329,10 +1355,10 @@
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
-			id: "24A781CCA14E4747"
+			id: "4F6A720B7612E455"
 			subtitle: "This is what holds multiple minecarts together."
 			tasks: [{
-				id: "71B3EE356F3A068C"
+				id: "25DA028BA82B35F4"
 				item: "create:minecart_coupling"
 				type: "item"
 			}]
@@ -1341,10 +1367,10 @@
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
-			id: "72E1F41407070C4E"
+			id: "224178669A9DC1DA"
 			subtitle: "A required component for the Mechanical Mixer."
 			tasks: [{
-				id: "49A31F37FFBAECA0"
+				id: "7142BF3C27D824F4"
 				item: "create:whisk"
 				type: "item"
 			}]
@@ -1353,10 +1379,10 @@
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
-			id: "50273B809BCEBE19"
+			id: "26D176C88B664911"
 			subtitle: "How am I supposed to create wind?"
 			tasks: [{
-				id: "3BAB5773AD6E6C93"
+				id: "765790D3C2086453"
 				item: "create:propeller"
 				type: "item"
 			}]
@@ -1365,9 +1391,9 @@
 		}
 		{
 			dependencies: ["2E386081E5302CF5"]
-			id: "2216676C3EC089E6"
+			id: "1DA9BAAA83A3959B"
 			tasks: [{
-				id: "72ED36D330EB6F0F"
+				id: "17A387A140D8C805"
 				item: "create:hose_pulley"
 				type: "item"
 			}]
@@ -1376,10 +1402,10 @@
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
-			id: "7D1751A9D234C3D5"
+			id: "5AD4231580F52A6C"
 			subtitle: "Elevators elevators elevators!"
 			tasks: [{
-				id: "1F2C7F2B5A06F7BE"
+				id: "2F4B4C72D514890B"
 				item: "create:rope_pulley"
 				type: "item"
 			}]
@@ -1389,17 +1415,22 @@
 		}
 		{
 			dependencies: ["249F8A4FAEB5CDDE"]
-			id: "2286DAAEC58A11C4"
+			description: [
+				"Did I mention they can independently rotate by themselves and serve as your rotary wheat farm without any external help?"
+				""
+				"Just be sure to keep the speed down, you don't want the Windmill Bearing to break space time and reality, do you?"
+			]
+			id: "076DA8BCE27D0E11"
 			rewards: [{
 				count: 4
-				id: "6239D849062A261B"
+				id: "209904F730846F43"
 				item: "create:white_sail"
 				type: "item"
 			}]
 			shape: "hexagon"
 			subtitle: "A single windmill can provide a maximum of 8192 Su which is quite a lot."
 			tasks: [{
-				id: "74C27BFD00724234"
+				id: "78E2CB641F647208"
 				item: "create:windmill_bearing"
 				type: "item"
 			}]
@@ -1409,17 +1440,17 @@
 		}
 		{
 			dependencies: ["076DA8BCE27D0E11"]
-			id: "6F66B42BA561F529"
+			id: "3A5A53C3D0C51C69"
 			rewards: [
 				{
 					exclude_from_claim_all: true
-					id: "617FAF520F8A573A"
+					id: "175C40985BF84046"
 					table_id: 7159138545964995551L
 					type: "random"
 				}
 				{
 					exclude_from_claim_all: true
-					id: "77BFB164A60EBCEA"
+					id: "5F9FA83818C07E78"
 					table_id: 7771384237349930739L
 					type: "random"
 				}
@@ -1428,7 +1459,7 @@
 			subtitle: "The amount of Sail Frames required for a maximum strength Windmill..."
 			tasks: [{
 				count: 124L
-				id: "5FDC6CCB58B26CE7"
+				id: "4FF0828AAFBBE7D7"
 				item: "create:white_sail"
 				type: "item"
 			}]
@@ -1445,16 +1476,16 @@
 				""
 				"Just make sure you are using Mechanical Saws instead for automating a tree farm as they are unique in their full tree harvest mechanic."
 			]
-			id: "0BD82CB63A895452"
+			id: "10ADF400E8F057F1"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "30D51115CADB7F2C"
+				id: "7A5E846E9E8039F8"
 				table_id: 7477086534417165542L
 				type: "random"
 			}]
 			subtitle: "Very versatile in mining blocks and highly dependent on rotation speed."
 			tasks: [{
-				id: "65D7C804F9E4DF6B"
+				id: "316FDFDA5B7C8C2D"
 				item: "create:mechanical_drill"
 				type: "item"
 			}]
@@ -1471,16 +1502,16 @@
 				""
 				"Hold [Shift] for a summary on how to use."
 			]
-			id: "0100B5670285F101"
+			id: "515DBB49AEF66282"
 			rewards: [{
-				id: "08E8F85AD03E75ED"
+				id: "4D56DE248B3EBF79"
 				item: "create:builders_tea"
 				type: "item"
 			}]
 			shape: "octagon"
 			subtitle: "An engineer's best friend."
 			tasks: [{
-				id: "75F81A0193708046"
+				id: "0788B65A4ADDE989"
 				item: "create:wrench"
 				type: "item"
 			}]
@@ -1506,17 +1537,17 @@
 			]
 			hide: true
 			icon: "create:schematic_and_quill"
-			id: "68F0C28083A03F1D"
+			id: "187E2B3FDE19DD4D"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "0637C93C661B442D"
+				id: "71772E679E1870BE"
 				table_id: 7771384237349930739L
 				type: "random"
 			}]
 			size: 2.0d
 			subtitle: "Most Create items provide helpful info when you press and hold W or Shift for extensive tooltips."
 			tasks: [{
-				id: "1A1C1476D8024997"
+				id: "2BDE2710088B452C"
 				title: "Use Ponder! Create's in-game tutorial!"
 				type: "checkmark"
 			}]
@@ -1532,32 +1563,32 @@
 				"Also Hold [Shift] to learn more on certain items in this quest node."
 			]
 			icon: "create:cart_assembler"
-			id: "6B69E9B0D93FD687"
+			id: "32F1D92CAF4713E8"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "77F52A5D284F7249"
+				id: "7632368C79B86D06"
 				table_id: 7477086534417165542L
 				type: "random"
 			}]
 			subtitle: "Making Furnace Minecarts useful again."
 			tasks: [
 				{
-					id: "4AE45D1EB556EFB5"
+					id: "5CB79BE7F5D165D8"
 					item: "create:cart_assembler"
 					type: "item"
 				}
 				{
-					id: "6F7DCDD9DD891C51"
+					id: "701CC9EC2E166F22"
 					item: "create:minecart_coupling"
 					type: "item"
 				}
 				{
-					id: "5141821C90AE3D25"
+					id: "649D1112DBC39E64"
 					item: "minecraft:furnace_minecart"
 					type: "item"
 				}
 				{
-					id: "6833BC217D3E3003"
+					id: "6D8B3CCE5D12E6E7"
 					item: "minecraft:minecart"
 					type: "item"
 				}
@@ -1568,10 +1599,10 @@
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
 			icon: "create:copper_casing"
-			id: "35AEE2D2F78C94A1"
+			id: "0CD722C2B48DF862"
 			rewards: [{
 				count: 9
-				id: "17A08A6847459FD6"
+				id: "5E508E1DF12169EA"
 				item: "minecraft:raw_copper_block"
 				type: "item"
 			}]
@@ -1579,17 +1610,17 @@
 			subtitle: "Acquire some basic Copper Age materials."
 			tasks: [
 				{
-					id: "5D8EA6337CD9CA76"
+					id: "049D69269B10FCA2"
 					item: "create:copper_casing"
 					type: "item"
 				}
 				{
-					id: "4F895237269B3362"
+					id: "00B73524FDB8A393"
 					item: "minecraft:copper_ingot"
 					type: "item"
 				}
 				{
-					id: "2117C2FE449B1A5A"
+					id: "2DC730757DA118CB"
 					title: "Begin the Copper Age."
 					type: "checkmark"
 				}
@@ -1600,9 +1631,9 @@
 		}
 		{
 			dependencies: ["054BC637EF86609C"]
-			id: "00C1B649DC3B12EB"
+			id: "30E89B82FBE4E14C"
 			tasks: [{
-				id: "544A99DA529A75ED"
+				id: "140E181AA39D3C57"
 				item: "create:redstone_link"
 				type: "item"
 			}]
@@ -1611,10 +1642,10 @@
 		}
 		{
 			dependencies: ["0194851298AADB65"]
-			id: "7B701EA604804713"
+			id: "1D75F7EBD23D3988"
 			subtitle: "The mechanical eye that reveals the soul."
 			tasks: [{
-				id: "17F80D095C5ACA40"
+				id: "0B7AC270238DECD4"
 				item: "create:content_observer"
 				type: "item"
 			}]
@@ -1623,10 +1654,10 @@
 		}
 		{
 			dependencies: ["1D75F7EBD23D3988"]
-			id: "75EA49BC78EF9FE8"
+			id: "050F508C5A4EA99E"
 			subtitle: "The mechanical eye that monitors for emptiness or fullness."
 			tasks: [{
-				id: "27874D81B46D18E0"
+				id: "3CEDE6CDCA284FA9"
 				item: "create:stockpile_switch"
 				type: "item"
 			}]
@@ -1635,9 +1666,9 @@
 		}
 		{
 			dependencies: ["054BC637EF86609C"]
-			id: "0BF41351B137ACCD"
+			id: "4B4B34406BD27008"
 			tasks: [{
-				id: "1A9A1A963ABD7FDF"
+				id: "244C187AEE88325E"
 				item: "create:display_link"
 				type: "item"
 			}]
@@ -1646,10 +1677,10 @@
 		}
 		{
 			dependencies: ["0194851298AADB65"]
-			id: "7309921998DAF77A"
+			id: "3F6B316FDB524F86"
 			subtitle: "Create the Clockwork Bearing"
 			tasks: [{
-				id: "2539A95A7B52505E"
+				id: "2888BB0349EBFBA0"
 				item: "create:clockwork_bearing"
 				type: "item"
 			}]
@@ -1666,16 +1697,16 @@
 				""
 				"It can also rotate a large arm carrying a mass of basins among other things."
 			]
-			id: "420E44DBE7794E8C"
+			id: "3BDB0203FBA84A83"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "3AED7A988FADD404"
+				id: "4E635DD81A1DC617"
 				table_id: 7477086534417165542L
 				type: "random"
 			}]
 			subtitle: "Use this for rotating large doors, contraptions..."
 			tasks: [{
-				id: "602195D270D6D6C1"
+				id: "1B19709697FE3672"
 				item: "create:mechanical_bearing"
 				type: "item"
 			}]
@@ -1692,22 +1723,22 @@
 				"Please note: the Mechanical Piston can't extend without at least one Extension Rod attached!"
 			]
 			icon: "create:mechanical_piston"
-			id: "3CA9D9B8E7E75A6F"
+			id: "22BAD50143A6422B"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "7963F2DBAD171F75"
+				id: "5B0A9A325314D803"
 				table_id: 7477086534417165542L
 				type: "random"
 			}]
 			subtitle: "Flex on your friends who still use vanilla pistons!"
 			tasks: [
 				{
-					id: "49207B86B3E0D87F"
+					id: "1EA7D455412FAE39"
 					item: "create:piston_extension_pole"
 					type: "item"
 				}
 				{
-					id: "141AE5A7B079B0F6"
+					id: "244DA5C73EE74A35"
 					item: "create:mechanical_piston"
 					type: "item"
 				}
@@ -1723,10 +1754,10 @@
 				""
 				"The Rotation Speed Controller allows you to change the rotation speed very easily."
 			]
-			id: "22BA61252A7977BF"
+			id: "5A056CB8D0A7F5B2"
 			subtitle: "Engineers hate this!"
 			tasks: [{
-				id: "3C7CA03BDBE38488"
+				id: "11E0E47AC0A22390"
 				item: "create:rotation_speed_controller"
 				type: "item"
 			}]
@@ -1735,9 +1766,9 @@
 		}
 		{
 			dependencies: ["30E89B82FBE4E14C"]
-			id: "4A18C519543D3928"
+			id: "6B8E99104DB46996"
 			tasks: [{
-				id: "69F55435FF70CBD9"
+				id: "7E0BB2EE61002933"
 				item: "create:linked_controller"
 				type: "item"
 			}]
@@ -1746,9 +1777,9 @@
 		}
 		{
 			dependencies: ["23744C5D8A153163"]
-			id: "7A4E38227FD88D49"
+			id: "7ED3366AD5222F93"
 			rewards: [{
-				id: "79C19A5310B70105"
+				id: "2589AD1FACBD5896"
 				item: "minecraft:diamond"
 				type: "item"
 			}]
@@ -1757,7 +1788,7 @@
 			tasks: [{
 				dimension: "minecraft:the_nether"
 				icon: "minecraft:obsidian"
-				id: "49B95D6D23FEF256"
+				id: "0B28CEE35831A75F"
 				type: "dimension"
 			}]
 			title: "A Trip to Hell"
@@ -1771,9 +1802,9 @@
 				""
 				"You can make an unlimited amount of Blaze Burners from a single blaze spawner."
 			]
-			id: "4AA6586251F4D1C0"
+			id: "05A06882A2170564"
 			rewards: [{
-				id: "793B81C7243A7F9A"
+				id: "73DD2B004A1697AE"
 				item: "minecraft:diamond"
 				type: "item"
 			}]
@@ -1781,7 +1812,7 @@
 			subtitle: "It has valuables, but you're looking for a Blaze spawner."
 			tasks: [{
 				icon: "minecraft:nether_bricks"
-				id: "6F0B10ADD8B2E1D2"
+				id: "7EF2F9F8166D05E3"
 				structure: "betterfortresses:fortress"
 				type: "structure"
 			}]
@@ -1791,11 +1822,11 @@
 		}
 		{
 			dependencies: ["05A06882A2170564"]
-			id: "47EDB39E68B685B8"
+			id: "031AE396FB6DDD76"
 			subtitle: "Just right click the Blaze or Blaze Spawner with your Empty Blaze Burner."
 			tasks: [{
 				icon: "minecraft:blaze_spawn_egg"
-				id: "06662B5DB521055A"
+				id: "40191BB8A421F6CB"
 				observe_type: 5
 				timer: 0L
 				title: "Right click the Blaze with the Empty Blaze Burner"
@@ -1809,10 +1840,10 @@
 		{
 			dependencies: ["3A0AE21655B5678E"]
 			description: ["Congratulations, you have made more bread than you usually do thanks to the power of the Millstone."]
-			id: "6E2F763BB564F496"
+			id: "6A36F0E0A5E0154D"
 			subtitle: "Delicious bread!"
 			tasks: [{
-				id: "4F22C0823A6FEAC6"
+				id: "6574DE18574AF710"
 				item: "minecraft:bread"
 				type: "item"
 			}]
@@ -1829,16 +1860,16 @@
 				""
 				"Hold Alt to open the Toolbox interface and move your mouse to change selection."
 			]
-			id: "3122030EBAFD8EB7"
+			id: "57D6D3AF17AE4DD1"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "3E9252DC23CE0CF0"
+				id: "680955B61C7DB63B"
 				table_id: 2071744225430230389L
 				type: "choice"
 			}]
 			subtitle: "Magically accessible without direct access!"
 			tasks: [{
-				id: "50EE9ED128219A04"
+				id: "1DB9CFD6B2F25D54"
 				item: "create:brown_toolbox"
 				type: "item"
 			}]
@@ -1848,24 +1879,24 @@
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
 			description: ["Safety should be your priority when riding your contraptions."]
-			id: "04F287C50C575EEB"
+			id: "785FCB4A92E19D32"
 			rewards: [
 				{
 					exclude_from_claim_all: true
-					id: "3622A03002C61CE8"
+					id: "00D0B6CEE1B80D96"
 					table_id: 688710991345937406L
 					type: "random"
 				}
 				{
 					exclude_from_claim_all: true
-					id: "24FCC098B8705C73"
+					id: "30B1288C2A5E5721"
 					table_id: 6652661467762805826L
 					type: "random"
 				}
 			]
 			subtitle: "Make a seat."
 			tasks: [{
-				id: "78CB025ED79D15A8"
+				id: "4E08251400F4301C"
 				item: "create:white_seat"
 				type: "item"
 			}]
@@ -1875,10 +1906,10 @@
 		}
 		{
 			dependencies: ["1E0CDA1ED53FACEE"]
-			id: "1AFB62DA91B456E4"
+			id: "0075BAE1BFBAA36D"
 			subtitle: "A seat fit for a conductor."
 			tasks: [{
-				id: "0A43761306967978"
+				id: "113FAC9FFDBE9EB9"
 				item: "create:black_seat"
 				type: "item"
 			}]
@@ -1888,11 +1919,19 @@
 		}
 		{
 			dependencies: ["0CD722C2B48DF862"]
-			description: ["Hold [w] to Ponder to learn more!"]
-			id: "038BA21DD6E8D78E"
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Did you know a Basin can directly spout fluid into an Item Drain? "
+				""
+				"This bypasses the need to use the Smart Fluid Pipe as you could right click the Basin's recipe filter with a Chocolate Bucket to filter it out."
+				""
+				"However, for potion making you will need to set a recipe filter first beforehand."
+			]
+			id: "60839EAF324E7086"
 			subtitle: "Useful if you want to drain buckets from a milk farm, lava farm and more."
 			tasks: [{
-				id: "7D3F4A551DB2C436"
+				id: "5BFFDC4C27256AC0"
 				item: "create:item_drain"
 				type: "item"
 			}]
@@ -1903,10 +1942,10 @@
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
 			description: ["Hold [w] to Ponder to learn more!"]
-			id: "49024016D64F450C"
+			id: "24D7FAA4E3EFAD39"
 			subtitle: "It is a very useful redstone component."
 			tasks: [{
-				id: "754BD2D8406072EC"
+				id: "0BF1FB3D19AB9BB0"
 				item: "create:powered_toggle_latch"
 				type: "item"
 			}]
@@ -1917,16 +1956,16 @@
 		{
 			dependencies: ["0194851298AADB65"]
 			icon: "create:display_board"
-			id: "1E42EE91307FF7A6"
+			id: "11F16BF2C56756F3"
 			subtitle: "Very useful for displaying information."
 			tasks: [
 				{
-					id: "01628990DCA4492C"
+					id: "3A3176A04F0D51F7"
 					item: "create:display_board"
 					type: "item"
 				}
 				{
-					id: "43163A0624A97E1C"
+					id: "0B3FE8C7E16B1EE0"
 					item: "create:nixie_tube"
 					type: "item"
 				}
@@ -1946,10 +1985,10 @@
 				""
 				"Make sure to use a Copper / Netherite Backtank for safe operation with no risk for durability loss!"
 			]
-			id: "6964BAA8F4326E8E"
+			id: "73E8B028453BD86E"
 			subtitle: "A toy, a very powerful toy."
 			tasks: [{
-				id: "59BAAEBAE4849297"
+				id: "1BED2C9E2AAF7E07"
 				item: {
 					Count: 1b
 					id: "create:potato_cannon"
@@ -1970,10 +2009,10 @@
 				""
 				"The Wand of Symmetry is a very useful tool, make use of it when building structures!"
 			]
-			id: "44BB11814A0DCF7D"
+			id: "53E2E000D9909FCE"
 			subtitle: "An architect's best friend."
 			tasks: [{
-				id: "28E24C6584050DAE"
+				id: "6118649B891C6A2C"
 				item: "create:wand_of_symmetry"
 				type: "item"
 			}]
@@ -1987,10 +2026,10 @@
 				""
 				"Make sure to use a Copper / Netherite Backtank for safe operation with no risk for durability loss!"
 			]
-			id: "3277396BAD6794EA"
+			id: "5ADBAF0BF56632CD"
 			subtitle: "Both an architect's and engineer's best friend for reaching long distances."
 			tasks: [{
-				id: "0E564931DD2B7BFB"
+				id: "6772A84332B1D241"
 				item: {
 					Count: 1b
 					id: "create:extendo_grip"
@@ -2005,10 +2044,10 @@
 		}
 		{
 			dependencies: ["00DA4B8905FE3CAF"]
-			id: "2503C8893AE6C483"
+			id: "584B2971C4DEB905"
 			subtitle: "Does it feel peculiar to you?"
 			tasks: [{
-				id: "2E55081FB908F915"
+				id: "42CD2E502D645E60"
 				item: "create:peculiar_bell"
 				type: "item"
 			}]
@@ -2021,10 +2060,10 @@
 				"584B2971C4DEB905"
 				"38E2EE3F3F2C2E6C"
 			]
-			id: "73832E9000FF0790"
+			id: "3E0990C4385C0B5F"
 			subtitle: "I shall show you where the souls of the damned appear o' wise one."
 			tasks: [{
-				id: "728982EA85752A84"
+				id: "48375D6A6B20BE40"
 				item: "create:haunted_bell"
 				type: "item"
 			}]
@@ -2050,11 +2089,11 @@
 					Damage: 0
 				}
 			}
-			id: "01D62A872089A362"
+			id: "61624301D1511BB0"
 			subtitle: "For underwater exploration."
 			tasks: [
 				{
-					id: "5965453CA7BC7586"
+					id: "5CCDCE989856C5E8"
 					item: {
 						Count: 1b
 						id: "create:copper_diving_helmet"
@@ -2065,7 +2104,7 @@
 					type: "item"
 				}
 				{
-					id: "5B21EC37DBC2F2FB"
+					id: "252A5F4E6868400E"
 					item: {
 						Count: 1b
 						id: "create:copper_backtank"
@@ -2076,7 +2115,7 @@
 					type: "item"
 				}
 				{
-					id: "62193E8907B8F007"
+					id: "6A0F7E0635343EEF"
 					item: {
 						Count: 1b
 						id: "create:copper_diving_boots"
@@ -2101,11 +2140,11 @@
 					Damage: 0
 				}
 			}
-			id: "29BF03AA32DC9D74"
+			id: "41753F371DB962BC"
 			subtitle: "Gone swimming in the lava oceans of the Nether."
 			tasks: [
 				{
-					id: "7BBDE9F78E3FD73F"
+					id: "571271BC7D901D0A"
 					item: {
 						Count: 1b
 						id: "create:netherite_diving_helmet"
@@ -2116,7 +2155,7 @@
 					type: "item"
 				}
 				{
-					id: "20D434CA498EE282"
+					id: "74EB887FB5B3ED52"
 					item: {
 						Count: 1b
 						id: "create:netherite_backtank"
@@ -2127,7 +2166,7 @@
 					type: "item"
 				}
 				{
-					id: "3F4CA4F8A07D3D60"
+					id: "77A05EED1E75FCDD"
 					item: {
 						Count: 1b
 						id: "minecraft:netherite_leggings"
@@ -2138,7 +2177,7 @@
 					type: "item"
 				}
 				{
-					id: "6FCE10B2B16CEEC2"
+					id: "0239A1EACF2F157E"
 					item: {
 						Count: 1b
 						id: "create:netherite_diving_boots"
@@ -2159,18 +2198,20 @@
 				"Here is some helpful information that you will probably skip over: "
 				""
 				"Large Waterwheels output the maximum of &3512su&r at &a4 RPM&r."
+				""
+				"Covering additional sides will &lnot&r give you additional &3su&r or speed. Soul sand also no longer increases speed."
 			]
-			id: "3CCA3B514B1879D6"
+			id: "4EDF41B3F8B25734"
 			rewards: [
 				{
 					exclude_from_claim_all: true
-					id: "486F313A9C349A04"
+					id: "4A0716BC7A5C3850"
 					table_id: 7477086534417165542L
 					type: "random"
 				}
 				{
 					exclude_from_claim_all: true
-					id: "132034C04B8FA503"
+					id: "603B9819E2AD72F9"
 					table_id: 7771384237349930739L
 					type: "random"
 				}
@@ -2178,7 +2219,7 @@
 			shape: "hexagon"
 			subtitle: "Biiiig waterwheels."
 			tasks: [{
-				id: "7E474F6D89ADD0CC"
+				id: "4B8FB2A1A25071A9"
 				item: "create:large_water_wheel"
 				type: "item"
 			}]
@@ -2193,10 +2234,10 @@
 			]
 			description: ["Hold [w] to Ponder to learn more!"]
 			hide: true
-			id: "77685DA2EA0D6F2D"
+			id: "73F456AE957F4002"
 			subtitle: "Elevators made easy."
 			tasks: [{
-				id: "2F0B00807BF9D5A6"
+				id: "5510DE2F5AC3C19F"
 				item: "create:elevator_pulley"
 				type: "item"
 			}]
@@ -2211,12 +2252,12 @@
 				""
 				"Mechanical Rollers are extremely useful when it comes to clearing the way for your new train network."
 			]
-			id: "47D3B0086AA509DC"
+			id: "6E890DBBA3FFA4B3"
 			shape: "rsquare"
 			size: 1.5d
 			subtitle: "Need to clear the way?"
 			tasks: [{
-				id: "5326017BB3A9F72E"
+				id: "473E12E9C8E7C782"
 				item: "create:mechanical_roller"
 				type: "item"
 			}]
@@ -2232,10 +2273,10 @@
 				""
 				"They can also be used with the Elevator Pulley to designate floors."
 			]
-			id: "3071F73BBB471885"
+			id: "205BAFFFECA72D1E"
 			subtitle: "This has many uses, trust me."
 			tasks: [{
-				id: "41845AB59F1936AB"
+				id: "32AD37AC33F00FD7"
 				item: "create:redstone_contact"
 				type: "item"
 			}]
@@ -2244,9 +2285,9 @@
 		}
 		{
 			dependencies: ["6AC32180F67385D6"]
-			id: "4A6DCD77016D3896"
+			id: "0F77020B805CCEBC"
 			tasks: [{
-				id: "2D77014BCF80F262"
+				id: "289E3FF04E6072D0"
 				item: "create:smart_fluid_pipe"
 				type: "item"
 			}]
@@ -2260,10 +2301,10 @@
 				""
 				"What takes up so much space or requires the use of hoppers can now be achieved with less space taken."
 			]
-			id: "1DD72E82B637F841"
+			id: "3D6A28C50E86EA2E"
 			subtitle: "The most compact and adjustable redstone clock!"
 			tasks: [{
-				id: "7EC66F657B70A333"
+				id: "74BF29F609571514"
 				item: "create:pulse_repeater"
 				type: "item"
 			}]
@@ -2274,10 +2315,10 @@
 		{
 			dependencies: ["00DA4B8905FE3CAF"]
 			description: ["Hold [w] to Ponder to learn more!"]
-			id: "3011D69FA6DE1594"
+			id: "68376786E8D45E69"
 			subtitle: "This should be self-explanatory."
 			tasks: [{
-				id: "12E1BA78D33DF00C"
+				id: "24C7307084B2B196"
 				item: "create:pulse_extender"
 				type: "item"
 			}]
@@ -2295,16 +2336,17 @@
 				""
 				"It is a perfect reflection of yourself, condensed into the form of a brass hand."
 			]
-			id: "466FD4589817E53A"
+			hide: true
+			id: "7ECC22C059800186"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "1E0EEB8EFA67142E"
+				id: "7FDF7DCC806AF56F"
 				table_id: 103743719166323827L
 				type: "random"
 			}]
 			subtitle: "Create the Deployer."
 			tasks: [{
-				id: "37C516A5F0F26A21"
+				id: "22085A4AF847F19B"
 				item: "create:deployer"
 				type: "item"
 			}]
@@ -2314,9 +2356,9 @@
 		}
 		{
 			dependencies: ["0CD722C2B48DF862"]
-			id: "40C9E143022F45E5"
+			id: "1BD09AD0A5B739CA"
 			tasks: [{
-				id: "52196278A8D91949"
+				id: "4D36CD45D808E2E2"
 				item: "create:steam_whistle"
 				type: "item"
 			}]
@@ -2325,10 +2367,10 @@
 		}
 		{
 			dependencies: ["0194851298AADB65"]
-			id: "51661B63AD13E5F0"
+			id: "5172E10D8831BABF"
 			subtitle: "Mechanical Rollers breaking everything? I take care of that."
 			tasks: [{
-				id: "45B84E4158FBF39C"
+				id: "4780AFC1FB496E12"
 				item: "create:contraption_controls"
 				type: "item"
 			}]
@@ -2337,10 +2379,10 @@
 		}
 		{
 			dependencies: ["0075BAE1BFBAA36D"]
-			id: "24C99B6B37170372"
+			id: "43A6EBE4381E9916"
 			subtitle: "You don't want them defying space and time, do you?"
 			tasks: [{
-				id: "6F541D116EAC9FA8"
+				id: "2AD53BEA066AF31A"
 				item: "create:brown_seat"
 				type: "item"
 			}]
@@ -2350,16 +2392,16 @@
 		}
 		{
 			dependencies: ["785FCB4A92E19D32"]
-			id: "3571B015F68FB97B"
+			id: "28094E43F612C0E4"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "61184C53BE7C207A"
+				id: "20C9D4F9C4578148"
 				table_id: 7771384237349930739L
 				type: "random"
 			}]
 			subtitle: "me right round baby right round..."
 			tasks: [{
-				id: "56066C3D886A0312"
+				id: "221DE49794CBB323"
 				item: "create:turntable"
 				type: "item"
 			}]
@@ -2369,10 +2411,10 @@
 		}
 		{
 			dependencies: ["28094E43F612C0E4"]
-			id: "1D00C65C595A39AE"
+			id: "7A1F13EA597AD89D"
 			tasks: [{
 				count: 2L
-				id: "77C6376286346117"
+				id: "0CB72936167ED092"
 				item: "create:framed_glass_door"
 				type: "item"
 			}]
@@ -2382,10 +2424,10 @@
 		}
 		{
 			dependencies: ["0075BAE1BFBAA36D"]
-			id: "46C1C296BEE7F62A"
+			id: "13A80E87623C81D5"
 			shape: "rsquare"
 			tasks: [{
-				id: "2610BD3AFD4A55BD"
+				id: "07266621F463A11C"
 				item: "create:train_door"
 				type: "item"
 			}]

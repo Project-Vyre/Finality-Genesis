@@ -17,11 +17,18 @@
 		x: 0.0d
 		y: 0.0d
 	}]
-	order_index: 6
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["4EBF56E85BA4465B"]
+			description: [
+				"In all seriousness, good luck."
+				""
+				"-+-"
+				""
+				"I am sorry that the background image doesn't align to the quest nodes 100% but it's a bit difficult with the scaling and grid differences."
+			]
 			id: "7BFEF80899790FC7"
 			subtitle: "Surprised you've made it this far."
 			tasks: [{
@@ -29,20 +36,21 @@
 				item: "kubejs:dormant_singularity_core"
 				type: "item"
 			}]
-			x: 3.4013605443306005E-4d
-			y: -21.551700680272106d
+			title: "Step 1 - &d<shake>Dormant Singularity Core</shake>"
+			x: 0.0d
+			y: -20.0d
 		}
 		{
 			dependencies: ["7BFEF80899790FC7"]
 			id: "441B6755C6E69725"
-			shape: "circle"
-			size: 3.0d
+			shape: "rsquare"
 			subtitle: "Are you out of your mind?"
 			tasks: [{
 				id: "09EF7D15277FEB92"
 				item: "kubejs:awakened_singularity_core"
 				type: "item"
 			}]
+			title: "Step 2 - <rainb><shake>Awakened Singularity Core</shake></rainb>"
 			x: 0.0d
 			y: -18.0d
 		}
@@ -61,11 +69,18 @@
 				}
 				type: "item"
 			}]
-			x: 3.4013605443306005E-4d
-			y: -14.612925170068024d
+			x: 0.0d
+			y: -16.0d
 		}
 		{
+			dependencies: ["53850BE8EF49D0AF"]
+			description: [
+				"At last, you have reached enlightenment. However, a question remains as you look at the recipe."
+				""
+				"Where do you get the command blocks? Well, they're an unintended side effect as the result of breaking the game's rules soooo yeah."
+			]
 			id: "01A8004472B9F446"
+			subtitle: "Shaping the world, forever."
 			tasks: [{
 				id: "716C4AAB2675A2FC"
 				item: "create:handheld_worldshaper"
@@ -77,6 +92,7 @@
 		{
 			dependencies: ["1F8515F209C98116"]
 			id: "634CF0AB7722167E"
+			subtitle: "Copper copper copper."
 			tasks: [{
 				id: "749BB0B63485E853"
 				item: {
@@ -88,29 +104,32 @@
 				}
 				type: "item"
 			}]
-			x: -3.474489795918359d
-			y: -18.11734693877549d
+			x: -1.5d
+			y: -16.5d
 		}
 		{
 			dependencies: ["1F8515F209C98116"]
+			description: ["Also, ROCK AND STONE!"]
 			id: "6441CF7A7EB2A425"
+			subtitle: "*in turkey speak* COBBLE COBBLE COBBLE"
 			tasks: [{
 				id: "50A3755D5BC3CA49"
 				item: {
 					Count: 1b
 					id: "extendedcrafting:singularity"
 					tag: {
-						Id: "extendedcrafting:amethyst"
+						Id: "extendedcrafting:cobblestone"
 					}
 				}
 				type: "item"
 			}]
-			x: 3.484693877551024d
-			y: -18.137755102040792d
+			x: 1.5d
+			y: -16.5d
 		}
 		{
 			dependencies: ["634CF0AB7722167E"]
 			id: "002A7969EC03C1EC"
+			subtitle: "I'm sorry, how much iron?"
 			tasks: [{
 				id: "08E5007CF006F958"
 				item: {
@@ -122,39 +141,954 @@
 				}
 				type: "item"
 			}]
-			x: -6.959183673469397d
-			y: -18.117346938775498d
+			x: -2.0d
+			y: -18.0d
 		}
 		{
+			dependencies: [
+				"7076B3EE15B33C23"
+				"4F8E459413F29159"
+			]
+			icon: "extendedcrafting:ultimate_singularity"
 			id: "123D0E0F69B73A88"
-			tasks: [{
-				id: "2F6C1657E021958E"
-				item: "extendedcrafting:ultimate_singularity"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "2F6C1657E021958E"
+					item: "extendedcrafting:ultimate_singularity"
+					type: "item"
+				}
+				{
+					id: "28E0184043487A64"
+					item: "extendedcrafting:the_ultimate_nugget"
+					type: "item"
+				}
+				{
+					id: "0B716CF61348159F"
+					item: "extendedcrafting:the_ultimate_ingot"
+					type: "item"
+				}
+				{
+					id: "48CC203D69FA905F"
+					item: "extendedcrafting:crystaltine_catalyst"
+					type: "item"
+				}
+				{
+					id: "1E37BD8F6B386BB1"
+					item: "kubejs:omnipotent_alloy"
+					type: "item"
+				}
+			]
 			x: 0.0d
 			y: -7.0d
 		}
 		{
-			id: "20A1026E727547FE"
-			tasks: [{
-				id: "237E1F6A414719EF"
-				item: "extendedcrafting:the_ultimate_nugget"
-				type: "item"
-			}]
-			x: 0.0d
-			y: -5.0d
-		}
-		{
+			dependencies: ["123D0E0F69B73A88"]
 			id: "53850BE8EF49D0AF"
 			tasks: [{
-				id: "362078F1C8534BB7"
-				item: "extendedcrafting:the_ultimate_ingot"
+				id: "24F82896C2181594"
+				item: "kubejs:entropy_mechanism"
 				type: "item"
 			}]
 			x: 0.0d
 			y: -3.5d
 		}
+		{
+			dependencies: ["6441CF7A7EB2A425"]
+			id: "17243E628EAA6146"
+			subtitle: "Uhhhm...?"
+			tasks: [{
+				id: "15FFA94B3269F3B7"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:coarse_dirt"
+					}
+				}
+				type: "item"
+			}]
+			x: 2.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["17243E628EAA6146"]
+			id: "2B203810B76A8C0A"
+			subtitle: "Inaros, the Pocket Sand Warframe."
+			tasks: [{
+				id: "026FE6916D4B44CC"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:sand"
+					}
+				}
+				type: "item"
+			}]
+			x: 16.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["2B203810B76A8C0A"]
+			id: "5587D80342F8CAEE"
+			subtitle: "Somehow the power of glass defeated the Eidolons..."
+			tasks: [{
+				id: "700A495536DAB32A"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:framed_glass"
+					}
+				}
+				type: "item"
+			}]
+			x: 16.5d
+			y: -16.5d
+		}
+		{
+			dependencies: ["002A7969EC03C1EC"]
+			description: [
+				"Mission Control: Yes, yes, you're rich... time to get a move on! I got Management breathing down my neck here!"
+				""
+				"-+-"
+				""
+				"Bonus points if you get that reference."
+			]
+			id: "7ACC286C8696BEF7"
+			subtitle: "We're rich!"
+			tasks: [{
+				id: "17F66931EDF0C439"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:gold"
+					}
+				}
+				type: "item"
+			}]
+			x: -16.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["7ACC286C8696BEF7"]
+			description: [
+				"It's raining diamonds from out of the sky!"
+				""
+				"Diamonds!"
+				""
+				"No need to ask why!"
+				""
+				"Just open your hands and catch them all"
+				""
+				"It's raining tacos!"
+			]
+			id: "7281437657B6287F"
+			subtitle: "It's raining diamonds!"
+			tasks: [{
+				id: "63944A2B242EE21A"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:diamond"
+					}
+				}
+				type: "item"
+			}]
+			x: -16.5d
+			y: -19.5d
+		}
+		{
+			dependencies: [
+				"7281437657B6287F"
+				"5C757553EC9D4B75"
+				"01AA908CE3006E6A"
+			]
+			id: "6762D7F87F3F59F3"
+			tasks: [{
+				id: "3CA9C04FD6FAE1DF"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:netherite"
+					}
+				}
+				type: "item"
+			}]
+			x: -18.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["7ACC286C8696BEF7"]
+			id: "01AA908CE3006E6A"
+			subtitle: "I'm out of ideas for quotes LOL"
+			tasks: [{
+				id: "7AB152441C107019"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:emerald"
+					}
+				}
+				type: "item"
+			}]
+			x: -16.5d
+			y: -16.5d
+		}
+		{
+			dependencies: ["43D0F0BE8749A33C"]
+			id: "30652DFC68BE93B2"
+			subtitle: "Oh look, it's my favorite color."
+			tasks: [{
+				id: "2E53EEA390CE1FEE"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:amethyst"
+					}
+				}
+				type: "item"
+			}]
+			x: -19.5d
+			y: -19.5d
+		}
+		{
+			dependencies: ["30652DFC68BE93B2"]
+			id: "1644EB18E1A28B48"
+			tasks: [{
+				id: "4E4F85E651395AD6"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:quartz"
+					}
+				}
+				type: "item"
+			}]
+			x: -20.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["1644EB18E1A28B48"]
+			id: "5C757553EC9D4B75"
+			tasks: [{
+				id: "6CDFDD7C8343BFEF"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:redstone"
+					}
+				}
+				type: "item"
+			}]
+			x: -19.5d
+			y: -16.5d
+		}
+		{
+			dependencies: ["7665244BC5744A0A"]
+			id: "2F9E165A7643EC15"
+			subtitle: "Ice ice baby"
+			tasks: [{
+				id: "1116E43D9206E410"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:blue_ice"
+					}
+				}
+				type: "item"
+			}]
+			x: 18.0d
+			y: -20.0d
+		}
+		{
+			dependencies: ["3CCEB1500AFFD218"]
+			id: "1C30A2D6BD191C6A"
+			subtitle: "MY EYES!"
+			tasks: [{
+				id: "2C7CB2064CECB691"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:glowstone"
+					}
+				}
+				type: "item"
+			}]
+			x: 18.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"59AC01EE88361B2A"
+				"58EF68AEA9983F39"
+			]
+			description: ["If you play DRG you would understand."]
+			id: "5A411EC4C3F730AF"
+			subtitle: "Tick tock, team...! We're not getting any younger here!"
+			tasks: [{
+				id: "2F417E2FA840DF1F"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:precision_mechanism"
+					}
+				}
+				type: "item"
+			}]
+			x: -18.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0999064FC6C4C5FE"]
+			id: "58EF68AEA9983F39"
+			tasks: [{
+				id: "0C5CF94494F73E05"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:sturdy_sheet"
+					}
+				}
+				type: "item"
+			}]
+			x: -16.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4AF48E980CCBCE3B"]
+			id: "1B5288FD0602ECDC"
+			tasks: [{
+				id: "138F32B5080A595A"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:rose_quartz"
+					}
+				}
+				type: "item"
+			}]
+			x: -19.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1B5288FD0602ECDC"]
+			id: "7B35DC5287E45E32"
+			tasks: [{
+				id: "31B221A191BE5EDE"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:electron_tube"
+					}
+				}
+				type: "item"
+			}]
+			x: -20.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7B35DC5287E45E32"]
+			id: "59AC01EE88361B2A"
+			tasks: [{
+				id: "1C34029F3E82006B"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:train_track"
+					}
+				}
+				type: "item"
+			}]
+			x: -19.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1AF61723122CD57F"]
+			description: ["I personally enjoy Earl Gray tea myself, try some!"]
+			id: "4AA110E53E446F07"
+			subtitle: "It's great with tea!"
+			tasks: [{
+				id: "5095457D8E4B9A4A"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:honey"
+					}
+				}
+				type: "item"
+			}]
+			x: 20.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4AA110E53E446F07"]
+			id: "3CCEB1500AFFD218"
+			tasks: [{
+				id: "232E71752926B165"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:sea_lantern"
+					}
+				}
+				type: "item"
+			}]
+			x: 19.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6762D7F87F3F59F3"]
+			id: "4AF48E980CCBCE3B"
+			tasks: [{
+				id: "145CBB1E966FC57C"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:andesite_alloy"
+					}
+				}
+				type: "item"
+			}]
+			x: -18.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7D825E2854279E2C"]
+			id: "0999064FC6C4C5FE"
+			tasks: [{
+				id: "2B055B4AC444B04D"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:brass"
+					}
+				}
+				type: "item"
+			}]
+			x: -16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2B203810B76A8C0A"]
+			id: "7665244BC5744A0A"
+			subtitle: "Look! It's Martian sand!"
+			tasks: [{
+				id: "4E449E0F397979F5"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:red_sand"
+					}
+				}
+				type: "item"
+			}]
+			x: 16.5d
+			y: -19.5d
+		}
+		{
+			dependencies: ["4AF48E980CCBCE3B"]
+			id: "7D825E2854279E2C"
+			tasks: [{
+				id: "6893B960970E8F8D"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:zinc"
+					}
+				}
+				type: "item"
+			}]
+			x: -16.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6669529B330258FB"]
+			id: "7076B3EE15B33C23"
+			subtitle: "This might be very difficult to automate."
+			tasks: [{
+				id: "749E4B52142E3EAF"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:end_crystal"
+					}
+				}
+				type: "item"
+			}]
+			x: -9.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["5A411EC4C3F730AF"]
+			description: [
+				"<shake>*laughing maniacally*</shake>"
+				""
+				"&o<shake>FINALLY!</shake>&r"
+				""
+				"<shake>I've been trying to catch you boys all day!</shake>"
+				""
+				"Now that I've got you right where I want you..."
+				""
+				"*brings out a mountain of cash from his pocket*"
+				""
+				"&aI'd like to buy all of your chocolate.&r"
+				""
+				"-+-"
+				""
+				"A Spongebob reference."
+			]
+			id: "2E964E3859C482A9"
+			rewards: [{
+				count: 1024
+				id: "58741798889AF961"
+				item: "minecraft:netherite_block"
+				type: "item"
+			}]
+			subtitle: "CHOCOLATE? CHOCOLATE? CHOCOLATE!!!!!"
+			tasks: [{
+				id: "33FCC4E63EFB1237"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:chocolate"
+					}
+				}
+				type: "item"
+			}]
+			x: -18.0d
+			y: 16.5d
+		}
+		{
+			dependencies: ["2E964E3859C482A9"]
+			description: ["Try some Earl Gray tea, might just provide enough vitality to get you through this one."]
+			id: "6669529B330258FB"
+			subtitle: "Best enjoyed with a cup of tea."
+			tasks: [{
+				id: "5CE15E7D6ED67BF3"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:builders_tea"
+					}
+				}
+				type: "item"
+			}]
+			x: -18.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["63BBAEF6C31F1C1D"]
+			id: "0BCC4658B1525915"
+			subtitle: "/tpa"
+			tasks: [{
+				id: "2B2527CBAAB5A888"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:ender_pearl"
+					}
+				}
+				type: "item"
+			}]
+			x: 18.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"5587D80342F8CAEE"
+				"2F9E165A7643EC15"
+			]
+			description: ["Everything is fine here chief"]
+			id: "63BBAEF6C31F1C1D"
+			subtitle: "*light mode*"
+			tasks: [{
+				id: "495BF0CFC9BA5E73"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:tinted_glass"
+					}
+				}
+				type: "item"
+			}]
+			x: 18.0d
+			y: -16.0d
+		}
+		{
+			dependencies: ["123D0E0F69B73A88"]
+			id: "0E7069A0CF461FAF"
+			subtitle: "The tools of the Creator."
+			tasks: [
+				{
+					id: "4F8370680B7192C9"
+					item: "kubejs:final_sword"
+					type: "item"
+				}
+				{
+					id: "4FE5862CECE32A8A"
+					item: "kubejs:final_pickaxe"
+					type: "item"
+				}
+				{
+					id: "2700AE63E1262479"
+					item: "kubejs:final_axe"
+					type: "item"
+				}
+				{
+					id: "7AB11B0CE29F8EA8"
+					item: "kubejs:final_shovel"
+					type: "item"
+				}
+				{
+					id: "7DF5B623D8502F9F"
+					item: "kubejs:final_hoe"
+					type: "item"
+				}
+			]
+			title: "&l<rainb>Instrumenta Omnipotens</rainb>"
+			x: -4.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["123D0E0F69B73A88"]
+			description: [""]
+			id: "6EA37B17D3E8D6DC"
+			subtitle: "Armor of the Creator."
+			tasks: [
+				{
+					id: "620DD50BF1826F19"
+					item: "kubejs:final_helmet"
+					type: "item"
+				}
+				{
+					id: "6CE7690C2492FA1D"
+					item: "kubejs:final_chestplate"
+					type: "item"
+				}
+				{
+					id: "16B1EB4D64821F4C"
+					item: "kubejs:final_leggings"
+					type: "item"
+				}
+				{
+					id: "741E93B7515E1A4A"
+					item: "kubejs:final_boots"
+					type: "item"
+				}
+			]
+			title: "&l<rainb>Arma Omnipotens</rainb>"
+			x: 4.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["123D0E0F69B73A88"]
+			description: ["There's Ultimerite and Creativerite armor and tools for you to use as well, if you like."]
+			id: "2E104733BBA290DB"
+			subtitle: "Are you still sane?"
+			tasks: [
+				{
+					id: "65B3667242BB3F88"
+					item: "upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot"
+					type: "item"
+				}
+				{
+					id: "3D93A01AC0D7C1C6"
+					item: "upgradednetherite_creative:creative_upgraded_netherite_ingot"
+					type: "item"
+				}
+			]
+			title: "Ultimerite to Creativerite"
+			x: 0.0d
+			y: -9.0d
+		}
+		{
+			dependencies: ["1544915BBE4467E4"]
+			id: "4F8E459413F29159"
+			subtitle: "Good luck."
+			tasks: [
+				{
+					id: "5B27C6D23E410D06"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_black"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "19A95F31F5CB4706"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_white"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "47815AB5F1AA1752"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_pink"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "28C5A25B97C19758"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_orange"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1C7B3DD61250CA13"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_red"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "7D261CA53FD9122B"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_gray"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "289804B6869D2FAA"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_yellow"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6DBD52CA265FFCEF"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_brown"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0A89AFDE8C14CC3D"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_cyan"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "550C7408B785105F"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_green"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "5747E5F187A8FAD5"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_light_gray"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "42878BA1F3E120BD"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_light_blue"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "25A4A1F32B62B15F"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_lime"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "096292091963949D"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_blue"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "40BF2F4EC2AE4675"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_magenta"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "40AB007036CB0AD1"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_purple"
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "The Concrete Singularities"
+			x: 9.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["1C30A2D6BD191C6A"]
+			description: ["Just need to loosen up the souls a bit, nothing is wrong with that."]
+			id: "41220EA822DD6B9F"
+			subtitle: "Don't think about it."
+			tasks: [{
+				id: "1BA4A0456CC76355"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:soul_sand"
+					}
+				}
+				type: "item"
+			}]
+			x: 18.0d
+			y: 16.5d
+		}
+		{
+			dependencies: ["41220EA822DD6B9F"]
+			id: "1544915BBE4467E4"
+			subtitle: "Don't question it."
+			tasks: [{
+				id: "04BA94F6C3CD6E88"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:soul_soil"
+					}
+				}
+				type: "item"
+			}]
+			x: 18.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["0BCC4658B1525915"]
+			description: ["*creeper explosion*"]
+			id: "1AF61723122CD57F"
+			subtitle: "SSSssssssss..."
+			tasks: [{
+				id: "2E24AB8C13DA10E2"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:gunpowder"
+					}
+				}
+				type: "item"
+			}]
+			x: 19.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7281437657B6287F"]
+			description: ["I don't know what to put here."]
+			id: "43D0F0BE8749A33C"
+			subtitle: "Feeling blue?"
+			tasks: [{
+				id: "32C29D313FDAB36C"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:lapis_lazuli"
+					}
+				}
+				type: "item"
+			}]
+			x: -18.0d
+			y: -20.0d
+		}
 	]
+	subtitle: ["<rainb>Are you sure you want to do this?</rainb>"]
 	title: "Epilogue"
 }
