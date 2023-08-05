@@ -35,6 +35,11 @@
 				"To bind Ender Chests or Ender Tanks, right click on them with a Diamond."
 			]
 			id: "537EBAE5E0065751"
+			rewards: [{
+				id: "2F7CD886CAA71A8D"
+				type: "xp"
+				xp: 200
+			}]
 			subtitle: "These mods are made by shetiphian."
 			tasks: [{
 				id: "01F2D5DD6B7417BA"
@@ -47,7 +52,15 @@
 		}
 		{
 			dependencies: ["537EBAE5E0065751"]
+			description: [
+				"Use ender eyes or ender pearls to increase the amount of storage."
+				""
+				"Use dyes to color the channels."
+				""
+				"Use a diamond to lock it to yourself."
+			]
 			id: "124DCED733F1F423"
+			subtitle: "Can be upgraded."
 			tasks: [{
 				id: "34EA586AB3034F06"
 				item: {
@@ -66,6 +79,7 @@
 		{
 			dependencies: ["537EBAE5E0065751"]
 			id: "42D2219C7161A185"
+			subtitle: "Wireless fluid tanks..."
 			tasks: [{
 				id: "2DDDFDA5D66FF258"
 				item: {
@@ -84,6 +98,7 @@
 		{
 			dependencies: ["42D2219C7161A185"]
 			id: "2328A84037C87D9F"
+			subtitle: "You know what, I might regret this."
 			tasks: [{
 				id: "4EEF4A44A98F2C6B"
 				item: {
@@ -103,6 +118,7 @@
 		{
 			dependencies: ["7B6F4E63BE0885B6"]
 			id: "72664E72295EA82F"
+			subtitle: "It's a mobile ender chest!"
 			tasks: [{
 				id: "24DAC654429C17A4"
 				item: {
@@ -122,6 +138,7 @@
 		{
 			dependencies: ["537EBAE5E0065751"]
 			id: "7B6F4E63BE0885B6"
+			subtitle: "An ender chest turned into a bag."
 			tasks: [{
 				id: "1E2F4E2E6FFA5FD7"
 				item: {
@@ -139,13 +156,78 @@
 		{
 			dependencies: ["1229F8883A381F07"]
 			id: "0621698FB6DA317F"
+			rewards: [{
+				id: "696CDBAE6D8F38EF"
+				type: "xp"
+				xp: 200
+			}]
+			subtitle: "An introduction to cloud storage."
 			tasks: [{
 				id: "230EA0E4CF27ED33"
 				item: "cloudstorage:guide_book"
 				type: "item"
 			}]
+			title: "Cloud Storage and You"
 			x: 0.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["0621698FB6DA317F"]
+			icon: "cloudstorage:cloud_chest"
+			id: "54AB904AF8AB6C07"
+			subtitle: "Be sure to send some chests to the sky!"
+			tasks: [
+				{
+					id: "4CD5D739D901167C"
+					item: "cloudstorage:cloud_chest"
+					type: "item"
+				}
+				{
+					id: "6DC19FE1FB765C6D"
+					item: "cloudstorage:balloon"
+					type: "item"
+				}
+				{
+					id: "75453FF887585A52"
+					item: "cloudstorage:balloon_stand"
+					type: "item"
+				}
+			]
+			title: "Cloud Storage... Literally."
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["54AB904AF8AB6C07"]
+			icon: "cloudstorage:static_cloud"
+			id: "37A9592B69D284BF"
+			subtitle: "Everyone loves static electricity!"
+			tasks: [
+				{
+					id: "6C11DEF871FD420E"
+					item: "cloudstorage:static_cloud"
+					type: "item"
+				}
+				{
+					id: "17CE13342B5394C3"
+					item: "cloudstorage:balloon"
+					type: "item"
+				}
+			]
+			title: "Shocking!"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["37A9592B69D284BF"]
+			id: "6C5EACFBFB1E42C1"
+			tasks: [{
+				id: "788ABBD07C80B6CE"
+				item: "cloudstorage:static_cloud_chest"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.0d
 		}
 	]
 	subtitle: ["Organization is your best friend."]

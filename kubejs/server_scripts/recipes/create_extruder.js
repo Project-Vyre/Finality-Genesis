@@ -30,4 +30,8 @@ ServerEvents.recipes(event => {
         Fluid.of('create:honey'),
         Fluid.of('minecraft:lava')
     ]).id('finality:renew_extruder_limestone_alt')
+    event.recipes.createMechanicalExtruderExtruding(Item.of('create:scoria'), [
+        Fluid.of('create:chocolate'),
+        Fluid.of('minecraft:lava')
+    ]).id('finality:renew_extruder_scoria_compat')
 })

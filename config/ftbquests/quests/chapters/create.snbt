@@ -292,6 +292,11 @@
 		{
 			dependencies: ["62D55614D95E7356"]
 			id: "770AD4193CC23EA3"
+			rewards: [{
+				id: "181B75596FF864D8"
+				type: "xp"
+				xp: 200
+			}]
 			subtitle: "A foundational ingredient."
 			tasks: [{
 				id: "4968755DF97B9F34"
@@ -304,6 +309,11 @@
 		{
 			dependencies: ["62D55614D95E7356"]
 			id: "2E386081E5302CF5"
+			rewards: [{
+				id: "48FD3AB2D6DA0474"
+				type: "xp"
+				xp: 200
+			}]
 			subtitle: "A foundational ingredient."
 			tasks: [{
 				id: "38B3DD686D998467"
@@ -328,6 +338,11 @@
 		{
 			dependencies: ["62D55614D95E7356"]
 			id: "75E673394451C2F4"
+			rewards: [{
+				id: "78C5C0046566E6A5"
+				type: "xp"
+				xp: 200
+			}]
 			subtitle: "A very useful ingredient."
 			tasks: [{
 				id: "0F8883072FD3C1E3"
@@ -680,6 +695,11 @@
 		{
 			dependencies: ["75E673394451C2F4"]
 			id: "18B37484A6C7F37E"
+			rewards: [{
+				id: "3463FCB44760D9E4"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
 			subtitle: "Quite an important component."
 			tasks: [{
 				id: "1406D000426425FC"
@@ -692,6 +712,11 @@
 		{
 			dependencies: ["75E673394451C2F4"]
 			id: "328DCAF24F6DF4C5"
+			rewards: [{
+				id: "3FD3D67BDA26D8E7"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
 			subtitle: "It really helps you see Create related info at all times!"
 			tasks: [{
 				id: "239A73F5073D197C"
@@ -766,12 +791,18 @@
 			]
 			icon: "create:steam_engine"
 			id: "4EC7951A5F29EE1A"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "5DC0967F307BA583"
-				table_id: 103743719166323827L
-				type: "random"
-			}]
+			rewards: [
+				{
+					id: "5DC0967F307BA583"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "3073B6F3BE5158BC"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
 			shape: "hexagon"
 			subtitle: "The strongest source of rotational power."
 			tasks: [
@@ -1519,7 +1550,7 @@
 			y: -9.5d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["65FC712C5D7E312D"]
 			description: [
 				"There is so much depth to Create, it is very difficult to fully document in both a text format and a progression tree."
 				""
@@ -1538,6 +1569,7 @@
 			hide: true
 			icon: "create:schematic_and_quill"
 			id: "187E2B3FDE19DD4D"
+			min_required_dependencies: 1
 			rewards: [{
 				exclude_from_claim_all: true
 				id: "71772E679E1870BE"
@@ -1841,6 +1873,11 @@
 			dependencies: ["3A0AE21655B5678E"]
 			description: ["Congratulations, you have made more bread than you usually do thanks to the power of the Millstone."]
 			id: "6A36F0E0A5E0154D"
+			rewards: [{
+				id: "57EE85F806E514C4"
+				type: "xp"
+				xp: 200
+			}]
 			subtitle: "Delicious bread!"
 			tasks: [{
 				id: "6574DE18574AF710"
@@ -1861,12 +1898,19 @@
 				"Hold Alt to open the Toolbox interface and move your mouse to change selection."
 			]
 			id: "57D6D3AF17AE4DD1"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "680955B61C7DB63B"
-				table_id: 2071744225430230389L
-				type: "choice"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "680955B61C7DB63B"
+					table_id: 2071744225430230389L
+					type: "choice"
+				}
+				{
+					id: "154980D07025395D"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
 			subtitle: "Magically accessible without direct access!"
 			tasks: [{
 				id: "1DB9CFD6B2F25D54"
@@ -2060,6 +2104,7 @@
 				"584B2971C4DEB905"
 				"38E2EE3F3F2C2E6C"
 			]
+			description: ["You can also hold the haunted bell in your offhand to see where mobs have the possibility of spawning."]
 			id: "3E0990C4385C0B5F"
 			subtitle: "I shall show you where the souls of the damned appear o' wise one."
 			tasks: [{
@@ -2434,6 +2479,19 @@
 			title: "Fancy Train Doors"
 			x: 11.5d
 			y: 1.0d
+		}
+		{
+			dependencies: ["00DA4B8905FE3CAF"]
+			id: "4E1378EE0FABE18C"
+			subtitle: "An elegant way to showcase an item."
+			tasks: [{
+				id: "1B061BD5EC858133"
+				item: "create:placard"
+				type: "item"
+			}]
+			title: "The Placard"
+			x: -12.5d
+			y: -9.5d
 		}
 	]
 	subtitle: [

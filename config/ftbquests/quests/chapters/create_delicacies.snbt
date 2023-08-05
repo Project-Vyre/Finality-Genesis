@@ -13,6 +13,19 @@
 			description: ["Simply pour some honey with a Spout onto an Apple to make one Honeyed Apple."]
 			hide: true
 			id: "1A453676D90594AC"
+			rewards: [
+				{
+					id: "1CCA1D1EE2416960"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3111DB4E928FB4C7"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			subtitle: "A delicious, fulfilling snack."
 			tasks: [{
 				count: 16L
@@ -29,9 +42,22 @@
 			description: ["This is going to require a bit of setup..."]
 			hide: true
 			id: "185B4800C4077816"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "613D096E94AE93FD"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "4E3241A5D287817E"
+					type: "xp_levels"
+					xp_levels: 50
+				}
+			]
 			subtitle: "Invigorating!"
 			tasks: [{
-				count: 8L
+				count: 32L
 				id: "4AE5643CF1AC98CD"
 				item: "create:builders_tea"
 				type: "item"
@@ -45,12 +71,25 @@
 			description: ["I'd like to buy all of your chocolate."]
 			hide: true
 			id: "7284C936E41492CE"
-			rewards: [{
-				count: 9
-				id: "5408237C8FDA81B2"
-				item: "minecraft:netherite_block"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 9
+					id: "5408237C8FDA81B2"
+					item: "minecraft:diamond_block"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "246C4ED856B1B5BC"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "34565454AC2CA07E"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
 			subtitle: "Chocolate? Did you say chocolate? Chocolate?! CHOCOLAAAATEEE?!!!"
 			tasks: [{
 				count: 1024L
@@ -66,6 +105,25 @@
 			dependencies: ["7284C936E41492CE"]
 			description: ["Put that chocolate factory to use!"]
 			id: "7118D4C70AE8A159"
+			rewards: [
+				{
+					count: 9
+					id: "07FEC0C546747EFC"
+					item: "minecraft:diamond_block"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "320A8B32CB7F11CA"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "6EA42FFAC52046C4"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
 			subtitle: "If only chocolate glazed strawberries existed..."
 			tasks: [{
 				count: 256L
@@ -80,9 +138,22 @@
 		{
 			dependencies: ["1E617671F56B9DD8"]
 			id: "4C188B7382FDFDE7"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "63C08D8ED22E91B0"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "7A7701F76C0AB2DD"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
 			subtitle: "Looks like a cinnamon bun, doesn't it?"
 			tasks: [{
-				count: 16L
+				count: 32L
 				id: "3C9A10BAB940CDFC"
 				item: "create:sweet_roll"
 				type: "item"
@@ -110,6 +181,11 @@
 			dependencies: ["4A691BB889286C89"]
 			hide: true
 			id: "328308DEFA3C37CB"
+			rewards: [{
+				id: "148B30A2C6F1BB24"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
 			subtitle: "You can now make your sentient fireplace into a sentient stovetop. Pretty neat right?"
 			tasks: [{
 				id: "2B84D889789E42AD"

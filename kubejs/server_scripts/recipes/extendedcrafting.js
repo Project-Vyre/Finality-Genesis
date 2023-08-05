@@ -1,16 +1,16 @@
 let DYE = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 let SAND = ['sand', 'red_sand']
 ServerEvents.recipes(event => {
-    event.remove({id: 'tconstruct:common/glass/vanilla/beacon'})
-    event.remove({id: 'unusualend:end_crystal'})
-    event.remove({id: 'unusualend:end_crystal_via_chiseled_glass'})
-    event.remove({id: 'tconstruct:common/glass/vanilla/end_crystal'})
+    event.remove({ id: 'tconstruct:common/glass/vanilla/beacon' })
+    event.remove({ id: 'unusualend:end_crystal' })
+    event.remove({ id: 'unusualend:end_crystal_via_chiseled_glass' })
+    event.remove({ id: 'tconstruct:common/glass/vanilla/end_crystal' })
     event.shapeless('extendedcrafting:black_iron_ingot', [
-        'minecraft:iron_ingot', 
-        'minecraft:black_dye', 
+        'minecraft:iron_ingot',
+        'minecraft:black_dye',
         'create:powdered_obsidian'
     ]).id('extendedcrafting:black_iron_ingot')
-    event.shaped('minecraft:beacon',[
+    event.shaped('minecraft:beacon', [
         'GGG',
         'GSG',
         'OOO'
@@ -32,7 +32,7 @@ ServerEvents.recipes(event => {
         G: 'minecraft:gold_ingot'
     }).id('finality:crystaltine_mechanical_translate')
     event.recipes.createCrushing([
-        'extendedcrafting:the_ultimate_nugget', 
+        'extendedcrafting:the_ultimate_nugget',
         Item.of('extendedcrafting:the_ultimate_nugget').withChance(0.25)
     ], 'extendedcrafting:ultimate_singularity').processingTime(1200).id('finality:the_ultimate_nugget')
     event.recipes.createMechanicalCrafting('create:handheld_worldshaper', [
@@ -46,7 +46,7 @@ ServerEvents.recipes(event => {
         O: 'create:sturdy_sheet',
         I: 'extendedcrafting:the_ultimate_ingot'
     }).id('finality:create_worldshaper')
-    event.recipes.createMixing(['extendedcrafting:ender_star'], ['minecraft:nether_star', '4x minecraft:ender_eye']).heated().id('extendedcrafting:ender_star')
+    event.recipes.createMixing(['extendedcrafting:ender_star'], ['minecraft:nether_star', '4x minecraft:ender_eye']).heated().id('finality:ender_star_mixing')
     // modified vanilla recipes
     event.shapeless('minecraft:end_crystal', [
         '4x #forge:glass/colorless',
@@ -110,7 +110,7 @@ ServerEvents.recipes(event => {
     event.recipes.createSequencedAssembly([
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:blue_ice"}')
     ], 'kubejs:awakened_singularity_core', [
-        event.recipes.createDeploying(['kubejs:incomplete_blue_ice_singularity'], ['kubejs:incomplete_blue_ice_singularity','minecraft:blue_ice']),
+        event.recipes.createDeploying(['kubejs:incomplete_blue_ice_singularity'], ['kubejs:incomplete_blue_ice_singularity', 'minecraft:blue_ice']),
         event.recipes.createFilling(['kubejs:incomplete_blue_ice_singularity'], ['kubejs:incomplete_blue_ice_singularity', Fluid.of('minecraft:water', 25)]),
         event.recipes.createPressing(['kubejs:incomplete_blue_ice_singularity'], ['kubejs:incomplete_blue_ice_singularity']),
         event.recipes.createPressing(['kubejs:incomplete_blue_ice_singularity'], ['kubejs:incomplete_blue_ice_singularity']),
@@ -119,7 +119,7 @@ ServerEvents.recipes(event => {
     event.recipes.createSequencedAssembly([
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:coarse_dirt"}')
     ], 'kubejs:awakened_singularity_core', [
-        event.recipes.createDeploying('kubejs:incomplete_coarse_dirt_singularity', ['kubejs:incomplete_coarse_dirt_singularity','minecraft:coarse_dirt']),
+        event.recipes.createDeploying('kubejs:incomplete_coarse_dirt_singularity', ['kubejs:incomplete_coarse_dirt_singularity', 'minecraft:coarse_dirt']),
         event.recipes.createFilling('kubejs:incomplete_coarse_dirt_singularity', ['kubejs:incomplete_coarse_dirt_singularity', Fluid.of('minecraft:water', 25)]),
         event.recipes.createPressing('kubejs:incomplete_coarse_dirt_singularity', 'kubejs:incomplete_coarse_dirt_singularity'),
         event.recipes.createPressing('kubejs:incomplete_coarse_dirt_singularity', 'kubejs:incomplete_coarse_dirt_singularity'),
@@ -128,7 +128,7 @@ ServerEvents.recipes(event => {
     SAND.forEach(insert => event.recipes.createSequencedAssembly([
         Item.of('extendedcrafting:singularity', `{Id:"extendedcrafting:${insert}"}`)
     ], 'kubejs:awakened_singularity_core', [
-        event.recipes.createDeploying(`kubejs:incomplete_${insert}_singularity`, [`kubejs:incomplete_${insert}_singularity`,`minecraft:${insert}`]),
+        event.recipes.createDeploying(`kubejs:incomplete_${insert}_singularity`, [`kubejs:incomplete_${insert}_singularity`, `minecraft:${insert}`]),
         event.recipes.createPressing(`kubejs:incomplete_${insert}_singularity`, `kubejs:incomplete_${insert}_singularity`),
         event.recipes.createPressing(`kubejs:incomplete_${insert}_singularity`, `kubejs:incomplete_${insert}_singularity`),
         event.recipes.createPressing(`kubejs:incomplete_${insert}_singularity`, `kubejs:incomplete_${insert}_singularity`),
@@ -157,7 +157,7 @@ ServerEvents.recipes(event => {
     event.recipes.createSequencedAssembly([
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:cobblestone"}')
     ], 'kubejs:awakened_singularity_core', [
-        event.recipes.createDeploying('kubejs:incomplete_cobblestone_singularity', ['kubejs:incomplete_cobblestone_singularity','minecraft:cobblestone']),
+        event.recipes.createDeploying('kubejs:incomplete_cobblestone_singularity', ['kubejs:incomplete_cobblestone_singularity', 'minecraft:cobblestone']),
         event.recipes.createFilling('kubejs:incomplete_cobblestone_singularity', ['kubejs:incomplete_cobblestone_singularity', Fluid.of('minecraft:lava', 25)]),
         event.recipes.createPressing('kubejs:incomplete_cobblestone_singularity', 'kubejs:incomplete_cobblestone_singularity'),
         event.recipes.createPressing('kubejs:incomplete_cobblestone_singularity', 'kubejs:incomplete_cobblestone_singularity'),
@@ -166,9 +166,9 @@ ServerEvents.recipes(event => {
     event.recipes.createSequencedAssembly([
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:framed_glass"}')
     ], 'kubejs:awakened_singularity_core', [
-        event.recipes.createDeploying('kubejs:incomplete_framed_glass_singularity', ['kubejs:incomplete_framed_glass_singularity','create:framed_glass']),
+        event.recipes.createDeploying('kubejs:incomplete_framed_glass_singularity', ['kubejs:incomplete_framed_glass_singularity', 'create:framed_glass']),
         event.recipes.createFilling('kubejs:incomplete_framed_glass_singularity', ['kubejs:incomplete_framed_glass_singularity', Fluid.of('minecraft:lava', 25)]),
-        event.recipes.createDeploying('kubejs:incomplete_framed_glass_singularity', ['kubejs:incomplete_framed_glass_singularity','create:framed_glass']),
+        event.recipes.createDeploying('kubejs:incomplete_framed_glass_singularity', ['kubejs:incomplete_framed_glass_singularity', 'create:framed_glass']),
         event.recipes.createPressing('kubejs:incomplete_framed_glass_singularity', 'kubejs:incomplete_framed_glass_singularity'),
         event.recipes.createPressing('kubejs:incomplete_framed_glass_singularity', 'kubejs:incomplete_framed_glass_singularity')
     ]).transitionalItem('kubejs:incomplete_framed_glass_singularity').loops(32).id('finality:framed_glass_singularity')
@@ -188,19 +188,19 @@ ServerEvents.recipes(event => {
         Item.of('create:large_cogwheel', 8).withChance(25.0),
         '32x create:precision_mechanism'
     ], 'kubejs:awakened_singularity_core', [
-        event.recipes.createDeploying('kubejs:incomplete_precision_mechanism_singularity', ['kubejs:incomplete_precision_mechanism_singularity','create:precision_mechanism']),
-        event.recipes.createDeploying('kubejs:incomplete_precision_mechanism_singularity', ['kubejs:incomplete_precision_mechanism_singularity','create:cogwheel']),
-        event.recipes.createDeploying('kubejs:incomplete_precision_mechanism_singularity', ['kubejs:incomplete_precision_mechanism_singularity','create:large_cogwheel']),
-        event.recipes.createDeploying('kubejs:incomplete_precision_mechanism_singularity', ['kubejs:incomplete_precision_mechanism_singularity','extendedcrafting:redstone_nugget']),
+        event.recipes.createDeploying('kubejs:incomplete_precision_mechanism_singularity', ['kubejs:incomplete_precision_mechanism_singularity', 'create:precision_mechanism']),
+        event.recipes.createDeploying('kubejs:incomplete_precision_mechanism_singularity', ['kubejs:incomplete_precision_mechanism_singularity', 'create:cogwheel']),
+        event.recipes.createDeploying('kubejs:incomplete_precision_mechanism_singularity', ['kubejs:incomplete_precision_mechanism_singularity', 'create:large_cogwheel']),
+        event.recipes.createDeploying('kubejs:incomplete_precision_mechanism_singularity', ['kubejs:incomplete_precision_mechanism_singularity', 'extendedcrafting:redstone_nugget']),
         event.recipes.createPressing('kubejs:incomplete_precision_mechanism_singularity', 'kubejs:incomplete_precision_mechanism_singularity'),
         event.recipes.createPressing('kubejs:incomplete_precision_mechanism_singularity', 'kubejs:incomplete_precision_mechanism_singularity')
     ]).transitionalItem('kubejs:incomplete_precision_mechanism_singularity').loops(16).id('finality:precision_mechanism_singularity')
     event.recipes.createSequencedAssembly([
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:sturdy_sheet"}')
     ], 'kubejs:awakened_singularity_core', [
-        event.recipes.createDeploying('kubejs:incomplete_sturdy_sheet_singularity', ['kubejs:incomplete_sturdy_sheet_singularity','create:sturdy_sheet']),
+        event.recipes.createDeploying('kubejs:incomplete_sturdy_sheet_singularity', ['kubejs:incomplete_sturdy_sheet_singularity', 'create:sturdy_sheet']),
         event.recipes.createFilling('kubejs:incomplete_sturdy_sheet_singularity', ['kubejs:incomplete_sturdy_sheet_singularity', Fluid.of('minecraft:lava', 25)]),
-        event.recipes.createDeploying('kubejs:incomplete_sturdy_sheet_singularity', ['kubejs:incomplete_sturdy_sheet_singularity','create:sturdy_sheet']),
+        event.recipes.createDeploying('kubejs:incomplete_sturdy_sheet_singularity', ['kubejs:incomplete_sturdy_sheet_singularity', 'create:sturdy_sheet']),
         event.recipes.createPressing('kubejs:incomplete_sturdy_sheet_singularity', 'kubejs:incomplete_sturdy_sheet_singularity'),
         event.recipes.createPressing('kubejs:incomplete_sturdy_sheet_singularity', 'kubejs:incomplete_sturdy_sheet_singularity'),
         event.recipes.createPressing('kubejs:incomplete_sturdy_sheet_singularity', 'kubejs:incomplete_sturdy_sheet_singularity')
@@ -245,7 +245,7 @@ ServerEvents.recipes(event => {
     // mechanical crafting singularities
     let VANILLAMATS = ['amethyst', 'copper', 'iron', 'redstone', 'gold', 'diamond', 'emerald', 'quartz', 'netherite', 'honey']
     let VANILLANOTSTANDARD = ['ender_pearl', 'gunpowder', 'sea_lantern', 'glowstone']
-    let CREATEITEMS = ['electron_tube','rose_quartz']
+    let CREATEITEMS = ['electron_tube', 'rose_quartz']
     event.recipes.createMechanicalCrafting(Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:coal"}'), [
         ' CCCCCCC ',
         'CCCCCCCCC',
@@ -307,7 +307,7 @@ ServerEvents.recipes(event => {
             L: 'minecraft:crying_obsidian',
             C: 'kubejs:awakened_singularity_core',
             O: `minecraft:${insert}`
-        }).id(`finality:${insert}_singularity`)        
+        }).id(`finality:${insert}_singularity`)
     })
     CREATEITEMS.forEach(insert => {
         event.recipes.createMechanicalCrafting(Item.of('extendedcrafting:singularity', `{Id:"extendedcrafting:${insert}"}`), [

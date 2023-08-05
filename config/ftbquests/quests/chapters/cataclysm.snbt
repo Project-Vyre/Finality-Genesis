@@ -5,6 +5,18 @@
 	group: ""
 	icon: "cataclysm:altar_of_fire"
 	id: "44955FEF08EBF071"
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 64.0d
+		hover: [ ]
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
 	order_index: 2
 	quest_links: [ ]
 	quests: [
@@ -269,9 +281,11 @@
 				"4A691BB889286C89"
 				"5335BF00DB2A8CCE"
 			]
+			description: ["It's actually very visible on the ocean surface..."]
 			hide: true
 			id: "4179D9074E74A11B"
 			shape: "square"
+			subtitle: "A long time ago..."
 			tasks: [{
 				icon: "cataclysm:chiseled_stone_brick_pillar"
 				id: "39FD9536C33D32DA"
@@ -321,7 +335,7 @@
 			description: [
 				"Tame and heal the baby leviathan with some tropical fish. "
 				""
-				"Please try to protect it at all costs ;-;"
+				"Please try to protect it at all costs >.>"
 			]
 			icon: "cataclysm:tidal_claws"
 			id: "7B41C8C1C7837774"
@@ -408,7 +422,9 @@
 		}
 		{
 			dependencies: ["13186E7B0D6B6115"]
+			hide: true
 			id: "54378BE3AEDD91A3"
+			min_required_dependencies: 1
 			subtitle: "Might want some preparation first."
 			tasks: [{
 				id: "622A03DC3FD49769"

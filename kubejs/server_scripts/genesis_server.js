@@ -372,7 +372,7 @@ PlayerEvents.tick(check => {
                 chestArmorItem.id === sets[armorSet].name + '_chestplate' &&
                 legsArmorItem.id === sets[armorSet].name + '_leggings' &&
                 feetArmorItem.id === sets[armorSet].name + '_boots'
-                ) {
+            ) {
                 for (let x in sets[armorSet].effects) {
                     check.player.potionEffects.add(
                         sets[armorSet].effects[x].effect,
@@ -387,7 +387,7 @@ PlayerEvents.tick(check => {
 // let CLOCK = 0
 // let sentience = [repairHint, worldMaintenance, ]
 // ServerEvents.tick(event => {
-//     
+//
 // })
 
 // EntityEvents.death('minecraft:wither', event => {
@@ -402,7 +402,7 @@ PlayerEvents.tick(check => {
 //         toast.borderColor = '#267523'
 //     }))
 // })
-// 
+//
 // BlockEvents.rightClicked('minecraft:bedrock', event => {
 //     event.entity.notify(Notification.make(n => {
 //         n.text = [

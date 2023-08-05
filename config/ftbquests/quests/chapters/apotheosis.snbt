@@ -5,24 +5,34 @@
 	group: "6855847200ADBE3A"
 	icon: "apotheosis:gem_dust"
 	id: "6354312DFE41C7F0"
-	order_index: 1
+	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["7D3FA3191B051D55"]
+			description: ["If your item happens to already have slots, you can use a Smithing Table to socket your gems."]
+			icon: "apotheosis:gem_dust"
 			id: "0EB2D84D0683C5C5"
 			subtitle: "Gem Dust has lots of utility."
-			tasks: [{
-				id: "65F2DD9E96FBF7C6"
-				item: "apotheosis:gem_dust"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "65F2DD9E96FBF7C6"
+					item: "apotheosis:gem_dust"
+					type: "item"
+				}
+				{
+					id: "2B76C1E44297757B"
+					item: "minecraft:smithing_table"
+					type: "item"
+				}
+			]
 			title: "Congrats! You sacrificed your item to the dark gods!"
 			x: 0.0d
 			y: 1.0d
 		}
 		{
 			dependencies: ["5D79BD5D3D87DA08"]
+			description: ["You can now use Millstones, Crushing Wheels or an Anvil to get gem dust."]
 			icon: "minecraft:anvil"
 			id: "7D3FA3191B051D55"
 			subtitle: "Sacrifice the stuff to get materials for the powerful stuff, got it?"
@@ -31,12 +41,12 @@
 				item: "apotheosis:gem_dust"
 				type: "item"
 			}]
-			title: "Smash your valuables with a falling anvil."
+			title: "Smash your valueables..."
 			x: 0.0d
 			y: -0.5d
 		}
 		{
-			dependencies: ["0EB2D84D0683C5C5"]
+			dependencies: ["74B2239E6D835FD5"]
 			description: ["This salvages Affixed items and converts them into Rarity Materials."]
 			id: "0CC888B34808370F"
 			subtitle: "It is really important."
@@ -47,7 +57,7 @@
 			}]
 			title: "Make a Salvaging Table, it's important."
 			x: 0.0d
-			y: 3.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -59,7 +69,7 @@
 				type: "item"
 			}]
 			x: -2.0d
-			y: 5.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -71,7 +81,7 @@
 				type: "item"
 			}]
 			x: -1.0d
-			y: 5.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -83,7 +93,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 5.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -95,7 +105,7 @@
 				type: "item"
 			}]
 			x: 1.0d
-			y: 5.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -107,7 +117,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 5.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
@@ -145,6 +155,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
+			description: ["This quest tree is a work in progress and is not completely documented."]
 			hide: true
 			id: "5D79BD5D3D87DA08"
 			shape: "rsquare"
@@ -320,6 +331,17 @@
 			title: "Create the Reforging Table"
 			x: 0.0d
 			y: 11.0d
+		}
+		{
+			dependencies: ["0EB2D84D0683C5C5"]
+			id: "74B2239E6D835FD5"
+			tasks: [{
+				id: "4A4205C21346E6CE"
+				item: "apotheosis:gem_cutting_table"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.5d
 		}
 	]
 	subtitle: ["Apotheosis is that one mod that makes everything powerful."]

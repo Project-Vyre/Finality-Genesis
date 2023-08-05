@@ -34,6 +34,34 @@
 				""
 				"This modpack is not complete, but the end goal is reachable."
 				""
+				"Tips for using &aJust Enough Items&r are on the next page, with &eLootr&r chest info on the page after. Just don't say I didn't warn you if your Lootr chest blows up."
+				""
+				"{@pagebreak}"
+				""
+				"JEI Tips"
+				""
+				"- Left clicking items shows how to get them, with all the methods shown at the top of the recipe viewing window where all those tabs are."
+				""
+				"- Right clicking items shows all the recipes that the item is used in."
+				""
+				"- Fluids in the recipe viewing area can be left clicked to find out how to make them."
+				""
+				"- Press Ctrl + F to focus the search bar then start typing. "
+				""
+				"- If you want to clear the search bar instantly, do Ctrl + A then press Backspace."
+				""
+				"- To search by mod, use @ then type the modid of that mod. Examples: @create or @createaddition or @extendedcrafting"
+				""
+				"Tips regarding Lootr Chests on the next page:"
+				""
+				"{@pagebreak}"
+				""
+				"Lootr chests provide a unique instance of loot for each player, so what your friends get can be different from what you get. It is common courtesy not to break them."
+				""
+				"- Lootr Chests DO NOT say if they are a trapped chest or not, even with Jade. What does this mean for you?"
+				""
+				"&l&c<shake>Check for TNT or redstone around each Lootr chest.</shake>&r"
+				""
 				"{@pagebreak}"
 				""
 				"Thinking of no longer using Patchouli for the guide book..."
@@ -195,11 +223,19 @@
 			]
 			hide: true
 			id: "5693356D2578CF5E"
-			rewards: [{
-				id: "04DB34818E781059"
-				item: "farmersdelight:sweet_berry_cheesecake"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "04DB34818E781059"
+					item: "farmersdelight:sweet_berry_cheesecake"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "693CA5AE8141BD2D"
+					table_id: 946488619696883447L
+					type: "choice"
+				}
+			]
 			shape: "rsquare"
 			subtitle: "Hey, so Apotheosis puts your Sugar Cane, Bamboo and Cactus on steroids."
 			tasks: [
@@ -228,7 +264,13 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			description: ["You can now repair your tools in the crafting grid, so you won't have to throw away your tools."]
+			description: [
+				"You can now &arepair&r your tools in the crafting grid, so you won't have to throw away your tools."
+				""
+				"If you still find yourself running out of string or wool, gather flax seeds and plant them. Flax can then be refined with a Millstone to get additional string and seeds."
+				""
+				"This process can then be automated with Create and its Mechanical Harvesters."
+			]
 			hide: true
 			icon: "extendedcrafting:handheld_table"
 			id: "0AE06EB85B6E1CB6"
@@ -243,6 +285,11 @@
 					id: "376E44019CCE136C"
 					table_id: 7771384237349930739L
 					type: "random"
+				}
+				{
+					id: "3407EBD71CDAC867"
+					type: "xp_levels"
+					xp_levels: 3
 				}
 			]
 			shape: "rsquare"
@@ -275,6 +322,16 @@
 					title: "Make sure to make an FTB Teams party to synchronize quest progress!"
 					type: "checkmark"
 				}
+				{
+					id: "695A99D91AD8683D"
+					item: "supplementaries:flax"
+					type: "item"
+				}
+				{
+					id: "1F862E8D540AD355"
+					item: "supplementaries:flax_seeds"
+					type: "item"
+				}
 			]
 			title: "Convenient Utilities Ch.1"
 			x: 0.0d
@@ -295,6 +352,19 @@
 				}
 			}
 			id: "2EF808209CCECE6A"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "30A53C3FE3D2ED84"
+					table_id: 7159138545964995551L
+					type: "random"
+				}
+				{
+					id: "6E4FAA173CD79F88"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
 			shape: "rsquare"
 			subtitle: "Scientia Consolidationis"
 			tasks: [
@@ -362,6 +432,8 @@
 				""
 				"This quest also has a hidden step, but it requires you to get to The End first."
 				""
+				"On a sidenote, this quest node description has multiple pages."
+				""
 				"{@pagebreak}"
 				""
 				"About Travel Anchors:"
@@ -379,9 +451,20 @@
 				"-+-"
 				""
 				"To unlock the Travel Anchor to rename it, use a stick!"
+				""
+				""
+				"{@pagebreak}"
+				""
+				"Mechanical Extruders can be used to make Create's orestones quite easily."
 			]
 			icon: "tempad:tempad"
 			id: "5E5E9241EB84A4E9"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "5B59718FEA832387"
+				table_id: 103743719166323827L
+				type: "random"
+			}]
 			shape: "rsquare"
 			subtitle: "For all time. Always."
 			tasks: [
@@ -406,6 +489,11 @@
 				{
 					id: "1BDA8E7D4D6D138E"
 					item: "torchmaster:megatorch"
+					type: "item"
+				}
+				{
+					id: "1BDF17D753DA6548"
+					item: "create_mechanical_extruder:mechanical_extruder"
 					type: "item"
 				}
 			]
@@ -439,6 +527,10 @@
 				"If you're lost, just play as if it is regular Minecraft."
 				""
 				"It's just that it is Minecraft with a lot more... &c<wave>dangers</wave>&r."
+				""
+				"You may notice that days and nights are longer as well, just so it does not feel like time is flying by."
+				""
+				"Also, I recommend making a backpack so you can handle loot more easily while you are out exploring and adventuring."
 			]
 			icon: {
 				Count: 1b
@@ -461,20 +553,43 @@
 					table_id: 7771384237349930739L
 					type: "random"
 				}
+				{
+					id: "74F16A4C8B3FAB4F"
+					type: "xp_levels"
+					xp_levels: 3
+				}
 			]
 			shape: "rsquare"
 			subtitle: "I hope you have at least a base set up by now."
-			tasks: [{
-				id: "142AB5886E71101E"
-				item: {
-					Count: 1b
-					id: "minecraft:iron_pickaxe"
-					tag: {
-						Damage: 0
+			tasks: [
+				{
+					id: "142AB5886E71101E"
+					item: {
+						Count: 1b
+						id: "minecraft:iron_pickaxe"
+						tag: {
+							Damage: 0
+						}
 					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					id: "5418A907AB1B1E49"
+					item: "backpacked:backpack"
+					type: "item"
+				}
+				{
+					id: "71A8BBB9C2D9D525"
+					item: {
+						Count: 1b
+						id: "minecraft:shield"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
 			title: "Getting somewhere..."
 			x: 1.5d
 			y: 1.5d
@@ -526,12 +641,19 @@
 				}
 			}
 			id: "13186E7B0D6B6115"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "0FBF701F50C3B651"
-				table_id: 7771384237349930739L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0FBF701F50C3B651"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "25170DED232E55A3"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
 			shape: "rsquare"
 			subtitle: "Be prepared."
 			tasks: [{
@@ -553,6 +675,11 @@
 			dependencies: ["13186E7B0D6B6115"]
 			icon: "minecraft:compass"
 			id: "650B5FD6B6CAD69C"
+			rewards: [{
+				id: "5550D0D6DDAF20F5"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
 			shape: "rsquare"
 			subtitle: "For both explorers and those who seek a certain biome."
 			tasks: [
@@ -698,6 +825,11 @@
 				{
 					id: "6E40E0580F9E273D"
 					item: "minecraft:music_disc_13"
+					type: "item"
+				}
+				{
+					id: "1407CBB9A3115985"
+					item: "minecraft:music_disc_stal"
 					type: "item"
 				}
 			]

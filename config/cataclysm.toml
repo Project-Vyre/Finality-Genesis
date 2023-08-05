@@ -108,13 +108,13 @@
 ["Netherite Monstrosity"]
 	#Monstrosity's Lavabomb magazine.
 	#Range: 1 ~ 1000000
-	LavabombMagazine = 3
+	LavabombMagazine = 5
 	#Monstrosity's Lavabomb amount
 	#Range: 1 ~ 1000000
-	Lavabombamount = 3
+	Lavabombamount = 5
 	#Monstrosity's Health Multiplier
 	#Range: 0.0 ~ 1000000.0
-	MonstrosityHealthMultiplier = 1.0
+	MonstrosityHealthMultiplier = 1.2
 	#Monstrosity's Damage Multiplier
 	#Range: 0.0 ~ 1000000.0
 	MonstrosityDamageMultiplier = 1.0
@@ -149,7 +149,7 @@
 [Ignis]
 	#Ignis's Health Multiplier
 	#Range: 0.0 ~ 1000000.0
-	IgnisHealthMultiplier = 1.0
+	IgnisHealthMultiplier = 1.2
 	#Ignis's Damage Multiplier
 	#Range: 0.0 ~ 1000000.0
 	IgnisDamageMultiplier = 1.0
@@ -215,10 +215,10 @@
 	TheIncineratorCooldown = 60
 	#Wither Assault Shoulder Weapon's Missile Cooldown
 	#Range: 0 ~ 1000000
-	WASWMissileCooldown = 40
+	WASWMissileCooldown = 30
 	#Wither Assault Shoulder Weapon's Howitzer Cooldown
 	#Range: 0 ~ 1000000
-	WASWHowitzerCooldown = 100
+	WASWHowitzerCooldown = 60
 	#Void Assault Shoulder Weapon's Cooldown
 	#Range: 0 ~ 1000000
 	VASWCooldown = 30
@@ -229,7 +229,7 @@
 ["The Leviathan"]
 	#Leviathan's Health Multiplier
 	#Range: 0.0 ~ 1000000.0
-	LeviathanHealthMultiplier = 1.0
+	LeviathanHealthMultiplier = 2.0
 	#Leviathan's Damage Multiplier
 	#Range: 0.0 ~ 1000000.0
 	LeviathanDamageMultiplier = 1.0

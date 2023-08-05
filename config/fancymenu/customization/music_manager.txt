@@ -28,6 +28,7 @@ customization {
   actionid = b3036c15-7a45-4558-a042-16a0b6821d751682981884968
   y = -25
   once_per_session = false
+  audio_source:c1d2e1aa-70c7-4427-b4e9-7fcdf056febb1691258322569 = config/fancymenu/assets/menu_music/cjbeards_bad_deeds_inst.ogg;EXTERNAL_LOCAL;100;0
   height = 50
 }
 
