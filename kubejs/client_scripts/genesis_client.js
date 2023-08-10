@@ -167,9 +167,9 @@ ItemEvents.tooltip(event => {
         text.add(2, Text.gray('It is literally a hand held Crafting Table, what more can you ask for?'))
     })
     event.addAdvanced('farmersdelight:skillet', (item, advanced, text) => {
-        if(!event.shift) {
+        if (!event.shift) {
             text.add(1, [
-                Text.of('Hold ').gold(), Text.of('[Shift] ').yellow(), Text.of('to see more info.').gold()
+                Text.of('Hold ').gold(), Text.of('[Shift] ').yellow(), Text.of('for more info.').gold()
             ])
         } else {
             text.add(1, [
@@ -191,6 +191,71 @@ ItemEvents.tooltip(event => {
             ])
         }
     })
+    event.add('cloudstorage:balloon_bit', Text.gray('With the power of the crafting table, you can make a new balloon from these pieces.'))
+    event.addAdvanced('cloudstorage:cloud_chest', (item, advanced, text) => {
+        if (!event.shift) {
+            text.add(1, [
+                Text.of('Hold ').darkGray(), Text.of('[Shift] ').gray(), Text.of('for more info.').darkGray()
+            ])
+        } else {
+            text.add(1, [
+                Text.of('Your very own ').gray(),
+                Text.of('private ').aqua(),
+                Text.of('cloud chest.').gray()
+            ])
+            text.add(2, [
+                Text.of('Right click with a ').gray(),
+                Text.of('normal balloon ').red(),
+                Text.of('to set the channel that you want to access from the cloud.').gray()
+            ])
+            text.add(3, [
+                Text.of('To change channels, right click with a ').gray(),
+                Text.of('normal balloon ').red(),
+                Text.of('in hand to safely remove the already connected balloon without it floating away.').gray()
+            ])
+            text.add(4, [
+                Text.of('To ').gray(),
+                Text.of('add ').green(),
+                Text.of('more storage simply attach a balloon to a regular chest to send it up to the sky, literally.').gray()
+            ])
+        }
+    })
+    event.addAdvanced('cloudstorage:static_cloud_chest', (item, advanced, text) => {
+        if (!event.shift) {
+            text.add(1, [
+                Text.of('Hold ').darkGray(), Text.of('[Shift] ').gray(), Text.of('for more info.').darkGray()
+            ])
+        } else {
+            text.add(1, [
+                Text.of('The ').gray(),
+                Text.of('publicly accessible ').yellow(),
+                Text.of('cloud chest.').gray()
+            ])
+            text.add(2, [
+                Text.of('Right click with a ').gray(),
+                Text.of('static charged ').aqua(),
+                Text.of('balloon ').red(),
+                Text.of('to set the channel that you want to access from the cloud.').gray()
+            ])
+            text.add(3, [
+                Text.of('Right click with a ').gray(),
+                Text.of('normal balloon ').red(),
+                Text.of('to charge it with static electricity.').gray()
+            ])
+            text.add(4, [
+                Text.of('To change channels, right click with a ').gray(),
+                Text.of('normal balloon ').red(),
+                Text.of('in hand to safely remove the already connected balloon without it floating away.').gray()
+            ])
+            text.add(5, [
+                Text.of('To ').gray(),
+                Text.of('add ').green(),
+                Text.of('more storage attach a ').gray(),
+                Text.of('static charged balloon ').aqua(),
+                Text.of('to regular chests to send up to the sky, literally.').gray()
+            ])
+        }
+    })
     event.addAdvanced('eccentrictome:tome', (item, advanced, text) => {
         if (!event.shift) {
             text.add(1, [
@@ -203,13 +268,13 @@ ItemEvents.tooltip(event => {
             text.add(2, Text.white('Elegantly <rainb>presents</rainb> all the tools and ooks stored within it upon right click.'))
             text.add(3, Text.white('Simply punch the air to <rainb>convert</rainb> the Eccentric Tome back to its normal form.'))
             text.add(4, [
-                Text.of('Diamond ').aqua(), 
-                Text.of('and ').white(), 
-                Text.of('Netherite ').gray(), 
-                Text.of('pickaxes, axes, shovels, hoes, shears, ').white(), 
-                Text.of('Wand of Symmetry ').gold(), 
-                Text.of('and ').white(), 
-                Text.of('Wrench ').gold(), 
+                Text.of('Diamond ').aqua(),
+                Text.of('and ').white(),
+                Text.of('Netherite ').gray(),
+                Text.of('pickaxes, axes, shovels, hoes, shears, ').white(),
+                Text.of('Wand of Symmetry ').gold(),
+                Text.of('and ').white(),
+                Text.of('Wrench ').gold(),
                 Text.of('from ').white(),
                 Text.of('Create ').yellow(),
                 Text.of('are all allowed.').white(),
