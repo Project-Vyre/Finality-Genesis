@@ -318,26 +318,23 @@ ServerEvents.loaded(event => {
     }
 })
 
+EntityEvents.hurt(e => {
+    if (!e.player) return
+    if (e.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
+        e.player.getChestArmorItem() === 'kubejs:final_chestplate' &&
+        e.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
+        e.player.getFeetArmorItem() === 'kubejs:final_boots'
+    ) e.cancel()
+})
+
 EntityEvents.hurt(event => {
+    if (!event.player) return
     if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
         event.player.getChestArmorItem() === 'kubejs:final_chestplate' &&
         event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
         event.player.getFeetArmorItem() === 'kubejs:final_boots'
     ) {
         event.cancel()
-    } else {
-        if (event.player.getHeadArmorItem() === null) {
-            console.log('Finality armor set not detected, missing helmet. Permitting damage to player.')
-        }
-        if (event.player.getChestArmorItem() === null) {
-            console.log('Finality armor set not detected, missing chestplate. Permitting damage to player.')
-        }
-        if (event.player.getLegsArmorItem() === null) {
-            console.log('Finality armor set not detected, missing leggings. Permitting damage to player.')
-        }
-        if (event.player.getFeetArmorItem() === null) {
-            console.log('Finality armor set not detected, missing boots. Permitting damage to player.')
-        }
     }
 })
 const set = {
