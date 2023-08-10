@@ -319,15 +319,6 @@ ServerEvents.loaded(event => {
     }
 })
 
-EntityEvents.hurt(e => {
-    if (!e.player) return
-    if (e.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
-        e.player.getChestArmorItem() === 'kubejs:final_chestplate' &&
-        e.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
-        e.player.getFeetArmorItem() === 'kubejs:final_boots'
-    ) e.cancel()
-})
-
 EntityEvents.hurt(event => {
     if (!event.player) return
     if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
