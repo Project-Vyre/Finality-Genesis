@@ -78,7 +78,9 @@
 			description: [
 				"At last, you have reached enlightenment. However, a question remains as you look at the recipe."
 				""
-				"Where do you get the command blocks? Well, they're an unintended side effect as the result of breaking the game's rules soooo yeah."
+				"Where do you get the command blocks? Well, they're an unintended side effect as the result of breaking the game's rules soooo yeah. "
+				""
+				"Mechanical Crafters also have the power to craft them."
 			]
 			id: "01A8004472B9F446"
 			subtitle: "Shaping the world, forever."
@@ -185,6 +187,7 @@
 		{
 			dependencies: ["123D0E0F69B73A88"]
 			id: "53850BE8EF49D0AF"
+			subtitle: "The very mechanism used for manipulating the universe."
 			tasks: [{
 				id: "24F82896C2181594"
 				item: "kubejs:entropy_mechanism"
