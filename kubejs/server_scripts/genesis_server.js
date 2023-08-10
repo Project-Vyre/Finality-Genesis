@@ -74,7 +74,7 @@ ServerEvents.recipes(event => {
         'minecraft:pointed_dripstone',
         'minecraft:prismarine_crystals'
     ]).id('finality:trident_prong')
-    event.recipes.createMixing('kubejs:omnipotent_alloy', [
+    event.recipes.createMixing('kubejs:high_entropy_alloy', [
         'extendedcrafting:the_ultimate_ingot',
         'extendedcrafting:crystaltine_ingot',
         'minecraft:netherite_ingot',
@@ -84,39 +84,39 @@ ServerEvents.recipes(event => {
         'minecraft:diamond',
         'minecraft:amethyst_shard',
         Fluid.of('kubejs:condensed_universal_entropy', 500)
-    ]).superheated().id('finality:mixing/omnipotent_alloy')
+    ]).superheated().id('finality:mixing/high_entropy_alloy')
     event.shaped('kubejs:final_helmet', [
         'EEE',
         'E E'
     ], {
-        E: 'kubejs:omnipotent_alloy',
+        E: 'kubejs:high_entropy_alloy',
     }).id('finality:crafting/final_helmet')
     event.shaped('kubejs:final_chestplate', [
         'E E',
         'EEE',
         'EEE'
     ], {
-        E: 'kubejs:omnipotent_alloy'
+        E: 'kubejs:high_entropy_alloy'
     }).id('finality:crafting/final_chestplate')
     event.shaped('kubejs:final_leggings', [
         'EEE',
         'E E',
         'E E'
     ], {
-        E: 'kubejs:omnipotent_alloy'
+        E: 'kubejs:high_entropy_alloy'
     }).id('finality:crafting/final_leggings')
     event.shaped('kubejs:final_boots', [
         'E E',
         'E E'
     ], {
-        E: 'kubejs:omnipotent_alloy'
+        E: 'kubejs:high_entropy_alloy'
     }).id('finality:crafting/final_boots')
     event.shaped('kubejs:final_sword', [
         'E',
         'E',
         'S'
     ], {
-        E: 'kubejs:omnipotent_alloy',
+        E: 'kubejs:high_entropy_alloy',
         S: 'extendedcrafting:black_iron_ingot'
     }).id('finality:crafting/final_sword')
     event.shaped('kubejs:final_pickaxe', [
@@ -124,7 +124,7 @@ ServerEvents.recipes(event => {
         ' S ',
         ' S '
     ], {
-        E: 'kubejs:omnipotent_alloy',
+        E: 'kubejs:high_entropy_alloy',
         S: 'extendedcrafting:black_iron_ingot'
     }).id('finality:crafting/final_pickaxe')
     event.shaped('kubejs:final_axe', [
@@ -132,7 +132,7 @@ ServerEvents.recipes(event => {
         'ES',
         ' S'
     ], {
-        E: 'kubejs:omnipotent_alloy',
+        E: 'kubejs:high_entropy_alloy',
         S: 'extendedcrafting:black_iron_ingot'
     }).id('finality:crafting/final_axe')
     event.shaped('kubejs:final_shovel', [
@@ -140,7 +140,7 @@ ServerEvents.recipes(event => {
         'S',
         'S'
     ], {
-        E: 'kubejs:omnipotent_alloy',
+        E: 'kubejs:high_entropy_alloy',
         S: 'extendedcrafting:black_iron_ingot'
     }).id('finality:crafting/final_shovel')
     event.shaped('kubejs:final_hoe', [
@@ -148,7 +148,7 @@ ServerEvents.recipes(event => {
         ' S',
         ' S'
     ], {
-        E: 'kubejs:omnipotent_alloy',
+        E: 'kubejs:high_entropy_alloy',
         S: 'extendedcrafting:black_iron_ingot'
     }).id('finality:crafting/final_hoe')
     STONEPLATES.forEach(stone => {

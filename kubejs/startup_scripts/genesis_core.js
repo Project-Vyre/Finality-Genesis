@@ -75,7 +75,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     Object.keys(DYE).forEach(color => {
         event.create(`kubejs:incomplete_concrete_${color}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${DYE[color]} Concrete Singularity`).texture(`kubejs:item/incomplete_singularities/concrete/incomplete_concrete_${color}`).maxStackSize(1)
     })
-    event.create('kubejs:omnipotent_alloy').texture('kubejs:item/final_ingot').displayName('<rainb>High Entropy Alloy</rainb>').maxStackSize(64).fireResistant(true).group('miscellaneous')
+    event.create('kubejs:high_entropy_alloy').texture('kubejs:item/final_ingot').displayName('<rainb>High Entropy Alloy</rainb>').maxStackSize(64).fireResistant(true).group('miscellaneous')
     event.create('kubejs:incomplete_entropy_mechanism', 'create:sequenced_assembly').displayName('<rainb>Incomplete Entropy Mechanism</rainb>').texture('kubejs:item/incomplete_entropy_mechanism').maxStackSize(1)
     event.create('kubejs:entropy_mechanism').displayName('<rainb>Entropy Mechanism').texture('kubejs:item/entropy_mechanism').maxStackSize(64)
     // tools
