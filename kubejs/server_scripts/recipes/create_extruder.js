@@ -19,8 +19,8 @@ ServerEvents.recipes(event => {
     Object.keys(ORESTONES).forEach(material => {
         event.recipes.createMechanicalExtruderExtruding(Item.of(`create:${material}`), [
             Item.of(`${ORESTONES[material]}`),
-            Fluid.of('minecraft:lava')
-        ]).withCatalyst('minecraft:crying_obsidian').requiredBonks(4).id(`finality:renew_extruder_${material}`)
+            Fluid.of('kubejs:condensed_universal_entropy')
+        ]).withCatalyst('kubejs:command_block').requiredBonks(4).id(`finality:renew_extruder_${material}`)
     })
     event.recipes.createMechanicalExtruderExtruding(Item.of('create:limestone'), [
         Item.of('minecraft:honey_block'),
