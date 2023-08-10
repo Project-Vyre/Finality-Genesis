@@ -1,3 +1,6 @@
+// requires: extendedcrafting
+// requires: create
+
 let DYE = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 let SAND = ['sand', 'red_sand']
 ServerEvents.recipes(event => {
@@ -328,11 +331,12 @@ ServerEvents.recipes(event => {
     })
     event.recipes.createSequencedAssembly([
         Item.of('kubejs:entropy_mechanism').withChance(100.0),
-        Item.of('kubejs:command_block').withChance(25.0),
-        Item.of('kubejs:chain_command_block').withChance(25.0),
-        Item.of('kubejs:repeating_command_block').withChance(25.0),
-        Item.of('minecraft:netherite_block').withChance(10.0),
-        Item.of('minecraft:crying_obsidian').withChance(10.0),
+        Item.of('minecraft:structure_void').withChance(25.0),
+        Item.of('minecraft:debug_stick').withChance(25.0),
+        Item.of('minecraft:jigsaw').withChance(25.0),
+        Item.of('kubejs:command_block').withChance(10.0),
+        Item.of('kubejs:chain_command_block').withChance(10.0),
+        Item.of('kubejs:repeating_command_block').withChance(10.0),
         'minecraft:grass_block'
     ], 'create:precision_mechanism', [
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:awakened_singularity_core']),
@@ -342,4 +346,67 @@ ServerEvents.recipes(event => {
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'create:experience_nugget']),
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'extendedcrafting:the_ultimate_nugget'])
     ]).transitionalItem('kubejs:incomplete_entropy_mechanism').loops(512).id('finality:entropy_mechanism_creation')
+    event.recipes.createMechanicalCrafting('kubejs:command_block', [
+        'IIGIIGII',
+        'IIQPPQII',
+        'GQCRRCQG',
+        'IPRUURPI',
+        'IPRUURPI',
+        'GQCRRCQG',
+        'IIQPPQII',
+        'IIGIIGII'
+    ], {
+        I: 'kubejs:high_entropy_alloy',
+        G: '#forge:glass/colorless',
+        R: 'extendedcrafting:redstone_catalyst',
+        U: 'extendedcrafting:the_ultimate_catalyst',
+        C: 'extendedcrafting:crystaltine_catalyst',
+        Q: 'create:rose_quartz_lamp',
+        P: 'create:pulse_repeater'
+    }).id('finality:mechanical_crafting/command_block')
+    event.recipes.createMechanicalCrafting('kubejs:chain_command_block', [
+        'IIGIIGII',
+        'IIQPPQII',
+        'GQCRRCQG',
+        'IPRUURPI',
+        'IPRUURPI',
+        'GQCRRCQG',
+        'IIQPPQII',
+        'IIGIIGII'
+    ], {
+        I: 'kubejs:high_entropy_alloy',
+        G: '#forge:glass/colorless',
+        R: 'extendedcrafting:redstone_catalyst',
+        U: 'extendedcrafting:the_ultimate_catalyst',
+        C: 'extendedcrafting:crystaltine_catalyst',
+        Q: 'create:rose_quartz_lamp',
+        P: 'create:sequenced_gearshift'
+    }).id('finality:mechanical_crafting/chain_command_block')
+    event.recipes.createMechanicalCrafting('kubejs:repeating_command_block', [
+        'IIGIIGII',
+        'IIQPPQII',
+        'GQCRRCQG',
+        'IPRUURPI',
+        'IPRUURPI',
+        'GQCRRCQG',
+        'IIQPPQII',
+        'IIGIIGII'
+    ], {
+        I: 'kubejs:high_entropy_alloy',
+        G: '#forge:glass/colorless',
+        R: 'extendedcrafting:redstone_catalyst',
+        U: 'extendedcrafting:the_ultimate_catalyst',
+        C: 'extendedcrafting:crystaltine_catalyst',
+        Q: 'create:rose_quartz_lamp',
+        P: 'create:powered_toggle_latch'
+    }).id('finality:mechanical_crafting/repeating_command_block')
+    event.recipes.createMechanicalCrafting('minecraft:spawner', [
+        'VVV',
+        'VSV',
+        'VVV'
+    ], {
+        V: 'minecraft:structure_void',
+        S: 'minecraft:soul_campfire'
+    }).id('finality:spawner')
+    event.recipes.createDeploying('minecraft:structure_void', ['#kubejs:command_blocks', 'kubejs:final_pickaxe']).keepHeldItem().id('finality:structure_void')
 })
