@@ -20,7 +20,7 @@ ServerEvents.recipes(event => {
         event.recipes.createMechanicalExtruderExtruding(Item.of(`create:${material}`), [
             Item.of(`${ORESTONES[material]}`),
             Fluid.of('minecraft:lava')
-        ]).withCatalyst('minecraft:crying_obsidian').id(`finality:renew_extruder_${material}`)
+        ]).withCatalyst('minecraft:crying_obsidian').requiredBonks(4).id(`finality:renew_extruder_${material}`)
     })
     event.recipes.createMechanicalExtruderExtruding(Item.of('create:limestone'), [
         Item.of('minecraft:honey_block'),
