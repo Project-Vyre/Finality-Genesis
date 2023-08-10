@@ -6,6 +6,7 @@
 	icon: "apotheosis:gem_dust"
 	id: "6354312DFE41C7F0"
 	order_index: 0
+	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
@@ -68,8 +69,8 @@
 				item: "apotheosis:common_material"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 5.5d
+			x: -1.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -81,7 +82,7 @@
 				type: "item"
 			}]
 			x: -1.0d
-			y: 5.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -105,7 +106,7 @@
 				type: "item"
 			}]
 			x: 1.0d
-			y: 5.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -116,8 +117,8 @@
 				item: "apotheosis:mythic_material"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 5.5d
+			x: 1.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
@@ -207,7 +208,8 @@
 				item: "apotheosis:helmet_tome"
 				type: "item"
 			}]
-			x: 1.0d
+			title: "Tome of Helmets"
+			x: -1.0d
 			y: 7.0d
 		}
 		{
@@ -219,7 +221,7 @@
 				item: "apotheosis:chestplate_tome"
 				type: "item"
 			}]
-			x: 1.0d
+			x: -1.0d
 			y: 8.0d
 		}
 		{
@@ -231,7 +233,7 @@
 				item: "apotheosis:boots_tome"
 				type: "item"
 			}]
-			x: 1.0d
+			x: -1.0d
 			y: 10.0d
 		}
 		{
@@ -243,7 +245,7 @@
 				item: "apotheosis:leggings_tome"
 				type: "item"
 			}]
-			x: 1.0d
+			x: -1.0d
 			y: 9.0d
 		}
 		{
@@ -255,7 +257,7 @@
 				item: "apotheosis:weapon_tome"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 1.0d
 			y: 7.0d
 		}
 		{
@@ -267,7 +269,7 @@
 				item: "apotheosis:pickaxe_tome"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 1.0d
 			y: 8.0d
 		}
 		{
@@ -280,7 +282,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 9.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["412F89A109102D9D"]
@@ -291,7 +293,7 @@
 				item: "apotheosis:bow_tome"
 				type: "item"
 			}]
-			x: 3.0d
+			x: 2.0d
 			y: 7.0d
 		}
 		{
@@ -303,8 +305,8 @@
 				item: "apotheosis:scrap_tome"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 7.0d
+			x: 1.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["412F89A109102D9D"]
@@ -315,11 +317,11 @@
 				item: "apotheosis:other_tome"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 8.0d
+			x: 1.0d
+			y: 9.0d
 		}
 		{
-			dependencies: ["411F865E038E7A2E"]
+			dependencies: ["1189AFE0B71158E6"]
 			description: ["You can make the most powerful tools imaginable, don't say I warned you."]
 			id: "3718E49C5B96FBFA"
 			subtitle: "This is where things get VERY interesting."
@@ -342,6 +344,17 @@
 			}]
 			x: 0.0d
 			y: 2.5d
+		}
+		{
+			dependencies: ["411F865E038E7A2E"]
+			id: "1189AFE0B71158E6"
+			tasks: [{
+				id: "3B604826BCC1040B"
+				item: "apotheosis:simple_reforging_table"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 9.0d
 		}
 	]
 	subtitle: ["Apotheosis is that one mod that makes everything powerful."]

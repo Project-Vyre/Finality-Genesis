@@ -18,6 +18,7 @@
 		y: 0.0d
 	}]
 	order_index: 1
+	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
@@ -49,6 +50,11 @@
 					id: "72653388C1D3E5E7"
 					table_id: 7477086534417165542L
 					type: "random"
+				}
+				{
+					id: "407189AC4B5485AC"
+					type: "xp"
+					xp: 500
 				}
 			]
 			subtitle: "Andesite Alloy is the foundational material of Create."
@@ -88,12 +94,19 @@
 			description: ["Hold [w] to Ponder to learn more!"]
 			hide: true
 			id: "157C4AD3062BC31A"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "7AF6E0F9ADACA5CA"
-				table_id: 7477086534417165542L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7AF6E0F9ADACA5CA"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "27132B9339F93B0A"
+					type: "xp"
+					xp: 100
+				}
+			]
 			shape: "rsquare"
 			subtitle: "Convenient for holding items so they don't despawn."
 			tasks: [{
@@ -140,12 +153,19 @@
 			]
 			icon: "create:mechanical_press"
 			id: "62D55614D95E7356"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "6308F85FFE0B1BF8"
-				table_id: 7159138545964995551L
-				type: "loot"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "6308F85FFE0B1BF8"
+					table_id: 7159138545964995551L
+					type: "loot"
+				}
+				{
+					id: "567E67DDEBDC4A46"
+					type: "xp"
+					xp: 500
+				}
+			]
 			shape: "rsquare"
 			subtitle: "The Mechanical Press is very useful, trust me on this."
 			tasks: [{
@@ -160,12 +180,19 @@
 		{
 			dependencies: ["57A69334C4D4299A"]
 			id: "527A4B10DDE51E37"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "4C70994C553AC9B3"
-				table_id: 7477086534417165542L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4C70994C553AC9B3"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "5D8FE34C9C67CA7A"
+					type: "xp"
+					xp: 250
+				}
+			]
 			shape: "rsquare"
 			subtitle: "Create the Basin, an integral component for the Mechanical Mixer."
 			tasks: [{
@@ -188,6 +215,11 @@
 				"Hold [w] to Ponder to learn more!"
 			]
 			id: "400260FDC774443B"
+			rewards: [{
+				id: "2B0B7F32922B7FE5"
+				type: "xp"
+				xp: 500
+			}]
 			shape: "rsquare"
 			subtitle: "Automated mixing, highly multi-purpose!"
 			tasks: [{
@@ -209,12 +241,19 @@
 				"This is explained in the Ponder tutorial for Create's cogwheels."
 			]
 			id: "76DE1DB31C32A913"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "28D46303F421578D"
-				table_id: 7477086534417165542L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "28D46303F421578D"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "39CEA773836DAC0C"
+					type: "xp"
+					xp: 50
+				}
+			]
 			tasks: [{
 				id: "41601DFCB348DDD7"
 				item: "create:cogwheel"
@@ -233,12 +272,19 @@
 				"This is explained in the Ponder tutorial for Create's cogwheels."
 			]
 			id: "3FF3FB9AC560FD61"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "0C5D881A93081DC6"
-				table_id: 7771384237349930739L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0C5D881A93081DC6"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "1DB77082DA7FFF90"
+					type: "xp"
+					xp: 50
+				}
+			]
 			tasks: [{
 				id: "13ACDF0716E431C1"
 				item: "create:large_cogwheel"
@@ -256,12 +302,19 @@
 			]
 			icon: "create:water_wheel"
 			id: "7D464E248ADF8C04"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "2914FD6783F25645"
-				table_id: 7477086534417165542L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2914FD6783F25645"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "44112113DE883E90"
+					type: "xp"
+					xp: 100
+				}
+			]
 			shape: "hexagon"
 			subtitle: "An easy but weak source of rotational power."
 			tasks: [{
@@ -326,6 +379,11 @@
 		{
 			dependencies: ["62D55614D95E7356"]
 			id: "00DA4B8905FE3CAF"
+			rewards: [{
+				id: "41D82D2FDBE0B793"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "A useful ingredient for logic components and more."
 			tasks: [{
 				id: "56467B6E0BF1289B"
@@ -360,6 +418,19 @@
 				"Hold [w] to Ponder to learn more!"
 			]
 			id: "3E68ADF888E6E99E"
+			rewards: [
+				{
+					id: "3A127719A7F772A1"
+					type: "xp"
+					xp: 300
+				}
+				{
+					exclude_from_claim_all: true
+					id: "119E467F822FACDD"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+			]
 			subtitle: "Mechanical Belts are very useful."
 			tasks: [{
 				id: "0ACC90A18CD1E0BA"
@@ -410,11 +481,18 @@
 			]
 			hide: true
 			id: "23744C5D8A153163"
-			rewards: [{
-				id: "12E55DAB35AF24DA"
-				item: "minecraft:diamond"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "12E55DAB35AF24DA"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "0BD42467276E6488"
+					type: "xp"
+					xp: 250
+				}
+			]
 			shape: "hexagon"
 			subtitle: "You got it, now what?"
 			tasks: [{
@@ -433,12 +511,19 @@
 				"Click on the recipe then Hold [w] while hovering on the Blaze Burner to Ponder to learn more."
 			]
 			id: "1565E97748B8B342"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "65BFD9B4334851D3"
-				table_id: 3533172865185366803L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "65BFD9B4334851D3"
+					table_id: 3533172865185366803L
+					type: "random"
+				}
+				{
+					id: "5F564D434F037C8E"
+					type: "xp"
+					xp: 750
+				}
+			]
 			shape: "hexagon"
 			subtitle: "You will need more for other purposes."
 			tasks: [{
@@ -458,6 +543,19 @@
 			]
 			hide: true
 			id: "3AF368FDC6BEC625"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3C1CEA03245DF0F2"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "12A6FBE176165B85"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
 			size: 1.5d
 			subtitle: "Making some brass requires some setup..."
 			tasks: [{
@@ -473,6 +571,11 @@
 		{
 			dependencies: ["76DE1DB31C32A913"]
 			id: "1CF9859D66D393AC"
+			rewards: [{
+				id: "1DB7DA4F5CF6ABA4"
+				type: "xp"
+				xp: 100
+			}]
 			subtitle: "An easy method of routing shafts vertically if you rotate them with a Wrench."
 			tasks: [{
 				id: "01AE4850A2D6DE1B"
@@ -492,12 +595,19 @@
 				"They are also not limited by the default 20 block range that Mechanical Belts do."
 			]
 			id: "1DBC16B691A15476"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "04FDA8C43888FE69"
-				table_id: 7477086534417165542L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "04FDA8C43888FE69"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "7B696788B9204898"
+					type: "xp"
+					xp: 100
+				}
+			]
 			subtitle: "Far more flexible than Mechanical Belts in terms of relaying kinetic energy."
 			tasks: [{
 				id: "1E129C8B985D4588"
@@ -514,6 +624,11 @@
 			]
 			hide: true
 			id: "1006DEF6267D3741"
+			rewards: [{
+				id: "48873FD4055276C4"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "Gear ratios without cogwheels!"
 			tasks: [{
 				id: "22132BA00C57A9B9"
@@ -531,6 +646,11 @@
 			description: ["Hold [w] to Ponder to learn more!"]
 			hide: true
 			id: "068660484145BE87"
+			rewards: [{
+				id: "1EABD36EB177305C"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
 			subtitle: "Splitting items intelligently."
 			tasks: [{
 				count: 2L
@@ -551,12 +671,19 @@
 				"I can't tell you &levery&r situation this can be used in."
 			]
 			id: "5082C1012024ED2D"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "217302D92364572C"
-				table_id: 7771384237349930739L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "217302D92364572C"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "0D235AA7727E28EF"
+					type: "xp"
+					xp: 50
+				}
+			]
 			subtitle: "UNO Reverse!"
 			tasks: [{
 				id: "53A06909BD9B47FC"
@@ -570,6 +697,11 @@
 		{
 			dependencies: ["0194851298AADB65"]
 			id: "7EE9C850EF4C9BDC"
+			rewards: [{
+				id: "0929108E45283B8A"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "The smart and precise Sequenced Gearshift."
 			tasks: [{
 				id: "47A4649D15EE3D15"
@@ -599,6 +731,11 @@
 					item: "create:raw_zinc_block"
 					type: "item"
 				}
+				{
+					id: "158FF2226B86E960"
+					type: "xp"
+					xp: 500
+				}
 			]
 			shape: "hexagon"
 			size: 1.2d
@@ -620,6 +757,11 @@
 			description: ["Hold [w] to Ponder to learn more!"]
 			hide: true
 			id: "42A8249377616678"
+			rewards: [{
+				id: "3B72CD4B1BA67B90"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
 			subtitle: "Managing items intelligently."
 			tasks: [{
 				count: 2L
@@ -669,8 +811,17 @@
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
-			description: ["Use it on Create's Trains, make a rotating Item Vault wheel... the limit is your imagination."]
+			description: [
+				"Use it on Create's Trains, make a rotating Item Vault wheel... the limit is your imagination."
+				""
+				"Trains do not consume fuel inside Item Vaults!"
+			]
 			id: "3C188F3CFEB46683"
+			rewards: [{
+				id: "57F47E8E5A498941"
+				type: "xp"
+				xp: 100
+			}]
 			subtitle: "Think of it as a very large chest that can be transported to places."
 			tasks: [{
 				id: "21E4A0186BB381B3"
@@ -715,7 +866,7 @@
 			rewards: [{
 				id: "3FD3D67BDA26D8E7"
 				type: "xp_levels"
-				xp_levels: 3
+				xp_levels: 5
 			}]
 			subtitle: "It really helps you see Create related info at all times!"
 			tasks: [{
@@ -734,6 +885,11 @@
 				"By default, has a maximum range of 32 blocks."
 			]
 			id: "3ED7372ADB1D3FE7"
+			rewards: [{
+				id: "2CA2303796C75CA2"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "Don't stand on it, seriously."
 			tasks: [{
 				id: "44EBA221A09B76FD"
@@ -746,6 +902,12 @@
 		{
 			dependencies: ["2E386081E5302CF5"]
 			id: "6AC32180F67385D6"
+			rewards: [{
+				id: "0CEA0F11A6431101"
+				type: "xp"
+				xp: 250
+			}]
+			subtitle: "Fluid transportation!"
 			tasks: [{
 				id: "12202DAEFFEB3B44"
 				item: "create:fluid_pipe"
@@ -757,6 +919,11 @@
 		{
 			dependencies: ["6AC32180F67385D6"]
 			id: "046D0A0ADA6236A8"
+			rewards: [{
+				id: "3F9727754F4FE9A9"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "You have the puuump."
 			tasks: [{
 				id: "531FBFD8F57470D1"
@@ -769,7 +936,13 @@
 		{
 			dependencies: ["2E386081E5302CF5"]
 			id: "762E4AB54C6B5D42"
+			rewards: [{
+				id: "33CEFD3A1375D6FE"
+				type: "xp"
+				xp: 250
+			}]
 			shape: "octagon"
+			subtitle: "Mass fluid storage!"
 			tasks: [{
 				id: "478F08FED908E253"
 				item: "create:fluid_tank"
@@ -837,6 +1010,11 @@
 			]
 			hide: true
 			id: "0352B65BF524BA37"
+			rewards: [{
+				id: "45620FA6E4322AD5"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
 			subtitle: "Achievement unlocked: Busy Hands"
 			tasks: [{
 				id: "054C34E3E5E37622"
@@ -850,6 +1028,11 @@
 			dependencies: ["00DA4B8905FE3CAF"]
 			description: ["Used in making the Deployer and Extendo Grip in base Create."]
 			id: "5DD3DEBA65F73267"
+			rewards: [{
+				id: "5105BF42261D7175"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
 			subtitle: "A very handy component!"
 			tasks: [{
 				id: "52BEB8DC279F6D3A"
@@ -885,6 +1068,11 @@
 			hide: true
 			icon: "create:railway_casing"
 			id: "1E0CDA1ED53FACEE"
+			rewards: [{
+				id: "1B629007CA840690"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
 			shape: "hexagon"
 			subtitle: "Begin the age of the train network."
 			tasks: [
@@ -908,6 +1096,11 @@
 		{
 			dependencies: ["2E4CFF3F7A4508AB"]
 			id: "4EBF56E85BA4465B"
+			rewards: [{
+				id: "223677C9EB037EF6"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "Powdered Obsidian is an important component to Sturdy Sheets."
 			tasks: [{
 				id: "777D61B53D3FF020"
@@ -928,6 +1121,19 @@
 				"Hold [w] to Ponder to learn more!"
 			]
 			id: "2E4CFF3F7A4508AB"
+			rewards: [
+				{
+					id: "3CDC75F8A6E3A094"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "433CB0656E669D70"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			shape: "octagon"
 			size: 2.0d
 			subtitle: "A pair of giants."
@@ -955,12 +1161,19 @@
 			]
 			hide: true
 			id: "2FF7795C03DDC67B"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "3FDAA28CFC2179BC"
-				table_id: 103743719166323827L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3FDAA28CFC2179BC"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "73296F0DF7169340"
+					type: "xp_levels"
+					xp_levels: 750
+				}
+			]
 			shape: "octagon"
 			size: 2.0d
 			subtitle: "Crafting huge things."
@@ -980,6 +1193,11 @@
 			]
 			hide: true
 			id: "16FA2F3F79C9F5B3"
+			rewards: [{
+				id: "70497A27C2D4882C"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "The material for everything train related."
 			tasks: [{
 				id: "2314125F47BB10F2"
@@ -993,6 +1211,11 @@
 			dependencies: ["1E0CDA1ED53FACEE"]
 			icon: "create:track_station"
 			id: "383978292CA1C392"
+			rewards: [{
+				id: "6D7A50D3B337865F"
+				type: "xp"
+				xp: 750
+			}]
 			subtitle: "Logistic train network essentials."
 			tasks: [
 				{
@@ -1026,12 +1249,19 @@
 			]
 			icon: "create:controls"
 			id: "0D86C2F010562CE2"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "30B1707DFE423CE3"
-				table_id: 103743719166323827L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "30B1707DFE423CE3"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "37DDDABCBE934526"
+					type: "xp"
+					xp: 750
+				}
+			]
 			subtitle: "Well, what did you expect? You need controls!"
 			tasks: [
 				{
@@ -1060,12 +1290,19 @@
 				}
 			}
 			id: "7C14DC327046D141"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "009210FA3AC21FA9"
-				table_id: 7771384237349930739L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "009210FA3AC21FA9"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "003341266082468F"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
 			subtitle: "These utilities allow you to move ENTIRE structures."
 			tasks: [
 				{
@@ -1183,7 +1420,7 @@
 				{
 					id: "327349C8EECB2300"
 					type: "xp_levels"
-					xp_levels: 10
+					xp_levels: 5
 				}
 			]
 			subtitle: "Create some slimeballs using the dough you created from earlier."
@@ -1226,12 +1463,19 @@
 				"&c&lDO NOT USE <shake>LAVA</shake> TO BAKE YOUR DOUGH!&r&r"
 			]
 			id: "3A0AE21655B5678E"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "41CC70CFDDAF6CD3"
-				table_id: 7771384237349930739L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "41CC70CFDDAF6CD3"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "14B65FC61A9B00E2"
+					type: "xp"
+					xp: 300
+				}
+			]
 			subtitle: "Prepare some dough."
 			tasks: [{
 				id: "5A7DD92171EFE75A"
@@ -1250,6 +1494,11 @@
 			description: ["Time to get to polishing with your Sand Paper!"]
 			hide: true
 			id: "4946DBA60513DCE3"
+			rewards: [{
+				id: "59217051E1FD53C7"
+				type: "xp"
+				xp: 100
+			}]
 			subtitle: "Looks like it needs to be polished first before it can be used..."
 			tasks: [{
 				id: "1F73E22F97327F1A"
@@ -1263,6 +1512,11 @@
 		{
 			dependencies: ["4946DBA60513DCE3"]
 			id: "2A56BEC8A6D0E102"
+			rewards: [{
+				id: "191B4F18BC4F7E9D"
+				type: "xp"
+				xp: 150
+			}]
 			subtitle: "An important component for smarter things."
 			tasks: [{
 				id: "22C85B6112E91D2B"
@@ -1288,6 +1542,11 @@
 				}
 			}
 			id: "4196F75FB2342B67"
+			rewards: [{
+				id: "36FB389E65C3633A"
+				type: "xp"
+				xp: 50
+			}]
 			subtitle: "The first step in making Electron Tubes."
 			tasks: [{
 				id: "6515E9AECCF5EC65"
@@ -1313,12 +1572,19 @@
 			]
 			hide: true
 			id: "0194851298AADB65"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "3C5E3B7D5E0801F0"
-				table_id: 9193491821639565519L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3C5E3B7D5E0801F0"
+					table_id: 9193491821639565519L
+					type: "random"
+				}
+				{
+					id: "2A7A9A0FF4ED5D09"
+					type: "xp"
+					xp: 500
+				}
+			]
 			size: 1.5d
 			subtitle: "Computers took up entire buildings previously."
 			tasks: [{
@@ -1360,6 +1626,11 @@
 			dependencies: ["0044994A32BC5631"]
 			description: ["Hold [w] to Ponder to learn more!"]
 			id: "5DB5C71834CFBC1D"
+			rewards: [{
+				id: "0F7654044AEBF796"
+				type: "xp"
+				xp: 100
+			}]
 			subtitle: "The basic funnel with no filtering capabilities. Can only manage 1 item at a time."
 			tasks: [{
 				count: 2L
@@ -1374,6 +1645,11 @@
 			dependencies: ["0044994A32BC5631"]
 			description: ["Hold [w] to Ponder to learn more!"]
 			id: "280A50D0712F4D78"
+			rewards: [{
+				id: "45BF1C55E28EDC6A"
+				type: "xp"
+				xp: 100
+			}]
 			subtitle: "Takes a stack of items and splits off exactly 1 item into an adjacent Mechanical Belt."
 			tasks: [{
 				count: 2L
@@ -1423,6 +1699,12 @@
 		{
 			dependencies: ["2E386081E5302CF5"]
 			id: "1DA9BAAA83A3959B"
+			rewards: [{
+				id: "70349A32459AF48C"
+				type: "xp"
+				xp: 250
+			}]
+			subtitle: "The key to extracting infinite amounts of fluids."
 			tasks: [{
 				id: "17A387A140D8C805"
 				item: "create:hose_pulley"
@@ -1434,6 +1716,11 @@
 		{
 			dependencies: ["770AD4193CC23EA3"]
 			id: "5AD4231580F52A6C"
+			rewards: [{
+				id: "2BDB0EF8D7239E39"
+				type: "xp"
+				xp: 100
+			}]
 			subtitle: "Elevators elevators elevators!"
 			tasks: [{
 				id: "2F4B4C72D514890B"
@@ -1452,12 +1739,19 @@
 				"Just be sure to keep the speed down, you don't want the Windmill Bearing to break space time and reality, do you?"
 			]
 			id: "076DA8BCE27D0E11"
-			rewards: [{
-				count: 4
-				id: "209904F730846F43"
-				item: "create:white_sail"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "209904F730846F43"
+					item: "create:white_sail"
+					type: "item"
+				}
+				{
+					id: "0DC10923BDC48808"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
 			shape: "hexagon"
 			subtitle: "A single windmill can provide a maximum of 8192 Su which is quite a lot."
 			tasks: [{
@@ -1485,6 +1779,11 @@
 					table_id: 7771384237349930739L
 					type: "random"
 				}
+				{
+					id: "1A4DD706013CB8F7"
+					type: "xp_levels"
+					xp_levels: 3
+				}
 			]
 			shape: "hexagon"
 			subtitle: "The amount of Sail Frames required for a maximum strength Windmill..."
@@ -1508,12 +1807,19 @@
 				"Just make sure you are using Mechanical Saws instead for automating a tree farm as they are unique in their full tree harvest mechanic."
 			]
 			id: "10ADF400E8F057F1"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "7A5E846E9E8039F8"
-				table_id: 7477086534417165542L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7A5E846E9E8039F8"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "2760BA4EAC9ABCD4"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
 			subtitle: "Very versatile in mining blocks and highly dependent on rotation speed."
 			tasks: [{
 				id: "316FDFDA5B7C8C2D"
@@ -1534,11 +1840,18 @@
 				"Hold [Shift] for a summary on how to use."
 			]
 			id: "515DBB49AEF66282"
-			rewards: [{
-				id: "4D56DE248B3EBF79"
-				item: "create:builders_tea"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "4D56DE248B3EBF79"
+					item: "create:builders_tea"
+					type: "item"
+				}
+				{
+					id: "4B304A3EF2BEDC92"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
 			shape: "octagon"
 			subtitle: "An engineer's best friend."
 			tasks: [{
@@ -1596,12 +1909,19 @@
 			]
 			icon: "create:cart_assembler"
 			id: "32F1D92CAF4713E8"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "7632368C79B86D06"
-				table_id: 7477086534417165542L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7632368C79B86D06"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "02980BD9A8BCCAF6"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
 			subtitle: "Making Furnace Minecarts useful again."
 			tasks: [
 				{
@@ -1664,6 +1984,19 @@
 		{
 			dependencies: ["054BC637EF86609C"]
 			id: "30E89B82FBE4E14C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3537226B62845349"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "72C5A462E40A1072"
+					type: "xp"
+					xp: 500
+				}
+			]
 			tasks: [{
 				id: "140E181AA39D3C57"
 				item: "create:redstone_link"
@@ -1675,6 +2008,11 @@
 		{
 			dependencies: ["0194851298AADB65"]
 			id: "1D75F7EBD23D3988"
+			rewards: [{
+				id: "185820DAC288B265"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "The mechanical eye that reveals the soul."
 			tasks: [{
 				id: "0B7AC270238DECD4"
@@ -1687,6 +2025,11 @@
 		{
 			dependencies: ["1D75F7EBD23D3988"]
 			id: "050F508C5A4EA99E"
+			rewards: [{
+				id: "4CBD455A6232C26C"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "The mechanical eye that monitors for emptiness or fullness."
 			tasks: [{
 				id: "3CEDE6CDCA284FA9"
@@ -1699,6 +2042,19 @@
 		{
 			dependencies: ["054BC637EF86609C"]
 			id: "4B4B34406BD27008"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "19824F7EEF550020"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "425ADBA8CF671D03"
+					type: "xp"
+					xp: 750
+				}
+			]
 			tasks: [{
 				id: "244C187AEE88325E"
 				item: "create:display_link"
@@ -1710,6 +2066,11 @@
 		{
 			dependencies: ["0194851298AADB65"]
 			id: "3F6B316FDB524F86"
+			rewards: [{
+				id: "4FB0CC6265089428"
+				type: "xp"
+				xp: 50
+			}]
 			subtitle: "Create the Clockwork Bearing"
 			tasks: [{
 				id: "2888BB0349EBFBA0"
@@ -1730,12 +2091,19 @@
 				"It can also rotate a large arm carrying a mass of basins among other things."
 			]
 			id: "3BDB0203FBA84A83"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "4E635DD81A1DC617"
-				table_id: 7477086534417165542L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4E635DD81A1DC617"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "4618A721EAE0754F"
+					type: "xp"
+					xp: 100
+				}
+			]
 			subtitle: "Use this for rotating large doors, contraptions..."
 			tasks: [{
 				id: "1B19709697FE3672"
@@ -1756,12 +2124,19 @@
 			]
 			icon: "create:mechanical_piston"
 			id: "22BAD50143A6422B"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "5B0A9A325314D803"
-				table_id: 7477086534417165542L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5B0A9A325314D803"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "48F5F37B8C40C44C"
+					type: "xp"
+					xp: 100
+				}
+			]
 			subtitle: "Flex on your friends who still use vanilla pistons!"
 			tasks: [
 				{
@@ -1787,6 +2162,25 @@
 				"The Rotation Speed Controller allows you to change the rotation speed very easily."
 			]
 			id: "5A056CB8D0A7F5B2"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0EBD1D167EA0E7BA"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "2792B834627CB757"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "7EEF7D08BA1DDC13"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
 			subtitle: "Engineers hate this!"
 			tasks: [{
 				id: "11E0E47AC0A22390"
@@ -1799,6 +2193,19 @@
 		{
 			dependencies: ["30E89B82FBE4E14C"]
 			id: "6B8E99104DB46996"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1071669F62167DD9"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "1D6D0EC22FFC2784"
+					type: "xp"
+					xp: 500
+				}
+			]
 			tasks: [{
 				id: "7E0BB2EE61002933"
 				item: "create:linked_controller"
@@ -1810,11 +2217,18 @@
 		{
 			dependencies: ["23744C5D8A153163"]
 			id: "7ED3366AD5222F93"
-			rewards: [{
-				id: "2589AD1FACBD5896"
-				item: "minecraft:diamond"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "2589AD1FACBD5896"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "0D1521D1A1D5576E"
+					type: "xp"
+					xp: 250
+				}
+			]
 			shape: "hexagon"
 			subtitle: "Visit the Nether."
 			tasks: [{
@@ -1835,11 +2249,18 @@
 				"You can make an unlimited amount of Blaze Burners from a single blaze spawner."
 			]
 			id: "05A06882A2170564"
-			rewards: [{
-				id: "73DD2B004A1697AE"
-				item: "minecraft:diamond"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "73DD2B004A1697AE"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "143C62B155815FB4"
+					type: "xp"
+					xp: 500
+				}
+			]
 			shape: "hexagon"
 			subtitle: "It has valuables, but you're looking for a Blaze spawner."
 			tasks: [{
@@ -1855,6 +2276,11 @@
 		{
 			dependencies: ["05A06882A2170564"]
 			id: "031AE396FB6DDD76"
+			rewards: [{
+				id: "085FFAE014E23D82"
+				type: "xp"
+				xp: 50
+			}]
 			subtitle: "Just right click the Blaze or Blaze Spawner with your Empty Blaze Burner."
 			tasks: [{
 				icon: "minecraft:blaze_spawn_egg"
@@ -1987,6 +2413,11 @@
 			dependencies: ["187E2B3FDE19DD4D"]
 			description: ["Hold [w] to Ponder to learn more!"]
 			id: "24D7FAA4E3EFAD39"
+			rewards: [{
+				id: "207916CF526D1B98"
+				type: "xp"
+				xp: 50
+			}]
 			subtitle: "It is a very useful redstone component."
 			tasks: [{
 				id: "0BF1FB3D19AB9BB0"
@@ -2001,6 +2432,11 @@
 			dependencies: ["0194851298AADB65"]
 			icon: "create:display_board"
 			id: "11F16BF2C56756F3"
+			rewards: [{
+				id: "63E7891B309656CD"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "Very useful for displaying information."
 			tasks: [
 				{
@@ -2030,6 +2466,19 @@
 				"Make sure to use a Copper / Netherite Backtank for safe operation with no risk for durability loss!"
 			]
 			id: "73E8B028453BD86E"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "20C1E9F7180D855A"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "3C897E4FEAB526FC"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
 			subtitle: "A toy, a very powerful toy."
 			tasks: [{
 				id: "1BED2C9E2AAF7E07"
@@ -2054,6 +2503,19 @@
 				"The Wand of Symmetry is a very useful tool, make use of it when building structures!"
 			]
 			id: "53E2E000D9909FCE"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1F31A7B4105BD1B0"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "79A28DF7574E0770"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
 			subtitle: "An architect's best friend."
 			tasks: [{
 				id: "6118649B891C6A2C"
@@ -2071,6 +2533,19 @@
 				"Make sure to use a Copper / Netherite Backtank for safe operation with no risk for durability loss!"
 			]
 			id: "5ADBAF0BF56632CD"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0DD73954D0725759"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "633E7854461AC0C4"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
 			subtitle: "Both an architect's and engineer's best friend for reaching long distances."
 			tasks: [{
 				id: "6772A84332B1D241"
@@ -2089,6 +2564,11 @@
 		{
 			dependencies: ["00DA4B8905FE3CAF"]
 			id: "584B2971C4DEB905"
+			rewards: [{
+				id: "300E869AC71FD2F2"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
 			subtitle: "Does it feel peculiar to you?"
 			tasks: [{
 				id: "42CD2E502D645E60"
@@ -2106,6 +2586,11 @@
 			]
 			description: ["You can also hold the haunted bell in your offhand to see where mobs have the possibility of spawning."]
 			id: "3E0990C4385C0B5F"
+			rewards: [{
+				id: "2B13EDD595D52174"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
 			subtitle: "I shall show you where the souls of the damned appear o' wise one."
 			tasks: [{
 				id: "48375D6A6B20BE40"
@@ -2135,6 +2620,11 @@
 				}
 			}
 			id: "61624301D1511BB0"
+			rewards: [{
+				id: "52306D96A3377941"
+				type: "xp_levels"
+				xp_levels: 3
+			}]
 			subtitle: "For underwater exploration."
 			tasks: [
 				{
@@ -2186,6 +2676,11 @@
 				}
 			}
 			id: "41753F371DB962BC"
+			rewards: [{
+				id: "712876AABAECD0B6"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
 			subtitle: "Gone swimming in the lava oceans of the Nether."
 			tasks: [
 				{
@@ -2260,6 +2755,11 @@
 					table_id: 7771384237349930739L
 					type: "random"
 				}
+				{
+					id: "46163752AA17DB25"
+					type: "xp"
+					xp: 150
+				}
 			]
 			shape: "hexagon"
 			subtitle: "Biiiig waterwheels."
@@ -2280,6 +2780,19 @@
 			description: ["Hold [w] to Ponder to learn more!"]
 			hide: true
 			id: "73F456AE957F4002"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "421AC1DB0AF18FDF"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "2B1EA5CE86C30985"
+					type: "xp"
+					xp: 750
+				}
+			]
 			subtitle: "Elevators made easy."
 			tasks: [{
 				id: "5510DE2F5AC3C19F"
@@ -2298,6 +2811,11 @@
 				"Mechanical Rollers are extremely useful when it comes to clearing the way for your new train network."
 			]
 			id: "6E890DBBA3FFA4B3"
+			rewards: [{
+				id: "056DBEE6999C85B2"
+				type: "xp"
+				xp: 500
+			}]
 			shape: "rsquare"
 			size: 1.5d
 			subtitle: "Need to clear the way?"
@@ -2319,6 +2837,11 @@
 				"They can also be used with the Elevator Pulley to designate floors."
 			]
 			id: "205BAFFFECA72D1E"
+			rewards: [{
+				id: "0D226167D60F841A"
+				type: "xp"
+				xp: 50
+			}]
 			subtitle: "This has many uses, trust me."
 			tasks: [{
 				id: "32AD37AC33F00FD7"
@@ -2331,6 +2854,12 @@
 		{
 			dependencies: ["6AC32180F67385D6"]
 			id: "0F77020B805CCEBC"
+			rewards: [{
+				id: "32158E4693442B28"
+				type: "xp"
+				xp: 500
+			}]
+			subtitle: "If you want to be specific about fluid filtration."
 			tasks: [{
 				id: "289E3FF04E6072D0"
 				item: "create:smart_fluid_pipe"
@@ -2347,6 +2876,11 @@
 				"What takes up so much space or requires the use of hoppers can now be achieved with less space taken."
 			]
 			id: "3D6A28C50E86EA2E"
+			rewards: [{
+				id: "36C6AFD82EFC6AC7"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
 			subtitle: "The most compact and adjustable redstone clock!"
 			tasks: [{
 				id: "74BF29F609571514"
@@ -2361,6 +2895,11 @@
 			dependencies: ["00DA4B8905FE3CAF"]
 			description: ["Hold [w] to Ponder to learn more!"]
 			id: "68376786E8D45E69"
+			rewards: [{
+				id: "73387A060C0C7DF6"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
 			subtitle: "This should be self-explanatory."
 			tasks: [{
 				id: "24C7307084B2B196"
@@ -2383,12 +2922,19 @@
 			]
 			hide: true
 			id: "7ECC22C059800186"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "7FDF7DCC806AF56F"
-				table_id: 103743719166323827L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7FDF7DCC806AF56F"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "0B2483D0FB41D045"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
 			subtitle: "Create the Deployer."
 			tasks: [{
 				id: "22085A4AF847F19B"
@@ -2402,6 +2948,7 @@
 		{
 			dependencies: ["0CD722C2B48DF862"]
 			id: "1BD09AD0A5B739CA"
+			subtitle: "The voice of an angel..."
 			tasks: [{
 				id: "4D36CD45D808E2E2"
 				item: "create:steam_whistle"
@@ -2413,6 +2960,11 @@
 		{
 			dependencies: ["0194851298AADB65"]
 			id: "5172E10D8831BABF"
+			rewards: [{
+				id: "41B79585F387FDC6"
+				type: "xp"
+				xp: 500
+			}]
 			subtitle: "Mechanical Rollers breaking everything? I take care of that."
 			tasks: [{
 				id: "4780AFC1FB496E12"
@@ -2428,7 +2980,14 @@
 			subtitle: "You don't want them defying space and time, do you?"
 			tasks: [{
 				id: "2AD53BEA066AF31A"
-				item: "create:brown_seat"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "create:seats"
+					}
+				}
+				title: "Any #create:seats"
 				type: "item"
 			}]
 			title: "Make Seats for your Passengers!"
@@ -2457,6 +3016,12 @@
 		{
 			dependencies: ["28094E43F612C0E4"]
 			id: "7A1F13EA597AD89D"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "4C1CE40136F07F99"
+				table_id: 7771384237349930739L
+				type: "random"
+			}]
 			tasks: [{
 				count: 2L
 				id: "0CB72936167ED092"
@@ -2470,8 +3035,14 @@
 		{
 			dependencies: ["0075BAE1BFBAA36D"]
 			id: "13A80E87623C81D5"
+			rewards: [{
+				id: "13DC86FDE2440CEA"
+				type: "xp"
+				xp: 100
+			}]
 			shape: "rsquare"
 			tasks: [{
+				count: 2L
 				id: "07266621F463A11C"
 				item: "create:train_door"
 				type: "item"
@@ -2483,6 +3054,11 @@
 		{
 			dependencies: ["00DA4B8905FE3CAF"]
 			id: "4E1378EE0FABE18C"
+			rewards: [{
+				id: "7D1697F523F721D8"
+				type: "xp"
+				xp: 50
+			}]
 			subtitle: "An elegant way to showcase an item."
 			tasks: [{
 				id: "1B061BD5EC858133"

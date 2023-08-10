@@ -46,5 +46,7 @@ usernamecache.json
 # Ignore dat
 enigmatic_persistence.dat
 servers.dat
+*.dat
+*.dat_old
 servers.essential.dat
 bookmark.ini

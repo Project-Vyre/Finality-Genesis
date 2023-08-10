@@ -132,6 +132,9 @@
 	#Monstrosity's music volume
 	#Range: 0.0 ~ 1.0
 	"Monstrosity's Music Volume" = 0.5
+	#Monstrosity's Healing Multiplier
+	#Range: 0.0 ~ 1000000.0
+	MonstrosityHealingMultiplier = 1.0
 
 ["Ender Golem"]
 	#Ender Golem's block breaking ignore the MobGriefing
@@ -164,6 +167,9 @@
 	#Ignis's music volume
 	#Range: 0.0 ~ 1.0
 	"Ignis's Music Volume" = 0.5
+	#Ignis's Healing Multiplier
+	#Range: 0.0 ~ 1000000.0
+	IgnisHealingMultiplier = 1.0
 
 [revenant]
 	#Revenant's Health Multiplier
@@ -194,6 +200,9 @@
 	#The Harbinger's music volume
 	#Range: 0.0 ~ 1.0
 	"The Harbinger's Music Volume" = 0.5
+	#Harbinger's Healing Multiplier
+	#Range: 0.0 ~ 1000000.0
+	HarbingerHealingMultiplier = 1.0
 
 [Weapon]
 	#Armor Infinity Durability(on/off)
@@ -278,4 +287,12 @@
 	#Random roll chance to enable mob spawning. Higher number = lower chance of spawning
 	#Range: > 0
 	DeeplingAnglerSpawnRolls = 30
+
+["The Baby Leviathan"]
+	#BabyLeviathan's Health Multiplier
+	#Range: 0.0 ~ 1000000.0
+	BabyLeviathanHealthMultiplier = 5.0
+	#BabyLeviathan's Damage Multiplier
+	#Range: 0.0 ~ 1000000.0
+	BabyLeviathanDamageMultiplier = 250.0
 
