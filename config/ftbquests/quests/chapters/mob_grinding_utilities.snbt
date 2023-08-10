@@ -11,9 +11,11 @@
 		{
 			dependencies: ["4A691BB889286C89"]
 			description: [
+				"Chapter is a work in progress!"
+				""
 				"A lot of the blocks are explainable through JEI, but more documentation will be here once I get to it."
 				""
-				"Oh and I changed the fan from Mob Grinding Utils."
+				"Oh, and I changed the fan from Mob Grinding Utils."
 			]
 			hide: true
 			id: "1B5B598C60C348CA"
