@@ -75,10 +75,10 @@ ServerEvents.recipes(event => {
         'minecraft:prismarine_crystals'
     ]).id('finality:trident_prong')
     event.recipes.createMixing('kubejs:omnipotent_alloy', [
-        'extendedcrafting:the_ultimate_catalyst',
-        'extendedcrafting:crystaltine_catalyst',
+        'extendedcrafting:the_ultimate_ingot',
+        'extendedcrafting:crystaltine_ingot',
         'minecraft:netherite_ingot',
-        'create:rose_quartz',
+        'create:polished_rose_quartz',
         'create:brass_ingot',
         'create:andesite_alloy',
         'minecraft:diamond',
@@ -316,7 +316,6 @@ ServerEvents.loaded(event => {
         event.server.persistentData.putBoolean('firstload', true)
         console.warn('First server load! Lag may be present for a few minutes. Also, please check your Quest Book to get your bearings.')
     }
-
 })
 
 EntityEvents.hurt(event => {
@@ -326,6 +325,19 @@ EntityEvents.hurt(event => {
         event.player.getFeetArmorItem() === 'kubejs:final_boots'
     ) {
         event.cancel()
+    } else {
+        if (event.player.getHeadArmorItem() === null) {
+            console.log('Finality armor set not detected, missing helmet. Permitting damage to player.')
+        }
+        if (event.player.getChestArmorItem() === null) {
+            console.log('Finality armor set not detected, missing chestplate. Permitting damage to player.')
+        }
+        if (event.player.getLegsArmorItem() === null) {
+            console.log('Finality armor set not detected, missing leggings. Permitting damage to player.')
+        }
+        if (event.player.getFeetArmorItem() === null) {
+            console.log('Finality armor set not detected, missing boots. Permitting damage to player.')
+        }
     }
 })
 const set = {
