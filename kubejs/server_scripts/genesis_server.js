@@ -301,6 +301,7 @@ ServerEvents.tags('item', event => {
 
     // Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it
     // event.get('forge:cobblestone').remove('minecraft:mossy_cobblestone')
+    event.add('kubejs:command_blocks', ['kubejs:command_block', 'kubejs:chain_command_block', 'kubejs:repeating_command_block'])
 })
 
 PlayerEvents.loggedIn(event => {
