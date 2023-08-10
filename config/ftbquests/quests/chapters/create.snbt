@@ -2411,20 +2411,33 @@
 		}
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
-			description: ["Hold [w] to Ponder to learn more!"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"The powered toggle latch can be used to reverse a gantry's or mechanical piston's direction when it reaches one end with the help of redstone contacts."
+				""
+				"Upon reaching one end, the redstone contact will send a signal to the powered toggle patch which will either turn off or on the redstone wiring connected to the gearshift. This does heavily depend on your setup, however."
+			]
 			id: "24D7FAA4E3EFAD39"
 			rewards: [{
 				id: "207916CF526D1B98"
 				type: "xp"
 				xp: 50
 			}]
-			subtitle: "It is a very useful redstone component."
-			tasks: [{
-				id: "0BF1FB3D19AB9BB0"
-				item: "create:powered_toggle_latch"
-				type: "item"
-			}]
-			title: "Craft the Powered Toggle Latch"
+			subtitle: "Very useful redstone components."
+			tasks: [
+				{
+					id: "1CD6397F36852A79"
+					item: "create:powered_latch"
+					type: "item"
+				}
+				{
+					id: "09890671AD6AAC79"
+					item: "create:powered_toggle_latch"
+					type: "item"
+				}
+			]
+			title: "Redstone Latches"
 			x: 1.5d
 			y: -1.5d
 		}
