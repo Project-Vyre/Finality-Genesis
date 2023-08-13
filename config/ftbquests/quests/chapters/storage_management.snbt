@@ -200,6 +200,7 @@
 		}
 		{
 			dependencies: ["54AB904AF8AB6C07"]
+			description: ["If you are wondering where to get more static cloud blocks, you could get them from the Bloviators during a thunderstorm."]
 			icon: "cloudstorage:static_cloud"
 			id: "37A9592B69D284BF"
 			subtitle: "Everyone loves static electricity!"
