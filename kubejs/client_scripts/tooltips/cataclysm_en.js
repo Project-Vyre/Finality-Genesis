@@ -1,3 +1,5 @@
+// requires: cataclysm
+
 ItemEvents.tooltip(event => {
     event.addAdvanced('cataclysm:infernal_forge', (item, advanced, text) => {
         text.set(1, Text.of('§6Right click on a block to cause AoE damage around yourself, it sends mobs flying.')) // Adds text in first line, pushing the items name down a line. If you want the line below the item name, the index must be 1

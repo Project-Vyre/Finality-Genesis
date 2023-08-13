@@ -77,18 +77,44 @@ let MYSHIDE = [
     'sulfur',
     'lead'
 ]
+let MYS_FLUID_HIDE = [
+    'molten_inferium',
+    'molten_prudentium',
+    'molten_tertium',
+    'molten_imperium',
+    'molten_supremium',
+    'molten_soulium'
+]
+let CAdditionsItems = [
+    'straw',
+    'bioethanol_bucket',
+    'gold_rod',
+    'brass_rod',
+    'electrum_rod',
+    'electrum_ingot',
+    'electrum_sheet',
+    'electrum_nugget',
+    'electrum_wire',
+    'electrum_spool',
+    'digital_adapter'
+]
+
 JEIEvents.hideItems(event => {
     // Hide items in JEI here
     // event.hide('minecraft:cobblestone')
     MYSHIDE.forEach(name => {
         event.hide(`mysticalagriculture:${name}_essence`)
+        event.hide(`mysticalagriculture:${name}_seeds`)
     })
-    event.hide('createaddition:straw')
-    event.hide('createaddition:bioethanol_bucket')
+    CAdditionsItems.forEach(name => {
+        event.hide(`createaddition:${name}`)
+    })
+})
+JEIEvents.hideFluids(event => {
+    MYS_FLUID_HIDE.forEach(name => {
+        event.hide(`mysticalagradditions:${name}`)
+    })
     event.hide('createaddition:bioethanol')
-    event.hide('createaddition:straw')
-    event.hide('createaddition:gold_rod')
-    event.hide('createaddition:brass_rod')
 })
 JEIEvents.information(event => {
     event.addItem('minecraft:campfire', ['Campfires now regenerate your health. Cozy!'])
@@ -130,8 +156,54 @@ ItemEvents.tooltip(event => {
             text.add(Component.lightPurple("- Overseers of Finality"))
         }
     }))
-    event.addAdvanced(['minecraft:wooden_pickaxe', 'minecraft:stone_pickaxe', 'minecraft:iron_pickaxe'], (item, advanced, text) => {
-        if (!event.shift) {
+    event.addAdvanced('minecraft:wooden_pickaxe', (item, advanced, text) => {
+        if (!event.isShift()) {
+            text.add(1, [Text.of('Hold ').gold(), Text.of('[Shift] ').yellow(), Text.of('to see more info.').gold()])
+        } else {
+            text.add(1, [
+                Text.of('You can now ').white(),
+                Text.of('repair ').green().bold(true),
+                Text.of('tools with the material they are made of in your ').white(),
+                Text.of('crafting grid').gold(),
+                Text.of('.').white()
+            ])
+            text.add(2, [
+                Text.of('If you are wondering.. yes, this also applies to ').white(),
+                Text.of('Diamond ').aqua(),
+                Text.of('and ').white(),
+                Text.of('Netherite ').darkGray(),
+                Text.of('and other tools as well.').white()
+            ])
+            text.add(3, [
+                'This hint will only show up on wooden, stone and iron pickaxes, so try to remember this!'
+            ])
+        }
+    })
+    event.addAdvanced('minecraft:stone_pickaxe', (item, advanced, text) => {
+        if (!event.isShift()) {
+            text.add(1, [Text.of('Hold ').gold(), Text.of('[Shift] ').yellow(), Text.of('to see more info.').gold()])
+        } else {
+            text.add(1, [
+                Text.of('You can now ').white(),
+                Text.of('repair ').green().bold(true),
+                Text.of('tools with the material they are made of in your ').white(),
+                Text.of('crafting grid').gold(),
+                Text.of('.').white()
+            ])
+            text.add(2, [
+                Text.of('If you are wondering.. yes, this also applies to ').white(),
+                Text.of('Diamond ').aqua(),
+                Text.of('and ').white(),
+                Text.of('Netherite ').darkGray(),
+                Text.of('and other tools as well.').white()
+            ])
+            text.add(3, [
+                'This hint will only show up on wooden, stone and iron pickaxes, so try to remember this!'
+            ])
+        }
+    })
+    event.addAdvanced('minecraft:iron_pickaxe', (item, advanced, text) => {
+        if (!event.isShift()) {
             text.add(1, [Text.of('Hold ').gold(), Text.of('[Shift] ').yellow(), Text.of('to see more info.').gold()])
         } else {
             text.add(1, [
@@ -154,7 +226,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced('minecraft:beacon', (item, advanced, text) => {
-        if (!event.shift) {
+        if (!event.isShift()) {
             text.add(1, [Text.of('Hold ').gold(), Text.of('[Shift] ').yellow(), Text.of('to see more info.').gold()])
         } else {
             text.add(1, Text.green('Gives positive effects to players in a certain radius.').bold(true))
@@ -167,7 +239,7 @@ ItemEvents.tooltip(event => {
         text.add(2, Text.gray('It is literally a hand held Crafting Table, what more can you ask for?'))
     })
     event.addAdvanced('farmersdelight:skillet', (item, advanced, text) => {
-        if (!event.shift) {
+        if (!event.isShift()) {
             text.add(1, [
                 Text.of('Hold ').gold(), Text.of('[Shift] ').yellow(), Text.of('for more info.').gold()
             ])
@@ -193,7 +265,7 @@ ItemEvents.tooltip(event => {
     })
     event.add('cloudstorage:balloon_bit', Text.gray('With the power of the crafting table, you can make a new balloon from these pieces.'))
     event.addAdvanced('cloudstorage:cloud_chest', (item, advanced, text) => {
-        if (!event.shift) {
+        if (!event.isShift()) {
             text.add(1, [
                 Text.of('Hold ').darkGray(), Text.of('[Shift] ').gray(), Text.of('for more info.').darkGray()
             ])
@@ -221,7 +293,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced('cloudstorage:static_cloud_chest', (item, advanced, text) => {
-        if (!event.shift) {
+        if (!event.isShift()) {
             text.add(1, [
                 Text.of('Hold ').darkGray(), Text.of('[Shift] ').gray(), Text.of('for more info.').darkGray()
             ])
@@ -257,7 +329,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced('eccentrictome:tome', (item, advanced, text) => {
-        if (!event.shift) {
+        if (!event.isShift()) {
             text.add(1, [
                 Text.of('Hold ').darkPurple(),
                 Text.of('[Shift] ').lightPurple(),
@@ -296,4 +368,13 @@ ItemEvents.tooltip(event => {
             Text.of('"He Who Remains"').lightPurple()
         ])
     })
+})
+
+const $ScreenshakeHandler = Java.loadClass('team.lodestar.lodestone.handlers.ScreenshakeHandler')
+const $ScreenshakeInstance = Java.loadClass('team.lodestar.lodestone.systems.screenshake.ScreenshakeInstance')
+const $Easing = Java.loadClass('team.lodestar.lodestone.systems.easing.Easing')
+
+NetworkEvents.dataReceived('screenshake', event => {
+    const { i1, i2, i3, duration } = event.data
+    $ScreenshakeHandler.addScreenshake($ScreenshakeInstance(duration).setIntensity(i1, i2, i3).setEasing($Easing.SINE_IN, $Easing.QUAD_IN))
 })
