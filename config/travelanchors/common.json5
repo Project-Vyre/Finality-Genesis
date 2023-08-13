@@ -13,5 +13,5 @@
   
   // The maximum distance you can short-range teleport with shift-click.
   // Range: 2.0 - 15.0
-  "max_short_tp_distance": 7
+  "max_short_tp_distance": 15
 }
