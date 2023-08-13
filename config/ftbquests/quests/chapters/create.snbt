@@ -91,7 +91,11 @@
 				"57A69334C4D4299A"
 				"654CC532C1F17209"
 			]
-			description: ["Hold [w] to Ponder to learn more!"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Please note that it is not required to use a Depot with a Mechanical Press to press ingots into sheets! It's just to prevent items from spawning in case you forget about them."
+			]
 			hide: true
 			id: "157C4AD3062BC31A"
 			rewards: [
@@ -148,6 +152,8 @@
 			dependencies: ["157C4AD3062BC31A"]
 			description: [
 				"The Mechanical Press has a very involved recipe tree, so expect to use it a lot."
+				""
+				"In case you didn't see this the first time: You don't need to use the Depot to press ingots into sheets. It's just to prevent items from despawning in the first place."
 				""
 				"Hold [w] to Ponder to learn more!"
 			]
@@ -918,6 +924,7 @@
 		}
 		{
 			dependencies: ["6AC32180F67385D6"]
+			description: ["Paired with Fluid Pipes, Mechanical Pumps can extract honey from beehives without angering the bees."]
 			id: "046D0A0ADA6236A8"
 			rewards: [{
 				id: "3F9727754F4FE9A9"
@@ -1057,7 +1064,7 @@
 				type: "item"
 			}]
 			title: "Craft the Spout"
-			x: -3.5d
+			x: -4.5d
 			y: -1.0d
 		}
 		{
@@ -1698,6 +1705,7 @@
 		}
 		{
 			dependencies: ["2E386081E5302CF5"]
+			description: ["In order for a body of fluid to be considered &d<shake>infinite</shake>&r it has to be 10,000 blocks in volume and some additional blocks because it can't be exactly 10,000 for some reason."]
 			id: "1DA9BAAA83A3959B"
 			rewards: [{
 				id: "70349A32459AF48C"
@@ -1978,7 +1986,7 @@
 				}
 			]
 			title: "The Copper Age"
-			x: -2.5d
+			x: -3.5d
 			y: 0.0d
 		}
 		{
@@ -2371,8 +2379,8 @@
 				type: "item"
 			}]
 			title: "Take a Seat!"
-			x: 2.0d
-			y: 0.0d
+			x: -1.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["1E0CDA1ED53FACEE"]
@@ -2406,7 +2414,7 @@
 				type: "item"
 			}]
 			title: "Craft the Item Drain"
-			x: -3.5d
+			x: -4.5d
 			y: 1.0d
 		}
 		{
@@ -2675,7 +2683,7 @@
 				}
 			]
 			title: "Gone diving!"
-			x: -4.0d
+			x: -5.0d
 			y: 0.0d
 		}
 		{
@@ -2742,7 +2750,7 @@
 				}
 			]
 			title: "Lava Diving!"
-			x: -5.5d
+			x: -6.5d
 			y: 0.0d
 		}
 		{
@@ -2967,7 +2975,7 @@
 				item: "create:steam_whistle"
 				type: "item"
 			}]
-			x: -2.5d
+			x: -3.5d
 			y: -1.5d
 		}
 		{
@@ -3023,8 +3031,8 @@
 				type: "item"
 			}]
 			title: "Spin..."
-			x: 3.5d
-			y: 0.0d
+			x: -3.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["28094E43F612C0E4"]
@@ -3042,8 +3050,8 @@
 				type: "item"
 			}]
 			title: "Fancy Doors and Trapdoors"
-			x: 3.5d
-			y: -1.5d
+			x: -3.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["0075BAE1BFBAA36D"]
@@ -3081,6 +3089,93 @@
 			title: "The Placard"
 			x: -12.5d
 			y: -9.5d
+		}
+		{
+			dependencies: ["187E2B3FDE19DD4D"]
+			description: [
+				"With the item you want to either whitelist or blacklist in your inventory, place it into the available slots. The item is not consumed!"
+				""
+				"You can also use the List Filter in the recipe filter on Basins to allow certain items to be made or on Smart Fluid Pipes to extract certain fluids directly from the Basin or Fluid Tank."
+				""
+				"You can also put List filters inside List Filters."
+			]
+			id: "3D0E6E4D62F30495"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7C57533D20CE620E"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5CA0875C72117EDF"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "4EE8BAA156239986"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "rsquare"
+			subtitle: "Need to filter your items? Use me!"
+			tasks: [{
+				id: "6FA1F8132962C364"
+				item: "create:filter"
+				type: "item"
+			}]
+			title: "Create Utilities - The Mighty List Filter"
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3AF368FDC6BEC625"]
+			id: "33B9370ECDC36505"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "01A9C744F90C2920"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "76969CA944DFDE6F"
+					table_id: 7771384237349930739L
+					type: "loot"
+				}
+				{
+					id: "31D2DEF256FCF9DA"
+					type: "xp"
+					xp: 250
+				}
+			]
+			shape: "rsquare"
+			subtitle: "Allows you to filter items by attribute."
+			tasks: [{
+				id: "3783BD3032FFDABA"
+				item: "create:attribute_filter"
+				type: "item"
+			}]
+			title: "The Attribute Filter"
+			x: 10.5d
+			y: -5.5d
+		}
+		{
+			dependencies: ["187E2B3FDE19DD4D"]
+			id: "69EE3A81D40C9D47"
+			shape: "rsquare"
+			subtitle: "Tired of clicking and dragging items to craft something? I got you covered!"
+			tasks: [{
+				id: "3C651867A5DAED99"
+				item: "create:crafting_blueprint"
+				type: "item"
+			}]
+			title: "Create Utilities - The Crafting Blueprint"
+			x: 2.0d
+			y: 0.0d
 		}
 	]
 	subtitle: [

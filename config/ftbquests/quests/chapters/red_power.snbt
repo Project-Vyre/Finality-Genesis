@@ -1,0 +1,180 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "red_power"
+	group: "668E3EA3A7A91B79"
+	icon: {
+		Count: 1b
+		id: "red_power:wrench"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "5FAB2BFC967313BB"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["65FC712C5D7E312D"]
+			icon: {
+				Count: 1b
+				id: "red_power:wrench"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "6DDE87592B21E322"
+			tasks: [
+				{
+					id: "34E1901C03C88DC6"
+					item: {
+						Count: 1b
+						id: "red_power:wrench"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "5D9B07860DDA0017"
+					item: {
+						Count: 1b
+						id: "red_power:cutters"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "35763E4339ECB43D"
+					item: {
+						Count: 1b
+						id: "red_power:safety_glasses"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Introduction to Red Power"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6DDE87592B21E322"]
+			id: "5F24D7AF78526BBE"
+			subtitle: "This is how to send redstone power from any vanilla source!"
+			tasks: [{
+				id: "3CF605D0CB48FB40"
+				item: "red_power:reader_node"
+				type: "item"
+			}]
+			title: "Transmission 101 - Reader Node"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2FB1B406A702111C"]
+			id: "462922C052690E0D"
+			subtitle: "Upon receiving a signal, the Recorder Node will power the block attached to it."
+			tasks: [{
+				id: "2478BBA76ADE606D"
+				item: "red_power:recorder_node"
+				type: "item"
+			}]
+			title: "Receiving 101 - Recorder Node"
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["5F24D7AF78526BBE"]
+			id: "2FB1B406A702111C"
+			subtitle: "This allows you to relay redstone signals."
+			tasks: [{
+				id: "5E9F78086BC6024E"
+				item: "red_power:node"
+				type: "item"
+			}]
+			title: "Relaying Signals 101 - Node"
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["6DDE87592B21E322"]
+			id: "37F6A5853B983CFB"
+			subtitle: "The most basic wire type with lots of signal loss."
+			tasks: [{
+				id: "45BD60E734E10A82"
+				item: "red_power:wires"
+				type: "item"
+			}]
+			title: "Basic Wiring"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["37F6A5853B983CFB"]
+			id: "37B949C33CA89529"
+			subtitle: "Look ma! No hands!"
+			tasks: [{
+				id: "22BA56A485D8C1B1"
+				item: "red_power:amethyst_wires"
+				type: "item"
+			}]
+			title: "Amethyst Wires"
+			x: 0.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["37B949C33CA89529"]
+			id: "63F1A995AF215AFA"
+			tasks: [{
+				id: "784B49658CD93C81"
+				item: "red_power:ender_wires"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["63F1A995AF215AFA"]
+			id: "6895635F5A0E5904"
+			tasks: [{
+				id: "68DB51F7FA648B58"
+				item: "red_power:echo_wires"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["6895635F5A0E5904"]
+			id: "704A94D5F3928D93"
+			tasks: [{
+				id: "54031B5D2CD6CACC"
+				item: "red_power:power_wires"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["462922C052690E0D"]
+			id: "20B9763AF8E4DC5B"
+			subtitle: "Amplifies the power up to 10."
+			tasks: [{
+				id: "4DCCCB5258F401E9"
+				item: "red_power:amplifier_node"
+				type: "item"
+			}]
+			title: "Amplification 101 - Amplifier Node"
+			x: 0.0d
+			y: 6.5d
+		}
+	]
+	subtitle: ["Modernized redstone transmission!"]
+	title: "Red Power"
+}

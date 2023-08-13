@@ -343,6 +343,8 @@
 				"Instructions on how to use the Eccentric Tome are located in its tooltip. &b<wave>You're welcome!</wave>&r"
 				""
 				"As for Farmer's Delight tools, obviously you will need a knife to use the cutting board."
+				""
+				"Wondering what chalk can be used for? It can be used for drawing and help you navigate through cave systems, just in case you get lost. Additional symbols can be unlocked via advancements."
 			]
 			icon: {
 				Count: 1b
@@ -416,6 +418,18 @@
 				{
 					id: "0C4AF3D94C5361F1"
 					item: "farmersdelight:stove"
+					type: "item"
+				}
+				{
+					id: "2EFF728C6194E967"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "chalk:chalks"
+						}
+					}
+					title: "Any #chalk:chalks"
 					type: "item"
 				}
 			]
@@ -586,6 +600,32 @@
 						tag: {
 							Damage: 0
 						}
+					}
+					type: "item"
+				}
+				{
+					id: "39BA304983F7DA1C"
+					item: {
+						Count: 1b
+						id: "minecraft:bow"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1C93B0D8F5C66FF2"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							Parent: {
+								Items: [ ]
+								SelectedSlot: 0
+								Size: 6
+							}
+						}
+						id: "supplementaries:quiver"
 					}
 					type: "item"
 				}

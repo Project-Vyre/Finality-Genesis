@@ -177,7 +177,7 @@
 				}
 				{
 					id: "1E37BD8F6B386BB1"
-					item: "kubejs:omnipotent_alloy"
+					item: "kubejs:high_entropy_alloy"
 					type: "item"
 				}
 			]
@@ -311,6 +311,7 @@
 				"01AA908CE3006E6A"
 			]
 			id: "6762D7F87F3F59F3"
+			subtitle: "Those were the times..."
 			tasks: [{
 				id: "3CA9C04FD6FAE1DF"
 				item: {

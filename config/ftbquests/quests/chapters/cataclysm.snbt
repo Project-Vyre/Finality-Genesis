@@ -298,16 +298,34 @@
 		}
 		{
 			dependencies: ["54378BE3AEDD91A3"]
-			description: ["&d&lYou have been warned.&r&r"]
+			description: [
+				"&d&lYou have been warned.&r"
+				""
+				"I recommend using the &9Will of the Ocean&r spellstone to make swimming much easier."
+			]
 			hide: true
+			icon: "cataclysm:abyssal_sacrifice"
 			id: "5335BF00DB2A8CCE"
 			shape: "square"
 			subtitle: "Come prepared, or face certain death."
-			tasks: [{
-				id: "674414D33A9EEC90"
-				item: "cataclysm:abyssal_sacrifice"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "674414D33A9EEC90"
+					item: "cataclysm:abyssal_sacrifice"
+					type: "item"
+				}
+				{
+					id: "110167CE51EBE339"
+					item: {
+						Count: 1b
+						id: "minecraft:trident"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
 			title: "Create the Abyssal Sacrifice"
 			x: 0.0d
 			y: -3.0d
@@ -483,6 +501,7 @@
 				item: "aquamirae:shell_horn"
 				type: "item"
 			}]
+			title: "Putting the Captain to Rest - Pt.2"
 			x: -1.5d
 			y: -6.0d
 		}
