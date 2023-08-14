@@ -286,16 +286,7 @@ ServerEvents.recipes(event => {
         Fluid.of('minecraft:lava', 250)
     ]).heated().id('finality:renew_deepslate_tuff')
     // crushing
-    event.remove({ id: 'create:crushing/gravel' })
     event.remove({ id: 'create:crushing/netherrack' })
-    event.recipes.createCrushing([
-        'minecraft:dirt',
-        Item.of('minecraft:flint').withChance(0.10)
-    ], 'minecraft:gravel').processingTime(250).id('finality:gravel_crushing')
-    event.recipes.createCrushing([
-        'minecraft:sand',
-        Item.of('minecraft:clay_ball').withChance(0.05)
-    ], 'minecraft:dirt').processingTime(250).id('finality:dirt_crushing')
     event.recipes.createCrushing([
         Item.of('minecraft:pointed_dripstone', 4),
         Item.of('minecraft:clay_ball').withChance(0.50),
@@ -334,6 +325,10 @@ ServerEvents.recipes(event => {
     // blasting
     event.blasting('create:zinc_block', 'create:raw_zinc_block').id('finality:zinc_block_blasting_compat')
     // mixing 
+    event.recipes.createMixing('minecraft:dirt', [
+        'minecraft:gravel',
+        '3x minecraft:bone_meal'
+    ]).id('finality:dirt_from_gravel')
     event.recipes.createMixing(['minecraft:coarse_dirt'], [
         'minecraft:dirt', 'minecraft:gravel'
     ]).id('finality:coarse_dirt')
