@@ -2,10 +2,10 @@
 [storage]
 	# maximum slots that can be uploaded to a cloud chest. A vanilla chest has 27 slots.
 	#Range: > 27
-	max_cloud_slots = 131072
+	max_cloud_slots = 262144
 	# maximum slots that can be uploaded to a static cloud chest. A vanilla chest has 27 slots.
 	#Range: > 27
-	max_static_cloud_slots = 131072
+	max_static_cloud_slots = 262144
 	# how far from a player will cloud chests play an opening animation
 	#Range: 1.5 ~ 16.0
 	cloud_chest_open_distance = 6.0
