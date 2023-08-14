@@ -24,6 +24,7 @@ ServerEvents.recipes(event => {
         Item.of('mysticalagriculture:prosperity_shard').withChance(0.25), 
         Item.of('mysticalagriculture:prosperity_seed_base').withChance(0.009765625)
     ], 'minecraft:coarse_dirt').processingTime(250).id('finality:renew_prosperity')
+    event.recipes.createCompacting([Fluid.of('minecraft:milk', 1000)], ['4x mysticalagriculture:cow_essence']).id('finality:milk_from_cow_essence')
     // redstone
     event.shaped('16x minecraft:redstone', [
         'RRR',
@@ -46,7 +47,7 @@ ServerEvents.recipes(event => {
         F: 'mysticalagriculture:fire_essence',
         G: 'minecraft:gold_nugget'
     }).id('mysticalagriculture:essence/minecraft/red_sand')
-    event.recipes.createMixing(['16x minecraft:red_sand', 16], [
+    event.recipes.createMixing('16x minecraft:red_sand', [
         '2x mysticalagriculture:dirt_essence',
         '2x mysticalagriculture:fire_essence',
         'minecraft:gold_nugget'
@@ -280,9 +281,6 @@ ServerEvents.recipes(event => {
     ], {
         L: 'mysticalagriculture:limestone_essence'
     }).id('mysticalagriculture:essence/create/limestone')
-    event.recipes.createCompacting(Item.of('create:limestone', 16), [
-        '9x mysticalagriculture:limestone_essence'
-    ]).id('finality:mysta_compacting_limestone')
     // diamond essence
     event.shaped('minecraft:diamond', [
         'DDD',
@@ -322,6 +320,13 @@ ServerEvents.recipes(event => {
         P: 'mysticalagriculture:prismarine_essence',
         N: 'minecraft:nautilus_shell'
     }).id('finality:mysta_mechanical_heart_of_the_sea')
+    event.shaped('minecraft:netherite_ingot', [
+        'EEE',
+        'EEE',
+        'EEE'
+    ], {
+        E: 'mysticalagriculture:netherite_essence'
+    }).id('mysticalagriculture:essence/minecraft/netherite_ingot')
     // machine frame related
     event.shaped('mysticalagriculture:machine_frame', [
         'IRI',
