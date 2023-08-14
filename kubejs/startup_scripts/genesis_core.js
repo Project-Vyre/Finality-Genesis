@@ -55,9 +55,9 @@ let CMD = {
     chain_command_block: 'Chain Command Block',
     repeating_command_block: 'Repeating Command Block'
 }
-let TOOLS = ['sword', 'shovel', 'pickaxe', 'axe', 'hoe']
-let ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
-let DIVING = ['diving_helmet', 'diving_boots']
+const TOOLS = ['sword', 'shovel', 'pickaxe', 'axe', 'hoe']
+const ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
+const DIVING = ['diving_helmet', 'backtank', 'diving_boots']
 StartupEvents.registry('item', event => { // Register new items here event.create('example_item').displayName('Example Item')
     event.create('kubejs:trident_pole').texture('kubejs:item/trident_pole').maxStackSize(64)
     event.create('kubejs:trident_prong').texture('kubejs:item/trident_prong').maxStackSize(64)
@@ -79,12 +79,12 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     event.create('kubejs:incomplete_entropy_mechanism', 'create:sequenced_assembly').displayName('<rainb>Incomplete Entropy Mechanism</rainb>').texture('kubejs:item/incomplete_entropy_mechanism').maxStackSize(1)
     event.create('kubejs:entropy_mechanism').displayName('<rainb>Entropy Mechanism').texture('kubejs:item/entropy_mechanism').maxStackSize(64)
     // tools
-    event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_items').displayName('§l<rainb>Particula Eversorem</rainb>').texture('kubejs:item/final_pickaxe').maxStackSize(1).fireResistant(true).group('tools')
-    event.create('kubejs:final_axe', 'axe').tier('final_items').displayName('§l<rainb>Natura Exitium</rainb>').texture('kubejs:item/final_axe').maxStackSize(1).fireResistant(true).group('tools')
-    event.create('kubejs:final_shovel', 'shovel').tier('final_items').displayName('§l<rainb>Terra Confractus</rainb>').texture('kubejs:item/final_shovel').maxStackSize(1).fireResistant(true).group('tools')
-    event.create('kubejs:final_hoe', 'hoe').tier('final_items').displayName('§l<rainb>Agricola Manus</rainb>').texture('kubejs:item/final_hoe').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_tool').displayName('§l<rainb>Particula Eversorem</rainb>').texture('kubejs:item/final_pickaxe').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_axe', 'axe').tier('final_tool').displayName('§l<rainb>Natura Exitium</rainb>').texture('kubejs:item/final_axe').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_shovel', 'shovel').tier('final_tool').displayName('§l<rainb>Terra Confractus</rainb>').texture('kubejs:item/final_shovel').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_hoe', 'hoe').tier('final_tool').displayName('§l<rainb>Agricola Manus</rainb>').texture('kubejs:item/final_hoe').maxStackSize(1).fireResistant(true).group('tools')
     // weapons
-    event.create('kubejs:final_sword', 'sword').tier('final_items').displayName('§l<rainb>Corevis Ultimatum</rainb>').texture('kubejs:item/final_sword').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_sword', 'sword').tier('final_tool').displayName('§l<rainb>Corevis Ultimatum</rainb>').texture('kubejs:item/final_sword').maxStackSize(1).fireResistant(true).group('combat')
     // armor
     event.create('kubejs:final_helmet', 'helmet').tier('final_armor').displayName('§l<rainb>Conscientia Oculi</rainb>').texture('kubejs:item/final_helmet').maxStackSize(1).fireResistant(true).group('combat')
     event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor').displayName('§l<rainb>Vitale Cordis</rainb>').texture('kubejs:item/final_chestplate').maxStackSize(1).fireResistant(true).group('combat')
@@ -92,23 +92,49 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     event.create('kubejs:final_boots', 'boots').tier('final_armor').displayName('§l<rainb>Gravitas Anchoram</rainb>').texture('kubejs:item/final_boots').maxStackSize(1).fireResistant(true).group('combat')
 })
 StartupEvents.registry('block', event => {
-    // Register new blocks here event.create('example_block').material('wood').hardness(1.0).displayName('Example Block')
     Object.keys(CMD).forEach(insert => {
-        event.create(`kubejs:${insert}`).displayName(`<rainb>${CMD[insert]}</rainb>`).textureAll(`kubejs:block/${insert}`).material('metal').hardness(500).requiresTool(true)
+        event.create(`kubejs:${insert}`)
+            .displayName(`<rainb>${CMD[insert]}</rainb>`)
+            .textureAll(`kubejs:block/${insert}`)
+            .material('metal')
+            .hardness(500)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
     })
 })
 StartupEvents.registry('fluid', event => {
     // work in progress .stillTexture('finality:block/still_entropy').flowingTexture('finality:block/flowing_entropy')
-    event.create('kubejs:condensed_universal_entropy').displayName('<rainb>Condensed Universal Entropy</rainb>').thickTexture(0x7800FF).bucketColor(0x7800FF).luminosity(15)
-    event.create('kubejs:molten_gold').displayName('§6Molten Gold').thickTexture(0xFDF55F).bucketColor(0xFDF55F).luminosity(15).temperature(2000)
-    event.create('kubejs:inferior_infusion_essence').displayName('§eInferior Infusion Essence§r').thickTexture(0xACCF00).bucketColor(0xACCF00).luminosity(7)
-    event.create('kubejs:supreme_infusion_essence').displayName('§eSupreme Infusion Essence§r').thickTexture(0xFC0000).bucketColor(0xFC0000).luminosity(15)
+    event.create('kubejs:condensed_universal_entropy')
+        .displayName('<rainb>Condensed Universal Entropy</rainb>')
+        .thickTexture(0x7800FF)
+        .bucketColor(0x7800FF)
+        .luminosity(15)
+    event.create('kubejs:molten_gold')
+        .displayName('§6Molten Gold')
+        .thickTexture(0xFDF55F)
+        .bucketColor(0xFDF55F)
+        .luminosity(15)
+        .temperature(2000)
+    event.create('kubejs:inferior_infusion_essence')
+        .displayName('§eInferior Infusion Essence§r')
+        .thickTexture(0xACCF00)
+        .bucketColor(0xACCF00)
+        .luminosity(7)
+    event.create('kubejs:supreme_infusion_essence')
+        .displayName('§eSupreme Infusion Essence§r')
+        .thickTexture(0xFC0000)
+        .bucketColor(0xFC0000)
+        .luminosity(15)
+    event.create('kubejs:mushroom_stew')
+        .thinTexture(0xCA9777)
+        .bucketColor(0xCA9777)
 })
 // tiers
 ItemEvents.toolTierRegistry(event => {
-    event.add('final_items', tier => {
+    event.add('final_tool', tier => {
         tier.uses = -1
-        tier.speed = 255.0
+        tier.speed = 256.0
         tier.attackDamageBonus = 65.0
         tier.level = 5
         tier.enchantmentValue = 30
@@ -117,10 +143,10 @@ ItemEvents.toolTierRegistry(event => {
 ItemEvents.armorTierRegistry(event => {
     event.add('final_armor', tier => {
         tier.durabilityMultiplier = -1
-        tier.slotProtections = [999999, 999999, 999999, 999999]
+        tier.slotProtections = [99999999, 99999999, 99999999, 99999999]
         tier.enchantmentValue = 30
         tier.equipSound = 'minecraft:item.armor.equip_netherite'
-        tier.toughness = 999999
+        tier.toughness = 99999999
         tier.knockbackResistance = 5.0
     })
 })
@@ -149,6 +175,9 @@ ItemEvents.modification(event => {
     event.modify('eccentrictome:tome', item => {
         item.fireResistant = true
     })
+    TOOLS.forEach(tool => event.modify(`kubejs:final_${tool}`, item => {
+        item.fireResistant = true
+    }))
     // Armor durability is synchronized because it does not make sense as to why armor pieces have different durabilities.
     ARMOR.forEach(armor => event.modify(`minecraft:leather_${armor}`, item => {
         item.maxDamage = 128
@@ -170,5 +199,8 @@ ItemEvents.modification(event => {
     }))
     DIVING.forEach(armor => event.modify(`create:netherite_${armor}`, item => {
         item.maxDamage = 1024
+    }))
+    ARMOR.forEach(armor => event.modify(`kubejs:final_${armor}`, item => {
+        item.fireResistant = true
     }))
 })
