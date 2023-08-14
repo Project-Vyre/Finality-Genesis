@@ -11,6 +11,18 @@
 		}
 	}
 	id: "5FAB2BFC967313BB"
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 64.0d
+		hover: [ ]
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
 	order_index: 4
 	quest_links: [ ]
 	quests: [
