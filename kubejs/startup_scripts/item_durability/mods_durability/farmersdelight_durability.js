@@ -1,3 +1,5 @@
+// requires: farmersdelight
+
 ItemEvents.modification(event => {
     event.modify('farmersdelight:flint_knife', item => {
         item.maxDamage = 256
