@@ -115,7 +115,6 @@ StartupEvents.registry('fluid', event => {
         .thickTexture(0xFDF55F)
         .bucketColor(0xFDF55F)
         .luminosity(15)
-        .temperature(2000)
     event.create('kubejs:inferior_infusion_essence')
         .displayName('§eInferior Infusion Essence§r')
         .thickTexture(0xACCF00)
