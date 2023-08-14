@@ -4,10 +4,6 @@
 let DYE = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 let SAND = ['sand', 'red_sand']
 ServerEvents.recipes(event => {
-    event.remove({ id: 'tconstruct:common/glass/vanilla/beacon' })
-    event.remove({ id: 'unusualend:end_crystal' })
-    event.remove({ id: 'unusualend:end_crystal_via_chiseled_glass' })
-    event.remove({ id: 'tconstruct:common/glass/vanilla/end_crystal' })
     event.shapeless('extendedcrafting:black_iron_ingot', [
         'minecraft:iron_ingot',
         'minecraft:black_dye',
@@ -35,9 +31,9 @@ ServerEvents.recipes(event => {
         G: 'minecraft:gold_ingot'
     }).id('finality:crystaltine_mechanical_translate')
     event.recipes.createCrushing([
-        'extendedcrafting:the_ultimate_nugget',
-        Item.of('extendedcrafting:the_ultimate_nugget').withChance(0.25)
-    ], 'extendedcrafting:ultimate_singularity').processingTime(1200).id('finality:the_ultimate_nugget')
+        '3x extendedcrafting:the_ultimate_nugget',
+        Item.of('extendedcrafting:the_ultimate_nugget', 3).withChance(0.25)
+    ], 'extendedcrafting:ultimate_singularity').processingTime(500).id('finality:the_ultimate_nugget')
     event.recipes.createMechanicalCrafting('create:handheld_worldshaper', [
         'CPULOO',
         'II    '
