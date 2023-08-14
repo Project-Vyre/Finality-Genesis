@@ -131,6 +131,15 @@ ServerEvents.recipes(event => {
         ], Item.of('apotheosis:gem', `{gem:"apotheosis:core/${END_GEMS[i]}",rarity:"ancient"}`).weakNBT()
         ).processingTime(150).id(`finality:apotheosis_core_ancient_${END_GEMS[i]}_gem_crushing`)
     }
+    event.shaped('6x minecraft:arrow', [
+        'F',
+        'S',
+        'E'
+    ], {
+        F: 'minecraft:feather',
+        S: '#forge:rods/wooden',
+        E: 'minecraft:feather'
+    }).id('minecraft:arrow')
     event.recipes.create.mechanical_crafting('6x apotheosis:obsidian_arrow', [
         'O',
         'S',
