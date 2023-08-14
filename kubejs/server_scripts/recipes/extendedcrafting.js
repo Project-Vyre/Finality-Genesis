@@ -3,6 +3,7 @@
 
 let DYE = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 let SAND = ['sand', 'red_sand']
+let CMD = ['command_block', 'chain_command_block', 'repeating_command_block']
 ServerEvents.recipes(event => {
     event.shapeless('extendedcrafting:black_iron_ingot', [
         'minecraft:iron_ingot',
@@ -32,7 +33,8 @@ ServerEvents.recipes(event => {
     }).id('finality:crystaltine_mechanical_translate')
     event.recipes.createCrushing([
         '3x extendedcrafting:the_ultimate_nugget',
-        Item.of('extendedcrafting:the_ultimate_nugget', 3).withChance(0.25)
+        Item.of('extendedcrafting:the_ultimate_nugget', 3).withChance(0.25),
+        Item.of('extendedcrafting:ultimate_singularity').withChance(0.75)
     ], 'extendedcrafting:ultimate_singularity').processingTime(500).id('finality:the_ultimate_nugget')
     event.recipes.createMechanicalCrafting('create:handheld_worldshaper', [
         'CPULOO',
@@ -404,5 +406,13 @@ ServerEvents.recipes(event => {
         V: 'minecraft:structure_void',
         S: 'minecraft:soul_campfire'
     }).id('finality:spawner')
-    event.recipes.createDeploying('minecraft:structure_void', ['#kubejs:command_blocks', 'kubejs:final_pickaxe']).keepHeldItem().id('finality:structure_void')
+    CMD.forEach(insert => {
+        event.recipes.createDeploying([
+            'minecraft:structure_void',
+            `kubejs:${insert}`
+        ], [
+            `kubejs:${insert}`,
+            'kubejs:final_pickaxe'
+        ]).keepHeldItem().id(`finality:structure_void_from_${insert}`)
+    })
 })
