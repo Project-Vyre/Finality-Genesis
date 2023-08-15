@@ -109,6 +109,7 @@ JEIEvents.hideItems(event => {
     CAdditionsItems.forEach(name => {
         event.hide(`createaddition:${name}`)
     })
+    event.hide('mysticalagriculture:harvester')
 })
 JEIEvents.hideFluids(event => {
     MYS_FLUID_HIDE.forEach(name => {
@@ -143,9 +144,12 @@ JEIEvents.information(event => {
     event.addItem('endrem:undead_eye', ['Requires a skeleton horse to be slain in order to acquire the Undead Soul.'])
     event.addItem('endrem:undead_soul', ['Acquired from slaying a skeleton horse.'])
     event.addItem('endrem:exotic_eye', ['Created by combining multiple exotic ingredients using a Crafting Core.'])
+    event.addItem('obscure_api:astral_dust', ['Used in making a special chestpiece. Can only be found in Frozen Chests.'])
 })
 ItemEvents.tooltip(event => {
     event.add(['minecraft:campfire', 'minecraft:soul_campfire'], Text.gold('Campfires can now regenerate your health. <wave>Cozy!</wave>'))
+    event.add('kubejs:denied_result', Text.red('<shake>This item now has a different method or methods of crafting.</shake>'))
+    event.add('minecraft:fletching_table', Text.gold('Now has a purpose and can actually make arrows!'))
     // Fix provided by Reveter#1305 on latvian.dev
     event.addAdvanced('patchouli:guide_book', ((item, advanced, text) => {
         if (!item.hasNBT()) return;
