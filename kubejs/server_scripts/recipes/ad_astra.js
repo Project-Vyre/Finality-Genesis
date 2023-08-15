@@ -2,6 +2,18 @@
 // and kjs 119 and above
 
 ServerEvents.recipes(event => {
+    event.shaped('kubejs:denied_result', [
+        'TLT',
+        'PCP',
+        'RBR'
+    ],  {
+        T: 'minecraft:redstone_torch',
+        L: 'minecraft:lever',
+        P: 'ad_astra:steel_plate',
+        C: 'minecraft:crafting_table',
+        R: 'minecraft:redstone_block',
+        B: 'ad_astra:steel_block'
+    }).id('ad_astra:recipes/nasa_workbench')
     event.recipes.createMechanicalCrafting('ad_astra:nasa_workbench', [
         'QLTLQ',
         'SCACS',
@@ -19,7 +31,7 @@ ServerEvents.recipes(event => {
         N: 'extendedcrafting:enhanced_redstone_catalyst',
         B: 'minecraft:redstone_block',
         I: 'ad_astra:steel_block'
-    }).id('ad_astra:recipes/nasa_workbench')
+    }).id('finality:ad_astra/nasa_workbench')
 })
 
 /*
