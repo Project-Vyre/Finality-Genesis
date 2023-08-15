@@ -11,14 +11,32 @@ ServerEvents.recipes(event => {
         '4x mysticalagriculture:prosperity_shard', 
     ]).id('finality:mysta_master_infusion_crystal_essence')
     // infusion crystals
+    event.shaped('kubejs:denied_result', [
+        'IPI',
+        'PDP',
+        'IPI'
+    ], {
+        I: 'mysticalagriculture:inferium_essence',
+        P: 'mysticalagriculture:prosperity_shard',
+        D: 'minecraft:diamond'
+    }).id('mysticalagriculture:infusion_crystal')
+    event.shaped('kubejs:denied_result', [
+        'EPE',
+        'PDP',
+        'EPE'
+    ], {
+        E: 'mysticalagriculture:supremium_essence',
+        P: 'mysticalagriculture:prosperity_shard',
+        D: 'mysticalagriculture:supremium_gemstone'
+    }).id('mysticalagriculture:master_infusion_crystal')
     event.recipes.createFilling('mysticalagriculture:infusion_crystal', [
         'minecraft:diamond', 
         Fluid.of('kubejs:inferior_infusion_essence', 250)
-    ]).id('mysticalagriculture:infusion_crystal')
+    ]).id('finality:infusion_crystal')
     event.recipes.createFilling('mysticalagriculture:master_infusion_crystal', [
         'mysticalagriculture:supremium_gemstone', 
         Fluid.of('kubejs:supreme_infusion_essence', 250)
-    ]).id('mysticalagriculture:master_infusion_crystal')
+    ]).id('finality:master_infusion_crystal')
     // renewable prosperity shards
     event.recipes.createCrushing([
         Item.of('mysticalagriculture:prosperity_shard').withChance(0.25), 
@@ -357,6 +375,16 @@ ServerEvents.recipes(event => {
         D: 'mysticalagriculture:soulium_dagger',
         R: 'create:radial_chassis'
     }).id('mysticalagriculture:basic_reprocessor')
+    event.shaped('kubejs:denied_result', [
+        'ISI',
+        'YMY',
+        'ISI'
+    ], {
+        I: 'minecraft:iron_ingot',
+        S: 'mysticalagriculture:soulium_ingot',
+        Y: '#mysticalagriculture:diamond_scythes',
+        M: 'mysticalagriculture:machine_frame',
+    }).id('mysticalagriculture:harvester')
     // miscellaneous
     event.recipes.createMixing(Item.of('mysticalagriculture:mystical_fertilizer', 4), [
         Item.of('mysticalagriculture:inferium_essence', 4), 
