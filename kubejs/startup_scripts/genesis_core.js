@@ -55,16 +55,29 @@ let CMD = {
     chain_command_block: 'Chain Command Block',
     repeating_command_block: 'Repeating Command Block'
 }
+let PRIMORDIAL_MECHANISMS = {
+    terra_mechanism: 'Terra Mechanism', // nature related, ingredient for entropy mechanism
+    cornucopia_mechanism: 'Cornucopia Mechanism', // delicacy related, ingredient for entropy mechanism
+    metallurgy_mechanism: 'Metallurgy Mechanism', // metal related, ingredient for entropy mechanism
+    lattice_mechanism: 'Lattice Mechanism', // crystal related, ingredient for entropy mechanism
+    umbral_mechanism: 'Umbral Mechanism', // darkness related, ingredient for entropy mechanism
+    genesis_mechanism: 'Genesis Mechanism', // create related, ingredient for entropy mechanism
+    ascendant_mechanism: 'Ascendant Mechanism', // experience related, ingredient for entropy mechanism
+    entropy_mechanism: 'Entropy Mechanism' // CONSOLIDATION
+}
 const TOOLS = ['sword', 'shovel', 'pickaxe', 'axe', 'hoe']
 const ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
 const DIVING = ['diving_helmet', 'backtank', 'diving_boots']
 StartupEvents.registry('item', event => { // Register new items here event.create('example_item').displayName('Example Item')
+    event.create('kubejs:deepslate_shard').texture('kubejs:item/deepslate_shard').maxStackSize(64)
     event.create('kubejs:trident_pole').texture('kubejs:item/trident_pole').maxStackSize(64)
     event.create('kubejs:trident_prong').texture('kubejs:item/trident_prong').maxStackSize(64)
     event.create('kubejs:construction_core_iron').displayName('§fActivated Construction Iron Core').texture('kubejs:item/construction_iron').maxStackSize(16)
     event.create('kubejs:construction_core_diamond').displayName('§bActivated Construction Diamond Crystal').texture('kubejs:item/construction_diamond').maxStackSize(16)
     event.create('kubejs:dormant_singularity_core').displayName('§d<shake>Dormant Singularity Core</shake>').texture('kubejs:item/dormant_singularity_core').maxStackSize(16)
     event.create('kubejs:awakened_singularity_core').displayName('<shake><rainb>Awakened Singularity Core</rainb></shake>').texture('kubejs:item/awakened_singularity_core').maxStackSize(8)
+    event.create('kubejs:denied_result').displayName('§d<shake>Denied Result</shake>').texture('kubejs:item/denied').maxStackSize(1).fireResistant(true)
+    event.create('kubejs:high_entropy_alloy').displayName('<rainb>High Entropy Alloy</rainb>').texture('kubejs:item/final_ingot').maxStackSize(64).fireResistant(true).group('miscellaneous')
     Object.keys(NATR).forEach(material => {
         event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${NATR[material]} Singularity`).texture(`kubejs:item/incomplete_singularities/nature/incomplete_${material}`).maxStackSize(1)
     })
@@ -75,9 +88,14 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     Object.keys(DYE).forEach(color => {
         event.create(`kubejs:incomplete_concrete_${color}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${DYE[color]} Concrete Singularity`).texture(`kubejs:item/incomplete_singularities/concrete/incomplete_concrete_${color}`).maxStackSize(1)
     })
-    event.create('kubejs:high_entropy_alloy').texture('kubejs:item/final_ingot').displayName('<rainb>High Entropy Alloy</rainb>').maxStackSize(64).fireResistant(true).group('miscellaneous')
-    event.create('kubejs:incomplete_entropy_mechanism', 'create:sequenced_assembly').displayName('<rainb>Incomplete Entropy Mechanism</rainb>').texture('kubejs:item/incomplete_entropy_mechanism').maxStackSize(1)
-    event.create('kubejs:entropy_mechanism').displayName('<rainb>Entropy Mechanism').texture('kubejs:item/entropy_mechanism').maxStackSize(64)
+    Object.keys(PRIMORDIAL_MECHANISMS).forEach(mechanism => {
+        event.create(`kubejs:${mechanism}`).displayName(`<rainb>${PRIMORDIAL_MECHANISMS[mechanism]}</rainb>`).texture(`kubejs:item/${mechanism}`).maxStackSize(64)
+        event.create(`kubejs:incomplete_${mechanism}`, 'create:sequenced_assembly').displayName(`<rainb>Incomplete ${PRIMORDIAL_MECHANISMS[mechanism]}</rainb>`).texture(`kubejs:item/incomplete_${mechanism}`).maxStackSize(1)
+    })
+    // event.create('kubejs:metallurgy_mechanism').displayName('<rainb>Metallurgy Mechanism</rainb>').texture('kubejs:item/metallurgy_mechanism').maxStackSize(64)
+    // event.create('kubejs:entropy_mechanism').displayName('<rainb>Entropy Mechanism</rainb>').texture('kubejs:item/entropy_mechanism').maxStackSize(64)
+    // event.create('kubejs:incomplete_metallurgy_mechanism', 'create:sequenced_assembly').displayName('<rainb>Incomplete Metallurgy Mechanism</rainb>').texture('kubejs:item/incomplete_metallurgy_mechanism').maxStackSize(1)
+    // event.create('kubejs:incomplete_entropy_mechanism', 'create:sequenced_assembly').displayName('<rainb>Incomplete Entropy Mechanism</rainb>').texture('kubejs:item/incomplete_entropy_mechanism').maxStackSize(1)
     // tools
     event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_tool').displayName('§l<rainb>Particula Eversorem</rainb>').texture('kubejs:item/final_pickaxe').maxStackSize(1).fireResistant(true).group('tools')
     event.create('kubejs:final_axe', 'axe').tier('final_tool').displayName('§l<rainb>Natura Exitium</rainb>').texture('kubejs:item/final_axe').maxStackSize(1).fireResistant(true).group('tools')
@@ -96,7 +114,7 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:${insert}`)
             .displayName(`<rainb>${CMD[insert]}</rainb>`)
             .textureAll(`kubejs:block/${insert}`)
-            .material('metal')
+            .material('netherite')
             .hardness(500)
             .resistance(1000)
             .lightLevel(1.0)
