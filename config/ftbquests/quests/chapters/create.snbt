@@ -352,7 +352,7 @@
 					xp: 25
 				}
 			]
-			subtitle: "Basic rotation transfer in a straight line."
+			subtitle: "Basic rotational force transfer in a straight line."
 			tasks: [{
 				id: "2A7932E0191CB3B8"
 				item: "create:shaft"
@@ -464,6 +464,7 @@
 		}
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
+			description: ["Keep some spare dried kelp so you can make your Mechanical Belts!"]
 			id: "0044994A32BC5631"
 			rewards: [{
 				count: 32
@@ -897,11 +898,43 @@
 		{
 			dependencies: ["770AD4193CC23EA3"]
 			id: "6129B7088CC965FA"
-			tasks: [{
-				id: "03F0BC34B4571A88"
-				item: "create:mechanical_saw"
-				type: "item"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "605261CE8BD5DA68"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5D0E7D4AC0EF6707"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "6CEEE0E0E1CFF7A4"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			tasks: [
+				{
+					id: "03F0BC34B4571A88"
+					item: "create:mechanical_saw"
+					type: "item"
+				}
+				{
+					id: "3E661D4DA142CCCA"
+					item: "create:mechanical_harvester"
+					type: "item"
+				}
+				{
+					id: "4D188905B5722B8A"
+					item: "create:mechanical_plough"
+					type: "item"
+				}
+			]
+			title: "Contraption Actors - Saws, Harvesters, Ploughs!"
 			x: -11.5d
 			y: -5.0d
 		}
@@ -1001,6 +1034,7 @@
 		}
 		{
 			dependencies: ["2E386081E5302CF5"]
+			description: ["You can right click using a &6Wrench&r to open a window on the pipe or to make it not connect with adjacent fluid pipes."]
 			id: "6AC32180F67385D6"
 			rewards: [{
 				id: "0CEA0F11A6431101"
@@ -1013,6 +1047,7 @@
 				item: "create:fluid_pipe"
 				type: "item"
 			}]
+			title: "Fluid Transportation Pt.1 - Fluid Pipe"
 			x: -11.0d
 			y: -1.5d
 		}
@@ -1031,6 +1066,7 @@
 				item: "create:mechanical_pump"
 				type: "item"
 			}]
+			title: "Fluid Transportation Pt.2 - Mechanical Pump"
 			x: -12.5d
 			y: -1.5d
 		}
@@ -1049,6 +1085,7 @@
 				item: "create:fluid_tank"
 				type: "item"
 			}]
+			title: "Mass Fluid Storage - Fluid Tanks"
 			x: -10.0d
 			y: -1.0d
 		}
@@ -1384,7 +1421,15 @@
 		}
 		{
 			dependencies: ["1ABCB56633B96C2B"]
-			description: ["Super Glue has been reworked since 0.5.0 and allows you to have super glued selections that can traverse multiple blocks with one right click."]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Super Glue has been reworked since 0.5.0 and allows you to have super glued selections that can traverse multiple blocks with one right click."
+				""
+				"The Sticker block can be used in conjunction with the Rope Pulley to lift structures! If your imagination is lacking, I'll just say this:"
+				""
+				"&lYou can make a crane.&r"
+			]
 			icon: {
 				Count: 1b
 				id: "create:super_glue"
@@ -1425,7 +1470,7 @@
 					type: "item"
 				}
 			]
-			title: "Sticky Utilities"
+			title: "Sticky Utilities - Super Glue and the Sticker"
 			x: -5.0d
 			y: -8.0d
 		}
@@ -1840,6 +1885,7 @@
 				item: "create:hose_pulley"
 				type: "item"
 			}]
+			title: "Fluid Extracton and Filling - Hose Pulley"
 			x: -11.5d
 			y: -2.5d
 		}
@@ -2052,7 +2098,13 @@
 					type: "random"
 				}
 				{
-					id: "02980BD9A8BCCAF6"
+					exclude_from_claim_all: true
+					id: "1D03557F1CE72721"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "3D1D4733E9944084"
 					type: "xp_levels"
 					xp_levels: 15
 				}
@@ -2085,14 +2137,33 @@
 		}
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
+			description: [
+				"Fun Fact: Copper Casing can be used to encase Fluid Pipes to make them maintain their shape. "
+				""
+				"This does mean you can make them stay in an L shape if needed. Copper Casing also allows separation from adjacent Fluid Pipes, just make sure the pipes are not connected before encasing them."
+				""
+				"Copper Valve Handles are great for turning at very specific angle intervals. Use them on Fluid Valves or open doors that use a Mechanical Bearing at specific angles."
+			]
 			icon: "create:copper_casing"
 			id: "0CD722C2B48DF862"
-			rewards: [{
-				count: 9
-				id: "5E508E1DF12169EA"
-				item: "minecraft:raw_copper_block"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 9
+					id: "5E508E1DF12169EA"
+					item: "minecraft:raw_copper_block"
+					type: "item"
+				}
+				{
+					id: "3F27BB5C0A43C1AA"
+					item: "create:copper_valve_handle"
+					type: "item"
+				}
+				{
+					id: "4585A4AE7FADBE4A"
+					type: "xp"
+					xp: 250
+				}
+			]
 			shape: "hexagon"
 			subtitle: "Acquire some basic Copper Age materials."
 			tasks: [
@@ -2132,11 +2203,13 @@
 					xp: 500
 				}
 			]
+			subtitle: "Wireless redstone communication!"
 			tasks: [{
 				id: "140E181AA39D3C57"
 				item: "create:redstone_link"
 				type: "item"
 			}]
+			title: "Wireless Redstone - Redstone Link"
 			x: 14.5d
 			y: -5.0d
 		}
@@ -2342,6 +2415,11 @@
 		}
 		{
 			dependencies: ["30E89B82FBE4E14C"]
+			description: [
+				"Hold [Shift] for more info!"
+				""
+				"Can also be placed on a Lectern, so you can use it to control a crane to pick up and lower Item Vaults from a parked train, door powered by Sequenced Gearshifts, etc."
+			]
 			id: "6B8E99104DB46996"
 			rewards: [
 				{
@@ -2356,11 +2434,13 @@
 					xp: 500
 				}
 			]
+			subtitle: "Allows you to send signals right from your hand!"
 			tasks: [{
 				id: "7E0BB2EE61002933"
 				item: "create:linked_controller"
 				type: "item"
 			}]
+			title: "Wireless Redstone - Linked Controller"
 			x: 14.5d
 			y: -6.5d
 		}
@@ -2425,6 +2505,7 @@
 		}
 		{
 			dependencies: ["05A06882A2170564"]
+			description: ["&oYes&r you can get an infinite amount of Blaze Burners from a single blaze spawner, so guard it well!"]
 			id: "031AE396FB6DDD76"
 			rewards: [{
 				id: "085FFAE014E23D82"
@@ -3003,7 +3084,10 @@
 			y: -0.5d
 		}
 		{
-			dependencies: ["24D7FAA4E3EFAD39"]
+			dependencies: [
+				"24D7FAA4E3EFAD39"
+				"78AB1F02F29D15E3"
+			]
 			description: [
 				"Hold [w] to Ponder to learn more!"
 				""
@@ -3023,23 +3107,31 @@
 				item: "create:redstone_contact"
 				type: "item"
 			}]
-			x: 1.5d
-			y: -3.0d
+			x: 2.5d
+			y: -2.5d
 		}
 		{
 			dependencies: ["6AC32180F67385D6"]
+			description: [
+				"Smart Fluid Pipes allow you to filter what fluid you want from a Basin very easily. "
+				""
+				"An example use case would be automated brewing and having to extract the initial potion fluid from the resulting potion fluid."
+				""
+				"This also applies to making chocolate since the Basin would contain both the Milk and Chocolate fluids."
+			]
 			id: "0F77020B805CCEBC"
 			rewards: [{
 				id: "32158E4693442B28"
 				type: "xp"
 				xp: 500
 			}]
-			subtitle: "If you want to be specific about fluid filtration."
+			subtitle: "If you want to be very specific about fluid filtration."
 			tasks: [{
 				id: "289E3FF04E6072D0"
 				item: "create:smart_fluid_pipe"
 				type: "item"
 			}]
+			title: "Fluid Management and Filtering - Smart Fluid Pipe"
 			x: -11.0d
 			y: 0.0d
 		}
@@ -3122,6 +3214,11 @@
 		}
 		{
 			dependencies: ["0CD722C2B48DF862"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Mostly used for decorative purposes."
+			]
 			id: "1BD09AD0A5B739CA"
 			subtitle: "The voice of an angel..."
 			tasks: [{
@@ -3327,6 +3424,11 @@
 		}
 		{
 			dependencies: ["3AF368FDC6BEC625"]
+			description: [
+				"Let's say you want to make a funnel accept all items tagged with &b#forge:ingots&r to accept all smelted results from a bulk blasting setup made with Encased Fans... this is exactly what you would use the Attribute Filter for!"
+				""
+				"The same also applies to setting the &6Brass Funnel&r that's used for giving the &eMechanical Arms&r to dump the items into the &7Encased Fan&r bulk blasting furnace setup and can be set to accept all raw ores as well."
+			]
 			id: "33B9370ECDC36505"
 			rewards: [
 				{
@@ -3354,7 +3456,7 @@
 				item: "create:attribute_filter"
 				type: "item"
 			}]
-			title: "The Attribute Filter"
+			title: "Create Utilities - The Attribute Filter"
 			x: 11.5d
 			y: -5.5d
 		}
@@ -3467,6 +3569,81 @@
 			title: "Visualizing Rotational Force - The Speedometer and Stressometer"
 			x: -1.0d
 			y: -6.5d
+		}
+		{
+			dependencies: ["6AC32180F67385D6"]
+			id: "472346AC958653EA"
+			subtitle: "Need to prevent other fluids from going through temporarily? I got you covered!"
+			tasks: [{
+				id: "541E6D766ABAEBBE"
+				item: "create:fluid_valve"
+				type: "item"
+			}]
+			title: "Fluid Management - Fluid Valve"
+			x: -12.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["57A69334C4D4299A"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Fun Fact: Gantries behave like worm gears when powered by redstone!"
+			]
+			id: "1F93A292D5CB15C6"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7E5E6D2DDD5C143A"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0FDAD100333AD105"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "384DADF06058546E"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "Can also move contraptions."
+			tasks: [
+				{
+					id: "68AEDC8BDC6FF95F"
+					item: "create:gantry_carriage"
+					type: "item"
+				}
+				{
+					id: "2B61A331801E67D5"
+					item: "create:gantry_shaft"
+					type: "item"
+				}
+			]
+			title: "Gantries Galore!"
+			x: 1.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["57A69334C4D4299A"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"If you don't have the materials to make a Water Wheel or want to manually provide rotational force, the Hand Crank is what you would use."
+			]
+			id: "2487DFEA82CBA230"
+			subtitle: "Everyone has to start somewhere."
+			tasks: [{
+				id: "2E89C0BE8AE1EC2B"
+				item: "create:hand_crank"
+				type: "item"
+			}]
+			title: "Basic Rotational Force - The Humble Hand Crank"
+			x: -1.0d
+			y: -5.0d
 		}
 	]
 	subtitle: [
