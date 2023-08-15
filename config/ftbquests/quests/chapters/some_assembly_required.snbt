@@ -1,0 +1,96 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "some_assembly_required"
+	group: "2B2D0B6DE31DE8D3"
+	icon: "some_assembly_required:bread_slice"
+	id: "40B7C0560B900F0C"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["0AE06EB85B6E1CB6"]
+			hide: true
+			icon: "some_assembly_required:sandwiching_station"
+			id: "06CE3A2E506D1686"
+			shape: "rsquare"
+			subtitle: "Create the almighty Sandwiching Station!"
+			tasks: [{
+				id: "2D4623EBD462A5FC"
+				item: "some_assembly_required:sandwiching_station"
+				type: "item"
+			}]
+			title: "The Foundation of the Art of Sandwiching"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["06CE3A2E506D1686"]
+			description: [
+				"Did I mention you can also put potions on your sandwiches too? It's very cool, I just don't know if it will taste good."
+				""
+				"Good thing you can't taste things, right?"
+			]
+			id: "23DDDAE5F4B72958"
+			shape: "rsquare"
+			subtitle: "This is the first step for making the ULTIMATE sandwich."
+			tasks: [{
+				count: 4L
+				id: "4519AFBD916E8EE1"
+				item: "some_assembly_required:bread_slice"
+				title: "Slice some bread!"
+				type: "item"
+			}]
+			title: "Your First Bread Slices"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["23DDDAE5F4B72958"]
+			description: ["This is just the beginning. You can probably put all the potions into one huge sandwich stack!"]
+			id: "5912B531B310ED4F"
+			shape: "rsquare"
+			subtitle: "It's delicious."
+			tasks: [{
+				id: "513836C1CEC92BD8"
+				item: {
+					Count: 1b
+					id: "some_assembly_required:sandwich"
+					tag: {
+						BlockEntityTag: {
+							Sandwich: [
+								{
+									Count: 1b
+									id: "some_assembly_required:bread_slice"
+								}
+								{
+									Count: 1b
+									id: "some_assembly_required:tomato_slices"
+								}
+								{
+									Count: 1b
+									id: "farmersdelight:cabbage_leaf"
+								}
+								{
+									Count: 1b
+									id: "farmersdelight:cooked_bacon"
+								}
+								{
+									Count: 1b
+									id: "some_assembly_required:bread_slice"
+								}
+							]
+						}
+						IsJEIExample: 1b
+					}
+				}
+				type: "item"
+			}]
+			title: "Make a Tomtato, Cabbage \\& Bacon Sandwich"
+			x: 0.0d
+			y: 3.0d
+		}
+	]
+	subtitle: ["Make the ultimate sandwich."]
+	title: "Some Assembly Required"
+}

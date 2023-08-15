@@ -10,7 +10,16 @@
 	quests: [
 		{
 			dependencies: ["4A691BB889286C89"]
-			description: ["Here's a free soul sconce once you make the regular variant."]
+			description: [
+				"Here's a free soul sconce once you make the regular variant."
+				""
+				"Decoration mods have been added! Search them in JEI like so to view all the blocks available with ItemZoom on the left side of your inventory showing the full block, if applicable."
+				""
+				"- @chipped"
+				"- @handcrafted"
+				"- @decorative_blocks"
+				"- Dark Paintings adds new paintings, so you will have to make paintings to see them all."
+			]
 			hide: true
 			id: "4A2CFDD09FF7A975"
 			rewards: [{
@@ -310,8 +319,8 @@
 					type: "item"
 				}
 				{
-					id: "346CC917503ABEA1"
-					item: "create:cuckoo_clock"
+					id: "50BD208F85A3F4BE"
+					item: "supplementaries:hourglass"
 					type: "item"
 				}
 			]

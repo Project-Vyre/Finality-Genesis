@@ -24,9 +24,13 @@
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
 			description: [
-				"If FTB Quests is not showing you the recipe for &7Andesite Alloy&r, press R while your cursor is hovered over it."
+				"Upon completing this quest node, a Clipboard will be rewarded. Hopefully you can make use of it to keep track of what to do!"
 				""
 				"So you made your very first &7Andesite Alloy&r ingot, what do you do now?"
+				""
+				"-+-"
+				""
+				"If FTB Quests is not showing you the recipe for &7Andesite Alloy&r, press R while your cursor is hovered over it."
 				""
 				"Make another &7Andesite Alloy&r and make a Shaft and get some planks and make a &3Water Wheel&r."
 				""
@@ -146,7 +150,7 @@
 			}]
 			title: "Create some Andesite Casing"
 			x: 0.0d
-			y: -6.5d
+			y: -7.5d
 		}
 		{
 			dependencies: ["157C4AD3062BC31A"]
@@ -181,7 +185,7 @@
 			}]
 			title: "Bonk!"
 			x: -6.5d
-			y: -5.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["57A69334C4D4299A"]
@@ -207,7 +211,7 @@
 				type: "item"
 			}]
 			title: "Mixing Foundations"
-			x: 6.5d
+			x: 7.5d
 			y: -4.0d
 		}
 		{
@@ -234,7 +238,7 @@
 				type: "item"
 			}]
 			title: "The Mixer"
-			x: 6.5d
+			x: 7.5d
 			y: -8.0d
 		}
 		{
@@ -265,8 +269,8 @@
 				item: "create:cogwheel"
 				type: "item"
 			}]
-			x: 5.0d
-			y: -9.5d
+			x: 5.5d
+			y: -10.0d
 		}
 		{
 			dependencies: ["76DE1DB31C32A913"]
@@ -296,8 +300,8 @@
 				item: "create:large_cogwheel"
 				type: "item"
 			}]
-			x: 5.0d
-			y: -11.0d
+			x: 5.5d
+			y: -11.5d
 		}
 		{
 			dependencies: ["249F8A4FAEB5CDDE"]
@@ -333,13 +337,22 @@
 		}
 		{
 			dependencies: ["57A69334C4D4299A"]
+			description: ["Hold [w] to Ponder to learn more!"]
 			id: "249F8A4FAEB5CDDE"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "5B63F674BE35DCDA"
-				table_id: 7477086534417165542L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5B63F674BE35DCDA"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "23C9770AD315DBE5"
+					type: "xp"
+					xp: 25
+				}
+			]
+			subtitle: "Basic rotation transfer in a straight line."
 			tasks: [{
 				id: "2A7932E0191CB3B8"
 				item: "create:shaft"
@@ -363,7 +376,7 @@
 				type: "item"
 			}]
 			x: -10.5d
-			y: -5.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["62D55614D95E7356"]
@@ -380,7 +393,7 @@
 				type: "item"
 			}]
 			x: -10.0d
-			y: -2.0d
+			y: -2.5d
 		}
 		{
 			dependencies: ["62D55614D95E7356"]
@@ -397,7 +410,7 @@
 				type: "item"
 			}]
 			x: -11.5d
-			y: -10.5d
+			y: -11.0d
 		}
 		{
 			dependencies: ["62D55614D95E7356"]
@@ -414,14 +427,16 @@
 				type: "item"
 			}]
 			x: -6.5d
-			y: -9.5d
+			y: -10.0d
 		}
 		{
 			dependencies: ["0044994A32BC5631"]
 			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
 				"Conveyor belts are essential if you want to transport items or want a cheaper alternative to Chain Drives for transferring rotational power (Su) over long distances."
 				""
-				"Hold [w] to Ponder to learn more!"
+				"You can also decorate them with Andesite and Brass Casing blocks by right clicking."
 			]
 			id: "3E68ADF888E6E99E"
 			rewards: [
@@ -506,7 +521,7 @@
 				item: "create:empty_blaze_burner"
 				type: "item"
 			}]
-			x: 6.5d
+			x: 7.5d
 			y: -2.5d
 		}
 		{
@@ -538,7 +553,7 @@
 				title: "Acquire a sentient fireplace."
 				type: "item"
 			}]
-			x: 10.5d
+			x: 11.5d
 			y: -2.5d
 		}
 		{
@@ -571,7 +586,7 @@
 				type: "item"
 			}]
 			title: "Beginning of the Brass Age"
-			x: 10.5d
+			x: 11.5d
 			y: -4.0d
 		}
 		{
@@ -588,8 +603,8 @@
 				item: "create:gearbox"
 				type: "item"
 			}]
-			x: 6.5d
-			y: -9.5d
+			x: 7.0d
+			y: -10.0d
 		}
 		{
 			dependencies: ["6D8C28D34ABF7636"]
@@ -620,13 +635,21 @@
 				item: "create:encased_chain_drive"
 				type: "item"
 			}]
+			title: "The Chain Drive Family - Encased Chain Drive"
 			x: -1.0d
-			y: -7.5d
+			y: -8.5d
 		}
 		{
 			dependencies: [
 				"0194851298AADB65"
 				"1E129C8B985D4588"
+			]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Adjustable Chain Gearshifts only apply their RPM adjustment when powered either by a Lever or an Analog Lever."
+				""
+				"An Analog Lever is preferred for fine tuning while normal Levers are preferred for applying maximum adjustment."
 			]
 			hide: true
 			id: "1006DEF6267D3741"
@@ -641,7 +664,8 @@
 				item: "create:adjustable_chain_gearshift"
 				type: "item"
 			}]
-			x: 18.5d
+			title: "The Chain Drive Family - Adjustable Chain Gearshift"
+			x: 19.5d
 			y: 5.5d
 		}
 		{
@@ -649,14 +673,28 @@
 				"0044994A32BC5631"
 				"5FFC63500CF7754D"
 			]
-			description: ["Hold [w] to Ponder to learn more!"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"They can merge multiple lines of belts and also distribute items from one belt into many. Their distribution method can also be modified by looking at their tops!"
+				""
+				"They also can utilize &7List Filters&r and &6Attribute Filters&r and can use items as their item filter. Just right click their filter slot with a filter or item in your hand."
+			]
 			hide: true
 			id: "068660484145BE87"
-			rewards: [{
-				id: "1EABD36EB177305C"
-				type: "xp_levels"
-				xp_levels: 3
-			}]
+			rewards: [
+				{
+					id: "1EABD36EB177305C"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0627C4760F1147FD"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
 			subtitle: "Splitting items intelligently."
 			tasks: [{
 				count: 2L
@@ -664,6 +702,7 @@
 				item: "create:brass_tunnel"
 				type: "item"
 			}]
+			title: "Intelligent Item Transportation and Management - Brass Tunnels"
 			x: 1.0d
 			y: 4.5d
 		}
@@ -697,8 +736,8 @@
 				type: "item"
 			}]
 			title: "Shifting Gears"
-			x: 6.0d
-			y: -10.5d
+			x: 6.5d
+			y: -11.0d
 		}
 		{
 			dependencies: ["0194851298AADB65"]
@@ -715,7 +754,7 @@
 				type: "item"
 			}]
 			title: "Shifting Gears in Sequence"
-			x: 21.0d
+			x: 22.0d
 			y: 4.5d
 		}
 		{
@@ -752,7 +791,7 @@
 				type: "item"
 			}]
 			title: "The Brass Age"
-			x: 14.5d
+			x: 15.5d
 			y: -4.0d
 		}
 		{
@@ -760,14 +799,28 @@
 				"0044994A32BC5631"
 				"5FFC63500CF7754D"
 			]
-			description: ["Hold [w] to Ponder to learn more!"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Brass Funnels have the ability to select EXACT amounts or allowed UP TO a certain amount of items permitted to be extracted or received from their attached inventory."
+				""
+				"They also can utilize &7List Filters&r and &6Attribute Filters&r and can use items as their item filter. Just right click their filter slot with a filter or item in your hand."
+			]
 			hide: true
 			id: "42A8249377616678"
-			rewards: [{
-				id: "3B72CD4B1BA67B90"
-				type: "xp_levels"
-				xp_levels: 3
-			}]
+			rewards: [
+				{
+					id: "3B72CD4B1BA67B90"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7F4C1AA6D31E3248"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
 			subtitle: "Managing items intelligently."
 			tasks: [{
 				count: 2L
@@ -775,6 +828,7 @@
 				item: "create:brass_funnel"
 				type: "item"
 			}]
+			title: "Intelligent Item Transportation and Management - Brass Funnels"
 			x: 1.5d
 			y: 3.5d
 		}
@@ -801,7 +855,7 @@
 				type: "item"
 			}]
 			x: -11.5d
-			y: -8.0d
+			y: -8.5d
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
@@ -813,12 +867,14 @@
 				type: "item"
 			}]
 			x: -11.5d
-			y: -6.5d
+			y: -7.0d
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
 			description: [
-				"Use it on Create's Trains, make a rotating Item Vault wheel... the limit is your imagination."
+				"Use it on Create's Trains, make a rotating Item Vault wheel... the limit is your imagination. "
+				""
+				"They can also be used for instant item transportation in certain scenarios."
 				""
 				"Trains do not consume fuel inside Item Vaults!"
 			]
@@ -834,9 +890,9 @@
 				item: "create:item_vault"
 				type: "item"
 			}]
-			title: "Behold! The Item Vault!"
+			title: "Giant Connected Inventories - Behold! The Item Vault!"
 			x: -10.5d
-			y: -7.0d
+			y: -7.5d
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
@@ -847,10 +903,44 @@
 				type: "item"
 			}]
 			x: -11.5d
-			y: -4.5d
+			y: -5.0d
 		}
 		{
-			dependencies: ["75E673394451C2F4"]
+			dependencies: [
+				"75E673394451C2F4"
+				"22085A4AF847F19B"
+			]
+			description: [
+				"The &ePrecision Mechanism&r is used in multiple gadgets and is also needed for &6Mechanical Arms&r and the &6Rotation Speed Controller&r. "
+				""
+				"Right click the item in the JEI recipe window to see all the recipes that it is used in."
+				""
+				"The following gadgets use the Precision Mechanism:"
+				""
+				"&6Potato Cannon&r"
+				"- This is quite a strong gadget, just be sure to make a &3Copper&r / &8Netherite&r Backtank beforehand and fill it up with air by giving it rotational force."
+				""
+				"&eExtendo Grip&r"
+				"- Extends player reach by a total of 10 blocks. Like the Potato Cannon, be sure to make a &3Copper&r / &8Netherite&r Backtank beforehand."
+				""
+				"&bThe Wand of Symmetry&r"
+				"- Can be used for building with perfect symmetry or excavating large areas. Very useful!"
+				""
+				"An explanation for the Sequenced Assembly recipe is on the next page."
+				""
+				"{@pagebreak}"
+				"Firstly, you will need exactly &lthree&r &eDeployers&r and preferrably a &7Mechanical Belt&r line already laid out to send a Golden Sheet through the following sequence:"
+				""
+				"Step 1: Cogwheel"
+				"Step 2: Large Cogwheel"
+				"Step 3: Iron Nugget"
+				""
+				"This sequence needs to be repeated exactly 5 times, so you will need 5 of each item. You can always bring the Incomplete Precision Mechanism back to the start, but this process can be automated. To automate returning the Incomplete Precision Mechanism back to the start of the sequence, you can:"
+				""
+				"- Use a &eWeighted Ejector&r to toss it back to the start from the end of the sequence."
+				""
+				"- Use an &9Item Vault&r with the Brass Funnel's item filter set to only accept Incomplete Precision Mechanisms on the ending part of the sequence and an Andesite Funnel set to OUTPUT mode on the beginning part of the sequence. This method is instant item transportation."
+			]
 			id: "18B37484A6C7F37E"
 			rewards: [{
 				id: "3463FCB44760D9E4"
@@ -863,11 +953,13 @@
 				item: "create:precision_mechanism"
 				type: "item"
 			}]
+			title: "Complex Curiosities - Create a Precision Mechanism"
 			x: -7.5d
-			y: -10.5d
+			y: -11.0d
 		}
 		{
 			dependencies: ["75E673394451C2F4"]
+			description: ["When wearing this either in your Head Curios slot or Helmet Slot (not recommended for obvious protection reasons) your Jade tooltip on the top left corner will now display additional useful information when looking at Create related blocks and meters!"]
 			id: "328DCAF24F6DF4C5"
 			rewards: [{
 				id: "3FD3D67BDA26D8E7"
@@ -880,8 +972,9 @@
 				item: "create:goggles"
 				type: "item"
 			}]
+			title: "Analytical Vision - Engineer's Goggles"
 			x: -6.5d
-			y: -11.0d
+			y: -11.5d
 		}
 		{
 			dependencies: ["75E673394451C2F4"]
@@ -902,8 +995,9 @@
 				item: "create:weighted_ejector"
 				type: "item"
 			}]
+			title: "Long Distance Item Transportation - The Weighted Ejector"
 			x: -8.0d
-			y: -9.5d
+			y: -10.0d
 		}
 		{
 			dependencies: ["2E386081E5302CF5"]
@@ -920,7 +1014,7 @@
 				type: "item"
 			}]
 			x: -11.0d
-			y: -1.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["6AC32180F67385D6"]
@@ -938,7 +1032,7 @@
 				type: "item"
 			}]
 			x: -12.5d
-			y: -1.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["2E386081E5302CF5"]
@@ -956,7 +1050,7 @@
 				type: "item"
 			}]
 			x: -10.0d
-			y: -0.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["75E673394451C2F4"]
@@ -1000,7 +1094,7 @@
 			]
 			title: "A Heart of Steam"
 			x: -7.5d
-			y: -8.5d
+			y: -9.0d
 		}
 		{
 			dependencies: [
@@ -1029,7 +1123,7 @@
 				type: "item"
 			}]
 			x: -10.0d
-			y: -10.5d
+			y: -11.0d
 		}
 		{
 			dependencies: ["00DA4B8905FE3CAF"]
@@ -1047,7 +1141,7 @@
 				type: "item"
 			}]
 			x: -11.5d
-			y: -12.0d
+			y: -12.5d
 		}
 		{
 			dependencies: ["0CD722C2B48DF862"]
@@ -1072,6 +1166,7 @@
 				"16FA2F3F79C9F5B3"
 				"054BC637EF86609C"
 			]
+			description: ["There is quite a bit to get into, so remember to <rainb>Hold [w] to Ponder to learn more!</rainb>"]
 			hide: true
 			icon: "create:railway_casing"
 			id: "1E0CDA1ED53FACEE"
@@ -1097,7 +1192,7 @@
 				}
 			]
 			title: "Beginning of the Logistics Age"
-			x: 14.5d
+			x: 15.5d
 			y: 1.0d
 		}
 		{
@@ -1115,7 +1210,7 @@
 				type: "item"
 			}]
 			title: "Casually Crushed Obsidian"
-			x: 18.0d
+			x: 19.0d
 			y: -0.5d
 		}
 		{
@@ -1151,7 +1246,7 @@
 				type: "item"
 			}]
 			title: "Create the Crushing Wheels"
-			x: 18.0d
+			x: 19.0d
 			y: -2.5d
 		}
 		{
@@ -1190,7 +1285,7 @@
 				type: "item"
 			}]
 			title: "Mechanical Crafter Power!"
-			x: 19.5d
+			x: 20.5d
 			y: -4.0d
 		}
 		{
@@ -1211,7 +1306,8 @@
 				item: "create:sturdy_sheet"
 				type: "item"
 			}]
-			x: 18.0d
+			title: "Very Sturdy Sheets"
+			x: 19.0d
 			y: 1.0d
 		}
 		{
@@ -1242,7 +1338,7 @@
 				}
 			]
 			title: "Train Management"
-			x: 14.5d
+			x: 15.5d
 			y: 2.5d
 		}
 		{
@@ -1283,7 +1379,7 @@
 				}
 			]
 			title: "Train Controls and Scheduling"
-			x: 13.5d
+			x: 14.5d
 			y: 2.0d
 		}
 		{
@@ -1330,7 +1426,7 @@
 				}
 			]
 			title: "Sticky Utilities"
-			x: -3.0d
+			x: -5.0d
 			y: -8.0d
 		}
 		{
@@ -1375,7 +1471,7 @@
 			}]
 			title: "The Humble Millstone"
 			x: -1.5d
-			y: -6.5d
+			y: -7.5d
 		}
 		{
 			dependencies: ["79F980EE4DAB682D"]
@@ -1402,7 +1498,7 @@
 			}]
 			title: "Wheat Refinement"
 			x: -3.0d
-			y: -6.5d
+			y: -7.5d
 		}
 		{
 			dependencies: ["3A0AE21655B5678E"]
@@ -1438,8 +1534,8 @@
 				type: "item"
 			}]
 			title: "Homemade Slime"
-			x: -4.5d
-			y: -8.0d
+			x: -4.0d
+			y: -7.0d
 		}
 		{
 			dependencies: ["26D176C88B664911"]
@@ -1456,7 +1552,7 @@
 				type: "item"
 			}]
 			x: -13.5d
-			y: -5.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["1EC1E1E64C630B96"]
@@ -1490,8 +1586,8 @@
 				type: "item"
 			}]
 			title: "Baker's Passion"
-			x: -4.5d
-			y: -6.5d
+			x: -3.0d
+			y: -6.0d
 		}
 		{
 			dependencies: [
@@ -1552,7 +1648,7 @@
 			rewards: [{
 				id: "36FB389E65C3633A"
 				type: "xp"
-				xp: 50
+				xp: 25
 			}]
 			subtitle: "The first step in making Electron Tubes."
 			tasks: [{
@@ -1600,7 +1696,7 @@
 				type: "item"
 			}]
 			title: "Create an Electron Tube"
-			x: 19.5d
+			x: 20.5d
 			y: 4.5d
 		}
 		{
@@ -1614,7 +1710,7 @@
 				type: "item"
 			}]
 			x: -13.0d
-			y: -6.5d
+			y: -7.0d
 		}
 		{
 			dependencies: ["7D7D96030BC1CDC1"]
@@ -1627,17 +1723,29 @@
 				type: "item"
 			}]
 			x: -12.5d
-			y: -7.5d
+			y: -8.0d
 		}
 		{
 			dependencies: ["0044994A32BC5631"]
-			description: ["Hold [w] to Ponder to learn more!"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Redstone can also be used to disable funnels from receiving or exporting items."
+			]
 			id: "5DB5C71834CFBC1D"
-			rewards: [{
-				id: "0F7654044AEBF796"
-				type: "xp"
-				xp: 100
-			}]
+			rewards: [
+				{
+					id: "0F7654044AEBF796"
+					type: "xp"
+					xp: 100
+				}
+				{
+					exclude_from_claim_all: true
+					id: "376BB060E7D3BC68"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+			]
 			subtitle: "The basic funnel with no filtering capabilities. Can only manage 1 item at a time."
 			tasks: [{
 				count: 2L
@@ -1645,18 +1753,31 @@
 				item: "create:andesite_funnel"
 				type: "item"
 			}]
+			title: "Basic Item Transportation and Management - Andesite Funnels"
 			x: -1.5d
 			y: 3.5d
 		}
 		{
 			dependencies: ["0044994A32BC5631"]
-			description: ["Hold [w] to Ponder to learn more!"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"It can also be used as decoration, if needed."
+			]
 			id: "280A50D0712F4D78"
-			rewards: [{
-				id: "45BF1C55E28EDC6A"
-				type: "xp"
-				xp: 100
-			}]
+			rewards: [
+				{
+					id: "45BF1C55E28EDC6A"
+					type: "xp"
+					xp: 100
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3C4590528FEA413C"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+			]
 			subtitle: "Takes a stack of items and splits off exactly 1 item into an adjacent Mechanical Belt."
 			tasks: [{
 				count: 2L
@@ -1664,6 +1785,7 @@
 				item: "create:andesite_tunnel"
 				type: "item"
 			}]
+			title: "Basic Item Transportation and Management - Andesite Tunnels"
 			x: -1.0d
 			y: 4.5d
 		}
@@ -1677,7 +1799,7 @@
 				type: "item"
 			}]
 			x: -9.5d
-			y: -4.5d
+			y: -5.0d
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
@@ -1689,7 +1811,7 @@
 				type: "item"
 			}]
 			x: -10.5d
-			y: -4.0d
+			y: -4.5d
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
@@ -1701,7 +1823,7 @@
 				type: "item"
 			}]
 			x: -12.0d
-			y: -5.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["2E386081E5302CF5"]
@@ -1719,10 +1841,15 @@
 				type: "item"
 			}]
 			x: -11.5d
-			y: -2.0d
+			y: -2.5d
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Example use cases are lowering a whole platform of Mechanical Drills for excavating an entire chunk."
+			]
 			id: "5AD4231580F52A6C"
 			rewards: [{
 				id: "2BDB0EF8D7239E39"
@@ -1737,7 +1864,7 @@
 			}]
 			title: "Make the Rope Pulley"
 			x: -9.5d
-			y: -6.5d
+			y: -7.0d
 		}
 		{
 			dependencies: ["249F8A4FAEB5CDDE"]
@@ -1835,7 +1962,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: -8.0d
+			y: -9.0d
 		}
 		{
 			dependencies: [
@@ -1868,18 +1995,18 @@
 				type: "item"
 			}]
 			x: -5.0d
-			y: -9.5d
+			y: -10.0d
 		}
 		{
 			dependencies: ["65FC712C5D7E312D"]
 			description: [
-				"There is so much depth to Create, it is very difficult to fully document in both a text format and a progression tree."
+				"There is so much depth to &6Create&r, it is very difficult to fully document in both a text format and a progression tree."
 				""
-				"I highly recommend fully watching the Ponder tutorials for every item to increase your understanding."
+				"I highly recommend fully watching the &7Ponder&r tutorials for every item to increase your understanding."
 				""
 				"Hopefully you find yourself enlightened with how much you can do with Create, despite how \"inefficient\" it is compared to other tech mods."
 				""
-				"Remember to Hold [w] to Ponder or Hold [Shift] for more info!"
+				"Remember to &6Hold [w] to Ponder&r or &6Hold [Shift] for more info&r!"
 				""
 				"Please thoroughly watch them and don't skim through. You can also click the buttons below to identify individual blocks or to slow down the mini tutorial."
 				""
@@ -1954,7 +2081,7 @@
 				}
 			]
 			x: -1.0d
-			y: -5.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
@@ -2010,11 +2137,12 @@
 				item: "create:redstone_link"
 				type: "item"
 			}]
-			x: 13.5d
+			x: 14.5d
 			y: -5.0d
 		}
 		{
 			dependencies: ["0194851298AADB65"]
+			description: ["Hold [w] to Ponder to learn more!"]
 			id: "1D75F7EBD23D3988"
 			rewards: [{
 				id: "185820DAC288B265"
@@ -2027,11 +2155,17 @@
 				item: "create:content_observer"
 				type: "item"
 			}]
-			x: 20.5d
+			title: "Looking Inside Inventories - Smart Observer"
+			x: 21.5d
 			y: 3.5d
 		}
 		{
 			dependencies: ["1D75F7EBD23D3988"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"An example use case for the Threshold Switch is stopping production when an Item Vault reaches a certain threshold of space used."
+			]
 			id: "050F508C5A4EA99E"
 			rewards: [{
 				id: "4CBD455A6232C26C"
@@ -2044,7 +2178,8 @@
 				item: "create:stockpile_switch"
 				type: "item"
 			}]
-			x: 20.5d
+			title: "Quantifying Inventories - Threshold Switch"
+			x: 21.5d
 			y: 2.0d
 		}
 		{
@@ -2068,7 +2203,7 @@
 				item: "create:display_link"
 				type: "item"
 			}]
-			x: 15.5d
+			x: 16.5d
 			y: -5.0d
 		}
 		{
@@ -2086,7 +2221,7 @@
 				type: "item"
 			}]
 			title: "Big Ben"
-			x: 18.5d
+			x: 19.5d
 			y: 3.5d
 		}
 		{
@@ -2119,7 +2254,7 @@
 				type: "item"
 			}]
 			x: 1.0d
-			y: -7.5d
+			y: -8.5d
 		}
 		{
 			dependencies: ["6D8C28D34ABF7636"]
@@ -2128,7 +2263,9 @@
 				""
 				"It just does not get any smoother than this."
 				""
-				"Please note: the Mechanical Piston can't extend without at least one Extension Rod attached!"
+				"Unlike regular Pistons which retracted when not receiving power, Mechanical Pistons will need to be retracted with rotational force in the &4opposite&r direction used for extending. A &cGearshift&r is helpful for achieving this easily!"
+				""
+				"Please note that Mechanical Pistons can't extend without at least &lone&r &7Extension Rod&r attached!"
 			]
 			icon: "create:mechanical_piston"
 			id: "22BAD50143A6422B"
@@ -2157,10 +2294,15 @@
 					item: "create:mechanical_piston"
 					type: "item"
 				}
+				{
+					id: "5A9D1D6155BC3E3B"
+					item: "create:sticky_mechanical_piston"
+					type: "item"
+				}
 			]
-			title: "The Mighty Mechanical Piston"
+			title: "Moving Giant Walls and Chunks - The Mighty Mechanical Piston"
 			x: 1.5d
-			y: -6.5d
+			y: -7.5d
 		}
 		{
 			dependencies: ["054BC637EF86609C"]
@@ -2195,7 +2337,7 @@
 				item: "create:rotation_speed_controller"
 				type: "item"
 			}]
-			x: 14.5d
+			x: 15.5d
 			y: -5.5d
 		}
 		{
@@ -2219,7 +2361,7 @@
 				item: "create:linked_controller"
 				type: "item"
 			}]
-			x: 13.5d
+			x: 14.5d
 			y: -6.5d
 		}
 		{
@@ -2246,7 +2388,7 @@
 				type: "dimension"
 			}]
 			title: "A Trip to Hell"
-			x: 7.5d
+			x: 8.5d
 			y: -1.5d
 		}
 		{
@@ -2278,7 +2420,7 @@
 				type: "structure"
 			}]
 			title: "Find a Nether Fortress"
-			x: 8.5d
+			x: 9.5d
 			y: -2.5d
 		}
 		{
@@ -2300,7 +2442,7 @@
 				type: "observation"
 			}]
 			title: "Capture a Blaze"
-			x: 9.5d
+			x: 10.5d
 			y: -1.5d
 		}
 		{
@@ -2320,7 +2462,7 @@
 			}]
 			title: "Bread!"
 			x: -4.5d
-			y: -5.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["75E673394451C2F4"]
@@ -2352,11 +2494,15 @@
 				type: "item"
 			}]
 			x: -5.5d
-			y: -10.5d
+			y: -11.0d
 		}
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
-			description: ["Safety should be your priority when riding your contraptions."]
+			description: [
+				"Safety should be your priority when riding your contraptions."
+				""
+				"Hold [Shift] for more info!"
+			]
 			id: "785FCB4A92E19D32"
 			rewards: [
 				{
@@ -2392,7 +2538,7 @@
 				type: "item"
 			}]
 			title: "The Black Seat"
-			x: 13.0d
+			x: 14.0d
 			y: 1.0d
 		}
 		{
@@ -2472,7 +2618,7 @@
 				}
 			]
 			title: "Behold! The Power of Visualization!"
-			x: 20.5d
+			x: 21.5d
 			y: 5.5d
 		}
 		{
@@ -2513,7 +2659,7 @@
 				type: "item"
 			}]
 			title: "The Potato Cannon"
-			x: 19.5d
+			x: 20.5d
 			y: -6.0d
 		}
 		{
@@ -2543,7 +2689,7 @@
 				item: "create:wand_of_symmetry"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 22.0d
 			y: -5.5d
 		}
 		{
@@ -2579,7 +2725,7 @@
 				}
 				type: "item"
 			}]
-			x: 21.5d
+			x: 22.5d
 			y: -4.0d
 		}
 		{
@@ -2598,7 +2744,7 @@
 			}]
 			title: "Create the Peculiar Bell"
 			x: -16.0d
-			y: -10.5d
+			y: -11.0d
 		}
 		{
 			dependencies: [
@@ -2620,7 +2766,7 @@
 			}]
 			title: "The Haunted Bell"
 			x: -16.0d
-			y: -5.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["0CD722C2B48DF862"]
@@ -2697,11 +2843,18 @@
 				}
 			}
 			id: "41753F371DB962BC"
-			rewards: [{
-				id: "712876AABAECD0B6"
-				type: "xp_levels"
-				xp_levels: 30
-			}]
+			rewards: [
+				{
+					id: "712876AABAECD0B6"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					id: "3F52BD3EAEA30BD0"
+					item: "minecraft:netherite_block"
+					type: "item"
+				}
+			]
 			subtitle: "Gone swimming in the lava oceans of the Nether."
 			tasks: [
 				{
@@ -2821,7 +2974,7 @@
 				type: "item"
 			}]
 			title: "Elevators Elevators Elevators!"
-			x: 13.5d
+			x: 14.5d
 			y: -3.0d
 		}
 		{
@@ -2845,7 +2998,8 @@
 				item: "create:mechanical_roller"
 				type: "item"
 			}]
-			x: 16.0d
+			title: "Terraforming with Trains - The Mechanical Roller"
+			x: 17.0d
 			y: -0.5d
 		}
 		{
@@ -2887,7 +3041,7 @@
 				type: "item"
 			}]
 			x: -11.0d
-			y: 0.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["00DA4B8905FE3CAF"]
@@ -2910,7 +3064,7 @@
 			}]
 			title: "Pulse Repeater"
 			x: -12.5d
-			y: -11.5d
+			y: -12.0d
 		}
 		{
 			dependencies: ["00DA4B8905FE3CAF"]
@@ -2929,7 +3083,7 @@
 			}]
 			title: "Pulse Extender"
 			x: -10.5d
-			y: -11.5d
+			y: -12.0d
 		}
 		{
 			dependencies: [
@@ -2964,7 +3118,7 @@
 			}]
 			title: "The Deployer..."
 			x: -11.5d
-			y: -13.5d
+			y: -14.0d
 		}
 		{
 			dependencies: ["0CD722C2B48DF862"]
@@ -2980,6 +3134,20 @@
 		}
 		{
 			dependencies: ["0194851298AADB65"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Right click the filter on the Contraption Controls block with a contraption actor block in hand such as the following:"
+				""
+				"- Mechanical Roller"
+				"- Mechanical Drill"
+				"- Mechanical Saw"
+				"- Mechanical Harvester"
+				"- Mechanical Plough"
+				"- Deployer"
+				""
+				"Upon pressing the button, you can toggle the state of the contraption actor specified in the filter to be &aENABLED&r or &cDISABLED&r which can be very useful for trains and minecart contraptions so they don't accidentally break their tracks."
+			]
 			id: "5172E10D8831BABF"
 			rewards: [{
 				id: "41B79585F387FDC6"
@@ -2992,7 +3160,8 @@
 				item: "create:contraption_controls"
 				type: "item"
 			}]
-			x: 19.5d
+			title: "Contraption Actors Management - Contraption Controls"
+			x: 20.5d
 			y: 6.0d
 		}
 		{
@@ -3012,11 +3181,12 @@
 				type: "item"
 			}]
 			title: "Make Seats for your Passengers!"
-			x: 13.0d
+			x: 14.0d
 			y: -0.5d
 		}
 		{
 			dependencies: ["785FCB4A92E19D32"]
+			description: ["This is self-explanatory so you probably don't need to [Shift] for more info..."]
 			id: "28094E43F612C0E4"
 			rewards: [{
 				exclude_from_claim_all: true
@@ -3036,6 +3206,7 @@
 		}
 		{
 			dependencies: ["28094E43F612C0E4"]
+			description: ["Train Doors exist, but that's for later."]
 			id: "7A1F13EA597AD89D"
 			rewards: [{
 				exclude_from_claim_all: true
@@ -3043,12 +3214,34 @@
 				table_id: 7771384237349930739L
 				type: "random"
 			}]
-			tasks: [{
-				count: 2L
-				id: "0CB72936167ED092"
-				item: "create:framed_glass_door"
-				type: "item"
-			}]
+			shape: "rsquare"
+			subtitle: "Very fancy indeed!"
+			tasks: [
+				{
+					count: 2L
+					id: "0CB72936167ED092"
+					item: "create:framed_glass_door"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "40A8536A46683B60"
+					item: "create:andesite_door"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7D7EE3B76C880796"
+					item: "create:copper_door"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7379A25AE7DD4A7B"
+					item: "create:brass_door"
+					type: "item"
+				}
+			]
 			title: "Fancy Doors and Trapdoors"
 			x: -3.0d
 			y: 3.0d
@@ -3069,7 +3262,7 @@
 				type: "item"
 			}]
 			title: "Fancy Train Doors"
-			x: 11.5d
+			x: 12.5d
 			y: 1.0d
 		}
 		{
@@ -3088,11 +3281,13 @@
 			}]
 			title: "The Placard"
 			x: -12.5d
-			y: -9.5d
+			y: -10.0d
 		}
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
 			description: [
+				"Hold [Shift] for more info!"
+				""
 				"With the item you want to either whitelist or blacklist in your inventory, place it into the available slots. The item is not consumed!"
 				""
 				"You can also use the List Filter in the recipe filter on Basins to allow certain items to be made or on Smart Fluid Pipes to extract certain fluids directly from the Basin or Fluid Tank."
@@ -3160,12 +3355,32 @@
 				type: "item"
 			}]
 			title: "The Attribute Filter"
-			x: 10.5d
+			x: 11.5d
 			y: -5.5d
 		}
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
+			description: [
+				"Hold [Shift] for more info!"
+				""
+				"To &cremove&r a stored recipe from a Crafting Blueprint, just crouch and then punch it exactly &lONCE&r. If you accidentally punch more than once, the blueprint will be taken off the wall."
+				""
+				"Also, Crafting Blueprints can't be moved with their stored recipes still intact. My advice to you is try not to move them around too much and make sure you establish an area where you will frequently be using them."
+			]
 			id: "69EE3A81D40C9D47"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0A5C57466655F6D9"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "7919388AA23C1165"
+					type: "xp"
+					xp: 50
+				}
+			]
 			shape: "rsquare"
 			subtitle: "Tired of clicking and dragging items to craft something? I got you covered!"
 			tasks: [{
@@ -3176,6 +3391,82 @@
 			title: "Create Utilities - The Crafting Blueprint"
 			x: 2.0d
 			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6D8C28D34ABF7636"
+				"1406D000426425FC"
+			]
+			hide_dependency_lines: false
+			id: "1BC189AE6AA14C57"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "6DC5C667F14360E5"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "606105D21A8ED5F1"
+					type: "xp"
+					xp: 50
+				}
+			]
+			subtitle: "Makes sounds throughout the day, letting you know what time it is."
+			tasks: [{
+				id: "26598259531E51B9"
+				item: "create:cuckoo_clock"
+				type: "item"
+			}]
+			title: "Keeping Track of Time - Cuckoo Clock"
+			x: 1.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["6D8C28D34ABF7636"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Having trouble determining what &bspeed&r your cogwheels are rotating? "
+				""
+				"Having trouble determining how many &3stress units&r are being produced?"
+				""
+				"We got you covered!"
+				""
+				"Also, if you want to change your Speedometer into a Stressometer and vice versa, simply put it in your crafting grid to change what it reads."
+				""
+				"When wearing Engineer's Goggles, they provide numerical information."
+			]
+			id: "61D09463A16E0632"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3CC3D7241EBBDE38"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "62D6F7DCA682D750"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Fancy meters that give useful information!"
+			tasks: [
+				{
+					id: "2294A6D6EB15BF85"
+					item: "create:speedometer"
+					type: "item"
+				}
+				{
+					id: "46B4635493FDECC2"
+					item: "create:stressometer"
+					type: "item"
+				}
+			]
+			title: "Visualizing Rotational Force - The Speedometer and Stressometer"
+			x: -1.0d
+			y: -6.5d
 		}
 	]
 	subtitle: [

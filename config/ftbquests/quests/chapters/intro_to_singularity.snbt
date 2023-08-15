@@ -149,9 +149,7 @@
 			description: [
 				"Certain \"zombies\" are a bit different."
 				""
-				"Oh and certain structures may be different, so keep an eye out for that."
-				""
-				"If you are on the 1.18.2 version of this modpack, PLEASE DO NOT PUT THE LAST WITHER SKULL ON THE COMMAND BLOCK! You will regret it, unless if you like playing hardcore."
+				"Oh and certain structures may be different, so keep an eye out for that. Also be sure to check around every Lootr chest in case there is TNT!"
 			]
 			hide: true
 			icon: {
@@ -268,9 +266,9 @@
 			description: [
 				"You can now &arepair&r your tools in the crafting grid, so you won't have to throw away your tools."
 				""
-				"If you still find yourself running out of string or wool, gather flax seeds and plant them. Flax can then be refined with a Millstone to get additional string and seeds."
+				"If you still find yourself running out of string or wool, gather &2flax seeds&r and plant them. &aFlax&r can then be refined with a &6Millstone&r to get additional string and seeds."
 				""
-				"This process can then be automated with Create and its Mechanical Harvesters."
+				"This process can then be automated with Create and its &7Mechanical Harvesters&r."
 			]
 			hide: true
 			icon: "extendedcrafting:handheld_table"
@@ -346,6 +344,8 @@
 				"As for Farmer's Delight tools, obviously you will need a knife to use the cutting board."
 				""
 				"Wondering what chalk can be used for? It can be used for drawing and help you navigate through cave systems, just in case you get lost. Additional symbols can be unlocked via advancements."
+				""
+				"Lastly, Fletching Tables are now usable and can make arrows now thanks to &dApotheosis&r!"
 			]
 			icon: {
 				Count: 1b
@@ -433,6 +433,11 @@
 					title: "Any #chalk:chalks"
 					type: "item"
 				}
+				{
+					id: "0345851CE54DE5A7"
+					item: "minecraft:fletching_table"
+					type: "item"
+				}
 			]
 			title: "Convenient Utilities Ch.2"
 			x: -1.5d
@@ -467,19 +472,24 @@
 				""
 				"To unlock the Travel Anchor to rename it, use a stick!"
 				""
-				""
 				"{@pagebreak}"
-				""
-				"Mechanical Extruders can be used to make Create's orestones quite easily."
+				"Mechanical Extruders can be used to make Create's orestones quite easily and can make smooth stone if the recipe filter is set."
 			]
 			icon: "tempad:tempad"
 			id: "5E5E9241EB84A4E9"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "5B59718FEA832387"
-				table_id: 103743719166323827L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5B59718FEA832387"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "53C57E5487C6BEF8"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
 			shape: "rsquare"
 			subtitle: "For all time. Always."
 			tasks: [
@@ -656,6 +666,12 @@
 			]
 			icon: "create:andesite_alloy"
 			id: "65FC712C5D7E312D"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "5F48B0E541D258E1"
+				table_id: 7771384237349930739L
+				type: "random"
+			}]
 			shape: "rsquare"
 			subtitle: "Creating your foundation..."
 			tasks: [{

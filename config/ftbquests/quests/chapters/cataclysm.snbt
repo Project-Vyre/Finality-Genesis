@@ -113,10 +113,12 @@
 		}
 		{
 			dependencies: ["54378BE3AEDD91A3"]
+			description: ["Also, good luck."]
 			hide: true
 			icon: "minecraft:end_portal_frame"
 			id: "1A028F6237ABDEAC"
 			shape: "square"
+			subtitle: "You will need to deal with the Ender Dragon first."
 			tasks: [{
 				dimension: "minecraft:the_end"
 				id: "2F2F53C75FF1DEC2"
@@ -455,6 +457,18 @@
 		{
 			dependencies: ["1F272782D97392B4"]
 			id: "1827BFE975828E04"
+			rewards: [
+				{
+					id: "76FC74919D2F9F73"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					id: "3567308D0C0BE40F"
+					item: "aquamirae:abyssal_amethyst"
+					type: "item"
+				}
+			]
 			subtitle: "You feel vibrations under the ice..."
 			tasks: [{
 				entity: "aquamirae:maze_mother"
@@ -476,6 +490,12 @@
 				"It is the one of the few weapons that can actually defeat her and put an end to her suffering."
 			]
 			id: "2585B4FAFCED0F46"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1EB68B843F06D9CE"
+				table_id: 103743719166323827L
+				type: "random"
+			}]
 			subtitle: "The curse of immortality."
 			tasks: [{
 				id: "7019C49A5665F93A"
@@ -507,6 +527,11 @@
 		}
 		{
 			dependencies: ["6F037916B715DB4A"]
+			description: [
+				"I'll just say it here if the creepy hint isn't enough:"
+				""
+				"Use the Bone Dagger to gather &4blood&r from unsuspecting villagers..."
+			]
 			id: "50A418AC861A047A"
 			subtitle: "<shake>Good...</shake>"
 			tasks: [{
@@ -526,7 +551,7 @@
 			description: [
 				"You will need the upper, middle and lower components."
 				""
-				"You will need to find the three bone staff pieces from a special structure."
+				"You will need to find the three bone staff pieces from a special structures throughout the world. One can be found in what looks to be a flesh pit. The others are for you to find out."
 			]
 			id: "5AE1F898C6178F11"
 			subtitle: "More whispers in your ear..."
@@ -622,6 +647,11 @@
 					title: "It's yours to claim."
 					to_observe: "aquamirae:frozen_chest"
 					type: "observation"
+				}
+				{
+					id: "5838C8C88094A4AF"
+					item: "obscure_api:astral_dust"
+					type: "item"
 				}
 			]
 			title: "Frozen Treasures"
