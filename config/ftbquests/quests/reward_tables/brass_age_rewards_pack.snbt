@@ -1,0 +1,17 @@
+{
+	icon: "create:brass_casing"
+	id: "2E0B0F0E86089401"
+	loot_size: 2
+	order_index: 12
+	rewards: [
+		{ item: "create:zinc_ore", weight: 3.0f }
+		{ count: 5, item: "create:deepslate_zinc_ore", random_bonus: 5, weight: 2.5f }
+		{ item: "minecraft:copper_ore", weight: 3.0f }
+		{ count: 5, item: "minecraft:deepslate_copper_ore", random_bonus: 5, weight: 2.5f }
+		{ count: 4, item: "minecraft:redstone_ore", random_bonus: 5, weight: 3.0f }
+		{ count: 5, item: "minecraft:deepslate_redstone_ore", random_bonus: 5, weight: 2.5f }
+		{ count: 6, item: "minecraft:nether_quartz_ore", random_bonus: 6, weight: 3.0f }
+	]
+	title: "Brass Age Rewards Pack"
+	use_title: true
+}

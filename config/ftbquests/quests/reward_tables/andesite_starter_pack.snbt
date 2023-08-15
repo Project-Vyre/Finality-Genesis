@@ -11,4 +11,5 @@
 		{ item: "minecraft:raw_iron", random_bonus: 3, weight: 4.0f }
 	]
 	title: "Andesite Starter Pack"
+	use_title: true
 }

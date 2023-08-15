@@ -3,7 +3,6 @@
 let BSKIES_WOOD = ['bluebright', 'starlit', 'frostbright', 'lunar', 'dusk', 'maple', 'cherry', 'crystallized']
 ServerEvents.recipes(event => {
     BSKIES_WOOD.forEach(wood => {
-        event.stonecutting(`blue_skies:${wood}_pressure_plate`, `blue_skies:${wood}_slab`).id(`blue_skies:${wood}_pressure_plate`)
         event.recipes.create.cutting([
             `blue_skies:${wood}_pressure_plate`, 
             `blue_skies:${wood}_slab`

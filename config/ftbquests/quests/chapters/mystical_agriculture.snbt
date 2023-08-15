@@ -5,7 +5,7 @@
 	group: "6855847200ADBE3A"
 	icon: "mysticalagriculture:infusion_altar"
 	id: "2C5FF9AF6ACD1D02"
-	order_index: 2
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
@@ -328,6 +328,18 @@
 			]
 			description: ["You will need to make a special Infusion Fluid to create this very special item."]
 			id: "3CCEE62A9B6D8F1E"
+			rewards: [
+				{
+					id: "27B9B0774644CE3B"
+					item: "mysticalagriculture:mystical_fertilizer"
+					type: "item"
+				}
+				{
+					id: "009706A64D739485"
+					item: "mysticalagriculture:fertilized_essence"
+					type: "item"
+				}
+			]
 			subtitle: "This is needed to start your journey with infinite automation."
 			tasks: [{
 				id: "4D0908889BD441B1"

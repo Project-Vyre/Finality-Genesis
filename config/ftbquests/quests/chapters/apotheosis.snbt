@@ -5,24 +5,35 @@
 	group: "6855847200ADBE3A"
 	icon: "apotheosis:gem_dust"
 	id: "6354312DFE41C7F0"
-	order_index: 1
+	order_index: 0
+	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["7D3FA3191B051D55"]
+			description: ["If your item happens to already have slots, you can use a Smithing Table to socket your gems."]
+			icon: "apotheosis:gem_dust"
 			id: "0EB2D84D0683C5C5"
 			subtitle: "Gem Dust has lots of utility."
-			tasks: [{
-				id: "65F2DD9E96FBF7C6"
-				item: "apotheosis:gem_dust"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "65F2DD9E96FBF7C6"
+					item: "apotheosis:gem_dust"
+					type: "item"
+				}
+				{
+					id: "2B76C1E44297757B"
+					item: "minecraft:smithing_table"
+					type: "item"
+				}
+			]
 			title: "Congrats! You sacrificed your item to the dark gods!"
 			x: 0.0d
 			y: 1.0d
 		}
 		{
 			dependencies: ["5D79BD5D3D87DA08"]
+			description: ["You can now use Millstones, Crushing Wheels or an Anvil to get gem dust."]
 			icon: "minecraft:anvil"
 			id: "7D3FA3191B051D55"
 			subtitle: "Sacrifice the stuff to get materials for the powerful stuff, got it?"
@@ -31,12 +42,12 @@
 				item: "apotheosis:gem_dust"
 				type: "item"
 			}]
-			title: "Smash your valuables with a falling anvil."
+			title: "Smash your valueables..."
 			x: 0.0d
 			y: -0.5d
 		}
 		{
-			dependencies: ["0EB2D84D0683C5C5"]
+			dependencies: ["74B2239E6D835FD5"]
 			description: ["This salvages Affixed items and converts them into Rarity Materials."]
 			id: "0CC888B34808370F"
 			subtitle: "It is really important."
@@ -47,7 +58,7 @@
 			}]
 			title: "Make a Salvaging Table, it's important."
 			x: 0.0d
-			y: 3.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -58,8 +69,8 @@
 				item: "apotheosis:common_material"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 5.0d
+			x: -1.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -83,7 +94,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 5.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -106,8 +117,8 @@
 				item: "apotheosis:mythic_material"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 5.0d
+			x: 1.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
@@ -145,6 +156,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
+			description: ["This quest tree is a work in progress and is not completely documented."]
 			hide: true
 			id: "5D79BD5D3D87DA08"
 			shape: "rsquare"
@@ -196,7 +208,8 @@
 				item: "apotheosis:helmet_tome"
 				type: "item"
 			}]
-			x: 1.0d
+			title: "Tome of Helmets"
+			x: -1.0d
 			y: 7.0d
 		}
 		{
@@ -208,7 +221,7 @@
 				item: "apotheosis:chestplate_tome"
 				type: "item"
 			}]
-			x: 1.0d
+			x: -1.0d
 			y: 8.0d
 		}
 		{
@@ -220,7 +233,7 @@
 				item: "apotheosis:boots_tome"
 				type: "item"
 			}]
-			x: 1.0d
+			x: -1.0d
 			y: 10.0d
 		}
 		{
@@ -232,7 +245,7 @@
 				item: "apotheosis:leggings_tome"
 				type: "item"
 			}]
-			x: 1.0d
+			x: -1.0d
 			y: 9.0d
 		}
 		{
@@ -244,7 +257,7 @@
 				item: "apotheosis:weapon_tome"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 1.0d
 			y: 7.0d
 		}
 		{
@@ -256,7 +269,7 @@
 				item: "apotheosis:pickaxe_tome"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 1.0d
 			y: 8.0d
 		}
 		{
@@ -269,7 +282,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 9.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["412F89A109102D9D"]
@@ -280,7 +293,7 @@
 				item: "apotheosis:bow_tome"
 				type: "item"
 			}]
-			x: 3.0d
+			x: 2.0d
 			y: 7.0d
 		}
 		{
@@ -292,8 +305,8 @@
 				item: "apotheosis:scrap_tome"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 7.0d
+			x: 1.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["412F89A109102D9D"]
@@ -304,11 +317,11 @@
 				item: "apotheosis:other_tome"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 8.0d
+			x: 1.0d
+			y: 9.0d
 		}
 		{
-			dependencies: ["411F865E038E7A2E"]
+			dependencies: ["1189AFE0B71158E6"]
 			description: ["You can make the most powerful tools imaginable, don't say I warned you."]
 			id: "3718E49C5B96FBFA"
 			subtitle: "This is where things get VERY interesting."
@@ -320,6 +333,63 @@
 			title: "Create the Reforging Table"
 			x: 0.0d
 			y: 11.0d
+		}
+		{
+			dependencies: ["0EB2D84D0683C5C5"]
+			id: "74B2239E6D835FD5"
+			tasks: [{
+				id: "4A4205C21346E6CE"
+				item: "apotheosis:gem_cutting_table"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["411F865E038E7A2E"]
+			id: "1189AFE0B71158E6"
+			tasks: [{
+				id: "3B604826BCC1040B"
+				item: "apotheosis:simple_reforging_table"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["5D79BD5D3D87DA08"]
+			id: "24E25CD6A011D02C"
+			subtitle: "These arrows are not your typical arrows."
+			tasks: [
+				{
+					id: "5DED14F19545B5D9"
+					item: "apotheosis:obsidian_arrow"
+					type: "item"
+				}
+				{
+					id: "3CA69C7A0DDED58E"
+					item: "apotheosis:iron_mining_arrow"
+					type: "item"
+				}
+				{
+					id: "1437A2A295D108FD"
+					item: "apotheosis:diamond_mining_arrow"
+					type: "item"
+				}
+				{
+					id: "306207E986A95EBD"
+					item: "apotheosis:broadhead_arrow"
+					type: "item"
+				}
+				{
+					id: "7A927AD471F0AF35"
+					item: "apotheosis:explosive_arrow"
+					type: "item"
+				}
+			]
+			title: "Power of Archery"
+			x: 0.0d
+			y: -3.5d
 		}
 	]
 	subtitle: ["Apotheosis is that one mod that makes everything powerful."]

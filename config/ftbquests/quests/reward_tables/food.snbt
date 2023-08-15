@@ -1,8 +1,7 @@
 {
-	hide_tooltip: true
 	icon: "create:builders_tea"
 	id: "6BD980CA105006F3"
-	loot_size: 1
+	loot_size: 3
 	order_index: 5
 	rewards: [
 		{ item: "create:builders_tea" }
@@ -16,6 +15,11 @@
 		{ item: "farmersdelight:fried_egg" }
 		{ item: "farmersdelight:stuffed_potato" }
 		{ item: "farmersdelight:kelp_roll_slice" }
+		{ item: "farmersdelight:bacon_sandwich" }
+		{ item: "farmersdelight:vegetable_noodles" }
+		{ item: "farmersdelight:steak_and_potatoes" }
+		{ item: "farmersdelight:fried_rice" }
 	]
 	title: "Food Rewards"
+	use_title: true
 }

@@ -18,6 +18,7 @@
 		y: 0.0d
 	}]
 	order_index: 4
+	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
@@ -77,7 +78,9 @@
 			description: [
 				"At last, you have reached enlightenment. However, a question remains as you look at the recipe."
 				""
-				"Where do you get the command blocks? Well, they're an unintended side effect as the result of breaking the game's rules soooo yeah."
+				"Where do you get the command blocks? Well, they're an unintended side effect as the result of breaking the game's rules soooo yeah. "
+				""
+				"Mechanical Crafters also have the power to craft them."
 			]
 			id: "01A8004472B9F446"
 			subtitle: "Shaping the world, forever."
@@ -174,7 +177,7 @@
 				}
 				{
 					id: "1E37BD8F6B386BB1"
-					item: "kubejs:omnipotent_alloy"
+					item: "kubejs:high_entropy_alloy"
 					type: "item"
 				}
 			]
@@ -184,6 +187,7 @@
 		{
 			dependencies: ["123D0E0F69B73A88"]
 			id: "53850BE8EF49D0AF"
+			subtitle: "The very mechanism used for manipulating the universe."
 			tasks: [{
 				id: "24F82896C2181594"
 				item: "kubejs:entropy_mechanism"
@@ -307,6 +311,7 @@
 				"01AA908CE3006E6A"
 			]
 			id: "6762D7F87F3F59F3"
+			subtitle: "Those were the times..."
 			tasks: [{
 				id: "3CA9C04FD6FAE1DF"
 				item: {

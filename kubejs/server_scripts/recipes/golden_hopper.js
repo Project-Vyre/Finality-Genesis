@@ -1,7 +1,7 @@
 // requires: goldenhopper
 
 ServerEvents.recipes(event => {
-    event.remove({id: 'goldenhopper:golden_hopper'})
+    event.remove({ id: 'goldenhopper:golden_hopper' })
     event.shaped('goldenhopper:golden_hopper', [
         'ACA',
         'AHA',

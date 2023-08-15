@@ -30,11 +30,12 @@
 					id: "6ECEE0D864B9648E"
 					item: {
 						Count: 1b
-						id: "farmersdelight:flint_knife"
+						id: "itemfilters:tag"
 						tag: {
-							Damage: 0
+							value: "farmersdelight:tools/knives"
 						}
 					}
+					title: "Any #farmersdelight:tools/knives"
 					type: "item"
 				}
 			]
@@ -72,6 +73,26 @@
 			]
 			title: "Home Cooking"
 			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["44D0D68F582B8418"]
+			id: "36F403EB697B5F48"
+			subtitle: "Salad for days!"
+			tasks: [
+				{
+					id: "2A353F7ECE29AC2C"
+					item: "farmersdelight:fruit_salad"
+					type: "item"
+				}
+				{
+					id: "666C1AE05CD34A69"
+					item: "farmersdelight:mixed_salad"
+					type: "item"
+				}
+			]
+			title: "Salads"
+			x: -1.5d
 			y: 2.0d
 		}
 	]

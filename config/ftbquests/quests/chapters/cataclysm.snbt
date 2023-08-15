@@ -5,6 +5,18 @@
 	group: ""
 	icon: "cataclysm:altar_of_fire"
 	id: "44955FEF08EBF071"
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 64.0d
+		hover: [ ]
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
 	order_index: 2
 	quest_links: [ ]
 	quests: [
@@ -101,10 +113,12 @@
 		}
 		{
 			dependencies: ["54378BE3AEDD91A3"]
+			description: ["Also, good luck."]
 			hide: true
 			icon: "minecraft:end_portal_frame"
 			id: "1A028F6237ABDEAC"
 			shape: "square"
+			subtitle: "You will need to deal with the Ender Dragon first."
 			tasks: [{
 				dimension: "minecraft:the_end"
 				id: "2F2F53C75FF1DEC2"
@@ -269,9 +283,11 @@
 				"4A691BB889286C89"
 				"5335BF00DB2A8CCE"
 			]
+			description: ["It's actually very visible on the ocean surface..."]
 			hide: true
 			id: "4179D9074E74A11B"
 			shape: "square"
+			subtitle: "A long time ago..."
 			tasks: [{
 				icon: "cataclysm:chiseled_stone_brick_pillar"
 				id: "39FD9536C33D32DA"
@@ -284,16 +300,34 @@
 		}
 		{
 			dependencies: ["54378BE3AEDD91A3"]
-			description: ["&d&lYou have been warned.&r&r"]
+			description: [
+				"&d&lYou have been warned.&r"
+				""
+				"I recommend using the &9Will of the Ocean&r spellstone to make swimming much easier."
+			]
 			hide: true
+			icon: "cataclysm:abyssal_sacrifice"
 			id: "5335BF00DB2A8CCE"
 			shape: "square"
 			subtitle: "Come prepared, or face certain death."
-			tasks: [{
-				id: "674414D33A9EEC90"
-				item: "cataclysm:abyssal_sacrifice"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "674414D33A9EEC90"
+					item: "cataclysm:abyssal_sacrifice"
+					type: "item"
+				}
+				{
+					id: "110167CE51EBE339"
+					item: {
+						Count: 1b
+						id: "minecraft:trident"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
 			title: "Create the Abyssal Sacrifice"
 			x: 0.0d
 			y: -3.0d
@@ -321,7 +355,7 @@
 			description: [
 				"Tame and heal the baby leviathan with some tropical fish. "
 				""
-				"Please try to protect it at all costs ;-;"
+				"Please try to protect it at all costs >.>"
 			]
 			icon: "cataclysm:tidal_claws"
 			id: "7B41C8C1C7837774"
@@ -408,7 +442,9 @@
 		}
 		{
 			dependencies: ["13186E7B0D6B6115"]
+			hide: true
 			id: "54378BE3AEDD91A3"
+			min_required_dependencies: 1
 			subtitle: "Might want some preparation first."
 			tasks: [{
 				id: "622A03DC3FD49769"
@@ -421,6 +457,18 @@
 		{
 			dependencies: ["1F272782D97392B4"]
 			id: "1827BFE975828E04"
+			rewards: [
+				{
+					id: "76FC74919D2F9F73"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					id: "3567308D0C0BE40F"
+					item: "aquamirae:abyssal_amethyst"
+					type: "item"
+				}
+			]
 			subtitle: "You feel vibrations under the ice..."
 			tasks: [{
 				entity: "aquamirae:maze_mother"
@@ -442,6 +490,12 @@
 				"It is the one of the few weapons that can actually defeat her and put an end to her suffering."
 			]
 			id: "2585B4FAFCED0F46"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1EB68B843F06D9CE"
+				table_id: 103743719166323827L
+				type: "random"
+			}]
 			subtitle: "The curse of immortality."
 			tasks: [{
 				id: "7019C49A5665F93A"
@@ -467,11 +521,17 @@
 				item: "aquamirae:shell_horn"
 				type: "item"
 			}]
+			title: "Putting the Captain to Rest - Pt.2"
 			x: -1.5d
 			y: -6.0d
 		}
 		{
 			dependencies: ["6F037916B715DB4A"]
+			description: [
+				"I'll just say it here if the creepy hint isn't enough:"
+				""
+				"Use the Bone Dagger to gather &4blood&r from unsuspecting villagers..."
+			]
 			id: "50A418AC861A047A"
 			subtitle: "<shake>Good...</shake>"
 			tasks: [{
@@ -491,7 +551,7 @@
 			description: [
 				"You will need the upper, middle and lower components."
 				""
-				"You will need to find the three bone staff pieces from a special structure."
+				"You will need to find the three bone staff pieces from a special structures throughout the world. One can be found in what looks to be a flesh pit. The others are for you to find out."
 			]
 			id: "5AE1F898C6178F11"
 			subtitle: "More whispers in your ear..."
@@ -587,6 +647,11 @@
 					title: "It's yours to claim."
 					to_observe: "aquamirae:frozen_chest"
 					type: "observation"
+				}
+				{
+					id: "5838C8C88094A4AF"
+					item: "obscure_api:astral_dust"
+					type: "item"
 				}
 			]
 			title: "Frozen Treasures"

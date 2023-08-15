@@ -1,6 +1,6 @@
 {
   "__comment": "Instructions: https://blakesmods.com/docs/cucumber/tags-config",
-  "forge:ingots/electrum": "null",
+  "forge:ingots/electrum": "createaddition:electrum_ingot",
   "forge:silicon": "null",
   "forge:ingots/aluminum": "null",
   "forge:gems/apatite": "null",
