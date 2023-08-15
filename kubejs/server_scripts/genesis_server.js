@@ -1,4 +1,5 @@
 // priority: 0
+// requires: kubejs
 // requires: create
 // requires: supplementaries
 
@@ -37,6 +38,11 @@ let MODRECIPES = [
     'createaddition:mixing/bioethanol',
     'createaddition:rolling/gold_ingot',
     'createaddition:rolling/brass_ingot'
+]
+let CMD = [
+    'command_block',
+    'chain_command_block',
+    'repeating_command_block'
 ]
 
 ServerEvents.recipes(event => {
@@ -285,6 +291,7 @@ ServerEvents.recipes(event => {
         Item.of('minecraft:deepslate', 9),
         Fluid.of('minecraft:lava', 250)
     ]).heated().id('finality:renew_deepslate_tuff')
+    // milling
     // crushing
     event.remove({ id: 'create:crushing/netherrack' })
     event.recipes.createCrushing([
@@ -306,6 +313,8 @@ ServerEvents.recipes(event => {
         Item.of('minecraft:gold_nugget', 5).withChance(0.10),
         Item.of('create:experience_nugget', 2).withChance(0.05)
     ], 'minecraft:gilded_blackstone').processingTime(250).id('finality:gilded_blackstone_crushing')
+    event.recipes.createCrushing(Item.of('9x kubejs:deepslate_shard').withChance(0.75), 'minecraft:deepslate').processingTime(250).id('finality:deepslate_shard_from_deepslate')
+    event.recipes.createCrushing(Item.of('kubejs:deepslate_shard', 9).withChance(0.25), 'minecraft:cobbled_deepslate').processingTime(250).id('finality:deepslate_shard_from_cobbled_deepslate')
     // filling
     event.recipes.createFilling('minecraft:netherrack', [
         'minecraft:cobblestone',
@@ -314,11 +323,16 @@ ServerEvents.recipes(event => {
     event.recipes.createFilling('minecraft:netherite_ingot', [
         'minecraft:netherite_scrap',
         Fluid.of('kubejs:molten_gold', 250)
-    ]).id('minecraft:netherite_ingot')
+    ]).id('finality:netherite_ingot_from_spout')
     // haunting
     event.recipes.createHaunting(['minecraft:deepslate'], 'minecraft:andesite').id('finality:andesite_haunting')
     event.recipes.createHaunting(['minecraft:crying_obsidian'], 'minecraft:obsidian').id('finality:obsidian_haunting')
     event.recipes.createHaunting(['minecraft:name_tag'], 'minecraft:writable_book').id('finality:soul_nametag')
+    event.recipes.createHaunting(['minecraft:phantom_membrane'], 'minecraft:rotten_flesh').id('finality:phantom_membrane_from_flesh')
+    event.recipes.createHaunting([
+        Item.of('minecraft:echo_shard').withChance(0.02),
+        Item.of('minecraft:disc_fragment_5').withChance(0.01)
+    ], 'kubejs:deepslate_shard').id('finality:echo_shard_from_haunting')
     // splashing
     event.recipes.createSplashing(['minecraft:piston'], 'minecraft:sticky_piston').id('finality:sticky_piston_splashing')
     event.recipes.createSplashing(['create:mechanical_piston'], 'create:sticky_mechanical_piston').id('finality:sticky_mechanical_piston_splashing')
@@ -351,14 +365,25 @@ ServerEvents.recipes(event => {
         R: '#forge:rope',
         L: '#forge:leather'
     }).id('finality:supplementaries_quiver')
+    // denied
+    event.shapeless('kubejs:denied_result', [
+        '4x minecraft:netherite_scrap',
+        '4x minecraft:gold_ingot'
+    ]).id('minecraft:netherite_ingot')
 })
 
 ServerEvents.tags('item', event => {
-    event.add('kubejs:command_blocks', ['kubejs:command_block', 'kubejs:chain_command_block', 'kubejs:repeating_command_block'])
+    CMD.forEach(insert => {
+        event.add('kubejs:command_blocks', `kubejs:${insert}`)
+    })
 })
 ServerEvents.tags('block', event => {
-    event.add('minecraft:mineable/pickaxe', ['kubejs:command_block', 'kubejs:chain_command_block', 'kubejs:repeating_command_block'])
-    event.add('forge:needs_netherite_tool', ['kubejs:command_block', 'kubejs:chain_command_block', 'kubejs:repeating_command_block'])
+    CMD.forEach(insert => {
+        event.add('minecraft:wither_immune', `kubejs:${insert}`)
+        event.add('minecraft:dragon_immune', `kubejs:${insert}`)
+        event.add('minecraft:mineable/pickaxe', `kubejs:${insert}`)
+        event.add('forge:needs_netherite_tool', `kubejs:${insert}`)
+    })
 })
 
 PlayerEvents.loggedIn(event => {
