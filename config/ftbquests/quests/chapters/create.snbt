@@ -1261,6 +1261,7 @@
 				""
 				"Hold [w] to Ponder to learn more!"
 			]
+			icon: "create:crushing_wheel"
 			id: "2E4CFF3F7A4508AB"
 			rewards: [
 				{
@@ -1299,8 +1300,13 @@
 				"They also have the power to compress the fabric of the universe, mechanically."
 				""
 				"You will see what I mean later."
+				""
+				"Have air gaps in recipes? Use a &6Crafter Slot Cover&r to cover those spots."
+				""
+				"Need to connect Mechanical Crafter inventories? Use a &6Wrench&r on the &lback&r of each Mechanical Crafter that needs to be connected and matches the same material needed for the shaped recipe."
 			]
 			hide: true
+			icon: "create:mechanical_crafter"
 			id: "2FF7795C03DDC67B"
 			rewards: [
 				{
@@ -1318,11 +1324,18 @@
 			shape: "octagon"
 			size: 2.0d
 			subtitle: "Crafting huge things."
-			tasks: [{
-				id: "65511F53C5D74053"
-				item: "create:mechanical_crafter"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "65511F53C5D74053"
+					item: "create:mechanical_crafter"
+					type: "item"
+				}
+				{
+					id: "721275C2A8CEF9DC"
+					item: "create:crafter_slot_cover"
+					type: "item"
+				}
+			]
 			title: "Mechanical Crafter Power!"
 			x: 20.5d
 			y: -4.0d
