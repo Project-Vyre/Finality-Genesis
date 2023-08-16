@@ -1773,27 +1773,75 @@
 		}
 		{
 			dependencies: ["7D7D96030BC1CDC1"]
-			description: ["Hold [w] to Ponder to learn more!"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"To extract or pump in fluids from a contraption, you must use a Fluid Pipe connected to the stationary Portable Fluid Interface and have a few Mechanical Pumps."
+				""
+				"Be sure to craft TWO as well since one PFI is going to be stationary while the other is going to be moving about on the contraption."
+				""
+				"It is also very important to leave a one or two block AIR gap between the PFIs so they can interface correctly. Blocks do not obstruct their ability to connect with each other."
+				""
+				"As of 0.5.1 Mechanical Pumps can't be reversed, so think of a creative solution involving two Fluid Valves to control which Mechanical Pump is used."
+				""
+				"This quest node will award you with one PFI so you can have a total of two in your inventory."
+			]
 			id: "2A1F1209201F3019"
+			rewards: [
+				{
+					id: "3D95B1C27D7C22C8"
+					type: "xp"
+					xp: 500
+				}
+				{
+					id: "63EEDD8361FE5502"
+					item: "create:portable_fluid_interface"
+					type: "item"
+				}
+			]
 			subtitle: "Contraption fluid inventory output and input."
 			tasks: [{
 				id: "6B4178561BE8854C"
 				item: "create:portable_fluid_interface"
 				type: "item"
 			}]
+			title: "Contraption Fluid Storage Management - Portable Fluid Interface"
 			x: -13.0d
 			y: -7.0d
 		}
 		{
 			dependencies: ["7D7D96030BC1CDC1"]
-			description: ["Hold [w] to Ponder to learn more!"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"The Portable Storage Interface must have a Funnel or a Chute / Smart Chute attached to it to be able to export from or import to a contraption's inventory."
+				""
+				"Be sure to craft TWO as well since one PSI is going to be stationary while the other is going to be moving about on the contraption."
+				""
+				"It is also very important to leave a one or two block AIR gap between the PSIs so they can interface correctly. Blocks do not obstruct their ability to connect with each other."
+				""
+				"This quest node will award you with one PSI so you can have a total of two in your inventory."
+			]
 			id: "6BCDDC8851A0617E"
+			rewards: [
+				{
+					id: "7D61D3528C6F812C"
+					type: "xp"
+					xp: 500
+				}
+				{
+					id: "3931061AD6E0DDEC"
+					item: "create:portable_storage_interface"
+					type: "item"
+				}
+			]
 			subtitle: "Contraption item inventory output and input."
 			tasks: [{
 				id: "7027944D7A8B01E3"
 				item: "create:portable_storage_interface"
 				type: "item"
 			}]
+			title: "Contraption Item Inventory Management - Portable Storage Interface"
 			x: -12.5d
 			y: -8.0d
 		}
