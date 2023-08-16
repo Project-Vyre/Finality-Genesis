@@ -33,6 +33,8 @@
 				"Remember to use JEI and type &d@red_power&r to see all items from the mod!"
 				""
 				"Recipes for Red Power related items have been changed to utilize Create materials."
+				""
+				"This section is a work in progress."
 			]
 			icon: {
 				Count: 1b
