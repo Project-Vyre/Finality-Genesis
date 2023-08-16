@@ -1,14 +1,15 @@
 // requires: mysticalagriculture
+// requires: mysticalagradditions
 
 ServerEvents.recipes(event => {
     // infusion essence
     event.recipes.createMixing([Fluid.of('kubejs:inferior_infusion_essence', 250)], [
         '4x mysticalagriculture:inferium_essence',
-        '4x mysticalagriculture:prosperity_shard', 
+        '4x mysticalagriculture:prosperity_shard',
     ]).id('finality:mysta_infusion_crystal_essence')
     event.recipes.createMixing([Fluid.of('kubejs:supreme_infusion_essence', 250)], [
         '4x mysticalagriculture:supremium_essence',
-        '4x mysticalagriculture:prosperity_shard', 
+        '4x mysticalagriculture:prosperity_shard',
     ]).id('finality:mysta_master_infusion_crystal_essence')
     // infusion crystals
     event.shaped('kubejs:denied_result', [
@@ -30,16 +31,16 @@ ServerEvents.recipes(event => {
         D: 'mysticalagriculture:supremium_gemstone'
     }).id('mysticalagriculture:master_infusion_crystal')
     event.recipes.createFilling('mysticalagriculture:infusion_crystal', [
-        'minecraft:diamond', 
+        'minecraft:diamond',
         Fluid.of('kubejs:inferior_infusion_essence', 250)
     ]).id('finality:infusion_crystal')
     event.recipes.createFilling('mysticalagriculture:master_infusion_crystal', [
-        'mysticalagriculture:supremium_gemstone', 
+        'mysticalagriculture:supremium_gemstone',
         Fluid.of('kubejs:supreme_infusion_essence', 250)
     ]).id('finality:master_infusion_crystal')
     // renewable prosperity shards
     event.recipes.createCrushing([
-        Item.of('mysticalagriculture:prosperity_shard').withChance(0.25), 
+        Item.of('mysticalagriculture:prosperity_shard').withChance(0.25),
         Item.of('mysticalagriculture:prosperity_seed_base').withChance(0.009765625)
     ], 'minecraft:coarse_dirt').processingTime(250).id('finality:renew_prosperity')
     event.recipes.createCompacting([Fluid.of('minecraft:milk', 1000)], ['4x mysticalagriculture:cow_essence']).id('finality:milk_from_cow_essence')
@@ -49,8 +50,8 @@ ServerEvents.recipes(event => {
         'RFR',
         'RRR'
     ], {
-        R:'mysticalagriculture:redstone_essence',
-        F:'create:cinder_flour'
+        R: 'mysticalagriculture:redstone_essence',
+        F: 'create:cinder_flour'
     }).id('mysticalagriculture:essence/minecraft/redstone')
     event.recipes.createMixing(['16x minecraft:redstone'], [
         '8x mysticalagriculture:redstone_essence',
@@ -123,7 +124,7 @@ ServerEvents.recipes(event => {
     event.shaped('16x minecraft:soul_soil', [
         'NDN',
         'DED',
-        'NDN'   
+        'NDN'
     ], {
         N: 'mysticalagriculture:nether_essence',
         D: 'minecraft:dirt',
@@ -205,7 +206,7 @@ ServerEvents.recipes(event => {
         W: 'mysticalagriculture:water_essence'
     }).id('mysticalagriculture:essence/minecraft/dripstone')
     event.recipes.createCompacting(Item.of('minecraft:dripstone_block', 16), [
-        Item.of('mysticalagriculture:stone_essence', 4), 
+        Item.of('mysticalagriculture:stone_essence', 4),
         'mysticalagriculture:water_essence'
     ]).id('finality:mysta_compacting_dripstone')
     event.shaped(Item.of('minecraft:calcite', 16), [
@@ -217,7 +218,7 @@ ServerEvents.recipes(event => {
         A: 'mysticalagriculture:amethyst_essence'
     }).id('mysticalagriculture:essence/minecraft/calcite')
     event.recipes.createCompacting(Item.of('minecraft:calcite', 16), [
-        Item.of('mysticalagriculture:stone_essence', 8), 
+        Item.of('mysticalagriculture:stone_essence', 8),
         'mysticalagriculture:amethyst_essence'
     ]).id('finality:mysta_compacting_calcite')
     event.shaped('24x minecraft:blackstone', [
@@ -307,9 +308,6 @@ ServerEvents.recipes(event => {
     ], {
         D: 'mysticalagriculture:diamond_essence'
     }).id('mysticalagriculture:essence/minecraft/diamond')
-    event.recipes.createCompacting('minecraft:diamond', [
-        '9x mysticalagriculture:diamond_essence'
-    ]).id('finality:mysta_compacting_diamond')
     event.shaped('minecraft:heart_of_the_sea', [
         'SDP',
         'DND',
@@ -321,7 +319,7 @@ ServerEvents.recipes(event => {
         N: 'minecraft:nautilus_shell'
     }).id('mysticalagriculture:essence/minecraft/heart_of_the_sea')
     event.recipes.createMixing('4x minecraft:heart_of_the_sea', [
-        'minecraft:nautilus_shell', 
+        'minecraft:nautilus_shell',
         '4x mysticalagriculture:diamond_essence',
         '4x mysticalagriculture:prismarine_essence',
         '4x mysticalagriculture:squid_essence'
@@ -345,6 +343,24 @@ ServerEvents.recipes(event => {
     ], {
         E: 'mysticalagriculture:netherite_essence'
     }).id('mysticalagriculture:essence/minecraft/netherite_ingot')
+    event.shaped('minecraft:honey_bottle', [
+        'HB'
+    ], {
+        H: 'mysticalagriculture:honey_essence',
+        B: 'minecraft:glass_bottle'
+    }).id('mysticalagriculture:essence/minecraft/honey_bottle')
+    event.shaped('minecraft:honey_bottle', [
+        'H',
+        'B'
+    ], {
+        H: 'mysticalagriculture:honey_essence',
+        B: 'minecraft:glass_bottle'
+    }).id('finality:mysticalagriculture/honey_bottle_vertical')
+    event.shaped('6x minecraft:honeycomb', [
+        'HHH'
+    ], {
+        H: 'mysticalagriculture:honey_essence'
+    }).id('mysticalagriculture:essence/minecraft/honeycomb')
     // machine frame related
     event.shaped('mysticalagriculture:machine_frame', [
         'IRI',
@@ -375,7 +391,7 @@ ServerEvents.recipes(event => {
         D: 'mysticalagriculture:soulium_dagger',
         R: 'create:radial_chassis'
     }).id('mysticalagriculture:basic_reprocessor')
-    event.shaped('kubejs:denied_result', [
+    event.shaped('kubejs:removed_item', [
         'ISI',
         'YMY',
         'ISI'
@@ -387,8 +403,8 @@ ServerEvents.recipes(event => {
     }).id('mysticalagriculture:harvester')
     // miscellaneous
     event.recipes.createMixing(Item.of('mysticalagriculture:mystical_fertilizer', 4), [
-        Item.of('mysticalagriculture:inferium_essence', 4), 
-        Item.of('minecraft:bone_meal', 4), 
+        Item.of('mysticalagriculture:inferium_essence', 4),
+        Item.of('minecraft:bone_meal', 4),
         'minecraft:diamond'
     ]).id('finality:mysta_mystical_fertilizer')
     event.recipes.createMixing(Item.of('mysticalagriculture:mystical_fertilizer', 8), [
@@ -396,4 +412,9 @@ ServerEvents.recipes(event => {
         '4x mysticalagriculture:fertilized_essence',
         'minecraft:diamond'
     ]).id('finality:mysta_mystical_fertilizer_better_eff')
+    // mysticalagradditions
+    event.shapeless('minecraft:dragon_breath', [
+        'minecraft:dragon_egg',
+        'minecraft:glass_bottle'
+    ]).keepIngredient('minecraft:dragon_egg').id('finality:dragon_breath')
 })
