@@ -77,6 +77,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     event.create('kubejs:dormant_singularity_core').displayName('§d<shake>Dormant Singularity Core</shake>').texture('kubejs:item/dormant_singularity_core').maxStackSize(16)
     event.create('kubejs:awakened_singularity_core').displayName('<shake><rainb>Awakened Singularity Core</rainb></shake>').texture('kubejs:item/awakened_singularity_core').maxStackSize(8)
     event.create('kubejs:denied_result').displayName('§d<shake>Denied Result</shake>').texture('kubejs:item/denied').maxStackSize(1).fireResistant(true)
+    event.create('kubejs:removed_item').displayName('§4<shake>Removed Item</shake>').texture('kubejs:item/removed').maxStackSize(1).fireResistant(true)
     event.create('kubejs:high_entropy_alloy').displayName('<rainb>High Entropy Alloy</rainb>').texture('kubejs:item/final_ingot').maxStackSize(64).fireResistant(true).group('miscellaneous')
     Object.keys(NATR).forEach(material => {
         event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${NATR[material]} Singularity`).texture(`kubejs:item/incomplete_singularities/nature/incomplete_${material}`).maxStackSize(1)
