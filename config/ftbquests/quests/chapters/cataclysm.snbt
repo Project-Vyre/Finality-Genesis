@@ -386,6 +386,7 @@
 				""
 				"The water is also pretty cold, so take that into consideration."
 			]
+			hide: true
 			icon: "aquamirae:ship_graveyard_echo"
 			id: "1F272782D97392B4"
 			subtitle: "Something new lurks in the deep."
@@ -409,6 +410,7 @@
 				""
 				"Be sure to hold a glass bottle in your off hand while doing this."
 			]
+			hide: true
 			icon: {
 				Count: 1b
 				id: "graveyard:bone_dagger"
