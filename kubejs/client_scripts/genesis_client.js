@@ -110,6 +110,8 @@ JEIEvents.hideItems(event => {
         event.hide(`createaddition:${name}`)
     })
     event.hide('mysticalagriculture:harvester')
+    event.hide('kubejs:denied_result')
+    event.hide('kubejs:removed_item')
 })
 JEIEvents.hideFluids(event => {
     MYS_FLUID_HIDE.forEach(name => {
@@ -149,6 +151,7 @@ JEIEvents.information(event => {
 ItemEvents.tooltip(event => {
     event.add(['minecraft:campfire', 'minecraft:soul_campfire'], Text.gold('Campfires can now regenerate your health. <wave>Cozy!</wave>'))
     event.add('kubejs:denied_result', Text.red('<shake>This item now has a different method or methods of crafting.</shake>'))
+    event.add('kubejs:removed_item', Text.red('<shake>This item has been removed.</shake>'))
     event.add('minecraft:fletching_table', Text.gold('Now has a purpose and can actually make arrows!'))
     // Fix provided by Reveter#1305 on latvian.dev
     event.addAdvanced('patchouli:guide_book', ((item, advanced, text) => {
