@@ -333,9 +333,10 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
+			description: ["Ancient texts say it can be acquired from an equally cryptic book that enchants items."]
 			hide: true
 			id: "7E7D888C64FD0E69"
-			subtitle: "Origins unkown, maybe from a tome of ancient knowledge?"
+			subtitle: "Origins unkown."
 			tasks: [{
 				id: "2D593506152BC546"
 				item: {
