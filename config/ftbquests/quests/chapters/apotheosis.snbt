@@ -33,7 +33,11 @@
 		}
 		{
 			dependencies: ["5D79BD5D3D87DA08"]
-			description: ["You can now use Millstones, Crushing Wheels or an Anvil to get gem dust."]
+			description: [
+				"You can now use Millstones, Crushing Wheels or an Anvil to get gem dust."
+				""
+				"Gem dust is then used for upgrading gems, reforging items, making the &9Sigil of Socketing&r to add more sockets, etc."
+			]
 			icon: "minecraft:anvil"
 			id: "7D3FA3191B051D55"
 			subtitle: "Sacrifice the stuff to get materials for the powerful stuff, got it?"
@@ -42,7 +46,7 @@
 				item: "apotheosis:gem_dust"
 				type: "item"
 			}]
-			title: "Smash your valueables..."
+			title: "Gem Dust 101 - Smash your valueables..."
 			x: 0.0d
 			y: -0.5d
 		}
@@ -50,13 +54,13 @@
 			dependencies: ["74B2239E6D835FD5"]
 			description: ["This salvages Affixed items and converts them into Rarity Materials."]
 			id: "0CC888B34808370F"
-			subtitle: "It is really important."
+			subtitle: "Make a Salvaging Table, it's important. It is really important."
 			tasks: [{
 				id: "27739486D76BF9B6"
 				item: "apotheosis:salvaging_table"
 				type: "item"
 			}]
-			title: "Make a Salvaging Table, it's important."
+			title: "Salvaging 101 - Salvaging Table"
 			x: 0.0d
 			y: 4.0d
 		}
@@ -156,7 +160,11 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			description: ["This quest tree is a work in progress and is not completely documented."]
+			description: [
+				"This quest tree is a work in progress and is not completely documented."
+				""
+				"For now, if you have the book in your possession you can give it a quick read and complete this quest node to proceed to the next."
+			]
 			hide: true
 			id: "5D79BD5D3D87DA08"
 			shape: "rsquare"
@@ -173,6 +181,7 @@
 				match_nbt: true
 				type: "item"
 			}]
+			title: "Introduction to Apotheosis - Chronicle of Shadows"
 			x: 0.0d
 			y: -2.0d
 		}
@@ -330,29 +339,38 @@
 				item: "apotheosis:reforging_table"
 				type: "item"
 			}]
-			title: "Create the Reforging Table"
+			title: "Ultimate Item Reforging - The Reforging Table"
 			x: 0.0d
 			y: 11.0d
 		}
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
 			id: "74B2239E6D835FD5"
+			subtitle: "This is used for upgrading gems."
 			tasks: [{
 				id: "4A4205C21346E6CE"
 				item: "apotheosis:gem_cutting_table"
 				type: "item"
 			}]
+			title: "Upgrading Gems 101 - Gem Cutting Table"
 			x: 0.0d
 			y: 2.5d
 		}
 		{
 			dependencies: ["411F865E038E7A2E"]
+			description: [
+				"So let's say you made a new diamond sword and want to make it even more powerful like the one you looted from the world. "
+				""
+				"The &9Simple Reforging Table&r is what you use! It is limited by what tier it can reforge items however. That's what the &6Reforging Table&r is in the next quest node."
+			]
 			id: "1189AFE0B71158E6"
+			subtitle: "This is for giving regular items Affixes."
 			tasks: [{
 				id: "3B604826BCC1040B"
 				item: "apotheosis:simple_reforging_table"
 				type: "item"
 			}]
+			title: "Reforging 101 - Simple Reforging Table"
 			x: 0.0d
 			y: 9.0d
 		}
