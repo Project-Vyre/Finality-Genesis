@@ -1,7 +1,38 @@
 // priority: 0
+// requires: create
+// requires: mysticalagriculture
+// requires: lodestone
 
-console.info('Client scripts loaded. You will see this line every time client resources reload.')
+console.info('Genesis client scripts loaded. You will see this line every time client resources reload.')
 
+let REI_CREATE_ENCASED = [
+    'andesite',
+    'brass'
+]
+let REI_CREATE_ENCHIDE = [
+    'shaft',
+    'cogwheel',
+    'large_cogwheel'
+]
+let COLORID = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
+let COLOR = {
+    black: 'Black',
+    blue: 'Blue',
+    brown: 'Brown',
+    cyan: 'Cyan',
+    gray: 'Gray',
+    green: 'Green',
+    light_blue: 'Light Blue',
+    light_gray: 'Light Gray',
+    lime: 'Lime',
+    magenta: 'Magenta',
+    orange: 'Orange',
+    pink: 'Pink',
+    purple: 'Purple',
+    red: 'Red',
+    white: 'White',
+    yellow: 'Yellow'
+}
 let MYSHIDE = [
     'rubber',
     'silicon',
@@ -98,10 +129,19 @@ let CAdditionsItems = [
     'electrum_spool',
     'digital_adapter'
 ]
-
-JEIEvents.hideItems(event => {
-    // Hide items in JEI here
-    // event.hide('minecraft:cobblestone')
+REIEvents.hide('item', event => {
+    event.hide('kubejs:denied_result')
+    event.hide('kubejs:removed_item')
+    event.hide(/^(kubejs:incomplete_).*(_singularity)$/)
+    event.hide(/^(kubejs:incomplete_).*(_mechanism)$/)
+    for (let i = 0; i < REI_CREATE_ENCASED.length; i++) {
+        for (let j = 0; j < REI_CREATE_ENCHIDE.length; j++) {
+            event.hide(`/^(create:${REI_CREATE_ENCASED[i]}_encased).*(_${REI_CREATE_ENCHIDE[j]})$/`)
+        }
+    }
+    event.hide('create:incomplete_track')
+    event.hide('create:incomplete_precision_mechanism')
+    event.hide('create:unprocessed_obsidian_sheet')
     MYSHIDE.forEach(name => {
         event.hide(`mysticalagriculture:${name}_essence`)
         event.hide(`mysticalagriculture:${name}_seeds`)
@@ -110,46 +150,144 @@ JEIEvents.hideItems(event => {
         event.hide(`createaddition:${name}`)
     })
     event.hide('mysticalagriculture:harvester')
-    event.hide('kubejs:denied_result')
-    event.hide('kubejs:removed_item')
+    event.hide('createcafe:oreo_incomplete')
+    event.hide(/^(create_central_kitchen:incomplete_).*(burger)$/)
+    event.hide(/^(create_central_kitchen:incomplete_).*(hamburger)$/)
+    event.hide(/^(create_central_kitchen:incomplete_).*(sandwich)$/)
+    event.hide(/^(create_central_kitchen:incomplete_).*(pie)$/)
+    event.hide(/^(create_central_kitchen:incomplete_).*(wrap)$/)
+    event.hide(/^(create_central_kitchen:incomplete_neapolitan_ice_cream).*$/)
+    event.hide('create_central_kitchen:incomplete_sweet_berry_cheesecake')
 })
-JEIEvents.hideFluids(event => {
+REIEvents.hide('fluid', event => {
     MYS_FLUID_HIDE.forEach(name => {
         event.hide(`mysticalagradditions:${name}`)
     })
     event.hide('createaddition:bioethanol')
 })
-JEIEvents.information(event => {
-    event.addItem('minecraft:campfire', ['Campfires now regenerate your health. Cozy!'])
-    event.addItem('minecraft:soul_campfire', ['Campfires now regenerate your health. Cozy!'])
-    event.addItem('tempad:tempad', ['Allows you to teleport to points you placed throughout the world but has a 3 minute cooldown.'])
-    event.addItem('tempad:he_who_remains_tempad', ['Can only be acquired from the End, somewhere.'])
-    event.addItem('mysticalagriculture:fertilized_essence', ['Can only be acquired from Mystical Agriculture crops upon harvesting.', 'Not a guaranteed drop!'])
-    event.addItem('cataclysm:burning_ashes', ['Used to summon Ignis.'])
-    event.addItem('minecraft:nether_star', ['If you find a deactivated and mechanical version of the Wither, give it a Nether Star.', 'Also extensively used in certain recipes.'])
-    event.addItem('cataclysm:abyssal_sacrifice', ['Required to summon the Leviathan.', 'Use on the Altar of Abyss located in the Sunken City.'])
-    event.addItem('cataclysm:abyssal_egg', ['Does not require anything special to hatch, simply place it down.', 'You will have to wait a while for the egg to hatch.'])
-    event.addItem('minecraft:ender_eye', ['There is a certain eye that can only be acquired from enchanting.', 'It is very rare, however.'])
-    event.addItem('endrem:black_eye', ['Can be found in lost treasure chests.'])
-    event.addItem('endrem:cold_eye', ['Found in igloos.'])
-    event.addItem('endrem:corrupted_eye', ['Found in Pillager Outposts.'])
-    event.addItem('endrem:lost_eye', ['Usually found in Mineshafts.'])
-    event.addItem('endrem:nether_eye', ['Found in Nether Fortresses.'])
-    event.addItem('endrem:old_eye', ['Found in Desert Pyramids.'])
-    event.addItem('endrem:rogue_eye', ['Usually found in Jungle Temples.'])
-    event.addItem('endrem:cursed_eye', ['Usually found in Bastions.'])
-    event.addItem('endrem:evil_eye', ['Usually acquired from a Master Cleric.'])
-    event.addItem('endrem:guardian_eye', ['Usually acquired from slaying Elder Guardians.'])
-    event.addItem('endrem:magical_eye', ['Acquired from slaying Evokers.'])
-    event.addItem('endrem:wither_eye', ['Obviously only drops from the Wither.'])
-    event.addItem('endrem:witch_eye', ['Requires a Witch Pupil to craft.'])
-    event.addItem('endrem:undead_eye', ['Requires a skeleton horse to be slain in order to acquire the Undead Soul.'])
-    event.addItem('endrem:undead_soul', ['Acquired from slaying a skeleton horse.'])
-    event.addItem('endrem:exotic_eye', ['Created by combining multiple exotic ingredients using a Crafting Core.'])
-    event.addItem('obscure_api:astral_dust', ['Used in making a special chestpiece. Can only be found in Frozen Chests.'])
+REIEvents.information(event => {
+    event.addItem('minecraft:campfire', 'New Functionality', ['Campfires now regenerate your health. <wave>Cozy!</wave>'])
+    event.addItem('minecraft:soul_campfire', 'New Functionality', ['Campfires now regenerate your health. <wave>Cozy!</wave>'])
+    event.addItem('tempad:tempad', 'Usage', ['Allows you to teleport to points you placed throughout the world but has a 3 minute cooldown.'])
+    event.addItem('tempad:he_who_remains_tempad', 'Acquisition Method', ['Can only be acquired from the End, somewhere.'])
+    event.addItem('mysticalagriculture:fertilized_essence', 'Acquisition', [
+        'Can only be acquired from Mystical Agriculture crops upon harvesting.',
+        'Not a guaranteed drop!'
+    ])
+    event.addItem('cataclysm:burning_ashes', 'Usage', ['Used to summon Ignis.'])
+    event.addItem('minecraft:nether_star', 'Additional Usage', [
+        'If you find a deactivated and mechanical version of the Wither, give it a Nether Star.',
+        'Also extensively used in certain recipes.'
+    ])
+    event.addItem('cataclysm:abyssal_sacrifice', 'Usage', [
+        'Required to summon the Leviathan.',
+        'Use on the Altar of Abyss located in the Sunken City.'
+    ])
+    event.addItem('cataclysm:abyssal_egg', 'Information', [
+        'Does not require anything special to hatch, simply place it down.',
+        'You will have to wait a while for the egg to hatch.'
+    ])
+    event.addItem('minecraft:ender_eye', 'Acquisition', [
+        'There is a certain eye that can only be acquired from enchanting.',
+        'It is very rare, however.'
+    ])
+    event.addItem('endrem:black_eye', 'Acquisition', ['Can be found in lost treasure chests.'])
+    event.addItem('endrem:cold_eye', 'Acquisition', ['Found in igloos.'])
+    event.addItem('endrem:corrupted_eye', 'Acquisition', ['Found in Pillager Outposts.'])
+    event.addItem('endrem:lost_eye', 'Acquisition', ['Usually found in Mineshafts.'])
+    event.addItem('endrem:nether_eye', 'Acquisition', ['Found in Nether Fortresses.'])
+    event.addItem('endrem:old_eye', 'Acquisition', ['Found in Desert Pyramids.'])
+    event.addItem('endrem:rogue_eye', 'Acquisition', ['Usually found in Jungle Temples.'])
+    event.addItem('endrem:cursed_eye', 'Acquisition', ['Usually found in Bastions.'])
+    event.addItem('endrem:evil_eye', 'Acquisition', ['Usually acquired from a Master Cleric.'])
+    event.addItem('endrem:guardian_eye', 'Acquisition', ['Usually acquired from slaying Elder Guardians.'])
+    event.addItem('endrem:magical_eye', 'Acquisition', ['Acquired from slaying Evokers.'])
+    event.addItem('endrem:wither_eye', 'Acquisition', ['Obviously only drops from the Wither.'])
+    event.addItem('endrem:witch_eye', 'Acquisition', ['Requires a Witch Pupil to craft.'])
+    event.addItem('endrem:undead_eye', 'Acquisition', ['Requires a skeleton horse to be slain in order to acquire the Undead Soul.'])
+    event.addItem('endrem:undead_soul', 'Acquisition', ['Acquired from slaying a skeleton horse.'])
+    event.addItem('endrem:exotic_eye', 'Acquisition', ['Created by combining multiple exotic ingredients using a Crafting Core.'])
+    event.addItem('obscure_api:astral_dust', 'Acquisition', ['Used in making a special chestpiece. Can only be found in Frozen Chests.'])
+})
+
+REIEvents.groupEntries(event => {
+    event.groupItems('kubejs:rei_groups/wrenches', 'Wrenches', [
+        'create:wrench',
+        'supplementaries:wrench',
+        'red_power:wrench',
+        'red_power:creative_wrench',
+        'ad_astra:wrench'
+    ])
+    //event.groupItems('kubejs:rei_groups/concrete_singularities', 'Concrete Singularities', [
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_black"}'),
+    //    Item.of('extendedcrafting:')
+    //])
+    event.groupItems('minecraft:rei_groups/minecraft_concrete', 'Minecraft Concrete', [/^(minecraft:).*(concrete)$/])
+    event.groupItems('minecraft:rei_groups/minecraft_concrete_powder', 'Minecraft Concrete Powder', [/^(minecraft:).*(concrete_powder)$/])
+    event.groupItems('minecraft:rei_groups/minecraft_terracotta', 'Minecraft Terracotta', [
+        'minecraft:terracotta',
+        'minecraft:black_terracotta',
+        'minecraft:blue_terracotta',
+        'minecraft:brown_terracotta',
+        'minecraft:cyan_terracotta',
+        'minecraft:gray_terracotta',
+        'minecraft:green_terracotta',
+        'minecraft:light_blue_terracotta',
+        'minecraft:light_gray_terracotta',
+        'minecraft:lime_terracotta',
+        'minecraft:magenta_terracotta',
+        'minecraft:orange_terracotta',
+        'minecraft:pink_terracotta',
+        'minecraft:purple_terracotta',
+        'minecraft:red_terracotta',
+        'minecraft:white_terracotta',
+        'minecraft:yellow_terracotta'
+    ])
+    event.groupItems('minecraft:rei_groups/minecraft_glazed_terracotta', 'Minecraft Glazed Terracotta', [
+        'minecraft:black_glazed_terracotta',
+        'minecraft:blue_glazed_terracotta',
+        'minecraft:brown_glazed_terracotta',
+        'minecraft:cyan_glazed_terracotta',
+        'minecraft:gray_glazed_terracotta',
+        'minecraft:green_glazed_terracotta',
+        'minecraft:light_blue_glazed_terracotta',
+        'minecraft:light_gray_glazed_terracotta',
+        'minecraft:lime_glazed_terracotta',
+        'minecraft:magenta_glazed_terracotta',
+        'minecraft:orange_glazed_terracotta',
+        'minecraft:pink_glazed_terracotta',
+        'minecraft:purple_glazed_terracotta',
+        'minecraft:red_glazed_terracotta',
+        'minecraft:white_glazed_terracotta',
+        'minecraft:yellow_glazed_terracotta'
+    ])
+    event.groupItemsByTag('minecraft:rei_grups/shulker_boxes', 'Shulker Boxes', 'minecraft:shulker_boxes')
+    event.groupItems('chipped:rei_groups/chipped_concrete', 'Chipped Concrete Blocks', [/^(chipped:).*(concrete).*$/])
+    //event.groupSameItem('kubejs:rei_groups/concrete_singularities', `Concrete Singularities`, [
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_black"}').weakNBT(),
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_blue"}').weakNBT(),
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_brown"}').weakNBT(),
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_cyan"}').weakNBT(),
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_gray"}').weakNBT(),
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_green"}').weakNBT(),
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_light_blue"}').weakNBT(),
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_light_gray"}').weakNBT(),
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_lime"}').weakNBT(),
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_magenta"}').weakNBT(),
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_orange"}').weakNBT(),
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_pink"}').weakNBT(),
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_purple"}').weakNBT(),
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_red}').weakNBT(),
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_white"}').weakNBT(),
+    //    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_yellow"}').weakNBT()
+    //])
+    Object.keys(COLOR).forEach(color => {
+        event.groupItemsByTag(`chipped:rei_groups/${color}_concrete`, `Chipped ${COLOR[color]} Concrete`, `chipped:${color}_concrete`)
+    })
 })
 ItemEvents.tooltip(event => {
-    event.add(['minecraft:campfire', 'minecraft:soul_campfire'], Text.gold('Campfires can now regenerate your health. <wave>Cozy!</wave>'))
+    event.add('minecraft:campfire', Text.gold('Campfires can now regenerate your health. <wave>Cozy!</wave>'))
+    event.add('minecraft:soul_campfire', Text.aqua('Soul Campfires can now regenerate your health. <wave>Cozy!</wave>'))
     event.add('kubejs:denied_result', Text.red('<shake>This item now has a different method or methods of crafting.</shake>'))
     event.add('kubejs:removed_item', Text.red('<shake>This item has been removed.</shake>'))
     event.add('minecraft:fletching_table', Text.gold('Now has a purpose and can actually make arrows!'))
