@@ -120,6 +120,11 @@ StartupEvents.registry('block', event => {
             .resistance(1000)
             .lightLevel(1.0)
             .requiresTool(true)
+            .tagBlock('minecraft:wither_immune')
+            .tagBlock('minecraft:dragon_immune')
+            .tagBlock('minecraft:mineable/pickaxe')
+            .tagBlock('forge:needs_netherite_tool')
+            .tagItem('kubejs:command_blocks')
     })
 })
 StartupEvents.registry('fluid', event => {
