@@ -91,9 +91,21 @@
 					type: "item"
 				}
 			]
-			title: "Salads"
+			title: "The Salad Bar"
 			x: -1.5d
 			y: 2.0d
+		}
+		{
+			dependencies: ["3A93D1DBD84B9F94"]
+			id: "79A0F31208BE2DCD"
+			tasks: [{
+				id: "335F05D990A33848"
+				item: "farmersdelight:organic_compost"
+				type: "item"
+			}]
+			title: "Composting 101"
+			x: 0.0d
+			y: -2.0d
 		}
 	]
 	subtitle: [
