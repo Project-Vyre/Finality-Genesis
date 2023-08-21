@@ -35,10 +35,11 @@
 				""
 				"This modpack is not complete, but the end goal is reachable."
 				""
-				"Tips for using &aRoughly Enough Items&r are on the next page, with &eLootr&r chest info on the page after. Just don't say I didn't warn you if your Lootr chest blows up."
+				"Tips for using &7Roughly Enough Items&r and &2JEI&r are on the next page. &eLootr&r chest info is on the following page. Just don't say I didn't warn you if your Lootr chest blows up."
 				""
 				"{@pagebreak}"
-				"&2REI&r &aTips&r"
+				"&l&7Roughly Enough Items / REI&r &l&aTips and Tricks&r"
+				"There's a lot of things to unpack here. Don't forget to scroll!"
 				""
 				"- &bLeft clicking&r items shows how to get them, with all the methods shown at the top of the recipe viewing window where all those tabs are."
 				""
@@ -54,16 +55,35 @@
 				""
 				"- To search by tags, use &b$&r then type the item tag you want to look up. Examples: &b$wood&r or &b$minecraft:planks&r"
 				""
-				"Additional REI hotkey combos are on the next page."
+				"- You can &l&bclick and drag&r recipes to the top left region that is highlighted with segmented lines and save them in a sequence to prepare for a long recipe tree. You can then scroll through them while your cursor is in the region. To &l&cremove&r saved recipes, drag them to the bottom left region that is highlighted."
+				""
+				"More REI tips are on the next page."
 				""
 				"{@pagebreak}"
-				"&2REI&r &aTips (Continued)&r"
+				"&l&7REI&r &l&aTips and Tricks&r &a(continued)&r"
+				""
+				"- You can click and drag items to the top left area or press A to bookmark individual items."
 				""
 				"- Press A while hovering your cursor on an item to put it in the bookmarks area."
 				""
 				"- Press R while hovering your cursor on an item to see recipes on how to make it."
 				""
 				"- Press U while hovering your cursor on an item to see where the item is used."
+				""
+				"{@pagebreak}"
+				"&aJEI Tips and Tricks&r"
+				""
+				"- &bLeft clicking&r items shows how to get them, with all the methods shown at the top of the recipe viewing window where all those tabs are."
+				""
+				"- &3Right clicking&r items shows all the recipes that the item is used in."
+				""
+				"- &l&9Fluids&r&r in the recipe viewing area can be &bleft clicked&r to find out how to make them. This especially applies to filling by Create's Spout recipes."
+				""
+				"- Press &dCtrl + F&r to focus the search bar then start typing. "
+				""
+				"- If you want to clear the search bar instantly, do &cCtrl + A&r then press &cBackspace&r."
+				""
+				"- To search by mod, use &d@&r then type the modid of that mod. Examples: &d@create&r or &d@createaddition&r or &d@extendedcrafting&r"
 				""
 				"Tips regarding &eLootr&r chests on the next page:"
 				""
@@ -118,7 +138,7 @@
 					type: "item"
 				}
 			]
-			title: "Hi! Welcome to Finality."
+			title: "Introduction Node - Hi! Welcome to Finality."
 			x: 0.0d
 			y: 0.0d
 		}
@@ -278,7 +298,7 @@
 				""
 				"If you still find yourself running out of string or wool, gather &2flax seeds&r and plant them. &aFlax&r can then be refined with a &6Millstone&r to get additional string and seeds."
 				""
-				"This process can then be automated with Create and its &7Mechanical Harvesters&r."
+				"This process can then be automated with &6Create&r and its &7Mechanical Harvesters&r."
 			]
 			hide: true
 			icon: "extendedcrafting:handheld_table"
@@ -530,6 +550,11 @@
 					item: "create_mechanical_extruder:mechanical_extruder"
 					type: "item"
 				}
+				{
+					id: "5F5F07011AFB9FDF"
+					item: "echochest:echo_chest"
+					type: "item"
+				}
 			]
 			title: "Convenient Utilities Ch.3"
 			x: -3.0d
@@ -741,11 +766,18 @@
 			dependencies: ["13186E7B0D6B6115"]
 			icon: "minecraft:compass"
 			id: "650B5FD6B6CAD69C"
-			rewards: [{
-				id: "5550D0D6DDAF20F5"
-				type: "xp_levels"
-				xp_levels: 30
-			}]
+			rewards: [
+				{
+					id: "5550D0D6DDAF20F5"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					id: "0D1D658A5E8614B7"
+					item: "artifacts:mimic_spawn_egg"
+					type: "item"
+				}
+			]
 			shape: "rsquare"
 			subtitle: "For both explorers and those who seek a certain biome."
 			tasks: [

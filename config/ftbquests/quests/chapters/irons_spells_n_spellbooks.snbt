@@ -1,0 +1,34 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "irons_spells_n_spellbooks"
+	group: "6855847200ADBE3A"
+	icon: {
+		Count: 1b
+		id: "irons_spellbooks:archevoker_chestplate"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "251F07C724E52052"
+	order_index: 3
+	quest_links: [ ]
+	quests: [{
+		id: "00F0CF7B2B22C2FA"
+		tasks: [{
+			id: "3576E88074C8D715"
+			item: {
+				Count: 1b
+				id: "patchouli:guide_book"
+				tag: {
+					"patchouli:book": "irons_spellbooks:iss_guide_book"
+				}
+			}
+			type: "item"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	subtitle: ["Powerful arcane magic! Quest tree is currently a work in progress."]
+	title: "Iron's Spells n' Spellbooks"
+}

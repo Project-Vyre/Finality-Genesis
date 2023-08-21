@@ -5,7 +5,7 @@
 	group: "2B2D0B6DE31DE8D3"
 	icon: "farmersdelight:cabbage_crate"
 	id: "2FD109D9011BFAE5"
-	order_index: 1
+	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{

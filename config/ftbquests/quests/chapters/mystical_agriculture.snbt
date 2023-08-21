@@ -70,7 +70,7 @@
 		{
 			dependencies: ["3ED54EFC2FC65E99"]
 			description: [
-				"Please craft the Mystical Agriculture Guide Book. The documentation is extensive."
+				"Please craft the Mystical Agriculture Guide Book. The documentation within is extensive."
 				""
 				"Also, for each tier of essence there are armor pieces and tools for that same tier."
 				""
@@ -357,6 +357,17 @@
 				"You will need to make a special Infusion Fluid to create this very special item."
 				""
 				"Once you mix the ingredients together in a Basin, use a Spout to pour the fluid onto a diamond to make the basic Infusion Crystal."
+				""
+				"Remember that all the tiers have names."
+				""
+				"&7Tier 1 - Inferium&r"
+				"&aTier 2 - Prudentium&r"
+				"&6Tier 3 - Tertium&r"
+				"&bTier 4 - Imperium&r"
+				"&cTier 5 - Supremium and Awakened Supremium&r"
+				"&5Tier 6 - Insanium&r"
+				""
+				"All tiers except &5Insanium&r have their own tools, armor, growth accelerators, etc."
 			]
 			id: "3CCEE62A9B6D8F1E"
 			rewards: [
@@ -383,7 +394,7 @@
 				}
 				type: "item"
 			}]
-			title: "The Infusion Crystal"
+			title: "A Crystalline Infinity - The Infusion Crystal"
 			x: 0.0d
 			y: 3.5d
 		}

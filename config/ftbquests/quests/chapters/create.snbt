@@ -3591,6 +3591,7 @@
 				"6D8C28D34ABF7636"
 				"1406D000426425FC"
 			]
+			hide: true
 			hide_dependency_lines: false
 			id: "1BC189AE6AA14C57"
 			rewards: [
@@ -3736,6 +3737,95 @@
 			title: "Basic Rotational Force - The Humble Hand Crank"
 			x: -1.0d
 			y: -5.0d
+		}
+		{
+			dependencies: ["400260FDC774443B"]
+			id: "02ADC2412F6B6238"
+			subtitle: "Not your ordinary fertilizer!"
+			tasks: [{
+				id: "72A297B630BAB38A"
+				item: "create:tree_fertilizer"
+				type: "item"
+			}]
+			title: "Create Utilities - Tree Fertilizer"
+			x: 8.5d
+			y: -9.0d
+		}
+		{
+			dependencies: ["2E4CFF3F7A4508AB"]
+			description: [
+				"Blaze Cakes are multi-purpose. They are only used for feeding your Blaze Burners so they can go into a &bsuperheated&r state."
+				""
+				"What are &bsuperheated&r Blaze Burners used for?"
+				""
+				"- Unlocking new &o&2compacting&r and &o&2mixing&r recipes that involve the &7Basin&r."
+				""
+				"- Providing more heat to your &7Steam Boiler&r so it can support powering 18 &6Steam Engines&r in total."
+				""
+				"You can right click the &eBlaze Cake&r item in the items entry to see all the recipes that require a &bsuperheated&r Blaze Burner."
+				""
+				"At this point of progression, you are expected to be able to automate this fully. Helpful advice is on the next page."
+				""
+				"{@pagebreak}"
+				"Step 1: Automate egg collection from chickens as well as sugar production from sugar cane. Sugar can be refined by &eMillstones&r and &eCrushing Wheels&r for significantly better yields!"
+				""
+				"Step 2: Automate &4Cinder Flour&r production either from a Nether drill quarry or making Netherrack with a Spout containing &cHealing II&r. Automating Healing II potion creation might be quite a trip!"
+				""
+				"Step 3: Automate Lava collection. You can either do this with a Nether train system as you can easily find a lava lake that can satisfy the Bottomless Supply requirement of 10,000 source blocks. Use a &6Hose Pulley&r and start extracting while looking at it with &eEngineer's Goggles&r to verify this."
+			]
+			id: "2B16FED43886A343"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "6CD598827ADFEDF6"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "63B08A04146E6A74"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "Blaze Cakes are very useful!"
+			tasks: [
+				{
+					id: "2C72D5575EBD1B6B"
+					item: "create:cinder_flour"
+					type: "item"
+				}
+				{
+					count: 256L
+					id: "5016DDD97DAC93A0"
+					item: "create:blaze_cake_base"
+					type: "item"
+				}
+				{
+					count: 256L
+					id: "69D9530C09EA31C1"
+					item: "create:blaze_cake"
+					type: "item"
+				}
+			]
+			title: "Create Utilities - Blaze Cakes"
+			x: 17.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["1BC189AE6AA14C57"]
+			description: ["It might be a ticking time bomb, maaaaaybe."]
+			hide: true
+			hide_dependency_lines: true
+			id: "38298E81AD5B2875"
+			subtitle: "Totally nothing wrong with it!"
+			tasks: [{
+				id: "601475922D1EA63F"
+				item: "create:mysterious_cuckoo_clock"
+				type: "item"
+			}]
+			title: "The Other Cuckoo Clock"
+			x: 0.0d
+			y: -11.0d
 		}
 	]
 	subtitle: [
