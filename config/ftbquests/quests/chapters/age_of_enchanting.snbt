@@ -39,13 +39,15 @@
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
 			description: [
-				"With Create Enchantment Industry you can:"
+				"&l&4<wiggle><shake>Remember to hold [w] to Ponder...</shake></wiggle>&r"
+				""
+				"With &aCreate Enchantment Industry&r you can:"
 				""
 				"- Automate enchanting"
 				"- Store your experience in Fluid Tanks"
 				"- Get experience from disenchanting tools with the Disenchanter"
 				""
-				"Deployers are also now able to produce Experience Nuggets when a mob is killed!"
+				"Deployers are also now able to produce Experience Nuggets when a mob is killed! Please keep in mind that this is a feature of Create Enchantment Industries and not base Create without any addons."
 			]
 			id: "405F80F5E78FF024"
 			subtitle: "Automated enchanting, disenchanting and mob farms with Deployers and more!"
