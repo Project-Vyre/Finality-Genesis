@@ -1,3 +1,10 @@
+if (Platform.isLoaded('autumnity')) {
+    ItemEvents.tooltip(event => {
+        event.add('autumnity:sappy_maple_log', Text.gray('Right click with a glass bottle to extract sap.'))
+        event.add('autumnity:sappy_maple_wood', Text.gray('Right click with a glass bottle to extract sap.'))
+    })
+}
+
 if (Platform.isLoaded('backpacked')) {
     ItemEvents.tooltip(event => {
         event.addAdvanced('backpacked:backpack', (item, advanced, text) => {
