@@ -1,0 +1,16 @@
+{
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "create"
+        }
+    ],
+    "title": {
+        "text": "Create Tip",
+        "bold": true,
+        "color": "gold"
+  },
+  "tip": {
+    "text": "Wrenches can shorten already placed Mechanical Belts! Simply right click on one of the ends of the belt. DO NOT PRESS SHIFT while doing this!"
+  }
+}
