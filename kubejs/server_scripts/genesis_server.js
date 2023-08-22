@@ -2,6 +2,8 @@
 // requires: kubejs
 // requires: create
 // requires: supplementaries
+// requires: lodestone
+// requires: salt
 
 console.info('Implementing Finality recipes and compats...')
 
@@ -29,8 +31,6 @@ let CURSEDRECIPES = [
     'gold_ingot_from_blasting_gold_ore',
     'gold_ingot_from_smelting_deepslate_gold_ore',
     'gold_ingot_from_blasting_deepslate_gold_ore',
-    'gold_ingot_from_smelting_nether_gold_ore',
-    'gold_ingot_from_blasting_nether_gold_ore'
 ]
 let MODRECIPES = [
     'createaddition:mixing/netherrack',
@@ -39,12 +39,7 @@ let MODRECIPES = [
     'createaddition:rolling/gold_ingot',
     'createaddition:rolling/brass_ingot'
 ]
-let CMD = [
-    'command_block',
-    'chain_command_block',
-    'repeating_command_block'
-]
-
+let COLORID = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 ServerEvents.recipes(event => {
     FOUNDATION_NONMETAL.forEach(insert => { // why can you even smelt and blast these ores? YOU LITERALLY LOSE SO MUCH!
         event.remove([
@@ -356,6 +351,9 @@ ServerEvents.recipes(event => {
         '18x minecraft:gold_nugget',
         Fluid.of('minecraft:lava', 250)
     ]).id('finality:nether_gold_ore_deco') // Thank you to FunnyMan4579 on the official Create Discord for giving me this idea :3
+    event.recipes.createMixing('salt:salt', [
+        Fluid.of('minecraft:water', 1000)
+    ]).heated().id('finality:create_salt_compat')
     // supplementaries related
     event.shaped('supplementaries:quiver', [
         'RRL',
@@ -373,17 +371,13 @@ ServerEvents.recipes(event => {
 })
 
 ServerEvents.tags('item', event => {
-    CMD.forEach(insert => {
-        event.add('kubejs:command_blocks', `kubejs:${insert}`)
-    })
+    //COLORID.forEach(color => {
+    //    event.add('kubejs:concrete_singularities', Item.of('extendedcrafting:singularity', `{Id:"extendedcrafting:concrete_${color}"}`).weakNBT())
+    //})
 })
+
 ServerEvents.tags('block', event => {
-    CMD.forEach(insert => {
-        event.add('minecraft:wither_immune', `kubejs:${insert}`)
-        event.add('minecraft:dragon_immune', `kubejs:${insert}`)
-        event.add('minecraft:mineable/pickaxe', `kubejs:${insert}`)
-        event.add('forge:needs_netherite_tool', `kubejs:${insert}`)
-    })
+
 })
 
 PlayerEvents.loggedIn(event => {
@@ -447,7 +441,9 @@ const set = {
         }
     ]
 }
+
 const sets = [set];
+
 PlayerEvents.tick(check => {
     const { headArmorItem, chestArmorItem, legsArmorItem, feetArmorItem } = check.player;
     if (check.player.level.time % 100 == 0) {
@@ -511,6 +507,8 @@ LootJS.modifiers((event) => {
         event.addBlockLootModifier(`minecraft:${metal}_ore`).randomChance(0.2).addLoot(`minecraft:raw_${metal}`)
         event.addBlockLootModifier(`minecraft:deepslate_${metal}_ore`).randomChance(0.3).addLoot(`minecraft:raw_${metal}`)
     })
+    event.addBlockLootModifier('create:zinc_ore').randomChance(0.2).addLoot('create:raw_zinc')
+    event.addBlockLootModifier('create:deepslate_zinc_ore').randomChance(0.3).addLoot('create:raw_zinc')
     event.addLootTypeModifier(LootType.CHEST).removeLoot('minecraft:bucket')
 });
 
@@ -524,4 +522,37 @@ LevelEvents.afterExplosion(event => {
             entity.sendData('screenshake', { i1: distance * 0.6, i2: distance, i3: distance * 0.2, duration: 15 })
         }
     })
+})
+
+let BLACKLIST = {
+    ae2: 'Applied Energistics 2',
+    create_jetpack: 'Create Jetpack',
+    create_sa: 'Create Stuff and Additions',
+    create_confectionery: 'Create Confectionery',
+    create_things_and_misc: 'Create: Things and Misc',
+    creategoggles: 'Create Goggles',
+    createsifter: 'Create Sifting',
+    extendedgears: 'Create: Extended Cogwheels',
+    alloyed: 'Create: Alloyed',
+    createendertransmission: 'Create: Ender Transmission',
+    create_compressed: 'Create: Compressed',
+    mekanism: 'Mekanism',
+    immersiveengineering: 'Immersive Engineering',
+    ftbultimine: 'FTB Ultimine',
+    unusualend: 'Unusual End',
+    hammerlib: 'HammerLib',
+    solarflux: 'Solar Flux Reborn',
+    twilightforest: 'Twilight Forest'
+}
+
+Object.keys(BLACKLIST).forEach(modid => {
+    if (Platform.isLoaded(`${modid}`)) {
+        ServerEvents.recipes(event => {
+            event.remove({})
+        })
+        console.warn(`${BLACKLIST[modid]} has been detected, please remove it from the modpack.`)
+        PlayerEvents.loggedIn(event => {
+            event.server.tell(`${BLACKLIST[modid]} has been detected, please remove it from the modpack.`)
+        })
+    }
 })
