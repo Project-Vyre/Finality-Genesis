@@ -1,44 +1,123 @@
 // requires: roughlyenoughitems
+// requires: roughlyenoughresources
+// requires: roughlyenoughprofessions
 
-let REI_CREATE_ENCASED = [
-    'andesite',
-    'brass'
-]
-let REI_CREATE_ENCHIDE = [
-    'shaft',
-    'cogwheel',
-    'large_cogwheel'
-]
-let REI_CREATE_COMPAT_ORES = [
-    'osmium',
-    'platinum',
-    'silver',
-    'tin',
-    'lead',
-    'quicksilver',
+let COLOR = {
+    black: 'Black',
+    blue: 'Blue',
+    brown: 'Brown',
+    cyan: 'Cyan',
+    gray: 'Gray',
+    green: 'Green',
+    light_blue: 'Light Blue',
+    light_gray: 'Light Gray',
+    lime: 'Lime',
+    magenta: 'Magenta',
+    orange: 'Orange',
+    pink: 'Pink',
+    purple: 'Purple',
+    red: 'Red',
+    white: 'White',
+    yellow: 'Yellow'
+}
+let MYSHIDE = [
+    'rubber',
+    'silicon',
+    'sulfer',
     'aluminum',
+    'saltpeter',
+    'apatite',
+    'marble',
+    'menril',
+    'tin',
+    'bronze',
+    'silver',
+    'graphite',
+    'blizz',
+    'blitz',
+    'basalz',
+    'slimesteel',
+    'pig_iron',
+    'manasteel',
+    'steeleaf',
+    'sapphire',
+    'ruby',
     'uranium',
-    'nickel'
+    'tungsten',
+    'titanium',
+    'steel',
+    'platinum',
+    'nickel',
+    'mithril',
+    'iridium',
+    'invar',
+    'electrum',
+    'constantan',
+    'chrome',
+    'certus_quartz',
+    'sky_stone',
+    'aquamarine',
+    'ironwood',
+    'quartz_enriched_iron',
+    'signalum',
+    'lumium',
+    'hop_graphite',
+    'cobalt',
+    'rose_gold',
+    'elementium',
+    'osmium',
+    'fluorite',
+    'refined_glowstone',
+    'refined_obsidian',
+    'knightmetal',
+    'fiery_ingot',
+    'starmetal',
+    'compressed_iron',
+    'fluix',
+    'energized_steel',
+    'blazing_crystal',
+    'enderium',
+    'manyullyn',
+    'queens_slime',
+    'hepatizon',
+    'terrasteel',
+    'rock_crystal',
+    'draconium',
+    'yellorium',
+    'cyanite',
+    'niotic_crystal',
+    'spirited_crystal',
+    'uraninite',
+    'gaia_spirit',
+    'awakened_draconium',
+    'neutronium',
+    'nitro_crystal',
+    'sulfur',
+    'lead'
 ]
+let MYS_FLUID_HIDE = [
+    'molten_inferium',
+    'molten_prudentium',
+    'molten_tertium',
+    'molten_imperium',
+    'molten_supremium',
+    'molten_soulium'
+]
+let CAdditionsItems = [
+    'straw',
+    'bioethanol_bucket',
+    'gold_rod',
+    'brass_rod',
+    'electrum_rod',
+    'electrum_ingot',
+    'electrum_sheet',
+    'electrum_nugget',
+    'electrum_wire',
+    'electrum_spool',
+    'digital_adapter'
+]
+
 REIEvents.hide('item', event => {
-    event.hide('kubejs:denied_result')
-    event.hide('kubejs:removed_item')
-    event.hide(/^(kubejs:incomplete_).*(_singularity)$/)
-    event.hide(/^(kubejs:incomplete_).*(_mechanism)$/)
-    for (let i = 0; i < REI_CREATE_ENCASED.length; i++) {
-        for (let j = 0; j < REI_CREATE_ENCHIDE.length; j++) {
-            event.hide(`/^(create:${REI_CREATE_ENCASED[i]}_encased).*(_${REI_CREATE_ENCHIDE[j]})$/`)
-        }
-    }
-    event.hide('create:copper_backtank_placeable')
-    event.hide('create:netherite_backtank_placeable')
-    event.hide('create:incomplete_track')
-    event.hide('create:incomplete_precision_mechanism')
-    event.hide('create:unprocessed_obsidian_sheet')
-    event.hide('create:schematic')
-    REI_CREATE_COMPAT_ORES.forEach(ore => {
-        event.hide(`create:crushed_raw_${ore}`)
-    })
     MYSHIDE.forEach(name => {
         event.hide(`mysticalagriculture:${name}_essence`)
         event.hide(`mysticalagriculture:${name}_seeds`)
@@ -47,17 +126,6 @@ REIEvents.hide('item', event => {
         event.hide(`createaddition:${name}`)
     })
     event.hide('mysticalagriculture:harvester')
-    event.hide('createcafe:oreo_incomplete')
-    event.hide(/^(create_central_kitchen:incomplete_).*(burger)$/)
-    event.hide(/^(create_central_kitchen:incomplete_).*(hamburger)$/)
-    event.hide(/^(create_central_kitchen:incomplete_).*(sandwich)$/)
-    event.hide(/^(create_central_kitchen:incomplete_).*(pie)$/)
-    event.hide(/^(create_central_kitchen:incomplete_).*(wrap)$/)
-    event.hide(/^(create_central_kitchen:incomplete_neapolitan_ice_cream).*$/)
-    event.hide('create_central_kitchen:incomplete_sweet_berry_cheesecake')
-    // developer tools hidden
-    event.hide(/^(citadel:).*$/)
-    event.hide('decorative_blocks:blockstate_copy_item')
 })
 
 REIEvents.hide('fluid', event => {
