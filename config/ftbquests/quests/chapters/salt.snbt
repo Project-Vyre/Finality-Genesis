@@ -1,0 +1,25 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "salt"
+	group: "2B2D0B6DE31DE8D3"
+	icon: "salt:salt"
+	id: "4591AE12FA394A76"
+	order_index: 5
+	quest_links: [ ]
+	quests: [{
+		description: ["Simply acquire some salt then combine it with a food item in your crafting grid to salt said food item."]
+		id: "3F6CCC653350CC37"
+		subtitle: "Salting food has benefits!"
+		tasks: [{
+			id: "5A70549A597A5CAC"
+			item: "salt:salt"
+			type: "item"
+		}]
+		title: "Introducing Salt"
+		x: 0.0d
+		y: 0.0d
+	}]
+	subtitle: ["It's literally just salt."]
+	title: "Salt"
+}
