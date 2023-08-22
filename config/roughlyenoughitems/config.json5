@@ -99,9 +99,9 @@
 			"compositeScrollBarPermanent": false,
 			"toastDisplayedOnCopyIdentifier": true,
 			// Declares whether REI should use compact tabs for categories.
-			"useCompactTabs": true,
+			"useCompactTabs": false,
 			// Declares whether REI should use compact tab buttons for categories.
-			"useCompactTabButtons": true
+			"useCompactTabButtons": false
 		},
 		"search": {
 			// Declares whether search time should be debugged.
