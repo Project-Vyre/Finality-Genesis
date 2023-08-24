@@ -1538,7 +1538,7 @@
 	"Soul Candles" = true
 	"Microcrafting Helper" = true
 	"Long Range Pick Block" = true
-	"Improved Tooltips" = true
+	"Improved Tooltips" = false
 	"Greener Grass" = true
 	"Elytra Indicator" = true
 	"Chest Searching" = true
