@@ -1,12 +1,15 @@
 // requires: enderchests
 // requires: endertanks
+// requires: extendedcrafting
 
 ServerEvents.recipes(event => {
-    event.remove({id: 'enderchests:ender_bag'})
-    event.remove({id: 'endertanks:bucket'})
-    event.remove({id: 'enderchests:ender_chest'})
-    event.remove({id: 'enderchests:ender_pouch'})
-    event.remove({id: 'endertanks:tank'})
+    event.remove([
+        'enderchests:ender_bag',
+        'enderchests:ender_chest',
+        'enderchests:ender_pouch',
+        'endertanks:bucket',
+        'endertanks:tank'
+    ])
     // ender bag
     event.shaped('enderchests:ender_bag', [
         'AWA',

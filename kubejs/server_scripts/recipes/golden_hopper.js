@@ -1,4 +1,5 @@
 // requires: goldenhopper
+// requires: create
 
 ServerEvents.recipes(event => {
     event.remove({ id: 'goldenhopper:golden_hopper' })

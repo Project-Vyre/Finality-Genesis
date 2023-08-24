@@ -1,5 +1,6 @@
 // requires: mysticalagriculture
 // requires: mysticalagradditions
+// requires: create
 
 ServerEvents.recipes(event => {
     // infusion essence

@@ -1,3 +1,6 @@
+// requires: constructionwand
+// requires: create
+
 ServerEvents.recipes(event => {
     event.remove({id: 'constructionwand:infinity_wand'})
     event.remove({id: 'constructionwand:diamond_wand'})

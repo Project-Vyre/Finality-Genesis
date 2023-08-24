@@ -1,4 +1,5 @@
 // priority: 0
+// requires: kubejs_create
 // requires: create
 // requires: cataclysm
 

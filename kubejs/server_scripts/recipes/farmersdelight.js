@@ -1,4 +1,5 @@
 // requires: farmersdelight
+// requires: create
 
 ServerEvents.recipes(event => {
     event.shaped('farmersdelight:skillet', [
