@@ -6,9 +6,6 @@ de.keksuccino.drippyloadingscreen.customization.DrippyOverlayScreen {
 net.minecraft.client.gui.screens.worldselection.SelectWorldScreen {
 }
 
-net.minecraft.client.gui.screens.TitleScreen {
-}
-
 net.minecraft.client.gui.screens.multiplayer.SafetyScreen {
 }
 
@@ -70,5 +67,8 @@ net.minecraft.client.gui.screens.worldselection.EditWorldScreen {
 }
 
 net.minecraft.client.gui.screens.EditServerScreen {
+}
+
+net.minecraft.client.gui.screens.TitleScreen {
 }
 
