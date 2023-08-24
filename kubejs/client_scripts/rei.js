@@ -133,7 +133,6 @@ REIEvents.hide('fluid', event => {
         event.hide(`mysticalagradditions:${name}`)
     })
     event.hide('createaddition:bioethanol')
-    event.hide('biomesoplenty:blood')
 })
 
 REIEvents.information(event => {
@@ -250,6 +249,128 @@ REIEvents.groupEntries(event => {
         'minecraft:yellow_stained_glass_pane'
     ])
     event.groupItemsByTag('minecraft:rei_groups/shulker_boxes', 'Shulker Boxes', 'minecraft:shulker_boxes')
+    // caupona calcite columns
+    event.groupItems('caupona:rei_groups/fluted_calcite_column', 'Fluted Calcite Column Components', [
+        'caupona:calcite_acanthine_column_capital',
+        'caupona:calcite_ionic_column_capital',
+        'caupona:calcite_column_fluted_shaft',
+        'caupona:calcite_column_fluted_plinth'
+    ])
+    event.groupItems('caupona:rei_grups/smooth_calcite_column', 'Calcite Column Components', [
+        'caupona:calcite_tuscan_column_capital',
+        'caupona:calcite_column_shaft',
+        'caupona:calcite_column_plinth'
+    ])
+    // caupona stone columns
+    event.groupItems('caupona:rei_groups/fluted_stone_column', 'Fluted Stone Column Components', [
+        'caupona:stone_acanthine_column_capital',
+        'caupona:stone_ionic_column_capital',
+        'caupona:stone_column_fluted_shaft',
+        'caupona:stone_column_fluted_plinth'
+    ])
+    event.groupItems('caupona:rei_groups/smooth_stone_column', 'Smooth Stone Column Components', [
+        'caupona:stone_tuscan_column_capital',
+        'caupona:stone_column_shaft',
+        'caupona:stone_column_plinth'
+    ])
+    // caupona felsic tuff column
+    event.groupItems('caupona:rei_groups/fluted_felsic_tuff_column', 'Fluted Felsic Tuff Column Components', [
+        'caupona:felsic_tuff_acanthine_column_capital',
+        'caupona:felsic_tuff_ionic_column_capital',
+        'caupona:felsic_tuff_column_fluted_shaft',
+        'caupona:felsic_tuff_column_fluted_plinth'
+    ])
+    event.groupItems('caupona:rei_groups/smooth_felsic_tuff_column', 'Felsic Tuff Column Components', [
+        'caupona:felsic_tuff_tuscan_column_capital',
+        'caupona:felsic_tuff_column_shaft',
+        'caupona:felsic_tuff_column_plinth'
+    ])
+    // caupona quartz column
+    event.groupItems('caupona:rei_groups/fluted_quartz_column', 'Fluted Quartz Column Components', [
+        'caupona:quartz_acanthine_column_capital',
+        'caupona:quartz_ionic_column_capital',
+        'caupona:quartz_column_fluted_shaft',
+        'caupona:quartz_column_fluted_plinth'
+    ])
+    event.groupItems('caupona:rei_groups/smooth_quartz_column', 'Smooth Quartz Column', [
+        'caupona:quartz_tuscan_column_capital',
+        'caupona:quartz_column_shaft',
+        'caupona:quartz_column_plinth'
+    ])
+    event.groupItemsByTag('caupona:rei_groups/aspics', 'Aspics', 'caupona:aspics')
+    event.groupItemsByTag('caupona:rei_groups/stews', 'Stews', 'caupona:stews')
+    // caupona frying utilities
+    event.groupItems('capona:rei_groups/frying_utilities', 'Frying Utilities', [
+        'caupona:stone_griddle',
+        'caupona:copper_frying_pan',
+        'caupona:iron_frying_pan',
+    ])
+    // caupona mud and drystone palette utilities (not same format)
+    event.groupItems('capona:rei_groups/mud_kitchen_palette', 'Mud and Drystone Utilities', [
+        'caupona:mud_kitchen_stove',
+        'caupona:mud_counter',
+        'caupona:mud_counter_with_dolium',
+    ])
+    event.groupItems('caupona:rei_groups/mud_chimney_components', 'Mud and Drystone Utilities', [
+        'caupona:mud_chimney_flue',
+        'caupona:mud_chimney_pot'
+    ])
+    // caupona brick palette utilities
+    event.groupItems('capona:rei_groups/brick_kitchen_palette', 'Brick Kitchen Utilities', [
+        'caupona:brick_kitchen_stove',
+        'caupona:brick_counter',
+        'caupona:brick_counter_with_dolium',
+    ])
+    event.groupItems('caupona:rei_groups/brick_chimney_components', 'Brick Chimney Utilities', [
+        'caupona:brick_chimney_flue',
+        'caupona:brick_chimney_pot'
+    ])
+    event.groupItems('caupona:rei_groups/brick_bath_components', 'Brick Bath Components', [
+        'caupona:brick_caliduct',
+        'caupona:brick_hypocaust_firebox'
+    ])
+    // caupona opus incertum palette utilities
+    event.groupItems('capona:rei_groups/opus_incertum_kitchen_palette', 'Opus Incertum Kitchen Utilities', [
+        'caupona:opus_incertum_kitchen_stove',
+        'caupona:opus_incertum_counter',
+        'caupona:opus_incertum_counter_with_dolium',
+    ])
+    event.groupItems('caupona:rei_groups/opus_incertum_chimney_components', 'Opus Incertum Chimney Utilities', [
+        'caupona:opus_incertum_chimney_flue',
+        'caupona:opus_incertum_chimney_pot'
+    ])
+    event.groupItems('caupona:rei_groups/opus_incertum_bath_components', 'Opus Incertum Bath Components', [
+        'caupona:opus_incertum_caliduct',
+        'caupona:opus_incertum_hypocaust_firebox'
+    ])
+    // caupona opus latericium palette utilities
+    event.groupItems('capona:rei_groups/opus_latericium_kitchen_palette', 'Opus Latericium Kitchen Utilities', [
+        'caupona:opus_latericium_kitchen_stove',
+        'caupona:opus_latericium_counter',
+        'caupona:opus_latericium_counter_with_dolium',
+    ])
+    event.groupItems('caupona:rei_groups/opus_latericium_chimney_components', 'Opus Latericium Chimney Utilities', [
+        'caupona:opus_latericium_chimney_flue',
+        'caupona:opus_latericium_chimney_pot'
+    ])
+    event.groupItems('caupona:rei_groups/opus_latericium_bath_components', 'Opus Latericium Bath Components', [
+        'caupona:opus_latericium_caliduct',
+        'caupona:opus_latericium_hypocaust_firebox'
+    ])
+    // caupona stone brick palette utilities
+    event.groupItems('capona:rei_groups/stone_brick_kitchen_palette', 'Stone Brick Kitchen Utilities', [
+        'caupona:stone_brick_kitchen_stove',
+        'caupona:stone_brick_counter',
+        'caupona:stone_brick_counter_with_dolium',
+    ])
+    event.groupItems('caupona:rei_groups/stone_brick_chimney_components', 'Stone Brick Chimney Utilities', [
+        'caupona:stone_brick_chimney_flue',
+        'caupona:stone_brick_chimney_pot'
+    ])
+    event.groupItems('caupona:rei_groups/stone_brick_bath_components', 'Stone Brick Bath Components', [
+        'caupona:stone_brick_caliduct',
+        'caupona:stone_brick_hypocaust_firebox'
+    ])
     event.groupItems('create:rei_groups/colored_valve_handles', 'Colored Valve Handles', [
         'create:black_valve_handle',
         'create:blue_valve_handle',
@@ -348,6 +469,8 @@ REIEvents.groupEntries(event => {
     })
     event.groupItemsByTag('comforts:rei_groups/sleeping_bags', 'Comforts Sleeping Bags', 'comforts:sleeping_bags')
     event.groupItemsByTag('comforts:rei_groups/hammocks', 'Comforts Hammocks', 'comforts:hammocks')
+    event.groupItemsByTag('handcrafted:rei_groups/cushions', 'Handcrafted Cushions', 'handcrafted:cushions')
+    event.groupItemsByTag('handcrafted:rei_groups/sheets', 'Handcrafted Sheets', 'handcrafted:sheets')
     event.groupItemsByTag('quark:rei_groups/quark_runes', 'Quark Runes', 'quark:runes')
     event.groupItemsIf('kubejs:rei_groups/concrete_singularities', 'Concrete Singularities', Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id.includes('concrete_')))
     event.groupItemsIf('kubejs:rei_groups/minecraft_valued_singularities', 'Minecraft Valued Singularities', [
