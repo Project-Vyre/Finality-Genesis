@@ -5,21 +5,72 @@
 	group: "2B2D0B6DE31DE8D3"
 	icon: "salt:salt"
 	id: "4591AE12FA394A76"
-	order_index: 5
+	order_index: 4
 	quest_links: [ ]
-	quests: [{
-		description: ["Simply acquire some salt then combine it with a food item in your crafting grid to salt said food item."]
-		id: "3F6CCC653350CC37"
-		subtitle: "Salting food has benefits!"
-		tasks: [{
-			id: "5A70549A597A5CAC"
-			item: "salt:salt"
-			type: "item"
-		}]
-		title: "Introducing Salt"
-		x: 0.0d
-		y: 0.0d
-	}]
+	quests: [
+		{
+			dependencies: ["0AE06EB85B6E1CB6"]
+			description: ["Simply acquire some salt then combine it with a food item in your crafting grid to salt said food item."]
+			id: "3F6CCC653350CC37"
+			rewards: [{
+				id: "3D88285F8CF1BCA5"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "Salting food has benefits!"
+			tasks: [{
+				id: "5A70549A597A5CAC"
+				item: "salt:salt"
+				type: "item"
+			}]
+			title: "Introducing Salt"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7CA2ABB6BE87F061"]
+			id: "3FC94277FB9155BE"
+			rewards: [{
+				id: "657594245D4B92C3"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "It's a salt lamp."
+			tasks: [{
+				id: "5F89AADEE62272EA"
+				item: "salt:salt_lamp"
+				type: "item"
+			}]
+			title: "Salt Decoration - The Salt Lamp"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3F6CCC653350CC37"]
+			description: [
+				"Acquire some &6pointed dripstone&r and a &6dripstone block&r. "
+				""
+				"Place a &9water source block&r on top of the dripstone block with the pointed dripstone placed directly below."
+				""
+				"A salt stalagmite should start forming directly under the pointed dripstone as time goes on."
+			]
+			id: "7CA2ABB6BE87F061"
+			rewards: [{
+				id: "70A79AB243B3BF46"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "It's relatively simple!"
+			tasks: [{
+				id: "1D10F6728A757F7E"
+				item: "salt:raw_rock_salt"
+				type: "item"
+			}]
+			title: "Growing Salt 101"
+			x: 0.0d
+			y: 1.5d
+		}
+	]
 	subtitle: ["It's literally just salt."]
 	title: "Salt"
 }

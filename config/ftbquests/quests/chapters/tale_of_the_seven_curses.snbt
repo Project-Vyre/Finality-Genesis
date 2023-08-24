@@ -710,6 +710,7 @@
 			dependencies: ["56BBB54B2451C552"]
 			id: "58FEEE64A3D256CC"
 			shape: "rsquare"
+			subtitle: "Easily repairable!"
 			tasks: [{
 				id: "5DB27D523C7CF104"
 				item: "enigmaticlegacy:mending_mixture"

@@ -1,10 +1,22 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
+	default_quest_shape: "rsquare"
 	filename: "apotheosis"
 	group: "6855847200ADBE3A"
 	icon: "apotheosis:gem_dust"
 	id: "6354312DFE41C7F0"
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 64.0d
+		hover: [ ]
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
 	order_index: 0
 	progression_mode: "flexible"
 	quest_links: [ ]
@@ -29,7 +41,7 @@
 			]
 			title: "Congrats! You sacrificed your item to the dark gods!"
 			x: 0.0d
-			y: 1.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["5D79BD5D3D87DA08"]
@@ -48,7 +60,7 @@
 			}]
 			title: "Gem Dust 101 - Smash your valueables..."
 			x: 0.0d
-			y: -0.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["74B2239E6D835FD5"]
@@ -62,7 +74,7 @@
 			}]
 			title: "Salvaging 101 - Salvaging Table"
 			x: 0.0d
-			y: 4.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -73,8 +85,8 @@
 				item: "apotheosis:common_material"
 				type: "item"
 			}]
-			x: -1.5d
-			y: 4.0d
+			x: -2.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -85,8 +97,8 @@
 				item: "apotheosis:uncommon_material"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 5.0d
+			x: -1.5d
+			y: 8.5d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -98,7 +110,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 5.5d
+			y: 9.5d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -109,8 +121,8 @@
 				item: "apotheosis:epic_material"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 5.0d
+			x: 1.5d
+			y: 8.5d
 		}
 		{
 			dependencies: ["0CC888B34808370F"]
@@ -121,8 +133,8 @@
 				item: "apotheosis:mythic_material"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 4.0d
+			x: 2.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
@@ -138,8 +150,8 @@
 				item: "apotheosis:vial_of_extraction"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 1.0d
+			x: -3.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
@@ -155,8 +167,8 @@
 				item: "apotheosis:vial_of_expulsion"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 1.0d
+			x: 3.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
@@ -183,7 +195,7 @@
 			}]
 			title: "Introduction to Apotheosis - Chronicle of Shadows"
 			x: 0.0d
-			y: -2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -197,6 +209,11 @@
 			]
 			hide: true
 			id: "411F865E038E7A2E"
+			rewards: [{
+				id: "13B86D86BF91CE46"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
 			subtitle: "It's cooler!"
 			tasks: [{
 				id: "412F89A109102D9D"
@@ -205,8 +222,8 @@
 				type: "item"
 			}]
 			title: "This is not your ordinary enchanting table!"
-			x: 0.0d
-			y: 7.0d
+			x: 0.01496598639452884d
+			y: 11.16768707482997d
 		}
 		{
 			dependencies: ["412F89A109102D9D"]
@@ -218,8 +235,8 @@
 				type: "item"
 			}]
 			title: "Tome of Helmets"
-			x: -1.0d
-			y: 7.0d
+			x: -3.5d
+			y: 13.0d
 		}
 		{
 			dependencies: ["412F89A109102D9D"]
@@ -230,8 +247,8 @@
 				item: "apotheosis:chestplate_tome"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 8.0d
+			x: -2.5d
+			y: 13.0d
 		}
 		{
 			dependencies: ["412F89A109102D9D"]
@@ -242,8 +259,8 @@
 				item: "apotheosis:boots_tome"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 10.0d
+			x: -2.5d
+			y: 14.0d
 		}
 		{
 			dependencies: ["412F89A109102D9D"]
@@ -254,8 +271,8 @@
 				item: "apotheosis:leggings_tome"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 9.0d
+			x: -3.5d
+			y: 14.0d
 		}
 		{
 			dependencies: ["412F89A109102D9D"]
@@ -266,8 +283,8 @@
 				item: "apotheosis:weapon_tome"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 7.0d
+			x: 2.5d
+			y: 13.0d
 		}
 		{
 			dependencies: ["412F89A109102D9D"]
@@ -278,8 +295,8 @@
 				item: "apotheosis:pickaxe_tome"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 8.0d
+			x: 2.5d
+			y: 14.0d
 		}
 		{
 			dependencies: ["412F89A109102D9D"]
@@ -290,8 +307,8 @@
 				item: "apotheosis:fishing_tome"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 8.0d
+			x: 3.5d
+			y: 14.0d
 		}
 		{
 			dependencies: ["412F89A109102D9D"]
@@ -302,8 +319,8 @@
 				item: "apotheosis:bow_tome"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 7.0d
+			x: 3.5d
+			y: 13.0d
 		}
 		{
 			dependencies: ["412F89A109102D9D"]
@@ -314,8 +331,8 @@
 				item: "apotheosis:scrap_tome"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 10.0d
+			x: -2.5d
+			y: 15.0d
 		}
 		{
 			dependencies: ["412F89A109102D9D"]
@@ -326,13 +343,18 @@
 				item: "apotheosis:other_tome"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 9.0d
+			x: 2.5d
+			y: 15.0d
 		}
 		{
 			dependencies: ["1189AFE0B71158E6"]
-			description: ["You can make the most powerful tools imaginable, don't say I warned you."]
+			description: ["You can make the most &6powerful&r tools imaginable, don't say I warned you."]
 			id: "3718E49C5B96FBFA"
+			rewards: [{
+				id: "2996F22AA3FA1626"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
 			subtitle: "This is where things get VERY interesting."
 			tasks: [{
 				id: "46BECAA580019513"
@@ -341,7 +363,7 @@
 			}]
 			title: "Ultimate Item Reforging - The Reforging Table"
 			x: 0.0d
-			y: 11.0d
+			y: 18.5d
 		}
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
@@ -354,7 +376,7 @@
 			}]
 			title: "Upgrading Gems 101 - Gem Cutting Table"
 			x: 0.0d
-			y: 2.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["411F865E038E7A2E"]
@@ -362,8 +384,17 @@
 				"So let's say you made a new diamond sword and want to make it even more powerful like the one you looted from the world. "
 				""
 				"The &9Simple Reforging Table&r is what you use! It is limited by what tier it can reforge items however. That's what the &6Reforging Table&r is in the next quest node."
+				""
+				"To reforge an item, you will need a lot of rarity scrap material, gem dust and XP. To acquire rarity scrap materials, see the Salvaging 101 quest node near the center of the quest tree grid. "
+				""
+				"If your item has any empty sockets, you can socket gems using the smithing table."
 			]
 			id: "1189AFE0B71158E6"
+			rewards: [{
+				id: "6BAF2DDB432FD4E9"
+				type: "xp_levels"
+				xp_levels: 15
+			}]
 			subtitle: "This is for giving regular items Affixes."
 			tasks: [{
 				id: "3B604826BCC1040B"
@@ -372,7 +403,7 @@
 			}]
 			title: "Reforging 101 - Simple Reforging Table"
 			x: 0.0d
-			y: 9.0d
+			y: 16.5d
 		}
 		{
 			dependencies: ["5D79BD5D3D87DA08"]
@@ -407,7 +438,7 @@
 			]
 			title: "Power of Archery"
 			x: 0.0d
-			y: -3.5d
+			y: -1.5d
 		}
 	]
 	subtitle: ["Apotheosis is that one mod that makes everything powerful."]

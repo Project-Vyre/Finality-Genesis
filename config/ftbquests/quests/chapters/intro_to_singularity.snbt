@@ -358,6 +358,11 @@
 					item: "supplementaries:flax_seeds"
 					type: "item"
 				}
+				{
+					id: "7C483B82D80A8F75"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
 			]
 			title: "Convenient Utilities Ch.1"
 			x: 0.0d

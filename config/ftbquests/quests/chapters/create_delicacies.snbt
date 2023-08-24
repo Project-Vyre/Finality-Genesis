@@ -5,7 +5,7 @@
 	group: "2B2D0B6DE31DE8D3"
 	icon: "create:honeyed_apple"
 	id: "22474EAD1542545C"
-	order_index: 1
+	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
