@@ -4,7 +4,7 @@
 	auto_start = false
 	space_modules = false
 	shadow_text = true
-	animations = true
+	animations = false
 	animationSpeed = 1.0
 	fontScale = 1.0
 	background_color = 1867534416
