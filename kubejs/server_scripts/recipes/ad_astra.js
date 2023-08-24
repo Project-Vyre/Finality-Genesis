@@ -1,4 +1,6 @@
-// requires: ad_astra 
+// requires: ad_astra
+// requires: create
+// requires: extendedcrafting
 // and kjs 119 and above
 
 ServerEvents.recipes(event => {

@@ -1,4 +1,5 @@
 // requires: blue_skies
+// requires: create
 
 let BSKIES_WOOD = ['bluebright', 'starlit', 'frostbright', 'lunar', 'dusk', 'maple', 'cherry', 'crystallized']
 ServerEvents.recipes(event => {
