@@ -1,5 +1,6 @@
 // requires: irons_spellbooks
 // requires: apotheosis
+// requires: create
 /*
 let CORE_RARITIES = [
     'common',
