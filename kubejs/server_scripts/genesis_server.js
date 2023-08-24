@@ -232,9 +232,18 @@ ServerEvents.recipes(event => {
     event.shapeless('create:mechanical_piston', [
         'supplementaries:soap', 'create:sticky_mechanical_piston'
     ]).id('finality:mechanical_piston_soap_washing')
+    // item application
     event.recipes.createItemApplication('minecraft:tinted_glass', [
         '#forge:glass/colorless', 'minecraft:amethyst_shard'
     ]).id('minecraft:tinted_glass')
+    event.recipes.createItemApplication('create:refined_radiance_casing', [
+        '#forge:stripped_logs',
+        'create:refined_radiance'
+    ]).id('create:refined_radiance_casing')
+    event.recipes.createItemApplication('create:shadow_steel_casing', [
+        '#forge:stripped_logs',
+        'create:shadow_steel'
+    ]).id('create:shadow_steel_casing')
     // compacting
     event.recipes.createCompacting([
         'minecraft:sponge',
@@ -354,6 +363,11 @@ ServerEvents.recipes(event => {
     event.recipes.createMixing('salt:salt', [
         Fluid.of('minecraft:water', 1000)
     ]).heated().id('finality:create_salt_compat')
+    event.recipes.createMixing('create:chromatic_compound', [
+        '3x minecraft:glowstone_dust',
+        '3x create:powdered_obsidian',
+        'create:polished_rose_quartz'
+    ]).superheated().id('create:mixing/chromatic_compound')
     // supplementaries related
     event.shaped('supplementaries:quiver', [
         'RRL',
@@ -371,9 +385,7 @@ ServerEvents.recipes(event => {
 })
 
 ServerEvents.tags('item', event => {
-    //COLORID.forEach(color => {
-    //    event.add('kubejs:concrete_singularities', Item.of('extendedcrafting:singularity', `{Id:"extendedcrafting:concrete_${color}"}`).weakNBT())
-    //})
+
 })
 
 ServerEvents.tags('block', event => {
@@ -526,12 +538,13 @@ LevelEvents.afterExplosion(event => {
 
 let BLACKLIST = {
     ae2: 'Applied Energistics 2',
+    ars_nouveau: 'Ars Nouveau',
+    create_confectionery: 'Create Confectionery',
     create_jetpack: 'Create Jetpack',
     create_sa: 'Create Stuff and Additions',
-    create_confectionery: 'Create Confectionery',
-    create_things_and_misc: 'Create: Things and Misc',
     creategoggles: 'Create Goggles',
     createsifter: 'Create Sifting',
+    create_things_and_misc: 'Create: Things and Misc',
     extendedgears: 'Create: Extended Cogwheels',
     alloyed: 'Create: Alloyed',
     createendertransmission: 'Create: Ender Transmission',
