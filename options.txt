@@ -31,7 +31,7 @@ simulationDistance:12
 entityDistanceScaling:1.0
 guiScale:2
 particles:0
-maxFps:260
+maxFps:140
 graphicsMode:1
 ao:2
 prioritizeChunkUpdates:0
@@ -157,7 +157,7 @@ key_gui.xaero_toggle_manual_cave_mode:key.keyboard.unknown
 key_gui.xaero_alternative_list_players:key.keyboard.unknown
 key_gui.xaero_toggle_tracked_players:key.keyboard.unknown
 key_gui.xaero_toggle_pac_chunk_claims:key.keyboard.unknown
-key_gui.xaero_minimap_settings:key.keyboard.y
+key_gui.xaero_minimap_settings:key.keyboard.left.bracket
 key_key.backpack:key.keyboard.b
 key_gui.xaero_open_map:key.keyboard.m
 key_gui.xaero_open_settings:key.keyboard.right.bracket
@@ -224,7 +224,7 @@ key_quark.keybind.patreon_emote.dab:key.keyboard.unknown
 key_quark.keybind.patreon_emote.jet:key.keyboard.unknown
 key_quark.keybind.patreon_emote.exorcist:key.keyboard.unknown
 key_quark.keybind.patreon_emote.zombie:key.keyboard.unknown
-key_quark.keybind.lock_rotation:key.keyboard.k
+key_quark.keybind.lock_rotation:key.keyboard.unknown
 key_quark.keybind.autorun:key.keyboard.unknown
 key_quark.keybind.camera_mode:key.keyboard.f12
 key_quark.keybind.back:key.mouse.4
@@ -235,7 +235,7 @@ key_quark.keybind.transfer_extract:key.keyboard.unknown
 key_quark.keybind.shift_lock:key.keyboard.unknown
 key_quark.keybind.change_hotbar:key.keyboard.z
 key_supplementaries.keybind.quiver:key.keyboard.v
-key_key.irons_spellbooks.spell_wheel:key.keyboard.r
+key_key.irons_spellbooks.spell_wheel:key.keyboard.tab
 key_key.irons_spellbooks.spell_bar_modifier:key.keyboard.left.shift
 key_key.irons_spellbooks.spell_quick_cast_1:key.keyboard.unknown
 key_key.irons_spellbooks.spell_quick_cast_2:key.keyboard.unknown
