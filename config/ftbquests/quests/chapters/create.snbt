@@ -976,6 +976,7 @@
 				""
 				"- Use an &9Item Vault&r with the Brass Funnel's item filter set to only accept Incomplete Precision Mechanisms on the ending part of the sequence and an Andesite Funnel set to OUTPUT mode on the beginning part of the sequence. This method is instant item transportation."
 			]
+			hide: true
 			id: "18B37484A6C7F37E"
 			rewards: [{
 				id: "3463FCB44760D9E4"
@@ -3186,6 +3187,7 @@
 				""
 				"They can also be used with the Elevator Pulley to designate floors."
 			]
+			hide: true
 			id: "205BAFFFECA72D1E"
 			rewards: [{
 				id: "0D226167D60F841A"

@@ -77,11 +77,13 @@
 				"78AB1F02F29D15E3"
 				"0CD722C2B48DF862"
 			]
+			dependency_requirement: "all_started"
 			description: [
 				"&aLiquid Experience&r and &bHyper Experience&r are used to print Enchantment Books."
 				""
 				"Ink is required to print more of the same written books, NOT enchantment books."
 			]
+			hide: true
 			id: "27AB9AEF6FC1F0AA"
 			rewards: [{
 				count: 18
