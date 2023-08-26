@@ -556,6 +556,7 @@ let BLACKLIST = {
     creategoggles: 'Create Goggles',
     createsifter: 'Create Sifting',
     create_things_and_misc: 'Create: Things and Misc',
+    cgm: "MrCrayFish's Gun Mod",
     extendedgears: 'Create: Extended Cogwheels',
     alloyed: 'Create: Alloyed',
     createendertransmission: 'Create: Ender Transmission',
