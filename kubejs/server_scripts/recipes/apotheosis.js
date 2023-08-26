@@ -156,7 +156,7 @@ ServerEvents.recipes(event => {
         'S',
         'E'
     ], {
-        F: 'minecraft:feather',
+        F: 'minecraft:flint',
         S: '#forge:rods/wooden',
         E: 'minecraft:feather'
     }).id('minecraft:arrow')

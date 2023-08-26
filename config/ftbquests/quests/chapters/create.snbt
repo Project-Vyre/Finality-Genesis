@@ -855,11 +855,19 @@
 				item: "create:smart_chute"
 				type: "item"
 			}]
+			title: "Filtered Vertical Item Transfer - Smart Chutes"
 			x: -11.5d
 			y: -8.5d
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
+			description: [
+				"Did you know you can use &7Encased Fans&r to push items up or pull items up?"
+				""
+				"Just depends on which end of the Chute you place the Encased Fan in and what direction it is rotating. "
+				""
+				"You can use &eEngineer's Goggles&r to look at a Chute and the tooltip will let you know if items are being pushed down, pushed up or pulled up."
+			]
 			id: "7D7D96030BC1CDC1"
 			subtitle: "Vertical item transportation!"
 			tasks: [{
@@ -867,12 +875,15 @@
 				item: "create:chute"
 				type: "item"
 			}]
+			title: "Basic Vertical Item Transfer - Chutes"
 			x: -11.5d
 			y: -7.0d
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
 			description: [
+				"Want to know a fun fact that most people don't know yet? It's that Item Vaults are &lcompletely&r &6blast proof&r. Very secure storage."
+				""
 				"Use it on Create's Trains, make a rotating Item Vault wheel... the limit is your imagination. "
 				""
 				"They can also be used for instant item transportation in certain scenarios."
@@ -1191,6 +1202,11 @@
 				"Hold [w] to Ponder to learn more!"
 			]
 			id: "16B642E5E7DBE75D"
+			rewards: [{
+				id: "670871EAC8BA9470"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "Automated pouring!"
 			tasks: [{
 				id: "5526AF6D60A35374"
@@ -2722,6 +2738,11 @@
 				"However, for potion making you will need to set a recipe filter first beforehand."
 			]
 			id: "60839EAF324E7086"
+			rewards: [{
+				id: "48954AAB91FCB814"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "Useful if you want to drain buckets from a milk farm, lava farm and more."
 			tasks: [{
 				id: "5BFFDC4C27256AC0"
@@ -3313,6 +3334,11 @@
 				"Mostly used for decorative purposes."
 			]
 			id: "1BD09AD0A5B739CA"
+			rewards: [{
+				id: "2F1606AB1614F677"
+				type: "xp"
+				xp: 100
+			}]
 			subtitle: "The voice of an angel..."
 			tasks: [{
 				id: "4D36CD45D808E2E2"
