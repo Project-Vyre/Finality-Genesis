@@ -177,6 +177,34 @@ REIEvents.information(event => {
     event.addItem('endrem:undead_eye', 'Acquisition', ['Requires a skeleton horse to be slain in order to acquire the Undead Soul.'])
     event.addItem('endrem:undead_soul', 'Acquisition', ['Acquired from slaying a skeleton horse.'])
     event.addItem('endrem:exotic_eye', 'Acquisition', ['Created by combining multiple exotic ingredients using a Crafting Core.'])
+    event.addItem(['farmersdelight:wild_cabbages', 'farmersdelight:cabbage_seeds'], 'Acquisition', [
+        'Can be found on beaches.',
+        'It looks like a large bush with small yellow flowers on top.'
+    ])
+    event.addItem(['farmersdelight:wild_beetroots', 'minecraft:beetroot_seeds'], 'Acquisition', [
+        'Can be found on beaches.',
+        'It is a type of beet with larger leaves.'
+    ])
+    event.addItem(['farmersdelight:wild_potatoes', 'minecraft:potato'], 'Acquisition', [
+        'Can be found in biomes with cold climates. This means that the biome must have a temperature between 0.0 and 0.3.',
+        'Similar in appearance to normal Potato patches, but has large flowers.'
+    ])
+    event.addItem(['farmersdelight:wild_onions', 'farmersdelight:onion'], 'Acquisition', [
+        'Can be found in biomes with temperate climates. This means that the biome must have a temperature of 0.3 and 1.0.',
+        'It looks like a thick cluster of Allium flowers with an onion bulb under them.'
+    ])
+    event.addItem(['farmersdelight:wild_carrots', 'minecraft:carrot'], 'Acquisition', [
+        'Can be found in biomes with temperate climates. This means that the biome must have a temperature of 0.3 and 1.0.',
+        'Looks like a flowering weed with white flowers and has an orange base poking out slightly from the dirt.'
+    ])
+    event.addItem(['farmersdelight:wild_tomatoes', 'farmersdelight:tomato_seeds'], 'Acquisition', [
+        'Can be found in biomes with arid climates. This means that the biome must have a temperature above 1.0.',
+        'Looks like a cluster of vines covered in tiny tomatoes.'
+    ])
+    event.addItem(['farmersdelight:wild_rice', 'farmersdelight:rice_panicle'], 'Acquisition', [
+        'Can be found in swamps and jungles in shallow areas of water.',
+        'It has yellow grains on the ends of its stalks and is usually two blocks tall.'
+    ])
     event.addItem('obscure_api:astral_dust', 'Acquisition', ['Used in making a special chestpiece. Can only be found in Frozen Chests.'])
 })
 
