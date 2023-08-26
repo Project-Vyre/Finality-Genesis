@@ -1,4 +1,5 @@
 // requires: tempad
+// requires: create
 // requires: extendedcrafting
 
 ServerEvents.recipes(event => {

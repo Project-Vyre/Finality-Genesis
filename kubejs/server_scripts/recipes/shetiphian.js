@@ -1,6 +1,7 @@
 // requires: enderchests
 // requires: endertanks
 // requires: extendedcrafting
+// requires: create
 
 ServerEvents.recipes(event => {
     event.remove([
@@ -30,7 +31,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'extendedcrafting:advanced_component',
         W: '#minecraft:wool',
-        O: 'minecraft:obsidian',
+        O: 'create:powdered_obsidian',
         B: 'minecraft:bucket',
         E: 'extendedcrafting:ender_catalyst'
     }).id('finality:shetiphian_ender_bucket')

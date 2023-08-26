@@ -99,6 +99,16 @@ let CAdditionsItems = [
     'digital_adapter'
 ]
 
+JEIEvents.addItems(event => {
+    event.add([
+        'create:chromatic_compound',
+        'create:refined_radiance',
+        'create:shadow_steel',
+        'create:refined_radiance_casing',
+        'create:shadow_steel_casing'
+    ])
+})
+
 JEIEvents.hideItems(event => {
     MYSHIDE.forEach(name => {
         event.hide(`mysticalagriculture:${name}_essence`)

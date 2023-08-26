@@ -236,14 +236,6 @@ ServerEvents.recipes(event => {
     event.recipes.createItemApplication('minecraft:tinted_glass', [
         '#forge:glass/colorless', 'minecraft:amethyst_shard'
     ]).id('minecraft:tinted_glass')
-    event.recipes.createItemApplication('create:refined_radiance_casing', [
-        '#forge:stripped_logs',
-        'create:refined_radiance'
-    ]).id('create:refined_radiance_casing')
-    event.recipes.createItemApplication('create:shadow_steel_casing', [
-        '#forge:stripped_logs',
-        'create:shadow_steel'
-    ]).id('create:shadow_steel_casing')
     // compacting
     event.recipes.createCompacting([
         'minecraft:sponge',
@@ -363,11 +355,6 @@ ServerEvents.recipes(event => {
     event.recipes.createMixing('salt:salt', [
         Fluid.of('minecraft:water', 1000)
     ]).heated().id('finality:create_salt_compat')
-    event.recipes.createMixing('create:chromatic_compound', [
-        '3x minecraft:glowstone_dust',
-        '3x create:powdered_obsidian',
-        'create:polished_rose_quartz'
-    ]).superheated().id('create:mixing/chromatic_compound')
     // supplementaries related
     event.shaped('supplementaries:quiver', [
         'RRL',
@@ -382,6 +369,30 @@ ServerEvents.recipes(event => {
         '4x minecraft:netherite_scrap',
         '4x minecraft:gold_ingot'
     ]).id('minecraft:netherite_ingot')
+    // removed create items
+    event.recipes.createMixing('create:chromatic_compound', [
+        '3x minecraft:glowstone_dust',
+        '3x create:powdered_obsidian',
+        'create:polished_rose_quartz'
+    ]).superheated().id('create:mixing/chromatic_compound')
+    event.recipes.createItemApplication('create:refined_radiance_casing', [
+        '#forge:stripped_logs',
+        'create:refined_radiance'
+    ]).id('create:refined_radiance_casing')
+    event.recipes.createItemApplication('create:shadow_steel_casing', [
+        '#forge:stripped_logs',
+        'create:shadow_steel'
+    ]).id('create:shadow_steel_casing')
+    if (Platform.isLoaded('quark')) {
+        event.shaped('minecraft:hopper', [
+            'ILI',
+            'ILI',
+            ' I '
+        ], {
+            I: 'create:iron_sheet',
+            L: '#minecraft:logs'
+        }).id('quark:tweaks/crafting/utility/misc/easy_hopper')
+    }
 })
 
 ServerEvents.tags('item', event => {
