@@ -2,24 +2,6 @@
 // requires: roughlyenoughresources
 // requires: roughlyenoughprofessions
 
-let COLOR = {
-    black: 'Black',
-    blue: 'Blue',
-    brown: 'Brown',
-    cyan: 'Cyan',
-    gray: 'Gray',
-    green: 'Green',
-    light_blue: 'Light Blue',
-    light_gray: 'Light Gray',
-    lime: 'Lime',
-    magenta: 'Magenta',
-    orange: 'Orange',
-    pink: 'Pink',
-    purple: 'Purple',
-    red: 'Red',
-    white: 'White',
-    yellow: 'Yellow'
-}
 let MYSHIDE = [
     'rubber',
     'silicon',
@@ -117,6 +99,27 @@ let CAdditionsItems = [
     'digital_adapter'
 ]
 
+function groupModTags(modName, event, exclude) { // function written by mercenaryarek from the KubeJS Discord
+    const modIngredient = Ingredient.of(`@${modName}`)
+    modIngredient.stacks.toList().stream()
+        .flatMap(stack => stack.tags)
+        .distinct() // Exclude duplicate tag entries
+        .filter(tag => tag.toString().indexOf(modName) !== -1)
+        .forEach(tag => {
+            const path = new String(tag.toString().split(`${modName}:`)[1].split(']')[0])
+            // Human-readable title case, e.g white_wool -> White Wool
+            const name = path.replace(/^(\w)/, c => c.toUpperCase())
+                .replace(/_(\w)/g, (_, c) => " " + c.toUpperCase()).toString()
+            if (!exclude)
+                event.groupItemsByTag(`kubejs:rei_groups/${modName}/${path}`, name, `${modName}:${path}`)
+            else {
+                let items = Ingredient.of(`#${modName}:${path}`).itemIds // function correction made by p3lim from the KubeJS Discord
+                    .filter(item => Item.of(item).getMod() == `${modName}`)
+                event.groupItems(`kubejs:rei_groups/${modName}/${path}`, name, items)
+            }
+        })
+}
+
 REIEvents.hide('item', event => {
     MYSHIDE.forEach(name => {
         event.hide(`mysticalagriculture:${name}_essence`)
@@ -209,12 +212,83 @@ REIEvents.information(event => {
 })
 
 REIEvents.groupEntries(event => {
-    event.groupItems('kubejs:rei_groups/wrenches', 'Wrenches', [
-        'create:wrench',
-        'supplementaries:wrench',
-        'red_power:wrench',
-        'red_power:creative_wrench',
-        'ad_astra:wrench'
+    event.groupSameItem('minecraft:rei_groups/all_regular_potions', 'All Regular Potions', 'minecraft:potion')
+    event.groupSameItem('minecraft:rei_groups/all_splash_potions', 'All Splash Potions', 'minecraft:splash_potion')
+    event.groupSameItem('minecraft:rei_groups/all_lingering_potions', 'All Lingering Potions', 'minecraft:lingering_potion')
+    event.groupSameItem('minecraft:rei_groups/all_tipped_arrows', 'All Tipped Arrows', 'minecraft:tipped_arrow')
+    event.groupSameItem('minecraft:rei_groups/all_enchantment_books', 'All Enchantment Books', 'minecraft:enchanted_book')
+    event.groupItems('minecraft:rei_groups/minecraft_signs', 'Minecraft Signs', [
+        'minecraft:oak_sign',
+        'minecraft:spruce_sign',
+        'minecraft:birch_sign',
+        'minecraft:jungle_sign',
+        'minecraft:acacia_sign',
+        'minecraft:dark_oak_sign',
+        'minecraft:mangrove_sign',
+        'minecraft:crimson_sign',
+        'minecraft:warped_sign'
+    ])
+    event.groupItems('minecraft:rei_groups/minecraft_logs', 'Minecraft Logs', [
+        'minecraft:oak_log',
+        'minecraft:spruce_log',
+        'minecraft:birch_log',
+        'minecraft:jungle_log',
+        'minecraft:acacia_log',
+        'minecraft:dark_oak_log',
+        'minecraft:mangrove_log',
+        'minecraft:crimson_stem',
+        'minecraft:warped_stem'
+    ])
+    event.groupItems('minecraft:rei_groups/minecraft_woods', 'Minecraft Bark Wood Blocks', [
+        'minecraft:oak_wood',
+        'minecraft:spruce_wood',
+        'minecraft:birch_wood',
+        'minecraft:jungle_wood',
+        'minecraft:acacia_wood',
+        'minecraft:dark_oak_wood',
+        'minecraft:mangrove_wood',
+        'minecraft:crimson_hyphae',
+        'minecraft:warped_hyphae'
+    ])
+    event.groupItems('minecraft:rei_groups/minecraft_stripped_logs', 'Minecraft Stripped Logs', [
+        'minecraft:stripped_oak_log',
+        'minecraft:stripped_spruce_log',
+        'minecraft:stripped_birch_log',
+        'minecraft:stripped_jungle_log',
+        'minecraft:stripped_acacia_log',
+        'minecraft:stripped_dark_oak_log',
+        'minecraft:stripped_mangrove_log',
+        'minecraft:stripped_crimson_stem',
+        'minecraft:stripped_warped_stem'
+    ])
+    event.groupItems('minecraft:rei_groups/minecraft_stripped_woods', 'Minecraft Stripped Woods', [
+        'minecraft:stripped_oak_wood',
+        'minecraft:stripped_spruce_wood',
+        'minecraft:stripped_birch_wood',
+        'minecraft:stripped_jungle_wood',
+        'minecraft:stripped_acacia_wood',
+        'minecraft:stripped_dark_oak_wood',
+        'minecraft:stripped_mangrove_wood',
+        'minecraft:stripped_crimson_hyphae',
+        'minecraft:stripped_warped_hyphae'
+    ])
+    event.groupItems('minecraft:rei_groups/minecraft_dyes', 'Minecraft Dyes', [
+        'minecraft:black_dye',
+        'minecraft:blue_dye',
+        'minecraft:brown_dye',
+        'minecraft:cyan_dye',
+        'minecraft:gray_dye',
+        'minecraft:green_dye',
+        'minecraft:light_blue_dye',
+        'minecraft:light_gray_dye',
+        'minecraft:lime_dye',
+        'minecraft:magenta_dye',
+        'minecraft:orange_dye',
+        'minecraft:pink_dye',
+        'minecraft:purple_dye',
+        'minecraft:red_dye',
+        'minecraft:white_dye',
+        'minecraft:yellow_dye'
     ])
     event.groupItems('minecraft:rei_groups/minecraft_wool', 'Minecraft Wool', /^(minecraft:).*(wool)$/)
     event.groupItems('minecraft:rei_groups/minecraft_carpets', 'Minecraft Carpets', /^(minecraft:).*(carpet)$/)
@@ -277,6 +351,80 @@ REIEvents.groupEntries(event => {
         'minecraft:yellow_stained_glass_pane'
     ])
     event.groupItemsByTag('minecraft:rei_groups/shulker_boxes', 'Shulker Boxes', 'minecraft:shulker_boxes')
+    event.groupItemsByTag('minecraft:rei_groups/banners', 'Minecraft Banners', 'minecraft:banners')
+    event.groupItems('minecraft:rei_groups/infested_blocks', 'Minecraft Infested Blocks', /^$minecraft.*[_:\/]infested(?![a-zA-Z0-9]).*/)
+    event.groupItemsIf('kubejs:rei_groups/concrete_singularities', 'Concrete Singularities', Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id.includes('concrete_')))
+    event.groupItemsIf('kubejs:rei_groups/minecraft_valued_singularities', 'Minecraft Valued Singularities', [
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:lapis_lazuli')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:redstone')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:diamond')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:iron')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:gold')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:emerald')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:copper')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:amethyst')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:coal')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:quartz')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:netherite'))
+    ])
+    event.groupItemsIf('kubejs:rei_groups/minecraft_dimensional_singularities', 'Minecraft Dimensional Singularities', [
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:soul_sand')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:soul_soil')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:end_crystal'))
+    ])
+    event.groupItemsIf('kubejs:rei_groups/minecraft_natural_singularities', 'Minecraft Natural Singularities', [
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:coarse_dirt')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:cobblestone')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sand')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:red_sand')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:honey')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:blue_ice')),
+    ])
+    event.groupItemsIf('kubejs:rei_groups/minecraft_miscellaneous_singularities', 'Minecraft Miscellaneous Singularities', [
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:gunpowder')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:ender_pearl')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sea_lantern')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:tinted_glass')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:glowstone')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sea_lantern'))
+    ])
+    event.groupItemsIf('kubejs:rei_groups/create_singularities', 'Create Singularities', [
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:precision_mechanism')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:framed_glass')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:electron_tube')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:rose_quartz')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:chocolate')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:andesite_alloy')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:zinc')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:brass')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sturdy_sheet')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:train_track')),
+        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:builders_tea'))
+    ])
+    event.groupItems('create:rei_groups/colored_valve_handles', 'Colored Valve Handles', [
+        'create:black_valve_handle',
+        'create:blue_valve_handle',
+        'create:brown_valve_handle',
+        'create:cyan_valve_handle',
+        'create:gray_valve_handle',
+        'create:green_valve_handle',
+        'create:light_blue_valve_handle',
+        'create:light_gray_valve_handle',
+        'create:lime_valve_handle',
+        'create:magenta_valve_handle',
+        'create:orange_valve_handle',
+        'create:pink_valve_handle',
+        'create:purple_valve_handle',
+        'create:red_valve_handle',
+        'create:white_valve_handle',
+        'create:yellow_valve_handle'
+    ])
+    event.groupItemsByTag('create:rei_groups/toolboxes', 'Create Toolboxes', 'create:toolboxes')
+    event.groupItemsByTag('create:rei_groups/seats', 'Create Seats', 'create:seats')
+    event.groupItemsByTag('farmersdelight:rei_groups/canvas_signs', 'Canvas Signs', 'farmersdelight:canvas_signs')
+    event.groupItemsByTag('supplementaries:rei_groups/hanging_signs', 'Hanging Signs', 'supplementaries:hanging_signs')
+    event.groupItemsByTag('supplementaries:rei_groups/sign_posts', 'Sign Posts', 'supplementaries:sign_posts')
+    event.groupItemsByTag('kubejs:rei_groups/all_normal_signs', 'All Normal Signs', 'minecraft:signs')
     // caupona calcite columns
     event.groupItems('caupona:rei_groups/fluted_calcite_column', 'Fluted Calcite Column Components', [
         'caupona:calcite_acanthine_column_capital',
@@ -399,24 +547,6 @@ REIEvents.groupEntries(event => {
         'caupona:stone_brick_caliduct',
         'caupona:stone_brick_hypocaust_firebox'
     ])
-    event.groupItems('create:rei_groups/colored_valve_handles', 'Colored Valve Handles', [
-        'create:black_valve_handle',
-        'create:blue_valve_handle',
-        'create:brown_valve_handle',
-        'create:cyan_valve_handle',
-        'create:gray_valve_handle',
-        'create:green_valve_handle',
-        'create:light_blue_valve_handle',
-        'create:light_gray_valve_handle',
-        'create:lime_valve_handle',
-        'create:magenta_valve_handle',
-        'create:orange_valve_handle',
-        'create:pink_valve_handle',
-        'create:purple_valve_handle',
-        'create:red_valve_handle',
-        'create:white_valve_handle',
-        'create:yellow_valve_handle'
-    ])
     event.groupItems('createcafe:rei_groups/createcafe_all_items', 'Create Cafe Items', [/^(createcafe:).*$/])
     event.groupFluids('createcafe:rei_groups/createcafe_other_fluids', 'Create Cafe Basic Fluids', [
         'createcafe:melted_sugar',
@@ -485,81 +615,90 @@ REIEvents.groupEntries(event => {
     event.groupItems('sliceanddice:rei_groups/create_sliceanddice_all', 'Create Slice and Dice', [/^(sliceanddice:).*$/])
     event.groupItems('createdeco:rei_groups/create_deco_all', 'Create Deco', [/^(createdeco:).*$/])
     event.groupItems('chalk:rei_groups/chalk_all', 'All Chalks', [/^(chalk:).*(_chalk)$/])
-    event.groupItems('ad_astra:rei_groups/ad_astra_flags', 'All Ad Astra Flags', [/^(ad_astra:).*(_flag)$/])
-    Object.keys(COLOR).forEach(color => {
-        event.groupItemsByTag(`chipped:rei_groups/${color}_wool`, `Chipped ${COLOR[color]} Wool`, `chipped:${color}_wool`)
-        event.groupItemsByTag(`chipped:rei_groups/${color}_carpets`, `Chipped ${COLOR[color]} Carpets`, `chipped:${color}_carpet`)
-        event.groupItemsByTag(`chipped:rei_groups/${color}_terracotta`, `Chipped ${COLOR[color]} Terracotta`, `chipped:${color}_terracotta`)
-        event.groupItemsByTag(`chipped:rei_groups/${color}_glazed_terracotta`, `Chipped ${COLOR[color]} Glazed Terracotta`, `chipped:${color}_glazed_terracotta`)
-        event.groupItemsByTag(`chipped:rei_groups/${color}_concrete`, `Chipped ${COLOR[color]} Concrete`, `chipped:${color}_concrete`)
-        event.groupItemsByTag(`chipped:rei_groups/${color}_stained_glass`, `Chipped ${COLOR[color]} Stained Glass`, `chipped:${color}_stained_glass`)
-        event.groupItemsByTag(`chipped:rei_groups/${color}_stained_glass_panes`, `Chipped ${COLOR[color]} Stained Glass Panes`, `chipped:${color}_stained_glass_pane`)
-    })
-    event.groupItemsByTag('comforts:rei_groups/sleeping_bags', 'Comforts Sleeping Bags', 'comforts:sleeping_bags')
-    event.groupItemsByTag('comforts:rei_groups/hammocks', 'Comforts Hammocks', 'comforts:hammocks')
-    event.groupItemsByTag('handcrafted:rei_groups/cushions', 'Handcrafted Cushions', 'handcrafted:cushions')
-    event.groupItemsByTag('handcrafted:rei_groups/sheets', 'Handcrafted Sheets', 'handcrafted:sheets')
-    event.groupItemsByTag('quark:rei_groups/quark_runes', 'Quark Runes', 'quark:runes')
-    event.groupItemsIf('kubejs:rei_groups/concrete_singularities', 'Concrete Singularities', Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id.includes('concrete_')))
-    event.groupItemsIf('kubejs:rei_groups/minecraft_valued_singularities', 'Minecraft Valued Singularities', [
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:lapis_lazuli')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:redstone')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:diamond')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:iron')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:gold')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:emerald')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:copper')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:amethyst')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:coal')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:quartz')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:netherite'))
-    ])
-    event.groupItemsIf('kubejs:rei_groups/minecraft_dimensional_singularities', 'Minecraft Dimensional Singularities', [
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:soul_sand')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:soul_soil')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:end_crystal'))
-    ])
-    event.groupItemsIf('kubejs:rei_groups/minecraft_natural_singularities', 'Minecraft Natural Singularities', [
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:coarse_dirt')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:cobblestone')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sand')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:red_sand')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:honey')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:blue_ice')),
-    ])
-    event.groupItemsIf('kubejs:rei_groups/minecraft_miscellaneous_singularities', 'Minecraft Miscellaneous Singularities', [
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:gunpowder')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:ender_pearl')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sea_lantern')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:tinted_glass')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:glowstone')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sea_lantern'))
-    ])
-    event.groupItemsIf('kubejs:rei_groups/create_singularities', 'Create Singularities', [
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:precision_mechanism')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:framed_glass')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:electron_tube')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:rose_quartz')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:chocolate')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:andesite_alloy')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:zinc')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:brass')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sturdy_sheet')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:train_track')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:builders_tea'))
-    ])
-    event.groupSameItem('minecraft:rei_groups/all_regular_potions', 'All Regular Potions', 'minecraft:potion')
-    event.groupSameItem('minecraft:rei_groups/all_splash_potions', 'All Splash Potions', 'minecraft:splash_potion')
-    event.groupSameItem('minecraft:rei_groups/all_lingering_potions', 'All Lingering Potions', 'minecraft:lingering_potion')
-    event.groupSameItem('minecraft:rei_groups/all_tipped_arrows', 'All Tipped Arrows', 'minecraft:tipped_arrow')
-    event.groupSameItem('minecraft:rei_groups/all_enchantment_books', 'All Enchantment Books', 'minecraft:enchanted_book')
-    event.groupSameItem('irons_spellbooks:rei_groups/all_scrolls', "All Iron's Spell Scrolls", 'irons_spellbooks:scroll')
-    event.groupSameItem('apotheosis:rei_groups/gems', 'Apotheosis Gems', 'apotheosis:gem')
-    event.groupSameItem('apotheosis:rei_groups/potion_charms', 'Apotheosis Potion Charms', 'apotheosis:potion_charm')
     event.groupSameItem('enderchests:rei_groups/shetiphian_enderchests', 'All Ender Chests', 'enderchests:ender_chest')
     event.groupSameItem('enderchests:rei_groups/shetiphian_enderchests_pouches', 'All Ender Pouches', 'enderchests:ender_pouch')
     event.groupSameItem('endertanks:rei_groups/shetiphian_endertanks', 'All Ender Tanks', 'endertanks:ender_tank')
     event.groupSameItem('endertanks:rei_groups/shetiphian_endertanks_buckets', 'All Ender Buckets', 'endertanks:ender_bucket')
-    event.groupSameItem('quark:rei_groups/seed_pouches', 'Quark Seed Pouches', 'quark:seed_pouch')
-    event.groupSameItem('quark:rei_groups/ancient_tomes', 'Quark Ancient Tomes', 'quark:ancient_tome')
+    const REI_GROUPS = {
+        'minecraft': 'Minecraft',
+        'ad_astra': 'Ad Astra',
+        'alexsmobs': "Alex's Mobs",
+        'aquamirae': 'Aquamirae',
+        'autumnity': 'Autumnity',
+        'blue_skies': 'Blue Skies',
+        'buzzier_bees': 'Buzzier Bees',
+        'cataclysm': 'Cataclysm',
+        'cloudstorage': 'Cloud Storage',
+        'graveyard': 'Graveyard',
+        'irons_spellbooks': "Iron's Spells n' Spellbooks",
+        'neapolitan': 'Neapolitan',
+        'savage_and_ravage': 'Savage and Ravage',
+        'quark': 'Quark',
+        'whisperwoods': 'Whisperwoods'
+    }
+    Object.keys(REI_GROUPS).forEach((mod) => { // /^modid.*[_:\/]spawn(?![a-zA-Z0-9]).*/ regular expression provided by ILIKEPIEFOO2 developer of KubeJS Additions
+        if (Platform.isLoaded(mod)) {
+            let regex = new RegExp(`^${mod}.*[_:\/]spawn(?![a-zA-Z0-9]).*`);
+            event.groupItems(`${mod}:rei_groups/spawn_eggs`, `${REI_GROUPS[mod]} Spawn Eggs`, regex);
+        }
+    })
+    if (Platform.isLoaded('lilwings')) {
+        event.groupItems('lilwings:rei_groups/spawn_eggs', "Lil' Wings Spawn Eggs", /^lilwings.*[_:\/]egg(?![a-zA-Z0-9]).*/)
+    }
+    if (!Platform.isLoaded('ad_astra')) {
+        event.groupItems('kubejs:rei_groups/wrenches', 'Wrenches', [
+            'create:wrench',
+            'supplementaries:wrench',
+            'red_power:wrench',
+            'red_power:creative_wrench'
+        ])
+    }
+    if (Platform.isLoaded('ad_astra')) {
+        event.groupItems('ad_astra:rei_groups/ad_astra_flags', 'All Ad Astra Flags', [/^(ad_astra:).*(_flag)$/])
+        event.groupItems('kubejs:rei_groups/wrenches', 'Wrenches', [
+            'create:wrench',
+            'supplementaries:wrench',
+            'red_power:wrench',
+            'red_power:creative_wrench',
+            'ad_astra:wrench'
+        ])
+    }
+    if (Platform.isLoaded('apotheosis')) {
+        event.groupSameItem('apotheosis:rei_groups/gems', 'Apotheosis Gems', 'apotheosis:gem')
+        event.groupSameItem('apotheosis:rei_groups/potion_charms', 'Apotheosis Potion Charms', 'apotheosis:potion_charm')
+    }
+    if (Platform.isLoaded('comforts')) {
+        event.groupItemsByTag('comforts:rei_groups/sleeping_bags', 'Comforts Sleeping Bags', 'comforts:sleeping_bags')
+        event.groupItemsByTag('comforts:rei_groups/hammocks', 'Comforts Hammocks', 'comforts:hammocks')
+    }
+    if (Platform.isLoaded('chipped')) {
+        groupModTags('chipped', event, true)
+    }
+    if (Platform.isLoaded('gateways')) {
+        event.groupSameItem('gateways:rei_groups/gate_pearls', 'Gate Pearls', 'gateways:gate_pearl')
+    }
+    if (Platform.isLoaded('grimoireofgaia')) {
+        event.groupItems('grimoireofgaia:rei_groups/spawn_eggs', 'Grimoire of Gaia Spawn Eggs', /^grimoireofgaia.*[_:\/]spawn_egg(?![a-zA-Z0-9]).*/)
+        event.groupItems('grimoireofgaia:rei_groups/npc_spawn_eggs', 'Grimoire of Gaia NPC Spawn Eggs', [
+            'grimoireofgaia:spawn_trader',
+            'grimoireofgaia:spawn_creeper_girl',
+            'grimoireofgaia:spawn_ender_girl',
+            'grimoireofgaia:spawn_slime_girl'
+        ])
+    }
+    if (Platform.isLoaded('handcrafted')) {
+        event.groupItemsByTag('handcrafted:rei_groups/cushions', 'Handcrafted Cushions', 'handcrafted:cushions')
+        event.groupItemsByTag('handcrafted:rei_groups/sheets', 'Handcrafted Sheets', 'handcrafted:sheets')
+    }
+    if (Platform.isLoaded('irons_spellbooks')) {
+        event.groupSameItem('irons_spellbooks:rei_groups/all_scrolls', "All Iron's Spell Scrolls", 'irons_spellbooks:scroll')
+    }
+    if (Platform.isLoaded('quark')) {
+        event.groupItemsByTag('quark:rei_groups/quark_runes', 'Quark Runes', 'quark:runes')
+        event.groupSameItem('quark:rei_groups/seed_pouches', 'Quark Seed Pouches', 'quark:seed_pouch')
+        event.groupSameItem('quark:rei_groups/ancient_tomes', 'Quark Ancient Tomes', 'quark:ancient_tome')
+    }
+    if (Platform.isLoaded('v_slab_compat') && Platform.isLoaded('quark')) {
+        event.groupItemsByTag('v_slab_compat:rei_groups/vertical_slabs', 'Vertical Slab Compat', 'quark:vertical_slabs')
+    }
 })
