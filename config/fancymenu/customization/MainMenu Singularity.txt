@@ -5,7 +5,6 @@ customization-meta {
   randomgroup = 1
   renderorder = foreground
   randommode = false
-  requiredmods = kubejs, create
   randomonlyfirsttime = false
 }
 
@@ -344,7 +343,7 @@ customization {
   actionid = 6933b74a-1382-4bf0-9292-fd7ae16d24201679852528355
   action = addsplash
   y = 165
-  text = Pixels!
+  text = Bye, space sword
 }
 
 customization {

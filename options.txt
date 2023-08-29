@@ -37,7 +37,7 @@ ao:2
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:"true"
-resourcePacks:["vanilla","mod_resources","Supplementaries Generated Pack","quark:emote_resources","loadmyresources.hiddenpack","create:legacy_copper","file/Nicer-Rain-1.0.0.zip","file/Slightly-Improved-Font-1.0.0.zip","file/Enhanced Audio r5.zip","file/Finality Genesis Resources"]
+resourcePacks:["vanilla","mod_resources","Supplementaries Generated Pack","quark:emote_resources","loadmyresources.hiddenpack","create:legacy_copper","file/Nicer-Rain-1.0.0.zip","file/Slightly-Improved-Font-1.0.0.zip","file/Enhanced Audio r5.zip","file/Finality Genesis Resources","V Slab Compat Generated Pack"]
 incompatibleResourcePacks:["quark:emote_resources","loadmyresources.hiddenpack","file/Nicer-Rain-1.0.0.zip","file/Slightly-Improved-Font-1.0.0.zip"]
 lastServer:
 lang:en_us
@@ -252,6 +252,15 @@ key_key.irons_spellbooks.spell_quick_cast_12:key.keyboard.unknown
 key_key.irons_spellbooks.spell_quick_cast_13:key.keyboard.unknown
 key_key.irons_spellbooks.spell_quick_cast_14:key.keyboard.unknown
 key_key.irons_spellbooks.spell_quick_cast_15:key.keyboard.unknown
+key_key.xtracr_realcamera_togglePerspective:key.keyboard.f6
+key_key.xtracr_realcamera_toggleAdjustMode:key.keyboard.unknown
+key_key.xtracr_realcamera_toggleCameraMode:key.keyboard.unknown
+key_key.xtracr_realcamera_adjustUP:key.keyboard.unknown
+key_key.xtracr_realcamera_adjustDOWN:key.keyboard.unknown
+key_key.xtracr_realcamera_adjustBACK:key.keyboard.unknown
+key_key.xtracr_realcamera_adjustFRONT:key.keyboard.unknown
+key_key.xtracr_realcamera_adjustLEFT:key.keyboard.unknown
+key_key.xtracr_realcamera_adjustRIGHT:key.keyboard.unknown
 key_Reload Menu | CTRL + ALT + :key.keyboard.r
 key_Toggle Customization Overlay | CTRL + ALT + :key.keyboard.c
 key_key.raised.hud.down:key.keyboard.keypad.subtract
@@ -259,6 +268,8 @@ key_key.raised.hud.up:key.keyboard.keypad.add
 key_key.raised.chat.down:key.keyboard.keypad.divide
 key_key.raised.chat.up:key.keyboard.keypad.multiply
 key_gui.xaero_pac_key_open_menu:key.keyboard.apostrophe
+key_key.firstperson.toggle:key.keyboard.f6
+key_key.observable.profile:key.keyboard.keypad.decimal
 soundCategory_master:0.50165564
 soundCategory_music:0.25704226
 soundCategory_record:1.0

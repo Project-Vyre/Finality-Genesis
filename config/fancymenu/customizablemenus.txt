@@ -72,3 +72,6 @@ net.minecraft.client.gui.screens.EditServerScreen {
 net.minecraft.client.gui.screens.TitleScreen {
 }
 
+net.minecraft.client.gui.screens.PauseScreen {
+}
+

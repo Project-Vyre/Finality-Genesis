@@ -5,7 +5,13 @@ customization-meta {
   randomgroup = 1
   renderorder = foreground
   randommode = false
+  requiredmods = kubejs, kubejs_create, create
   randomonlyfirsttime = false
+}
+
+customization {
+  action = setscale
+  scale = 2
 }
 
 customization {
