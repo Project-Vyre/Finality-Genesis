@@ -107,6 +107,11 @@
 				"16FA2F3F79C9F5B3"
 			]
 			id: "2B228A91B4DA2F9E"
+			rewards: [{
+				id: "047202FCDB3652A5"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
 			subtitle: "Blazes can now enchant for you!"
 			tasks: [{
 				id: "7238D68E4F04E453"
@@ -119,7 +124,14 @@
 		}
 		{
 			dependencies: ["405F80F5E78FF024"]
+			description: ["In order to make Liquid Hyper Experience, you will need to combine XP with &91x Lapis Lazuli&r and &31x Glowing Ink Sac&r in a &bsuperheated&r basin and mix them together."]
+			icon: "create_enchantment_industry:hyper_experience_bottle"
 			id: "4AC144AE5EFA463E"
+			rewards: [{
+				id: "38B9BA8EAA053FF1"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
 			subtitle: "Consolidated liquid experience!"
 			tasks: [
 				{
@@ -130,6 +142,11 @@
 				{
 					id: "4E30A91221F4FF0B"
 					item: "minecraft:glow_ink_sac"
+					type: "item"
+				}
+				{
+					id: "0C4E26C0C91B3FB2"
+					item: "create_enchantment_industry:hyper_experience_bottle"
 					type: "item"
 				}
 			]

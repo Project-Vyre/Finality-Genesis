@@ -1028,7 +1028,9 @@
 			description: [
 				"Hold [w] to Ponder to learn more!"
 				""
-				"By default, has a maximum range of 32 blocks."
+				"Weighted Ejectors are great for throwing items long distances or in tight corners. They can also be configured to eject a specified stack size."
+				""
+				"By default they have a maximum range of 32 blocks."
 			]
 			id: "3ED7372ADB1D3FE7"
 			rewards: [{
@@ -2062,7 +2064,7 @@
 			shape: "hexagon"
 			subtitle: "The amount of Sail Frames required for a maximum strength Windmill..."
 			tasks: [{
-				count: 124L
+				count: 128L
 				id: "4FF0828AAFBBE7D7"
 				item: "create:white_sail"
 				type: "item"
@@ -2945,7 +2947,11 @@
 				"584B2971C4DEB905"
 				"38E2EE3F3F2C2E6C"
 			]
-			description: ["You can also hold the haunted bell in your offhand to see where mobs have the possibility of spawning."]
+			description: [
+				"You can also hold the &3&l&o<wiggle>haunted</wiggle>&r bell in your offhand to see where mobs have the possibility of spawning."
+				""
+				"This is indicated by &3souls&r rising up from the top face of a block."
+			]
 			id: "3E0990C4385C0B5F"
 			rewards: [{
 				id: "2B13EDD595D52174"
@@ -3210,11 +3216,18 @@
 			]
 			hide: true
 			id: "205BAFFFECA72D1E"
-			rewards: [{
-				id: "0D226167D60F841A"
-				type: "xp"
-				xp: 50
-			}]
+			rewards: [
+				{
+					id: "0D226167D60F841A"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "196341E471A2A5EB"
+					item: "create:redstone_contact"
+					type: "item"
+				}
+			]
 			subtitle: "This has many uses, trust me."
 			tasks: [{
 				id: "32AD37AC33F00FD7"
