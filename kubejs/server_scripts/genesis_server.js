@@ -170,6 +170,18 @@ ServerEvents.recipes(event => {
         E: 'kubejs:high_entropy_alloy',
         S: 'extendedcrafting:black_iron_ingot'
     }).id('finality:crafting/final_sword')
+    event.recipes.createMechanicalCrafting('kubejs:crystal_lance', [
+        ' A ',
+        ' A ',
+        'BBB',
+        ' B ',
+        ' B ',
+        ' B ',
+        ' B '
+    ], {
+        A: 'minecraft:amethyst_shard',
+        B: 'extendedcrafting:black_iron_ingot',
+    }).id('finality:crystal_lance')
     event.recipes.createMechanicalCrafting('kubejs:final_katana', [
         ' E ',
         ' E ',
