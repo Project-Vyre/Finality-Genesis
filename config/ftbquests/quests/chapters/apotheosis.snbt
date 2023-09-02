@@ -415,11 +415,19 @@
 			dependencies: ["1189AFE0B71158E6"]
 			description: ["You can make the most &6powerful&r tools imaginable, don't say I warned you."]
 			id: "3718E49C5B96FBFA"
-			rewards: [{
-				id: "2996F22AA3FA1626"
-				type: "xp_levels"
-				xp_levels: 30
-			}]
+			rewards: [
+				{
+					id: "2996F22AA3FA1626"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "05ADE9AE81C39F18"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			subtitle: "This is where things get VERY interesting."
 			tasks: [{
 				id: "46BECAA580019513"

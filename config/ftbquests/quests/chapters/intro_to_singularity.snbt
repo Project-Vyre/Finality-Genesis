@@ -615,6 +615,15 @@
 					item: "echochest:echo_chest"
 					type: "item"
 				}
+				{
+					id: "6FECCB0334CF7626"
+					item: {
+						Count: 1b
+						id: "monobank:monobank"
+						tag: { }
+					}
+					type: "item"
+				}
 			]
 			title: "Convenient Utilities Ch.3"
 			x: -3.0d

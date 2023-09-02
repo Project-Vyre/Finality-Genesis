@@ -169,6 +169,19 @@
 			dependencies: ["3CAA949A0C1A688A"]
 			icon: "cataclysm:gauntlet_of_guard"
 			id: "718AC83467E9FB0F"
+			rewards: [
+				{
+					id: "5FDC545FEBD9849F"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0698C1E35880312F"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			shape: "square"
 			subtitle: "Win the battle and earn the Gauntlet of Guard."
 			tasks: [
@@ -221,6 +234,19 @@
 			dependencies: ["0747981239EC0227"]
 			icon: "minecraft:deepslate_bricks"
 			id: "656C306BB7FF0758"
+			rewards: [
+				{
+					id: "266EA4CE72308985"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "43ACF3E4F3AA9654"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			shape: "square"
 			subtitle: "Give the Harbinger its heart, then prepare for the worst."
 			tasks: [
@@ -290,6 +316,7 @@
 			dependencies: ["6F799476F9E6E69A"]
 			id: "458D846250812A82"
 			shape: "square"
+			subtitle: "Decimate your foes."
 			tasks: [{
 				id: "4EC290963C93788D"
 				item: {
@@ -308,6 +335,7 @@
 			dependencies: ["6F799476F9E6E69A"]
 			id: "2DA38B93D5B1B658"
 			shape: "square"
+			subtitle: "Push with the force of mountains."
 			tasks: [{
 				id: "220340EF1CB9034E"
 				item: "cataclysm:gauntlet_of_bulwark"
@@ -320,6 +348,7 @@
 			dependencies: ["6F799476F9E6E69A"]
 			id: "5860DCD8D31E9DEA"
 			shape: "square"
+			subtitle: "Explosive might in your hands."
 			tasks: [{
 				id: "67FF31CFCA37B51D"
 				item: "cataclysm:void_assault_shoulder_weapon"

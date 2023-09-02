@@ -106,11 +106,23 @@
 			]
 			icon: "caupona:stew_pot"
 			id: "6C36D237085C8503"
-			rewards: [{
-				id: "47B6370C2142FBA4"
-				type: "xp"
-				xp: 250
-			}]
+			rewards: [
+				{
+					id: "47B6370C2142FBA4"
+					type: "xp"
+					xp: 250
+				}
+				{
+					id: "368F5FB64BE3D963"
+					item: "caupona:walnut_sapling"
+					type: "item"
+				}
+				{
+					id: "48D524422C23B03E"
+					item: "caupona:fig_sapling"
+					type: "item"
+				}
+			]
 			subtitle: "Make sure to have lots of water!"
 			tasks: [
 				{
@@ -145,11 +157,18 @@
 				"You may have to go through a few tabs if you are using &7REI&r/&2JEI&r in order to view the stew and soup recipes. It's called the &aCook Stew/Soup&r recipe category."
 			]
 			id: "5B5E7384E4E458C1"
-			rewards: [{
-				id: "2B5781C507A5B8BA"
-				type: "xp"
-				xp: 500
-			}]
+			rewards: [
+				{
+					id: "2B5781C507A5B8BA"
+					type: "xp"
+					xp: 500
+				}
+				{
+					id: "3D38FF1AC9EE12D4"
+					item: "caupona:wolfberry_sapling"
+					type: "item"
+				}
+			]
 			subtitle: "You will obviously need a heat source."
 			tasks: [{
 				id: "76B30065335688AA"

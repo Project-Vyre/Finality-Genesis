@@ -601,11 +601,19 @@
 		{
 			dependencies: ["76DE1DB31C32A913"]
 			id: "1CF9859D66D393AC"
-			rewards: [{
-				id: "1DB7DA4F5CF6ABA4"
-				type: "xp"
-				xp: 100
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "594FA2AC0E23036D"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "5AF9E1A0C8A7585F"
+					type: "xp"
+					xp: 100
+				}
+			]
 			subtitle: "An easy method of routing shafts vertically if you rotate them with a Wrench."
 			tasks: [{
 				id: "01AE4850A2D6DE1B"
@@ -662,11 +670,19 @@
 			]
 			hide: true
 			id: "1006DEF6267D3741"
-			rewards: [{
-				id: "48873FD4055276C4"
-				type: "xp"
-				xp: 250
-			}]
+			rewards: [
+				{
+					id: "48873FD4055276C4"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "214D55F98A4299AE"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
 			subtitle: "Gear ratios without cogwheels!"
 			tasks: [{
 				id: "22132BA00C57A9B9"
@@ -751,11 +767,19 @@
 		{
 			dependencies: ["0194851298AADB65"]
 			id: "7EE9C850EF4C9BDC"
-			rewards: [{
-				id: "0929108E45283B8A"
-				type: "xp"
-				xp: 250
-			}]
+			rewards: [
+				{
+					id: "0929108E45283B8A"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5552C394EC582DA9"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
 			subtitle: "The smart and precise Sequenced Gearshift."
 			tasks: [{
 				id: "47A4649D15EE3D15"
@@ -1065,11 +1089,19 @@
 			dependencies: ["2E386081E5302CF5"]
 			description: ["You can right click using a &6Wrench&r to open a window on the pipe or to make it not connect with adjacent fluid pipes."]
 			id: "6AC32180F67385D6"
-			rewards: [{
-				id: "0CEA0F11A6431101"
-				type: "xp"
-				xp: 250
-			}]
+			rewards: [
+				{
+					id: "0CEA0F11A6431101"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "579D6B6BEF05F22E"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
 			subtitle: "Fluid transportation!"
 			tasks: [{
 				id: "12202DAEFFEB3B44"
@@ -1084,11 +1116,19 @@
 			dependencies: ["6AC32180F67385D6"]
 			description: ["Paired with Fluid Pipes, Mechanical Pumps can extract honey from beehives without angering the bees."]
 			id: "046D0A0ADA6236A8"
-			rewards: [{
-				id: "3F9727754F4FE9A9"
-				type: "xp"
-				xp: 250
-			}]
+			rewards: [
+				{
+					id: "3F9727754F4FE9A9"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "31F3B526E3D7055E"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
 			subtitle: "You have the puuump."
 			tasks: [{
 				id: "531FBFD8F57470D1"
@@ -1102,11 +1142,19 @@
 		{
 			dependencies: ["2E386081E5302CF5"]
 			id: "762E4AB54C6B5D42"
-			rewards: [{
-				id: "33CEFD3A1375D6FE"
-				type: "xp"
-				xp: 250
-			}]
+			rewards: [
+				{
+					id: "33CEFD3A1375D6FE"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "380AF6CD02AB17AA"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
 			shape: "octagon"
 			subtitle: "Mass fluid storage!"
 			tasks: [{
@@ -1177,11 +1225,19 @@
 			]
 			hide: true
 			id: "0352B65BF524BA37"
-			rewards: [{
-				id: "45620FA6E4322AD5"
-				type: "xp_levels"
-				xp_levels: 5
-			}]
+			rewards: [
+				{
+					id: "45620FA6E4322AD5"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1D6E06F9BDA21B84"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
 			subtitle: "Achievement unlocked: Busy Hands"
 			tasks: [{
 				id: "054C34E3E5E37622"
@@ -1195,11 +1251,19 @@
 			dependencies: ["00DA4B8905FE3CAF"]
 			description: ["Used in making the Deployer and Extendo Grip in base Create."]
 			id: "5DD3DEBA65F73267"
-			rewards: [{
-				id: "5105BF42261D7175"
-				type: "xp_levels"
-				xp_levels: 5
-			}]
+			rewards: [
+				{
+					id: "5105BF42261D7175"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "4A4EAABA97B3B19D"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
 			subtitle: "A very handy component!"
 			tasks: [{
 				id: "52BEB8DC279F6D3A"
@@ -1217,11 +1281,19 @@
 				"Hold [w] to Ponder to learn more!"
 			]
 			id: "16B642E5E7DBE75D"
-			rewards: [{
-				id: "670871EAC8BA9470"
-				type: "xp"
-				xp: 250
-			}]
+			rewards: [
+				{
+					id: "670871EAC8BA9470"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "33E03D4513250F2A"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
 			subtitle: "Automated pouring!"
 			tasks: [{
 				id: "5526AF6D60A35374"
@@ -1348,9 +1420,15 @@
 					type: "random"
 				}
 				{
-					id: "73296F0DF7169340"
-					type: "xp_levels"
-					xp_levels: 750
+					exclude_from_claim_all: true
+					id: "4103AF973C6B6636"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "4C4853612A490A30"
+					type: "xp"
+					xp: 750
 				}
 			]
 			shape: "octagon"
@@ -1992,11 +2070,19 @@
 			dependencies: ["2E386081E5302CF5"]
 			description: ["In order for a body of fluid to be considered &d<shake>infinite</shake>&r it has to be 10,000 blocks in volume and some additional blocks because it can't be exactly 10,000 for some reason."]
 			id: "1DA9BAAA83A3959B"
-			rewards: [{
-				id: "70349A32459AF48C"
-				type: "xp"
-				xp: 250
-			}]
+			rewards: [
+				{
+					id: "70349A32459AF48C"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "36D0A4DC0EB633D8"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
 			subtitle: "The key to extracting infinite amounts of fluids."
 			tasks: [{
 				id: "17A387A140D8C805"
@@ -2277,6 +2363,12 @@
 					type: "xp"
 					xp: 250
 				}
+				{
+					exclude_from_claim_all: true
+					id: "5D3C6A5735F9457E"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
 			]
 			shape: "hexagon"
 			subtitle: "Acquire some basic Copper Age materials."
@@ -2331,11 +2423,19 @@
 			dependencies: ["0194851298AADB65"]
 			description: ["Hold [w] to Ponder to learn more!"]
 			id: "1D75F7EBD23D3988"
-			rewards: [{
-				id: "185820DAC288B265"
-				type: "xp"
-				xp: 250
-			}]
+			rewards: [
+				{
+					id: "185820DAC288B265"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3A2AD14E53CD0AB6"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
 			subtitle: "The mechanical eye that reveals the soul."
 			tasks: [{
 				id: "0B7AC270238DECD4"
@@ -2354,11 +2454,19 @@
 				"An example use case for the Threshold Switch is stopping production when an Item Vault reaches a certain threshold of space used."
 			]
 			id: "050F508C5A4EA99E"
-			rewards: [{
-				id: "4CBD455A6232C26C"
-				type: "xp"
-				xp: 250
-			}]
+			rewards: [
+				{
+					id: "4CBD455A6232C26C"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "01381DCB121C4AA2"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
 			subtitle: "The mechanical eye that monitors for emptiness or fullness."
 			tasks: [{
 				id: "3CEDE6CDCA284FA9"
@@ -2404,11 +2512,19 @@
 		{
 			dependencies: ["0194851298AADB65"]
 			id: "3F6B316FDB524F86"
-			rewards: [{
-				id: "4FB0CC6265089428"
-				type: "xp"
-				xp: 50
-			}]
+			rewards: [
+				{
+					id: "4FB0CC6265089428"
+					type: "xp"
+					xp: 50
+				}
+				{
+					exclude_from_claim_all: true
+					id: "438AF6C5F4D25279"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
 			subtitle: "Create the Clockwork Bearing"
 			tasks: [{
 				id: "2888BB0349EBFBA0"
@@ -2675,7 +2791,7 @@
 				""
 				"Has a default maximum range of 10 blocks."
 				""
-				"Hold Alt to open the Toolbox interface and move your mouse to change selection."
+				"Hold left &e[Alt]&r to open the Toolbox interface and move your mouse to change selection."
 			]
 			id: "57D6D3AF17AE4DD1"
 			rewards: [
@@ -2758,11 +2874,19 @@
 				"However, for potion making you will need to set a recipe filter first beforehand."
 			]
 			id: "60839EAF324E7086"
-			rewards: [{
-				id: "48954AAB91FCB814"
-				type: "xp"
-				xp: 250
-			}]
+			rewards: [
+				{
+					id: "48954AAB91FCB814"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7137128C0368DF40"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
 			subtitle: "Useful if you want to drain buckets from a milk farm, lava farm and more."
 			tasks: [{
 				id: "5BFFDC4C27256AC0"
@@ -2809,11 +2933,19 @@
 			dependencies: ["0194851298AADB65"]
 			icon: "create:display_board"
 			id: "11F16BF2C56756F3"
-			rewards: [{
-				id: "63E7891B309656CD"
-				type: "xp"
-				xp: 250
-			}]
+			rewards: [
+				{
+					id: "63E7891B309656CD"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0652095427AE340D"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
 			subtitle: "Very useful for displaying information."
 			tasks: [
 				{
@@ -2851,7 +2983,13 @@
 					type: "random"
 				}
 				{
-					id: "3C897E4FEAB526FC"
+					exclude_from_claim_all: true
+					id: "583454557F4F24DA"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "466516E0AE001E2A"
 					type: "xp_levels"
 					xp_levels: 5
 				}
@@ -2888,7 +3026,13 @@
 					type: "random"
 				}
 				{
-					id: "79A28DF7574E0770"
+					exclude_from_claim_all: true
+					id: "4044C644969CD7D4"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "429BF93664F2FF1A"
 					type: "xp_levels"
 					xp_levels: 5
 				}
@@ -2921,7 +3065,13 @@
 					type: "random"
 				}
 				{
-					id: "633E7854461AC0C4"
+					exclude_from_claim_all: true
+					id: "0E390FAD662C9050"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "3B48AC1222AC3479"
 					type: "xp_levels"
 					xp_levels: 5
 				}
@@ -2971,11 +3121,19 @@
 				"This is indicated by &3souls&r rising up from the top face of a block."
 			]
 			id: "3E0990C4385C0B5F"
-			rewards: [{
-				id: "2B13EDD595D52174"
-				type: "xp_levels"
-				xp_levels: 5
-			}]
+			rewards: [
+				{
+					id: "2B13EDD595D52174"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "54DCA3A94073C671"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
 			subtitle: "I shall show you where the souls of the damned appear o' wise one."
 			tasks: [{
 				id: "48375D6A6B20BE40"
@@ -3005,11 +3163,19 @@
 				}
 			}
 			id: "61624301D1511BB0"
-			rewards: [{
-				id: "52306D96A3377941"
-				type: "xp_levels"
-				xp_levels: 3
-			}]
+			rewards: [
+				{
+					id: "52306D96A3377941"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "213022EF34518692"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
 			subtitle: "For underwater exploration."
 			tasks: [
 				{
@@ -3265,11 +3431,19 @@
 				"This also applies to making chocolate since the Basin would contain both the Milk and Chocolate fluids."
 			]
 			id: "0F77020B805CCEBC"
-			rewards: [{
-				id: "32158E4693442B28"
-				type: "xp"
-				xp: 500
-			}]
+			rewards: [
+				{
+					id: "32158E4693442B28"
+					type: "xp"
+					xp: 500
+				}
+				{
+					exclude_from_claim_all: true
+					id: "02BFEE4A0B96D78E"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
 			subtitle: "If you want to be very specific about fluid filtration."
 			tasks: [{
 				id: "289E3FF04E6072D0"
@@ -3288,11 +3462,19 @@
 				"What takes up so much space or requires the use of hoppers can now be achieved with less space taken."
 			]
 			id: "3D6A28C50E86EA2E"
-			rewards: [{
-				id: "36C6AFD82EFC6AC7"
-				type: "xp_levels"
-				xp_levels: 1
-			}]
+			rewards: [
+				{
+					id: "36C6AFD82EFC6AC7"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7998B1DF54AEC795"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
 			subtitle: "The most compact and adjustable redstone clock!"
 			tasks: [{
 				id: "74BF29F609571514"
@@ -3307,11 +3489,19 @@
 			dependencies: ["00DA4B8905FE3CAF"]
 			description: ["Hold [w] to Ponder to learn more!"]
 			id: "68376786E8D45E69"
-			rewards: [{
-				id: "73387A060C0C7DF6"
-				type: "xp_levels"
-				xp_levels: 1
-			}]
+			rewards: [
+				{
+					id: "73387A060C0C7DF6"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1A46DF8DB3A4936C"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
 			subtitle: "This should be self-explanatory."
 			tasks: [{
 				id: "24C7307084B2B196"
@@ -3342,7 +3532,13 @@
 					type: "random"
 				}
 				{
-					id: "0B2483D0FB41D045"
+					exclude_from_claim_all: true
+					id: "7F4DC618F0913534"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "2BDEE711E10F7EEC"
 					type: "xp_levels"
 					xp_levels: 5
 				}
@@ -3365,11 +3561,19 @@
 				"Mostly used for decorative purposes."
 			]
 			id: "1BD09AD0A5B739CA"
-			rewards: [{
-				id: "2F1606AB1614F677"
-				type: "xp"
-				xp: 100
-			}]
+			rewards: [
+				{
+					id: "2F1606AB1614F677"
+					type: "xp"
+					xp: 100
+				}
+				{
+					exclude_from_claim_all: true
+					id: "4581EF69FE3B6B62"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
 			subtitle: "The voice of an angel..."
 			tasks: [{
 				id: "4D36CD45D808E2E2"
@@ -3396,11 +3600,19 @@
 				"Upon pressing the button, you can toggle the state of the contraption actor specified in the filter to be &aENABLED&r or &cDISABLED&r which can be very useful for trains and minecart contraptions so they don't accidentally break their tracks."
 			]
 			id: "5172E10D8831BABF"
-			rewards: [{
-				id: "41B79585F387FDC6"
-				type: "xp"
-				xp: 500
-			}]
+			rewards: [
+				{
+					id: "41B79585F387FDC6"
+					type: "xp"
+					xp: 500
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7033007BD5674027"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
 			subtitle: "Mechanical Rollers breaking everything? I take care of that."
 			tasks: [{
 				id: "4780AFC1FB496E12"
@@ -3725,6 +3937,11 @@
 		{
 			dependencies: ["6AC32180F67385D6"]
 			id: "472346AC958653EA"
+			rewards: [{
+				id: "398DD02644EBE1D0"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "Need to prevent other fluids from going through temporarily? I got you covered!"
 			tasks: [{
 				id: "541E6D766ABAEBBE"
@@ -3787,6 +4004,19 @@
 				"If you don't have the materials to make a Water Wheel or want to manually provide rotational force, the Hand Crank is what you would use."
 			]
 			id: "2487DFEA82CBA230"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "16B7D22EB815223C"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "635D80104A5C3856"
+					type: "xp"
+					xp: 25
+				}
+			]
 			subtitle: "Everyone has to start somewhere."
 			tasks: [{
 				id: "2E89C0BE8AE1EC2B"
@@ -3799,7 +4029,21 @@
 		}
 		{
 			dependencies: ["400260FDC774443B"]
+			description: ["This stuff grows your plants and trees &l&o<rainb>instantly</rainb>&r, so it's best that you automate this for future usage!"]
 			id: "02ADC2412F6B6238"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "50E96FD8FAF7D0CD"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "02FBE2500FCB2AA5"
+					type: "xp"
+					xp: 250
+				}
+			]
 			subtitle: "Not your ordinary fertilizer!"
 			tasks: [{
 				id: "72A297B630BAB38A"
@@ -3832,6 +4076,7 @@
 				""
 				"Step 3: Automate Lava collection. You can either do this with a Nether train system as you can easily find a lava lake that can satisfy the Bottomless Supply requirement of 10,000 source blocks. Use a &6Hose Pulley&r and start extracting while looking at it with &eEngineer's Goggles&r to verify this."
 			]
+			icon: "create:blaze_cake"
 			id: "2B16FED43886A343"
 			rewards: [
 				{
