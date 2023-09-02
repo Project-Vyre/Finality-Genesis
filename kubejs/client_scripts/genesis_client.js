@@ -134,6 +134,9 @@ ItemEvents.tooltip(event => {
             ])
         }
     })
+    if (Platform.isLoaded('alexsmobs')) {
+        event.add('minecraft:carved_pumpkin', Text.gray('Used to scare away crows from your crops.'))
+    }
     if (Platform.isLoaded('cloudstorage')) {
         event.add('cloudstorage:balloon_bit', Text.gray('With the power of the crafting table, you can make a new balloon from these pieces.'))
         event.addAdvanced('cloudstorage:cloud_chest', (item, advanced, text) => {
@@ -249,6 +252,7 @@ ItemEvents.tooltip(event => {
     if (Platform.isLoaded('autumnity')) {
         event.add('autumnity:sappy_maple_log', Text.gray('Right click with a glass bottle to extract sap.'))
         event.add('autumnity:sappy_maple_wood', Text.gray('Right click with a glass bottle to extract sap.'))
+        event.add('autumnity:foul_berries', Text.gray('Can be fed to turkeys.'))
     }
     if (Platform.isLoaded('backpacked')) {
         event.addAdvanced('backpacked:backpack', (item, advanced, text) => {
