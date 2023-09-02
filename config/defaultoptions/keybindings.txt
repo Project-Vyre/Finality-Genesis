@@ -58,6 +58,8 @@ key_key.curios.open.desc:key.keyboard.g:NONE
 key_key.toggleVisualItemContents:key.keyboard.unknown:NONE
 key_key.toggleSelectedItemTooltips:key.keyboard.unknown:NONE
 key_key.toggleCarriedItemTooltips:key.keyboard.unknown:NONE
+key_keybinds.bettercombat.feint:key.keyboard.unknown:NONE
+key_keybinds.bettercombat.toggle_mine_with_weapons:key.keyboard.unknown:NONE
 key_gui.xaero_switch_waypoint_set:key.keyboard.unknown:NONE
 key_gui.xaero_instant_waypoint:key.keyboard.keypad.add:NONE
 key_gui.xaero_toggle_slime:key.keyboard.unknown:NONE
@@ -189,5 +191,4 @@ key_key.raised.hud.up:key.keyboard.keypad.add:NONE
 key_key.raised.chat.down:key.keyboard.keypad.divide:NONE
 key_key.raised.chat.up:key.keyboard.keypad.multiply:NONE
 key_gui.xaero_pac_key_open_menu:key.keyboard.apostrophe:NONE
-key_key.firstperson.toggle:key.keyboard.f6:NONE
 key_key.observable.profile:key.keyboard.keypad.decimal:NONE
