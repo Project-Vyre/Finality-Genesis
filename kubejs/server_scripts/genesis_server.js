@@ -39,6 +39,13 @@ let MODRECIPES = [
     'createaddition:rolling/gold_ingot',
     'createaddition:rolling/brass_ingot'
 ]
+let STORAGE_INCEPTION = [
+    'cobblestone',
+    'cobbled_deepslate',
+    'gravel',
+    'sand',
+    'red_sand'
+]
 let COLORID = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 ServerEvents.recipes(event => {
     FOUNDATION_NONMETAL.forEach(insert => { // why can you even smelt and blast these ores? YOU LITERALLY LOSE SO MUCH!
@@ -163,6 +170,29 @@ ServerEvents.recipes(event => {
         E: 'kubejs:high_entropy_alloy',
         S: 'extendedcrafting:black_iron_ingot'
     }).id('finality:crafting/final_sword')
+    event.recipes.createMechanicalCrafting('kubejs:final_katana', [
+        ' E ',
+        ' E ',
+        ' E ',
+        'GGG',
+        ' I '
+    ], {
+        E: 'kubejs:high_entropy_alloy',
+        G: 'minecraft:amethyst_shard',
+        I: 'extendedcrafting:black_iron_ingot'
+    }).id('finality:mechanical_crafting/final_katana')
+    event.recipes.createMechanicalCrafting('kubejs:final_lance', [
+        '  E  ',
+        '  E  ',
+        'IIIII',
+        'I I I',
+        '  I  ',
+        '  I  ',
+        '  I  '
+    ], {
+        E: 'kubejs:high_entropy_alloy',
+        I: 'extendedcrafting:black_iron_ingot'
+    }).id('finality:mechanical_crafting/final_lance')
     event.shaped('kubejs:final_pickaxe', [
         'EEE',
         ' S ',
@@ -303,7 +333,7 @@ ServerEvents.recipes(event => {
     event.recipes.createCrushing([
         'create:cinder_flour',
         Item.of('create:cinder_flour').withChance(0.50),
-        Item.of('minecraft:netherite_scrap').withChance(0.002)
+        Item.of('minecraft:netherite_scrap').withChance(0.0002)
     ], 'minecraft:netherrack').processingTime(250).id('finality:netherrack_crushing')
     event.recipes.createCrushing([
         Item.of('minecraft:gold_nugget', 5).withChance(0.10),
@@ -383,6 +413,32 @@ ServerEvents.recipes(event => {
         '#forge:stripped_logs',
         'create:shadow_steel'
     ]).id('create:shadow_steel_casing')
+    STORAGE_INCEPTION.forEach(insert => {
+        event.shaped(`kubejs:compressed_${insert}`, [
+            'BBB',
+            'BBB',
+            'BBB'
+        ], {
+            B: `minecraft:${insert}`
+        }).id(`finality:compressed_${insert}`)
+        event.shaped(`kubejs:double_compressed_${insert}`, [
+            'BBB',
+            'BBB',
+            'BBB'
+        ], {
+            B: `kubejs:compressed_${insert}`
+        }).id(`finality:double_compressed_${insert}`)
+        event.shaped(`kubejs:triple_compressed_${insert}`, [
+            'BBB',
+            'BBB',
+            'BBB'
+        ], {
+            B: `kubejs:double_compressed_${insert}`
+        }).id(`finality:triple_compressed_${insert}`)
+        event.shapeless(`9x kubejs:double_compressed_${insert}`, `kubejs:triple_compressed_${insert}`).id(`finality:triple_compressed_${insert}_decompression`)
+        event.shapeless(`9x kubejs:compressed_${insert}`, `kubejs:double_compressed_${insert}`).id(`finality:double_compressed_${insert}_decompression`)
+        event.shapeless(`9x minecraft:${insert}`, `kubejs:compressed_${insert}`).id(`finality:compressed_${insert}_decompression`)
+    })
     if (Platform.isLoaded('quark')) {
         event.shaped('minecraft:hopper', [
             'ILI',
@@ -533,6 +589,7 @@ LootJS.modifiers((event) => {
     event.addBlockLootModifier('create:zinc_ore').randomChance(0.2).addLoot('create:raw_zinc')
     event.addBlockLootModifier('create:deepslate_zinc_ore').randomChance(0.3).addLoot('create:raw_zinc')
     event.addLootTypeModifier(LootType.CHEST).removeLoot('minecraft:bucket')
+    event.addEntityLootModifier('minecraft:creeper').randomChance(0.05).addLoot('create:zinc_nugget')
 });
 
 LevelEvents.afterExplosion(event => {
