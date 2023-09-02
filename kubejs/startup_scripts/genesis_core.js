@@ -85,6 +85,9 @@ let PRIMORDIAL_MECHANISMS = {
 const TOOLS = ['sword', 'shovel', 'pickaxe', 'axe', 'hoe']
 const ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
 const DIVING = ['diving_helmet', 'backtank', 'diving_boots']
+let LEGENDARY = ['whisper_of_the_abyss', 'coral_lance', 'divider']
+let ABYSS_ARMOR = ['heaume', 'brigantine', 'leggings', 'boots']
+let EL_TOOLS = ['sword', 'shovel', 'pickaxe', 'axe', 'scythe']
 StartupEvents.registry('item', event => { // Register new items here event.create('example_item').displayName('Example Item')
     event.create('kubejs:deepslate_shard').texture('kubejs:item/deepslate_shard').maxStackSize(64)
     event.create('kubejs:trident_pole').texture('kubejs:item/trident_pole').maxStackSize(64)
@@ -121,8 +124,9 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     event.create('kubejs:final_hoe', 'hoe').tier('final_tool').displayName('§l<rainb>Agricola Manus</rainb>').texture('kubejs:item/final_hoe').maxStackSize(1).fireResistant(true).group('tools')
     // weapons
     event.create('kubejs:final_sword', 'sword').tier('final_tool').displayName('§l<rainb>Corevis Ultimatum</rainb>').texture('kubejs:item/final_sword').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_lance', 'sword').tier('final_tool').displayName('§l<rainb>Tenebris Punctura</rainb>').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:crystal_lance', 'sword').tier('final_tool').displayName('§b<rainb>Crystallus Hasta</rainb>').maxStackSize(1).fireResistant(true).group('combat')
     event.create('kubejs:final_katana', 'sword').tier('final_tool').displayName('§l<rainb>Celeritas Obumbratio</rainb>').texture('kubejs:item/final_katana').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_lance', 'sword').tier('final_tool').displayName('§l<rainb>Tenebris Punctura</rainb>').texture('kubejs:item/final_lance').maxStackSize(1).fireResistant(true).group('combat')
     // armor
     event.create('kubejs:final_helmet', 'helmet').tier('final_armor').displayName('§l<rainb>Conscientia Oculi</rainb>').texture('kubejs:item/final_helmet').maxStackSize(1).fireResistant(true).group('combat')
     event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor').displayName('§l<rainb>Vitale Cordis</rainb>').texture('kubejs:item/final_chestplate').maxStackSize(1).fireResistant(true).group('combat')
@@ -387,4 +391,70 @@ ItemEvents.modification(event => {
     DIVING.forEach(armor => event.modify(`create:netherite_${armor}`, item => {
         item.maxDamage = 1024
     }))
+    // aquamirae
+    LEGENDARY.forEach(insert => {
+        event.modify(`aquamirae:${insert}`, item => {
+            item.maxDamage = -1
+            item.fireResistant = true
+        })
+    })
+    ABYSS_ARMOR.forEach(insert => {
+        event.modify(`aquamirae:abyssal_${insert}`, item => {
+            item.maxDamage = -1
+            item.fireResistant = true
+        })
+    })
+    event.modify('aquamirae:abyssal_tiara', item => {
+        item.maxDamage = -1
+        item.fireResistant = true
+    })
+    event.modify('aquamirae:maze_rose', item => {
+        item.maxDamage = -1
+        item.fireResistant = true
+    })
+    event.modify('aquamirae:poisoned_chakra', item => {
+        item.maxDamage = -1
+        item.fireResistant = true
+    })
+    ARMOR.forEach(insert => {
+        event.modify(`aquamirae:three_bolt_${insert}`, item => {
+            item.maxDamage = -1
+            item.fireResistant = true
+        })
+    })
+    // bhc
+    event.modify('bhc:blade_of_vitality', item => {
+        item.maxDamage = -1
+        item.fireResistant = true
+    })
+    // enigmatic legacy
+    EL_TOOLS.forEach(insert => {
+        event.modify(`enigmaticlegacy:etherium_${insert}`, item => {
+            item.maxDamage = -1
+            item.fireResistant = true
+        })
+    })
+    ARMOR.forEach(insert => {
+        event.modify(`enigmaticlegacy:etherium${insert}`, item => {
+            item.maxDamage = -1
+            item.fireResistant = true
+        })
+    })
+    event.modify('enigmaticlegacy:astral_breaker', item => {
+        item.maxDamage = -1
+        item.fireResistant = true
+    })
+    // farmer's delight
+    event.modify('farmersdelight:flint_knife', item => {
+        item.maxDamage = 256
+    })
+    event.modify('farmersdelight:iron_knife', item => {
+        item.maxDamage = 512
+    })
+    event.modify('farmersdelight:diamond_knife', item => {
+        item.maxDamage = 1820
+    })
+    event.modify('farmersdelight:netherite_knife', item => {
+        item.maxDamage = 4096
+    })
 })
