@@ -350,6 +350,24 @@ REIEvents.groupEntries(event => {
         'minecraft:white_stained_glass_pane',
         'minecraft:yellow_stained_glass_pane'
     ])
+    event.groupItems('minecraft:rei_groups/beds', 'Minecraft Beds', [
+        'minecraft:black_bed',
+        'minecraft:blue_bed',
+        'minecraft:brown_bed',
+        'minecraft:cyan_bed',
+        'minecraft:gray_bed',
+        'minecraft:green_bed',
+        'minecraft:light_blue_bed',
+        'minecraft:light_gray_bed',
+        'minecraft:lime_bed',
+        'minecraft:magenta_bed',
+        'minecraft:orange_bed',
+        'minecraft:pink_bed',
+        'minecraft:purple_bed',
+        'minecraft:red_bed',
+        'minecraft:white_bed',
+        'minecraft:yellow_bed'
+    ])
     event.groupItemsByTag('minecraft:rei_groups/shulker_boxes', 'Shulker Boxes', 'minecraft:shulker_boxes')
     event.groupItemsByTag('minecraft:rei_groups/banners', 'Minecraft Banners', 'minecraft:banners')
     event.groupItems('minecraft:rei_groups/infested_blocks', 'Minecraft Infested Blocks', /^$minecraft.*[_:\/]infested(?![a-zA-Z0-9]).*/)
@@ -432,7 +450,7 @@ REIEvents.groupEntries(event => {
         'caupona:calcite_column_fluted_shaft',
         'caupona:calcite_column_fluted_plinth'
     ])
-    event.groupItems('caupona:rei_grups/smooth_calcite_column', 'Calcite Column Components', [
+    event.groupItems('caupona:rei_groups/smooth_calcite_column', 'Calcite Column Components', [
         'caupona:calcite_tuscan_column_capital',
         'caupona:calcite_column_shaft',
         'caupona:calcite_column_plinth'
@@ -674,6 +692,9 @@ REIEvents.groupEntries(event => {
     if (Platform.isLoaded('chipped')) {
         groupModTags('chipped', event, true)
     }
+    if (Platform.isLoaded('domesticationinnovation')) {
+        event.groupItemsByTag('domesticationinnovation:rei_groups/pet_beds', 'Pet Beds', 'domesticationinnovation:pet_beds')
+    }
     if (Platform.isLoaded('gateways')) {
         event.groupSameItem('gateways:rei_groups/gate_pearls', 'Gate Pearls', 'gateways:gate_pearl')
     }
@@ -688,6 +709,7 @@ REIEvents.groupEntries(event => {
     }
     if (Platform.isLoaded('handcrafted')) {
         event.groupItemsByTag('handcrafted:rei_groups/cushions', 'Handcrafted Cushions', 'handcrafted:cushions')
+        event.groupItemsByTag('handcrafted:rei_groups/fancy_beds', 'Handcrafted Fancy Beds', 'handcrafted:fancy_beds')
         event.groupItemsByTag('handcrafted:rei_groups/sheets', 'Handcrafted Sheets', 'handcrafted:sheets')
     }
     if (Platform.isLoaded('irons_spellbooks')) {
