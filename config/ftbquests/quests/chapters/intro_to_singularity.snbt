@@ -108,12 +108,20 @@
 				}
 			}
 			id: "4A691BB889286C89"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "1F326401E791AF1B"
-				table_id: 6652661467762805826L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1F326401E791AF1B"
+					table_id: 6652661467762805826L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "6388D6736560A7AA"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			shape: "rsquare"
 			size: 1.5d
 			subtitle: "Click me to check the description of this button."
@@ -375,7 +383,9 @@
 				""
 				"As for Farmer's Delight tools, obviously you will need a knife to use the cutting board."
 				""
-				"Wondering what chalk can be used for? It can be used for drawing and help you navigate through cave systems, just in case you get lost. Additional symbols can be unlocked via advancements."
+				"Wondering what chalk can be used for?"
+				""
+				"It can be used for &ddrawing&r, &eoutlining builds&r, &eoutlining the path&r of a radial contraption farm and help you &bnavigate&r through &7cave systems&r, just in case you get lost. Additional symbols can be unlocked via advancements."
 				""
 				"Lastly, Fletching Tables are now usable and can make arrows now thanks to &dApotheosis&r!"
 			]
@@ -466,7 +476,55 @@
 					type: "item"
 				}
 				{
-					id: "0345851CE54DE5A7"
+					id: "27107A7D7AA97393"
+					item: {
+						Count: 1b
+						id: "chalk:chalk_box"
+						tag: {
+							Items: [
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4896EF8D0C434B5E"
 					item: "minecraft:fletching_table"
 					type: "item"
 				}
@@ -571,6 +629,19 @@
 			hide: true
 			icon: "tempad:he_who_remains_tempad"
 			id: "38EC0E607FAE4543"
+			rewards: [
+				{
+					id: "5F652AE318FE64A7"
+					type: "xp_levels"
+					xp_levels: 50
+				}
+				{
+					count: 64
+					id: "214EB1AB55507226"
+					item: "minecraft:netherite_block"
+					type: "item"
+				}
+			]
 			shape: "rsquare"
 			subtitle: "...at the End of time."
 			tasks: [{
@@ -838,6 +909,10 @@
 				""
 				"&7Coal Blocks&r can be compressed to make Diamonds with the help of a &bsuperheated&r Blaze Burner."
 				""
+				"&aEmeralds&r are renewable from mixing some glass, quartz and some iron in a &bsuperheated&r Blaze Burner."
+				""
+				"&7Tuff&r can be made from compacting either Gravel or Deepslate in a &bsuperheated&r or &6heated&r &7basin&r with some lava."
+				""
 				"&8Netherite&r is also now renewable with the use of Crushing Wheels by crushing &4Netherrack&r."
 				""
 				"Netherrack can now be renewed with &cInstant Health II&r potions, fully automated."
@@ -889,6 +964,11 @@
 					item: "minecraft:netherrack"
 					type: "item"
 				}
+				{
+					id: "5712112A95EF8468"
+					item: "minecraft:emerald"
+					type: "item"
+				}
 			]
 			title: "A Heads Up: Infinite Materials"
 			x: 1.5d
@@ -899,11 +979,18 @@
 			hide: true
 			hide_dependency_lines: true
 			id: "4843FF760BED67F6"
-			rewards: [{
-				id: "02616E76E4F48105"
-				item: "pickletweaks:diamond_apple"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "02616E76E4F48105"
+					item: "pickletweaks:diamond_apple"
+					type: "item"
+				}
+				{
+					id: "0BB63C7B5DE0F779"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
 			shape: "rsquare"
 			subtitle: "Like the menu music? Well, now they are here."
 			tasks: [

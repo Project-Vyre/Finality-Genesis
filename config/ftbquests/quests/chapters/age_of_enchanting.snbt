@@ -124,7 +124,11 @@
 		}
 		{
 			dependencies: ["405F80F5E78FF024"]
-			description: ["In order to make Liquid Hyper Experience, you will need to combine XP with &91x Lapis Lazuli&r and &31x Glowing Ink Sac&r in a &bsuperheated&r basin and mix them together."]
+			description: [
+				"In order to make Liquid Hyper Experience, you will need to combine XP with &91x Lapis Lazuli&r and &31x Glowing Ink Sac&r in a &bsuperheated&r basin and mix them together."
+				""
+				"I expect you to fully automate this process."
+			]
 			icon: "create_enchantment_industry:hyper_experience_bottle"
 			id: "4AC144AE5EFA463E"
 			rewards: [{

@@ -26,6 +26,12 @@
 				}
 			}
 			id: "0A9BA7131745E23B"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "30F774FF86F9B1BC"
+				table_id: 7771384237349930739L
+				type: "random"
+			}]
 			subtitle: "Caupona's guidebook to your food journey."
 			tasks: [
 				{
@@ -52,6 +58,19 @@
 			dependencies: ["0A9BA7131745E23B"]
 			icon: "caupona:portable_brazier"
 			id: "1A361DEF3CEBB1E0"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2D60DF9C3DE8FB90"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "42F87102266B7359"
+					type: "xp"
+					xp: 250
+				}
+			]
 			subtitle: "Want to cook on the go? This is for you!"
 			tasks: [
 				{
@@ -87,6 +106,11 @@
 			]
 			icon: "caupona:stew_pot"
 			id: "6C36D237085C8503"
+			rewards: [{
+				id: "47B6370C2142FBA4"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "Make sure to have lots of water!"
 			tasks: [
 				{
@@ -121,6 +145,11 @@
 				"You may have to go through a few tabs if you are using &7REI&r/&2JEI&r in order to view the stew and soup recipes. It's called the &aCook Stew/Soup&r recipe category."
 			]
 			id: "5B5E7384E4E458C1"
+			rewards: [{
+				id: "2B5781C507A5B8BA"
+				type: "xp"
+				xp: 500
+			}]
 			subtitle: "You will obviously need a heat source."
 			tasks: [{
 				id: "76B30065335688AA"
@@ -148,6 +177,11 @@
 				"However, aspic is not the only item that can be created with this method."
 			]
 			id: "0F86CC83218D8B9B"
+			rewards: [{
+				id: "7A69CC21F929A639"
+				type: "xp"
+				xp: 500
+			}]
 			subtitle: "How stew and soup turn into aspic, a solidified gelatinous form."
 			tasks: [{
 				id: "506273568993CF4B"
@@ -166,6 +200,19 @@
 				"I suggest making the &6Copper Frying Pan&r or the &8Iron Frying Pan&r as soon as possible."
 			]
 			id: "4A6B4230AA91FA05"
+			rewards: [
+				{
+					id: "3B32C65A3CB1DA73"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3AD03715D0C5E6C9"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+			]
 			subtitle: "Like frying food? These are for you!"
 			tasks: [{
 				id: "33668B8B89A74DCF"
@@ -179,6 +226,19 @@
 		{
 			dependencies: ["4A6B4230AA91FA05"]
 			id: "10D8A77F765401E6"
+			rewards: [
+				{
+					id: "4AC940803486860A"
+					type: "xp"
+					xp: 500
+				}
+				{
+					exclude_from_claim_all: true
+					id: "14882CC14BFAD930"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+			]
 			subtitle: "Frying foods but faster!"
 			tasks: [
 				{
@@ -206,6 +266,11 @@
 				"Gravy Boats are used for providing oil to any adjacent frying pans regardless of what direction it is facing, so have some counter space available!"
 			]
 			id: "5959628CE2B56607"
+			rewards: [{
+				id: "633FF02204B52123"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "Oil from walnuts!"
 			tasks: [{
 				id: "01BEA6429836012F"
@@ -230,6 +295,11 @@
 				"There's more block palettes than the Brick palette and they are conveniently grouped if you have &7REI&r installed."
 			]
 			id: "74BBBB57E59C59A0"
+			rewards: [{
+				id: "2ADA4D1195BC5748"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "Soot can be collected from your cooking setups."
 			tasks: [
 				{
@@ -251,6 +321,19 @@
 			dependencies: ["5B5E7384E4E458C1"]
 			description: ["I'm being serious. If you relax in the &6heated&r &9water&r you will slowly accumulate &aexperience&r."]
 			id: "420AFFB85BEEBACA"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "653AFD7D75CB379F"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "459E493D9C8E4FF4"
+					type: "xp"
+					xp: 500
+				}
+			]
 			subtitle: "Relax in your heated pool and continuously ponder."
 			tasks: [
 				{

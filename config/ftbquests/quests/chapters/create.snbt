@@ -225,11 +225,19 @@
 				"Hold [w] to Ponder to learn more!"
 			]
 			id: "400260FDC774443B"
-			rewards: [{
-				id: "2B0B7F32922B7FE5"
-				type: "xp"
-				xp: 500
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0494C6E0A0BD12FF"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "2BE56B900C38D860"
+					type: "xp"
+					xp: 500
+				}
+			]
 			shape: "rsquare"
 			subtitle: "Automated mixing, highly multi-purpose!"
 			tasks: [{
@@ -869,6 +877,11 @@
 				"You can use &eEngineer's Goggles&r to look at a Chute and the tooltip will let you know if items are being pushed down, pushed up or pulled up."
 			]
 			id: "7D7D96030BC1CDC1"
+			rewards: [{
+				id: "26E47EBADD570BE2"
+				type: "xp"
+				xp: 50
+			}]
 			subtitle: "Vertical item transportation!"
 			tasks: [{
 				id: "5CC08ACE604AFED8"
@@ -1628,6 +1641,11 @@
 			]
 			icon: "create:encased_fan"
 			id: "38E2EE3F3F2C2E6C"
+			rewards: [{
+				id: "09255A212B36D970"
+				type: "xp"
+				xp: 50
+			}]
 			subtitle: "I believe I can fly!"
 			tasks: [
 				{
@@ -1955,6 +1973,11 @@
 		{
 			dependencies: ["770AD4193CC23EA3"]
 			id: "26D176C88B664911"
+			rewards: [{
+				id: "138475A47C84F59D"
+				type: "xp"
+				xp: 50
+			}]
 			subtitle: "How am I supposed to create wind?"
 			tasks: [{
 				id: "765790D3C2086453"
@@ -2247,11 +2270,6 @@
 					count: 9
 					id: "5E508E1DF12169EA"
 					item: "minecraft:raw_copper_block"
-					type: "item"
-				}
-				{
-					id: "3F27BB5C0A43C1AA"
-					item: "create:copper_valve_handle"
 					type: "item"
 				}
 				{
@@ -3867,6 +3885,24 @@
 			title: "The Other Cuckoo Clock"
 			x: 0.0d
 			y: -11.0d
+		}
+		{
+			dependencies: ["2E386081E5302CF5"]
+			id: "41F9E42072AC41C8"
+			rewards: [{
+				id: "7E918AC92E3D726A"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "Very precise rotation."
+			tasks: [{
+				id: "738034CAE71E110F"
+				item: "create:copper_valve_handle"
+				type: "item"
+			}]
+			title: "Create Utilities - The Copper Valve Handle"
+			x: -8.5d
+			y: -2.5d
 		}
 	]
 	subtitle: [

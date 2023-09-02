@@ -26,6 +26,12 @@
 			description: ["If your item happens to already have slots, you can use a Smithing Table to socket your gems."]
 			icon: "apotheosis:gem_dust"
 			id: "0EB2D84D0683C5C5"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "4D918A3FE3530EC1"
+				table_id: 7771384237349930739L
+				type: "random"
+			}]
 			subtitle: "Gem Dust has lots of utility."
 			tasks: [
 				{
@@ -52,6 +58,19 @@
 			]
 			icon: "minecraft:anvil"
 			id: "7D3FA3191B051D55"
+			rewards: [
+				{
+					count: 8
+					id: "21ED54E41EA2A770"
+					item: "apotheosis:gem_dust"
+					type: "item"
+				}
+				{
+					id: "4FD1049217D0AD30"
+					type: "xp"
+					xp: 250
+				}
+			]
 			subtitle: "Sacrifice the stuff to get materials for the powerful stuff, got it?"
 			tasks: [{
 				id: "5ACF7B37EC1AE02D"
@@ -66,6 +85,11 @@
 			dependencies: ["74B2239E6D835FD5"]
 			description: ["This salvages Affixed items and converts them into Rarity Materials."]
 			id: "0CC888B34808370F"
+			rewards: [{
+				id: "44EC69D3E2F8D3B6"
+				type: "xp"
+				xp: 500
+			}]
 			subtitle: "Make a Salvaging Table, it's important. It is really important."
 			tasks: [{
 				id: "27739486D76BF9B6"
@@ -79,6 +103,11 @@
 		{
 			dependencies: ["0CC888B34808370F"]
 			id: "376556B76A4D12A5"
+			rewards: [{
+				id: "78AFCFFFD85999A9"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "Tier 1 Rarity Material"
 			tasks: [{
 				id: "54A4CAE1B702579F"
@@ -91,6 +120,11 @@
 		{
 			dependencies: ["0CC888B34808370F"]
 			id: "4E3FAA48FA11E177"
+			rewards: [{
+				id: "338520B5DD2066D0"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "Tier 2 Rarity Material"
 			tasks: [{
 				id: "1A8CF8C68C5CEA21"
@@ -103,6 +137,11 @@
 		{
 			dependencies: ["0CC888B34808370F"]
 			id: "72AD6FF2F61C7FD8"
+			rewards: [{
+				id: "77FCC62C3679D53B"
+				type: "xp"
+				xp: 500
+			}]
 			subtitle: "Tier 3 Rarity Material"
 			tasks: [{
 				id: "5CEAD17407372A2D"
@@ -115,6 +154,19 @@
 		{
 			dependencies: ["0CC888B34808370F"]
 			id: "20FEAD12447CB2E2"
+			rewards: [
+				{
+					id: "7E478C18FFDC93CB"
+					type: "xp"
+					xp: 750
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1F09EB3D66F8914E"
+					table_id: 946488619696883447L
+					type: "random"
+				}
+			]
 			subtitle: "Tier 4 Rarity Material"
 			tasks: [{
 				id: "427A80F86A86FF10"
@@ -127,6 +179,19 @@
 		{
 			dependencies: ["0CC888B34808370F"]
 			id: "7A6003AA26F89F01"
+			rewards: [
+				{
+					id: "313A8B2BBEEFEB79"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "19B53CEC8338BCB1"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			subtitle: "Tier 5 Rarity Material"
 			tasks: [{
 				id: "0F13BC80426AE023"
@@ -141,7 +206,7 @@
 			description: [
 				"This item allows you to keep the gem but it destroys the Affixed item."
 				""
-				"Use it in a Smithing Table."
+				"Use it in a &6Smithing Table&r."
 			]
 			id: "292255F2891C4C7F"
 			subtitle: "The gem is saved, but the item is gone!"
@@ -158,7 +223,7 @@
 			description: [
 				"This item allows you to remove the gem and destroy it instead of the Affixed item."
 				""
-				"Use it in a Smithing Table."
+				"Use it in a &6Smithing Table&r."
 			]
 			id: "7C48CEAB862B2C27"
 			subtitle: "You monster, what have you done?"
@@ -367,7 +432,21 @@
 		}
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
+			description: ["Found a gem you really want to keep and want to upgrade? The Gem Cutting Table allows that."]
 			id: "74B2239E6D835FD5"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "617ABB07F7D39FDE"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "5AC27C7B8638EA99"
+					type: "xp"
+					xp: 500
+				}
+			]
 			subtitle: "This is used for upgrading gems."
 			tasks: [{
 				id: "4A4205C21346E6CE"
@@ -408,6 +487,19 @@
 		{
 			dependencies: ["5D79BD5D3D87DA08"]
 			id: "24E25CD6A011D02C"
+			rewards: [
+				{
+					id: "0F5A65712FD0A055"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1803550DB59A987B"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			subtitle: "These arrows are not your typical arrows."
 			tasks: [
 				{

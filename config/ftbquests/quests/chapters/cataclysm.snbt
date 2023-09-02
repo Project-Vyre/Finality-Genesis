@@ -31,6 +31,19 @@
 				}
 			}
 			id: "64BA40D2E7AEA557"
+			rewards: [
+				{
+					id: "591A609546DBC7F2"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7CA0FF4A7B48D520"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			shape: "square"
 			subtitle: "Defeat the Netherite Monstrosity and acquire the Infernal Forge."
 			tasks: [
@@ -52,6 +65,17 @@
 					id: "374265EEE77EF98A"
 					type: "kill"
 					value: 1L
+				}
+				{
+					id: "45F7555579B698BE"
+					item: {
+						Count: 1b
+						id: "cataclysm:infernal_forge"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
 				}
 			]
 			title: "Locate the Soul Forge."
@@ -78,13 +102,26 @@
 			description: ["Choose a reward afterwards, just to make it easier for you."]
 			icon: "cataclysm:the_incinerator"
 			id: "133B009011D05C41"
-			rewards: [{
-				exclude_from_claim_all: true
-				icon: "cataclysm:ignitium_ingot"
-				id: "2E2B7831ECF3B1F0"
-				table_id: 8134379311085213745L
-				type: "choice"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					icon: "cataclysm:ignitium_ingot"
+					id: "2E2B7831ECF3B1F0"
+					table_id: 8134379311085213745L
+					type: "choice"
+				}
+				{
+					id: "7826BB4E23DCF1D7"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1149AE0FB529D617"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			shape: "square"
 			subtitle: "Defeat Ignis."
 			tasks: [
@@ -156,6 +193,19 @@
 			hide: true
 			icon: "minecraft:nether_star"
 			id: "0747981239EC0227"
+			rewards: [
+				{
+					id: "0A32768587146B03"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "77B67D2229B09CB6"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			shape: "square"
 			subtitle: "It needs a heart of power to be activated."
 			tasks: [{
@@ -359,6 +409,19 @@
 			]
 			icon: "cataclysm:tidal_claws"
 			id: "7B41C8C1C7837774"
+			rewards: [
+				{
+					id: "1FAAC94F44D6CA5C"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3B88C2238B30881F"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			shape: "square"
 			subtitle: "Also, you now have a baby leviathan in your possession now."
 			tasks: [
@@ -385,18 +448,50 @@
 				"-+-"
 				""
 				"The water is also pretty cold, so take that into consideration."
+				""
+				"Once you complete this full set of armor, you can brave the freezing waters... "
+				""
+				"The question remains... where is the helmet?"
 			]
 			hide: true
 			icon: "aquamirae:ship_graveyard_echo"
 			id: "1F272782D97392B4"
-			subtitle: "Something new lurks in the deep."
-			tasks: [{
-				biome: "minecraft:deep_frozen_ocean"
-				icon: "minecraft:packed_ice"
-				id: "6D3CFB6CF95E34F5"
-				title: "Suit up."
-				type: "biome"
+			rewards: [{
+				id: "59567CD98ADB6578"
+				type: "xp"
+				xp: 250
 			}]
+			subtitle: "Something new lurks in the deep."
+			tasks: [
+				{
+					biome: "minecraft:deep_frozen_ocean"
+					icon: "minecraft:packed_ice"
+					id: "6D3CFB6CF95E34F5"
+					title: "Suit up."
+					type: "biome"
+				}
+				{
+					id: "08D0172D35F5E70C"
+					item: {
+						Count: 1b
+						id: "aquamirae:three_bolt_suit"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "68756957F7156AE7"
+					item: "aquamirae:three_bolt_leggings"
+					type: "item"
+				}
+				{
+					id: "0A7F54DC1D3C3BFD"
+					item: "aquamirae:three_bolt_boots"
+					type: "item"
+				}
+			]
 			title: "Find the Frozen Ocean biome."
 			x: -1.5d
 			y: -1.5d
@@ -419,6 +514,11 @@
 				}
 			}
 			id: "6F037916B715DB4A"
+			rewards: [{
+				id: "63291ECF19B1AABA"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "Darkness, corruption, death."
 			tasks: [
 				{
@@ -516,13 +616,27 @@
 		}
 		{
 			dependencies: ["2585B4FAFCED0F46"]
+			description: ["&l&3Free her from her curse.&r"]
+			icon: "aquamirae:shell_horn"
 			id: "5A2CC1979870B934"
-			subtitle: "With the sound of the horn, Captain Cornelia appears."
-			tasks: [{
-				id: "599B259962BE460E"
-				item: "aquamirae:shell_horn"
-				type: "item"
+			rewards: [{
+				id: "2C54546C1D065D2B"
+				type: "xp_levels"
+				xp_levels: 30
 			}]
+			subtitle: "With the sound of the horn, Captain Cornelia appears."
+			tasks: [
+				{
+					id: "599B259962BE460E"
+					item: "aquamirae:shell_horn"
+					type: "item"
+				}
+				{
+					id: "4016D11AFF962CCF"
+					item: "aquamirae:three_bolt_helmet"
+					type: "item"
+				}
+			]
 			title: "Putting the Captain to Rest - Pt.2"
 			x: -1.5d
 			y: -6.0d
@@ -535,6 +649,11 @@
 				"Use the Bone Dagger to gather &4blood&r from unsuspecting villagers..."
 			]
 			id: "50A418AC861A047A"
+			rewards: [{
+				id: "1F1F76685C8D7C7D"
+				type: "xp"
+				xp: 250
+			}]
 			subtitle: "<shake>Good...</shake>"
 			tasks: [{
 				id: "6EDB30B985968A28"
@@ -556,6 +675,19 @@
 				"You will need to find the three bone staff pieces from a special structures throughout the world. One can be found in what looks to be a flesh pit. The others are for you to find out."
 			]
 			id: "5AE1F898C6178F11"
+			rewards: [
+				{
+					id: "2941D5400793FC04"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5995D46434CDD790"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			subtitle: "More whispers in your ear..."
 			tasks: [
 				{
@@ -594,7 +726,7 @@
 				id: "701870952F2664C9"
 				observe_type: 0
 				timer: 0L
-				to_observe: "minecraft:bedrock"
+				to_observe: "graveyard:altar"
 				type: "observation"
 			}]
 			title: "Find the forbidden island..."
@@ -628,12 +760,19 @@
 			description: ["Next thing to do is to find a Frozen Chest."]
 			icon: "aquamirae:frozen_key"
 			id: "6EE87D9FBE754FED"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "63918631BB8D7B04"
-				table_id: 103743719166323827L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "63918631BB8D7B04"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "009B4A99C7A80895"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
 			subtitle: "You have acquired the Frozen Key, congratulations."
 			tasks: [
 				{
