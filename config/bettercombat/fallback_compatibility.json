@@ -31,7 +31,7 @@
       "weapon_attributes": "bettercombat:spear"
     },
     {
-      "item_id_regex": "lance|whisper_of_the_abyss",
+      "item_id_regex": "lance",
       "weapon_attributes": "bettercombat:lance"
     },
     {
@@ -95,11 +95,11 @@
       "weapon_attributes": "bettercombat:twin_blade"
     },
     {
-      "item_id_regex": "cutlass|scimitar|machete|poisoned_blade|remnants_saber|fin_cutter",
+      "item_id_regex": "cutlass|scimitar|machete",
       "weapon_attributes": "bettercombat:cutlass"
     },
     {
-      "item_id_regex": "sword|blade|divider|fin_cutter",
+      "item_id_regex": "sword|blade",
       "weapon_attributes": "bettercombat:sword"
     }
   ]
