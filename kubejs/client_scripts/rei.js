@@ -98,8 +98,24 @@ let CAdditionsItems = [
     'electrum_spool',
     'digital_adapter'
 ]
-
-function groupModTags(modName, event, exclude) { // function written by mercenaryarek from the KubeJS Discord
+const REI_GROUPS = {
+    'minecraft': 'Minecraft',
+    'ad_astra': 'Ad Astra',
+    'alexsmobs': "Alex's Mobs",
+    'aquamirae': 'Aquamirae',
+    'autumnity': 'Autumnity',
+    'blue_skies': 'Blue Skies',
+    'buzzier_bees': 'Buzzier Bees',
+    'cataclysm': 'Cataclysm',
+    'cloudstorage': 'Cloud Storage',
+    'graveyard': 'Graveyard',
+    'irons_spellbooks': "Iron's Spells n' Spellbooks",
+    'neapolitan': 'Neapolitan',
+    'savage_and_ravage': 'Savage and Ravage',
+    'quark': 'Quark',
+    'whisperwoods': 'Whisperwoods'
+}
+function groupChippedTags(modName, event, exclude) { // function written by mercenaryarek from the KubeJS Discord
     const modIngredient = Ingredient.of(`@${modName}`)
     modIngredient.stacks.toList().stream()
         .flatMap(stack => stack.tags)
@@ -115,7 +131,7 @@ function groupModTags(modName, event, exclude) { // function written by mercenar
             else {
                 let items = Ingredient.of(`#${modName}:${path}`).itemIds // function correction made by p3lim from the KubeJS Discord
                     .filter(item => Item.of(item).getMod() == `${modName}`)
-                event.groupItems(`kubejs:rei_groups/${modName}/${path}`, name, items)
+                event.groupItems(`chipped:rei_groups/${modName}/${path}`, name, items)
             }
         })
 }
@@ -637,23 +653,6 @@ REIEvents.groupEntries(event => {
     event.groupSameItem('enderchests:rei_groups/shetiphian_enderchests_pouches', 'All Ender Pouches', 'enderchests:ender_pouch')
     event.groupSameItem('endertanks:rei_groups/shetiphian_endertanks', 'All Ender Tanks', 'endertanks:ender_tank')
     event.groupSameItem('endertanks:rei_groups/shetiphian_endertanks_buckets', 'All Ender Buckets', 'endertanks:ender_bucket')
-    const REI_GROUPS = {
-        'minecraft': 'Minecraft',
-        'ad_astra': 'Ad Astra',
-        'alexsmobs': "Alex's Mobs",
-        'aquamirae': 'Aquamirae',
-        'autumnity': 'Autumnity',
-        'blue_skies': 'Blue Skies',
-        'buzzier_bees': 'Buzzier Bees',
-        'cataclysm': 'Cataclysm',
-        'cloudstorage': 'Cloud Storage',
-        'graveyard': 'Graveyard',
-        'irons_spellbooks': "Iron's Spells n' Spellbooks",
-        'neapolitan': 'Neapolitan',
-        'savage_and_ravage': 'Savage and Ravage',
-        'quark': 'Quark',
-        'whisperwoods': 'Whisperwoods'
-    }
     Object.keys(REI_GROUPS).forEach((mod) => { // /^modid.*[_:\/]spawn(?![a-zA-Z0-9]).*/ regular expression provided by ILIKEPIEFOO2 developer of KubeJS Additions
         if (Platform.isLoaded(mod)) {
             let regex = new RegExp(`^${mod}.*[_:\/]spawn(?![a-zA-Z0-9]).*`);
@@ -690,7 +689,7 @@ REIEvents.groupEntries(event => {
         event.groupItemsByTag('comforts:rei_groups/hammocks', 'Comforts Hammocks', 'comforts:hammocks')
     }
     if (Platform.isLoaded('chipped')) {
-        groupModTags('chipped', event, true)
+        groupChippedTags('chipped', event, true)
     }
     if (Platform.isLoaded('domesticationinnovation')) {
         event.groupItemsByTag('domesticationinnovation:rei_groups/pet_beds', 'Pet Beds', 'domesticationinnovation:pet_beds')
