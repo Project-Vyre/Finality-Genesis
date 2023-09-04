@@ -118,8 +118,6 @@ JEIEvents.hideItems(event => {
         event.hide(`createaddition:${name}`)
     })
     event.hide('mysticalagriculture:harvester')
-    event.hide('kubejs:denied_result')
-    event.hide('kubejs:removed_item')
 })
 
 JEIEvents.hideFluids(event => {

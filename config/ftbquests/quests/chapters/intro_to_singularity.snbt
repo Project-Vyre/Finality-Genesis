@@ -35,7 +35,9 @@
 				""
 				"This modpack is not complete, but the end goal is reachable."
 				""
-				"Tips for using &7Roughly Enough Items&r or &2JEI&r are on the next page. &eLootr&r chest info is on the following page. Just don't say I didn't warn you if your Lootr chest blows up."
+				"If you wish to disable the immersion that &l&eReal Camera&r provides, press &6F6&r."
+				""
+				"Tips for using &l&7Roughly Enough Items&r or &l&2JEI&r are on the next few pages. &eLootr&r chest info is on the following page. Just don't say I didn't warn you if your Lootr chest blows up."
 				"{@pagebreak}"
 				"&l&7Roughly Enough Items / REI&r &l&aTips and Tricks&r"
 				"There's a lot of things to unpack here. Don't forget to scroll!"
@@ -54,11 +56,11 @@
 				""
 				"- To search by tags, use &b$&r then type the item tag you want to look up. Examples: &b$wood&r or &b$minecraft:planks&r"
 				""
-				"- You can &l&bclick and drag&r recipes to the top left region that is highlighted with segmented lines and save them in a sequence to prepare for a long recipe tree. You can then scroll through them while your cursor is in the region. To &l&cremove&r saved recipes, drag them to the bottom left region that is highlighted."
-				""
-				"More REI tips are on the next page."
+				"More &l&7REI&r tips are on the next page. If you are looking for &l&2JEI&r related tips they are on the later pages."
 				"{@pagebreak}"
 				"&l&7REI&r &l&aTips and Tricks&r &a(continued)&r"
+				""
+				"- You can &l&bclick and drag&r recipes to the top left region that is highlighted with segmented lines and save them in a sequence to prepare for a long recipe tree. You can then scroll through them while your cursor is in the region. To &l&cremove&r saved recipes, drag them to the bottom left region that is highlighted."
 				""
 				"- You can click and drag items to the top left area or press A to bookmark individual items."
 				""
@@ -86,7 +88,7 @@
 				""
 				"Tips regarding &eLootr&r chests on the next page:"
 				"{@pagebreak}"
-				"Lootr chests provide a unique instance of loot for each player, so what your friends get can be different from what you get. It is common courtesy not to break them."
+				"&l&eLootr&r chests provide a unique instance of loot for each player, so what your friends get can be different from what you get. It is common courtesy not to break them."
 				""
 				"- Lootr Chests DO NOT say if they are a trapped chest or not, even with Jade. What does this mean for you?"
 				""
@@ -108,20 +110,12 @@
 				}
 			}
 			id: "4A691BB889286C89"
-			rewards: [
-				{
-					exclude_from_claim_all: true
-					id: "1F326401E791AF1B"
-					table_id: 6652661467762805826L
-					type: "random"
-				}
-				{
-					exclude_from_claim_all: true
-					id: "6388D6736560A7AA"
-					table_id: 103743719166323827L
-					type: "random"
-				}
-			]
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1F326401E791AF1B"
+				table_id: 6652661467762805826L
+				type: "random"
+			}]
 			shape: "rsquare"
 			size: 1.5d
 			subtitle: "Click me to check the description of this button."

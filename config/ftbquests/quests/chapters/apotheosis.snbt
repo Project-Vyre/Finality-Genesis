@@ -204,7 +204,7 @@
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
 			description: [
-				"This item allows you to keep the gem but it destroys the Affixed item."
+				"The &dVial of Arcane Extraction&r allows you to &akeep&r the &l&5gem(s)&r socketed in your &bAffixed item&r, but it &l&cdestroys&r your &bAffixed item&r in the process."
 				""
 				"Use it in a &6Smithing Table&r."
 			]
@@ -221,7 +221,7 @@
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
 			description: [
-				"This item allows you to remove the gem and destroy it instead of the Affixed item."
+				"The &6Vial of Searing Expulsion&r allows you to &l&cdestroy&r the &l&5gem(s)&r socketed inside your &bAffixed item&r and allows you to keep your said Affixed item."
 				""
 				"Use it in a &6Smithing Table&r."
 			]
