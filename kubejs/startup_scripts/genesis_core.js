@@ -132,6 +132,22 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor').displayName('§l<rainb>Vitale Cordis</rainb>').texture('kubejs:item/final_chestplate').maxStackSize(1).fireResistant(true).group('combat')
     event.create('kubejs:final_leggings', 'leggings').tier('final_armor').displayName('§l<rainb>Universum Motus</rainb>').texture('kubejs:item/final_leggings').maxStackSize(1).fireResistant(true).group('combat')
     event.create('kubejs:final_boots', 'boots').tier('final_armor').displayName('§l<rainb>Gravitas Anchoram</rainb>').texture('kubejs:item/final_boots').maxStackSize(1).fireResistant(true).group('combat')
+    // shapes
+    event.create('kubejs:basic_circle')
+        .displayName('§lBasic Circle')
+        .texture('kubejs:item/shapes/basic_circle')
+        .maxStackSize(64)
+        .fireResistant(true)
+    event.create('kubejs:basic_square')
+        .displayName('§lBasic Square')
+        .texture('kubejs:item/shapes/basic_square')
+        .maxStackSize(64)
+        .fireResistant(true)
+    event.create('kubejs:basic_triangle_sq')
+        .displayName('§lBasic Triangle Square')
+        .texture('kubejs:item/shapes/basic_triangle_sq')
+        .maxStackSize(64)
+        .fireResistant(true)
 })
 StartupEvents.registry('block', event => {
     Object.keys(CMD).forEach(insert => {

@@ -49,9 +49,16 @@ ServerEvents.recipes(event => {
         U: 'kubejs:chain_command_block',
         L: 'kubejs:command_block',
         O: 'create:sturdy_sheet',
-        I: 'extendedcrafting:the_ultimate_ingot'
+        I: 'kubejs:high_entropy_alloy'
     }).id('finality:create_worldshaper')
     event.recipes.createMixing(['extendedcrafting:ender_star'], ['minecraft:nether_star', '4x minecraft:ender_eye']).heated().id('finality:ender_star_mixing')
+    event.recipes.createDeploying([
+        'extendedcrafting:nether_star_block',
+        '18x minecraft:nether_star'
+    ], [
+        'extendedcrafting:nether_star_block',
+        'kubejs:final_pickaxe'
+    ]).keepHeldItem().id('finality:nether_star_duplication')
     // modified vanilla recipes
     event.shapeless('minecraft:end_crystal', [
         '4x #forge:glass/colorless',
@@ -461,10 +468,11 @@ ServerEvents.recipes(event => {
         'minecraft:grass_block'
     ], 'kubejs:ascendant_mechanism', [
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:awakened_singularity_core']),
-        event.recipes.createFilling('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', Fluid.of('kubejs:condensed_universal_entropy', 1000)]),
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'create:sequenced_gearshift']),
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'extendedcrafting:crystaltine_nugget']),
-        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'extendedcrafting:the_ultimate_nugget'])
+        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:basic_square']),
+        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:basic_circle']),
+        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:basic_triangle_sq'])
     ]).transitionalItem('kubejs:incomplete_entropy_mechanism').loops(512).id('finality:entropy_mechanism_creation')
     event.recipes.createMechanicalCrafting('minecraft:spawner', [
         'VVV',

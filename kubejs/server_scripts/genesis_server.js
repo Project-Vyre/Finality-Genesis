@@ -345,7 +345,7 @@ ServerEvents.recipes(event => {
     event.recipes.createCrushing([
         'create:cinder_flour',
         Item.of('create:cinder_flour').withChance(0.50),
-        Item.of('minecraft:netherite_scrap').withChance(0.0002)
+        Item.of('minecraft:netherite_scrap').withChance(0.002)
     ], 'minecraft:netherrack').processingTime(250).id('finality:netherrack_crushing')
     event.recipes.createCrushing([
         Item.of('minecraft:gold_nugget', 5).withChance(0.10),
@@ -451,6 +451,27 @@ ServerEvents.recipes(event => {
         event.shapeless(`9x kubejs:compressed_${insert}`, `kubejs:double_compressed_${insert}`).id(`finality:double_compressed_${insert}_decompression`)
         event.shapeless(`9x minecraft:${insert}`, `kubejs:compressed_${insert}`).id(`finality:compressed_${insert}_decompression`)
     })
+    event.recipes.createDeploying([
+        'kubejs:command_block',
+        'kubejs:basic_square'
+    ], [
+        'kubejs:command_block',
+        'kubejs:final_axe'
+    ]).keepHeldItem().id('finality:basic_square')
+    event.recipes.createDeploying([
+        'kubejs:chain_command_block',
+        'kubejs:basic_circle'
+    ], [
+        'kubejs:chain_command_block',
+        'kubejs:final_axe'
+    ]).keepHeldItem().id('finality:basic_circle')
+    event.recipes.createDeploying([
+        'kubejs:repeating_command_block',
+        'kubejs:basic_triangle_sq'
+    ], [
+        'kubejs:repeating_command_block',
+        'kubejs:final_axe'
+    ]).keepHeldItem().id('finality:basic_triangle_sq')
     if (Platform.isLoaded('quark')) {
         event.shaped('minecraft:hopper', [
             'ILI',
@@ -619,6 +640,7 @@ LevelEvents.afterExplosion(event => {
 let BLACKLIST = {
     ae2: 'Applied Energistics 2',
     ars_nouveau: 'Ars Nouveau',
+    createcasing: 'Create Encased',
     create_confectionery: 'Create Confectionery',
     create_jetpack: 'Create Jetpack',
     create_sa: 'Create Stuff and Additions',
