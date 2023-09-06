@@ -2,7 +2,7 @@
 [Monobank]
 	#Maximum amount of items that can be stored in Monobank.
 	#Range: > 1
-	Capacity = 8192
+	Capacity = 16384
 
 [Ownership]
 	#Owners can unlock their Monobank without combination.
