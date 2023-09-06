@@ -118,6 +118,12 @@ JEIEvents.hideItems(event => {
         event.hide(`createaddition:${name}`)
     })
     event.hide('mysticalagriculture:harvester')
+    if (Platform.isLoaded('gag')) {
+        event.hide([
+            'gag:hearthstone',
+            'gag:energized_hearthstone'
+        ])
+    }
 })
 
 JEIEvents.hideFluids(event => {

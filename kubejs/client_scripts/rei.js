@@ -145,6 +145,10 @@ REIEvents.hide('item', event => {
         event.hide(`createaddition:${name}`)
     })
     event.hide('mysticalagriculture:harvester')
+    if (Platform.isLoaded('gag')) {
+        event.hide('gag:hearthstone')
+        event.hide('gag:energized_hearthstone')
+    }
 })
 
 REIEvents.hide('fluid', event => {
