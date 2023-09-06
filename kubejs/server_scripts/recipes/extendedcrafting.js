@@ -93,9 +93,17 @@ ServerEvents.recipes(event => {
     event.recipes.createCompacting([
         Fluid.of('kubejs:condensed_universal_entropy', 250)
     ], [
+        '5x minecraft:crying_obsidian'
+    ]).id('finality:condensing_universe_essence')
+    event.recipes.createCompacting([
+        Fluid.of('kubejs:condensed_universal_entropy', 500)
+    ], [
         'minecraft:crying_obsidian'
-    ]).superheated().id('finality:condensing_universe_essence')
-    event.recipes.createFilling('kubejs:awakened_singularity_core', ['kubejs:dormant_singularity_core', Fluid.of('kubejs:condensed_universal_entropy', 1000)]).id('finality:singularity_core_awakening')
+    ]).superheated().id('finality:condensing_universe_essence_superheated')
+    event.recipes.createFilling('kubejs:awakened_singularity_core', [
+        'kubejs:dormant_singularity_core',
+        Fluid.of('kubejs:condensed_universal_entropy', 1000)
+    ]).id('finality:singularity_core_awakening')
     // singularity step 3 (new method)
     event.recipes.createSequencedAssembly([
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:andesite_alloy"}')

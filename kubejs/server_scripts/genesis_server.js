@@ -7,8 +7,8 @@
 
 console.info('Implementing Finality recipes and compats...')
 
+const WOOD_TYPES = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'crimson', 'warped']
 let STONEPLATES = ['stone', 'polished_blackstone']
-let WOODPLATES = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'crimson', 'warped']
 let FOUNDATION_METALS = ['iron', 'gold']
 let FOUNDATION_NONMETAL = [
     'coal',
@@ -251,7 +251,7 @@ ServerEvents.recipes(event => {
             `minecraft:${stone}_slab`
         ], `${stone}`).processingTime(50).id(`finality:${stone}_pressure_plate`)
     })
-    WOODPLATES.forEach(wood => {
+    WOOD_TYPES.forEach(wood => {
         event.recipes.create.cutting([
             `minecraft:${wood}_pressure_plate`,
             `minecraft:${wood}_slab`
@@ -481,6 +481,19 @@ ServerEvents.recipes(event => {
             I: 'create:iron_sheet',
             L: '#minecraft:logs'
         }).id('quark:tweaks/crafting/utility/misc/easy_hopper')
+        event.shaped('4x kubejs:denied_result', [
+            'LLL',
+            'L L',
+            'LLL'
+        ], {
+            L: '#minecraft:logs'
+        }).id('quark:tweaks/crafting/utility/chests/mixed_chest_wood_but_without_exclusions')
+    }
+    if (Platform.isLoaded('woodworks')) {
+        WOOD_TYPES.forEach(insert => {
+            event.shapeless(`woodworks:${insert}_chest`, ['minecraft:chest']).id(`finality:woodworks/vanilla_chest_to_${insert}_chest_conversion`)
+            event.shapeless(`woodworks:${insert}_trapped_chest`, ['minecraft:trapped_chest']).id(`finality:woodworks/vanilla_trapped_chest_to_${insert}_trapped_chest_conversion`)
+        })
     }
 })
 
