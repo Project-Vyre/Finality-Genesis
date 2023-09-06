@@ -5,6 +5,18 @@
 	group: "4B44486C4CFAE9FB"
 	icon: "supplementaries:globe"
 	id: "381F32629FB523CD"
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 64.0d
+		hover: [ ]
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
 	order_index: 1
 	quest_links: [ ]
 	quests: [
@@ -347,6 +359,107 @@
 			title: "Corrupted Decoration"
 			x: -3.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "281A6A3463BB1060"
+			subtitle: "These make it significantly easier to place down walls and large amounts of blocks."
+			tasks: [{
+				id: "4431D92442B6DAB5"
+				item: {
+					Count: 1b
+					id: "constructionwand:stone_wand"
+					tag: {
+						Damage: 0
+						wand_options: { }
+					}
+				}
+				type: "item"
+			}]
+			title: "Introduction to Construction Wands"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["281A6A3463BB1060"]
+			id: "4E8C17251DC39728"
+			subtitle: "Place even more blocks!"
+			tasks: [{
+				id: "35F3A473BBCABA8A"
+				item: {
+					Count: 1b
+					id: "constructionwand:iron_wand"
+					tag: {
+						Damage: 0
+						wand_options: { }
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4E8C17251DC39728"]
+			id: "6186017EA08BDE81"
+			subtitle: "Place a layer of a chunk at a time!"
+			tasks: [{
+				id: "2C37999AAA82597D"
+				item: {
+					Count: 1b
+					id: "constructionwand:diamond_wand"
+					tag: {
+						Damage: 0
+						wand_options: { }
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6186017EA08BDE81"]
+			id: "5FF70921F5C85A3B"
+			subtitle: "You are actually scaring me."
+			tasks: [{
+				id: "45681528ACBA6F9D"
+				item: {
+					Count: 1b
+					id: "constructionwand:infinity_wand"
+					tag: {
+						wand_options: { }
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["6186017EA08BDE81"]
+			id: "0D1D0BAC7C9E9EF0"
+			subtitle: "MASS BLOCK DESTRUCTION"
+			tasks: [{
+				id: "7B7BCED43B30CF0E"
+				item: "constructionwand:core_destruction"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6186017EA08BDE81"]
+			id: "796E0FC8ADCFE942"
+			subtitle: "Magically place blocks in mid-air."
+			tasks: [{
+				id: "4B90F09B366E7706"
+				item: "constructionwand:core_angel"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 6.0d
 		}
 	]
 	subtitle: ["A lot more decorative blocks."]
