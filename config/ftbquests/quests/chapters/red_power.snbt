@@ -33,6 +33,8 @@
 				"Remember to use JEI and type &d@red_power&r to see all items from the mod!"
 				""
 				"Recipes for Red Power related items have been changed to utilize Create materials."
+				""
+				"This section is a work in progress."
 			]
 			icon: {
 				Count: 1b
@@ -42,12 +44,19 @@
 				}
 			}
 			id: "6DDE87592B21E322"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "038E3BAFE0BF8953"
-				table_id: 9193491821639565519L
-				type: "random"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "038E3BAFE0BF8953"
+					table_id: 9193491821639565519L
+					type: "random"
+				}
+				{
+					id: "0F3BE613F43BFADB"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
 			subtitle: "Redstone without the physical hassle!"
 			tasks: [
 				{
@@ -184,6 +193,7 @@
 		}
 		{
 			dependencies: ["37F6A5853B983CFB"]
+			description: ["Amethyst Wires are special in the fact that they are invisible."]
 			id: "37B949C33CA89529"
 			subtitle: "Look ma! No hands!"
 			tasks: [{
@@ -191,13 +201,14 @@
 				item: "red_power:amethyst_wires"
 				type: "item"
 			}]
-			title: "Amethyst Wires"
+			title: "Invisible Wiring - Amethyst Wires"
 			x: 0.0d
 			y: -3.5d
 		}
 		{
 			dependencies: ["37B949C33CA89529"]
 			id: "63F1A995AF215AFA"
+			subtitle: "Slightly better with signal loss."
 			tasks: [{
 				id: "784B49658CD93C81"
 				item: "red_power:ender_wires"
@@ -209,6 +220,7 @@
 		{
 			dependencies: ["63F1A995AF215AFA"]
 			id: "6895635F5A0E5904"
+			subtitle: "Even less signal loss."
 			tasks: [{
 				id: "68DB51F7FA648B58"
 				item: "red_power:echo_wires"
@@ -220,6 +232,7 @@
 		{
 			dependencies: ["6895635F5A0E5904"]
 			id: "704A94D5F3928D93"
+			subtitle: "The best wires!"
 			tasks: [{
 				id: "54031B5D2CD6CACC"
 				item: "red_power:power_wires"

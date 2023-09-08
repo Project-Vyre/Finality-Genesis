@@ -35,36 +35,65 @@
 				""
 				"This modpack is not complete, but the end goal is reachable."
 				""
-				"Tips for using &aJust Enough Items&r are on the next page, with &eLootr&r chest info on the page after. Just don't say I didn't warn you if your Lootr chest blows up."
+				"If you wish to disable the immersion that &l&eReal Camera&r provides, press &6F6&r."
 				""
+				"Tips for using &l&7Roughly Enough Items&r or &l&2JEI&r are on the next few pages. &eLootr&r chest info is on the following page. Just don't say I didn't warn you if your Lootr chest blows up."
 				"{@pagebreak}"
+				"&l&7Roughly Enough Items / REI&r &l&aTips and Tricks&r"
+				"There's a lot of things to unpack here. Don't forget to scroll!"
 				""
-				"JEI Tips"
+				"- &bLeft clicking&r items shows how to get them, with all the methods shown at the top of the recipe viewing window where all those tabs are."
 				""
-				"- Left clicking items shows how to get them, with all the methods shown at the top of the recipe viewing window where all those tabs are."
+				"- &3Right clicking&r items shows all the recipes that the item is used in."
 				""
-				"- Right clicking items shows all the recipes that the item is used in."
+				"- &l&9Fluids&r&r in the recipe viewing area can be &bleft clicked&r to find out how to make them. This especially applies to filling by Create's Spout recipes."
 				""
-				"- Fluids in the recipe viewing area can be left clicked to find out how to make them."
+				"- Press &dCtrl + F&r to focus the search bar then start typing. "
 				""
-				"- Press Ctrl + F to focus the search bar then start typing. "
+				"- If you want to clear the search bar instantly, do &cCtrl + A&r then press &cBackspace&r."
 				""
-				"- If you want to clear the search bar instantly, do Ctrl + A then press Backspace."
+				"- To search by mod, use &d@&r then type the modid of that mod. Examples: &d@create&r or &d@createaddition&r or &d@extendedcrafting&r"
 				""
-				"- To search by mod, use @ then type the modid of that mod. Examples: @create or @createaddition or @extendedcrafting"
+				"- To search by tags, use &b$&r then type the item tag you want to look up. Examples: &b$wood&r or &b$minecraft:planks&r"
 				""
-				"Tips regarding Lootr Chests on the next page:"
-				""
+				"More &l&7REI&r tips are on the next page. If you are looking for &l&2JEI&r related tips they are on the later pages."
 				"{@pagebreak}"
+				"&l&7REI&r &l&aTips and Tricks&r &a(continued)&r"
 				""
-				"Lootr chests provide a unique instance of loot for each player, so what your friends get can be different from what you get. It is common courtesy not to break them."
+				"- You can &l&bclick and drag&r recipes to the top left region that is highlighted with segmented lines and save them in a sequence to prepare for a long recipe tree. You can then scroll through them while your cursor is in the region. To &l&cremove&r saved recipes, drag them to the bottom left region that is highlighted."
+				""
+				"- You can click and drag items to the top left area or press A to bookmark individual items."
+				""
+				"- Press A while hovering your cursor on an item to put it in the bookmarks area."
+				""
+				"- Press R while hovering your cursor on an item to see recipes on how to make it."
+				""
+				"- Press U while hovering your cursor on an item to see where the item is used."
+				"{@pagebreak}"
+				"&aJEI Tips and Tricks&r"
+				""
+				"- &bLeft clicking&r items shows how to get them, with all the methods shown at the top of the recipe viewing window where all those tabs are."
+				""
+				"- &3Right clicking&r items shows all the recipes that the item is used in."
+				""
+				"- &l&9Fluids&r&r in the recipe viewing area can be &bleft clicked&r to find out how to make them. This especially applies to filling by Create's Spout recipes."
+				""
+				"- Press &dCtrl + F&r to focus the search bar then start typing. "
+				""
+				"- If you want to clear the search bar instantly, do &cCtrl + A&r then press &cBackspace&r."
+				""
+				"- To search by mod, use &d@&r then type the modid of that mod. Examples: &d@create&r or &d@createaddition&r or &d@extendedcrafting&r"
+				""
+				"- To search by tags, use &b$&r then type the item tag you want to look up. Examples: &b$wood&r or &b$planks&r"
+				""
+				"Tips regarding &eLootr&r chests on the next page:"
+				"{@pagebreak}"
+				"&l&eLootr&r chests provide a unique instance of loot for each player, so what your friends get can be different from what you get. It is common courtesy not to break them."
 				""
 				"- Lootr Chests DO NOT say if they are a trapped chest or not, even with Jade. What does this mean for you?"
 				""
 				"&l&c<shake>Check for TNT or redstone around each Lootr chest.</shake>&r"
-				""
 				"{@pagebreak}"
-				""
 				"Thinking of no longer using Patchouli for the guide book..."
 				""
 				"-+-"
@@ -108,7 +137,7 @@
 					type: "item"
 				}
 			]
-			title: "Hi! Welcome to Finality."
+			title: "Introduction Node - Hi! Welcome to Finality."
 			x: 0.0d
 			y: 0.0d
 		}
@@ -268,7 +297,7 @@
 				""
 				"If you still find yourself running out of string or wool, gather &2flax seeds&r and plant them. &aFlax&r can then be refined with a &6Millstone&r to get additional string and seeds."
 				""
-				"This process can then be automated with Create and its &7Mechanical Harvesters&r."
+				"This process can then be automated with &6Create&r and its &7Mechanical Harvesters&r."
 			]
 			hide: true
 			icon: "extendedcrafting:handheld_table"
@@ -331,6 +360,11 @@
 					item: "supplementaries:flax_seeds"
 					type: "item"
 				}
+				{
+					id: "7C483B82D80A8F75"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
 			]
 			title: "Convenient Utilities Ch.1"
 			x: 0.0d
@@ -343,7 +377,9 @@
 				""
 				"As for Farmer's Delight tools, obviously you will need a knife to use the cutting board."
 				""
-				"Wondering what chalk can be used for? It can be used for drawing and help you navigate through cave systems, just in case you get lost. Additional symbols can be unlocked via advancements."
+				"Wondering what chalk can be used for?"
+				""
+				"It can be used for &ddrawing&r, &eoutlining builds&r, &eoutlining the path&r of a radial contraption farm and help you &bnavigate&r through &7cave systems&r, just in case you get lost. Additional symbols can be unlocked via advancements."
 				""
 				"Lastly, Fletching Tables are now usable and can make arrows now thanks to &dApotheosis&r!"
 			]
@@ -434,7 +470,55 @@
 					type: "item"
 				}
 				{
-					id: "0345851CE54DE5A7"
+					id: "27107A7D7AA97393"
+					item: {
+						Count: 1b
+						id: "chalk:chalk_box"
+						tag: {
+							Items: [
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4896EF8D0C434B5E"
 					item: "minecraft:fletching_table"
 					type: "item"
 				}
@@ -455,7 +539,6 @@
 				"On a sidenote, this quest node description has multiple pages."
 				""
 				"{@pagebreak}"
-				""
 				"About Travel Anchors:"
 				""
 				"Teleporter elevators, but omni-directional!"
@@ -521,6 +604,20 @@
 					item: "create_mechanical_extruder:mechanical_extruder"
 					type: "item"
 				}
+				{
+					id: "5F5F07011AFB9FDF"
+					item: "echochest:echo_chest"
+					type: "item"
+				}
+				{
+					id: "6FECCB0334CF7626"
+					item: {
+						Count: 1b
+						id: "monobank:monobank"
+						tag: { }
+					}
+					type: "item"
+				}
 			]
 			title: "Convenient Utilities Ch.3"
 			x: -3.0d
@@ -535,6 +632,19 @@
 			hide: true
 			icon: "tempad:he_who_remains_tempad"
 			id: "38EC0E607FAE4543"
+			rewards: [
+				{
+					id: "5F652AE318FE64A7"
+					type: "xp_levels"
+					xp_levels: 50
+				}
+				{
+					count: 64
+					id: "214EB1AB55507226"
+					item: "minecraft:netherite_block"
+					type: "item"
+				}
+			]
 			shape: "rsquare"
 			subtitle: "...at the End of time."
 			tasks: [{
@@ -732,11 +842,18 @@
 			dependencies: ["13186E7B0D6B6115"]
 			icon: "minecraft:compass"
 			id: "650B5FD6B6CAD69C"
-			rewards: [{
-				id: "5550D0D6DDAF20F5"
-				type: "xp_levels"
-				xp_levels: 30
-			}]
+			rewards: [
+				{
+					id: "5550D0D6DDAF20F5"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					id: "0D1D658A5E8614B7"
+					item: "artifacts:mimic_spawn_egg"
+					type: "item"
+				}
+			]
 			shape: "rsquare"
 			subtitle: "For both explorers and those who seek a certain biome."
 			tasks: [
@@ -795,6 +912,10 @@
 				""
 				"&7Coal Blocks&r can be compressed to make Diamonds with the help of a &bsuperheated&r Blaze Burner."
 				""
+				"&aEmeralds&r are renewable from mixing some glass, quartz and some iron in a &bsuperheated&r Blaze Burner."
+				""
+				"&7Tuff&r can be made from compacting either Gravel or Deepslate in a &bsuperheated&r or &6heated&r &7basin&r with some lava."
+				""
 				"&8Netherite&r is also now renewable with the use of Crushing Wheels by crushing &4Netherrack&r."
 				""
 				"Netherrack can now be renewed with &cInstant Health II&r potions, fully automated."
@@ -846,6 +967,11 @@
 					item: "minecraft:netherrack"
 					type: "item"
 				}
+				{
+					id: "5712112A95EF8468"
+					item: "minecraft:emerald"
+					type: "item"
+				}
 			]
 			title: "A Heads Up: Infinite Materials"
 			x: 1.5d
@@ -856,11 +982,18 @@
 			hide: true
 			hide_dependency_lines: true
 			id: "4843FF760BED67F6"
-			rewards: [{
-				id: "02616E76E4F48105"
-				item: "pickletweaks:diamond_apple"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "02616E76E4F48105"
+					item: "pickletweaks:diamond_apple"
+					type: "item"
+				}
+				{
+					id: "0BB63C7B5DE0F779"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
 			shape: "rsquare"
 			subtitle: "Like the menu music? Well, now they are here."
 			tasks: [

@@ -15,21 +15,22 @@ customization {
 }
 
 customization {
-  keepaspectratio = true
+  keepaspectratio = false
   action = backgroundoptions
 }
 
 customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_multiplayer_button%
-  orientation = bottom-centered
-  x = 1
+  orientation = element
+  orientation_element = vanillabtn:button_compatibility_id:mc_titlescreen_singleplayer_button
+  x = 0
   action = movebutton
-  y = -85
+  y = 24
 }
 
 customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_multiplayer_button%
-  width = 90
+  width = 128
   action = resizebutton
   height = 20
 }
@@ -59,15 +60,15 @@ customization {
 customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_quit_button%
   orientation = element
-  orientation_element = 3d46971e-9005-41ee-8b4f-2ec8219a39d41682306825930
-  x = 184
+  orientation_element = vanillabtn:button_compatibility_id:mc_titlescreen_singleplayer_button
+  x = 0
   action = movebutton
-  y = 0
+  y = 96
 }
 
 customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_quit_button%
-  width = 90
+  width = 128
   action = resizebutton
   height = 20
 }
@@ -83,23 +84,17 @@ customization {
 
 customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
-  orientation = bottom-centered
-  x = -91
+  orientation = mid-right
+  x = -290
   action = movebutton
-  y = -85
+  y = -54
 }
 
 customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
-  width = 90
+  width = 128
   action = resizebutton
   height = 20
-}
-
-customization {
-  identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
-  action = setbuttonlabel
-  value = Play
 }
 
 customization {
@@ -123,11 +118,15 @@ customization {
 
 customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_accessibility_button%
-  orientation = element
-  orientation_element = 3d46971e-9005-41ee-8b4f-2ec8219a39d41682306825930
-  x = -92
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_accessibility_button%
+  orientation = bottom-centered
+  x = 201
   action = movebutton
-  y = 0
+  y = -93
 }
 
 customization {
@@ -149,15 +148,15 @@ customization {
 customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
   orientation = element
-  orientation_element = 3d46971e-9005-41ee-8b4f-2ec8219a39d41682306825930
-  x = 92
+  orientation_element = vanillabtn:button_compatibility_id:mc_titlescreen_singleplayer_button
+  x = 0
   action = movebutton
-  y = 0
+  y = 48
 }
 
 customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
-  width = 90
+  width = 128
   action = resizebutton
   height = 20
 }
@@ -179,11 +178,15 @@ customization {
 
 customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_language_button%
-  orientation = element
-  orientation_element = 3d46971e-9005-41ee-8b4f-2ec8219a39d41682306825930
-  x = -184
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_language_button%
+  orientation = bottom-centered
+  x = 109
   action = movebutton
-  y = 0
+  y = -93
 }
 
 customization {
@@ -210,9 +213,9 @@ customization {
 customization {
   identifier = %id=button_compatibility_id:forge_titlescreen_mods_button%
   orientation = bottom-left
-  x = 84
+  x = 597
   action = movebutton
-  y = -23
+  y = -85
 }
 
 customization {
@@ -309,43 +312,6 @@ customization {
 }
 
 customization {
-  orientation = top-centered
-  basecolor = #FFEB8C
-  shadow = true
-  rotation = 0.0
-  scale = 2.0
-  refresh = true
-  bouncing = true
-  vanilla-like = true
-  x = -54
-  actionid = 6933b74a-1382-4bf0-9292-fd7ae16d24201679852528355
-  action = addsplash
-  y = 165
-  text = It's here!
-}
-
-customization {
-  orientation = element
-  enable_scrolling = true
-  shadow = true
-  scale = 1.0
-  source = https://raw.githubusercontent.com/Project-Vyre/finality-fm-live/main/finality-genesis.txt
-  text_border = 0
-  case_mode = normal
-  source_mode = web
-  line_spacing = 1
-  orientation_element = 0974a763-21a2-43f4-b2dd-98277087e3c61681331594374
-  x = 0
-  width = 333
-  action = custom_layout_element:fancymenu_customization_item_text
-  actionid = c6a5ba67-5f26-4523-9582-c75375abd0ca1681318824420
-  y = -130
-  alignment = left
-  base_color = #FFEB8C
-  height = 128
-}
-
-customization {
   orientation = bottom-left
   enable_scrolling = false
   shadow = true
@@ -365,30 +331,39 @@ customization {
 }
 
 customization {
+  orientation = top-centered
+  basecolor = #FFEB8C
+  shadow = true
+  rotation = 0.0
+  scale = 2.0
+  refresh = true
+  bouncing = true
+  vanilla-like = true
+  x = -54
+  actionid = 6933b74a-1382-4bf0-9292-fd7ae16d24201679852528355
+  action = addsplash
+  y = 165
+  text = Bye, space sword
+}
+
+customization {
   orientation = bottom-centered
-  copy_client_player = true
-  slim = false
-  auto_skin = false
-  scale = 40
-  headrotationy = 0.0
-  headrotationx = 0.0
-  skinurl = http://textures.minecraft.net/texture/3306dd70d8b91cb6442181b54b258241a448c4dbf07cfe0709c17eda762be76e
-  showname = false
-  crouching = false
-  follow_mouse = true
-  x = -12
-  width = 24
-  parrot_left_shoulder = false
-  action = custom_layout_element:fancymenu_customization_player_entity
-  actionid = a52cb86c-5c9f-41c7-a0c0-86dac0bb645d1681339856672
-  y = -170
-  playername = CelestialAbyss
-  bodyrotationx = 0.0
-  parrot = false
-  bodyrotationy = 0.0
-  auto_cape = false
-  is_baby = false
-  height = 72
+  enable_scrolling = true
+  shadow = true
+  scale = 1.0
+  source = https://raw.githubusercontent.com/Project-Vyre/finality-fm-live/main/finality-genesis.txt
+  text_border = 0
+  case_mode = normal
+  source_mode = web
+  line_spacing = 1
+  x = -166
+  width = 333
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = c6a5ba67-5f26-4523-9582-c75375abd0ca1681318824420
+  y = -128
+  alignment = left
+  base_color = #FFEB8C
+  height = 128
 }
 
 customization {
@@ -405,7 +380,7 @@ customization {
   width = 234
   action = custom_layout_element:fancymenu_customization_item_text
   actionid = 88abab38-403c-4700-b0ed-10e869b812011682303817168
-  y = -58
+  y = -161
   alignment = centered
   base_color = #FFEB8C
   height = 15
@@ -433,17 +408,18 @@ customization {
 }
 
 customization {
-  orientation = bottom-centered
+  orientation = element
   restartbackgroundanimations = true
   buttonaction = openlink;https://project-vyre.github.io/finality-wiki/docs/changelog_genesis%btnaction_splitter_fm%
   backgroundhovered = config/fancymenu/assets/big_buttons_hover.png
   label = Changelog
   loopbackgroundanimations = true
-  x = -45
-  width = 90
+  orientation_element = vanillabtn:button_compatibility_id:mc_titlescreen_singleplayer_button
+  x = 0
+  width = 128
   action = addbutton
   actionid = 3d46971e-9005-41ee-8b4f-2ec8219a39d41682306825930
-  y = -23
+  y = 72
   backgroundnormal = config/fancymenu/assets/big_buttons.png
   height = 20
 }

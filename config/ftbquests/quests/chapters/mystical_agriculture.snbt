@@ -5,7 +5,7 @@
 	group: "6855847200ADBE3A"
 	icon: "mysticalagriculture:infusion_altar"
 	id: "2C5FF9AF6ACD1D02"
-	order_index: 1
+	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
@@ -14,10 +14,29 @@
 				"With Mystical Agriculture, you can make many things. You can even make renewable conduits, hearts of the sea and more."
 				""
 				"Does this upset the balance? Yes. Was this modpack intended to be balanced? Nope."
+				""
+				"&bRight click&r the &6Infusion Altar&r block in &2JEI&r to see all recipes that involve the crafting method."
+				""
+				"Here is an explanation on how to use the &6Infusion Altar&r once you place the &eInfusion Pedestals&r on their assigned locations:"
+				""
+				"After placing your ingredients accordingly using information from JEI, you can use a button or lever next to the altar to start the process."
 			]
 			hide: true
 			icon: "mysticalagriculture:infusion_altar"
 			id: "3ED54EFC2FC65E99"
+			rewards: [
+				{
+					id: "635E215C63C954CE"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "2134A33E0FB0BD09"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			subtitle: "Avaritia, greed."
 			tasks: [
 				{
@@ -32,24 +51,40 @@
 					type: "item"
 				}
 			]
-			title: "Genesis of Infinity"
+			title: "Genesis of Infinity - The Infusion Altar"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["3CCEE62A9B6D8F1E"]
 			id: "013A53FA6B5EA594"
+			rewards: [{
+				id: "2173A205521B0BC7"
+				type: "xp"
+				xp: 25
+			}]
 			tasks: [{
 				id: "56B96EC3B1857503"
 				item: "mysticalagriculture:prudentium_essence"
 				type: "item"
 			}]
+			title: "Tier 2 - Prudentium"
 			x: 0.0d
 			y: 5.0d
 		}
 		{
 			dependencies: ["3ED54EFC2FC65E99"]
-			description: ["Please craft the Mystical Agriculture Guide Book. The documentation is extensive."]
+			description: [
+				"Please craft the Mystical Agriculture Guide Book. The documentation within is extensive."
+				""
+				"Also, for each tier of essence there are armor pieces and tools for that same tier."
+				""
+				"As always, you can right click each type of tiered essence to see what recipes they are used in."
+				""
+				"For example, iron is a Tier 3 resource which means you will need to use Tertium Essence to make Iron Seeds. Tiered essences can also be used to enrich the farmland to yield better results."
+				""
+				"Use Growth Accelerators under the farmland as well to accelerate the growth process."
+			]
 			icon: "mysticalagriculture:inferium_essence"
 			id: "6E3E85ECD7204B4D"
 			rewards: [{
@@ -63,6 +98,7 @@
 				}
 				type: "item"
 			}]
+			subtitle: "Just the basics."
 			tasks: [
 				{
 					count: 4L
@@ -82,29 +118,41 @@
 					type: "item"
 				}
 			]
-			title: "Inferium Tier"
+			title: "Tier 1 - Inferium"
 			x: 0.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["013A53FA6B5EA594"]
 			id: "3E607B69558203C0"
+			rewards: [{
+				id: "6FB519933D3354E6"
+				type: "xp"
+				xp: 50
+			}]
 			tasks: [{
 				id: "5051D0D23964A3EC"
 				item: "mysticalagriculture:tertium_essence"
 				type: "item"
 			}]
+			title: "Tier 3 - Tertium"
 			x: 0.0d
 			y: 7.0d
 		}
 		{
 			dependencies: ["3E607B69558203C0"]
 			id: "58621F2AF6BAED27"
+			rewards: [{
+				id: "2F0ADB0FBB7AAC35"
+				type: "xp"
+				xp: 75
+			}]
 			tasks: [{
 				id: "4C1ADDAF2F6DCA13"
 				item: "mysticalagriculture:imperium_essence"
 				type: "item"
 			}]
+			title: "Tier 4 - Imperium"
 			x: 0.0d
 			y: 9.0d
 		}
@@ -112,6 +160,11 @@
 			dependencies: ["58621F2AF6BAED27"]
 			icon: "mysticalagriculture:supremium_essence"
 			id: "6366BD8019526248"
+			rewards: [{
+				id: "66BBF2FF3FD17C42"
+				type: "xp"
+				xp: 250
+			}]
 			tasks: [
 				{
 					count: 4L
@@ -131,7 +184,7 @@
 					type: "item"
 				}
 			]
-			title: "Supremium Tier"
+			title: "Tier 5 - Supremium"
 			x: 0.0d
 			y: 11.0d
 		}
@@ -160,6 +213,7 @@
 				"1BAF5C307DD38F12"
 				"6E3E85ECD7204B4D"
 			]
+			description: ["Yes, there are more watering cans after this."]
 			id: "02949EFDAF8BFE6F"
 			subtitle: "MORE WATER!"
 			tasks: [{
@@ -192,6 +246,7 @@
 		{
 			dependencies: ["013A53FA6B5EA594"]
 			id: "70790BD37B0BDE2D"
+			optional: true
 			subtitle: "MORE WATERR!!!"
 			tasks: [{
 				id: "5AAC6A33655D91CA"
@@ -212,6 +267,7 @@
 		{
 			dependencies: ["3E607B69558203C0"]
 			id: "36D6E28D0D048B25"
+			optional: true
 			subtitle: "EVEN MORE WATERR!"
 			tasks: [{
 				id: "6425FEFC1C4BF9A4"
@@ -232,6 +288,7 @@
 		{
 			dependencies: ["58621F2AF6BAED27"]
 			id: "776DCB20322DC7CA"
+			optional: true
 			tasks: [{
 				id: "6D3EB9183E605EF8"
 				item: {
@@ -250,6 +307,7 @@
 		{
 			dependencies: ["6366BD8019526248"]
 			id: "3A2D13B49A74A4E5"
+			optional: true
 			tasks: [{
 				id: "5ED76EABC6C8ACF0"
 				item: {
@@ -310,23 +368,27 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["7FCED8481DFD9F1A"]
-			id: "565247CBE2F92DFC"
-			tasks: [{
-				id: "51734AEB2D37913A"
-				item: "mysticalagradditions:insanium_essence"
-				type: "item"
-			}]
-			x: 1.5d
-			y: 12.5d
-		}
-		{
 			dependencies: [
 				"6E3E85ECD7204B4D"
 				"16B642E5E7DBE75D"
 				"527A4B10DDE51E37"
 			]
-			description: ["You will need to make a special Infusion Fluid to create this very special item."]
+			description: [
+				"You will need to make a special Infusion Fluid to create this very special item."
+				""
+				"Once you mix the ingredients together in a Basin, use a Spout to pour the fluid onto a diamond to make the basic Infusion Crystal."
+				""
+				"Remember that all the tiers have names."
+				""
+				"&7Tier 1 - Inferium&r"
+				"&aTier 2 - Prudentium&r"
+				"&6Tier 3 - Tertium&r"
+				"&bTier 4 - Imperium&r"
+				"&cTier 5 - Supremium and Awakened Supremium&r"
+				"&5Tier 6 - Insanium&r"
+				""
+				"All tiers except &5Insanium&r have their own tools, armor, growth accelerators, etc."
+			]
 			id: "3CCEE62A9B6D8F1E"
 			rewards: [
 				{
@@ -338,6 +400,11 @@
 					id: "009706A64D739485"
 					item: "mysticalagriculture:fertilized_essence"
 					type: "item"
+				}
+				{
+					id: "3D6F503706BBC181"
+					type: "xp_levels"
+					xp_levels: 30
 				}
 			]
 			subtitle: "This is needed to start your journey with infinite automation."
@@ -352,18 +419,32 @@
 				}
 				type: "item"
 			}]
-			title: "The Infusion Crystal"
+			title: "A Crystalline Infinity - The Infusion Crystal"
 			x: 0.0d
 			y: 3.5d
 		}
 		{
 			dependencies: ["6366BD8019526248"]
+			icon: "mysticalagriculture:master_infusion_crystal"
 			id: "7FCED8481DFD9F1A"
-			tasks: [{
-				id: "582F7F1F135F79C2"
-				item: "mysticalagriculture:master_infusion_crystal"
-				type: "item"
+			rewards: [{
+				id: "07F5C305D2334534"
+				type: "xp_levels"
+				xp_levels: 60
 			}]
+			tasks: [
+				{
+					id: "582F7F1F135F79C2"
+					item: "mysticalagriculture:master_infusion_crystal"
+					type: "item"
+				}
+				{
+					id: "66F6303566237975"
+					item: "mysticalagradditions:insanium_essence"
+					type: "item"
+				}
+			]
+			title: "Mastery - The Master Infusion Crystal and Insanium"
 			x: 0.0d
 			y: 12.5d
 		}
@@ -435,6 +516,81 @@
 			title: "Awakened Tier"
 			x: 0.0d
 			y: 18.0d
+		}
+		{
+			dependencies: ["7FCED8481DFD9F1A"]
+			id: "2A4E2F7427EFA853"
+			shape: "octagon"
+			subtitle: "May cost your sanity though."
+			tasks: [
+				{
+					id: "58FB74EF5A1A5790"
+					item: "mysticalagradditions:nether_star_crux"
+					type: "item"
+				}
+				{
+					id: "3143DC58A6BD8789"
+					item: "mysticalagriculture:nether_star_seeds"
+					type: "item"
+				}
+				{
+					count: 27L
+					id: "194A3BBE89608BFD"
+					item: "mysticalagriculture:nether_star_essence"
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "5E050CF52EC27A14"
+					item: "mysticalagradditions:nether_star_shard"
+					type: "item"
+				}
+				{
+					id: "050654E0648C9ED0"
+					item: "minecraft:nether_star"
+					type: "item"
+				}
+			]
+			title: "Growing Nether Stars!"
+			x: 1.5d
+			y: 12.5d
+		}
+		{
+			dependencies: ["7FCED8481DFD9F1A"]
+			id: "3FFC8FB1D24BBBE9"
+			subtitle: "Dragon's Breath without the hassle."
+			tasks: [
+				{
+					id: "535B666D149AD6BC"
+					item: "mysticalagradditions:dragon_egg_crux"
+					type: "item"
+				}
+				{
+					id: "1782185008AE14AF"
+					item: "mysticalagriculture:dragon_egg_seeds"
+					type: "item"
+				}
+				{
+					count: 27L
+					id: "09510C3B9C39A908"
+					item: "mysticalagriculture:dragon_egg_essence"
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "0AB0113FBDE5C346"
+					item: "mysticalagradditions:dragon_egg_chunk"
+					type: "item"
+				}
+				{
+					id: "1B79AA32F9A7830A"
+					item: "minecraft:dragon_egg"
+					type: "item"
+				}
+			]
+			title: "Growing Dragon Eggs!"
+			x: -1.5d
+			y: 12.5d
 		}
 	]
 	subtitle: [

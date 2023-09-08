@@ -1,4 +1,5 @@
 // priority: 0
+// requires: kubejs_create
 // requires: create
 // requires: cataclysm
 
@@ -55,6 +56,22 @@ let CMD = {
     chain_command_block: 'Chain Command Block',
     repeating_command_block: 'Repeating Command Block'
 }
+let STONE_COMPACTING_INCEPTION = {
+    cobblestone: 'Cobblestone',
+}
+let DEEPSLATE_COMPACTING_INCEPTION = {
+    cobbled_deepslate: 'Cobbled Deepslate',
+}
+let GRAVEL_COMPACTING_INCEPTION = {
+    gravel: 'Gravel'
+}
+let SAND_COMPACTING_INCEPTION = {
+    sand: 'Sand'
+}
+let RED_SAND_COMPACTING_INCEPTION = {
+    red_sand: 'Red Sand'
+}
+let IRON_COMPACTING
 let PRIMORDIAL_MECHANISMS = {
     terra_mechanism: 'Terra Mechanism', // nature related, ingredient for entropy mechanism
     cornucopia_mechanism: 'Cornucopia Mechanism', // delicacy related, ingredient for entropy mechanism
@@ -68,6 +85,9 @@ let PRIMORDIAL_MECHANISMS = {
 const TOOLS = ['sword', 'shovel', 'pickaxe', 'axe', 'hoe']
 const ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
 const DIVING = ['diving_helmet', 'backtank', 'diving_boots']
+let LEGENDARY = ['whisper_of_the_abyss', 'coral_lance', 'divider']
+let ABYSS_ARMOR = ['heaume', 'brigantine', 'leggings', 'boots']
+let EL_TOOLS = ['sword', 'shovel', 'pickaxe', 'axe', 'scythe']
 StartupEvents.registry('item', event => { // Register new items here event.create('example_item').displayName('Example Item')
     event.create('kubejs:deepslate_shard').texture('kubejs:item/deepslate_shard').maxStackSize(64)
     event.create('kubejs:trident_pole').texture('kubejs:item/trident_pole').maxStackSize(64)
@@ -77,6 +97,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     event.create('kubejs:dormant_singularity_core').displayName('§d<shake>Dormant Singularity Core</shake>').texture('kubejs:item/dormant_singularity_core').maxStackSize(16)
     event.create('kubejs:awakened_singularity_core').displayName('<shake><rainb>Awakened Singularity Core</rainb></shake>').texture('kubejs:item/awakened_singularity_core').maxStackSize(8)
     event.create('kubejs:denied_result').displayName('§d<shake>Denied Result</shake>').texture('kubejs:item/denied').maxStackSize(1).fireResistant(true)
+    event.create('kubejs:removed_item').displayName('§4<shake>Removed Item</shake>').texture('kubejs:item/removed').maxStackSize(1).fireResistant(true)
     event.create('kubejs:high_entropy_alloy').displayName('<rainb>High Entropy Alloy</rainb>').texture('kubejs:item/final_ingot').maxStackSize(64).fireResistant(true).group('miscellaneous')
     Object.keys(NATR).forEach(material => {
         event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${NATR[material]} Singularity`).texture(`kubejs:item/incomplete_singularities/nature/incomplete_${material}`).maxStackSize(1)
@@ -103,11 +124,30 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     event.create('kubejs:final_hoe', 'hoe').tier('final_tool').displayName('§l<rainb>Agricola Manus</rainb>').texture('kubejs:item/final_hoe').maxStackSize(1).fireResistant(true).group('tools')
     // weapons
     event.create('kubejs:final_sword', 'sword').tier('final_tool').displayName('§l<rainb>Corevis Ultimatum</rainb>').texture('kubejs:item/final_sword').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_lance', 'sword').tier('final_tool').displayName('§l<rainb>Tenebris Punctura</rainb>').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:crystal_lance', 'sword').tier('final_tool').displayName('§b<rainb>Crystallus Hasta</rainb>').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_katana', 'sword').tier('final_tool').displayName('§l<rainb>Celeritas Obumbratio</rainb>').texture('kubejs:item/final_katana').maxStackSize(1).fireResistant(true).group('combat')
     // armor
     event.create('kubejs:final_helmet', 'helmet').tier('final_armor').displayName('§l<rainb>Conscientia Oculi</rainb>').texture('kubejs:item/final_helmet').maxStackSize(1).fireResistant(true).group('combat')
     event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor').displayName('§l<rainb>Vitale Cordis</rainb>').texture('kubejs:item/final_chestplate').maxStackSize(1).fireResistant(true).group('combat')
     event.create('kubejs:final_leggings', 'leggings').tier('final_armor').displayName('§l<rainb>Universum Motus</rainb>').texture('kubejs:item/final_leggings').maxStackSize(1).fireResistant(true).group('combat')
     event.create('kubejs:final_boots', 'boots').tier('final_armor').displayName('§l<rainb>Gravitas Anchoram</rainb>').texture('kubejs:item/final_boots').maxStackSize(1).fireResistant(true).group('combat')
+    // shapes
+    event.create('kubejs:basic_circle')
+        .displayName('§lBasic Circle')
+        .texture('kubejs:item/shapes/basic_circle')
+        .maxStackSize(64)
+        .fireResistant(true)
+    event.create('kubejs:basic_square')
+        .displayName('§lBasic Square')
+        .texture('kubejs:item/shapes/basic_square')
+        .maxStackSize(64)
+        .fireResistant(true)
+    event.create('kubejs:basic_triangle_sq')
+        .displayName('§lBasic Triangle Square')
+        .texture('kubejs:item/shapes/basic_triangle_sq')
+        .maxStackSize(64)
+        .fireResistant(true)
 })
 StartupEvents.registry('block', event => {
     Object.keys(CMD).forEach(insert => {
@@ -119,6 +159,156 @@ StartupEvents.registry('block', event => {
             .resistance(1000)
             .lightLevel(1.0)
             .requiresTool(true)
+            .tagBlock('minecraft:wither_immune')
+            .tagBlock('minecraft:dragon_immune')
+            .tagBlock('minecraft:mineable/pickaxe')
+            .tagBlock('forge:needs_netherite_tool')
+            .tagItem('kubejs:command_blocks')
+    })
+    Object.keys(STONE_COMPACTING_INCEPTION).forEach(insert => {
+        event.create(`kubejs:compressed_${insert}`)
+            .displayName(`Compressed ${STONE_COMPACTING_INCEPTION[insert]}`)
+            .textureAll(`kubejs:block/compression/compressed_${insert}`)
+            .material('stone')
+            .hardness(25)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/pickaxe')
+        event.create(`kubejs:double_compressed_${insert}`)
+            .displayName(`<shake>Double Compressed</shake> ${STONE_COMPACTING_INCEPTION[insert]}`)
+            .textureAll(`kubejs:block/compression/double_compressed_${insert}`)
+            .material('stone')
+            .hardness(50)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/pickaxe')
+        event.create(`kubejs:triple_compressed_${insert}`)
+            .displayName(`<shake>Triple Compressed</shake> ${STONE_COMPACTING_INCEPTION[insert]}`)
+            .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
+            .material('stone')
+            .hardness(75)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/pickaxe')
+    })
+    Object.keys(DEEPSLATE_COMPACTING_INCEPTION).forEach(insert => {
+        event.create(`kubejs:compressed_${insert}`)
+            .displayName(`Compressed ${DEEPSLATE_COMPACTING_INCEPTION[insert]}`)
+            .textureAll(`kubejs:block/compression/compressed_${insert}`)
+            .material('deepslate')
+            .hardness(25)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/pickaxe')
+        event.create(`kubejs:double_compressed_${insert}`)
+            .displayName(`<shake>Double Compressed</shake> ${DEEPSLATE_COMPACTING_INCEPTION[insert]}`)
+            .textureAll(`kubejs:block/compression/double_compressed_${insert}`)
+            .material('deepslate')
+            .hardness(50)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/pickaxe')
+        event.create(`kubejs:triple_compressed_${insert}`)
+            .displayName(`<shake>Triple Compressed</shake> ${DEEPSLATE_COMPACTING_INCEPTION[insert]}`)
+            .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
+            .material('deepslate')
+            .hardness(75)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/pickaxe')
+    })
+    Object.keys(GRAVEL_COMPACTING_INCEPTION).forEach(insert => {
+        event.create(`kubejs:compressed_${insert}`)
+            .displayName(`Compressed ${GRAVEL_COMPACTING_INCEPTION[insert]}`)
+            .textureAll(`kubejs:block/compression/compressed_${insert}`)
+            .material('gravel')
+            .hardness(25)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/shovel')
+        event.create(`kubejs:double_compressed_${insert}`)
+            .displayName(`<shake>Double Compressed</shake> ${GRAVEL_COMPACTING_INCEPTION[insert]}`)
+            .textureAll(`kubejs:block/compression/double_compressed_${insert}`)
+            .material('gravel')
+            .hardness(50)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/shovel')
+        event.create(`kubejs:triple_compressed_${insert}`)
+            .displayName(`<shake>Triple Compressed</shake> ${GRAVEL_COMPACTING_INCEPTION[insert]}`)
+            .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
+            .material('gravel')
+            .hardness(75)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/shovel')
+    })
+    Object.keys(SAND_COMPACTING_INCEPTION).forEach(insert => {
+        event.create(`kubejs:compressed_${insert}`)
+            .displayName(`Compressed ${SAND_COMPACTING_INCEPTION[insert]}`)
+            .textureAll(`kubejs:block/compression/compressed_${insert}`)
+            .material('sand')
+            .hardness(25)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/shovel')
+        event.create(`kubejs:double_compressed_${insert}`)
+            .displayName(`<shake>Double Compressed</shake> ${SAND_COMPACTING_INCEPTION[insert]}`)
+            .textureAll(`kubejs:block/compression/double_compressed_${insert}`)
+            .material('sand')
+            .hardness(50)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/shovel')
+        event.create(`kubejs:triple_compressed_${insert}`)
+            .displayName(`<shake>Triple Compressed</shake> ${SAND_COMPACTING_INCEPTION[insert]}`)
+            .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
+            .material('sand')
+            .hardness(75)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/shovel')
+    })
+    Object.keys(RED_SAND_COMPACTING_INCEPTION).forEach(insert => {
+        event.create(`kubejs:compressed_${insert}`)
+            .displayName(`Compressed ${RED_SAND_COMPACTING_INCEPTION[insert]}`)
+            .textureAll(`kubejs:block/compression/compressed_${insert}`)
+            .material('sand')
+            .hardness(25)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/shovel')
+        event.create(`kubejs:double_compressed_${insert}`)
+            .displayName(`<shake>Double Compressed</shake> ${RED_SAND_COMPACTING_INCEPTION[insert]}`)
+            .textureAll(`kubejs:block/compression/double_compressed_${insert}`)
+            .material('sand')
+            .hardness(50)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/shovel')
+        event.create(`kubejs:triple_compressed_${insert}`)
+            .displayName(`<shakeb>Triple Compressed</shake> ${RED_SAND_COMPACTING_INCEPTION[insert]}`)
+            .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
+            .material('sand')
+            .hardness(75)
+            .resistance(1000)
+            .lightLevel(1.0)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/shovel')
     })
 })
 StartupEvents.registry('fluid', event => {
@@ -183,6 +373,9 @@ ItemEvents.modification(event => {
     event.modify('minecraft:shield', item => {
         item.maxDamage = 225
     })
+    event.modify('minecraft:trident', item => {
+        item.maxDamage = 1024
+    })
     TOOLS.forEach(tool => event.modify(`minecraft:diamond_${tool}`, item => {
         item.maxDamage = 1024
     }))
@@ -192,9 +385,6 @@ ItemEvents.modification(event => {
     event.modify('eccentrictome:tome', item => {
         item.fireResistant = true
     })
-    TOOLS.forEach(tool => event.modify(`kubejs:final_${tool}`, item => {
-        item.fireResistant = true
-    }))
     // Armor durability is synchronized because it does not make sense as to why armor pieces have different durabilities.
     ARMOR.forEach(armor => event.modify(`minecraft:leather_${armor}`, item => {
         item.maxDamage = 128
@@ -217,7 +407,70 @@ ItemEvents.modification(event => {
     DIVING.forEach(armor => event.modify(`create:netherite_${armor}`, item => {
         item.maxDamage = 1024
     }))
-    ARMOR.forEach(armor => event.modify(`kubejs:final_${armor}`, item => {
+    // aquamirae
+    LEGENDARY.forEach(insert => {
+        event.modify(`aquamirae:${insert}`, item => {
+            item.maxDamage = -1
+            item.fireResistant = true
+        })
+    })
+    ABYSS_ARMOR.forEach(insert => {
+        event.modify(`aquamirae:abyssal_${insert}`, item => {
+            item.maxDamage = -1
+            item.fireResistant = true
+        })
+    })
+    event.modify('aquamirae:abyssal_tiara', item => {
+        item.maxDamage = -1
         item.fireResistant = true
-    }))
+    })
+    event.modify('aquamirae:maze_rose', item => {
+        item.maxDamage = -1
+        item.fireResistant = true
+    })
+    event.modify('aquamirae:poisoned_chakra', item => {
+        item.maxDamage = -1
+        item.fireResistant = true
+    })
+    ARMOR.forEach(insert => {
+        event.modify(`aquamirae:three_bolt_${insert}`, item => {
+            item.maxDamage = -1
+            item.fireResistant = true
+        })
+    })
+    // bhc
+    event.modify('bhc:blade_of_vitality', item => {
+        item.maxDamage = -1
+        item.fireResistant = true
+    })
+    // enigmatic legacy
+    EL_TOOLS.forEach(insert => {
+        event.modify(`enigmaticlegacy:etherium_${insert}`, item => {
+            item.maxDamage = -1
+            item.fireResistant = true
+        })
+    })
+    ARMOR.forEach(insert => {
+        event.modify(`enigmaticlegacy:etherium${insert}`, item => {
+            item.maxDamage = -1
+            item.fireResistant = true
+        })
+    })
+    event.modify('enigmaticlegacy:astral_breaker', item => {
+        item.maxDamage = -1
+        item.fireResistant = true
+    })
+    // farmer's delight
+    event.modify('farmersdelight:flint_knife', item => {
+        item.maxDamage = 256
+    })
+    event.modify('farmersdelight:iron_knife', item => {
+        item.maxDamage = 512
+    })
+    event.modify('farmersdelight:diamond_knife', item => {
+        item.maxDamage = 1820
+    })
+    event.modify('farmersdelight:netherite_knife', item => {
+        item.maxDamage = 4096
+    })
 })

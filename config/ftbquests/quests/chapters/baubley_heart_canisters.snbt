@@ -84,7 +84,7 @@
 		}
 		{
 			dependencies: ["0EDA3F726D445492"]
-			description: ["You can collect Wither Bones from Wither Skeletons."]
+			description: ["You can collect Wither Bones from Wither Skeletons or by haunting regular bones."]
 			id: "749E99B2BD61D8E2"
 			subtitle: "This is also needed."
 			tasks: [{

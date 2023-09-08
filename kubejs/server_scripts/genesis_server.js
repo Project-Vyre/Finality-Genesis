@@ -2,11 +2,13 @@
 // requires: kubejs
 // requires: create
 // requires: supplementaries
+// requires: lodestone
+// requires: salt
 
 console.info('Implementing Finality recipes and compats...')
 
+const WOOD_TYPES = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'crimson', 'warped']
 let STONEPLATES = ['stone', 'polished_blackstone']
-let WOODPLATES = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'crimson', 'warped']
 let FOUNDATION_METALS = ['iron', 'gold']
 let FOUNDATION_NONMETAL = [
     'coal',
@@ -29,8 +31,6 @@ let CURSEDRECIPES = [
     'gold_ingot_from_blasting_gold_ore',
     'gold_ingot_from_smelting_deepslate_gold_ore',
     'gold_ingot_from_blasting_deepslate_gold_ore',
-    'gold_ingot_from_smelting_nether_gold_ore',
-    'gold_ingot_from_blasting_nether_gold_ore'
 ]
 let MODRECIPES = [
     'createaddition:mixing/netherrack',
@@ -39,12 +39,14 @@ let MODRECIPES = [
     'createaddition:rolling/gold_ingot',
     'createaddition:rolling/brass_ingot'
 ]
-let CMD = [
-    'command_block',
-    'chain_command_block',
-    'repeating_command_block'
+let STORAGE_INCEPTION = [
+    'cobblestone',
+    'cobbled_deepslate',
+    'gravel',
+    'sand',
+    'red_sand'
 ]
-
+let COLORID = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 ServerEvents.recipes(event => {
     FOUNDATION_NONMETAL.forEach(insert => { // why can you even smelt and blast these ores? YOU LITERALLY LOSE SO MUCH!
         event.remove([
@@ -168,6 +170,41 @@ ServerEvents.recipes(event => {
         E: 'kubejs:high_entropy_alloy',
         S: 'extendedcrafting:black_iron_ingot'
     }).id('finality:crafting/final_sword')
+    event.recipes.createMechanicalCrafting('kubejs:crystal_lance', [
+        ' A ',
+        ' A ',
+        'BBB',
+        ' B ',
+        ' B ',
+        ' B ',
+        ' B '
+    ], {
+        A: 'minecraft:amethyst_shard',
+        B: 'extendedcrafting:black_iron_ingot',
+    }).id('finality:crystal_lance')
+    event.recipes.createMechanicalCrafting('kubejs:final_katana', [
+        ' E ',
+        ' E ',
+        ' E ',
+        'GGG',
+        ' I '
+    ], {
+        E: 'kubejs:high_entropy_alloy',
+        G: 'minecraft:amethyst_shard',
+        I: 'extendedcrafting:black_iron_ingot'
+    }).id('finality:mechanical_crafting/final_katana')
+    event.recipes.createMechanicalCrafting('kubejs:final_lance', [
+        '  E  ',
+        '  E  ',
+        'IIIII',
+        'I I I',
+        '  I  ',
+        '  I  ',
+        '  I  '
+    ], {
+        E: 'kubejs:high_entropy_alloy',
+        I: 'extendedcrafting:black_iron_ingot'
+    }).id('finality:mechanical_crafting/final_lance')
     event.shaped('kubejs:final_pickaxe', [
         'EEE',
         ' S ',
@@ -214,7 +251,7 @@ ServerEvents.recipes(event => {
             `minecraft:${stone}_slab`
         ], `${stone}`).processingTime(50).id(`finality:${stone}_pressure_plate`)
     })
-    WOODPLATES.forEach(wood => {
+    WOOD_TYPES.forEach(wood => {
         event.recipes.create.cutting([
             `minecraft:${wood}_pressure_plate`,
             `minecraft:${wood}_slab`
@@ -237,6 +274,7 @@ ServerEvents.recipes(event => {
     event.shapeless('create:mechanical_piston', [
         'supplementaries:soap', 'create:sticky_mechanical_piston'
     ]).id('finality:mechanical_piston_soap_washing')
+    // item application
     event.recipes.createItemApplication('minecraft:tinted_glass', [
         '#forge:glass/colorless', 'minecraft:amethyst_shard'
     ]).id('minecraft:tinted_glass')
@@ -356,6 +394,9 @@ ServerEvents.recipes(event => {
         '18x minecraft:gold_nugget',
         Fluid.of('minecraft:lava', 250)
     ]).id('finality:nether_gold_ore_deco') // Thank you to FunnyMan4579 on the official Create Discord for giving me this idea :3
+    event.recipes.createMixing('salt:salt', [
+        Fluid.of('minecraft:water', 1000)
+    ]).heated().id('finality:create_salt_compat')
     // supplementaries related
     event.shaped('supplementaries:quiver', [
         'RRL',
@@ -370,20 +411,98 @@ ServerEvents.recipes(event => {
         '4x minecraft:netherite_scrap',
         '4x minecraft:gold_ingot'
     ]).id('minecraft:netherite_ingot')
+    // removed create items
+    event.recipes.createMixing('create:chromatic_compound', [
+        '3x minecraft:glowstone_dust',
+        '3x create:powdered_obsidian',
+        'create:polished_rose_quartz'
+    ]).superheated().id('create:mixing/chromatic_compound')
+    event.recipes.createItemApplication('create:refined_radiance_casing', [
+        '#forge:stripped_logs',
+        'create:refined_radiance'
+    ]).id('create:refined_radiance_casing')
+    event.recipes.createItemApplication('create:shadow_steel_casing', [
+        '#forge:stripped_logs',
+        'create:shadow_steel'
+    ]).id('create:shadow_steel_casing')
+    STORAGE_INCEPTION.forEach(insert => {
+        event.shaped(`kubejs:compressed_${insert}`, [
+            'BBB',
+            'BBB',
+            'BBB'
+        ], {
+            B: `minecraft:${insert}`
+        }).id(`finality:compressed_${insert}`)
+        event.shaped(`kubejs:double_compressed_${insert}`, [
+            'BBB',
+            'BBB',
+            'BBB'
+        ], {
+            B: `kubejs:compressed_${insert}`
+        }).id(`finality:double_compressed_${insert}`)
+        event.shaped(`kubejs:triple_compressed_${insert}`, [
+            'BBB',
+            'BBB',
+            'BBB'
+        ], {
+            B: `kubejs:double_compressed_${insert}`
+        }).id(`finality:triple_compressed_${insert}`)
+        event.shapeless(`9x kubejs:double_compressed_${insert}`, `kubejs:triple_compressed_${insert}`).id(`finality:triple_compressed_${insert}_decompression`)
+        event.shapeless(`9x kubejs:compressed_${insert}`, `kubejs:double_compressed_${insert}`).id(`finality:double_compressed_${insert}_decompression`)
+        event.shapeless(`9x minecraft:${insert}`, `kubejs:compressed_${insert}`).id(`finality:compressed_${insert}_decompression`)
+    })
+    event.recipes.createDeploying([
+        'kubejs:command_block',
+        'kubejs:basic_square'
+    ], [
+        'kubejs:command_block',
+        'kubejs:final_axe'
+    ]).keepHeldItem().id('finality:basic_square')
+    event.recipes.createDeploying([
+        'kubejs:chain_command_block',
+        'kubejs:basic_circle'
+    ], [
+        'kubejs:chain_command_block',
+        'kubejs:final_axe'
+    ]).keepHeldItem().id('finality:basic_circle')
+    event.recipes.createDeploying([
+        'kubejs:repeating_command_block',
+        'kubejs:basic_triangle_sq'
+    ], [
+        'kubejs:repeating_command_block',
+        'kubejs:final_axe'
+    ]).keepHeldItem().id('finality:basic_triangle_sq')
+    if (Platform.isLoaded('quark')) {
+        event.shaped('minecraft:hopper', [
+            'ILI',
+            'ILI',
+            ' I '
+        ], {
+            I: 'create:iron_sheet',
+            L: '#minecraft:logs'
+        }).id('quark:tweaks/crafting/utility/misc/easy_hopper')
+        event.shaped('4x kubejs:denied_result', [
+            'LLL',
+            'L L',
+            'LLL'
+        ], {
+            L: '#minecraft:logs'
+        }).id('quark:tweaks/crafting/utility/chests/mixed_chest_wood_but_without_exclusions')
+    }
+    if (Platform.isLoaded('woodworks')) {
+        WOOD_TYPES.forEach(insert => {
+            event.shapeless(`woodworks:${insert}_chest`, ['minecraft:chest']).id(`finality:woodworks/vanilla_chest_to_${insert}_chest_conversion`)
+            event.shapeless(`woodworks:${insert}_trapped_chest`, ['minecraft:trapped_chest']).id(`finality:woodworks/vanilla_trapped_chest_to_${insert}_trapped_chest_conversion`)
+        })
+    }
 })
 
 ServerEvents.tags('item', event => {
-    CMD.forEach(insert => {
-        event.add('kubejs:command_blocks', `kubejs:${insert}`)
-    })
+
 })
+
 ServerEvents.tags('block', event => {
-    CMD.forEach(insert => {
-        event.add('minecraft:wither_immune', `kubejs:${insert}`)
-        event.add('minecraft:dragon_immune', `kubejs:${insert}`)
-        event.add('minecraft:mineable/pickaxe', `kubejs:${insert}`)
-        event.add('forge:needs_netherite_tool', `kubejs:${insert}`)
-    })
+
 })
 
 PlayerEvents.loggedIn(event => {
@@ -447,7 +566,9 @@ const set = {
         }
     ]
 }
+
 const sets = [set];
+
 PlayerEvents.tick(check => {
     const { headArmorItem, chestArmorItem, legsArmorItem, feetArmorItem } = check.player;
     if (check.player.level.time % 100 == 0) {
@@ -511,7 +632,10 @@ LootJS.modifiers((event) => {
         event.addBlockLootModifier(`minecraft:${metal}_ore`).randomChance(0.2).addLoot(`minecraft:raw_${metal}`)
         event.addBlockLootModifier(`minecraft:deepslate_${metal}_ore`).randomChance(0.3).addLoot(`minecraft:raw_${metal}`)
     })
+    event.addBlockLootModifier('create:zinc_ore').randomChance(0.2).addLoot('create:raw_zinc')
+    event.addBlockLootModifier('create:deepslate_zinc_ore').randomChance(0.3).addLoot('create:raw_zinc')
     event.addLootTypeModifier(LootType.CHEST).removeLoot('minecraft:bucket')
+    event.addEntityLootModifier('minecraft:creeper').randomChance(0.05).addLoot('create:zinc_nugget')
 });
 
 LevelEvents.afterExplosion(event => {
@@ -524,4 +648,40 @@ LevelEvents.afterExplosion(event => {
             entity.sendData('screenshake', { i1: distance * 0.6, i2: distance, i3: distance * 0.2, duration: 15 })
         }
     })
+})
+
+let BLACKLIST = {
+    ae2: 'Applied Energistics 2',
+    ars_nouveau: 'Ars Nouveau',
+    createcasing: 'Create Encased',
+    create_confectionery: 'Create Confectionery',
+    create_jetpack: 'Create Jetpack',
+    create_sa: 'Create Stuff and Additions',
+    creategoggles: 'Create Goggles',
+    createsifter: 'Create Sifting',
+    create_things_and_misc: 'Create: Things and Misc',
+    cgm: "MrCrayFish's Gun Mod",
+    extendedgears: 'Create: Extended Cogwheels',
+    alloyed: 'Create: Alloyed',
+    createendertransmission: 'Create: Ender Transmission',
+    create_compressed: 'Create: Compressed',
+    mekanism: 'Mekanism',
+    immersiveengineering: 'Immersive Engineering',
+    ftbultimine: 'FTB Ultimine',
+    unusualend: 'Unusual End',
+    hammerlib: 'HammerLib',
+    solarflux: 'Solar Flux Reborn',
+    twilightforest: 'Twilight Forest'
+}
+
+Object.keys(BLACKLIST).forEach(modid => {
+    if (Platform.isLoaded(`${modid}`)) {
+        ServerEvents.recipes(event => {
+            event.remove({})
+        })
+        console.warn(`${BLACKLIST[modid]} has been detected, please remove it from the modpack.`)
+        PlayerEvents.loggedIn(event => {
+            event.server.tell(`${BLACKLIST[modid]} has been detected, please remove it from the modpack.`)
+        })
+    }
 })

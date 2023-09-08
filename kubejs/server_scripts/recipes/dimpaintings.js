@@ -1,4 +1,5 @@
 // requires: dimpaintings
+// requires: endrem
 // requires: create
 
 ServerEvents.recipes(event => {

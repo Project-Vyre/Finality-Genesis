@@ -7,6 +7,13 @@ let ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
 
 ServerEvents.recipes(event => {
     event.remove({ id: 'upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot' })
+    // figure out how to setup a shapeless recipe for later
+    //UPNETHERITE_INGOTS.forEach(upgrade => {
+    //    event.shapeless(`upgradednetherite:${upgrade}_bow`, [
+    //        `upgradednetherite:${upgrade}_bow`,
+    //        'minecraft:netherite_ingot'
+    //    ]).id(`finality:${upgrade}_bow_repair`)
+    //})
     event.shapeless('upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot', [
         'upgradednetherite:gold_upgraded_netherite_ingot',
         'upgradednetherite:fire_upgraded_netherite_ingot',

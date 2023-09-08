@@ -21,8 +21,8 @@ ServerEvents.recipes(event => {
         A: 'minecraft:golden_apple'
     }).id('bhc:relic_apple')
     event.shapeless('bhc:relic_apple', [
-        'minecraft:diamond',
-        'minecraft:emerald',
+        '2x minecraft:diamond',
+        '2x minecraft:emerald',
         'minecraft:golden_apple'
     ]).id('finality:shapeless_mixing_compat')
     event.recipes.create.haunting([

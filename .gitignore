@@ -51,3 +51,6 @@ servers.dat
 *.dat_old
 servers.essential.dat
 bookmark.ini
+config/roughlyenoughitems/hints.json
+config/jei/world/server/*
+o_prof

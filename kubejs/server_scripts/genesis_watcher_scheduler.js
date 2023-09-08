@@ -1,8 +1,13 @@
+const $BCC = Java.loadClass('dev.wuffs.bcc.BCC')
+
+let TIME_INTERVAL = 20 * 60
+
 function check_updates() {
     let server = Utils.server
     let players = server.players
     players.forEach(player => { check_updates_for(player) })
 }
+
 function check_updates_for(player) { player.sendData('update_notifier_check', {}) }
 
 PlayerEvents.loggedIn(event => {
@@ -11,7 +16,7 @@ PlayerEvents.loggedIn(event => {
 })
 
 ServerEvents.loaded(event => {
-    Utils.server.scheduleInTicks(120 * 1, e => {
+    Utils.server.scheduleInTicks(TIME_INTERVAL * 10, e => {
         check_updates()
         e.reschedule()
     })

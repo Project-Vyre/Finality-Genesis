@@ -3,13 +3,7 @@ type = customizablemenus
 de.keksuccino.drippyloadingscreen.customization.DrippyOverlayScreen {
 }
 
-com.github.alexthe666.iceandfire.client.gui.IceAndFireMainMenu {
-}
-
 net.minecraft.client.gui.screens.worldselection.SelectWorldScreen {
-}
-
-net.minecraft.client.gui.screens.TitleScreen {
 }
 
 net.minecraft.client.gui.screens.multiplayer.SafetyScreen {
@@ -73,5 +67,11 @@ net.minecraft.client.gui.screens.worldselection.EditWorldScreen {
 }
 
 net.minecraft.client.gui.screens.EditServerScreen {
+}
+
+net.minecraft.client.gui.screens.TitleScreen {
+}
+
+net.minecraft.client.gui.screens.PauseScreen {
 }
 

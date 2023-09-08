@@ -1,4 +1,4 @@
-ignoreUpdate:162
+ignoreUpdate:165
 updateNotification:true
 differentiateByServerAddress:true
 caveMapsAllowed:true
@@ -24,7 +24,7 @@ reloadEverything:false
 zoomButtons:true
 waypointBackgrounds:true
 detectAmbiguousY:true
-showDisabledWaypoints:false
+showDisabledWaypoints:true
 closeWaypointsWhenHopping:true
 adjustHeightForCarpetLikeBlocks:true
 onlyCurrentMapWaypoints:false

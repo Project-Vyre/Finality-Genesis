@@ -1,6 +1,6 @@
 // requires: apotheosis
 // requires: create
-
+/*
 let CORE_RARITIES = [
     'common',
     'uncommon',
@@ -9,6 +9,7 @@ let CORE_RARITIES = [
     'mythic',
     'ancient'
 ]
+*/
 let COREGEMS = [
     'ballast',
     'brawlers',
@@ -24,14 +25,17 @@ let COREGEMS = [
     'tyrannical',
     'warlord'
 ]
+
 let OVERWORLD_GEMS = [
     'earth',
     'royalty'
 ]
+
 let NETHER_GEMS = [
     'blood_lord',
     'inferno'
 ]
+
 let END_GEMS = [
     'endersurge',
     'mageslayer',
@@ -152,7 +156,7 @@ ServerEvents.recipes(event => {
         'S',
         'E'
     ], {
-        F: 'minecraft:feather',
+        F: 'minecraft:flint',
         S: '#forge:rods/wooden',
         E: 'minecraft:feather'
     }).id('minecraft:arrow')

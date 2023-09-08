@@ -176,6 +176,25 @@
 			dependencies: ["0621698FB6DA317F"]
 			icon: "cloudstorage:cloud_chest"
 			id: "54AB904AF8AB6C07"
+			rewards: [
+				{
+					id: "601AB9ED4130CE99"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "28CD5E54E326B019"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3B6C2AE67D9E7F23"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			subtitle: "Be sure to send some chests to the sky!"
 			tasks: [
 				{
@@ -200,9 +219,32 @@
 		}
 		{
 			dependencies: ["54AB904AF8AB6C07"]
-			description: ["If you are wondering where to get more static cloud blocks, you could get them from the Bloviators during a thunderstorm."]
+			description: [
+				"If you are wondering where to get more &bstatic&r cloud blocks, you could get them from the &7Bloviators&r during a &ethunderstorm&r."
+				""
+				"Once you acquire some &bstatic&r cloud blocks, right click with any balloon in hand to give it a &bstatic charge&r."
+			]
 			icon: "cloudstorage:static_cloud"
 			id: "37A9592B69D284BF"
+			rewards: [
+				{
+					id: "3D33CDB5FC37231D"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "03443B328E824184"
+					table_id: 7771384237349930739L
+					type: "choice"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "49BF1F933A6320FD"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
 			subtitle: "Everyone loves static electricity!"
 			tasks: [
 				{
@@ -211,8 +253,14 @@
 					type: "item"
 				}
 				{
-					id: "17CE13342B5394C3"
-					item: "cloudstorage:balloon"
+					id: "08D8D35A84F8A99E"
+					item: {
+						Count: 1b
+						id: "cloudstorage:balloon"
+						tag: {
+							static: 1b
+						}
+					}
 					type: "item"
 				}
 			]
@@ -222,12 +270,38 @@
 		}
 		{
 			dependencies: ["37A9592B69D284BF"]
+			description: [
+				"Enjoy your newly created Static Cloud Chest."
+				""
+				"Don't forget to send more chests to the sky with balloons that have a static charge on them!"
+			]
 			id: "6C5EACFBFB1E42C1"
+			rewards: [
+				{
+					id: "797697CA6435D9F3"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "634CB9E908D22D91"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7F8A36EABA762090"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "Mass storage for everyone!"
 			tasks: [{
 				id: "788ABBD07C80B6CE"
 				item: "cloudstorage:static_cloud_chest"
 				type: "item"
 			}]
+			title: "Shareable Cloud Storage - Static Cloud Chest"
 			x: 0.0d
 			y: 8.0d
 		}

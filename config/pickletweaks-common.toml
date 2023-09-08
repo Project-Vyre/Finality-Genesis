@@ -27,7 +27,7 @@
 	#Ex: ["minecraft:stone_shovel=tag:forge:ingots/iron"]
 	#You can specify how effective the material is by appending @<multiplier>
 	#Ex: ["minecraft:stone_shovel=minecraft:stick@0.5"]
-	overrides = ["minecraft:shears=minecraft:iron_ingot", "pickletweaks:flint_shears=minecraft:flint"]
+	overrides = ["minecraft:shears=minecraft:iron_ingot", "pickletweaks:flint_shears=minecraft:flint", "minecraft:bow=minecraft:string", "minecraft:crossbow=minecraft:string"]
 	#Makes it so shears need 50% less material to repair.
 	cheapShears = true
 	#Should Crafting Grid Tool Repairing be enabled?

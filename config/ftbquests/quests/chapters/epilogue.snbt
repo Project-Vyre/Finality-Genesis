@@ -17,12 +17,16 @@
 		x: 0.0d
 		y: 0.0d
 	}]
-	order_index: 4
+	order_index: 5
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["4EBF56E85BA4465B"]
+			dependencies: [
+				"4EBF56E85BA4465B"
+				"38E2EE3F3F2C2E6C"
+				"2FF7795C03DDC67B"
+			]
 			description: [
 				"In all seriousness, good luck."
 				""
@@ -31,6 +35,11 @@
 				"I am sorry that the background image doesn't align to the quest nodes 100% but it's a bit difficult with the scaling and grid differences."
 			]
 			id: "7BFEF80899790FC7"
+			rewards: [{
+				id: "7A79C8AF962BF78D"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
 			subtitle: "Surprised you've made it this far."
 			tasks: [{
 				id: "4C847275ABA5869F"
@@ -44,6 +53,11 @@
 		{
 			dependencies: ["7BFEF80899790FC7"]
 			id: "441B6755C6E69725"
+			rewards: [{
+				id: "0D557B70340E0E40"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
 			shape: "rsquare"
 			subtitle: "Are you out of your mind?"
 			tasks: [{
@@ -83,6 +97,11 @@
 				"Mechanical Crafters also have the power to craft them."
 			]
 			id: "01A8004472B9F446"
+			rewards: [{
+				id: "6D9E168B6AECD296"
+				type: "xp_levels"
+				xp_levels: 999999999
+			}]
 			subtitle: "Shaping the world, forever."
 			tasks: [{
 				id: "716C4AAB2675A2FC"

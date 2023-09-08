@@ -91,9 +91,134 @@
 					type: "item"
 				}
 			]
-			title: "Salads"
+			title: "The Salad Bar"
 			x: -1.5d
 			y: 2.0d
+		}
+		{
+			dependencies: ["3A93D1DBD84B9F94"]
+			id: "79A0F31208BE2DCD"
+			tasks: [{
+				id: "335F05D990A33848"
+				item: "farmersdelight:organic_compost"
+				type: "item"
+			}]
+			title: "Composting 101"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["44D0D68F582B8418"]
+			id: "3961C759F615C50E"
+			subtitle: "Fried rice is a very popular dish, try some!"
+			tasks: [
+				{
+					id: "57ED8F15BDE69387"
+					item: "farmersdelight:cooked_rice"
+					type: "item"
+				}
+				{
+					id: "3910EBE79793F03C"
+					item: "farmersdelight:mushroom_rice"
+					type: "item"
+				}
+				{
+					id: "4DEC45C8881F9FE5"
+					item: "farmersdelight:fried_rice"
+					type: "item"
+				}
+			]
+			title: "It's Rice to Be Popular"
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["44D0D68F582B8418"]
+			description: ["&mThis sounds like a quote from Tyl Regor.&r"]
+			id: "128F7DC7ACA1157E"
+			subtitle: "Ramen and vegetable noodle soup."
+			tasks: [
+				{
+					id: "5E7F2FE0444EA9B2"
+					item: "farmersdelight:noodle_soup"
+					type: "item"
+				}
+				{
+					id: "1C10BC2DD192B4CB"
+					item: "farmersdelight:vegetable_noodles"
+					type: "item"
+				}
+				{
+					id: "674D400F353E6682"
+					item: "farmersdelight:cabbage_rolls"
+					type: "item"
+				}
+			]
+			title: "It's Ramen Time!"
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["44D0D68F582B8418"]
+			id: "134E56D5D5D5CFD3"
+			subtitle: "Who doesn't love sandwiches?"
+			tasks: [
+				{
+					id: "56E7A44C3E9723FF"
+					item: "farmersdelight:egg_sandwich"
+					type: "item"
+				}
+				{
+					id: "16349E74D9E56753"
+					item: "farmersdelight:chicken_sandwich"
+					type: "item"
+				}
+				{
+					id: "7C76560697863F9E"
+					item: "farmersdelight:bacon_sandwich"
+					type: "item"
+				}
+			]
+			title: "Sandwiched"
+			x: 1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["44D0D68F582B8418"]
+			id: "24E4EC73E143B2D4"
+			tasks: [
+				{
+					id: "791487383AC67EAB"
+					item: "farmersdelight:kelp_roll"
+					type: "item"
+				}
+				{
+					id: "00BDFFD57E7E2559"
+					item: "farmersdelight:salmon_roll"
+					type: "item"
+				}
+				{
+					id: "1799C8C682330934"
+					item: "farmersdelight:cod_roll"
+					type: "item"
+				}
+			]
+			title: "The Sushi Bar"
+			x: 1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["134E56D5D5D5CFD3"]
+			id: "28FF863FC9E69ECD"
+			subtitle: "Where's the kebab?"
+			tasks: [{
+				id: "6085E9E94D2CBB06"
+				item: "farmersdelight:barbecue_stick"
+				type: "item"
+			}]
+			title: "Barbeque on a Stick"
+			x: 2.0d
+			y: 4.0d
 		}
 	]
 	subtitle: [
