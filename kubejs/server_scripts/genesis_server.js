@@ -103,8 +103,8 @@ function HEXCODES(event, out, arrangement) {
         'F': 'kubejs:letter_f'
     }).id(`finality:mechanical_crafting/color_${out}`)
 }
-function COLOR_MIXING(event, output, [ingredients]) {
-    event.recipes.createMixing(`kubejs:color_${output}`, [ingredients]).id(`finality:mixing/color_${output}`)
+function COLOR_MIXING(event, output_color, color_one, color_two) {
+    event.recipes.createMixing(`kubejs:color_${output_color}`, [color_one, color_two]).id(`finality:mixing/color_${output_color}`)
 }
 ServerEvents.recipes(event => {
     FOUNDATION_NONMETAL.forEach(insert => { // why can you even smelt and blast these ores? YOU LITERALLY LOSE SO MUCH!
@@ -400,6 +400,11 @@ ServerEvents.recipes(event => {
         Item.of('minecraft:deepslate', 9),
         Fluid.of('minecraft:lava', 250)
     ]).heated().id('finality:renew_deepslate_tuff')
+    event.recipes.createCompacting('minecraft:calcite', [
+        'minecraft:amethyst_shard',
+        'minecraft:cobbled_deepslate',
+        'minecraft:bone_meal'
+    ]).heated().id('finality:renew_calcite')
     // milling
     // crushing
     event.remove({ id: 'create:crushing/netherrack' })
@@ -468,6 +473,23 @@ ServerEvents.recipes(event => {
     event.recipes.createMixing('salt:salt', [
         Fluid.of('minecraft:water', 1000)
     ]).heated().id('finality:create_salt_compat')
+    event.shaped('minecraft:nautilus_shell', [
+        'PFP',
+        'FPF',
+        'PFP'
+    ], {
+        P: 'minecraft:prismarine_shard',
+        F: 'minecraft:cod'
+    }).id('finality:nautilus_shell')
+    event.shaped('minecraft:heart_of_the_sea', [
+        'IDP',
+        'DND',
+        'PDI'
+    ], {
+        P: 'minecraft:prismarine_shard',
+        D: 'minecraft:diamond',
+        I: 'minecraft:ink_sac'
+    }).id('finality:heart_of_the_sea')
     // supplementaries related
     event.shaped('supplementaries:quiver', [
         'RRL',
@@ -575,9 +597,9 @@ ServerEvents.recipes(event => {
     HEXCODES(event, 'magenta', '#FF00FF')
     HEXCODES(event, 'yellow', '#00FFFF')
     HEXCODES(event, 'cyan', '#00FFFF')
-    COLOR_MIXING(event, 'magenta', ['kubejs:color_red', 'kubejs:color_blue'])
-    COLOR_MIXING(event, 'yellow', ['kubejs:color_red', 'kubejs:color_green'])
-    COLOR_MIXING(event, 'cyan', ['kubejs:color_green', 'kubejs:color_blue'])
+    COLOR_MIXING(event, 'magenta', 'kubejs:color_red', 'kubejs:color_blue')
+    COLOR_MIXING(event, 'yellow', 'kubejs:color_red', 'kubejs:color_green')
+    COLOR_MIXING(event, 'cyan', 'kubejs:color_green', 'kubejs:color_blue')
     //event.recipes.createMixing('kubejs:color_magenta', ['kubejs:color_red', 'kubejs:color_blue']).id('finality:mixing/color_magenta')
     //event.recipes.createMixing('kubejs:color_yellow', ['kubejs:color_red', 'kubejs:color_green']).id('finality:mixing/color_yellow')
     //event.recipes.createMixing('kubejs:color_cyan', ['kubejs:color_green', 'kubejs:color_blue']).id('finality:mixing/color_cyan')
@@ -588,7 +610,6 @@ ServerEvents.recipes(event => {
         BINARYCONVERSION(event, `${insert}`, `${INTEGER_BINARY[insert]}`)
     })
     BINARYCONVERSION(event, 'octothorpe', '00100011')
-
     if (Platform.isLoaded('quark')) {
         event.shaped('minecraft:hopper', [
             'ILI',
