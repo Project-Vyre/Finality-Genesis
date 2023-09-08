@@ -85,9 +85,14 @@ let PRIMORDIAL_MECHANISMS = {
 let SHAPES = {
     circle: 'Circle',
     square: 'Square',
-    triangle: 'Triangle',
     windmill: 'Windmill',
     star: 'Star'
+}
+let ROTATION = {
+    tl: 'Top Left',
+    tr: 'Top Right',
+    bl: 'Bottom Left',
+    br: 'Bottom Right'
 }
 let RGBWCMY = {
     red: 'Red',
@@ -144,14 +149,28 @@ const DIVING = ['diving_helmet', 'backtank', 'diving_boots']
 let LEGENDARY = ['whisper_of_the_abyss', 'coral_lance', 'divider']
 let ABYSS_ARMOR = ['heaume', 'brigantine', 'leggings', 'boots']
 let EL_TOOLS = ['sword', 'shovel', 'pickaxe', 'axe', 'scythe']
+function WHOLE_SHAPE(event, itemID, displayNameString, texturePath, int_maxStackSize, fireResistantBoolean) {
+    event.create(`kubejs:${itemID}`)
+        .displayName(displayNameString)
+        .texture(`kubejs:item/shapes/${texturePath}`)
+        .maxStackSize(int_maxStackSize)
+        .fireResistant(fireResistantBoolean)
+}
+function COLORS_RGBCMY(event, color, displayNameString) {
+    event.create(`kubejs:color_${color}`)
+        .displayName(displayNameString)
+        .texture(`kubejs:item/colors/${color}`)
+        .maxStackSize(64)
+        .fireResistant(true)
+}
 StartupEvents.registry('item', event => { // Register new items here event.create('example_item').displayName('Example Item')
     event.create('kubejs:deepslate_shard').texture('kubejs:item/deepslate_shard').maxStackSize(64)
     event.create('kubejs:trident_pole').texture('kubejs:item/trident_pole').maxStackSize(64)
     event.create('kubejs:trident_prong').texture('kubejs:item/trident_prong').maxStackSize(64)
     event.create('kubejs:construction_core_iron').displayName('§fActivated Construction Iron Core').texture('kubejs:item/construction_iron').maxStackSize(16)
     event.create('kubejs:construction_core_diamond').displayName('§bActivated Construction Diamond Crystal').texture('kubejs:item/construction_diamond').maxStackSize(16)
-    event.create('kubejs:dormant_singularity_core').displayName('§d<shake>Dormant Singularity Core</shake>').texture('kubejs:item/dormant_singularity_core').maxStackSize(16)
-    event.create('kubejs:awakened_singularity_core').displayName('<shake><rainb>Awakened Singularity Core</rainb></shake>').texture('kubejs:item/awakened_singularity_core').maxStackSize(8)
+    event.create('kubejs:dormant_singularity_core').displayName('§d<shake>Dormant Singularity Core</shake>').texture('kubejs:item/dormant_singularity_core').fireResistant(true).maxStackSize(16)
+    event.create('kubejs:awakened_singularity_core').displayName('<shake><rainb>Awakened Singularity Core</rainb></shake>').texture('kubejs:item/awakened_singularity_core').fireResistant(true).maxStackSize(8)
     event.create('kubejs:denied_result').displayName('§d<shake>Denied Result</shake>').texture('kubejs:item/denied').maxStackSize(1).fireResistant(true)
     event.create('kubejs:removed_item').displayName('§4<shake>Removed Item</shake>').texture('kubejs:item/removed').maxStackSize(1).fireResistant(true)
     event.create('kubejs:high_entropy_alloy').displayName('<rainb>High Entropy Alloy</rainb>').texture('kubejs:item/final_ingot').maxStackSize(64).fireResistant(true).group('miscellaneous')
@@ -186,11 +205,14 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     event.create('kubejs:final_boots', 'boots').tier('final_armor').displayName('§l§d<rainb>Gravitas Anchoram</rainb>').texture('kubejs:item/final_boots').maxStackSize(1).fireResistant(true).group('combat')
     // shapes and alphanumeric
     Object.keys(SHAPES).forEach(shape => {
-        event.create(`kubejs:uncolored_${shape}`)
-            .displayName(`§l§7Uncolored ${SHAPES[shape]}`)
-            .texture(`kubejs:item/shapes/uncolored_${shape}`)
-            .maxStackSize(64)
-            .fireResistant(true)
+        WHOLE_SHAPE(event, `uncolored_${shape}`, `§l§7Uncolored ${SHAPES[shape]}`, `uncolored_${shape}`, 64, true)
+        WHOLE_SHAPE(event, `red_${shape}`, `§l§cRed ${SHAPES[shape]}`, `red_${shape}`, 64, true)
+        WHOLE_SHAPE(event, `green_${shape}`, `§l§aGreen ${SHAPES[shape]}`, `green_${shape}`, 64, true)
+        WHOLE_SHAPE(event, `blue_${shape}`, `§l§9Blue ${SHAPES[shape]}`, `blue_${shape}`, 64, true)
+        WHOLE_SHAPE(event, `cyan_${shape}`, `§l§bCyan ${SHAPES[shape]}`, `cyan_${shape}`, 64, true)
+        WHOLE_SHAPE(event, `magenta_${shape}`, `§l§dMagenta ${SHAPES[shape]}`, `magenta_${shape}`, 64, true)
+        WHOLE_SHAPE(event, `yellow_${shape}`, `§l§eYellow ${SHAPES[shape]}`, `yellow_${shape}`, 64, true)
+        WHOLE_SHAPE(event, `white_${shape}`, `§lWhite ${SHAPES[shape]}`, `white_${shape}`, 64, true)
     })
     event.create('kubejs:blueprint_shape')
         .displayName('Blueprint Shape')
@@ -219,13 +241,26 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .maxStackSize(64)
         .fireResistant(true)
         .glow(true)
-    Object.keys(RGBWCMY).forEach(color => {
-        event.create(`kubejs:color_${color}`)
-            .displayName(`${RGBWCMY[color]}`)
-            .texture(`kubejs:item/colors/${color}`)
-            .maxStackSize(64)
-            .fireResistant(true)
-    })
+    // function COLORS_RGBCMY(event, color, displayNameString) {
+    //     event.create(`kubejs:color_${color}`)
+    //         .displayName(displayNameString)
+    //         .texture(`kubejs:item/colors/${color}`)
+    //         .maxStackSize(64)
+    //         .fireResistant(true)
+    // }
+    COLORS_RGBCMY(event, 'red', '§l§cColor Red')
+    COLORS_RGBCMY(event, 'green', '§l§aColor Green')
+    COLORS_RGBCMY(event, 'blue', '§l§9Color Blue')
+    COLORS_RGBCMY(event, 'cyan', '§l§bColor Cyan')
+    COLORS_RGBCMY(event, 'magenta', '§l§dColor Magenta')
+    COLORS_RGBCMY(event, 'yellow', '§l§eColor Yellow')
+    //Object.keys(RGBWCMY).forEach(color => {
+    //    event.create(`kubejs:color_${color}`)
+    //        .displayName(`${RGBWCMY[color]}`)
+    //        .texture(`kubejs:item/colors/${color}`)
+    //        .maxStackSize(64)
+    //        .fireResistant(true)
+    //})
 })
 StartupEvents.registry('block', event => {
     event.create('kubejs:high_entropy_alloy_block')

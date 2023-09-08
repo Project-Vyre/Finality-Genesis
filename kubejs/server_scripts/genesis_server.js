@@ -48,6 +48,64 @@ let STORAGE_INCEPTION = [
 ]
 let CMD = ['command_block', 'chain_command_block', 'repeating_command_block']
 let COLORID = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
+let LETTER_BINARY_CODES = {
+    letter_a: '01000001',
+    letter_b: '01000010',
+    letter_c: '01000011',
+    letter_d: '01000100',
+    letter_e: '01000101',
+    letter_f: '01000110',
+    letter_g: '01000111',
+    letter_h: '01001000',
+    letter_i: '01001001',
+    letter_j: '01001010',
+    letter_k: '01001011',
+    letter_l: '01001100',
+    letter_m: '01001101',
+    letter_n: '01001110',
+    letter_o: '01001111',
+    letter_p: '01010000',
+    letter_q: '01010001',
+    letter_r: '01010010',
+    letter_s: '01010011',
+    letter_t: '01010100',
+    letter_u: '01010101',
+    letter_v: '01010110',
+    letter_w: '01010111',
+    letter_x: '01011000',
+    letter_y: '01011001',
+    letter_z: '01011010'
+}
+let INTEGER_BINARY = {
+    two: '00110010',
+    three: '00110011',
+    four: '00110100',
+    five: '00110101',
+    six: '00110110',
+    seven: '00110111',
+    eight: '00111000',
+    nine: '00111001'
+}
+function BINARYCONVERSION(event, output, arrangement) {
+    event.recipes.createMechanicalCrafting(`kubejs:${output}`, [
+        arrangement
+    ], {
+        '0': 'kubejs:zero',
+        '1': 'kubejs:one'
+    }).id(`finality:mechanical_crafting/${output}`)
+}
+function HEXCODES(event, out, arrangement) {
+    event.recipes.createMechanicalCrafting(`kubejs:color_${out}`, [
+        arrangement
+    ], {
+        '#': 'kubejs:octothorpe',
+        '0': 'kubejs:zero',
+        'F': 'kubejs:letter_f'
+    }).id(`finality:mechanical_crafting/color_${out}`)
+}
+function COLOR_MIXING(event, output, [ingredients]) {
+    event.recipes.createMixing(`kubejs:color_${output}`, [ingredients]).id(`finality:mixing/color_${output}`)
+}
 ServerEvents.recipes(event => {
     FOUNDATION_NONMETAL.forEach(insert => { // why can you even smelt and blast these ores? YOU LITERALLY LOSE SO MUCH!
         event.remove([
@@ -511,27 +569,26 @@ ServerEvents.recipes(event => {
         'kubejs:repeating_command_block',
         'kubejs:final_axe'
     ]).keepHeldItem().id('finality:uncolored_star')
-    event.recipes.createMechanicalCrafting('kubejs:color_red', [
-        'HFFOOOO'
-    ], {
-        H: 'kubejs:octothorpe',
-        F: 'kubejs:letter_f',
-        O: 'kubejs:zero'
-    }).id('finality:color_red')
-    event.recipes.createMechanicalCrafting('kubejs:color_green', [
-        'HOOFFOO'
-    ], {
-        H: 'kubejs:octothorpe',
-        F: 'kubejs:letter_f',
-        O: 'kubejs:zero'
-    }).id('finality:color_green')
-    event.recipes.createMechanicalCrafting('kubejs:color_blue', [
-        'HOOOOFF'
-    ], {
-        H: 'kubejs:octothorpe',
-        F: 'kubejs:letter_f',
-        O: 'kubejs:zero'
-    }).id('finality:color_blue')
+    HEXCODES(event, 'red', '#FF0000')
+    HEXCODES(event, 'green', '#00FF00')
+    HEXCODES(event, 'blue', '#0000FF')
+    HEXCODES(event, 'magenta', '#FF00FF')
+    HEXCODES(event, 'yellow', '#00FFFF')
+    HEXCODES(event, 'cyan', '#00FFFF')
+    COLOR_MIXING(event, 'magenta', ['kubejs:color_red', 'kubejs:color_blue'])
+    COLOR_MIXING(event, 'yellow', ['kubejs:color_red', 'kubejs:color_green'])
+    COLOR_MIXING(event, 'cyan', ['kubejs:color_green', 'kubejs:color_blue'])
+    //event.recipes.createMixing('kubejs:color_magenta', ['kubejs:color_red', 'kubejs:color_blue']).id('finality:mixing/color_magenta')
+    //event.recipes.createMixing('kubejs:color_yellow', ['kubejs:color_red', 'kubejs:color_green']).id('finality:mixing/color_yellow')
+    //event.recipes.createMixing('kubejs:color_cyan', ['kubejs:color_green', 'kubejs:color_blue']).id('finality:mixing/color_cyan')
+    Object.keys(LETTER_BINARY_CODES).forEach(insert => {
+        BINARYCONVERSION(event, `${insert}`, `${LETTER_BINARY_CODES[insert]}`)
+    })
+    Object.keys(INTEGER_BINARY).forEach(insert => {
+        BINARYCONVERSION(event, `${insert}`, `${INTEGER_BINARY[insert]}`)
+    })
+    BINARYCONVERSION(event, 'octothorpe', '00100011')
+
     if (Platform.isLoaded('quark')) {
         event.shaped('minecraft:hopper', [
             'ILI',
@@ -714,6 +771,7 @@ let BLACKLIST = {
     ae2: 'Applied Energistics 2',
     ars_nouveau: 'Ars Nouveau',
     createcasing: 'Create Encased',
+    createdieselgenerators: 'Create: Diesel Generators',
     create_confectionery: 'Create Confectionery',
     create_jetpack: 'Create Jetpack',
     create_sa: 'Create Stuff and Additions',
