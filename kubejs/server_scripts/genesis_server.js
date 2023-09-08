@@ -1,6 +1,5 @@
 // priority: 0
-// requires: kubejs
-// requires: create
+// requires: kubejs_create
 // requires: supplementaries
 // requires: lodestone
 // requires: salt
@@ -600,9 +599,6 @@ ServerEvents.recipes(event => {
     COLOR_MIXING(event, 'magenta', 'kubejs:color_red', 'kubejs:color_blue')
     COLOR_MIXING(event, 'yellow', 'kubejs:color_red', 'kubejs:color_green')
     COLOR_MIXING(event, 'cyan', 'kubejs:color_green', 'kubejs:color_blue')
-    //event.recipes.createMixing('kubejs:color_magenta', ['kubejs:color_red', 'kubejs:color_blue']).id('finality:mixing/color_magenta')
-    //event.recipes.createMixing('kubejs:color_yellow', ['kubejs:color_red', 'kubejs:color_green']).id('finality:mixing/color_yellow')
-    //event.recipes.createMixing('kubejs:color_cyan', ['kubejs:color_green', 'kubejs:color_blue']).id('finality:mixing/color_cyan')
     Object.keys(LETTER_BINARY_CODES).forEach(insert => {
         BINARYCONVERSION(event, `${insert}`, `${LETTER_BINARY_CODES[insert]}`)
     })
@@ -626,12 +622,6 @@ ServerEvents.recipes(event => {
         ], {
             L: '#minecraft:logs'
         }).id('quark:tweaks/crafting/utility/chests/mixed_chest_wood_but_without_exclusions')
-    }
-    if (Platform.isLoaded('woodworks')) {
-        WOOD_TYPES.forEach(insert => {
-            event.shapeless(`woodworks:${insert}_chest`, ['minecraft:chest']).id(`finality:woodworks/vanilla_chest_to_${insert}_chest_conversion`)
-            event.shapeless(`woodworks:${insert}_trapped_chest`, ['minecraft:trapped_chest']).id(`finality:woodworks/vanilla_trapped_chest_to_${insert}_trapped_chest_conversion`)
-        })
     }
 })
 
