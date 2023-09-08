@@ -3,7 +3,6 @@
 
 let DYE = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 let SAND = ['sand', 'red_sand']
-let CMD = ['command_block', 'chain_command_block', 'repeating_command_block']
 let VANILLAMATS = ['amethyst', 'copper', 'iron', 'redstone', 'gold', 'diamond', 'emerald', 'quartz', 'netherite', 'honey']
 let VANILLANOTSTANDARD = ['ender_pearl', 'gunpowder', 'sea_lantern', 'glowstone']
 let CREATEITEMS = ['electron_tube', 'rose_quartz']
@@ -408,17 +407,17 @@ ServerEvents.recipes(event => {
     ]).transitionalItem('kubejs:incomplete_terra_mechanism').loops(1).id('finality:terra_mechanism_creation')
 
     event.recipes.createSequencedAssembly([
-        Item.of('kubejs:cornucopia_mechanism')
+        Item.of('kubejs:gluttony_mechanism')
     ], 'kubejs:terra_mechanism', [
-        event.recipes.createDeploying('kubejs:incomplete_cornucopia_mechanism', ['kubejs:incomplete_cornucopia_mechanism', 'artifacts:eternal_steak']).keepHeldItem(),
-        event.recipes.createDeploying('kubejs:incomplete_cornucopia_mechanism', ['kubejs:incomplete_cornucopia_mechanism', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:honey"}').weakNBT()]),
-        event.recipes.createDeploying('kubejs:incomplete_cornucopia_mechanism', ['kubejs:incomplete_cornucopia_mechanism', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:chocolate"}').weakNBT()]),
-        event.recipes.createDeploying('kubejs:incomplete_cornucopia_mechanism', ['kubejs:incomplete_cornucopia_mechanism', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:builders_tea"}').weakNBT()])
-    ]).transitionalItem('kubejs:incomplete_cornucopia_mechanism').loops(1).id('finality:cornucopia_mechanism_creation')
+        event.recipes.createDeploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'artifacts:eternal_steak']).keepHeldItem(),
+        event.recipes.createDeploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:honey"}').weakNBT()]),
+        event.recipes.createDeploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:chocolate"}').weakNBT()]),
+        event.recipes.createDeploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:builders_tea"}').weakNBT()])
+    ]).transitionalItem('kubejs:incomplete_gluttony_mechanism').loops(1).id('finality:gluttony_mechanism_creation')
 
     event.recipes.createSequencedAssembly([
         Item.of('kubejs:metallurgy_mechanism'),
-    ], 'kubejs:cornucopia_mechanism', [
+    ], 'kubejs:gluttony_mechanism', [
         event.recipes.createDeploying('kubejs:incomplete_metallurgy_mechanism', ['kubejs:incomplete_metallurgy_mechanism', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:iron"}').weakNBT()]),
         event.recipes.createDeploying('kubejs:incomplete_metallurgy_mechanism', ['kubejs:incomplete_metallurgy_mechanism', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:andesite_alloy"}').weakNBT()]),
         event.recipes.createDeploying('kubejs:incomplete_metallurgy_mechanism', ['kubejs:incomplete_metallurgy_mechanism', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:copper"}').weakNBT()]),
@@ -478,25 +477,8 @@ ServerEvents.recipes(event => {
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:awakened_singularity_core']),
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'create:sequenced_gearshift']),
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'extendedcrafting:crystaltine_nugget']),
-        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:basic_square']),
-        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:basic_circle']),
-        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:basic_triangle_sq'])
+        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:uncolored_square']),
+        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:uncolored_circle']),
+        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:uncolored_star'])
     ]).transitionalItem('kubejs:incomplete_entropy_mechanism').loops(512).id('finality:entropy_mechanism_creation')
-    event.recipes.createMechanicalCrafting('minecraft:spawner', [
-        'VVV',
-        'VSV',
-        'VVV'
-    ], {
-        V: 'minecraft:structure_void',
-        S: 'minecraft:soul_campfire'
-    }).id('finality:spawner')
-    CMD.forEach(insert => {
-        event.recipes.createDeploying([
-            'minecraft:structure_void',
-            `kubejs:${insert}`
-        ], [
-            `kubejs:${insert}`,
-            'kubejs:final_pickaxe'
-        ]).keepHeldItem().id(`finality:structure_void_from_${insert}`)
-    })
 })

@@ -15,6 +15,61 @@
         "type": "BIOME_TAG",
         "negate": true,
         "value": "minecraft:is_ocean"
+      },
+      {
+        "type": "DIMENSION",
+        "negate": true,
+        "value": "ad_astra:earth_orbit"
+      },
+      {
+        "type": "DIMENSION",
+        "negate": true,
+        "value": "ad_astra:glacio"
+      },
+      {
+        "type": "DIMENSION",
+        "negate": true,
+        "value": "ad_astra:glacio_orbit"
+      },
+      {
+        "type": "DIMENSION",
+        "negate": true,
+        "value": "ad_astra:mars"
+      },
+      {
+        "type": "DIMENSION",
+        "negate": true,
+        "value": "ad_astra:mars_orbit"
+      },
+      {
+        "type": "DIMENSION",
+        "negate": true,
+        "value": "ad_astra:mercury"
+      },
+      {
+        "type": "DIMENSION",
+        "negate": true,
+        "value": "ad_astra:mercury_orbit"
+      },
+      {
+        "type": "DIMENSION",
+        "negate": true,
+        "value": "ad_astra:moon"
+      },
+      {
+        "type": "DIMENSION",
+        "negate": true,
+        "value": "ad_astra:moon_orbit"
+      },
+      {
+        "type": "DIMENSION",
+        "negate": true,
+        "value": "ad_astra:venus"
+      },
+      {
+        "type": "DIMENSION",
+        "negate": true,
+        "value": "ad_astra:venus_orbit"
       }
     ]
   ]

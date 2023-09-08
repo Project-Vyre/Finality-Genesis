@@ -74,13 +74,69 @@ let RED_SAND_COMPACTING_INCEPTION = {
 let IRON_COMPACTING
 let PRIMORDIAL_MECHANISMS = {
     terra_mechanism: 'Terra Mechanism', // nature related, ingredient for entropy mechanism
-    cornucopia_mechanism: 'Cornucopia Mechanism', // delicacy related, ingredient for entropy mechanism
+    gluttony_mechanism: 'Gluttony Mechanism', // delicacy related, ingredient for entropy mechanism
     metallurgy_mechanism: 'Metallurgy Mechanism', // metal related, ingredient for entropy mechanism
     lattice_mechanism: 'Lattice Mechanism', // crystal related, ingredient for entropy mechanism
     umbral_mechanism: 'Umbral Mechanism', // darkness related, ingredient for entropy mechanism
     genesis_mechanism: 'Genesis Mechanism', // create related, ingredient for entropy mechanism
     ascendant_mechanism: 'Ascendant Mechanism', // experience related, ingredient for entropy mechanism
     entropy_mechanism: 'Entropy Mechanism' // CONSOLIDATION
+}
+let SHAPES = {
+    circle: 'Circle',
+    square: 'Square',
+    triangle: 'Triangle',
+    windmill: 'Windmill',
+    star: 'Star'
+}
+let RGBWCMY = {
+    red: 'Red',
+    green: 'Green',
+    blue: 'Blue',
+    white: 'White',
+    cyan: 'Cyan',
+    magenta: 'Magenta',
+    yellow: 'Yellow'
+}
+let INTEGERS = {
+    zero: 'Zero',
+    one: 'One',
+    two: 'Two',
+    three: 'Three',
+    four: 'Four',
+    five: 'Five',
+    six: 'Six',
+    seven: 'Seven',
+    eight: 'Eight',
+    nine: 'Nine'
+}
+let LETTERS = {
+    a: 'A',
+    b: 'B',
+    c: 'C',
+    d: 'D',
+    e: 'E',
+    f: 'F',
+    g: 'G',
+    h: 'H',
+    i: 'I',
+    j: 'J',
+    k: 'K',
+    l: 'L',
+    m: 'M',
+    n: 'N',
+    o: 'O',
+    p: 'P',
+    q: 'Q',
+    r: 'R',
+    s: 'S',
+    t: 'T',
+    u: 'U',
+    v: 'V',
+    w: 'W',
+    x: 'X',
+    y: 'Y',
+    z: 'Z'
 }
 const TOOLS = ['sword', 'shovel', 'pickaxe', 'axe', 'hoe']
 const ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
@@ -110,46 +166,80 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         event.create(`kubejs:incomplete_concrete_${color}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${DYE[color]} Concrete Singularity`).texture(`kubejs:item/incomplete_singularities/concrete/incomplete_concrete_${color}`).maxStackSize(1)
     })
     Object.keys(PRIMORDIAL_MECHANISMS).forEach(mechanism => {
-        event.create(`kubejs:${mechanism}`).displayName(`<rainb>${PRIMORDIAL_MECHANISMS[mechanism]}</rainb>`).texture(`kubejs:item/${mechanism}`).maxStackSize(64)
-        event.create(`kubejs:incomplete_${mechanism}`, 'create:sequenced_assembly').displayName(`<rainb>Incomplete ${PRIMORDIAL_MECHANISMS[mechanism]}</rainb>`).texture(`kubejs:item/incomplete_${mechanism}`).maxStackSize(1)
+        event.create(`kubejs:${mechanism}`).displayName(`<rainb>${PRIMORDIAL_MECHANISMS[mechanism]}</rainb>`).texture(`kubejs:item/${mechanism}`).maxStackSize(64).fireResistant(true)
+        event.create(`kubejs:incomplete_${mechanism}`, 'create:sequenced_assembly').displayName(`<rainb>Incomplete ${PRIMORDIAL_MECHANISMS[mechanism]}</rainb>`).texture(`kubejs:item/incomplete_${mechanism}`)
     })
-    // event.create('kubejs:metallurgy_mechanism').displayName('<rainb>Metallurgy Mechanism</rainb>').texture('kubejs:item/metallurgy_mechanism').maxStackSize(64)
-    // event.create('kubejs:entropy_mechanism').displayName('<rainb>Entropy Mechanism</rainb>').texture('kubejs:item/entropy_mechanism').maxStackSize(64)
-    // event.create('kubejs:incomplete_metallurgy_mechanism', 'create:sequenced_assembly').displayName('<rainb>Incomplete Metallurgy Mechanism</rainb>').texture('kubejs:item/incomplete_metallurgy_mechanism').maxStackSize(1)
-    // event.create('kubejs:incomplete_entropy_mechanism', 'create:sequenced_assembly').displayName('<rainb>Incomplete Entropy Mechanism</rainb>').texture('kubejs:item/incomplete_entropy_mechanism').maxStackSize(1)
     // tools
-    event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_tool').displayName('§l<rainb>Particula Eversorem</rainb>').texture('kubejs:item/final_pickaxe').maxStackSize(1).fireResistant(true).group('tools')
-    event.create('kubejs:final_axe', 'axe').tier('final_tool').displayName('§l<rainb>Natura Exitium</rainb>').texture('kubejs:item/final_axe').maxStackSize(1).fireResistant(true).group('tools')
-    event.create('kubejs:final_shovel', 'shovel').tier('final_tool').displayName('§l<rainb>Terra Confractus</rainb>').texture('kubejs:item/final_shovel').maxStackSize(1).fireResistant(true).group('tools')
-    event.create('kubejs:final_hoe', 'hoe').tier('final_tool').displayName('§l<rainb>Agricola Manus</rainb>').texture('kubejs:item/final_hoe').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_tool').displayName('§l§d<rainb>Particula Eversorem</rainb>').texture('kubejs:item/final_pickaxe').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_axe', 'axe').tier('final_tool').displayName('§l§d<rainb>Natura Exitium</rainb>').texture('kubejs:item/final_axe').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_shovel', 'shovel').tier('final_tool').displayName('§l§d<rainb>Terra Confractus</rainb>').texture('kubejs:item/final_shovel').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_hoe', 'hoe').tier('final_tool').displayName('§l§d<rainb>Agricola Manus</rainb>').texture('kubejs:item/final_hoe').maxStackSize(1).fireResistant(true).group('tools')
     // weapons
-    event.create('kubejs:final_sword', 'sword').tier('final_tool').displayName('§l<rainb>Corevis Ultimatum</rainb>').texture('kubejs:item/final_sword').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_lance', 'sword').tier('final_tool').displayName('§l<rainb>Tenebris Punctura</rainb>').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:crystal_lance', 'sword').tier('final_tool').displayName('§b<rainb>Crystallus Hasta</rainb>').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_katana', 'sword').tier('final_tool').displayName('§l<rainb>Celeritas Obumbratio</rainb>').texture('kubejs:item/final_katana').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_sword', 'sword').tier('final_tool').displayName('§l§d<rainb>Corevis Ultimatum</rainb>').texture('kubejs:item/final_sword').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_lance', 'sword').tier('final_tool').displayName('§l§d<rainb>Tenebris Punctura</rainb>').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_katana', 'sword').tier('final_tool').displayName('§l§d<rainb>Celeritas Obumbratio</rainb>').texture('kubejs:item/final_katana').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:crystal_lance', 'sword').tier('crystalline_tool').displayName('§b<rainb>Crystallus Hasta</rainb>').maxStackSize(1).fireResistant(true).group('combat')
     // armor
-    event.create('kubejs:final_helmet', 'helmet').tier('final_armor').displayName('§l<rainb>Conscientia Oculi</rainb>').texture('kubejs:item/final_helmet').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor').displayName('§l<rainb>Vitale Cordis</rainb>').texture('kubejs:item/final_chestplate').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_leggings', 'leggings').tier('final_armor').displayName('§l<rainb>Universum Motus</rainb>').texture('kubejs:item/final_leggings').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_boots', 'boots').tier('final_armor').displayName('§l<rainb>Gravitas Anchoram</rainb>').texture('kubejs:item/final_boots').maxStackSize(1).fireResistant(true).group('combat')
-    // shapes
-    event.create('kubejs:basic_circle')
-        .displayName('§lBasic Circle')
-        .texture('kubejs:item/shapes/basic_circle')
+    event.create('kubejs:final_helmet', 'helmet').tier('final_armor').displayName('§l§d<rainb>Conscientia Oculi</rainb>').texture('kubejs:item/final_helmet').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor').displayName('§l§d<rainb>Vitale Cordis</rainb>').texture('kubejs:item/final_chestplate').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_leggings', 'leggings').tier('final_armor').displayName('§l§d<rainb>Universum Motus</rainb>').texture('kubejs:item/final_leggings').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_boots', 'boots').tier('final_armor').displayName('§l§d<rainb>Gravitas Anchoram</rainb>').texture('kubejs:item/final_boots').maxStackSize(1).fireResistant(true).group('combat')
+    // shapes and alphanumeric
+    Object.keys(SHAPES).forEach(shape => {
+        event.create(`kubejs:uncolored_${shape}`)
+            .displayName(`§l§7Uncolored ${SHAPES[shape]}`)
+            .texture(`kubejs:item/shapes/uncolored_${shape}`)
+            .maxStackSize(64)
+            .fireResistant(true)
+    })
+    event.create('kubejs:blueprint_shape')
+        .displayName('Blueprint Shape')
+        .texture('kubejs:item/shapes/blueprint_shape')
         .maxStackSize(64)
         .fireResistant(true)
-    event.create('kubejs:basic_square')
-        .displayName('§lBasic Square')
-        .texture('kubejs:item/shapes/basic_square')
+    Object.keys(LETTERS).forEach(character => {
+        event.create(`kubejs:letter_${character}`)
+            .displayName(`<rainb>Letter ${LETTERS[character]}</rainb>`)
+            .texture(`kubejs:item/alphanumeric_characters/letter_${character}`)
+            .maxStackSize(64)
+            .fireResistant(true)
+            .glow(true)
+    })
+    Object.keys(INTEGERS).forEach(number => {
+        event.create(`kubejs:${number}`)
+            .displayName(`<rainb>Number ${INTEGERS[number]}</rainb>`)
+            .texture(`kubejs:item/alphanumeric_characters/${number}`)
+            .maxStackSize(64)
+            .fireResistant(true)
+            .glow(true)
+    })
+    event.create('kubejs:octothorpe')
+        .displayName('<rainb>Hashtag</rainb>')
+        .texture('kubejs:item/national_characters/octothorpe')
         .maxStackSize(64)
         .fireResistant(true)
-    event.create('kubejs:basic_triangle_sq')
-        .displayName('§lBasic Triangle Square')
-        .texture('kubejs:item/shapes/basic_triangle_sq')
-        .maxStackSize(64)
-        .fireResistant(true)
+        .glow(true)
+    Object.keys(RGBWCMY).forEach(color => {
+        event.create(`kubejs:color_${color}`)
+            .displayName(`${RGBWCMY[color]}`)
+            .texture(`kubejs:item/colors/${color}`)
+            .maxStackSize(64)
+            .fireResistant(true)
+    })
 })
 StartupEvents.registry('block', event => {
+    event.create('kubejs:high_entropy_alloy_block')
+        .displayName('<rainb>Block of High Entropy Alloy</rainb>')
+        .textureAll('kubejs:block/high_entropy_alloy_block')
+        .material('netherite')
+        .hardness(500)
+        .resistance(1000)
+        .lightLevel(1.0)
+        .requiresTool(true)
+        .tagBlock('minecraft:wither_immune')
+        .tagBlock('minecraft:dragon_immune')
+        .tagBlock('minecraft:mineable/pickaxe')
+        .tagBlock('forge:needs_netherite_tool')
     Object.keys(CMD).forEach(insert => {
         event.create(`kubejs:${insert}`)
             .displayName(`<rainb>${CMD[insert]}</rainb>`)
@@ -301,7 +391,7 @@ StartupEvents.registry('block', event => {
             .requiresTool(true)
             .tagBlock('minecraft:mineable/shovel')
         event.create(`kubejs:triple_compressed_${insert}`)
-            .displayName(`<shakeb>Triple Compressed</shake> ${RED_SAND_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`<shake>Triple Compressed</shake> ${RED_SAND_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
             .material('sand')
             .hardness(75)
@@ -343,6 +433,13 @@ ItemEvents.toolTierRegistry(event => {
         tier.uses = -1
         tier.speed = 256.0
         tier.attackDamageBonus = 65.0
+        tier.level = 5
+        tier.enchantmentValue = 30
+    })
+    event.add('crystalline_tool', tier => {
+        tier.uses = -1
+        tier.speed = 32
+        tier.attackDamageBonus = 10.0
         tier.level = 5
         tier.enchantmentValue = 30
     })

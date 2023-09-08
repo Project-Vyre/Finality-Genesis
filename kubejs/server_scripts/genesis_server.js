@@ -46,6 +46,7 @@ let STORAGE_INCEPTION = [
     'sand',
     'red_sand'
 ]
+let CMD = ['command_block', 'chain_command_block', 'repeating_command_block']
 let COLORID = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 ServerEvents.recipes(event => {
     FOUNDATION_NONMETAL.forEach(insert => { // why can you even smelt and blast these ores? YOU LITERALLY LOSE SO MUCH!
@@ -136,6 +137,16 @@ ServerEvents.recipes(event => {
         'minecraft:amethyst_shard',
         Fluid.of('kubejs:condensed_universal_entropy', 500)
     ]).superheated().id('finality:mixing/high_entropy_alloy')
+    event.shaped('kubejs:high_entropy_alloy_block', [
+        'EEE',
+        'EEE',
+        'EEE'
+    ], {
+        E: 'kubejs:high_entropy_alloy'
+    }).id('finality:high_entropy_alloy_block_compression')
+    event.shapeless('9x kubejs:high_entropy_alloy', [
+        'kubejs:high_entropy_alloy_block'
+    ]).id('finality:high_entropy_alloy_block_decompression')
     event.shaped('kubejs:final_helmet', [
         'EEE',
         'E E'
@@ -173,7 +184,7 @@ ServerEvents.recipes(event => {
     event.recipes.createMechanicalCrafting('kubejs:crystal_lance', [
         ' A ',
         ' A ',
-        'BBB',
+        'BNB',
         ' B ',
         ' B ',
         ' B ',
@@ -181,6 +192,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'minecraft:amethyst_shard',
         B: 'extendedcrafting:black_iron_ingot',
+        N: 'minecraft:netherite_ingot'
     }).id('finality:crystal_lance')
     event.recipes.createMechanicalCrafting('kubejs:final_katana', [
         ' E ',
@@ -205,6 +217,7 @@ ServerEvents.recipes(event => {
         E: 'kubejs:high_entropy_alloy',
         I: 'extendedcrafting:black_iron_ingot'
     }).id('finality:mechanical_crafting/final_lance')
+    event.smithing('kubejs:final_lance', 'kubejs:crystal_lance', 'kubejs:high_entropy_alloy')
     event.shaped('kubejs:final_pickaxe', [
         'EEE',
         ' S ',
@@ -451,27 +464,74 @@ ServerEvents.recipes(event => {
         event.shapeless(`9x kubejs:compressed_${insert}`, `kubejs:double_compressed_${insert}`).id(`finality:double_compressed_${insert}_decompression`)
         event.shapeless(`9x minecraft:${insert}`, `kubejs:compressed_${insert}`).id(`finality:compressed_${insert}_decompression`)
     })
+    event.recipes.createMechanicalCrafting('minecraft:spawner', [
+        'VVV',
+        'VSV',
+        'VVV'
+    ], {
+        V: 'minecraft:structure_void',
+        S: 'minecraft:soul_campfire'
+    }).id('finality:spawner')
+    CMD.forEach(insert => {
+        event.recipes.createDeploying([
+            'kubejs:zero',
+            'kubejs:one',
+            `kubejs:${insert}`
+        ], [
+            `kubejs:${insert}`,
+            'kubejs:final_pickaxe'
+        ]).keepHeldItem().id(`finality:binary_from_${insert}`)
+        event.recipes.createDeploying([
+            'minecraft:structure_void',
+            `kubejs:${insert}`
+        ], [
+            `kubejs:${insert}`,
+            'kubejs:final_hoe'
+        ]).keepHeldItem().id(`finality:structure_void_from_${insert}`)
+    })
     event.recipes.createDeploying([
         'kubejs:command_block',
-        'kubejs:basic_square'
+        'kubejs:uncolored_square'
     ], [
         'kubejs:command_block',
         'kubejs:final_axe'
-    ]).keepHeldItem().id('finality:basic_square')
+    ]).keepHeldItem().id('finality:uncolored_square')
     event.recipes.createDeploying([
         'kubejs:chain_command_block',
-        'kubejs:basic_circle'
+        'kubejs:uncolored_circle'
     ], [
         'kubejs:chain_command_block',
         'kubejs:final_axe'
-    ]).keepHeldItem().id('finality:basic_circle')
+    ]).keepHeldItem().id('finality:uncolored_circle')
     event.recipes.createDeploying([
         'kubejs:repeating_command_block',
-        'kubejs:basic_triangle_sq'
+        'kubejs:uncolored_star',
+        'kubejs:uncolored_windmill'
     ], [
         'kubejs:repeating_command_block',
         'kubejs:final_axe'
-    ]).keepHeldItem().id('finality:basic_triangle_sq')
+    ]).keepHeldItem().id('finality:uncolored_star')
+    event.recipes.createMechanicalCrafting('kubejs:color_red', [
+        'HFFOOOO'
+    ], {
+        H: 'kubejs:octothorpe',
+        F: 'kubejs:letter_f',
+        O: 'kubejs:zero'
+    }).id('finality:color_red')
+    event.recipes.createMechanicalCrafting('kubejs:color_green', [
+        'HOOFFOO'
+    ], {
+        H: 'kubejs:octothorpe',
+        F: 'kubejs:letter_f',
+        O: 'kubejs:zero'
+    }).id('finality:color_green')
+    event.recipes.createMechanicalCrafting('kubejs:color_blue', [
+        'HOOOOFF'
+    ], {
+        H: 'kubejs:octothorpe',
+        F: 'kubejs:letter_f',
+        O: 'kubejs:zero'
+    }).id('finality:color_blue')
     if (Platform.isLoaded('quark')) {
         event.shaped('minecraft:hopper', [
             'ILI',

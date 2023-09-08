@@ -144,6 +144,12 @@
 		{
 			dependencies: ["4A691BB889286C89"]
 			description: [
+				"You may notice in your inventory that you come with two different items... a &4dark ring&r and an &6amulet&r."
+				""
+				"The &6Enigmatic Amulet&r keeps &l&oall&r &aexperience&r and &ditems&r on &cdeath&r, just make sure it is in your player's inventory or in the Curios accessories charm slot."
+				""
+				"The ring on the other hand is a double edged sword that cuts deeply."
+				""
 				"Once you wear the &l&4Ring of the Seven Curses&r, it is bound to you... &ceternally&r."
 				""
 				"Keep an eye out for extra shiny loot that may grant you special abilities!"
@@ -537,7 +543,6 @@
 				"This quest also has a hidden step, but it requires you to get to The End first."
 				""
 				"On a sidenote, this quest node description has multiple pages."
-				""
 				"{@pagebreak}"
 				"About Travel Anchors:"
 				""
@@ -554,9 +559,10 @@
 				"-+-"
 				""
 				"To unlock the Travel Anchor to rename it, use a stick!"
-				""
 				"{@pagebreak}"
-				"Mechanical Extruders can be used to make Create's orestones quite easily and can make smooth stone if the recipe filter is set."
+				"&eMega Torches&r "
+				"{@pagebreak}"
+				"&7Mechanical Extruders&r can be used to make Create's orestones quite easily and can make smooth stone if the recipe filter is set."
 			]
 			icon: "tempad:tempad"
 			id: "5E5E9241EB84A4E9"
@@ -665,7 +671,7 @@
 				""
 				"You may notice that days and nights are longer as well, just so it does not feel like time is flying by."
 				""
-				"Also, I recommend making a backpack so you can handle loot more easily while you are out exploring and adventuring."
+				"Also, I recommend making a backpack so you can handle loot more easily while you are out exploring and adventuring. The default keybind for opening your backpack is &dB&r."
 			]
 			icon: {
 				Count: 1b
@@ -692,6 +698,12 @@
 					id: "74F16A4C8B3FAB4F"
 					type: "xp_levels"
 					xp_levels: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "37614DAB7EBD19E6"
+					table_id: 4925255154089711758L
+					type: "random"
 				}
 			]
 			shape: "rsquare"
@@ -820,6 +832,12 @@
 					type: "xp_levels"
 					xp_levels: 3
 				}
+				{
+					exclude_from_claim_all: true
+					id: "2AD714DD20BB5FB1"
+					table_id: 3832275843975625545L
+					type: "random"
+				}
 			]
 			shape: "rsquare"
 			subtitle: "Be prepared."
@@ -916,6 +934,8 @@
 				""
 				"&7Tuff&r can be made from compacting either Gravel or Deepslate in a &bsuperheated&r or &6heated&r &7basin&r with some lava."
 				""
+				"&9Phantom Membranes&r can be made from &3<wave>haunting</wave>&r &4Rotten Flesh&r."
+				""
 				"&8Netherite&r is also now renewable with the use of Crushing Wheels by crushing &4Netherrack&r."
 				""
 				"Netherrack can now be renewed with &cInstant Health II&r potions, fully automated."
@@ -970,6 +990,11 @@
 				{
 					id: "5712112A95EF8468"
 					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "33CDB492E3D94E84"
+					item: "minecraft:phantom_membrane"
 					type: "item"
 				}
 			]

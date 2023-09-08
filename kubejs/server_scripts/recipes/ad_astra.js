@@ -1,9 +1,14 @@
 // requires: ad_astra
 // requires: create
+// requires: createaddition
 // requires: extendedcrafting
 // and kjs 119 and above
 
 ServerEvents.recipes(event => {
+    event.recipes.createMixing(Fluid.of('ad_astra:oil', 250), [
+        '2x minecraft:coal',
+        Fluid.of('createaddition:seed_oil', 250)
+    ]).id('finality:seed_oil_conversion')
     event.shaped('kubejs:denied_result', [
         'TLT',
         'PCP',

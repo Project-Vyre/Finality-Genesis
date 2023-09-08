@@ -101,6 +101,7 @@ let CAdditionsItems = [
 
 JEIEvents.addItems(event => {
     event.add([
+        'minecraft:structure_void',
         'create:chromatic_compound',
         'create:refined_radiance',
         'create:shadow_steel',
