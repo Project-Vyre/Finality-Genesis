@@ -1,13 +1,14 @@
 // requires: endrem
+// requires: extendedcrafting
 
 ServerEvents.recipes(event => {
-    event.remove({id: 'endrem:exotic_eye'})
-    event.remove({id: 'endrem:witch_eye'})
+    event.remove({ id: 'endrem:exotic_eye' })
+    event.remove({ id: 'endrem:witch_eye' })
     event.custom({
         type: 'extendedcrafting:combination',
         powerCost: 100000,
         input: {
-            item:'minecraft:ender_eye'
+            item: 'minecraft:ender_eye'
         },
         ingredients: [
             Ingredient.of('minecraft:glow_ink_sac').toJson(),
@@ -26,10 +27,10 @@ ServerEvents.recipes(event => {
             Ingredient.of('minecraft:horn_coral').toJson(),
             Ingredient.of('minecraft:glow_ink_sac').toJson(),
             Ingredient.of('minecraft:conduit').toJson()
-            ],
-            result: {
-                item: 'endrem:exotic_eye'
-            }
+        ],
+        result: {
+            item: 'endrem:exotic_eye'
+        }
     }).id('endrem:ritual_exotic_eye')
     event.custom({
         type: 'extendedcrafting:combination',

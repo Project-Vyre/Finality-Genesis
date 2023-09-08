@@ -2,8 +2,8 @@
 // requires: upgradednetherite_ultimate
 // requires: upgradednetherite_creative
 
-let TOOLS = ['sword', 'shovel', 'pickaxe', 'axe']
-let ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
+let UPNETHERITE_TOOLS = ['sword', 'shovel', 'pickaxe', 'axe']
+let UPNETHERITE_ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
 
 ServerEvents.recipes(event => {
     event.remove({ id: 'upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot' })
@@ -44,11 +44,11 @@ ServerEvents.recipes(event => {
     // creativerite smithing
     // output left, inputs right
     // creativerite armor
-    ARMOR.forEach(armor => {
+    UPNETHERITE_ARMOR.forEach(armor => {
         event.smithing(`upgradednetherite_creative:creative_upgraded_netherite_${armor}`, `upgradednetherite_ultimate:ultimate_upgraded_netherite_${armor}`, 'upgradednetherite_creative:creative_upgraded_netherite_ingot').id(`finality:creativerite_${armor}`)
     })
     // creativerite tools
-    TOOLS.forEach(tool => {
+    UPNETHERITE_TOOLS.forEach(tool => {
         event.smithing(`upgradednetherite_creative:creative_upgraded_netherite_${tool}`, `upgradednetherite_ultimate:ultimate_upgraded_netherite_${tool}`, 'upgradednetherite_creative:creative_upgraded_netherite_ingot').id(`finality:creativerite_${tool}`)
     })
     event.smithing('upgradedtools:creative_upgraded_netherite_hammer', 'upgradedtools:ultimate_upgraded_netherite_hammer', 'upgradednetherite_creative:creative_upgraded_netherite_ingot').id('finality:creativerite_hammer')

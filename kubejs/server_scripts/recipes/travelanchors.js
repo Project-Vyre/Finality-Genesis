@@ -1,4 +1,7 @@
 // requires: travelanchors
+// requires: create
+
+console.log('Correcting Travel Staff recipe. Please let me know if the Travel Staff ever uses 2 Ender Pearls and 1 Iron Ingot for whatever reason.')
 
 ServerEvents.recipes(event => {
     event.shaped('travelanchors:travel_staff', [

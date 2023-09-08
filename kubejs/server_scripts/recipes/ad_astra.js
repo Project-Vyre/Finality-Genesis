@@ -13,7 +13,7 @@ ServerEvents.recipes(event => {
         'TLT',
         'PCP',
         'RBR'
-    ],  {
+    ], {
         T: 'minecraft:redstone_torch',
         L: 'minecraft:lever',
         P: 'ad_astra:steel_plate',
