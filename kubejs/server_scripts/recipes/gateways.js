@@ -34,7 +34,7 @@ ServerEvents.recipes(event => {
         'FEF',
         'CFC'
     ], {
-        C: 'create:iron_nugget',
+        C: 'minecraft:iron_nugget',
         F: 'minecraft:rotten_flesh',
         E: 'minecraft:ender_pearl'
     }).id('finality:husk_gate_small')
