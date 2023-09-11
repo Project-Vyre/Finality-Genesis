@@ -1,7 +1,7 @@
 <p align="center" dir="auto"><a href="https://"><img src="https://i.imgur.com/WZuAbhb.png"></a></p>
 
 
-### <p align="center" dir="auto"> Hey! This is the lightweight variant of Finality.</p>
+### <p align="center" dir="auto"> Hey! This is the Create and architect focused variant of Finality.</p>
 ### <p align="center" dir="auto">𝌤 Pushing Create to its limits, with a tighter focus. 𝌤</p>
 <p align="center" dir="auto"><a href="https://"><img src="https://img.shields.io/badge/1.19.2%20Modpack%20variant%20status-Public%20Beta-EB459E"></a> <a href="https://"><img src="https://img.shields.io/badge/1.18.2%20Modpack%20variant%20status-Public%20Beta-8847ff"></a></p>
 
