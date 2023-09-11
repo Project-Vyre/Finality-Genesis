@@ -487,7 +487,8 @@ ServerEvents.recipes(event => {
     ], {
         P: 'minecraft:prismarine_shard',
         D: 'minecraft:diamond',
-        I: 'minecraft:ink_sac'
+        I: 'minecraft:ink_sac',
+        N: 'minecraft:nautilus_shell'
     }).id('finality:heart_of_the_sea')
     // supplementaries related
     event.shaped('supplementaries:quiver', [
@@ -570,11 +571,11 @@ ServerEvents.recipes(event => {
     })
     event.recipes.createDeploying([
         'kubejs:command_block',
-        'kubejs:uncolored_square'
+        'kubejs:uncolored_rectangle'
     ], [
         'kubejs:command_block',
         'kubejs:final_axe'
-    ]).keepHeldItem().id('finality:uncolored_square')
+    ]).keepHeldItem().id('finality:uncolored_rectangle')
     event.recipes.createDeploying([
         'kubejs:chain_command_block',
         'kubejs:uncolored_circle'
@@ -606,6 +607,21 @@ ServerEvents.recipes(event => {
         BINARYCONVERSION(event, `${insert}`, `${INTEGER_BINARY[insert]}`)
     })
     BINARYCONVERSION(event, 'octothorpe', '00100011')
+    Object.keys(global.SHAPES).forEach(shape => {
+        Object.keys(global.RGBWCMY).forEach(color => {
+            event.recipes.createCutting([
+                `kubejs:${color}_left_half_${shape}`,
+                `kubejs:${color}_right_half_${shape}`],
+                `kubejs:${color}_${shape}`
+            ).id(`finality:${color}_${shape}_halving`)
+        })
+    })
+    Object.keys(global.SHAPES).forEach(shape => {
+        Object.keys(global.RGBWCMY).forEach(color => {
+            event.recipes.createCutting(`4x kubejs:${color}_${shape}_corner`, `kubejs:${color}_left_half_${shape}`).id(`finality:${color}_${shape}_left_half_halving`)
+            event.recipes.createCutting(`4x kubejs:${color}_${shape}_corner`, `kubejs:${color}_right_half_${shape}`).id(`finality:${color}_${shape}_right_half_halving`)
+        })
+    })
     if (Platform.isLoaded('quark')) {
         event.shaped('minecraft:hopper', [
             'ILI',
@@ -763,7 +779,8 @@ LootJS.modifiers((event) => {
     event.addBlockLootModifier('create:zinc_ore').randomChance(0.2).addLoot('create:raw_zinc')
     event.addBlockLootModifier('create:deepslate_zinc_ore').randomChance(0.3).addLoot('create:raw_zinc')
     event.addLootTypeModifier(LootType.CHEST).removeLoot('minecraft:bucket')
-    event.addEntityLootModifier('minecraft:creeper').randomChance(0.05).addLoot('create:zinc_nugget')
+    event.addEntityLootModifier('minecraft:creeper').randomChance(0.1).addLoot('create:zinc_nugget')
+    event.addEntityLootModifier('minecraft:witch').randomChance(0.1).addLoot('minecraft:lapis_lazuli')
 });
 
 LevelEvents.afterExplosion(event => {
