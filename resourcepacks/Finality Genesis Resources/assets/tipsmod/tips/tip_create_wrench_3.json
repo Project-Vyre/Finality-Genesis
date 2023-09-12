@@ -11,6 +11,6 @@
     "color": "gold"
   },
   "tip": {
-    "text": "Wrenches can shorten already placed Mechanical Belts! Simply right click on one of the ends of the belt. DO NOT PRESS SHIFT while doing this!"
+    "text": "The axis that Wrenches rotate Create's blocks are based on which block face you are looking at."
   }
 }

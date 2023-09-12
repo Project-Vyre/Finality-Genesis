@@ -6,11 +6,11 @@
     }
   ],
   "title": {
-    "text": "Create Tip",
+    "text": "Finality Tip",
     "bold": true,
     "color": "gold"
   },
   "tip": {
-    "text": "What was once worthless is now valuable. From Cobblestone you can get Gravel. From Gravel you can get Iron Nuggets."
+    "text": "Golden Carrots and Blaze Cakes deal the highest amount of damage when used as ammo for the Potato Cannon."
   }
 }

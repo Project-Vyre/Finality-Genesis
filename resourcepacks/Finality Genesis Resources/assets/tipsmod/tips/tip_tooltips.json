@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "kubejs"
+    }
+  ],
+  "title": {
+    "text": "Finality Tip",
+    "bold": true,
+    "color": "light_purple"
+  },
+  "tip": {
+    "text": "Always read tooltips! I am not responsible for any damages that may occur from failing to follow instructions."
+  }
+}

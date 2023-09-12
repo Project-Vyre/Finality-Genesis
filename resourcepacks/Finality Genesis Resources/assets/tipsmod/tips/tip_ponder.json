@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "kubejs"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "title": {
+    "text": "<rainb>Create Tip</rainb>",
+    "bold": true,
+    "color": "gold"
+  },
+  "tip": {
+    "text": "<shake>Hold [w] to Ponder. PLEASE.</shake>"
+  }
+}
