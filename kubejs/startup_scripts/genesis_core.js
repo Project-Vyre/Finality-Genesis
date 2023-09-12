@@ -7,7 +7,8 @@ Platform.mods.kubejs.name = 'Finality'
 
 console.info('Registering Finality items...')
 
-// let DYE = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
+// let DYE_ID = ['white','orange','magenta','light_blue','lime','pink','purple','light_gray','gray','cyan','brown','green','blue','red','black','yellow']
+// let DYE_CAPS = ['WHITE','ORANGE','MAGENTA','LIGHT BLUE','LIME','PINK','PURPLE','LIGHT GRAY','GRAY','CYNA','BROWN','GREEN','BLUE','RED','BLACK','YELLOW']
 // let DISPLAY_COLOR = ['White', 'Orange', 'Magenta', 'Light Blue', 'Lime', 'Pink', 'Purple', 'Light Gray', 'Gray', 'Cyan', 'Brown', 'Green', 'Blue', 'Red', 'Black', 'Yellow']
 let NATR = {
     blue_ice: 'Blue Ice',
@@ -82,9 +83,9 @@ let PRIMORDIAL_MECHANISMS = {
     ascendant_mechanism: 'Ascendant Mechanism', // experience related, ingredient for entropy mechanism
     entropy_mechanism: 'Entropy Mechanism' // CONSOLIDATION
 }
-let SHAPES = {
+global.SHAPES = {
     circle: 'Circle',
-    square: 'Square',
+    rectangle: 'Rectangle',
     windmill: 'Windmill',
     star: 'Star'
 }
@@ -94,14 +95,15 @@ let ROTATION = {
     bl: 'Bottom Left',
     br: 'Bottom Right'
 }
-let RGBWCMY = {
-    red: 'Red',
-    green: 'Green',
-    blue: 'Blue',
-    white: 'White',
-    cyan: 'Cyan',
-    magenta: 'Magenta',
-    yellow: 'Yellow'
+global.RGBWCMY = {
+    uncolored: '§7Uncolored',
+    red: '§cColor Red',
+    green: '§aColor Green',
+    blue: '§9Color Blue',
+    white: '§lColor White',
+    cyan: '§bColor Cyan',
+    magenta: '§dColor Magenta',
+    yellow: '§eColor Yellow'
 }
 let INTEGERS = {
     zero: 'Zero',
@@ -149,30 +151,92 @@ const DIVING = ['diving_helmet', 'backtank', 'diving_boots']
 let LEGENDARY = ['whisper_of_the_abyss', 'coral_lance', 'divider']
 let ABYSS_ARMOR = ['heaume', 'brigantine', 'leggings', 'boots']
 let EL_TOOLS = ['sword', 'shovel', 'pickaxe', 'axe', 'scythe']
-function WHOLE_SHAPE(event, itemID, displayNameString, texturePath, int_maxStackSize, fireResistantBoolean) {
-    event.create(`kubejs:${itemID}`)
-        .displayName(displayNameString)
-        .texture(`kubejs:item/shapes/${texturePath}`)
-        .maxStackSize(int_maxStackSize)
-        .fireResistant(fireResistantBoolean)
+
+/**
+ * 
+ * @param {*} event 
+ * @param {string} itemID 
+ * @param {string} displayNameString 
+ * @param {string} texturePath 
+ */
+function shapeItemGeneration(event, itemID, displayNameString, texturePath) {
+    event.create(`kubejs:${itemID}`).displayName(`${displayNameString}`).texture(`kubejs:item/shapes/${texturePath}`).maxStackSize(64).fireResistant(true)
 }
-function COLORS_RGBCMY(event, color, displayNameString) {
-    event.create(`kubejs:color_${color}`)
-        .displayName(displayNameString)
-        .texture(`kubejs:item/colors/${color}`)
-        .maxStackSize(64)
-        .fireResistant(true)
+
+/**
+ * 
+ * @param {*} event 
+ * @param {string} color 
+ * @param {string} displayNameString 
+ */
+function RGBWCMYK_OBJECTS(event, color, displayNameString) {
+    event.create(`kubejs:color_${color}`).displayName(`${displayNameString}`).texture(`kubejs:item/colors/${color}`).maxStackSize(64).fireResistant(true)
 }
+
+/**
+ * 
+ * @param {*} event 
+ * @param {string} itemID 
+ * @param {string} displayName 
+ * @param {string} texturePath 
+ */
+function transitionalItem(event, itemID, displayName, texturePath) {
+    event.create(`kubejs:${itemID}`, 'create:sequenced_assembly').displayName(displayName).texture(`kubejs:item/${texturePath}`)
+}
+
+/**
+ * 
+ * @param {*} event 
+ * @param {string} itemID 
+ */
+function STANDARD_NO_DISPLAY(event, itemID) {
+    event.create(`kubejs:${itemID}`).texture(`kubejs:item/${itemID}`).maxStackSize(64)
+}
+
+/**
+ * 
+ * @param {*} event 
+ * @param {string} itemID 
+ * @param {string} displayName 
+ */
+function STANDARD_WITH_DISPLAY(event, itemID, displayName) {
+    event.create(`kubejs:${itemID}`).displayName(displayName).texture(`kubejs:item/${itemID}`).maxStackSize(64)
+}
+
+/**
+ * 
+ * @param {*} event 
+ * @param {string} itemID 
+ * @param {string} displayName 
+ * @param {string} texturePath 
+ */
+function FireResistantItem(event, itemID, displayName, texturePath) {
+    event.create(`kubejs:${itemID}`).displayName(displayName).texture(`kubejs:item/${texturePath}`).maxStackSize(64).fireResistant(true)
+}
+
+/**
+ * 
+ * @param {*} event 
+ * @param {string} itemID 
+ * @param {string} displayName 
+ * @param {string} texturePath 
+ * @param {number} stackSize 
+ * @param {boolean} fireResistantBoolean 
+ */
+function FULL_CUSTOM(event, itemID, displayName, texturePath, stackSize, fireResistantBoolean) {
+    event.create(`kubejs:${itemID}`).displayName(displayName).texture(`kubejs:item/${texturePath}`).maxStackSize(stackSize).fireResistant(fireResistantBoolean)
+}
+
 StartupEvents.registry('item', event => { // Register new items here event.create('example_item').displayName('Example Item')
-    event.create('kubejs:deepslate_shard').texture('kubejs:item/deepslate_shard').maxStackSize(64)
-    event.create('kubejs:trident_pole').texture('kubejs:item/trident_pole').maxStackSize(64)
-    event.create('kubejs:trident_prong').texture('kubejs:item/trident_prong').maxStackSize(64)
-    event.create('kubejs:construction_core_iron').displayName('§fActivated Construction Iron Core').texture('kubejs:item/construction_iron').maxStackSize(16)
-    event.create('kubejs:construction_core_diamond').displayName('§bActivated Construction Diamond Crystal').texture('kubejs:item/construction_diamond').maxStackSize(16)
-    event.create('kubejs:dormant_singularity_core').displayName('§d<shake>Dormant Singularity Core</shake>').texture('kubejs:item/dormant_singularity_core').fireResistant(true).maxStackSize(16)
-    event.create('kubejs:awakened_singularity_core').displayName('<shake><rainb>Awakened Singularity Core</rainb></shake>').texture('kubejs:item/awakened_singularity_core').fireResistant(true).maxStackSize(8)
-    event.create('kubejs:denied_result').displayName('§d<shake>Denied Result</shake>').texture('kubejs:item/denied').maxStackSize(1).fireResistant(true)
-    event.create('kubejs:removed_item').displayName('§4<shake>Removed Item</shake>').texture('kubejs:item/removed').maxStackSize(1).fireResistant(true)
+    STANDARD_NO_DISPLAY(event, 'deepslate_shard')
+    STANDARD_NO_DISPLAY(event, 'trident_pole')
+    STANDARD_NO_DISPLAY(event, 'trident_prong')
+    FULL_CUSTOM(event, 'construction_core_iron', '§fActivated Construction Iron Core', 'construction_iron', 16, true)
+    FULL_CUSTOM(event, 'construction_core_diamond', '§bActivated Construction Diamond Crystal', 'construction_diamond', 16, true)
+    FULL_CUSTOM(event, 'dormant_singularity_core', '§d<shake>Dormant Singularity Core</shake>', 'dormant_singularity_core', 16, true)
+    FULL_CUSTOM(event, 'awakened_singularity_core', '<shake><rainb>Awakened Singularity Core</rainb></shake>', 'awakened_singularity_core', 8, true)
+    FULL_CUSTOM(event, 'denied_result', '§d<shake>Denied Result</shake>', 'denied', 1, true)
+    FULL_CUSTOM(event, 'removed_item', '§4<shake>Removed Item</shake>', 'removed', 1, true)
     event.create('kubejs:high_entropy_alloy').displayName('<rainb>High Entropy Alloy</rainb>').texture('kubejs:item/final_ingot').maxStackSize(64).fireResistant(true).group('miscellaneous')
     Object.keys(NATR).forEach(material => {
         event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${NATR[material]} Singularity`).texture(`kubejs:item/incomplete_singularities/nature/incomplete_${material}`).maxStackSize(1)
@@ -189,14 +253,14 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         event.create(`kubejs:incomplete_${mechanism}`, 'create:sequenced_assembly').displayName(`<rainb>Incomplete ${PRIMORDIAL_MECHANISMS[mechanism]}</rainb>`).texture(`kubejs:item/incomplete_${mechanism}`)
     })
     // tools
-    event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_tool').displayName('§l§d<rainb>Particula Eversorem</rainb>').texture('kubejs:item/final_pickaxe').maxStackSize(1).fireResistant(true).group('tools')
-    event.create('kubejs:final_axe', 'axe').tier('final_tool').displayName('§l§d<rainb>Natura Exitium</rainb>').texture('kubejs:item/final_axe').maxStackSize(1).fireResistant(true).group('tools')
-    event.create('kubejs:final_shovel', 'shovel').tier('final_tool').displayName('§l§d<rainb>Terra Confractus</rainb>').texture('kubejs:item/final_shovel').maxStackSize(1).fireResistant(true).group('tools')
-    event.create('kubejs:final_hoe', 'hoe').tier('final_tool').displayName('§l§d<rainb>Agricola Manus</rainb>').texture('kubejs:item/final_hoe').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_tool').displayName('§d<rainb>Particula Eversorem</rainb>').texture('kubejs:item/final_pickaxe').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_axe', 'axe').tier('final_tool').displayName('§d<rainb>Natura Exitium</rainb>').texture('kubejs:item/final_axe').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_shovel', 'shovel').tier('final_tool').displayName('§d<rainb>Terra Confractus</rainb>').texture('kubejs:item/final_shovel').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_hoe', 'hoe').tier('final_tool').displayName('§d<rainb>Agricola Manus</rainb>').texture('kubejs:item/final_hoe').maxStackSize(1).fireResistant(true).group('tools')
     // weapons
-    event.create('kubejs:final_sword', 'sword').tier('final_tool').displayName('§l§d<rainb>Corevis Ultimatum</rainb>').texture('kubejs:item/final_sword').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_lance', 'sword').tier('final_tool').displayName('§l§d<rainb>Tenebris Punctura</rainb>').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_katana', 'sword').tier('final_tool').displayName('§l§d<rainb>Celeritas Obumbratio</rainb>').texture('kubejs:item/final_katana').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_sword', 'sword').tier('final_tool').displayName('§d<rainb>Corevis Ultimatum</rainb>').texture('kubejs:item/final_sword').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_lance', 'sword').tier('final_tool').displayName('§d<rainb>Tenebris Punctura</rainb>').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_katana', 'sword').tier('final_tool').displayName('§d<rainb>Celeritas Obumbratio</rainb>').texture('kubejs:item/final_katana').maxStackSize(1).fireResistant(true).group('combat')
     event.create('kubejs:crystal_lance', 'sword').tier('crystalline_tool').displayName('§b<rainb>Crystallus Hasta</rainb>').maxStackSize(1).fireResistant(true).group('combat')
     // armor
     event.create('kubejs:final_helmet', 'helmet').tier('final_armor').displayName('§l§d<rainb>Conscientia Oculi</rainb>').texture('kubejs:item/final_helmet').maxStackSize(1).fireResistant(true).group('combat')
@@ -204,21 +268,56 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     event.create('kubejs:final_leggings', 'leggings').tier('final_armor').displayName('§l§d<rainb>Universum Motus</rainb>').texture('kubejs:item/final_leggings').maxStackSize(1).fireResistant(true).group('combat')
     event.create('kubejs:final_boots', 'boots').tier('final_armor').displayName('§l§d<rainb>Gravitas Anchoram</rainb>').texture('kubejs:item/final_boots').maxStackSize(1).fireResistant(true).group('combat')
     // shapes and alphanumeric
-    Object.keys(SHAPES).forEach(shape => {
-        WHOLE_SHAPE(event, `uncolored_${shape}`, `§l§7Uncolored ${SHAPES[shape]}`, `uncolored_${shape}`, 64, true)
-        WHOLE_SHAPE(event, `red_${shape}`, `§l§cRed ${SHAPES[shape]}`, `red_${shape}`, 64, true)
-        WHOLE_SHAPE(event, `green_${shape}`, `§l§aGreen ${SHAPES[shape]}`, `green_${shape}`, 64, true)
-        WHOLE_SHAPE(event, `blue_${shape}`, `§l§9Blue ${SHAPES[shape]}`, `blue_${shape}`, 64, true)
-        WHOLE_SHAPE(event, `cyan_${shape}`, `§l§bCyan ${SHAPES[shape]}`, `cyan_${shape}`, 64, true)
-        WHOLE_SHAPE(event, `magenta_${shape}`, `§l§dMagenta ${SHAPES[shape]}`, `magenta_${shape}`, 64, true)
-        WHOLE_SHAPE(event, `yellow_${shape}`, `§l§eYellow ${SHAPES[shape]}`, `yellow_${shape}`, 64, true)
-        WHOLE_SHAPE(event, `white_${shape}`, `§lWhite ${SHAPES[shape]}`, `white_${shape}`, 64, true)
+    Object.keys(global.SHAPES).forEach(shape => {
+        shapeItemGeneration(event, `uncolored_${shape}`, `§7Uncolored ${global.SHAPES[shape]}`, `uncolored_${shape}`)
+        shapeItemGeneration(event, `uncolored_left_half_${shape}`, `§7Uncolored Left Half ${global.SHAPES[shape]}`, `halves/uncolored_left_half_${shape}`)
+        shapeItemGeneration(event, `uncolored_right_half_${shape}`, `§7Uncolored Right Half ${global.SHAPES[shape]}`, `halves/uncolored_right_half_${shape}`)
+        shapeItemGeneration(event, `uncolored_${shape}_corner`, `§7Uncolored ${global.SHAPES[shape]} Corner`, `corners/uncolored_${shape}_corner`)
+        // red
+        shapeItemGeneration(event, `red_${shape}`, `§l§cRed ${global.SHAPES[shape]}`, `red_${shape}`)
+        shapeItemGeneration(event, `red_left_half_${shape}`, `§cRed Left Half ${global.SHAPES[shape]}`, `halves/red_left_half_${shape}`)
+        shapeItemGeneration(event, `red_right_half_${shape}`, `§cRed Right Half ${global.SHAPES[shape]}`, `halves/red_right_half_${shape}`)
+        shapeItemGeneration(event, `red_${shape}_corner`, `§cRed ${global.SHAPES[shape]} Corner`, `corners/red_${shape}_corner`)
+        // green
+        shapeItemGeneration(event, `green_${shape}`, `§aGreen ${global.SHAPES[shape]}`, `green_${shape}`)
+        shapeItemGeneration(event, `green_left_half_${shape}`, `§aGreen Left Half ${global.SHAPES[shape]}`, `halves/green_left_half_${shape}`)
+        shapeItemGeneration(event, `green_right_half_${shape}`, `§aGreen Right Half ${global.SHAPES[shape]}`, `halves/green_right_half_${shape}`)
+        shapeItemGeneration(event, `green_${shape}_corner`, `§aGreen ${global.SHAPES[shape]} Corner`, `corners/green_${shape}_corner`)
+        // blue
+        shapeItemGeneration(event, `blue_${shape}`, `§9Blue ${global.SHAPES[shape]}`, `blue_${shape}`)
+        shapeItemGeneration(event, `blue_left_half_${shape}`, `§9Blue Left Half ${global.SHAPES[shape]}`, `halves/blue_left_half_${shape}`)
+        shapeItemGeneration(event, `blue_right_half_${shape}`, `§9Blue Right Half ${global.SHAPES[shape]}`, `halves/blue_right_half_${shape}`)
+        shapeItemGeneration(event, `blue_${shape}_corner`, `§9Blue ${global.SHAPES[shape]} Corner`, `corners/blue_${shape}_corner`)
+        // cyan
+        shapeItemGeneration(event, `cyan_${shape}`, `§bCyan ${global.SHAPES[shape]}`, `cyan_${shape}`)
+        shapeItemGeneration(event, `cyan_left_half_${shape}`, `§bCyan Left Half ${global.SHAPES[shape]}`, `halves/cyan_left_half_${shape}`)
+        shapeItemGeneration(event, `cyan_right_half_${shape}`, `§bCyan Right Half ${global.SHAPES[shape]}`, `halves/cyan_right_half_${shape}`)
+        shapeItemGeneration(event, `cyan_${shape}_corner`, `§bCyan ${global.SHAPES[shape]} Corner`, `corners/cyan_${shape}_corner`)
+        // magenta
+        shapeItemGeneration(event, `magenta_${shape}`, `§dMagenta ${global.SHAPES[shape]}`, `magenta_${shape}`)
+        shapeItemGeneration(event, `magenta_left_half_${shape}`, `§dMagenta Left Half ${global.SHAPES[shape]}`, `halves/magenta_left_half_${shape}`)
+        shapeItemGeneration(event, `magenta_right_half_${shape}`, `§dMagenta Right Half ${global.SHAPES[shape]}`, `halves/magenta_right_half_${shape}`)
+        shapeItemGeneration(event, `magenta_${shape}_corner`, `§dMagenta ${global.SHAPES[shape]} Corner`, `corners/magenta_${shape}_corner`)
+        // yellow
+        shapeItemGeneration(event, `yellow_${shape}`, `§eYellow ${global.SHAPES[shape]}`, `yellow_${shape}`)
+        shapeItemGeneration(event, `yellow_left_half_${shape}`, `§eYellow Left Half ${global.SHAPES[shape]}`, `halves/yellow_left_half_${shape}`)
+        shapeItemGeneration(event, `yellow_right_half_${shape}`, `§eYellow Right Half ${global.SHAPES[shape]}`, `halves/yellow_right_half_${shape}`)
+        shapeItemGeneration(event, `yellow_${shape}_corner`, `§eYellow ${global.SHAPES[shape]} Corner`, `corners/yellow_${shape}_corner`)
+        // white
+        shapeItemGeneration(event, `white_${shape}`, `§lWhite ${global.SHAPES[shape]}`, `white_${shape}`)
+        shapeItemGeneration(event, `white_left_half_${shape}`, `§lWhite Left Half ${global.SHAPES[shape]}`, `halves/white_left_half_${shape}`)
+        shapeItemGeneration(event, `white_right_half_${shape}`, `§lWhite Right Half ${global.SHAPES[shape]}`, `halves/white_right_half_${shape}`)
+        shapeItemGeneration(event, `white_${shape}_corner`, `§lWhite ${global.SHAPES[shape]} Corner`, `corners/white_${shape}_corner`)
     })
-    event.create('kubejs:blueprint_shape')
-        .displayName('Blueprint Shape')
-        .texture('kubejs:item/shapes/blueprint_shape')
-        .maxStackSize(64)
-        .fireResistant(true)
+    FireResistantItem(event, 'blueprint_shape_base', '§9Blueprint Shape Base', 'shapes/blueprint_shape_base')
+    FireResistantItem(event, 'blueprint_shape', '§9Blueprint Shape', 'shapes/blueprint_shape')
+    transitionalItem(event, 'incomplete_cpu_shape', '§aIncomplete CPU Substrate Shape', 'shapes/incomplete_cpu')
+    transitionalItem(event, 'incomplete_cpu_substrate_shape', '§aIncomplete CPU Substrate Shape', 'shapes/incomplete_cpu_substrate')
+    FireResistantItem(event, 'cpu_foundation', '§aCPU Shape Foundation', 'shapes/cpu_foundation')
+    FireResistantItem(event, 'cpu_substrate_shape', '§aCPU Substrate Shape', 'shapes/cpu_substrate_shape')
+    FireResistantItem(event, 'cpu_shape', '§aCPU Shape', 'shapes/cpu_shape')
+    FireResistantItem(event, 'emitter_shape_base', '§dEmitter Shape Base', 'shapes/emitter_shape_base')
+    FireResistantItem(event, 'emitter_shape', '§dEmitter Shape', 'shapes/emitter_shape')
     Object.keys(LETTERS).forEach(character => {
         event.create(`kubejs:letter_${character}`)
             .displayName(`<rainb>Letter ${LETTERS[character]}</rainb>`)
@@ -241,27 +340,11 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .maxStackSize(64)
         .fireResistant(true)
         .glow(true)
-    // function COLORS_RGBCMY(event, color, displayNameString) {
-    //     event.create(`kubejs:color_${color}`)
-    //         .displayName(displayNameString)
-    //         .texture(`kubejs:item/colors/${color}`)
-    //         .maxStackSize(64)
-    //         .fireResistant(true)
-    // }
-    COLORS_RGBCMY(event, 'red', '§l§cColor Red')
-    COLORS_RGBCMY(event, 'green', '§l§aColor Green')
-    COLORS_RGBCMY(event, 'blue', '§l§9Color Blue')
-    COLORS_RGBCMY(event, 'cyan', '§l§bColor Cyan')
-    COLORS_RGBCMY(event, 'magenta', '§l§dColor Magenta')
-    COLORS_RGBCMY(event, 'yellow', '§l§eColor Yellow')
-    //Object.keys(RGBWCMY).forEach(color => {
-    //    event.create(`kubejs:color_${color}`)
-    //        .displayName(`${RGBWCMY[color]}`)
-    //        .texture(`kubejs:item/colors/${color}`)
-    //        .maxStackSize(64)
-    //        .fireResistant(true)
-    //})
+    Object.keys(global.RGBWCMY).forEach(item => {
+        RGBWCMYK_OBJECTS(event, item, global.RGBWCMY[item])
+    })
 })
+
 StartupEvents.registry('block', event => {
     event.create('kubejs:high_entropy_alloy_block')
         .displayName('<rainb>Block of High Entropy Alloy</rainb>')
@@ -436,6 +519,7 @@ StartupEvents.registry('block', event => {
             .tagBlock('minecraft:mineable/shovel')
     })
 })
+
 StartupEvents.registry('fluid', event => {
     // work in progress .stillTexture('finality:block/still_entropy').flowingTexture('finality:block/flowing_entropy')
     event.create('kubejs:condensed_universal_entropy')
@@ -539,59 +623,68 @@ ItemEvents.modification(event => {
     DIVING.forEach(armor => event.modify(`create:netherite_${armor}`, item => {
         item.maxDamage = 1024
     }))
-    // aquamirae
-    LEGENDARY.forEach(insert => {
-        event.modify(`aquamirae:${insert}`, item => {
+    if (Platform.isLoaded('aquamirae')) {
+        LEGENDARY.forEach(insert => {
+            event.modify(`aquamirae:${insert}`, item => {
+                item.maxDamage = -1
+                item.fireResistant = true
+            })
+        })
+        ABYSS_ARMOR.forEach(insert => {
+            event.modify(`aquamirae:abyssal_${insert}`, item => {
+                item.maxDamage = -1
+                item.fireResistant = true
+            })
+        })
+        event.modify('aquamirae:abyssal_tiara', item => {
             item.maxDamage = -1
             item.fireResistant = true
         })
-    })
-    ABYSS_ARMOR.forEach(insert => {
-        event.modify(`aquamirae:abyssal_${insert}`, item => {
+        event.modify('aquamirae:maze_rose', item => {
             item.maxDamage = -1
             item.fireResistant = true
         })
-    })
-    event.modify('aquamirae:abyssal_tiara', item => {
-        item.maxDamage = -1
-        item.fireResistant = true
-    })
-    event.modify('aquamirae:maze_rose', item => {
-        item.maxDamage = -1
-        item.fireResistant = true
-    })
-    event.modify('aquamirae:poisoned_chakra', item => {
-        item.maxDamage = -1
-        item.fireResistant = true
-    })
-    ARMOR.forEach(insert => {
-        event.modify(`aquamirae:three_bolt_${insert}`, item => {
+        event.modify('aquamirae:poisoned_chakra', item => {
             item.maxDamage = -1
             item.fireResistant = true
         })
-    })
-    // bhc
-    event.modify('bhc:blade_of_vitality', item => {
-        item.maxDamage = -1
-        item.fireResistant = true
-    })
-    // enigmatic legacy
-    EL_TOOLS.forEach(insert => {
-        event.modify(`enigmaticlegacy:etherium_${insert}`, item => {
+        ARMOR.forEach(insert => {
+            event.modify(`aquamirae:three_bolt_${insert}`, item => {
+                item.maxDamage = -1
+                item.fireResistant = true
+            })
+        })
+    }
+    if (Platform.isLoaded('bhc')) {
+        event.modify('bhc:blade_of_vitality', item => {
             item.maxDamage = -1
             item.fireResistant = true
         })
-    })
-    ARMOR.forEach(insert => {
-        event.modify(`enigmaticlegacy:etherium${insert}`, item => {
+    }
+    if (Platform.isLoaded('enigmaticlegacy')) {
+        EL_TOOLS.forEach(insert => {
+            event.modify(`enigmaticlegacy:etherium_${insert}`, item => {
+                item.maxDamage = -1
+                item.fireResistant = true
+            })
+        })
+        ARMOR.forEach(insert => {
+            event.modify(`enigmaticlegacy:etherium${insert}`, item => {
+                item.maxDamage = -1
+                item.fireResistant = true
+            })
+        })
+        event.modify('enigmaticlegacy:astral_breaker', item => {
             item.maxDamage = -1
             item.fireResistant = true
         })
-    })
-    event.modify('enigmaticlegacy:astral_breaker', item => {
-        item.maxDamage = -1
-        item.fireResistant = true
-    })
+    }
+    if (Platform.isLoaded('lilwings')) {
+        event.modify('lilwings:enderfly_net', item => {
+            item.maxDamage = -1
+            item.fireResistant = true
+        })
+    }
     // farmer's delight
     event.modify('farmersdelight:flint_knife', item => {
         item.maxDamage = 256
@@ -606,3 +699,222 @@ ItemEvents.modification(event => {
         item.maxDamage = 4096
     })
 })
+
+/*
+    public record Palette(Style primary, Style highlight) {
+        public static final Palette STANDARD_CREATE = new Palette(styleFromColor(0xC9974C), styleFromColor(0xF1DD79));
+
+        public static final Palette BLUE = ofColors(ChatFormatting.BLUE, ChatFormatting.AQUA);
+        public static final Palette GREEN = ofColors(ChatFormatting.DARK_GREEN, ChatFormatting.GREEN);
+        public static final Palette YELLOW = ofColors(ChatFormatting.GOLD, ChatFormatting.YELLOW);
+        public static final Palette RED = ofColors(ChatFormatting.DARK_RED, ChatFormatting.RED);
+        public static final Palette PURPLE = ofColors(ChatFormatting.DARK_PURPLE, ChatFormatting.LIGHT_PURPLE);
+        public static final Palette GRAY = ofColors(ChatFormatting.DARK_GRAY, ChatFormatting.GRAY);
+
+        public static final Palette ALL_GRAY = ofColors(ChatFormatting.GRAY, ChatFormatting.GRAY);
+        public static final Palette GRAY_AND_BLUE = ofColors(ChatFormatting.GRAY, ChatFormatting.BLUE);
+        public static final Palette GRAY_AND_WHITE = ofColors(ChatFormatting.GRAY, ChatFormatting.WHITE);
+        public static final Palette GRAY_AND_GOLD = ofColors(ChatFormatting.GRAY, ChatFormatting.GOLD);
+        public static final Palette GRAY_AND_RED = ofColors(ChatFormatting.GRAY, ChatFormatting.RED);
+
+        public static Palette ofColors(ChatFormatting primary, ChatFormatting highlight) {
+            return new Palette(styleFromColor(primary), styleFromColor(highlight));
+        }
+    }
+*/
+
+/*
+deepslate_shard
+trident_pole
+trident_prong
+construction_core_iron
+construction_core_diamond
+dormant_singularity_core
+awakened_singularity_core
+denied_result
+removed_item
+high_entropy_alloy
+final_pickaxe
+final_axe
+final_shovel
+final_hoe
+final_sword
+final_lance
+final_katana
+crystal_lance
+*/
+
+let CREATE_STANDARD_PALETTE = [
+    'minecraft:wooden_pickaxe',
+    'minecraft:stone_pickaxe',
+    'minecraft:iron_pickaxe',
+    'minecraft:fletching_table',
+    'minecraft:dried_kelp_block',
+    'minecraft:coal_block',
+    'minecraft:diamond_block',
+    'extendedcrafting:handheld_table',
+    'farmersdelight:skillet',
+    'farmersdelight:stove',
+    'chalk:chalk_box'
+]
+let BLUE_PALETTE = [
+    'minecraft:soul_campfire',
+    'minecraft:beacon',
+    'minecraft:lapis_lazuli'
+]
+let GREEN_PALETTE = [
+    'minecraft:bone_meal'
+]
+let YELLOW_PALETTE = [
+    'minecraft:campfire',
+    'cataclysm:infernal_forge',
+    'cataclysm:monstrous_helm',
+    'cataclysm:burning_ashes',
+    'cataclysm:the_incinerator',
+    'cataclysm:ignitium_helmet',
+    'cataclysm:ignitium_chestplate',
+    'cataclysm:ignitium_leggings',
+    'cataclysm:ignitium_boots',
+    'cataclysm:bulwark_of_the_flame'
+]
+let RED_PALETTE = [
+    'kubejs:removed_item',
+    'minecraft:nether_star',
+    'minecraft:netherrack',
+    'cataclysm:wither_assault_shoulder_weapon'
+]
+let PURPLE_PALETTE = [
+    'minecraft:dragon_egg',
+    'eccentrictome:tome',
+    'kubejs:denied_result',
+    'kubejs:command_block',
+    'kubejs:chain_command_block',
+    'kubejs:repeating_command_block',
+    'kubejs:high_entropy_alloy',
+    'kubejs:final_pickaxe',
+    'kubejs:final_axe',
+    'kubejs:final_shovel',
+    'kubejs:final_hoe',
+    'kubejs:final_sword',
+    'kubejs:final_lance',
+    'kubejs:final_helmet',
+    'kubejs:final_chestplate',
+    'kubejs:final_leggings',
+    'kubejs:final_boots',
+    'cataclysm:gauntlet_of_guard',
+    'cataclysm:gauntlet_of_bulwark',
+    'cataclysm:void_scatter_arrow',
+    'cataclysm:void_core',
+    'cataclysm:void_forge',
+    'cataclysm:void_assault_shoulder_weapon',
+    'cataclysm:abyssal_sacrifice',
+    'cataclysm:tidal_claws',
+    'cataclysm:abyssal_egg'
+]
+let GRAY_PALETTE = [
+    'minecraft:rotten_flesh',
+    'minecraft:pointed_dripstone',
+    'minecraft:andesite',
+    'minecraft:cobblestone',
+    'minecraft:cobbled_deepslate',
+    'minecraft:gravel',
+    'kubejs:deepslate_shard',
+]
+
+/*
+STANDARD_CREATE
+---
+BLUE
+GREEN
+YELLOW
+RED
+PURPLE
+GRAY
+---
+ALL_GRAY
+GRAY_AND_BLUE
+GRAY_AND_WHITE
+GRAY_AND_GOLD
+GRAY_AND_RED
+---
+{
+    "item.create.example_item.tooltip": "EXAMPLE ITEM (just a marker that this tooltip exists)",
+    "item.create.example_item.tooltip.summary": "A brief description of the item. _Underscores_ highlight a term.",
+    "item.create.example_item.tooltip.condition1": "When this",
+    "item.create.example_item.tooltip.behaviour1": "Then this item does this. (behaviours show on shift)",
+    "item.create.example_item.tooltip.condition2": "And When this",
+    "item.create.example_item.tooltip.behaviour2": "You can add as many behaviours as you like",
+    "item.create.example_item.tooltip.control1": "When Ctrl pressed",
+    "item.create.example_item.tooltip.action1": "These controls are displayed.",
+}
+*/
+
+const $ItemDescription = Java.loadClass('com.simibubi.create.foundation.item.ItemDescription$Modifier')
+const $TooltipModifier = Java.loadClass('com.simibubi.create.foundation.item.TooltipModifier')
+const $Palette = Java.loadClass('com.simibubi.create.foundation.item.TooltipHelper$Palette')
+
+ClientEvents.init(event => {
+    CREATE_STANDARD_PALETTE.forEach(itemID => {
+        $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.STANDARD_CREATE))
+    })
+    BLUE_PALETTE.forEach(itemID => {
+        $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.BLUE))
+    })
+    GREEN_PALETTE.forEach(itemID => {
+        $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GREEN))
+    })
+    YELLOW_PALETTE.forEach(itemID => {
+        $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.YELLOW))
+    })
+    RED_PALETTE.forEach(itemID => {
+        $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.RED))
+    })
+    PURPLE_PALETTE.forEach(itemID => {
+        $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.PURPLE))
+    })
+    GRAY_PALETTE.forEach(itemID => {
+        $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY))
+    })
+    if (Platform.isLoaded('chalk')) {
+        Object.keys(DYE).forEach(itemID => {
+            $TooltipModifier.REGISTRY.register(`chalk:${itemID}_chalk`, new $ItemDescription(`chalk:${itemID}_chalk`, $Palette.GRAY))
+        })
+    }
+    if (Platform.isLoaded('alexsmobs')) {
+        $TooltipModifier.REGISTRY.register('minecraft:pumpkin', new $ItemDescription('minecraft:pumpkin', $Palette.YELLOW))
+    }
+    if (Platform.isLoaded('autumnity')) {
+        $TooltipModifier.REGISTRY.register('autumnity:sappy_maple_log', new $ItemDescription('autumnity:sappy_maple_log', $Palette.YELLOW))
+        $TooltipModifier.REGISTRY.register('autumnity:sappy_maple_wood', new $ItemDescription('autumnity:sappy_maple_wood', $Palette.YELLOW))
+        $TooltipModifier.REGISTRY.register('autumnity:foul_berries', new $ItemDescription('autumnity:foul_berries', $Palette.YELLOW))
+    }
+    if (Platform.isLoaded('backpacked')) {
+        $TooltipModifier.REGISTRY.register('backpacked:backpack', new $ItemDescription('backpacked:backpack', $Palette.STANDARD_CREATE))
+    }
+    if (Platform.isLoaded('cloudstorage')) {
+        $TooltipModifier.REGISTRY.register('cloudstorage:balloon_bit', new $ItemDescription('cloudstorage:balloon_bit', $Palette.STANDARD_CREATE))
+        $TooltipModifier.REGISTRY.register('cloudstorage:cloud_chest', new $ItemDescription('cloudstorage:cloud_chest', $Palette.STANDARD_CREATE))
+        $TooltipModifier.REGISTRY.register('cloudstorage:static_cloud_chest', new $ItemDescription('cloudstorage:static_cloud_chest', $Palette.BLUE))
+    }
+    if (Platform.isLoaded('quark')) {
+        $TooltipModifier.REGISTRY.register('quark:abacus', new $ItemDescription('quark:abacus', $Palette.STANDARD_CREATE))
+    }
+    if (Platform.isLoaded('salt')) {
+        $TooltipModifier.REGISTRY.register('salt:salt', new $ItemDescription('salt:salt', $Palette.STANDARD_CREATE))
+    }
+    if (Platform.isLoaded('tempad')) {
+        $TooltipModifier.REGISTRY.register('tempad:tempad', new $ItemDescription('tempad:tempad', $Palette.PURPLE))
+        $TooltipModifier.REGISTRY.register('tempad:he_who_remains_tempad', new $ItemDescription('tempad:he_who_remains_tempad', $Palette.PURPLE))
+    }
+})
+
+/*
+    "item.chalk.color_chalk.tooltip": "COLOR CHALK",
+    "item.chalk.color_chalk.tooltip.summary": "Useful for planning, navigation and drawing. Can be stored in the _Chalk Box_ for easier management and utility. Additional symbols are unlocked through advancements.",
+    "item.chalk.color_chalk.tooltip.condition1": "Usage",
+    "item.chalk.color_chalk.tooltip.behaviour1": "Right click on a block face to _draw_ a mark. Depending on the _angle_ and _distance_ away from the _center_ of the block, the _direction_ of your drawing will change. A _dot mark_ is drawn by clicking in the center of the block.",
+    "item.chalk.color_chalk.tooltip.condition2": "On Shift + R-click",
+    "item.chalk.color_chalk.tooltip.behaviour2": "Allows you to change different symbols.",
+    "item.chalk.color_chalk.tooltip.condition3": "Usage with Chalk Box",
+    "item.chalk.color_chalk.tooltip.behaviour3": "Simply right click as if you were using the chalk in the first place.",
+*/
