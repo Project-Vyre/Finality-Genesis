@@ -1,11 +1,13 @@
 {
-  "name": "singularity.extendedcrafting.gold",
+  "name": "Gold",
   "colors": [
-    "fdf55f",
-    "d98e04"
+    "FDF55F",
+    "D98E04"
   ],
   "ingredient": {
     "item": "minecraft:gold_block"
   },
-  "materialCount": 8192
+  "materialCount": 8192,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

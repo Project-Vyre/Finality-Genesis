@@ -1,11 +1,13 @@
 {
-  "name": "singularity.extendedcrafting.glowstone",
+  "name": "Glowstone",
   "colors": [
-    "ffd38f",
-    "a06135"
+    "FFD38F",
+    "A06135"
   ],
   "ingredient": {
     "item": "minecraft:glowstone"
   },
-  "materialCount": 16384
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

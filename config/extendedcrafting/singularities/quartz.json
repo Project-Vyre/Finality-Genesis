@@ -1,11 +1,13 @@
 {
   "name": "Quartz",
   "colors": [
-    "b19e8f",
-    "6e5c59"
+    "B19E8F",
+    "6E5C59"
   ],
   "ingredient": {
     "item": "minecraft:quartz_block"
   },
-  "materialCount": 16384
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

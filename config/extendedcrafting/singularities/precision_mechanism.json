@@ -1,11 +1,13 @@
 {
-    "name": "Precision Mechanism",
-    "colors": [
-      "a7a7a7",
-      "f8ca67"
-    ],
-    "ingredient": {
-      "item": "create:precision_mechanism"
-    },
-    "materialCount": 8192
-  }
+  "name": "Precision Mechanism",
+  "colors": [
+    "A7A7A7",
+    "F8CA67"
+  ],
+  "ingredient": {
+    "item": "create:precision_mechanism"
+  },
+  "materialCount": 8192,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

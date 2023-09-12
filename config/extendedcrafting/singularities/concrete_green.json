@@ -1,11 +1,13 @@
 {
-    "name": "Green Concrete",
-    "colors": [
-      "718d26",
-      "445521"
-    ],
-    "ingredient": {
-      "item": "minecraft:green_concrete"
-    },
-    "materialCount": 16384
-  }
+  "name": "Green Concrete",
+  "colors": [
+    "718D26",
+    "445521"
+  ],
+  "ingredient": {
+    "item": "minecraft:green_concrete"
+  },
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

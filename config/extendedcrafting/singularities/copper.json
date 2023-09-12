@@ -1,11 +1,13 @@
 {
-  "name": "singularity.extendedcrafting.copper",
+  "name": "Copper",
   "colors": [
-    "fa977c",
-    "bc5430"
+    "FA977C",
+    "BC5430"
   ],
   "ingredient": {
     "item": "minecraft:copper_block"
   },
-  "materialCount": 8192
+  "materialCount": 8192,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

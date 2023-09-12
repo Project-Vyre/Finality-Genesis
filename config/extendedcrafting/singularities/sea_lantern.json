@@ -2,10 +2,12 @@
   "name": "Sea Lantern",
   "colors": [
     "529680",
-    "48635b"
+    "48635B"
   ],
   "ingredient": {
     "item": "minecraft:sea_lantern"
   },
-  "materialCount": 2048
+  "materialCount": 2048,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

@@ -1,11 +1,13 @@
 {
   "name": "Blue Ice",
   "colors": [
-    "84abed",
-    "6492ea"
+    "84ABED",
+    "6492EA"
   ],
   "ingredient": {
     "item": "minecraft:blue_ice"
   },
-  "materialCount": 16384
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

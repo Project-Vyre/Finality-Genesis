@@ -2,10 +2,12 @@
   "name": "Electron Tube",
   "colors": [
     "FFFFFF",
-    "741a41"
+    "741A41"
   ],
   "ingredient": {
     "item": "create:electron_tube"
   },
-  "materialCount": 4096
+  "materialCount": 4096,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

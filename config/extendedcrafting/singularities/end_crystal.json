@@ -1,11 +1,13 @@
 {
   "name": "End Crystal",
   "colors": [
-    "be95d4",
-    "e20627"
+    "BE95D4",
+    "E20627"
   ],
   "ingredient": {
     "item": "minecraft:end_crystal"
   },
-  "materialCount": 128
+  "materialCount": 128,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

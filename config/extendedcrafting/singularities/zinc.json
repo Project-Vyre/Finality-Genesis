@@ -1,11 +1,13 @@
 {
   "name": "Zinc",
   "colors": [
-    "b5d1ba",
-    "7e806c"
+    "B5D1BA",
+    "7E806C"
   ],
   "ingredient": {
     "item": "create:zinc_block"
   },
-  "materialCount": 8192
+  "materialCount": 8192,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

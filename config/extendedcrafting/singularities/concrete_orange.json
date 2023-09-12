@@ -1,11 +1,13 @@
 {
-    "name": "Orange Concrete",
-    "colors": [
-      "dba849",
-      "d15a00"
-    ],
-    "ingredient": {
-      "item": "minecraft:orange_concrete"
-    },
-    "materialCount": 16384
-  }
+  "name": "Orange Concrete",
+  "colors": [
+    "DBA849",
+    "D15A00"
+  ],
+  "ingredient": {
+    "item": "minecraft:orange_concrete"
+  },
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

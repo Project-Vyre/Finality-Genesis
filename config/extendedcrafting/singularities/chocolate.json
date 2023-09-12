@@ -1,11 +1,13 @@
 {
-    "name": "Chocolate",
-    "colors": [
-      "E68A65",
-      "632B35"
-    ],
-    "ingredient": {
-      "item": "create:bar_of_chocolate"
-    },
-    "materialCount": 16384
-  }
+  "name": "Chocolate",
+  "colors": [
+    "E68A65",
+    "632B35"
+  ],
+  "ingredient": {
+    "item": "create:bar_of_chocolate"
+  },
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
+}
