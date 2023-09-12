@@ -477,8 +477,8 @@ ServerEvents.recipes(event => {
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:awakened_singularity_core']),
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'create:sequenced_gearshift']),
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'extendedcrafting:crystaltine_nugget']),
-        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:uncolored_square']),
-        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:uncolored_circle']),
-        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:uncolored_star'])
+        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:cpu_shape']),
+        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:blueprint_shape']),
+        event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:emitter_shape'])
     ]).transitionalItem('kubejs:incomplete_entropy_mechanism').loops(512).id('finality:entropy_mechanism_creation')
 })

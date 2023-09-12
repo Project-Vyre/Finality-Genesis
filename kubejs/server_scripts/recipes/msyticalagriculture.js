@@ -413,9 +413,4 @@ ServerEvents.recipes(event => {
         '4x mysticalagriculture:fertilized_essence',
         'minecraft:diamond'
     ]).id('finality:mysta_mystical_fertilizer_better_eff')
-    // mysticalagradditions
-    event.shapeless('minecraft:dragon_breath', [
-        'minecraft:dragon_egg',
-        'minecraft:glass_bottle'
-    ]).keepIngredient('minecraft:dragon_egg').id('finality:dragon_breath')
 })

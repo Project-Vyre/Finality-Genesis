@@ -47,6 +47,15 @@ let STORAGE_INCEPTION = [
 ]
 let CMD = ['command_block', 'chain_command_block', 'repeating_command_block']
 let COLORID = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
+let VALID_COLOR_MIX = [
+    'red',
+    'green',
+    'blue',
+    'white',
+    'cyan',
+    'magenta',
+    'yellow'
+]
 let LETTER_BINARY_CODES = {
     letter_a: '01000001',
     letter_b: '01000010',
@@ -103,7 +112,7 @@ function HEXCODES(event, out, arrangement) {
     }).id(`finality:mechanical_crafting/color_${out}`)
 }
 function COLOR_MIXING(event, output_color, color_one, color_two) {
-    event.recipes.createMixing(`kubejs:color_${output_color}`, [color_one, color_two]).id(`finality:mixing/color_${output_color}`)
+    event.recipes.createMixing(`kubejs:color_${output_color}`, [`kubejs:color_${color_one}`, `kubejs:color_${color_two}`]).id(`finality:mixing/color_${output_color}`)
 }
 ServerEvents.recipes(event => {
     FOUNDATION_NONMETAL.forEach(insert => { // why can you even smelt and blast these ores? YOU LITERALLY LOSE SO MUCH!
@@ -544,6 +553,10 @@ ServerEvents.recipes(event => {
         event.shapeless(`9x kubejs:compressed_${insert}`, `kubejs:double_compressed_${insert}`).id(`finality:double_compressed_${insert}_decompression`)
         event.shapeless(`9x minecraft:${insert}`, `kubejs:compressed_${insert}`).id(`finality:compressed_${insert}_decompression`)
     })
+    event.shapeless('minecraft:dragon_breath', [
+        'minecraft:dragon_egg',
+        'minecraft:glass_bottle'
+    ]).keepIngredient('minecraft:dragon_egg').id('finality:dragon_breath')
     event.recipes.createMechanicalCrafting('minecraft:spawner', [
         'VVV',
         'VSV',
@@ -591,15 +604,27 @@ ServerEvents.recipes(event => {
         'kubejs:repeating_command_block',
         'kubejs:final_axe'
     ]).keepHeldItem().id('finality:uncolored_star')
+    event.recipes.createMechanicalCrafting('kubejs:color_uncolored', [
+        '#AAAAAA'
+    ], {
+        '#': 'kubejs:octothorpe',
+        'A': 'kubejs:letter_a'
+    }).id('finality:mechanical_crafting/uncolored')
+    event.recipes.createMechanicalCrafting('kubejs:color_white', [
+        '#FFFFFF'
+    ], {
+        '#': 'kubejs:octothorpe',
+        'F': 'kubejs:letter_f'
+    }).id('finality:mechanical_crafting/color_white')
     HEXCODES(event, 'red', '#FF0000')
     HEXCODES(event, 'green', '#00FF00')
     HEXCODES(event, 'blue', '#0000FF')
     HEXCODES(event, 'magenta', '#FF00FF')
     HEXCODES(event, 'yellow', '#00FFFF')
     HEXCODES(event, 'cyan', '#00FFFF')
-    COLOR_MIXING(event, 'magenta', 'kubejs:color_red', 'kubejs:color_blue')
-    COLOR_MIXING(event, 'yellow', 'kubejs:color_red', 'kubejs:color_green')
-    COLOR_MIXING(event, 'cyan', 'kubejs:color_green', 'kubejs:color_blue')
+    COLOR_MIXING(event, 'magenta', 'red', 'blue')
+    COLOR_MIXING(event, 'yellow', 'red', 'green')
+    COLOR_MIXING(event, 'cyan', 'green', 'blue')
     Object.keys(LETTER_BINARY_CODES).forEach(insert => {
         BINARYCONVERSION(event, `${insert}`, `${LETTER_BINARY_CODES[insert]}`)
     })
@@ -608,20 +633,64 @@ ServerEvents.recipes(event => {
     })
     BINARYCONVERSION(event, 'octothorpe', '00100011')
     Object.keys(global.SHAPES).forEach(shape => {
+        VALID_COLOR_MIX.forEach(color => {
+            event.recipes.createMixing(`kubejs:${color}_${shape}`, [
+                `kubejs:uncolored_${shape}`,
+                `kubejs:color_${color}`,
+                Fluid.of('create:honey', 250)
+            ]).heated().id(`finality:uncolored_to_${color}_${shape}_mixing`)
+            event.recipes.createMixing(`kubejs:uncolored_${shape}`, [
+                `kubejs:${color}_${shape}`,
+                'supplementaries:soap',
+                Fluid.of('minecraft:water', 500)
+            ]).id(`finality:${color}_${shape}_washing`)
+        })
         Object.keys(global.RGBWCMY).forEach(color => {
             event.recipes.createCutting([
                 `kubejs:${color}_left_half_${shape}`,
-                `kubejs:${color}_right_half_${shape}`],
-                `kubejs:${color}_${shape}`
-            ).id(`finality:${color}_${shape}_halving`)
+                `kubejs:${color}_right_half_${shape}`
+            ], `kubejs:${color}_${shape}`).id(`finality:${color}_${shape}_halving`)
+            event.recipes.createCutting(`2x kubejs:${color}_${shape}_corner`, `kubejs:${color}_left_half_${shape}`).id(`finality:${color}_${shape}_left_half_halving`)
+            event.recipes.createCutting(`2x kubejs:${color}_${shape}_corner`, `kubejs:${color}_right_half_${shape}`).id(`finality:${color}_${shape}_right_half_halving`)
         })
     })
-    Object.keys(global.SHAPES).forEach(shape => {
-        Object.keys(global.RGBWCMY).forEach(color => {
-            event.recipes.createCutting(`4x kubejs:${color}_${shape}_corner`, `kubejs:${color}_left_half_${shape}`).id(`finality:${color}_${shape}_left_half_halving`)
-            event.recipes.createCutting(`4x kubejs:${color}_${shape}_corner`, `kubejs:${color}_right_half_${shape}`).id(`finality:${color}_${shape}_right_half_halving`)
-        })
-    })
+    event.recipes.createMechanicalCrafting('kubejs:blueprint_shape_base', [
+        'RC',
+        'CC'
+    ], {
+        R: 'kubejs:blue_rectangle_corner',
+        C: 'kubejs:blue_circle_corner'
+    }).id('finality:blueprint_shape_base')
+    event.recipes.createDeploying('kubejs:blueprint_shape', ['kubejs:blueprint_shape_base', 'kubejs:white_circle']).id('finality:blueprint_shape')
+    event.recipes.createMechanicalCrafting('kubejs:cpu_foundation', [
+        ' R',
+        'R '
+    ], {
+        R: 'kubejs:green_rectangle_corner'
+    }).id('finality:cpu_foundation')
+    event.recipes.createSequencedAssembly([
+        Item.of('kubejs:cpu_substrate_shape').withChance(240.0),
+        Item.of('kubejs:green_rectangle_corner', 2).withChance(70.0),
+        Item.of('kubejs:white_rectangle_corner', 2).withChance(70.0),
+        Item.of('kubejs:white_circle_corner', 2).withChance(50.0)
+    ], 'kubejs:cpu_foundation', [
+        event.recipes.createDeploying('kubejs:incomplete_cpu_substrate_shape', ['kubejs:incomplete_cpu_substrate_shape', 'kubejs:white_circle_corner']),
+        event.recipes.createDeploying('kubejs:incomplete_cpu_substrate_shape', ['kubejs:incomplete_cpu_substrate_shape', 'kubejs:white_circle_corner']),
+    ]).transitionalItem('kubejs:incomplete_cpu_substrate_shape').loops(1).id('finality:cpu_substrate_creation')
+    event.recipes.createSequencedAssembly([
+        'kubejs:cpu_shape'
+    ], 'kubejs:cpu_substrate_shape', [
+        event.recipes.createDeploying('kubejs:incomplete_cpu_shape', ['kubejs:incomplete_cpu_shape', 'kubejs:white_rectangle_corner']),
+        event.recipes.createDeploying('kubejs:incomplete_cpu_shape', ['kubejs:incomplete_cpu_shape', 'kubejs:green_rectangle_corner'])
+    ]).transitionalItem('kubejs:incomplete_cpu_shape').loops(2).id('finality:cpu_shape')
+    event.recipes.createMechanicalCrafting('kubejs:emitter_shape_base', [
+        ' C',
+        'CR'
+    ], {
+        C: 'kubejs:magenta_circle_corner',
+        R: 'kubejs:magenta_rectangle_corner'
+    }).id('finality:emitter_shape_base')
+    event.recipes.createDeploying('kubejs:emitter_shape', ['kubejs:emitter_shape_base', 'kubejs:white_star']).id('finality:emitter_shape')
     if (Platform.isLoaded('quark')) {
         event.shaped('minecraft:hopper', [
             'ILI',
