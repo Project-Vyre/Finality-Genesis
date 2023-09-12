@@ -101,6 +101,7 @@ let CAdditionsItems = [
 
 JEIEvents.addItems(event => {
     event.add([
+        'minecraft:dragon_egg',
         'minecraft:structure_void',
         'create:chromatic_compound',
         'create:refined_radiance',
@@ -137,6 +138,7 @@ JEIEvents.hideFluids(event => {
 JEIEvents.information(event => {
     event.addItem('minecraft:campfire', ['Campfires now regenerate your health. <wave>Cozy!</wave>'])
     event.addItem('minecraft:soul_campfire', ['Campfires now regenerate your health. <wave>Cozy!</wave>'])
+    event.addItem('minecraft:dragon_egg', ['Can be used to make Dragon Breath.'])
     event.addItem('tempad:tempad', ['Allows you to teleport to points you placed throughout the world but has a 3 minute cooldown.'])
     event.addItem('tempad:he_who_remains_tempad', ['Can only be acquired from the End, somewhere.'])
     event.addItem('mysticalagriculture:fertilized_essence', ['Can only be acquired from Mystical Agriculture crops upon harvesting.', 'Not a guaranteed drop!'])
