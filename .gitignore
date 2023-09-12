@@ -29,20 +29,22 @@ modernfix/
 jei/world/local/
 debug/
 
-
 # Ignore files
 .curseclient
 .qmenu_opened.marker
 *.log
+*.zip
 imgui.ini
 knownkeys.txt
 minecraftinstance.json
 patchouli_data.json
 rhino.local.properties
-*.zip
-
+config/spark/activity.json
 usercache.json
 usernamecache.json
+bookmark.ini
+config/roughlyenoughitems/hints.json
+config/jei/world/server/*
 
 # Ignore dat
 enigmatic_persistence.dat
@@ -50,7 +52,4 @@ servers.dat
 *.dat
 *.dat_old
 servers.essential.dat
-bookmark.ini
-config/roughlyenoughitems/hints.json
-config/jei/world/server/*
 o_prof
