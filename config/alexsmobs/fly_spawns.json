@@ -17,59 +17,49 @@
         "value": "minecraft:is_ocean"
       },
       {
-        "type": "DIMENSION",
+        "type": "REGISTRY_NAME",
         "negate": true,
-        "value": "ad_astra:earth_orbit"
+        "value": "ad_astra:lunar_wastelands"
       },
       {
-        "type": "DIMENSION",
+        "type": "REGISTRY_NAME",
         "negate": true,
-        "value": "ad_astra:glacio"
+        "value": "ad_astra:glacio_ice_peaks"
       },
       {
-        "type": "DIMENSION",
+        "type": "REGISTRY_NAME",
         "negate": true,
-        "value": "ad_astra:glacio_orbit"
+        "value": "ad_astra:infernal_venus_barrens"
       },
       {
-        "type": "DIMENSION",
+        "type": "REGISTRY_NAME",
         "negate": true,
-        "value": "ad_astra:mars"
+        "value": "ad_astra:martian_canyon_creek"
       },
       {
-        "type": "DIMENSION",
+        "type": "REGISTRY_NAME",
         "negate": true,
-        "value": "ad_astra:mars_orbit"
+        "value": "ad_astra:martian_polar_caps"
       },
       {
-        "type": "DIMENSION",
+        "type": "REGISTRY_NAME",
         "negate": true,
-        "value": "ad_astra:mercury"
+        "value": "ad_astra:martian_wastelands"
       },
       {
-        "type": "DIMENSION",
+        "type": "REGISTRY_NAME",
         "negate": true,
-        "value": "ad_astra:mercury_orbit"
+        "value": "ad_astra:mercury_deltas"
       },
       {
-        "type": "DIMENSION",
+        "type": "REGISTRY_NAME",
         "negate": true,
-        "value": "ad_astra:moon"
+        "value": "ad_astra:orbit"
       },
       {
-        "type": "DIMENSION",
+        "type": "REGISTRY_NAME",
         "negate": true,
-        "value": "ad_astra:moon_orbit"
-      },
-      {
-        "type": "DIMENSION",
-        "negate": true,
-        "value": "ad_astra:venus"
-      },
-      {
-        "type": "DIMENSION",
-        "negate": true,
-        "value": "ad_astra:venus_orbit"
+        "value": "ad_astra:venus_wastelands"
       }
     ]
   ]
