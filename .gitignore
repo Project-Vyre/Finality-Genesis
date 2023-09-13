@@ -46,11 +46,10 @@ usernamecache.json
 bookmark.ini
 config/roughlyenoughitems/hints.json
 config/jei/world/server/*
-
-# Ignore dat
 enigmatic_persistence.dat
 servers.dat
 *.dat
 *.dat_old
 servers.essential.dat
 o_prof
+config/voicechat/username-cache.json
