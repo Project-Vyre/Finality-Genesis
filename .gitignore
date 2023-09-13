@@ -9,6 +9,7 @@ _site/
 backups/
 crash-reports/
 downloads/
+emojiful/
 essential/
 fancymenu_data/
 fancymenu_instance_data/
@@ -53,3 +54,4 @@ servers.dat
 servers.essential.dat
 o_prof
 config/voicechat/username-cache.json
+blacksmith.jar
