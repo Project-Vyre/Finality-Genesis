@@ -72,7 +72,6 @@ let SAND_COMPACTING_INCEPTION = {
 let RED_SAND_COMPACTING_INCEPTION = {
     red_sand: 'Red Sand'
 }
-let IRON_COMPACTING
 let PRIMORDIAL_MECHANISMS = {
     terra_mechanism: 'Terra Mechanism', // nature related, ingredient for entropy mechanism
     gluttony_mechanism: 'Gluttony Mechanism', // delicacy related, ingredient for entropy mechanism
@@ -563,6 +562,7 @@ ItemEvents.toolTierRegistry(event => {
         tier.enchantmentValue = 30
     })
 })
+
 ItemEvents.armorTierRegistry(event => {
     event.add('final_armor', tier => {
         tier.durabilityMultiplier = -1
@@ -573,6 +573,7 @@ ItemEvents.armorTierRegistry(event => {
         tier.knockbackResistance = 5.0
     })
 })
+
 ItemEvents.modification(event => {
     TOOLS.forEach(tool => event.modify(`minecraft:wooden_${tool}`, item => {
         item.maxDamage = 16
@@ -895,6 +896,9 @@ ClientEvents.init(event => {
         $TooltipModifier.REGISTRY.register('cloudstorage:balloon_bit', new $ItemDescription('cloudstorage:balloon_bit', $Palette.STANDARD_CREATE))
         $TooltipModifier.REGISTRY.register('cloudstorage:cloud_chest', new $ItemDescription('cloudstorage:cloud_chest', $Palette.STANDARD_CREATE))
         $TooltipModifier.REGISTRY.register('cloudstorage:static_cloud_chest', new $ItemDescription('cloudstorage:static_cloud_chest', $Palette.BLUE))
+    }
+    if (Platform.isLoaded('lilwings')) {
+        $TooltipModifier.REGISTRY.register('minecraft:glass_bottle', new $ItemDescription('minecraft:glass_bottle', $Palette.STANDARD_CREATE))
     }
     if (Platform.isLoaded('quark')) {
         $TooltipModifier.REGISTRY.register('quark:abacus', new $ItemDescription('quark:abacus', $Palette.STANDARD_CREATE))
