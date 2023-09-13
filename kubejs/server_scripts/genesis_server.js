@@ -46,7 +46,24 @@ let STORAGE_INCEPTION = [
     'red_sand'
 ]
 let CMD = ['command_block', 'chain_command_block', 'repeating_command_block']
-let COLORID = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
+const COLOR = [
+    'white',
+    'orange',
+    'magenta',
+    'light_blue',
+    'lime',
+    'pink',
+    'purple',
+    'light_gray',
+    'gray',
+    'cyan',
+    'brown',
+    'green',
+    'blue',
+    'red',
+    'black',
+    'yellow'
+]
 let VALID_COLOR_MIX = [
     'red',
     'green',
@@ -94,6 +111,7 @@ let INTEGER_BINARY = {
     eight: '00111000',
     nine: '00111001'
 }
+
 function BINARYCONVERSION(event, output, arrangement) {
     event.recipes.createMechanicalCrafting(`kubejs:${output}`, [
         arrangement
@@ -102,6 +120,7 @@ function BINARYCONVERSION(event, output, arrangement) {
         '1': 'kubejs:one'
     }).id(`finality:mechanical_crafting/${output}`)
 }
+
 function HEXCODES(event, out, arrangement) {
     event.recipes.createMechanicalCrafting(`kubejs:color_${out}`, [
         arrangement
@@ -111,9 +130,11 @@ function HEXCODES(event, out, arrangement) {
         'F': 'kubejs:letter_f'
     }).id(`finality:mechanical_crafting/color_${out}`)
 }
+
 function COLOR_MIXING(event, output_color, color_one, color_two) {
     event.recipes.createMixing(`kubejs:color_${output_color}`, [`kubejs:color_${color_one}`, `kubejs:color_${color_two}`]).id(`finality:mixing/color_${output_color}`)
 }
+
 ServerEvents.recipes(event => {
     FOUNDATION_NONMETAL.forEach(insert => { // why can you even smelt and blast these ores? YOU LITERALLY LOSE SO MUCH!
         event.remove([
@@ -133,7 +154,9 @@ ServerEvents.recipes(event => {
     MODRECIPES.forEach(insert => {
         event.remove({ id: `${insert}` })
     })
-    event.shapeless(Item.of('patchouli:guide_book', '{"patchouli:book":"patchouli:tome_of_finality"}'), ['#forge:rods/wooden', '#forge:rods/wooden']).id('finality:documentation_book')
+    event.shapeless(Item.of('patchouli:guide_book', '{"patchouli:book":"patchouli:tome_of_finality"}'), [
+        '#forge:rods/wooden', '#forge:rods/wooden'
+    ]).id('finality:documentation_book')
     event.shaped('minecraft:bucket', [
         'I I',
         ' I '
@@ -413,6 +436,7 @@ ServerEvents.recipes(event => {
         'minecraft:cobbled_deepslate',
         'minecraft:bone_meal'
     ]).heated().id('finality:renew_calcite')
+    event.recipes.createCompacting('minecraft:ice', '9x minecraft:snow_block').id('finality:snow_compacting')
     // milling
     // crushing
     event.remove({ id: 'create:crushing/netherrack' })
@@ -429,7 +453,7 @@ ServerEvents.recipes(event => {
     event.recipes.createCrushing([
         'create:cinder_flour',
         Item.of('create:cinder_flour').withChance(0.50),
-        Item.of('minecraft:netherite_scrap').withChance(0.002)
+        Item.of('minecraft:netherite_scrap').withChance(0.0002)
     ], 'minecraft:netherrack').processingTime(250).id('finality:netherrack_crushing')
     event.recipes.createCrushing([
         Item.of('minecraft:gold_nugget', 5).withChance(0.10),
@@ -845,11 +869,23 @@ LootJS.modifiers((event) => {
         event.addBlockLootModifier(`minecraft:${metal}_ore`).randomChance(0.2).addLoot(`minecraft:raw_${metal}`)
         event.addBlockLootModifier(`minecraft:deepslate_${metal}_ore`).randomChance(0.3).addLoot(`minecraft:raw_${metal}`)
     })
-    event.addBlockLootModifier('create:zinc_ore').randomChance(0.2).addLoot('create:raw_zinc')
-    event.addBlockLootModifier('create:deepslate_zinc_ore').randomChance(0.3).addLoot('create:raw_zinc')
+    event.addBlockLootModifier('create:zinc_ore')
+        .randomChance(0.2).addLoot('create:raw_zinc')
+    event.addBlockLootModifier('create:deepslate_zinc_ore')
+        .randomChance(0.3).addLoot('create:raw_zinc')
     event.addLootTypeModifier(LootType.CHEST).removeLoot('minecraft:bucket')
-    event.addEntityLootModifier('minecraft:creeper').randomChance(0.1).addLoot('create:zinc_nugget')
-    event.addEntityLootModifier('minecraft:witch').randomChance(0.1).addLoot('minecraft:lapis_lazuli')
+    event.addEntityLootModifier('minecraft:creeper')
+        .randomChance(0.1).addLoot('create:zinc_nugget')
+    event.addEntityLootModifier('minecraft:witch')
+        .randomChance(0.1).addLoot('minecraft:lapis_lazuli')
+    if (Platform.isLoaded('irons_spellbooks')) {
+        event.addEntityLootModifier('minecraft:witch')
+            .randomChance(0.1).addLoot('irons_spellbooks:common_ink')
+            .randomChance(0.07).addLoot('irons_spellbooks:uncommon_ink')
+            .randomChance(0.05).addLoot('irons_spellbooks:rare_ink')
+            .randomChance(0.03).addLoot('irons_spellbooks:epic_ink')
+            .randomChance(0.01).addLoot('irons_spellbooks:legendary_ink')
+    }
 });
 
 LevelEvents.afterExplosion(event => {
