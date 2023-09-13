@@ -1,7 +1,6 @@
 // requires: extendedcrafting
 // requires: create
 
-let DYE = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 let SAND = ['sand', 'red_sand']
 let VANILLAMATS = ['amethyst', 'copper', 'iron', 'redstone', 'gold', 'diamond', 'emerald', 'quartz', 'netherite', 'honey']
 let VANILLANOTSTANDARD = ['ender_pearl', 'gunpowder', 'sea_lantern', 'glowstone']
@@ -251,7 +250,7 @@ ServerEvents.recipes(event => {
         event.recipes.createPressing('kubejs:incomplete_end_crystal_singularity', 'kubejs:incomplete_end_crystal_singularity')
     ]).transitionalItem('kubejs:incomplete_end_crystal_singularity').loops(9).id('kubejs:end_crystal_singularity')
     // concrete singularities
-    DYE.forEach(color => event.recipes.createSequencedAssembly([
+    COLOR.forEach(color => event.recipes.createSequencedAssembly([
         Item.of('extendedcrafting:singularity', `{Id:"extendedcrafting:concrete_${color}"}`)
     ], `minecraft:${color}_concrete`, [
         event.recipes.createDeploying(`kubejs:incomplete_concrete_${color}_singularity`, [`kubejs:incomplete_concrete_${color}_singularity`, `minecraft:${color}_concrete_powder`]),

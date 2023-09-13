@@ -2,11 +2,19 @@
 // requires: create
 
 ServerEvents.recipes(event => {
-    event.remove({ id: 'constructionwand:infinity_wand' })
-    event.remove({ id: 'constructionwand:diamond_wand' })
-    event.remove({ id: 'constructionwand:iron_wand' })
-    event.recipes.createFilling('kubejs:construction_core_iron', ['minecraft:iron_ingot', Fluid.of('kubejs:condensed_universal_entropy', 250)]).id('finality:construction_iron_activation')
-    event.recipes.createFilling('kubejs:construction_core_diamond', ['minecraft:diamond', Fluid.of('kubejs:condensed_universal_entropy', 250)]).id('finality:construction_diamond_activation')
+    event.remove([
+        { id: 'constructionwand:infinity_wand' },
+        { id: 'constructionwand:diamond_wand' },
+        { id: 'constructionwand:iron_wand' }
+    ])
+    event.recipes.createFilling('kubejs:construction_core_iron', [
+        'minecraft:iron_ingot',
+        Fluid.of('kubejs:condensed_universal_entropy', 250)
+    ]).id('finality:construction_iron_activation')
+    event.recipes.createFilling('kubejs:construction_core_diamond', [
+        'minecraft:diamond',
+        Fluid.of('kubejs:condensed_universal_entropy', 250)
+    ]).id('finality:construction_diamond_activation')
     event.shaped('constructionwand:infinity_wand', [
         '  C',
         ' S ',
