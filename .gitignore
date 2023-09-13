@@ -28,6 +28,7 @@ XaeroWorldMap/
 modernfix/
 jei/world/local/
 debug/
+config/WildfireGender/*
 
 # Ignore files
 .curseclient
