@@ -1,0 +1,14 @@
+{
+  "lang_key": "architect",
+  "requisites": [
+    "create:extendo_grip"
+  ],
+  "icon": {
+    "type": "item",
+    "value": {
+      "stack": "create:wand_of_symmetry"
+    }
+  },
+  "invisible": false,
+  "type": "seals:seal"
+}

@@ -1,0 +1,18 @@
+{
+  "lang_key": "engineer",
+  "requisites": [
+    "create:andesite_alloy",
+    "create:compacting",
+    "create:potato_cannon",
+    "create:wrench_goggles",
+    "create:belt_funnel_kiss"
+  ],
+  "icon": {
+    "type": "item",
+    "value": {
+      "stack": "create:wrench"
+    }
+  },
+  "invisible": false,
+  "type": "seals:seal"
+}
