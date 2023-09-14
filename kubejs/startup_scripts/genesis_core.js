@@ -753,6 +753,7 @@ let CREATE_STANDARD_PALETTE = [
     'minecraft:dried_kelp_block',
     'minecraft:coal_block',
     'minecraft:diamond_block',
+    'create:item_vault',
     'extendedcrafting:handheld_table',
     'farmersdelight:skillet',
     'farmersdelight:stove',
