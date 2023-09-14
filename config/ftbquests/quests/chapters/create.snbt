@@ -3863,7 +3863,7 @@
 				"1406D000426425FC"
 			]
 			hide: true
-			hide_dependency_lines: false
+			hide_dependent_lines: true
 			id: "1BC189AE6AA14C57"
 			rewards: [
 				{
@@ -4119,7 +4119,7 @@
 			dependencies: ["1BC189AE6AA14C57"]
 			description: ["It might be a ticking time bomb, maaaaaybe."]
 			hide: true
-			hide_dependency_lines: true
+			hide_dependent_lines: true
 			id: "38298E81AD5B2875"
 			subtitle: "Totally nothing wrong with it!"
 			tasks: [{

@@ -29,13 +29,15 @@
 				""
 				"The rest of the chapters can be accessed after you click the checkmark here and move your cursor to the left edge of your screen."
 				""
-				"Also, take the time now to SET YOUR KEYBINDS, only if you want to."
-				""
 				"If you are playing with friends, please do not forget to make a party with FTB Teams! Press E to open your inventory and look for three person figures on the top left corner."
 				""
-				"This modpack is not complete, but the end goal is reachable."
+				"This modpack is not complete and development is ongoing, but the end goal is reachable."
 				""
-				"If you wish to disable the immersion that &l&eReal Camera&r provides, press &6F6&r."
+				"If you wish to disable the immersion and first person model that &l&eReal Camera&r provides, press &6F6&r."
+				""
+				"If you wish to configure your character's gender, press &d&lG&r."
+				""
+				"Also, take the time now to SET YOUR KEYBINDS and adjust volume levels if needed."
 				""
 				"Tips for using &l&7Roughly Enough Items&r or &l&2JEI&r are on the next few pages. &eLootr&r chest info is on the following page. Just don't say I didn't warn you if your Lootr chest blows up."
 				"{@pagebreak}"
@@ -852,7 +854,7 @@
 				}
 				type: "item"
 			}]
-			title: "The Vanilla Endgoal: Diamonds"
+			title: "Diamond Pickaxe Acquired!"
 			x: 3.0d
 			y: 1.5d
 		}
