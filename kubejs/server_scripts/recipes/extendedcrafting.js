@@ -74,6 +74,23 @@ ServerEvents.recipes(event => {
         I: 'extendedcrafting:ender_ingot',
         C: 'extendedcrafting:crafting_core'
     }).id('extendedcrafting:ender_crafter')
+    // shimmer usage
+    event.recipes.createMixing(Fluid.of('kubejs:shimmer', 250), [
+        Fluid.of('kubejs:condensed_universal_entropy', 500),
+        Fluid.of('minecraft:water', 500),
+        'minecraft:glowstone_dust',
+        'minecraft:redstone',
+        'create:polished_rose_quartz'
+    ]).superheated().id('finality:mixing/shimmer_fluid_creation')
+    event.recipes.createCompacting([
+        'create:cinder_flour',
+        Item.of('create:cinder_flour').withChance(0.50),
+        Item.of('create:experience_nugget').withChance(0.25),
+        Item.of('minecraft:netherite_scrap').withChance(0.02)
+    ], [
+        Fluid.of('kubejs:shimmer', 750),
+        'minecraft:netherrack',
+    ]).superheated().id('finality:compacting/netherite_scrap_renewal')
     // singularity creation step 1
     event.recipes.createMechanicalCrafting('kubejs:dormant_singularity_core', [
         ' OOOOO ',

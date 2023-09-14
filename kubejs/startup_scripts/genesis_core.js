@@ -339,6 +339,18 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .maxStackSize(64)
         .fireResistant(true)
         .glow(true)
+    event.create('kubejs:slash')
+        .displayName('<rainb>Slash</rainb>')
+        .texture('kubejs:item/special_characters/slash')
+        .maxStackSize(64)
+        .fireResistant(true)
+        .glow(true)
+    event.create('kubejs:at_sign')
+        .displayName('<rainb>At Sign</rainb>')
+        .texture('kubejs:item/special_characters/at_sign')
+        .maxStackSize(64)
+        .fireResistant(true)
+        .glow(true)
     Object.keys(global.RGBWCMY).forEach(item => {
         RGBWCMYK_OBJECTS(event, item, global.RGBWCMY[item])
     })
@@ -544,6 +556,9 @@ StartupEvents.registry('fluid', event => {
     event.create('kubejs:mushroom_stew')
         .thinTexture(0xCA9777)
         .bucketColor(0xCA9777)
+    event.create('kubejs:shimmer')
+        .thinTexture(0xD6CCFF)
+        .bucketColor(0xD6CCFF)
 })
 // tiers
 ItemEvents.toolTierRegistry(event => {
@@ -745,83 +760,7 @@ final_katana
 crystal_lance
 */
 
-let CREATE_STANDARD_PALETTE = [
-    'minecraft:wooden_pickaxe',
-    'minecraft:stone_pickaxe',
-    'minecraft:iron_pickaxe',
-    'minecraft:fletching_table',
-    'minecraft:dried_kelp_block',
-    'minecraft:coal_block',
-    'minecraft:diamond_block',
-    'create:item_vault',
-    'extendedcrafting:handheld_table',
-    'farmersdelight:skillet',
-    'farmersdelight:stove',
-    'chalk:chalk_box'
-]
-let BLUE_PALETTE = [
-    'minecraft:soul_campfire',
-    'minecraft:beacon',
-    'minecraft:lapis_lazuli'
-]
-let GREEN_PALETTE = [
-    'minecraft:bone_meal'
-]
-let YELLOW_PALETTE = [
-    'minecraft:campfire',
-    'cataclysm:infernal_forge',
-    'cataclysm:monstrous_helm',
-    'cataclysm:burning_ashes',
-    'cataclysm:the_incinerator',
-    'cataclysm:ignitium_helmet',
-    'cataclysm:ignitium_chestplate',
-    'cataclysm:ignitium_leggings',
-    'cataclysm:ignitium_boots',
-    'cataclysm:bulwark_of_the_flame'
-]
-let RED_PALETTE = [
-    'kubejs:removed_item',
-    'minecraft:nether_star',
-    'minecraft:netherrack',
-    'cataclysm:wither_assault_shoulder_weapon'
-]
-let PURPLE_PALETTE = [
-    'minecraft:dragon_egg',
-    'eccentrictome:tome',
-    'kubejs:denied_result',
-    'kubejs:command_block',
-    'kubejs:chain_command_block',
-    'kubejs:repeating_command_block',
-    'kubejs:high_entropy_alloy',
-    'kubejs:final_pickaxe',
-    'kubejs:final_axe',
-    'kubejs:final_shovel',
-    'kubejs:final_hoe',
-    'kubejs:final_sword',
-    'kubejs:final_lance',
-    'kubejs:final_helmet',
-    'kubejs:final_chestplate',
-    'kubejs:final_leggings',
-    'kubejs:final_boots',
-    'cataclysm:gauntlet_of_guard',
-    'cataclysm:gauntlet_of_bulwark',
-    'cataclysm:void_scatter_arrow',
-    'cataclysm:void_core',
-    'cataclysm:void_forge',
-    'cataclysm:void_assault_shoulder_weapon',
-    'cataclysm:abyssal_sacrifice',
-    'cataclysm:tidal_claws',
-    'cataclysm:abyssal_egg'
-]
-let GRAY_PALETTE = [
-    'minecraft:rotten_flesh',
-    'minecraft:pointed_dripstone',
-    'minecraft:andesite',
-    'minecraft:cobblestone',
-    'minecraft:cobbled_deepslate',
-    'minecraft:gravel',
-    'kubejs:deepslate_shard',
-]
+
 
 /*
 STANDARD_CREATE
@@ -851,65 +790,239 @@ GRAY_AND_RED
 }
 */
 
+let STANDARD_PALETTE_REGISTRY = [
+    'minecraft:wooden_pickaxe',
+    'minecraft:stone_pickaxe',
+    'minecraft:iron_pickaxe',
+    'minecraft:fletching_table',
+    'minecraft:dried_kelp_block',
+    'minecraft:coal_block',
+    'minecraft:diamond_block',
+    'create:item_vault',
+    'extendedcrafting:handheld_table',
+    'farmersdelight:skillet',
+    'farmersdelight:stove',
+    'chalk:chalk_box'
+]
+let BLUE_REGISTRY = [
+    'minecraft:soul_campfire',
+    'minecraft:beacon',
+    'minecraft:lapis_lazuli'
+]
+let GREEN_REGISTRY = [
+    'minecraft:bone_meal'
+]
+let YELLOW_REGISTRY = [
+    'minecraft:campfire',
+    'cataclysm:infernal_forge',
+    'cataclysm:monstrous_helm',
+    'cataclysm:burning_ashes',
+    'cataclysm:the_incinerator',
+    'cataclysm:ignitium_helmet',
+    'cataclysm:ignitium_chestplate',
+    'cataclysm:ignitium_leggings',
+    'cataclysm:ignitium_boots',
+    'cataclysm:bulwark_of_the_flame'
+]
+let RED_REGISTRY = [
+    'kubejs:removed_item',
+    'minecraft:nether_star',
+    'minecraft:netherrack',
+    'cataclysm:wither_assault_shoulder_weapon'
+]
+let PURPLE_REGISTRY = [
+    'minecraft:dragon_egg',
+    'eccentrictome:tome',
+    'kubejs:denied_result',
+    'kubejs:command_block',
+    'kubejs:chain_command_block',
+    'kubejs:repeating_command_block',
+    'kubejs:high_entropy_alloy',
+    'kubejs:final_pickaxe',
+    'kubejs:final_axe',
+    'kubejs:final_shovel',
+    'kubejs:final_hoe',
+    'kubejs:final_sword',
+    'kubejs:final_lance',
+    'kubejs:final_helmet',
+    'kubejs:final_chestplate',
+    'kubejs:final_leggings',
+    'kubejs:final_boots',
+    'cataclysm:gauntlet_of_guard',
+    'cataclysm:gauntlet_of_bulwark',
+    'cataclysm:void_scatter_arrow',
+    'cataclysm:void_core',
+    'cataclysm:void_forge',
+    'cataclysm:void_assault_shoulder_weapon',
+    'cataclysm:abyssal_sacrifice',
+    'cataclysm:tidal_claws',
+    'cataclysm:abyssal_egg'
+]
+let GRAY_REGISTRY = [
+    'minecraft:rotten_flesh',
+    'minecraft:pointed_dripstone',
+    'minecraft:andesite',
+    'minecraft:cobblestone',
+    'minecraft:cobbled_deepslate',
+    'minecraft:gravel',
+    'kubejs:deepslate_shard',
+]
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function STANDARD_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.STANDARD_CREATE))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function BLUE_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.BLUE))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function GREEN_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GREEN))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function YELLOW_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.YELLOW))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function RED_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.RED))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function PURPLE_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.PURPLE))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function GRAY_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function MONO_GRAY_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.ALL_GRAY))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function GRAY_BLUE_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_BLUE))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function GRAY_WHITE_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_WHITE))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function GRAY_GOLD_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_GOLD))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function GRAY_RED_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_RED))
+}
+
 const $ItemDescription = Java.loadClass('com.simibubi.create.foundation.item.ItemDescription$Modifier')
 const $TooltipModifier = Java.loadClass('com.simibubi.create.foundation.item.TooltipModifier')
 const $Palette = Java.loadClass('com.simibubi.create.foundation.item.TooltipHelper$Palette')
 
 ClientEvents.init(event => {
-    CREATE_STANDARD_PALETTE.forEach(itemID => {
-        $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.STANDARD_CREATE))
+    STANDARD_PALETTE_REGISTRY.forEach(item => {
+        STANDARD_PALETTE(item)
     })
-    BLUE_PALETTE.forEach(itemID => {
-        $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.BLUE))
+    BLUE_REGISTRY.forEach(item => {
+        BLUE_PALETTE(item)
     })
-    GREEN_PALETTE.forEach(itemID => {
-        $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GREEN))
+    GREEN_REGISTRY.forEach(item => {
+        GREEN_PALETTE(item)
     })
-    YELLOW_PALETTE.forEach(itemID => {
-        $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.YELLOW))
+    YELLOW_REGISTRY.forEach(item => {
+        YELLOW_PALETTE(item)
     })
-    RED_PALETTE.forEach(itemID => {
-        $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.RED))
+    RED_REGISTRY.forEach(item => {
+        RED_PALETTE(item)
     })
-    PURPLE_PALETTE.forEach(itemID => {
-        $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.PURPLE))
+    PURPLE_REGISTRY.forEach(item => {
+        PURPLE_PALETTE(item)
     })
-    GRAY_PALETTE.forEach(itemID => {
-        $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY))
+    GRAY_REGISTRY.forEach(item => {
+        GRAY_PALETTE(item)
     })
     if (Platform.isLoaded('chalk')) {
         Object.keys(DYE).forEach(itemID => {
-            $TooltipModifier.REGISTRY.register(`chalk:${itemID}_chalk`, new $ItemDescription(`chalk:${itemID}_chalk`, $Palette.GRAY))
+            GRAY_PALETTE(`chalk:${itemID}`)
         })
     }
     if (Platform.isLoaded('alexsmobs')) {
-        $TooltipModifier.REGISTRY.register('minecraft:pumpkin', new $ItemDescription('minecraft:pumpkin', $Palette.YELLOW))
+        YELLOW_PALETTE('minecraft:pumpkin')
     }
     if (Platform.isLoaded('autumnity')) {
-        $TooltipModifier.REGISTRY.register('autumnity:sappy_maple_log', new $ItemDescription('autumnity:sappy_maple_log', $Palette.YELLOW))
-        $TooltipModifier.REGISTRY.register('autumnity:sappy_maple_wood', new $ItemDescription('autumnity:sappy_maple_wood', $Palette.YELLOW))
-        $TooltipModifier.REGISTRY.register('autumnity:foul_berries', new $ItemDescription('autumnity:foul_berries', $Palette.YELLOW))
+        YELLOW_PALETTE('autumnity:sappy_maple_log')
+        YELLOW_PALETTE('autumnity:sappy_maple_wood')
+        YELLOW_PALETTE('autumnity:foul_berries')
     }
     if (Platform.isLoaded('backpacked')) {
-        $TooltipModifier.REGISTRY.register('backpacked:backpack', new $ItemDescription('backpacked:backpack', $Palette.STANDARD_CREATE))
+        STANDARD_PALETTE('backpacked:backpack')
     }
     if (Platform.isLoaded('cloudstorage')) {
-        $TooltipModifier.REGISTRY.register('cloudstorage:balloon_bit', new $ItemDescription('cloudstorage:balloon_bit', $Palette.STANDARD_CREATE))
-        $TooltipModifier.REGISTRY.register('cloudstorage:cloud_chest', new $ItemDescription('cloudstorage:cloud_chest', $Palette.STANDARD_CREATE))
-        $TooltipModifier.REGISTRY.register('cloudstorage:static_cloud_chest', new $ItemDescription('cloudstorage:static_cloud_chest', $Palette.BLUE))
+        STANDARD_PALETTE('cloudstorage:balloon_bit')
+        STANDARD_PALETTE('cloudstorage:clooud_chest')
+        BLUE_PALETTE('cloudstorage:static_cloud_chest')
     }
     if (Platform.isLoaded('lilwings')) {
-        $TooltipModifier.REGISTRY.register('minecraft:glass_bottle', new $ItemDescription('minecraft:glass_bottle', $Palette.STANDARD_CREATE))
+        STANDARD_PALETTE('minecraft:glass_bottle')
     }
     if (Platform.isLoaded('quark')) {
-        $TooltipModifier.REGISTRY.register('quark:abacus', new $ItemDescription('quark:abacus', $Palette.STANDARD_CREATE))
+        STANDARD_PALETTE('quark:abacus')
     }
     if (Platform.isLoaded('salt')) {
-        $TooltipModifier.REGISTRY.register('salt:salt', new $ItemDescription('salt:salt', $Palette.STANDARD_CREATE))
+        STANDARD_PALETTE('salt:salt')
     }
     if (Platform.isLoaded('tempad')) {
-        $TooltipModifier.REGISTRY.register('tempad:tempad', new $ItemDescription('tempad:tempad', $Palette.PURPLE))
-        $TooltipModifier.REGISTRY.register('tempad:he_who_remains_tempad', new $ItemDescription('tempad:he_who_remains_tempad', $Palette.PURPLE))
+        PURPLE_PALETTE('tempad:tempad')
+        PURPLE_PALETTE('tempad:he_who_remains_tempad')
     }
 })
 

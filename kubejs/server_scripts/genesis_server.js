@@ -132,7 +132,11 @@ function HEXCODES(event, out, arrangement) {
 }
 
 function COLOR_MIXING(event, output_color, color_one, color_two) {
-    event.recipes.createMixing(`kubejs:color_${output_color}`, [`kubejs:color_${color_one}`, `kubejs:color_${color_two}`]).id(`finality:mixing/color_${output_color}`)
+    event.recipes.createMixing(`kubejs:color_${output_color}`, [
+        `kubejs:color_${color_one}`, 
+        `kubejs:color_${color_two}`,
+        Fluid.of('kubejs:shimmer', 500)
+    ]).id(`finality:mixing/color_${output_color}`)
 }
 
 ServerEvents.recipes(event => {
@@ -656,6 +660,8 @@ ServerEvents.recipes(event => {
         BINARYCONVERSION(event, `${insert}`, `${INTEGER_BINARY[insert]}`)
     })
     BINARYCONVERSION(event, 'octothorpe', '00100011')
+    BINARYCONVERSION(event, 'slash', '00101111')
+    BINARYCONVERSION(event, 'at_sign', '01000000')
     Object.keys(global.SHAPES).forEach(shape => {
         VALID_COLOR_MIX.forEach(color => {
             event.recipes.createMixing(`kubejs:${color}_${shape}`, [
@@ -678,6 +684,11 @@ ServerEvents.recipes(event => {
             event.recipes.createCutting(`2x kubejs:${color}_${shape}_corner`, `kubejs:${color}_right_half_${shape}`).id(`finality:${color}_${shape}_right_half_halving`)
         })
     })
+    event.recipes.createMixing('kubejs:color_white', [
+        'kubejs:color_red',
+        'kubejs:color_green',
+        'kubejs:color_blue'
+    ]).id('finality:mixing/color_white')
     event.recipes.createMechanicalCrafting('kubejs:blueprint_shape_base', [
         'RC',
         'CC'
@@ -715,6 +726,31 @@ ServerEvents.recipes(event => {
         R: 'kubejs:magenta_rectangle_corner'
     }).id('finality:emitter_shape_base')
     event.recipes.createDeploying('kubejs:emitter_shape', ['kubejs:emitter_shape_base', 'kubejs:white_star']).id('finality:emitter_shape')
+    // give
+    event.recipes.createMechanicalCrafting('64x minecraft:netherite_block', [
+        '/GIVE @S ',
+        'NETHERITE',
+        'BLOCK 64 '
+    ], {
+        '/': 'kubejs:slash',
+        '@': 'kubejs:at_sign',
+        'G': 'kubejs:letter_g',
+        'I': 'kubejs:letter_i',
+        'V': 'kubejs:letter_v',
+        'E': 'kubejs:letter_e',
+        'S': 'kubejs:letter_s',
+        'N': 'kubejs:letter_n',
+        'T': 'kubejs:letter_t',
+        'H': 'kubejs:letter_h',
+        'R': 'kubejs:letter_r',
+        'B': 'kubejs:letter_b',
+        'L': 'kubejs:letter_l',
+        'O': 'kubejs:letter_o',
+        'C': 'kubejs:letter_c',
+        'K': 'kubejs:letter_k',
+        '6': 'kubejs:six',
+        '4': 'kubejs:four'
+    }).id('finality:command/netherite_block_stack')
     if (Platform.isLoaded('quark')) {
         event.shaped('minecraft:hopper', [
             'ILI',
@@ -826,43 +862,6 @@ PlayerEvents.tick(check => {
         }
     };
 });
-// let CLOCK = 0
-// let sentience = [repairHint, worldMaintenance, ]
-// ServerEvents.tick(event => {
-//
-// })
-
-// EntityEvents.death('minecraft:wither', event => {
-//     event.player.notify(Notification.make(toast => {
-//         toast.text = [
-//             Text.of("The Wither has been killed!").bold(),
-//             Text.of('subtitle')
-//         ]
-//         toast.icon = 'minecraft:wither_skeleton_skull'
-//         toast.outlineColor = '#006055'
-//         toast.backgroundColor = '#1b3a1b'
-//         toast.borderColor = '#267523'
-//     }))
-// })
-//
-// BlockEvents.rightClicked('minecraft:bedrock', event => {
-//     event.entity.notify(Notification.make(n => {
-//         n.text = [
-//             'Why?',
-//             'subtitle'
-//         ]
-//         n.icon = 'minecraft:bedrock'
-//         n.outlineColor = '#006055'
-//         n.backgroundColor = '#1b3a1b'
-//         n.borderColor = '#267523'
-//     }))
-// })
-
-// EntityEvents.death('minecraft:wither', event => event.player.notify({
-//     itemIcon: 'minecraft:wither_skeleton_skull',
-//     backgroundColor: 'darkPurple',
-//     borderColor: '0x'
-// }))
 
 LootJS.modifiers((event) => {
     FOUNDATION_METALS.forEach(metal => {
@@ -936,3 +935,43 @@ Object.keys(BLACKLIST).forEach(modid => {
         })
     }
 })
+
+/*
+let CLOCK = 0
+let sentience = [repairHint, worldMaintenance,]
+ServerEvents.tick(event => {
+
+})
+
+EntityEvents.death('minecraft:wither', event => {
+    event.player.notify(Notification.make(toast => {
+        toast.text = [
+            Text.of("The Wither has been killed!").bold(),
+            Text.of('subtitle')
+        ]
+        toast.icon = 'minecraft:wither_skeleton_skull'
+        toast.outlineColor = '#006055'
+        toast.backgroundColor = '#1b3a1b'
+        toast.borderColor = '#267523'
+    }))
+})
+
+BlockEvents.rightClicked('minecraft:bedrock', event => {
+    event.entity.notify(Notification.make(n => {
+        n.text = [
+            'Why?',
+            'subtitle'
+        ]
+        n.icon = 'minecraft:bedrock'
+        n.outlineColor = '#006055'
+        n.backgroundColor = '#1b3a1b'
+        n.borderColor = '#267523'
+    }))
+})
+
+EntityEvents.death('minecraft:wither', event => event.player.notify({
+    itemIcon: 'minecraft:wither_skeleton_skull',
+    backgroundColor: 'darkPurple',
+    borderColor: '0x'
+}))
+*/
