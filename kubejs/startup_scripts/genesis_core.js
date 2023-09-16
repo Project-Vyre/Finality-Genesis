@@ -531,6 +531,17 @@ StartupEvents.registry('block', event => {
     })
 })
 
+/**
+ * 
+ * @param {*} event 
+ * @param {string} fluidID 
+ * @param {string} displayName 
+ * @param {HEX} color 
+ */
+function MOLTEN_METAL(event, fluidID, displayName, color) {
+    event.create(`kubejs:${fluidID}`).displayName(displayName).thickTexture(color).bucketColor(color).luminosity(15)
+}
+
 StartupEvents.registry('fluid', event => {
     // work in progress .stillTexture('finality:block/still_entropy').flowingTexture('finality:block/flowing_entropy')
     event.create('kubejs:condensed_universal_entropy')
@@ -538,11 +549,12 @@ StartupEvents.registry('fluid', event => {
         .thickTexture(0x7800FF)
         .bucketColor(0x7800FF)
         .luminosity(15)
-    event.create('kubejs:molten_gold')
-        .displayName('§6Molten Gold')
-        .thickTexture(0xFDF55F)
-        .bucketColor(0xFDF55F)
-        .luminosity(15)
+    MOLTEN_METAL(event, 'molten_iron', '§cMolten Iron', 0xFF8423)
+    MOLTEN_METAL(event, 'molten_gold', '§eMolten Gold', 0xFDF55F)
+    MOLTEN_METAL(event, 'molten_copper', '§6Molten Copper', 0xFDD686)
+    MOLTEN_METAL(event, 'molten_zinc', '§3Molten Zinc', 0xD3E8D6)
+    MOLTEN_METAL(event, 'molten_brass', '§eMolten Brass', 0xFBAA68)
+    MOLTEN_METAL(event, 'molten_netherite', '§8Molten Netherite', 0x7E6059)
     event.create('kubejs:inferior_infusion_essence')
         .displayName('§eInferior Infusion Essence§r')
         .thickTexture(0xACCF00)
@@ -557,9 +569,14 @@ StartupEvents.registry('fluid', event => {
         .thinTexture(0xCA9777)
         .bucketColor(0xCA9777)
     event.create('kubejs:shimmer')
+        .flowingTexture('kubejs:block/shimmer_flow')
+        .stillTexture('kubejs:block/shimmer_still')
+})
+/*
+    event.create('kubejs:shimmer')
         .thinTexture(0xD6CCFF)
         .bucketColor(0xD6CCFF)
-})
+*/
 // tiers
 ItemEvents.toolTierRegistry(event => {
     event.add('final_tool', tier => {
@@ -831,6 +848,7 @@ let RED_REGISTRY = [
     'cataclysm:wither_assault_shoulder_weapon'
 ]
 let PURPLE_REGISTRY = [
+    'minecraft:structure_void',
     'minecraft:dragon_egg',
     'eccentrictome:tome',
     'kubejs:denied_result',
@@ -865,7 +883,7 @@ let GRAY_REGISTRY = [
     'minecraft:cobblestone',
     'minecraft:cobbled_deepslate',
     'minecraft:gravel',
-    'kubejs:deepslate_shard',
+    'kubejs:deepslate_shard'
 ]
 
 /**
@@ -1010,6 +1028,9 @@ ClientEvents.init(event => {
         STANDARD_PALETTE('cloudstorage:balloon_bit')
         STANDARD_PALETTE('cloudstorage:clooud_chest')
         BLUE_PALETTE('cloudstorage:static_cloud_chest')
+    }
+    if (Platform.isLoaded('monobank')) {
+        STANDARD_PALETTE('monobank:monobank')
     }
     if (Platform.isLoaded('lilwings')) {
         STANDARD_PALETTE('minecraft:glass_bottle')
