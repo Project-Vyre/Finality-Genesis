@@ -1,4 +1,5 @@
 // requires: create_mechanical_extruder
+// requires: kubejs_create
 
 let ORESTONES = {
     asurine: 'create:raw_zinc_block',
