@@ -16,8 +16,8 @@
     "hintOverlayToggle": true
   },
   "overlay": {
-    "overlayPosX": 0.010869565,
-    "overlayPosY": 0.9782609,
+    "overlayPosX": 0.01,
+    "overlayPosY": 0.98,
     "overlayScale": 1.0,
     "overlayAnchorX": 0.0,
     "overlayAnchorY": 0.0,
@@ -68,6 +68,6 @@
     "animation": true
   },
   "formatting": {
-    "modName": "§6§o%s"
+    "modName": "§e§o%s"
   }
 }
