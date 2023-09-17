@@ -3,6 +3,10 @@
     {
       "type": "forge:mod_loaded",
       "modid": "kubejs"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "kubejs_create"
     }
   ],
   "title": {
@@ -11,6 +15,6 @@
     "color": "light_purple"
   },
   "tip": {
-    "text": "Diamonds can be renewed from compacting coal when given sufficient heat."
+    "text": "Rotten Flesh can now be haunted and turn into Phantom Membrane."
   }
 }

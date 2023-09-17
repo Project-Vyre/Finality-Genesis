@@ -3,6 +3,10 @@
     {
       "type": "forge:mod_loaded",
       "modid": "kubejs"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "personality"
     }
   ],
   "title": {
@@ -11,6 +15,6 @@
     "color": "light_purple"
   },
   "tip": {
-    "text": "Coal can be renewed from compacting kelp blocks when given sufficient heat."
+    "text": "Press X to crawl to get into tight spaces or in one block gaps."
   }
 }

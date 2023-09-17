@@ -2,11 +2,11 @@
   "conditions": [
     {
       "type": "forge:mod_loaded",
-      "modid": "supplementaries"
+      "modid": "kubejs"
     },
     {
       "type": "forge:mod_loaded",
-      "modid": "kubejs"
+      "modid": "lootjs"
     }
   ],
   "title": {
@@ -15,6 +15,6 @@
     "color": "light_purple"
   },
   "tip": {
-    "text": "Start a Flax plant farm as early as possible."
+    "text": "Spawners now drop Structure Void which can be used to recraft them. Use the Capturing enchantment to acquire Spawn Eggs."
   }
 }

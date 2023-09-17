@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "title": {
+    "text": "Finality Tip",
+    "bold": true,
+    "color": "light_purple"
+  },
+  "tip": {
+    "text": "A Windmill Bearing is an easy way to make a radial farm. Superglue is not needed if you are using Linear and Radial Chassis blocks, simply right click with a Slime Ball."
+  }
+}

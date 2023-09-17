@@ -2,6 +2,10 @@
   "conditions": [
     {
       "type": "forge:mod_loaded",
+      "modid": "supplementaries"
+    },
+    {
+      "type": "forge:mod_loaded",
       "modid": "kubejs"
     }
   ],
@@ -11,6 +15,6 @@
     "color": "light_purple"
   },
   "tip": {
-    "text": "Rotten Flesh can now be haunted and turn into Phantom Membrane."
+    "text": "Start a Flax plant farm as early as possible. It will help in the long term with making Windmill Sails."
   }
 }
