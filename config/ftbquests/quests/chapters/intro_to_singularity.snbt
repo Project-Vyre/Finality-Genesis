@@ -37,6 +37,8 @@
 				""
 				"If you wish to configure your character's gender, press &d&lG&r."
 				""
+				"Press &bX&r to crawl."
+				""
 				"Also, take the time now to SET YOUR KEYBINDS and adjust volume levels if needed."
 				""
 				"Tips for using &l&7Roughly Enough Items&r or &l&2JEI&r are on the next few pages. &eLootr&r chest info is on the following page. Just don't say I didn't warn you if your Lootr chest blows up."
@@ -327,6 +329,16 @@
 					type: "xp_levels"
 					xp_levels: 3
 				}
+				{
+					id: "139BB63F1B9DEB8C"
+					item: "supplementaries:flax"
+					type: "item"
+				}
+				{
+					id: "0B0A46007FC704BC"
+					item: "supplementaries:flax_seeds"
+					type: "item"
+				}
 			]
 			shape: "rsquare"
 			subtitle: "No really, they are very convenient."
@@ -357,16 +369,6 @@
 					id: "6D0C51FCA5C0A1D2"
 					title: "Make sure to make an FTB Teams party to synchronize quest progress!"
 					type: "checkmark"
-				}
-				{
-					id: "695A99D91AD8683D"
-					item: "supplementaries:flax"
-					type: "item"
-				}
-				{
-					id: "1F862E8D540AD355"
-					item: "supplementaries:flax_seeds"
-					type: "item"
 				}
 				{
 					id: "7C483B82D80A8F75"
@@ -538,13 +540,15 @@
 		{
 			dependencies: ["2EF808209CCECE6A"]
 			description: [
+				"&lThis quest node description has multiple pages that contain information for each item that does not explain its use through a tooltip.&r"
+				""
+				"Please read through them to learn more."
+				"{@pagebreak}"
 				"About Tempad:"
 				""
 				"Think of the &dTempad&r device as a personal waystone with a cooldown. It is very effective and customizable as well!"
 				""
 				"This quest also has a hidden step, but it requires you to get to The End first."
-				""
-				"On a sidenote, this quest node description has multiple pages."
 				"{@pagebreak}"
 				"About Travel Anchors:"
 				""
@@ -560,11 +564,15 @@
 				""
 				"-+-"
 				""
-				"To unlock the Travel Anchor to rename it, use a stick!"
+				"To unlock the &3Travel Anchor&r to rename it, use a stick!"
 				"{@pagebreak}"
-				"&eMega Torches&r "
+				"About &eMega Torches&r from Torchmaster:"
+				""
+				"They prevent spawns in a 64 block radius from their position."
 				"{@pagebreak}"
 				"&7Mechanical Extruders&r can be used to make Create's orestones quite easily and can make smooth stone if the recipe filter is set."
+				"{@pagebreak}"
+				"The &aCreate Chunk Loader&r makes it so that trains and moving contraptions are able to load chunks themselves instead of using an incompatible stationary chunk loader."
 			]
 			icon: "tempad:tempad"
 			id: "5E5E9241EB84A4E9"
@@ -624,6 +632,11 @@
 						id: "monobank:monobank"
 						tag: { }
 					}
+					type: "item"
+				}
+				{
+					id: "7F1707757DF45D46"
+					item: "createchunkloading:chunk_loader"
 					type: "item"
 				}
 			]

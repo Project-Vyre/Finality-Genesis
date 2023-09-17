@@ -137,6 +137,23 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
+			description: [
+				"The Heart Amulet is what contains your Heart Containers, which then increase how much health you have."
+				""
+				"On the next page is a list of sources of the different tiers of hearts and how to &aupgrade&r them."
+				"{@pagebreak}"
+				"&cRed Hearts&r drop from normal enemies like zombies, skeletons, creepers, etc."
+				""
+				"&eYellow Hearts&r drop exclusively from bosses."
+				""
+				"&aGreen Hearts&r drop exclusively from the &dEnder Dragon&r."
+				""
+				"&9Blue Hearts&r drop exclusively from the &3Warden&r."
+				""
+				"However... you can upgrade existing Red Hearts by &omelting&r 9 of them and combining them all in a 3x3 crafting grid to make a &eMelted Yellow Heart&r."
+				""
+				"Then you can take 9 &eMelted Yellow Hearts&r to combine them into a &aMelted Green Heart&r."
+			]
 			hide: true
 			id: "5F0954BDC6CBA6F5"
 			rewards: [{
@@ -171,6 +188,32 @@
 			title: "The Vitality Blade"
 			x: 0.0d
 			y: 7.5d
+		}
+		{
+			dependencies: ["6553C33C339FEFFD"]
+			description: [
+				"Think of the Soul Amulet as being able to hold 10 Undying Totems, literally."
+				""
+				"However, instead of Undying Totems they are referred to as &dSoul Heart Canisters&r which convert back to a &9Blue Heart Canister&r after being used."
+			]
+			icon: "bhc:soul_heart_amulet"
+			id: "6CC58FAF18F3E476"
+			subtitle: "Nine lives!"
+			tasks: [
+				{
+					id: "6E80A1F469BBF2A5"
+					item: "bhc:soul_heart_amulet"
+					type: "item"
+				}
+				{
+					id: "41B2C3CCF946B115"
+					item: "bhc:soul_heart_canister"
+					type: "item"
+				}
+			]
+			title: "Acquire the Soul Amulet"
+			x: 0.0d
+			y: 9.0d
 		}
 	]
 	subtitle: ["You could probably be immortal."]

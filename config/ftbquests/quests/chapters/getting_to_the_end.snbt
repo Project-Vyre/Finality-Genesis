@@ -215,6 +215,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
+			description: ["Only acquired from Elder Guardians in Ocean Monuments."]
 			hide: true
 			id: "1013541B6EC52CEF"
 			subtitle: "I am responsible for many deaths in the ocean ruins."
@@ -294,6 +295,7 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
+			description: ["Only obtainable from Skeletal Horses."]
 			hide: true
 			id: "3F991D3B86EFF9EE"
 			subtitle: "I am made from the soul of a horse turned skeletal."
@@ -333,7 +335,11 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
-			description: ["Ancient texts say it can be acquired from an equally cryptic book that enchants items."]
+			description: [
+				"Ancient texts say it can be acquired from an equally cryptic book that enchants items."
+				""
+				"Hint: It's the Enchanting Table."
+			]
 			hide: true
 			id: "7E7D888C64FD0E69"
 			subtitle: "Origins unkown."

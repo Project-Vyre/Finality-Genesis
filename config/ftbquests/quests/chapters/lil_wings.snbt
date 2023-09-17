@@ -283,17 +283,20 @@
 		}
 		{
 			dependencies: ["45A52C65052B8D2C"]
+			description: ["The Golden Cake replenishes more hunger and saturation than the &cVelvet Cake&r in addition to applying a temporary &dregeneration&r and &eabsorption&r effect."]
 			id: "09CCEDC570C8B4BC"
 			rewards: [{
 				id: "1B61F07D45E171A7"
 				type: "xp_levels"
 				xp_levels: 30
 			}]
+			subtitle: "The cake is a lie!"
 			tasks: [{
 				id: "715847900CD995CF"
 				item: "lilwings:golden_cake"
 				type: "item"
 			}]
+			title: "Upgraded Cakes: The Golden Cake"
 			x: -4.5d
 			y: 1.5d
 		}
@@ -301,6 +304,11 @@
 			dependencies: [
 				"745DEC9F317266A5"
 				"7AB06782EA8B7BEF"
+			]
+			description: [
+				"Not really special, but it does replenish more hunger and saturation than the regular cake."
+				""
+				"Required for making the &eGolden Cake&r."
 			]
 			id: "45A52C65052B8D2C"
 			rewards: [{
@@ -314,6 +322,7 @@
 				item: "lilwings:crimson_cake"
 				type: "item"
 			}]
+			title: "Upgraded Cakes: The Velvet Cake"
 			x: -4.5d
 			y: 0.0d
 		}

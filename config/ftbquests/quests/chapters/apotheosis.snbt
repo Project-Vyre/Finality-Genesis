@@ -447,6 +447,20 @@
 					table_id: 103743719166323827L
 					type: "random"
 				}
+				{
+					id: "765E80417A1B76E3"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [{
+								id: "apotheosis:capturing"
+								lvl: 5s
+							}]
+						}
+					}
+					type: "item"
+				}
 			]
 			subtitle: "This is where things get VERY interesting."
 			tasks: [{
@@ -497,11 +511,27 @@
 				"If your item has any empty sockets, you can socket gems using the smithing table."
 			]
 			id: "1189AFE0B71158E6"
-			rewards: [{
-				id: "6BAF2DDB432FD4E9"
-				type: "xp_levels"
-				xp_levels: 15
-			}]
+			rewards: [
+				{
+					id: "6BAF2DDB432FD4E9"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+				{
+					id: "17ACA18DFF0AA6EC"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [{
+								id: "apotheosis:capturing"
+								lvl: 1s
+							}]
+						}
+					}
+					type: "item"
+				}
+			]
 			subtitle: "This is for giving regular items Affixes."
 			tasks: [{
 				id: "3B604826BCC1040B"
