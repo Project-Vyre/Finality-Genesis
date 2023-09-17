@@ -133,7 +133,7 @@ function HEXCODES(event, out, arrangement) {
 
 function COLOR_MIXING(event, output_color, color_one, color_two) {
     event.recipes.createMixing(`kubejs:color_${output_color}`, [
-        `kubejs:color_${color_one}`, 
+        `kubejs:color_${color_one}`,
         `kubejs:color_${color_two}`,
         Fluid.of('kubejs:shimmer', 500)
     ]).id(`finality:mixing/color_${output_color}`)
@@ -472,7 +472,7 @@ ServerEvents.recipes(event => {
     ]).id('finality:living_flesh_stone')
     event.recipes.createFilling('minecraft:netherite_ingot', [
         'minecraft:netherite_scrap',
-        Fluid.of('kubejs:molten_gold', 250)
+        Fluid.of('kubejs:molten_gold', 360)
     ]).id('finality:netherite_ingot_from_spout')
     // haunting
     event.recipes.createHaunting(['minecraft:deepslate'], 'minecraft:andesite').id('finality:andesite_haunting')
@@ -496,15 +496,15 @@ ServerEvents.recipes(event => {
     event.recipes.createMixing(['minecraft:coarse_dirt'], [
         'minecraft:dirt', 'minecraft:gravel'
     ]).id('finality:coarse_dirt')
-    event.recipes.createMixing([Fluid.of('kubejs:molten_gold', 250)], ['minecraft:gold_ingot']).heated().id('finality:gold_ingot_melting')
-    event.recipes.createMixing(['minecraft:netherite_ingot'], [Item.of('minecraft:netherite_scrap', 4), Fluid.of('kubejs:molten_gold', 1000)]).heated().id('finality:netherite_ingot_from_mixing')
+    event.recipes.createMixing([Fluid.of('kubejs:molten_gold', 90)], ['minecraft:gold_ingot']).heated().id('finality:gold_ingot_melting')
+    event.recipes.createMixing(['minecraft:netherite_ingot'], [Item.of('minecraft:netherite_scrap', 4), Fluid.of('kubejs:molten_gold', 360)]).heated().id('finality:netherite_ingot_from_mixing')
     event.recipes.createMixing(['minecraft:emerald'], [
         'minecraft:quartz', 'minecraft:glass', '3x minecraft:iron_nugget'
     ]).superheated().id('finality:renew_emerald') // Be3Al2(SiO3)6
     event.recipes.createMixing(['minecraft:nether_gold_ore'], [
         'create:cinder_flour',
         '18x minecraft:gold_nugget',
-        Fluid.of('minecraft:lava', 250)
+        Fluid.of('minecraft:lava', 180)
     ]).id('finality:nether_gold_ore_deco') // Thank you to FunnyMan4579 on the official Create Discord for giving me this idea :3
     event.recipes.createMixing('salt:salt', [
         Fluid.of('minecraft:water', 1000)
@@ -687,8 +687,26 @@ ServerEvents.recipes(event => {
     event.recipes.createMixing('kubejs:color_white', [
         'kubejs:color_red',
         'kubejs:color_green',
-        'kubejs:color_blue'
+        'kubejs:color_blue',
+        Fluid.of('kubejs:shimmer', 250)
     ]).id('finality:mixing/color_white')
+    // shimmer usage
+    event.recipes.createMixing(Fluid.of('kubejs:shimmer', 250), [
+        Fluid.of('kubejs:condensed_universal_entropy', 500),
+        Fluid.of('minecraft:water', 500),
+        'minecraft:glowstone_dust',
+        'minecraft:redstone',
+        'create:polished_rose_quartz'
+    ]).superheated().id('finality:mixing/shimmer_fluid_creation')
+    event.recipes.createCompacting([
+        'create:cinder_flour',
+        Item.of('create:cinder_flour').withChance(0.50),
+        Item.of('create:experience_nugget').withChance(0.25),
+        Item.of('minecraft:netherite_scrap').withChance(0.02)
+    ], [
+        Fluid.of('kubejs:shimmer', 750),
+        'minecraft:netherrack',
+    ]).superheated().id('finality:compacting/netherite_scrap_renewal')
     event.recipes.createMechanicalCrafting('kubejs:blueprint_shape_base', [
         'RC',
         'CC'
@@ -828,6 +846,11 @@ const set = {
             "amplifier": 3
         },
         {
+            "effect": "fire_resistance",
+            "duration": 400,
+            "amplifier": 3
+        },
+        {
             "effect": "jump_boost",
             "duration": 400,
             "amplifier": 3
@@ -872,6 +895,7 @@ LootJS.modifiers((event) => {
         .randomChance(0.2).addLoot('create:raw_zinc')
     event.addBlockLootModifier('create:deepslate_zinc_ore')
         .randomChance(0.3).addLoot('create:raw_zinc')
+    event.addBlockLootModifier('minecraft:spawner').addLoot('8x minecraft:structure_void')
     event.addLootTypeModifier(LootType.CHEST).removeLoot('minecraft:bucket')
     event.addEntityLootModifier('minecraft:creeper')
         .randomChance(0.1).addLoot('create:zinc_nugget')
@@ -886,6 +910,58 @@ LootJS.modifiers((event) => {
             .randomChance(0.01).addLoot('irons_spellbooks:legendary_ink')
     }
 });
+
+PlayerEvents.inventoryChanged(event => {
+    const { item, level, player } = event
+    const { x, y, z } = player
+    if (item.hasTag('create:sandpaper') && !player.persistentData.struckBySandpaper) {
+        if (item.hasEnchantment('minecraft:mending', 1) || item.hasEnchantment('minecraft:unbreaking', 1)) {
+            level.spawnLightning(x, y, z, false)
+            player.tell(Text.darkRed("<shake>You are a lazy engineer.</shake>"))
+            player.persistentData.struckBySandpaper = true
+        }
+    }
+})
+
+EntityEvents.death('minecraft:wither', event => {
+    event.player.notify(Notification.make(toast => {
+        toast.text = [
+            Text.of("The Wither has been killed!").bold(),
+            Text.of('subtitle')
+        ]
+        toast.icon = 'minecraft:wither_skeleton_skull'
+        toast.outlineColor = '#006055'
+        toast.backgroundColor = '#1b3a1b'
+        toast.borderColor = '#267523'
+    }))
+})
+
+/*
+let CLOCK = 0
+let sentience = [repairHint, worldMaintenance,]
+ServerEvents.tick(event => {
+
+})
+
+BlockEvents.rightClicked('minecraft:bedrock', event => {
+    event.entity.notify(Notification.make(n => {
+        n.text = [
+            'Why?',
+            'subtitle'
+        ]
+        n.icon = 'minecraft:bedrock'
+        n.outlineColor = '#006055'
+        n.backgroundColor = '#1b3a1b'
+        n.borderColor = '#267523'
+    }))
+})
+
+EntityEvents.death('minecraft:wither', event => event.player.notify({
+    itemIcon: 'minecraft:wither_skeleton_skull',
+    backgroundColor: 'darkPurple',
+    borderColor: '0x'
+}))
+*/
 
 LevelEvents.afterExplosion(event => {
     const { x, y, z, level } = event
@@ -935,43 +1011,3 @@ Object.keys(BLACKLIST).forEach(modid => {
         })
     }
 })
-
-/*
-let CLOCK = 0
-let sentience = [repairHint, worldMaintenance,]
-ServerEvents.tick(event => {
-
-})
-
-EntityEvents.death('minecraft:wither', event => {
-    event.player.notify(Notification.make(toast => {
-        toast.text = [
-            Text.of("The Wither has been killed!").bold(),
-            Text.of('subtitle')
-        ]
-        toast.icon = 'minecraft:wither_skeleton_skull'
-        toast.outlineColor = '#006055'
-        toast.backgroundColor = '#1b3a1b'
-        toast.borderColor = '#267523'
-    }))
-})
-
-BlockEvents.rightClicked('minecraft:bedrock', event => {
-    event.entity.notify(Notification.make(n => {
-        n.text = [
-            'Why?',
-            'subtitle'
-        ]
-        n.icon = 'minecraft:bedrock'
-        n.outlineColor = '#006055'
-        n.backgroundColor = '#1b3a1b'
-        n.borderColor = '#267523'
-    }))
-})
-
-EntityEvents.death('minecraft:wither', event => event.player.notify({
-    itemIcon: 'minecraft:wither_skeleton_skull',
-    backgroundColor: 'darkPurple',
-    borderColor: '0x'
-}))
-*/
