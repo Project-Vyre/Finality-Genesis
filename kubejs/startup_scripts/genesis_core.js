@@ -827,7 +827,8 @@ let BLUE_REGISTRY = [
     'minecraft:lapis_lazuli'
 ]
 let GREEN_REGISTRY = [
-    'minecraft:bone_meal'
+    'minecraft:bone_meal',
+    'createchunkloading:chunk_loader'
 ]
 let YELLOW_REGISTRY = [
     'minecraft:campfire',
@@ -1026,7 +1027,7 @@ ClientEvents.init(event => {
     }
     if (Platform.isLoaded('cloudstorage')) {
         STANDARD_PALETTE('cloudstorage:balloon_bit')
-        STANDARD_PALETTE('cloudstorage:clooud_chest')
+        STANDARD_PALETTE('cloudstorage:cloud_chest')
         BLUE_PALETTE('cloudstorage:static_cloud_chest')
     }
     if (Platform.isLoaded('monobank')) {
@@ -1040,6 +1041,9 @@ ClientEvents.init(event => {
     }
     if (Platform.isLoaded('salt')) {
         STANDARD_PALETTE('salt:salt')
+    }
+    if (Platform.isLoaded('supplementaries')) {
+        STANDARD_PALETTE('supplementaries:quiver')
     }
     if (Platform.isLoaded('tempad')) {
         PURPLE_PALETTE('tempad:tempad')
