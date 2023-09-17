@@ -1,5 +1,5 @@
 // requires: aquamirae
-// requires: create
+// requires: kubejs_create
 
 ServerEvents.recipes(event => {
     event.shaped('aquamirae:oxygen_tank', [

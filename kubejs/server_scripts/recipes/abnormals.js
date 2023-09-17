@@ -40,8 +40,12 @@ ServerEvents.tags('item', event => {
 
 ServerEvents.recipes(event => {
     WOOD_TYPES.forEach(insert => {
-        event.shapeless(`woodworks:${insert}_chest`, ['minecraft:chest']).id(`finality:woodworks/vanilla_chest_to_${insert}_chest_conversion`)
-        event.shapeless(`woodworks:${insert}_trapped_chest`, ['minecraft:trapped_chest']).id(`finality:woodworks/vanilla_trapped_chest_to_${insert}_trapped_chest_conversion`)
+        event.shapeless(`woodworks:${insert}_chest`, [
+            'minecraft:chest'
+        ]).id(`finality:woodworks/vanilla_chest_to_${insert}_chest_conversion`)
+        event.shapeless(`woodworks:${insert}_trapped_chest`, [
+            'minecraft:trapped_chest'
+        ]).id(`finality:woodworks/vanilla_trapped_chest_to_${insert}_trapped_chest_conversion`)
     })
 })
 /* Old code that should not be used.

@@ -1,7 +1,8 @@
 // requires: architects_palette
 // requires: v_slab_compat
 
-console.log("Fixing Jsburg's mistakes... Architect's Palette 1.3.3 for 1.19.2. The recipes are VERY stubborn in getting overridden by recipe ID, so I am sorry if parsing errors show in the console logs.")
+console.log("Fixing Jsburg's mistakes... Architect's Palette 1.3.3 for 1.19.2.")
+console.log("The recipes are VERY stubborn in getting overridden by recipe ID, so I am sorry if parsing errors show in the console logs.")
 console.log("Please ignore the parsing recipe errors from the mod.")
 
 ServerEvents.tags('item', event => {

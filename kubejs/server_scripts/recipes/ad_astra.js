@@ -1,5 +1,5 @@
 // requires: ad_astra
-// requires: create
+// requires: kubejs_create
 // requires: createaddition
 // requires: extendedcrafting
 // and kjs 119 and above

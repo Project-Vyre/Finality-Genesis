@@ -1,5 +1,5 @@
 // requires: constructionwand
-// requires: create
+// requires: kubejs_create
 
 ServerEvents.recipes(event => {
     event.remove([
@@ -9,11 +9,11 @@ ServerEvents.recipes(event => {
     ])
     event.recipes.createFilling('kubejs:construction_core_iron', [
         'minecraft:iron_ingot',
-        Fluid.of('kubejs:condensed_universal_entropy', 250)
+        Fluid.of('kubejs:condensed_universal_entropy', 90)
     ]).id('finality:construction_iron_activation')
     event.recipes.createFilling('kubejs:construction_core_diamond', [
         'minecraft:diamond',
-        Fluid.of('kubejs:condensed_universal_entropy', 250)
+        Fluid.of('kubejs:condensed_universal_entropy', 90)
     ]).id('finality:construction_diamond_activation')
     event.shaped('constructionwand:infinity_wand', [
         '  C',

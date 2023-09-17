@@ -74,23 +74,6 @@ ServerEvents.recipes(event => {
         I: 'extendedcrafting:ender_ingot',
         C: 'extendedcrafting:crafting_core'
     }).id('extendedcrafting:ender_crafter')
-    // shimmer usage
-    event.recipes.createMixing(Fluid.of('kubejs:shimmer', 250), [
-        Fluid.of('kubejs:condensed_universal_entropy', 500),
-        Fluid.of('minecraft:water', 500),
-        'minecraft:glowstone_dust',
-        'minecraft:redstone',
-        'create:polished_rose_quartz'
-    ]).superheated().id('finality:mixing/shimmer_fluid_creation')
-    event.recipes.createCompacting([
-        'create:cinder_flour',
-        Item.of('create:cinder_flour').withChance(0.50),
-        Item.of('create:experience_nugget').withChance(0.25),
-        Item.of('minecraft:netherite_scrap').withChance(0.02)
-    ], [
-        Fluid.of('kubejs:shimmer', 750),
-        'minecraft:netherrack',
-    ]).superheated().id('finality:compacting/netherite_scrap_renewal')
     // singularity creation step 1
     event.recipes.createMechanicalCrafting('kubejs:dormant_singularity_core', [
         ' OOOOO ',
@@ -478,16 +461,22 @@ ServerEvents.recipes(event => {
         Item.of('kubejs:ascendant_mechanism'),
     ], 'kubejs:genesis_mechanism', [
         event.recipes.createDeploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),
+        event.recipes.createDeploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),
+        event.recipes.createDeploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),
+        event.recipes.createDeploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),
+        event.recipes.createDeploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),
         event.recipes.createPressing('kubejs:incomplete_ascendant_mechanism', 'kubejs:incomplete_ascendant_mechanism')
-    ]).transitionalItem('kubejs:incomplete_ascendant_mechanism').loops(256).id('finality:ascendant_mechanism_creation')
+    ]).transitionalItem('kubejs:incomplete_ascendant_mechanism').loops(5).id('finality:ascendant_mechanism_creation')
     event.recipes.createSequencedAssembly([
-        Item.of('kubejs:entropy_mechanism').withChance(200.0),
-        Item.of('minecraft:structure_void').withChance(25.0),
-        Item.of('minecraft:debug_stick').withChance(25.0),
-        Item.of('minecraft:jigsaw').withChance(25.0),
-        Item.of('kubejs:command_block').withChance(10.0),
-        Item.of('kubejs:chain_command_block').withChance(10.0),
-        Item.of('kubejs:repeating_command_block').withChance(10.0),
+        Item.of('kubejs:entropy_mechanism').withChance(175.0),
+        Item.of('minecraft:structure_void').withChance(50.0),
+        Item.of('minecraft:debug_stick').withChance(50.0),
+        Item.of('minecraft:jigsaw').withChance(50.0),
+        Item.of('kubejs:zero').withChance(50.0),
+        Item.of('kubejs:one').withChance(50.0),
+        Item.of('kubejs:command_block').withChance(25.0),
+        Item.of('kubejs:chain_command_block').withChance(25.0),
+        Item.of('kubejs:repeating_command_block').withChance(25.0),
         'minecraft:grass_block'
     ], 'kubejs:ascendant_mechanism', [
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:awakened_singularity_core']),
@@ -496,5 +485,5 @@ ServerEvents.recipes(event => {
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:cpu_shape']),
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:blueprint_shape']),
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:emitter_shape'])
-    ]).transitionalItem('kubejs:incomplete_entropy_mechanism').loops(512).id('finality:entropy_mechanism_creation')
+    ]).transitionalItem('kubejs:incomplete_entropy_mechanism').loops(1).id('finality:entropy_mechanism_creation')
 })

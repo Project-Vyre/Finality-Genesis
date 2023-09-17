@@ -1,5 +1,5 @@
 // requires: bhc
-// requires: create
+// requires: kubejs_create
 // requires: supplementaries
 
 ServerEvents.recipes(event => {
@@ -25,7 +25,7 @@ ServerEvents.recipes(event => {
         '2x minecraft:emerald',
         'minecraft:golden_apple'
     ]).id('finality:relic_apple_shapeless_mixing')
-    event.recipes.create.haunting([
+    event.recipes.createHaunting([
         Item.of('bhc:wither_bone').withChance(0.25),
         Item.of('minecraft:coal').withChance(0.25),
         Item.of('supplementaries:ash').withChance(0.25)

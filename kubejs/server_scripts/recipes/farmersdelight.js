@@ -1,5 +1,5 @@
 // requires: farmersdelight
-// requires: create
+// requires: kubejs_create
 
 ServerEvents.recipes(event => {
     event.shaped('farmersdelight:skillet', [

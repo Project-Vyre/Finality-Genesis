@@ -1,5 +1,5 @@
 // requires: apotheosis
-// requires: create
+// requires: kubejs_create
 /*
 let CORE_RARITIES = [
     'common',

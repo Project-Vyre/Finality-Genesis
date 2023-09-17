@@ -1,6 +1,7 @@
 // requires: upgradednetherite
 // requires: upgradednetherite_ultimate
 // requires: upgradednetherite_creative
+// requires: kubejs_create
 
 let UPNETHERITE_TOOLS = ['sword', 'shovel', 'pickaxe', 'axe']
 let UPNETHERITE_ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
