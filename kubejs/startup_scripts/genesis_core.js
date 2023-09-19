@@ -5,7 +5,7 @@
 
 Platform.mods.kubejs.name = 'Finality'
 
-console.info('Registering Finality items...')
+console.info('Loading Finality startup scripts...')
 
 // let DYE_ID = ['white','orange','magenta','light_blue','lime','pink','purple','light_gray','gray','cyan','brown','green','blue','red','black','yellow']
 // let DYE_CAPS = ['WHITE','ORANGE','MAGENTA','LIGHT BLUE','LIME','PINK','PURPLE','LIGHT GRAY','GRAY','CYNA','BROWN','GREEN','BLUE','RED','BLACK','YELLOW']
@@ -1014,6 +1014,9 @@ ClientEvents.init(event => {
             GRAY_PALETTE(`chalk:${itemID}`)
         })
     }
+    if (Platform.isLoaded('aether')) {
+        GRAY_PALETTE('aether:book_of_lore')
+    }
     if (Platform.isLoaded('alexsmobs')) {
         YELLOW_PALETTE('minecraft:pumpkin')
     }
@@ -1025,8 +1028,12 @@ ClientEvents.init(event => {
     if (Platform.isLoaded('backpacked')) {
         STANDARD_PALETTE('backpacked:backpack')
     }
+    if (Platform.isLoaded('bhc')) {
+        RED_PALETTE('bhc:red_heart')
+    }
     if (Platform.isLoaded('cloudstorage')) {
         STANDARD_PALETTE('cloudstorage:balloon_bit')
+        STANDARD_PALETTE('cloudstorage:balloon_stand')
         STANDARD_PALETTE('cloudstorage:cloud_chest')
         BLUE_PALETTE('cloudstorage:static_cloud_chest')
     }
