@@ -2,6 +2,17 @@
 // requires: roughlyenoughresources
 // requires: roughlyenoughprofessions
 
+let REI_CREATE_COMPAT_ORES = [
+    'osmium',
+    'platinum',
+    'silver',
+    'tin',
+    'lead',
+    'quicksilver',
+    'aluminum',
+    'uranium',
+    'nickel'
+]
 let MYSHIDE = [
     'rubber',
     'silicon',
@@ -90,12 +101,6 @@ let CAdditionsItems = [
     'bioethanol_bucket',
     'gold_rod',
     'brass_rod',
-    'electrum_rod',
-    'electrum_ingot',
-    'electrum_sheet',
-    'electrum_nugget',
-    'electrum_wire',
-    'electrum_spool',
     'digital_adapter'
 ]
 const REI_GROUPS = {
@@ -137,17 +142,76 @@ function groupChippedTags(modName, event, exclude) { // function written by merc
 }
 
 REIEvents.hide('item', event => {
-    MYSHIDE.forEach(name => {
-        event.hide(`mysticalagriculture:${name}_essence`)
-        event.hide(`mysticalagriculture:${name}_seeds`)
+    event.hide([
+        'kubejs:denied_result',
+        'kubejs:removed_item',
+        /^kubejs.*[_:\/]incomplete(?![a-zA-Z0-9]).*/,
+        /^create.*[_:\/]andesite_encased(?![a-zA-Z0-9]).*/,
+        /^create.*[_:\/]brass_encased(?![a-zA-Z0-9]).*/,
+        'create:copper_backtank_placeable',
+        'create:netherite_backtank_placeable',
+        'create:incomplete_track',
+        'create:incomplete_precision_mechanism',
+        'create:unprocessed_obsidian_sheet',
+        'create:schematic'
+    ])
+    REI_CREATE_COMPAT_ORES.forEach(ore => {
+        event.hide(`create:crushed_raw_${ore}`)
     })
     CAdditionsItems.forEach(name => {
         event.hide(`createaddition:${name}`)
     })
-    event.hide('mysticalagriculture:harvester')
+    event.hide([
+        /^createaddition.*[_:\/]electrum(?![a-zA-Z0-9]).*/,
+        /^create_central_kitchen.*[_:\/]incomplete(?![a-zA-Z0-9]).*/,
+        /^createcafe.*[_:\/]incomplete(?![a-zA-Z0-9]).*/
+    ])
+    if (Platform.isLoaded('alexsmobs')) {
+        event.hide(/^alexsmobs.*[_:\/]shard(?![a-zA-Z0-9]).*/)
+        event.hide(/^alexsmobs.*[_:\/]inventory(?![a-zA-Z0-9]).*/)
+        event.hide(/^alexsmobs.*[_:\/]empty(?![a-zA-Z0-9]).*/)
+        event.hide(/^alexsmobs.*[_:\/]hand(?![a-zA-Z0-9]).*/)
+    }
+    if (Platform.isLoaded('biomesoplenty')) {
+        event.hide('biomesoplenty:blood')
+    }
+    if (Platform.isLoaded('cataclysm')) {
+        event.hide('cataclysm:void_shard')
+    }
+    if (Platform.isLoaded('domesticationinnovation')) {
+        event.hide([
+            'domesticationinnovation:deflection_shield',
+            'domesticationinnovation:magnet'
+        ])
+    }
+    if (Platform.isLoaded('irons_spellbooks')) {
+        event.hide([
+            'irons_spellbooks:legendary_spell_book',
+            'irons_spellbooks:wimpy_spell_book'
+        ])
+    }
     if (Platform.isLoaded('gag')) {
         event.hide('gag:hearthstone')
         event.hide('gag:energized_hearthstone')
+    }
+    if (Platform.isLoaded('graveyard')) {
+        event.hide(/^graveyard.*[_:\/]lid(?![a-zA-Z0-9]).*/)
+        event.hide(/^graveyard.*[_:\/]base(?![a-zA-Z0-9]).*/)
+    }
+    MYSHIDE.forEach(name => {
+        event.hide(`mysticalagriculture:${name}_essence`)
+        event.hide(`mysticalagriculture:${name}_seeds`)
+    })
+    event.hide('mysticalagriculture:harvester')
+    // developer tools hidden
+    event.hide([
+        /^citadel.*[_:\/]item(?![a-zA-Z0-9]).*/,
+        /^citadel.*[_:\/]icon(?![a-zA-Z0-9]).*/,
+        'citadel:debug',
+        'citadel:citadel_book'
+    ])
+    if (Platform.isLoaded('decorative_blocks')) {
+        event.hide('decorative_blocks:blockstate_copy_item')
     }
 })
 
@@ -156,6 +220,9 @@ REIEvents.hide('fluid', event => {
         event.hide(`mysticalagradditions:${name}`)
     })
     event.hide('createaddition:bioethanol')
+    if (Platform.isLoaded('decorative_blocks')) {
+        event.hide('decorative_blocks:thatch')
+    }
 })
 
 REIEvents.information(event => {
