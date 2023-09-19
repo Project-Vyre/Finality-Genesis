@@ -472,7 +472,7 @@ ServerEvents.recipes(event => {
     ]).id('finality:living_flesh_stone')
     event.recipes.createFilling('minecraft:netherite_ingot', [
         'minecraft:netherite_scrap',
-        Fluid.of('kubejs:molten_gold', 360)
+        Fluid.of('kubejs:molten_gold', 90)
     ]).id('finality:netherite_ingot_from_spout')
     // haunting
     event.recipes.createHaunting(['minecraft:deepslate'], 'minecraft:andesite').id('finality:andesite_haunting')
@@ -483,6 +483,10 @@ ServerEvents.recipes(event => {
         Item.of('minecraft:echo_shard').withChance(0.02),
         Item.of('minecraft:disc_fragment_5').withChance(0.01)
     ], 'kubejs:deepslate_shard').id('finality:echo_shard_from_haunting')
+    event.recipes.createHaunting([
+        'minecraft:wither_skeleton_skull', 
+        Item.of('minecraft:coal').withChance(0.25)
+    ], 'minecraft:skeleton_skull').id('finality:haunting/wither_skeleton_skull')
     // splashing
     event.recipes.createSplashing(['minecraft:piston'], 'minecraft:sticky_piston').id('finality:sticky_piston_splashing')
     event.recipes.createSplashing(['create:mechanical_piston'], 'create:sticky_mechanical_piston').id('finality:sticky_mechanical_piston_splashing')
