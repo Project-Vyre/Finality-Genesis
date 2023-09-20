@@ -3,6 +3,14 @@
     {
       "type": "forge:mod_loaded",
       "modid": "jei"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "justenoughprofessions"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "jeresources"
     }
   ],
   "title": {
