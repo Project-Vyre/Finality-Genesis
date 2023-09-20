@@ -607,15 +607,23 @@ ItemEvents.armorTierRegistry(event => {
 })
 
 ItemEvents.modification(event => {
-    TOOLS.forEach(tool => event.modify(`minecraft:wooden_${tool}`, item => {
-        item.maxDamage = 16
-    }))
-    TOOLS.forEach(tool => event.modify(`minecraft:stone_${tool}`, item => {
-        item.maxDamage = 128
-    }))
-    TOOLS.forEach(tool => event.modify(`minecraft:iron_${tool}`, item => {
-        item.maxDamage = 256
-    }))
+    TOOLS.forEach(tool => {
+        event.modify(`minecraft:wooden_${tool}`, item => {
+            item.maxDamage = 16
+        })
+        event.modify(`minecraft:stone_${tool}`, item => {
+            item.maxDamage = 128
+        })
+        event.modify(`minecraft:iron_${tool}`, item => {
+            item.maxDamage = 256
+        })
+        event.modify(`minecraft:diamond_${tool}`, item => {
+            item.maxDamage = 1024
+        })
+        event.modify(`minecraft:netherite_${tool}`, item => {
+            item.maxDamage = 4096
+        })
+    })
     event.modify('minecraft:shears', item => {
         item.maxDamage = 256
     })
@@ -625,37 +633,107 @@ ItemEvents.modification(event => {
     event.modify('minecraft:trident', item => {
         item.maxDamage = 1024
     })
-    TOOLS.forEach(tool => event.modify(`minecraft:diamond_${tool}`, item => {
-        item.maxDamage = 1024
-    }))
-    TOOLS.forEach(tool => event.modify(`minecraft:netherite_${tool}`, item => {
-        item.maxDamage = 2048
-    }))
     event.modify('eccentrictome:tome', item => {
         item.fireResistant = true
     })
     // Armor durability is synchronized because it does not make sense as to why armor pieces have different durabilities.
-    ARMOR.forEach(armor => event.modify(`minecraft:leather_${armor}`, item => {
-        item.maxDamage = 128
-    }))
-    ARMOR.forEach(armor => event.modify(`minecraft:iron_${armor}`, item => {
-        item.maxDamage = 256
-    }))
-    ARMOR.forEach(armor => event.modify(`minecraft:golden_${armor}`, item => {
-        item.maxDamage = 225
-    }))
-    ARMOR.forEach(armor => event.modify(`minecraft:diamond_${armor}`, item => {
-        item.maxDamage = 512
-    }))
-    ARMOR.forEach(armor => event.modify(`minecraft:netherite_${armor}`, item => {
-        item.maxDamage = 1024
-    }))
-    DIVING.forEach(armor => event.modify(`create:copper_${armor}`, item => {
-        item.maxDamage = 128
-    }))
-    DIVING.forEach(armor => event.modify(`create:netherite_${armor}`, item => {
-        item.maxDamage = 1024
-    }))
+    ARMOR.forEach(armor => {
+        event.modify(`minecraft:leather_${armor}`, item => {
+            item.maxDamage = 128
+        })
+        event.modify(`minecraft:iron_${armor}`, item => {
+            item.maxDamage = 256
+        })
+        event.modify(`minecraft:golden_${armor}`, item => {
+            item.maxDamage = 225
+        })
+        event.modify(`minecraft:diamond_${armor}`, item => {
+            item.maxDamage = 512
+        })
+        event.modify(`minecraft:netherite_${armor}`, item => {
+            item.maxDamage = 2048
+        })
+    })
+    DIVING.forEach(armor => {
+        event.modify(`create:copper_${armor}`, item => {
+            item.maxDamage = 128
+        })
+        event.modify(`create:netherite_${armor}`, item => {
+            item.maxDamage = 2048
+        })
+    })
+    if (Platform.isLoaded('aether')) {
+        TOOLS.forEach(tool => {
+            event.modify(`aether:zanite_${tool}`, item => {
+                item.maxDamage = 256
+            })
+            event.modify(`aether:gravitite_${tool}`, item => {
+                item.maxDamage = 2048
+            })
+        })
+        event.modify('aether:valkyrie_pickaxe', item => {
+            item.maxDamage = -1
+        })
+        event.modify('aether:valkyrie_axe', item => {
+            item.maxDamage = -1
+        })
+        event.modify('aether:valkyrie_shovel', item => {
+            item.maxDamage = -1
+        })
+        event.modify('aether:valkyrie_hoe', item => {
+            item.maxDamage = -1
+        })
+        event.modify('aether:valkyrie_lance', item => {
+            item.maxDamage = -1
+        })
+        event.modify('aether:flaming_sword', item => {
+            item.maxDamage = -1
+        })
+        event.modify('aether:lightning_sword', item => {
+            item.maxDamage = -1
+        })
+        event.modify('aether:holy_sword', item => {
+            item.maxDamage = -1
+        })
+        event.modify('aether:vampire_blade', item => {
+            item.maxDamage = -1
+        })
+        event.modify('aether:pig_slayer', item => {
+            item.maxDamage = -1
+        })
+        event.modify('aether:hammer_of_kingbdogz', item => {
+            item.maxDamage = -1
+        })
+        event.modify('aether:cloud_staff', item => {
+            item.maxDamage = -1
+        })
+        event.modify('aether:phoenix_bow', item => {
+            item.maxDamage = -1
+        })
+        ARMOR.forEach(armor => {
+            event.modify(`aether:zanite_${armor}`, item => {
+                item.maxDamage = 256
+            })
+            event.modify(`aether:gravitite_${armor}`, item => {
+                item.maxDamage = 1024
+            })
+            event.modify(`aether:valkyrie_${armor}`, item => {
+                item.maxDamage = -1
+            })
+            event.modify(`aether:neptune_armor`, item => {
+                item.maxDamage = 256
+            })
+            event.modify(`aether:phoenix_${armor}`, item => {
+                item.maxDamage = 1024
+            })
+            event.modify(`aether:obsidian_${armor}`, item => {
+                item.maxDamage = 2048
+            })
+        })
+        event.modify('aether:sentry_boots', item => {
+            item.maxDamage = -1
+        })
+    }
     if (Platform.isLoaded('aquamirae')) {
         LEGENDARY.forEach(insert => {
             event.modify(`aquamirae:${insert}`, item => {
@@ -816,10 +894,11 @@ let STANDARD_PALETTE_REGISTRY = [
     'minecraft:coal_block',
     'minecraft:diamond_block',
     'create:item_vault',
+    'chalk:chalk_box',
     'extendedcrafting:handheld_table',
     'farmersdelight:skillet',
     'farmersdelight:stove',
-    'chalk:chalk_box'
+    'ftbquests:book'
 ]
 let BLUE_REGISTRY = [
     'minecraft:soul_campfire',

@@ -195,6 +195,8 @@
   "item.kubejs.final_boots.tooltip.summary": "Significantly _reduces_ damage when worn by itself.",
   "item.kubejs.final_boots.tooltip.condition1": "On wearing the full set",
   "item.kubejs.final_boots.tooltip.behaviour1": "Become _invulnerable_ to _all_ damage, including falling out of the world.",
+  "item.ftbquests.book.tooltip": "BOOK",
+  "item.ftbquests.book.tooltip.summary": "Right click to easily _access_ quests. You can also _access_ quests by opening your _inventory screen_ and _looking_ at the _top left_ corner of your screen.",
   "item.aether.book_of_lore.tooltip": "BOOK OF LORE",
   "item.aether.book_of_lore.tooltip.summary": "Place an item from _The Aether_ mod in the slot to learn more about it.",
   "block.autumnity.sappy_maple_log.tooltip": "SAPPY MAPLE LOG",

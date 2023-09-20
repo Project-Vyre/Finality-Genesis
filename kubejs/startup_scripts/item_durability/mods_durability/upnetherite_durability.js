@@ -1,7 +1,7 @@
-let T2_TOOLS = 2048
-let T3_TOOLS = 4096
-let T2_ARMOR = 1024
-let T3_ARMOR = 2048
+let T2_TOOLS = 4096
+let T3_TOOLS = 8192
+let T2_ARMOR = 2048
+let T3_ARMOR = 4096
 let UPNETHERITE_TOOLS = ['sword', 'shovel', 'pickaxe', 'axe', 'bow', 'crossbow']
 let UPNETHERITE_ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
 let T2 = ['gold_upgraded', 'fire_upgraded', 'ender_upgraded', 'water_upgraded', 'wither_upgraded', 'poison_upgraded', 'phantom_upgraded', 'feather_upgraded']
