@@ -13,6 +13,7 @@ ServerEvents.tags('item', event => {
 })
 
 ServerEvents.recipes(event => {
+    event.smoking('architects_palette:charcoal_block', '#minecraft:logs_that_burn').id('architects_palette:smelting/charcoal_block_from_logs_that_burn_smoking')
     event.remove([
         { id: 'architects_palette:vertslabs/myonite_vertical_slab' },
         { id: 'architects_palette:vertslabs/myonite_vertical_slab_revert' },
