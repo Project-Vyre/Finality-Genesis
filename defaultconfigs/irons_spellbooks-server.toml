@@ -4,7 +4,7 @@
 	#rarityConfig array values must sum to 1: [COMMON, UNCOMMON, RARE, EPIC, LEGENDARY]. Default: [.3d, .25d, .2d, .15d, .1d]
 	rarityConfig = [0.3, 0.25, 0.2, 0.15, 0.1]
 	#Whether or not imbued weapons require mana to be casted. Default: true
-	swordsConsumeMana = true
+	swordsConsumeMana = false
 	#The multiplier on the cooldown of imbued weapons. Default: 0.5 (50% of default cooldown)
 	swordsCooldownMultiplier = 0.5
 	#Whether or not players can harm their own magic summons. Default: false
@@ -45,7 +45,7 @@
 		Enabled = true
 		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
 		School = "BLOOD"
-		MaxLevel = 5
+		MaxLevel = 10
 		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
 		MinRarity = "RARE"
 		ManaCostMultiplier = 1.0
@@ -56,7 +56,7 @@
 		Enabled = true
 		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
 		School = "BLOOD"
-		MaxLevel = 5
+		MaxLevel = 10
 		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
 		MinRarity = "UNCOMMON"
 		ManaCostMultiplier = 1.0
@@ -668,7 +668,7 @@
 		Enabled = true
 		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
 		School = "VOID"
-		MaxLevel = 3
+		MaxLevel = 10
 		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
 		MinRarity = "LEGENDARY"
 		ManaCostMultiplier = 1.0
@@ -679,7 +679,7 @@
 		Enabled = true
 		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
 		School = "VOID"
-		MaxLevel = 3
+		MaxLevel = 10
 		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
 		MinRarity = "LEGENDARY"
 		ManaCostMultiplier = 1.0
@@ -690,7 +690,7 @@
 		Enabled = true
 		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
 		School = "VOID"
-		MaxLevel = 6
+		MaxLevel = 10
 		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
 		MinRarity = "LEGENDARY"
 		ManaCostMultiplier = 1.0
