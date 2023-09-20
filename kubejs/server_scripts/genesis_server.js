@@ -797,7 +797,7 @@ ServerEvents.tags('item', event => {
 })
 
 ServerEvents.tags('block', event => {
-
+    event.add('minecraft:needs_stone_tool', 'minecraft:deepslate')
 })
 
 PlayerEvents.loggedIn(event => {
