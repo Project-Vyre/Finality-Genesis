@@ -720,7 +720,7 @@ ItemEvents.modification(event => {
             event.modify(`aether:valkyrie_${armor}`, item => {
                 item.maxDamage = -1
             })
-            event.modify(`aether:neptune_armor`, item => {
+            event.modify(`aether:neptune_${armor}`, item => {
                 item.maxDamage = 256
             })
             event.modify(`aether:phoenix_${armor}`, item => {

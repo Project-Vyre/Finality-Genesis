@@ -1,0 +1,74 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_cafe"
+	group: "2B2D0B6DE31DE8D3"
+	icon: "createcafe:strawberry_iced_coffee"
+	id: "717445CD02F558D1"
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 64.0d
+		hover: [ ]
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["795154CF221D098B"]
+			id: "3D0EE24BC8646D5D"
+			tasks: [{
+				id: "6251B1C67C049BEC"
+				item: "createcafe:empty_boba_cup"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["795154CF221D098B"]
+			id: "67B6BF9C2F012DEC"
+			tasks: [{
+				id: "7F7352A0B89CCB7C"
+				item: "createcafe:iced_coffee_cup"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"16B642E5E7DBE75D"
+				"400260FDC774443B"
+				"527A4B10DDE51E37"
+			]
+			id: "795154CF221D098B"
+			tasks: [{
+				id: "623C23DA61481FB5"
+				title: "Ready to start making drinks?"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3D0EE24BC8646D5D"]
+			id: "382348C8AFB9C1BA"
+			tasks: [{
+				id: "3286671F3BE88AB8"
+				item: "createcafe:boba_cup"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Work in progress."]
+	title: "Create Cafe"
+}

@@ -3,12 +3,14 @@
 	default_quest_shape: ""
 	filename: "the_aether"
 	group: "6855847200ADBE3A"
+	hide_quest_until_deps_visible: true
 	icon: "aether:aether_portal_frame"
 	id: "73995409A876E354"
 	order_index: 7
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["4A691BB889286C89"]
 			description: [
 				"Don't worry, if you fall into the void you simply fall down back to the Overworld..."
 				""
@@ -40,6 +42,8 @@
 				"The boss is a giant cube named the Slider."
 				""
 				"It is highly recommended to use Aether's pickaxes against this boss."
+				""
+				"If you die repeatedly for not being well-equipped for this fight, it's not my fault."
 			]
 			icon: "aether:sentry_stone"
 			id: "7E54FC006A63F581"
@@ -60,6 +64,7 @@
 					value: 1L
 				}
 			]
+			title: "The Bronze Dungeon"
 			x: -1.0d
 			y: 2.5d
 		}
@@ -73,6 +78,7 @@
 					icon: "aether:angelic_stone"
 					id: "79FA6179EB494B45"
 					structure: "aether:silver_dungeon"
+					title: "Find a Silver Dungeon"
 					type: "structure"
 				}
 				{
@@ -83,7 +89,7 @@
 					value: 1L
 				}
 			]
-			title: "Find the Silver Dungeon"
+			title: "The Silver Dungeon"
 			x: 0.0d
 			y: 3.0d
 		}
@@ -97,6 +103,7 @@
 					icon: "aether:hellfire_stone"
 					id: "36B914C52BD46994"
 					structure: "aether:gold_dungeon"
+					title: "Find a Gold Dungeon"
 					type: "structure"
 				}
 				{
@@ -107,26 +114,61 @@
 					value: 1L
 				}
 			]
+			title: "Find a Gold Dungeon"
 			x: 1.0d
 			y: 2.5d
 		}
 		{
 			dependencies: ["0AE18F38AA82D15F"]
-			id: "627D4711118812B1"
-			tasks: [{
-				id: "69A1784AD6DE7DA5"
-				item: {
-					Count: 1b
-					id: "aether:zanite_pickaxe"
-					tag: {
-						Damage: 0
-					}
+			icon: {
+				Count: 1b
+				id: "aether:holystone_pickaxe"
+				tag: {
+					Damage: 0
 				}
-				type: "item"
-			}]
+			}
+			id: "627D4711118812B1"
+			subtitle: "Vanilla tools are less effective in the Aether."
+			tasks: [
+				{
+					id: "68B2572A7A39F599"
+					item: {
+						Count: 1b
+						id: "aether:skyroot_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3AE492D0DFABE439"
+					item: {
+						Count: 1b
+						id: "aether:holystone_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "397417BE1C4CC437"
+					item: {
+						Count: 1b
+						id: "aether:zanite_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "New Pickaxes, again!"
 			x: 0.0d
 			y: 1.5d
 		}
 	]
+	subtitle: ["A hostile heaven."]
 	title: "The Aether"
 }

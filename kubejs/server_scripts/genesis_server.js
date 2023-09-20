@@ -484,7 +484,7 @@ ServerEvents.recipes(event => {
         Item.of('minecraft:disc_fragment_5').withChance(0.01)
     ], 'kubejs:deepslate_shard').id('finality:echo_shard_from_haunting')
     event.recipes.createHaunting([
-        'minecraft:wither_skeleton_skull', 
+        'minecraft:wither_skeleton_skull',
         Item.of('minecraft:coal').withChance(0.25)
     ], 'minecraft:skeleton_skull').id('finality:haunting/wither_skeleton_skull')
     // splashing
@@ -905,6 +905,12 @@ LootJS.modifiers((event) => {
         .randomChance(0.1).addLoot('create:zinc_nugget')
     event.addEntityLootModifier('minecraft:witch')
         .randomChance(0.1).addLoot('minecraft:lapis_lazuli')
+    if (Platform.isLoaded('aether')) {
+        event.addBlockLootModifier('aether:ambrosium_ore')
+            .randomChance(0.2).addLoot('aether:ambrosium_shard')
+        event.addBlockLootModifier('aether:zanite_ore')
+            .randomChance(0.12).addLoot('aether:zanite_gemstone')
+    }
     if (Platform.isLoaded('irons_spellbooks')) {
         event.addEntityLootModifier('minecraft:witch')
             .randomChance(0.1).addLoot('irons_spellbooks:common_ink')

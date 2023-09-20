@@ -5,7 +5,7 @@
 	group: "6855847200ADBE3A"
 	icon: "blue_skies:everbright_portal"
 	id: "5E7F667717AA0318"
-	order_index: 7
+	order_index: 8
 	quest_links: [ ]
 	quests: [{
 		dependencies: ["4A691BB889286C89"]
