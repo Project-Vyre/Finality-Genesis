@@ -252,20 +252,20 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         event.create(`kubejs:incomplete_${mechanism}`, 'create:sequenced_assembly').displayName(`<rainb>Incomplete ${PRIMORDIAL_MECHANISMS[mechanism]}</rainb>`).texture(`kubejs:item/incomplete_${mechanism}`)
     })
     // tools
-    event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_tool').displayName('§d<rainb>Particula Eversorem</rainb>').texture('kubejs:item/final_pickaxe').maxStackSize(1).fireResistant(true).group('tools')
-    event.create('kubejs:final_axe', 'axe').tier('final_tool').displayName('§d<rainb>Natura Exitium</rainb>').texture('kubejs:item/final_axe').maxStackSize(1).fireResistant(true).group('tools')
-    event.create('kubejs:final_shovel', 'shovel').tier('final_tool').displayName('§d<rainb>Terra Confractus</rainb>').texture('kubejs:item/final_shovel').maxStackSize(1).fireResistant(true).group('tools')
-    event.create('kubejs:final_hoe', 'hoe').tier('final_tool').displayName('§d<rainb>Agricola Manus</rainb>').texture('kubejs:item/final_hoe').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_tool').rarity('epic').displayName('§d<rainb>Particula Eversorem</rainb>').texture('kubejs:item/final_pickaxe').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_axe', 'axe').tier('final_tool').rarity('epic').displayName('§d<rainb>Natura Exitium</rainb>').texture('kubejs:item/final_axe').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_shovel', 'shovel').tier('final_tool').rarity('epic').displayName('§d<rainb>Terra Confractus</rainb>').texture('kubejs:item/final_shovel').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_hoe', 'hoe').tier('final_tool').rarity('epic').displayName('§d<rainb>Agricola Manus</rainb>').texture('kubejs:item/final_hoe').maxStackSize(1).fireResistant(true).group('tools')
     // weapons
-    event.create('kubejs:final_sword', 'sword').tier('final_tool').displayName('§d<rainb>Corevis Ultimatum</rainb>').texture('kubejs:item/final_sword').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_lance', 'sword').tier('final_tool').displayName('§d<rainb>Tenebris Punctura</rainb>').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_katana', 'sword').tier('final_tool').displayName('§d<rainb>Celeritas Obumbratio</rainb>').texture('kubejs:item/final_katana').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:crystal_lance', 'sword').tier('crystalline_tool').displayName('§b<rainb>Crystallus Hasta</rainb>').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_sword', 'sword').tier('final_tool').rarity('epic').displayName('§d<rainb>Corevis Ultimatum</rainb>').texture('kubejs:item/final_sword').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_lance', 'sword').tier('final_tool').rarity('epic').displayName('§d<rainb>Tenebris Punctura</rainb>').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_katana', 'sword').tier('final_tool').rarity('epic').displayName('§d<rainb>Celeritas Obumbratio</rainb>').texture('kubejs:item/final_katana').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:crystal_lance', 'sword').tier('crystalline_tool').rarity('epic').displayName('§b<rainb>Crystallus Hasta</rainb>').maxStackSize(1).fireResistant(true).group('combat')
     // armor
-    event.create('kubejs:final_helmet', 'helmet').tier('final_armor').displayName('§l§d<rainb>Conscientia Oculi</rainb>').texture('kubejs:item/final_helmet').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor').displayName('§l§d<rainb>Vitale Cordis</rainb>').texture('kubejs:item/final_chestplate').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_leggings', 'leggings').tier('final_armor').displayName('§l§d<rainb>Universum Motus</rainb>').texture('kubejs:item/final_leggings').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_boots', 'boots').tier('final_armor').displayName('§l§d<rainb>Gravitas Anchoram</rainb>').texture('kubejs:item/final_boots').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_helmet', 'helmet').tier('final_armor').rarity('epic').displayName('§l§d<rainb>Conscientia Oculi</rainb>').texture('kubejs:item/final_helmet').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor').rarity('epic').displayName('§l§d<rainb>Vitale Cordis</rainb>').texture('kubejs:item/final_chestplate').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_leggings', 'leggings').tier('final_armor').rarity('epic').displayName('§l§d<rainb>Universum Motus</rainb>').texture('kubejs:item/final_leggings').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_boots', 'boots').tier('final_armor').rarity('epic').displayName('§l§d<rainb>Gravitas Anchoram</rainb>').texture('kubejs:item/final_boots').maxStackSize(1).fireResistant(true).group('combat')
     // shapes and alphanumeric
     Object.keys(global.SHAPES).forEach(shape => {
         shapeItemGeneration(event, `uncolored_${shape}`, `§7Uncolored ${global.SHAPES[shape]}`, `uncolored_${shape}`)
@@ -1098,6 +1098,10 @@ ClientEvents.init(event => {
     }
     if (Platform.isLoaded('alexsmobs')) {
         YELLOW_PALETTE('minecraft:pumpkin')
+    }
+    if (Platform.isLoaded('architects_palette')) {
+        GRAY_BLUE_PALETTE('architects_palette:chiseled_abyssaline_bricks')
+        GRAY_RED_PALETTE('architects_palette:chiseled_hadaline_bricks')
     }
     if (Platform.isLoaded('autumnity')) {
         YELLOW_PALETTE('autumnity:sappy_maple_log')
