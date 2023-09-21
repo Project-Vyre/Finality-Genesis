@@ -1,6 +1,4 @@
 // requires: roughlyenoughitems
-// requires: roughlyenoughresources
-// requires: roughlyenoughprofessions
 
 let REI_CREATE_COMPAT_ORES = [
     'osmium',
