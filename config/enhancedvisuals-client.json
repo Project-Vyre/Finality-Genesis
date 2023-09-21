@@ -7,7 +7,7 @@
   "handlers": {
     "explosion": {
       "enabled": true,
-      "opacity": 1.0,
+      "opacity": 0.7527675,
       "dust": {
         "disabled": false,
         "opacity": 1.0,
@@ -18,8 +18,8 @@
         }
       },
       "dustDuration": {
-        "min": 500,
-        "max": 1000
+        "min": 200,
+        "max": 600
       },
       "dustAmount": {
         "min": 0,
@@ -30,9 +30,9 @@
       "maxExplosionVolume": 0.5,
       "explosionSoundTime": {
         "min": 0,
-        "minValue": 50,
-        "max": 20,
-        "maxValue": 200
+        "minValue": 20,
+        "max": 30,
+        "maxValue": 50
       },
       "blur": {
         "disabled": false,
@@ -40,15 +40,15 @@
       },
       "maxBlur": {
         "min": 0,
-        "minValue": 50,
-        "max": 10,
-        "maxValue": 100
+        "minValue": 10,
+        "max": 5,
+        "maxValue": 25
       },
       "explosionBlurTime": {
         "min": 0,
-        "minValue": 10,
-        "max": 20,
-        "maxValue": 20
+        "minValue": 5,
+        "max": 10,
+        "maxValue": 10
       }
     },
     "potion": {
