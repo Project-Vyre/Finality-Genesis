@@ -89,6 +89,7 @@ ServerEvents.tags('block', event => {
     CREATE_PALETTE_BLOCKS.forEach(block => {
         event.add('blockrunner:very_quick_blocks', [
             `create:layered_${block}`,
+            `create:${block}_pillar`,
             `create:polished_cut_${block}`
         ])
     })
