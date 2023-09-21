@@ -1,0 +1,12 @@
+{
+  "title": {
+    "text": "Tip",
+    "bold": true,
+    "italic": false,
+    "underlined": false,
+    "color": "yellow"
+  },
+  "tip": {
+    "translate": "tipsmod.tip.arthropods"
+  }
+}
