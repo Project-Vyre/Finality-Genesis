@@ -3,6 +3,7 @@
 // requires: supplementaries
 
 ServerEvents.recipes(event => {
+    event.remove({ id: 'bhc:god_apple' })
     event.shaped('bhc:canister', [
         ' I ',
         'ICI',
