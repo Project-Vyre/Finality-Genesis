@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "enigmaticlegacy"
+    }
+  ],
+  "title": {
+    "text": "Finality Tip",
+    "bold": true,
+    "color": "light_purple"
+  },
+  "tip": {
+    "text": "Wearing the Ring of the Seven Curses can yield extra rewards such as Slime Balls from Zombies, at the cost of your <shake>sanity</shake>. So choose wisely!"
+  }
+}
