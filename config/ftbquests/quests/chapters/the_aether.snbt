@@ -6,6 +6,18 @@
 	hide_quest_until_deps_visible: true
 	icon: "aether:aether_portal_frame"
 	id: "73995409A876E354"
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 64.0d
+		hover: [ ]
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
 	order_index: 7
 	quest_links: [ ]
 	quests: [
