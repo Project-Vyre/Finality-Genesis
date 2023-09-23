@@ -3,6 +3,16 @@
 // requires: lootjs
 
 ServerEvents.recipes(event => {
+    event.custom({
+        "type": "aether:enchanting",
+        "category": "enchanting_blocks",
+        "cookingtime": 500,
+        "experience": 1.0,
+        "ingredient": {
+            "item": "aether:gravitite_ore"
+        },
+        "result": "aether:enchanted_gravitite"
+    })
     event.recipes.createCrushing([
         'aether:ambrosium_shard',
         Item.of('aether:ambrosium_shard').withChance(0.75),
