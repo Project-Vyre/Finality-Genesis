@@ -88,7 +88,6 @@ let MYS_FLUID_HIDE = [
 let CAdditionsItems = [
     'straw',
     'bioethanol_bucket',
-    'gold_rod',
     'brass_rod',
     'electrum_rod',
     'electrum_ingot',
