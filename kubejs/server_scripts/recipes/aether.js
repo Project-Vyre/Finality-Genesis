@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
             "item": "aether:gravitite_ore"
         },
         "result": "aether:enchanted_gravitite"
-    })
+    }).id('aether:enchanted_gravitite_enchanting')
     event.recipes.createCrushing([
         'aether:ambrosium_shard',
         Item.of('aether:ambrosium_shard').withChance(0.75),
