@@ -102,7 +102,7 @@
     {
       "type": "goblintraders:basic",
       "experience": 4,
-      "max_trades": 128,
+      "max_trades": 32,
       "offer_item": {
         "count": 1,
         "item": "create:andesite_alloy"
@@ -116,6 +116,20 @@
         "count": 1,
         "item": "minecraft:iron_nugget"
       }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 30,
+      "offer_item": {
+        "count": 2,
+        "item": "create:zinc_ingot"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "create:raw_zinc"
+      },
+      "price_multiplier": 0.0
     }
   ]
 }
