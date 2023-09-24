@@ -10,6 +10,9 @@ ServerEvents.tags('item', event => {
         'architects_palette:myonite',
         'architects_palette:myonite_bricks'
     ])
+    if (Platform.isLoaded('bhc')) {
+        event.add('forge:wither_bones', 'architects_palette:withered_bone')
+    }
 })
 
 ServerEvents.recipes(event => {
