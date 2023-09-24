@@ -9,7 +9,7 @@
 	#Allowed Values: Never, Always, Contextual
 	manaBarDisplay = "Contextual"
 	#Use to adjust if the mana bar conflicts with other mod's ui elements (11 is one full hunger bar up).
-	manaBarYOffset = 0
+	manaBarYOffset = 15
 	manaBarXOffset = 0
 	manaBarTextVisible = true
 	#Allowed Values: Hunger, XP, Center, TopLeft, TopRight, BottomLeft, BottomRight
