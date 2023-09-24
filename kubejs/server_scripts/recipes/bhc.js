@@ -31,4 +31,10 @@ ServerEvents.recipes(event => {
         Item.of('minecraft:coal').withChance(0.25),
         Item.of('supplementaries:ash').withChance(0.25)
     ], 'minecraft:bone').id('finality:bhc/haunting/wither_bone')
+    event.shapeless('bhc:red_heart_canister', [
+        'bhc:red_heart',
+        '#forge:wither_bones',
+        'bhc:relic_apple',
+        'bhc:canister'
+    ]).id('bhc:red_heart_canister')
 })
