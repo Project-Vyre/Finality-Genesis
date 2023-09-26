@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "betterchunkloading"
+    }
+  ],
+  "title": {
+    "text": "Finality Tip",
+    "bold": true,
+    "color": "light_purple"
+  },
+  "tip": {
+    "text": "This is more of a fun fact, but the modpack uses predictive chunk loading! Sorry if chunks are a bit weird on occasion."
+  }
+}

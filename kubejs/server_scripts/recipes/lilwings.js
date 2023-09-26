@@ -13,6 +13,9 @@ ServerEvents.recipes(event => {
     event.shapeless('minecraft:ice', [
         'lilwings:white_fox_wings'
     ]).id('finality:lilwings/white_fox_wings_ice_conversion')
+    event.shapeless('3x minecraft:string', [
+        'lilwings:swallow_tail_wings'
+    ]).id('finality:lilwings/swallow_tail_wings')
 })
 
 ServerEvents.tags('item', event => {

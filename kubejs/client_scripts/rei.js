@@ -96,7 +96,6 @@ let MYS_FLUID_HIDE = [
 ]
 let CAdditionsItems = [
     'straw',
-    'bioethanol_bucket',
     'brass_rod',
     'digital_adapter'
 ]
@@ -216,7 +215,6 @@ REIEvents.hide('fluid', event => {
     MYS_FLUID_HIDE.forEach(name => {
         event.hide(`mysticalagradditions:${name}`)
     })
-    event.hide('createaddition:bioethanol')
     if (Platform.isLoaded('decorative_blocks')) {
         event.hide('decorative_blocks:thatch')
     }

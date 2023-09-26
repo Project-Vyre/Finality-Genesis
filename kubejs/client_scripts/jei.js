@@ -87,7 +87,6 @@ let MYS_FLUID_HIDE = [
 ]
 let CAdditionsItems = [
     'straw',
-    'bioethanol_bucket',
     'brass_rod',
     'electrum_rod',
     'electrum_ingot',
@@ -131,7 +130,6 @@ JEIEvents.hideFluids(event => {
     MYS_FLUID_HIDE.forEach(name => {
         event.hide(`mysticalagradditions:${name}`)
     })
-    event.hide('createaddition:bioethanol')
 })
 
 JEIEvents.information(event => {

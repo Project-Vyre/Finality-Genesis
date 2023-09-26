@@ -72,7 +72,11 @@
 				""
 				"I'm aware that the tooltip suggests &910 seconds&r, but it was increased to &9300 seconds&r in &bserverconfig&r."
 				""
-				"so you maaay have to copy it over from &ddefaultconfigs&r if you are playing from an older version of the modpack like pre &e0.1.4e&r."
+				"So... you maaay have to copy it over from &ddefaultconfigs&r if you are playing from an older version of the modpack like pre &e0.1.4e&r."
+				""
+				"Go open modpack's instance directory and copy the &dcreatecafe-server.toml&r file from the &bdefaultconfigs&r folder and paste it into your world's &aserverconfig&r folder."
+				""
+				"If you can't locate your world saves, they are inside the &dsaves&r folder and use the same name that you typed in on world creation."
 			]
 			id: "795154CF221D098B"
 			subtitle: "They're worth it."

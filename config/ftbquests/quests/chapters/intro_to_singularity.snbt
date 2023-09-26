@@ -308,6 +308,8 @@
 				"If you still find yourself running out of string or wool, gather &2flax seeds&r and plant them. &aFlax&r can then be refined with a &6Millstone&r to get additional string and seeds."
 				""
 				"This process can then be automated with &6Create&r and its &7Mechanical Harvesters&r."
+				""
+				"Also, if you didn't read the tooltip for &6Campfires&r like the majority of players who skim over &c<shake>everything</shake>&r, they can now regenerate your health. &6<wave>Cozy!</wave>&r"
 			]
 			hide: true
 			icon: "extendedcrafting:handheld_table"
@@ -791,13 +793,13 @@
 				""
 				"You can also access the <rainb>Ponder Index</rainb> from your Esc menu!"
 				""
-				"Go to the next page for tips for getting into Create and Apotheosis related information..."
+				"Here are some tips that I recommend following:"
 				""
 				"- Some <rainb>Ponder</rainb> views have &o&lmultiple scenes&r&r, so be sure to look at the bottom of your screen to see if there is a &lnext arrow&r."
 				""
 				"- Andesite, iron, copper and zinc are important. You will especially need andesite and iron."
 				""
-				"- Many useless vanilla items may no longer be useless when refined through Create's methods. For example, gravel."
+				"- Many useless vanilla items may no longer be useless when refined through Create's methods. Gravel can now be &9washed&r to make Iron Nuggets, for example."
 				""
 				"- Plan ahead with your logistics and the direction of your rotational force."
 			]

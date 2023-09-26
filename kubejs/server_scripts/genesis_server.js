@@ -31,13 +31,6 @@ let CURSEDRECIPES = [
     'gold_ingot_from_smelting_deepslate_gold_ore',
     'gold_ingot_from_blasting_deepslate_gold_ore',
 ]
-let MODRECIPES = [
-    'createaddition:mixing/netherrack',
-    'createaddition:rolling/straw',
-    'createaddition:mixing/bioethanol',
-    'createaddition:rolling/gold_ingot',
-    'createaddition:rolling/brass_ingot'
-]
 let STORAGE_INCEPTION = [
     'cobblestone',
     'cobbled_deepslate',
@@ -154,9 +147,6 @@ ServerEvents.recipes(event => {
     })
     CURSEDRECIPES.forEach(insert => { // removing cursed recipes pt2
         event.remove({ id: `minecraft:${insert}` })
-    })
-    MODRECIPES.forEach(insert => {
-        event.remove({ id: `${insert}` })
     })
     event.shapeless(Item.of('patchouli:guide_book', '{"patchouli:book":"patchouli:tome_of_finality"}'), [
         '#forge:rods/wooden', '#forge:rods/wooden'
@@ -531,6 +521,21 @@ ServerEvents.recipes(event => {
         I: 'minecraft:ink_sac',
         N: 'minecraft:nautilus_shell'
     }).id('finality:heart_of_the_sea')
+    event.shapeless('4x minecraft:quartz', [
+        '#forge:storage_blocks/quartz'
+    ]).id('finality:quartz_block_revert')
+    if (Platform.isLoaded('farmersdelight')) {
+        console.log("Farmer's Delight detected, correcting to recipes to 1:1 ratio.")
+        event.shapeless('create:dough', [
+            'minecraft:water_bucket',
+            'create:wheat_flour'
+        ]).id('create:crafting/appliances/dough')
+        event.recipes.createMixing('create:dough', [
+            'create:wheat_flour',
+            Fluid.of('minecraft:water', 1000)
+        ]).id('create:mixing/dough_by_mixing')
+        event.remove({ id: 'farmersdelight:wheat_dough_from_water' })
+    }
     // supplementaries related
     event.shaped('supplementaries:quiver', [
         'RRL',
