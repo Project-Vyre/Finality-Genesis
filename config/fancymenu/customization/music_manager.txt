@@ -20,22 +20,22 @@ customization {
 }
 
 customization {
-  audio_source:fc6c008f-e3b3-45e0-aeb1-e293841b60a21693636192464 = config/fancymenu/assets/menu_music/hide_and_seek_r3_music_box.ogg;EXTERNAL_LOCAL;100;0
   orientation = mid-centered
+  audio_source:4942cf00-2d9b-45d6-967e-546ee9b58dfa1695726272672 = kubejs/assets/minecraft/sounds/music/menu/menu4.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:cf7ee897-3670-4249-be79-184a3c918b3e1695726237946 = kubejs/assets/minecraft/sounds/music/menu/menu1.ogg;EXTERNAL_LOCAL;100;0
   [loading_requirement:fancymenu_loading_requirement_is_world_loaded][requirement_mode:if_not][req_id:ac8ea68e-9b00-41c4-8719-d80121251b501691181789776] = 
   channel = music
-  audio_source:c6494a00-af0d-4660-918b-d698dddd96101682981602154 = resourcepacks/Finality Genesis Resources/assets/minecraft/sounds/music/menu/menu3.ogg;EXTERNAL_LOCAL;100;0
-  audio_source:6bfdbf5c-9d60-4ea1-91b6-82a425709a0e1682981595973 = resourcepacks/Finality Genesis Resources/assets/minecraft/sounds/music/menu/menu2.ogg;EXTERNAL_LOCAL;100;0
-  audio_source:7fb0b7d8-d60e-4038-8b13-1b2ae5eab72e1682981574935 = resourcepacks/Finality Genesis Resources/assets/minecraft/sounds/music/menu/menu1.ogg;EXTERNAL_LOCAL;100;0
-  audio_source:b2ab6fd6-7463-40fd-9225-55c35963ceb21682981608352 = resourcepacks/Finality Genesis Resources/assets/minecraft/sounds/music/menu/menu4.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:2a3bf5b2-bc1f-402f-bd38-aa7f595686db1695726433517 = config/fancymenu/assets/menu_music/hide_and_seek_r3_music_box.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:ed50fe2e-50ef-4a37-a521-b2308b7e99ec1695726266683 = kubejs/assets/minecraft/sounds/music/menu/menu3.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:1e693ff8-7c42-4836-aed6-3999857d9bcc1695726412048 = config/fancymenu/assets/menu_music/cjbeards_bad_deeds_inst.ogg;EXTERNAL_LOCAL;100;0
   loop = true
   x = -25
   width = 50
   action = custom_layout_element:fancymenu_extension:audio_item
   actionid = b3036c15-7a45-4558-a042-16a0b6821d751682981884968
   y = -25
+  audio_source:00432011-1e55-4eb2-93c9-8583a274ca771695726258686 = kubejs/assets/minecraft/sounds/music/menu/menu2.ogg;EXTERNAL_LOCAL;100;0
   once_per_session = false
-  audio_source:c1d2e1aa-70c7-4427-b4e9-7fcdf056febb1691258322569 = config/fancymenu/assets/menu_music/cjbeards_bad_deeds_inst.ogg;EXTERNAL_LOCAL;100;0
   height = 50
 }
 
