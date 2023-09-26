@@ -1,5 +1,6 @@
 // requires: architects_palette
 // requires: v_slab_compat
+// requires: create
 
 console.log("Fixing Jsburg's mistakes... Architect's Palette 1.3.3 for 1.19.2.")
 console.log("The recipes are VERY stubborn in getting overridden by recipe ID, so I am sorry if parsing errors show in the console logs.")
@@ -17,6 +18,20 @@ ServerEvents.tags('item', event => {
 
 ServerEvents.recipes(event => {
     event.smoking('architects_palette:charcoal_block', '#minecraft:logs_that_burn').id('architects_palette:smelting/charcoal_block_from_logs_that_burn_smoking')
+    event.recipes.createMixing('architects_palette:heliodor_rod', [
+        '4x minecraft:glowstone_dust',
+        Fluid.of('kubejs:shimmer', 250)
+    ]).id('finality:mixing/heliodor_rod_renewal')
+    event.recipes.createMixing('architects_palette:ekanite_rod', [
+        'minecraft:emerald',
+        '4x minecraft:glowstone_dust',
+        Fluid.of('kubejs:shimmer', 250)
+    ]).id('finality:mixing/ekanite_rod_renewal')
+    event.recipes.createMixing('architects_palette:monazite_rod', [
+        'create:cinder_flour',
+        '4x minecraft:glowstone_dust',
+        Fluid.of('kubejs:shimmer', 250)
+    ]).id('finality:mixing/monazite_rod_renewal')
     event.remove([
         { id: 'architects_palette:vertslabs/myonite_vertical_slab' },
         { id: 'architects_palette:vertslabs/myonite_vertical_slab_revert' },

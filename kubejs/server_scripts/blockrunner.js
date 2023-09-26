@@ -93,4 +93,31 @@ ServerEvents.tags('block', event => {
             `create:polished_cut_${block}`
         ])
     })
+    if (Platform.isLoaded('architects_palette')) {
+        event.add('blockrunner:slightly_quick_blocks', [
+            'architects_palette:abyssaline_plating',
+            'architects_palette:ancient_plating',
+            'architects_palette:hadaline_plating',
+            'architects_palette:plating_block',
+            'architects_palette:sunmetal_block',
+            'architects_palette:sunmetal_pillar',
+            'architects_palette:chiseled_sunmetal_block'
+        ])
+        event.add('blockrunner:quick_blocks', [
+            'architects_palette:heavy_stone_bricks',
+            'architects_palette:heavy_end_stone_bricks'
+        ])
+        event.add('blockrunner:very_quick_blocks', [
+            'architects_palette:entwine',
+            'architects_palette:entwine_pillar',
+            'architects_palette:chiseled_entwine',
+            'architects_palette:unobtanium_block'
+        ])
+    }
+    if (Platform.isLoaded('supplementaries')) {
+        event.add('blockrunner:very_quick_blocks', [
+            'supplementaries:stone_tile',
+            'supplementaries:blackstone_tiles'
+        ])
+    }
 })

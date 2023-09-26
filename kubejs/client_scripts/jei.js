@@ -94,6 +94,7 @@ let CAdditionsItems = [
     'electrum_nugget',
     'electrum_wire',
     'electrum_spool',
+    'electrum_amulet',
     'digital_adapter'
 ]
 
