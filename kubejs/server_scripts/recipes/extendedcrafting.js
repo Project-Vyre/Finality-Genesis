@@ -468,7 +468,7 @@ ServerEvents.recipes(event => {
         event.recipes.createPressing('kubejs:incomplete_ascendant_mechanism', 'kubejs:incomplete_ascendant_mechanism')
     ]).transitionalItem('kubejs:incomplete_ascendant_mechanism').loops(5).id('finality:ascendant_mechanism_creation')
     event.recipes.createSequencedAssembly([
-        Item.of('kubejs:entropy_mechanism').withChance(175.0),
+        Item.of('kubejs:entropy_mechanism').withChance(110.0),
         Item.of('minecraft:structure_void').withChance(50.0),
         Item.of('minecraft:debug_stick').withChance(50.0),
         Item.of('minecraft:jigsaw').withChance(50.0),
@@ -485,5 +485,5 @@ ServerEvents.recipes(event => {
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:cpu_shape']),
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:blueprint_shape']),
         event.recipes.createDeploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:emitter_shape'])
-    ]).transitionalItem('kubejs:incomplete_entropy_mechanism').loops(1).id('finality:entropy_mechanism_creation')
+    ]).transitionalItem('kubejs:incomplete_entropy_mechanism').loops(3).id('finality:entropy_mechanism_creation')
 })
