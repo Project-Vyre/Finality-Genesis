@@ -10,7 +10,12 @@ backups/
 crash-reports/
 downloads/
 emojiful/
-essential/
+essential/*-cache
+essential/*-caches
+essential/libraries
+essential/loader
+essential/lwjgl3-natives
+essential/*-metadata
 fancymenu_data/
 fancymenu_instance_data/
 fancymenu_setups/
@@ -36,6 +41,8 @@ config/WildfireGender/*
 .qmenu_opened.marker
 *.log
 *.zip
+essential/*.jar
+essential/*.json
 imgui.ini
 knownkeys.txt
 minecraftinstance.json
