@@ -180,6 +180,9 @@ REIEvents.hide('item', event => {
             'domesticationinnovation:magnet'
         ])
     }
+    if (Platform.isLoaded('incubation')) {
+        event.hide('incubation:fried_egg')
+    }
     if (Platform.isLoaded('irons_spellbooks')) {
         event.hide([
             'irons_spellbooks:legendary_spell_book',

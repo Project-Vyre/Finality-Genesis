@@ -125,6 +125,9 @@ JEIEvents.hideItems(event => {
             'gag:energized_hearthstone'
         ])
     }
+    if (Platform.isLoaded('incubation')) {
+        event.hide('incubation:fried_egg')
+    }
 })
 
 JEIEvents.hideFluids(event => {
