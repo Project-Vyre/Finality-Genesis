@@ -468,6 +468,8 @@
   "item.eccentrictome.tome.tooltip.behaviour1": "Combine _while in book form_ in a crafting grid _with_ the item you want to _store_. Pickaxes, axes, shovels, hoes, shears, the _Wand of Symmetry_ and _Wrench_ from Create are all permitted.",
   "item.eccentrictome.tome.tooltip.condition2": "Warning!",
   "item.eccentrictome.tome.tooltip.behaviour2": "<shake>DO NOT USE AS A CRAFTING INGREDIENT <shake>OR YOU WILL LOSE ALL STORED ITEMS!",
+  "item.eccentrictome.tome.tooltip.condition3": "Extra warning",
+  "item.eccentrictome.tome.tooltip.behaviour3": "Be careful when _using_ the _Wand of Symmetry_ as it can bypass the durability protections on tools that are about to break. You will lose the tome if the item _actually_ breaks.",
   "item.eccentrictome.tome.tooltip.control1": "Right click",
   "item.eccentrictome.tome.tooltip.action1": "To select everything stored.",
   "item.eccentrictome.tome.tooltip.control2": "Shift + Left Click (while transformed as another item)",
