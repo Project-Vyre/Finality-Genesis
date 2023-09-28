@@ -2,7 +2,9 @@
 // requires: create
 
 ServerEvents.recipes(event => {
-    event.remove({ id: 'mob_grinding_utils:recipe_fan' })
+    event.remove([
+        { id: 'mob_grinding_utils:recipe_fan' }
+    ])
     event.custom({
         "type": "extendedcrafting:shaped_table",
         "pattern": [
