@@ -23,6 +23,26 @@ Please see the license page over here, thank you: https://project-vyre.github.io
 * For others, **you are prohibited from redistributing any of the above folders or files in any publicly released packs without permission from us unless explicitly stated.** 
   * Again, this does not mean that you are not allowed to use the code as a reference on how to write things in KubeJS!
 
+## Mod List
+Updated as of 0.2-rc2
+
+### DO NOT UPDATE THESE
+- Cucumber Library (don't update)
+- Extended Crafting (don't update)
+- Iron's Spells 'n Spellbooks (don't update until after full rework)
+- Mystical Agriculture (don't update)
+
+### The rest
+- Abnormals Delight
+- Ad Astra
+- Alex's Mobs
+- Allurement
+- AmbientSounds 5
+- Apotheosis
+- AppleSkin
+- Aquamirae (Forge)
+-
+
 ***
 
 This repository serves as a public "archive" of sorts for the modpack in case of the death of CelestialAbyss. I want this to be a point of reference for other beginner modpack makers to look through who have little to no experience in coding.
