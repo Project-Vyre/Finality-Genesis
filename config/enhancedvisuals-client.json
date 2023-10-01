@@ -7,7 +7,7 @@
   "handlers": {
     "explosion": {
       "enabled": true,
-      "opacity": 0.7527675,
+      "opacity": 1.0,
       "dust": {
         "disabled": false,
         "opacity": 1.0,
@@ -27,7 +27,7 @@
         "max": 20,
         "maxValue": 30
       },
-      "maxExplosionVolume": 0.5,
+      "maxExplosionVolume": 0.4,
       "explosionSoundTime": {
         "min": 0,
         "minValue": 20,
@@ -40,9 +40,9 @@
       },
       "maxBlur": {
         "min": 0,
-        "minValue": 10,
+        "minValue": 3,
         "max": 5,
-        "maxValue": 25
+        "maxValue": 10
       },
       "explosionBlurTime": {
         "min": 0,
@@ -348,7 +348,7 @@
         "animationSpeed": 0
       },
       "blur": {
-        "disabled": false,
+        "disabled": true,
         "opacity": 1.0
       }
     }
