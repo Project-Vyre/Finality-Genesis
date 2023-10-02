@@ -17,6 +17,11 @@
         "value": "minecraft:is_overworld"
       },
       {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "minecraft:the_void"
+      },
+      {
         "type": "BIOME_TAG",
         "negate": true,
         "value": "aether:is_aether"
