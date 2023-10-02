@@ -314,6 +314,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "3280E79F2CD74B0F"
+			subtitle: "Helmet enchantments filter."
 			tasks: [{
 				id: "5C4DCC02B451CBDC"
 				item: "apotheosis:helmet_tome"
@@ -327,6 +328,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "2095D6224E18FB5E"
+			subtitle: "Chestplate enchantments filter."
 			tasks: [{
 				id: "431CA9DABFADA285"
 				item: "apotheosis:chestplate_tome"
@@ -339,6 +341,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "03A8F69CDB1B4D04"
+			subtitle: "Boot enchantments filter."
 			tasks: [{
 				id: "006835D5484ABAAC"
 				item: "apotheosis:boots_tome"
@@ -351,6 +354,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "2DD02CF38762C5DF"
+			subtitle: "Leggings enchantments filter."
 			tasks: [{
 				id: "3C60DAF45F05032B"
 				item: "apotheosis:leggings_tome"
@@ -363,6 +367,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "16310D4341177DBD"
+			subtitle: "Sword enchantments filter."
 			tasks: [{
 				id: "7081D86E3D085F86"
 				item: "apotheosis:weapon_tome"
@@ -375,6 +380,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "5986BE189515A09D"
+			subtitle: "Pickaxe enchantments filter."
 			tasks: [{
 				id: "36E31F9DDE90BA5F"
 				item: "apotheosis:pickaxe_tome"
@@ -387,6 +393,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "099E7DE85728EF7B"
+			subtitle: "Fishing pole enchantments filter."
 			tasks: [{
 				id: "560839E3AE9CC993"
 				item: "apotheosis:fishing_tome"
@@ -399,6 +406,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "08DE4E031180931E"
+			subtitle: "Bow enchantments filter."
 			tasks: [{
 				id: "2FD0B15CA52C1042"
 				item: "apotheosis:bow_tome"
@@ -411,6 +419,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "5B78B34045FCF7C5"
+			subtitle: "Extracts half of the enchantments at the cost of your item."
 			tasks: [{
 				id: "4F5280D1C12F9C38"
 				item: "apotheosis:scrap_tome"
@@ -423,6 +432,7 @@
 			dependencies: ["412F89A109102D9D"]
 			hide: true
 			id: "437A1B22B98D1CB4"
+			subtitle: "...other enchantments filter?"
 			tasks: [{
 				id: "454AAD0DEDC24BA6"
 				item: "apotheosis:other_tome"

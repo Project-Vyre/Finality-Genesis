@@ -98,7 +98,7 @@
 				""
 				"&l&c<shake>Check for TNT or redstone around each Lootr chest.</shake>&r"
 				"{@pagebreak}"
-				"Thinking of no longer using Patchouli for the guide book..."
+				"Thinking of no longer using Patchouli for the guide book... information below is not relevant until it is more up to date."
 				""
 				"-+-"
 				""
@@ -875,6 +875,11 @@
 		}
 		{
 			dependencies: ["13186E7B0D6B6115"]
+			description: [
+				"The &aNature's Compass&r allows you to find &lbiomes&r."
+				""
+				"The &7Explorer's Compass&r allows you to find &lstructures&r."
+			]
 			icon: "minecraft:compass"
 			id: "650B5FD6B6CAD69C"
 			rewards: [
