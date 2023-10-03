@@ -47,7 +47,16 @@ ServerEvents.recipes(event => {
             'minecraft:trapped_chest'
         ]).id(`finality:woodworks/vanilla_trapped_chest_to_${insert}_trapped_chest_conversion`)
     })
+    event.remove({ id: 'abnormals_delight:atmospheric/laurel_cabinet' })
+    if (Platform.isLoaded('incubation') && Platform.isLoaded('farmersdelight')) {
+        event.remove([
+            { id: 'incubation:fried_egg' },
+            { id: 'incubation:fried_egg_from_smoking' },
+            { id: 'incubation:fried_egg_from_campfire_cooking' }
+        ])
+    }
 })
+
 /* Old code that should not be used.
 ServerEvents.recipes(event => {
     AUT.forEach(insert => {

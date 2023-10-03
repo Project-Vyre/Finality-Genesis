@@ -22,10 +22,14 @@ ServerEvents.recipes(event => {
     }).id('farmersdelight:cooking_pot')
     event.recipes.createCutting('2x farmersdelight:cutting_board', '#minecraft:wooden_slabs').id('farmersdelight:cutting_board')
     if (Platform.isLoaded('incubation')) {
-        event.remove([
-            { id: 'incubation:fried_egg' },
-            { id: 'incubation:fried_egg_from_smoking' },
-            { id: 'incubation:fried_egg_from_campfire_cooking' }
-        ])
+        event.smelting('farmersdelight:fried_egg', '#forge:eggs')
+            .cookingTime(200)
+            .id('farmersdelight:fried_egg')
+        event.campfireCooking('farmersdelight:fried_egg', '#forge:eggs')
+            .cookingTime(600)
+            .id('farmersdelight:fried_egg_from_campfire_cooking')
+        event.smoking('farmersdelight:fried_egg', '#forge:eggs')
+            .cookingTime(100)
+            .id('farmersdelight:fried_egg_from_smoking')
     }
 })
