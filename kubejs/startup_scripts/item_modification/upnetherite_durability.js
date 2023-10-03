@@ -1,3 +1,7 @@
+// requires: upgradednetherite
+// requires: upgradednetherite_ultimate
+// requires: upgradednetherite_creative
+
 let T2_TOOLS = 4096
 let T3_TOOLS = 8192
 let T2_ARMOR = 2048
