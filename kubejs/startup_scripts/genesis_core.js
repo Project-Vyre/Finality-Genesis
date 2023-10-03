@@ -10,6 +10,11 @@ console.info('Loading Finality startup scripts...')
 // let DYE_ID = ['white','orange','magenta','light_blue','lime','pink','purple','light_gray','gray','cyan','brown','green','blue','red','black','yellow']
 // let DYE_CAPS = ['WHITE','ORANGE','MAGENTA','LIGHT BLUE','LIME','PINK','PURPLE','LIGHT GRAY','GRAY','CYNA','BROWN','GREEN','BLUE','RED','BLACK','YELLOW']
 // let DISPLAY_COLOR = ['White', 'Orange', 'Magenta', 'Light Blue', 'Lime', 'Pink', 'Purple', 'Light Gray', 'Gray', 'Cyan', 'Brown', 'Green', 'Blue', 'Red', 'Black', 'Yellow']
+
+/*
+Note to self:
+.displayName() is deprecated on 1.20.1.
+*/
 let NATR = {
     blue_ice: 'Blue Ice',
     sand: 'Sand',
@@ -230,7 +235,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     STANDARD_NO_DISPLAY(event, 'deepslate_shard')
     STANDARD_NO_DISPLAY(event, 'trident_pole')
     STANDARD_NO_DISPLAY(event, 'trident_prong')
-    FULL_CUSTOM(event, 'construction_core_iron', '§fActivated Construction Iron Core', 'construction_iron', 16, true)
     FULL_CUSTOM(event, 'construction_core_diamond', '§bActivated Construction Diamond Crystal', 'construction_diamond', 16, true)
     FULL_CUSTOM(event, 'dormant_singularity_core', '§d<shake>Dormant Singularity Core</shake>', 'dormant_singularity_core', 16, true)
     FULL_CUSTOM(event, 'awakened_singularity_core', '<shake><rainb>Awakened Singularity Core</rainb></shake>', 'awakened_singularity_core', 8, true)
@@ -252,20 +256,78 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         event.create(`kubejs:incomplete_${mechanism}`, 'create:sequenced_assembly').displayName(`<rainb>Incomplete ${PRIMORDIAL_MECHANISMS[mechanism]}</rainb>`).texture(`kubejs:item/incomplete_${mechanism}`)
     })
     // tools
-    event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_tool').rarity('epic').displayName('§d<rainb>Particula Eversorem</rainb>').texture('kubejs:item/final_pickaxe').maxStackSize(1).fireResistant(true).group('tools')
-    event.create('kubejs:final_axe', 'axe').tier('final_tool').rarity('epic').displayName('§d<rainb>Natura Exitium</rainb>').texture('kubejs:item/final_axe').maxStackSize(1).fireResistant(true).group('tools')
-    event.create('kubejs:final_shovel', 'shovel').tier('final_tool').rarity('epic').displayName('§d<rainb>Terra Confractus</rainb>').texture('kubejs:item/final_shovel').maxStackSize(1).fireResistant(true).group('tools')
-    event.create('kubejs:final_hoe', 'hoe').tier('final_tool').rarity('epic').displayName('§d<rainb>Agricola Manus</rainb>').texture('kubejs:item/final_hoe').maxStackSize(1).fireResistant(true).group('tools')
+    event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_tool')
+        .rarity('epic')
+        .texture('kubejs:item/final_pickaxe')
+        .maxStackSize(1)
+        .fireResistant(true)
+        .group('tools')
+    event.create('kubejs:final_axe', 'axe').tier('final_tool')
+        .rarity('epic')
+        .texture('kubejs:item/final_axe')
+        .maxStackSize(1)
+        .fireResistant(true)
+        .group('tools')
+    event.create('kubejs:final_shovel', 'shovel').tier('final_tool')
+        .rarity('epic')
+        .texture('kubejs:item/final_shovel')
+        .maxStackSize(1)
+        .fireResistant(true)
+        .group('tools')
+    event.create('kubejs:final_hoe', 'hoe').tier('final_tool')
+        .rarity('epic')
+        .texture('kubejs:item/final_hoe')
+        .maxStackSize(1)
+        .fireResistant(true)
+        .group('tools')
     // weapons
-    event.create('kubejs:final_sword', 'sword').tier('final_tool').rarity('epic').displayName('§d<rainb>Corevis Ultimatum</rainb>').texture('kubejs:item/final_sword').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_lance', 'sword').tier('final_tool').rarity('epic').displayName('§d<rainb>Tenebris Punctura</rainb>').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_katana', 'sword').tier('final_tool').rarity('epic').displayName('§d<rainb>Celeritas Obumbratio</rainb>').texture('kubejs:item/final_katana').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:crystal_lance', 'sword').tier('crystalline_tool').rarity('epic').displayName('§b<rainb>Crystallus Hasta</rainb>').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_sword', 'sword').tier('final_tool')
+        .rarity('epic')
+        .texture('kubejs:item/final_sword')
+        .maxStackSize(1)
+        .fireResistant(true)
+        .group('combat')
+    event.create('kubejs:final_lance', 'sword').tier('final_tool')
+        .rarity('epic')
+        .maxStackSize(1)
+        .fireResistant(true)
+        .group('combat')
+    event.create('kubejs:final_katana', 'sword').tier('final_tool')
+        .rarity('epic')
+        .texture('kubejs:item/final_katana')
+        .maxStackSize(1)
+        .fireResistant(true)
+        .group('combat')
+    event.create('kubejs:crystal_lance', 'sword').tier('crystalline_tool')
+        .rarity('epic')
+        .maxStackSize(1)
+        .fireResistant(true)
+        .group('combat')
     // armor
-    event.create('kubejs:final_helmet', 'helmet').tier('final_armor').rarity('epic').displayName('§l§d<rainb>Conscientia Oculi</rainb>').texture('kubejs:item/final_helmet').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor').rarity('epic').displayName('§l§d<rainb>Vitale Cordis</rainb>').texture('kubejs:item/final_chestplate').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_leggings', 'leggings').tier('final_armor').rarity('epic').displayName('§l§d<rainb>Universum Motus</rainb>').texture('kubejs:item/final_leggings').maxStackSize(1).fireResistant(true).group('combat')
-    event.create('kubejs:final_boots', 'boots').tier('final_armor').rarity('epic').displayName('§l§d<rainb>Gravitas Anchoram</rainb>').texture('kubejs:item/final_boots').maxStackSize(1).fireResistant(true).group('combat')
+    event.create('kubejs:final_helmet', 'helmet').tier('final_armor')
+        .rarity('epic')
+        .texture('kubejs:item/final_helmet')
+        .maxStackSize(1)
+        .fireResistant(true)
+        .group('combat')
+    event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor')
+        .rarity('epic')
+        .texture('kubejs:item/final_chestplate')
+        .maxStackSize(1)
+        .fireResistant(true)
+        .group('combat')
+    event.create('kubejs:final_leggings', 'leggings').tier('final_armor')
+        .rarity('epic')
+        .texture('kubejs:item/final_leggings')
+        .maxStackSize(1)
+        .fireResistant(true)
+        .group('combat')
+    event.create('kubejs:final_boots', 'boots').tier('final_armor')
+        .rarity('epic')
+        .texture('kubejs:item/final_boots')
+        .maxStackSize(1)
+        .fireResistant(true)
+        .group('combat')
     // shapes and alphanumeric
     Object.keys(global.SHAPES).forEach(shape => {
         shapeItemGeneration(event, `uncolored_${shape}`, `§7Uncolored ${global.SHAPES[shape]}`, `uncolored_${shape}`)
@@ -529,6 +591,20 @@ StartupEvents.registry('block', event => {
             .requiresTool(true)
             .tagBlock('minecraft:mineable/shovel')
     })
+    if (Platform.isLoaded('mob_grinding_utils')) {
+        event.create('kubejs:incomplete_spikes')
+            .material('metal')
+            .hardness(30)
+            .resistance(1000)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/pickaxe')
+        event.create('kubejs:incomplete_jumbo_tank')
+            .material('netherite')
+            .hardness(30)
+            .resistance(1000)
+            .requiresTool(true)
+            .tagBlock('minecraft:mineable/pickaxe')
+    }
 })
 
 /**
@@ -571,6 +647,12 @@ StartupEvents.registry('fluid', event => {
     event.create('kubejs:shimmer')
         .flowingTexture('kubejs:block/shimmer_flow')
         .stillTexture('kubejs:block/shimmer_still')
+    event.create('kubejs:walnut_oil')
+        .thinTexture(0x98630B)
+        .bucketColor(0x98630B)
+    event.create('kubejs:fig_vinegar')
+        .thinTexture(0x2F0700)
+        .bucketColor(0x2F0700)
 })
 /*
     event.create('kubejs:shimmer')
@@ -790,12 +872,6 @@ ItemEvents.modification(event => {
             item.fireResistant = true
         })
     }
-    if (Platform.isLoaded('lilwings')) {
-        event.modify('lilwings:enderfly_net', item => {
-            item.maxDamage = -1
-            item.fireResistant = true
-        })
-    }
     // farmer's delight
     event.modify('farmersdelight:flint_knife', item => {
         item.maxDamage = 256
@@ -809,6 +885,17 @@ ItemEvents.modification(event => {
     event.modify('farmersdelight:netherite_knife', item => {
         item.maxDamage = 4096
     })
+    if (Platform.isLoaded('lilwings')) {
+        event.modify('lilwings:enderfly_net', item => {
+            item.maxDamage = -1
+            item.fireResistant = true
+        })
+    }
+    if (Platform.isLoaded('supplementaries')) {
+        event.modify('supplementaries:key', item => {
+            item.fireResistant = true
+        })
+    }
 })
 
 /*
@@ -893,7 +980,16 @@ let STANDARD_PALETTE_REGISTRY = [
     'minecraft:dried_kelp_block',
     'minecraft:coal_block',
     'minecraft:diamond_block',
+    'minecraft:raw_iron',
+    'minecraft:raw_gold',
+    'minecraft:raw_copper',
+    'minecraft:iron_ingot',
+    'minecraft:gold_ingot',
+    'minecraft:copper_ingot',
     'create:item_vault',
+    'create:raw_zinc',
+    'create:zinc_ingot',
+    'create:zinc_nugget',
     'chalk:chalk_box',
     'extendedcrafting:handheld_table',
     'farmersdelight:skillet',
@@ -910,22 +1006,12 @@ let GREEN_REGISTRY = [
     'createchunkloading:chunk_loader'
 ]
 let YELLOW_REGISTRY = [
-    'minecraft:campfire',
-    'cataclysm:infernal_forge',
-    'cataclysm:monstrous_helm',
-    'cataclysm:burning_ashes',
-    'cataclysm:the_incinerator',
-    'cataclysm:ignitium_helmet',
-    'cataclysm:ignitium_chestplate',
-    'cataclysm:ignitium_leggings',
-    'cataclysm:ignitium_boots',
-    'cataclysm:bulwark_of_the_flame'
+    'minecraft:campfire'
 ]
 let RED_REGISTRY = [
     'kubejs:removed_item',
     'minecraft:nether_star',
-    'minecraft:netherrack',
-    'cataclysm:wither_assault_shoulder_weapon'
+    'minecraft:netherrack'
 ]
 let PURPLE_REGISTRY = [
     'minecraft:structure_void',
@@ -945,16 +1031,7 @@ let PURPLE_REGISTRY = [
     'kubejs:final_helmet',
     'kubejs:final_chestplate',
     'kubejs:final_leggings',
-    'kubejs:final_boots',
-    'cataclysm:gauntlet_of_guard',
-    'cataclysm:gauntlet_of_bulwark',
-    'cataclysm:void_scatter_arrow',
-    'cataclysm:void_core',
-    'cataclysm:void_forge',
-    'cataclysm:void_assault_shoulder_weapon',
-    'cataclysm:abyssal_sacrifice',
-    'cataclysm:tidal_claws',
-    'cataclysm:abyssal_egg'
+    'kubejs:final_boots'
 ]
 let GRAY_REGISTRY = [
     'minecraft:rotten_flesh',
@@ -1114,11 +1191,35 @@ ClientEvents.init(event => {
     if (Platform.isLoaded('bhc')) {
         RED_PALETTE('bhc:red_heart')
     }
+    if (Platform.isLoaded('cataclysm')) {
+        PURPLE_PALETTE('cataclysm:gauntlet_of_guard')
+        PURPLE_PALETTE('cataclysm:gauntlet_of_bulwark')
+        PURPLE_PALETTE('cataclysm:void_scatter_arrow')
+        PURPLE_PALETTE('cataclysm:void_core')
+        PURPLE_PALETTE('cataclysm:void_forge')
+        PURPLE_PALETTE('cataclysm:void_assault_shoulder_weapon')
+        PURPLE_PALETTE('cataclysm:abyssal_sacrifice')
+        PURPLE_PALETTE('cataclysm:tidal_claws')
+        PURPLE_PALETTE('cataclysm:abyssal_egg')
+        RED_PALETTE('cataclysm:wither_assault_shoulder_weapon')
+        YELLOW_PALETTE('cataclysm:infernal_forge')
+        YELLOW_PALETTE('cataclysm:monstrous_helm')
+        YELLOW_PALETTE('cataclysm:burning_ashes')
+        YELLOW_PALETTE('cataclysm:the_incinerator')
+        YELLOW_PALETTE('cataclysm:ignitium_helmet')
+        YELLOW_PALETTE('cataclysm:ignitium_chestplate')
+        YELLOW_PALETTE('cataclysm:ignitium_leggings')
+        YELLOW_PALETTE('cataclysm:ignitium_boots')
+        YELLOW_PALETTE('cataclysm:bulwark_of_the_flame')
+    }
     if (Platform.isLoaded('cloudstorage')) {
         STANDARD_PALETTE('cloudstorage:balloon_bit')
         STANDARD_PALETTE('cloudstorage:balloon_stand')
         STANDARD_PALETTE('cloudstorage:cloud_chest')
         BLUE_PALETTE('cloudstorage:static_cloud_chest')
+    }
+    if (Platform.isLoaded('graveyard')) {
+        GRAY_RED_PALETTE('graveyard:ossuary')
     }
     if (Platform.isLoaded('monobank')) {
         STANDARD_PALETTE('monobank:monobank')
@@ -1128,11 +1229,13 @@ ClientEvents.init(event => {
     }
     if (Platform.isLoaded('quark')) {
         STANDARD_PALETTE('quark:abacus')
+        STANDARD_PALETTE('quark:crate')
     }
     if (Platform.isLoaded('salt')) {
         STANDARD_PALETTE('salt:salt')
     }
     if (Platform.isLoaded('supplementaries')) {
+        STANDARD_PALETTE('supplementaries:key')
         STANDARD_PALETTE('supplementaries:quiver')
     }
     if (Platform.isLoaded('tempad')) {
