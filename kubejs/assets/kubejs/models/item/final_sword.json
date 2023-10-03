@@ -2,14 +2,14 @@
   "parent": "item/handheld",
   "loader": "forge:separate-perspective",
   "base": {
-    "parent": "kubejs:item/crystal_lance_handheld"
+    "parent": "kubejs:item/final_sword_handheld"
   },
   "perspectives": {
     "gui": {
-      "parent": "kubejs:item/crystal_lance_gui"
+      "parent": "kubejs:item/final_sword_gui"
     },
     "fixed": {
-      "parent": "kubejs:item/crystal_lance_gui"
+      "parent": "kubejs:item/final_sword_gui"
     }
   }
 }
