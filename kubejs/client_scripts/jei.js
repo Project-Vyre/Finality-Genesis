@@ -119,6 +119,9 @@ JEIEvents.hideItems(event => {
         event.hide(`createaddition:${name}`)
     })
     event.hide('mysticalagriculture:harvester')
+    if (Platform.isLoaded('abnormals_delight')) {
+        event.hide('abnormals_delight:laurel_cabinet')
+    }
     if (Platform.isLoaded('gag')) {
         event.hide([
             'gag:hearthstone',

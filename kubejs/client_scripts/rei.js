@@ -162,6 +162,9 @@ REIEvents.hide('item', event => {
         /^create_central_kitchen.*[_:\/]incomplete(?![a-zA-Z0-9]).*/,
         /^createcafe.*[_:\/]incomplete(?![a-zA-Z0-9]).*/
     ])
+    if (Platform.isLoaded('abnormals_delight')) {
+        event.hide('abnormals_delight:laurel_cabinet')
+    }
     if (Platform.isLoaded('alexsmobs')) {
         event.hide(/^alexsmobs.*[_:\/]shard(?![a-zA-Z0-9]).*/)
         event.hide(/^alexsmobs.*[_:\/]inventory(?![a-zA-Z0-9]).*/)
