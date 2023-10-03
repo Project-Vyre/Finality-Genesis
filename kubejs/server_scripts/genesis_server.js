@@ -156,7 +156,7 @@ ServerEvents.recipes(event => {
         ' I '
     ], {
         I: 'create:iron_sheet'
-    }).id('minecraft:bucket')
+    }).id('finality:bucket')
     event.shaped('minecraft:clock', [
         ' G ',
         'GMG',
@@ -164,7 +164,7 @@ ServerEvents.recipes(event => {
     ], {
         G: 'create:golden_sheet',
         M: 'create:precision_mechanism'
-    }).id('minecraft:clock')
+    }).id('finality:clock')
     event.shaped('minecraft:compass', [
         ' I ',
         'IRI',
@@ -172,7 +172,7 @@ ServerEvents.recipes(event => {
     ], {
         I: 'create:iron_sheet',
         R: 'minecraft:redstone'
-    }).id('minecraft:compass')
+    }).id('finality:compass')
     event.shaped('minecraft:piston', [
         'WWW',
         'CEC',
@@ -182,7 +182,7 @@ ServerEvents.recipes(event => {
         C: 'minecraft:cobblestone',
         E: 'create:piston_extension_pole',
         R: 'minecraft:redstone'
-    }).id('minecraft:piston')
+    }).id('finality:piston')
     event.shaped('minecraft:hopper', [
         'F F',
         'FCF',
@@ -190,7 +190,7 @@ ServerEvents.recipes(event => {
     ], {
         F: 'create:iron_sheet',
         C: '#forge:chests/wooden'
-    }).id('minecraft:hopper')
+    }).id('finality:hopper')
     event.shaped('minecraft:trident', [
         'PPP',
         ' A ',
@@ -443,7 +443,7 @@ ServerEvents.recipes(event => {
     event.recipes.createCrushing([
         Item.of('create:copper_nugget').withChance(0.05),
         Item.of('minecraft:gunpowder').withChance(0.10)
-    ], 'minecraft:basalt').id('finality:basalt_crushing')
+    ], 'minecraft:basalt').processingTime(250).id('finality:basalt_crushing')
     event.recipes.createCrushing([
         'create:cinder_flour',
         Item.of('create:cinder_flour').withChance(0.50),
@@ -550,6 +550,55 @@ ServerEvents.recipes(event => {
         '4x minecraft:netherite_scrap',
         '4x minecraft:gold_ingot'
     ]).id('minecraft:netherite_ingot')
+    event.shaped('kubejs:denied_result', [
+        'I I',
+        ' I '
+    ], {
+        I: 'minecraft:iron_ingot'
+    }).id('minecraft:bucket')
+    event.shaped('kubejs:denied_result', [
+        ' G ',
+        'GMG',
+        ' G '
+    ], {
+        G: 'minecraft:gold_ingot',
+        M: 'minecraft:redstone'
+    }).id('minecraft:clock')
+    event.shaped('kubejs:denied_result', [
+        ' I ',
+        'IRI',
+        ' I '
+    ], {
+        I: 'minecraft:iron_ingot',
+        R: 'minecraft:redstone'
+    }).id('minecraft:compass')
+    event.shaped('kubejs:denied_result', [
+        'WWW',
+        'CEC',
+        'CRC'
+    ], {
+        W: '#minecraft:planks',
+        C: 'minecraft:cobblestone',
+        E: 'minecraft:iron_ingot',
+        R: 'minecraft:redstone'
+    }).id('minecraft:piston')
+    event.shaped('kubejs:denied_result', [
+        'F F',
+        'FCF',
+        ' F '
+    ], {
+        F: 'minecraft:iron_ingot',
+        C: '#forge:chests/wooden'
+    }).id('minecraft:hopper')
+    event.shaped('kubejs:denied_result', [
+        'GGG',
+        'GNG',
+        'OOO'
+    ], {
+        G: 'minecraft:glass',
+        N: 'minecraft:nether_star',
+        O: 'minecraft:obsidian'
+    }).id('minecraft:beacon')
     // removed create items
     event.recipes.createMixing('create:chromatic_compound', [
         '3x minecraft:glowstone_dust',
@@ -715,7 +764,7 @@ ServerEvents.recipes(event => {
     ], [
         Fluid.of('kubejs:shimmer', 750),
         'minecraft:netherrack',
-    ]).superheated().id('finality:compacting/netherite_scrap_renewal')
+    ]).id('finality:compacting/netherite_scrap_renewal')
     event.recipes.createMechanicalCrafting('kubejs:blueprint_shape_base', [
         'RC',
         'CC'
@@ -808,7 +857,7 @@ ServerEvents.tags('block', event => {
 })
 
 PlayerEvents.loggedIn(event => {
-    //Give the player the quest book on first join
+    // Give the player the quest book on first join
     if (!event.player.persistentData.contains('firstjoin')) {
         event.player.persistentData.putBoolean('firstjoin', true)
         event.player.give('ftbquests:book')
@@ -1014,6 +1063,8 @@ let BLACKLIST = {
     unusualend: 'Unusual End',
     hammerlib: 'HammerLib',
     solarflux: 'Solar Flux Reborn',
+    strange: 'Strange Lucky Blocks',
+    lucky: 'Lucky Blocks',
     twilightforest: 'Twilight Forest'
 }
 

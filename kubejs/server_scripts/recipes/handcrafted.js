@@ -17,7 +17,7 @@ ServerEvents.recipes(event => {
         { id: 'create:saw_warped_boards' }
     ])
     WOOD_TYPES.forEach(insert => {
-        event.recipes.createCutting(`4x handcrafted:${insert}_board`, `minecraft:${insert}_planks`).id(`handcrafted:saw_${insert}_boards`)
+        event.recipes.createCutting(`4x handcrafted:${insert}_board`, `minecraft:${insert}_planks`).processingTime(150).id(`handcrafted:saw_${insert}_boards`)
         event.shaped(`handcrafted:${insert}_counter`, [
             'CCC',
             'BHB',

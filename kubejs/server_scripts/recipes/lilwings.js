@@ -16,6 +16,12 @@ ServerEvents.recipes(event => {
     event.shapeless('3x minecraft:string', [
         'lilwings:swallow_tail_wings'
     ]).id('finality:lilwings/swallow_tail_wings')
+    event.shapeless('minecraft:apple', [
+        'lilwings:red_applefly_wings'
+    ]).id('finality:lilwings/red_applefly_wing_conversion')
+    event.shapeless('minecraft:golden_apple', [
+        'lilwings:gold_applefly_wings'
+    ]).id('finality:lilwings/gold_applefly')
 })
 
 ServerEvents.tags('item', event => {

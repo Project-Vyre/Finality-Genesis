@@ -17,6 +17,8 @@
 	scrollRecycleChance = 0.5
 	#Whether or not potions should be allowed to be brewed in the alchemist cauldron)
 	allowCauldronBrewing = true
+	#If true the world will attempt to be upgraded from an older version of ISS
+	runWorldUpgrader = true
 
 ["Upgrade Overrides"]
 	#Use these lists to change what items can interact with the Arcane Anvil's upgrade system. This can also be done via datapack.
@@ -40,738 +42,721 @@
 #Individual Spell Configuration
 [Spells]
 
-	#Blood Spells
-	[Spells.Blood-Slash]
+	#irons_spellbooks:fire
+	[Spells."irons_spellbooks:fireball"]
 		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "BLOOD"
+		School = "irons_spellbooks:fire"
 		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "RARE"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 10.0
-
-	[Spells.Blood-Step]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "BLOOD"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 5.0
-
-	[Spells.Heartstop]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "BLOOD"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 120.0
-
-	[Spells.Raise-Dead]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "BLOOD"
-		MaxLevel = 6
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 150.0
-
-	[Spells.Ray-Of-Siphoning]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "BLOOD"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 15.0
-
-	[Spells.Wither-Skull]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "BLOOD"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 1.0
-
-	[Spells.Blood-Needles]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "BLOOD"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 10.0
-
-	[Spells.Acupuncture]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "BLOOD"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "RARE"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 20.0
-
-	[Spells.Devour]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "BLOOD"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 20.0
-
-	#Ender Spells
-	[Spells.Evasion]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "ENDER"
-		MaxLevel = 5
 		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
 		MinRarity = "EPIC"
-		ManaCostMultiplier = 1.0
+		ManaCostMultiplier = 0.2
 		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 180.0
+		CooldownInSeconds = 25.0
 
-	[Spells.Magic-Arrow]
+	[Spells."irons_spellbooks:wall_of_fire"]
 		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "ENDER"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "RARE"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 8.0
-
-	[Spells.Magic-Missile]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "ENDER"
-		MaxLevel = 10
+		School = "irons_spellbooks:fire"
+		MaxLevel = 15
 		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
 		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
+		ManaCostMultiplier = 0.2
 		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 1.0
+		CooldownInSeconds = 20.0
 
-	[Spells.Teleport]
+	[Spells."irons_spellbooks:fire_breath"]
 		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "ENDER"
-		MaxLevel = 5
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 3.0
-
-	[Spells.Counterspell]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "ENDER"
-		MaxLevel = 1
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "RARE"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 15.0
-
-	[Spells.Dragon-Breath]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "ENDER"
-		MaxLevel = 10
+		School = "irons_spellbooks:fire"
+		MaxLevel = 20
 		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
 		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
+		ManaCostMultiplier = 0.2
 		SpellPowerMultiplier = 1.0
 		CooldownInSeconds = 12.0
 
-	[Spells.Starfall]
+	[Spells."irons_spellbooks:magma_bomb"]
 		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "ENDER"
-		MaxLevel = 10
+		School = "irons_spellbooks:fire"
+		MaxLevel = 20
 		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
 		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 12.0
+
+	[Spells."irons_spellbooks:burning_dash"]
+		Enabled = true
+		School = "irons_spellbooks:fire"
+		MaxLevel = 10
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 10.0
+
+	[Spells."irons_spellbooks:blaze_storm"]
+		Enabled = true
+		School = "irons_spellbooks:fire"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 20.0
+
+	[Spells."irons_spellbooks:firebolt"]
+		Enabled = true
+		School = "irons_spellbooks:fire"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 1.0
+
+	#irons_spellbooks:nature
+	[Spells."irons_spellbooks:poison_arrow"]
+		Enabled = true
+		School = "irons_spellbooks:nature"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 15.0
+
+	[Spells."irons_spellbooks:earthquake"]
+		Enabled = true
+		School = "irons_spellbooks:nature"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
 		SpellPowerMultiplier = 1.0
 		CooldownInSeconds = 16.0
 
-	#Evocation Spells
-	[Spells.Chain-Creeper]
+	[Spells."irons_spellbooks:poison_splash"]
 		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "EVOCATION"
-		MaxLevel = 6
+		School = "irons_spellbooks:nature"
+		MaxLevel = 20
 		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
 		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 15.0
-
-	[Spells.Fang-Strike]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "EVOCATION"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 5.0
-
-	[Spells.Fang-Ward]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "EVOCATION"
-		MaxLevel = 8
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 15.0
-
-	[Spells.Firecracker]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "EVOCATION"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 1.5
-
-	[Spells.Invisibility]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "EVOCATION"
-		MaxLevel = 6
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "RARE"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 45.0
-
-	[Spells.Lob-Creeper]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "EVOCATION"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 2.0
-
-	[Spells.Shield]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "EVOCATION"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 8.0
-
-	[Spells.Summon-Horse]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "EVOCATION"
-		MaxLevel = 5
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
+		ManaCostMultiplier = 0.2
 		SpellPowerMultiplier = 1.0
 		CooldownInSeconds = 20.0
 
-	[Spells.Summon-Vex]
+	[Spells."irons_spellbooks:oakskin"]
 		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "EVOCATION"
-		MaxLevel = 5
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "RARE"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 150.0
-
-	[Spells.Spectral-Hammer]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "EVOCATION"
-		MaxLevel = 5
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 10.0
-
-	[Spells.Gust]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "EVOCATION"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 12.0
-
-	#Fire Spells
-	[Spells.Blaze-Storm]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "FIRE"
+		School = "irons_spellbooks:nature"
 		MaxLevel = 10
 		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
 		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 20.0
-
-	[Spells.Burning-Dash]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "FIRE"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 10.0
-
-	[Spells.Fireball]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "FIRE"
-		MaxLevel = 3
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "EPIC"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 25.0
-
-	[Spells.Firebolt]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "FIRE"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 1.0
-
-	[Spells.Fire-Breath]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "FIRE"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 12.0
-
-	[Spells.Wall-Of-Fire]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "FIRE"
-		MaxLevel = 5
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 20.0
-
-	[Spells.Magma-Bomb]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "FIRE"
-		MaxLevel = 8
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 12.0
-
-	#Holy Spells
-	[Spells.Angel-Wing]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "HOLY"
-		MaxLevel = 5
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "EPIC"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 120.0
-
-	[Spells.Cloud-Of-Regeneration]
-		Enabled = false
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "HOLY"
-		MaxLevel = 5
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
+		ManaCostMultiplier = 0.2
 		SpellPowerMultiplier = 1.0
 		CooldownInSeconds = 35.0
 
-	[Spells.Greater-Heal]
+	[Spells."irons_spellbooks:spider_aspect"]
 		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "HOLY"
-		MaxLevel = 1
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "RARE"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 45.0
-
-	[Spells.Heal]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "HOLY"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 25.0
-
-	[Spells.Wisp]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "HOLY"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 3.0
-
-	[Spells.Fortify]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "HOLY"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 35.0
-
-	[Spells.Blessing-Of-Life]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "HOLY"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 10.0
-
-	[Spells.Healing-Circle]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "HOLY"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 25.0
-
-	[Spells.Guiding-Bolt]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "HOLY"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 8.0
-
-	[Spells.Sunbeam]
-		Enabled = false
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "HOLY"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 20.0
-
-	#Ice Spells
-	[Spells.Cone-Of-Cold]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "ICE"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 12.0
-
-	[Spells.Frost-Step]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "ICE"
-		MaxLevel = 8
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "RARE"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 10.0
-
-	[Spells.Icicle]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "ICE"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 1.0
-
-	[Spells.Summon-Polar-Bear]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "ICE"
+		School = "irons_spellbooks:nature"
 		MaxLevel = 10
 		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
 		MinRarity = "RARE"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 180.0
-
-	[Spells.Ice-Block]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "ICE"
-		MaxLevel = 6
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "RARE"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 15.0
-
-	[Spells.Frostbite]
-		Enabled = false
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "ICE"
-		MaxLevel = 0
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 0.0
-
-	#Lightning Spells
-	[Spells.Electrocute]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "LIGHTNING"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 12.0
-
-	[Spells.Lightning-Bolt]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "LIGHTNING"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "EPIC"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 25.0
-
-	[Spells.Lightning-Lance]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "LIGHTNING"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "RARE"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 8.0
-
-	[Spells.Charge]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "LIGHTNING"
-		MaxLevel = 3
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "RARE"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 40.0
-
-	[Spells.Ascension]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "LIGHTNING"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "RARE"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 15.0
-
-	[Spells.Chain-Lightning]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "LIGHTNING"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 20.0
-
-	#Void Spells
-	[Spells.Abyssal-Shroud]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "VOID"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "LEGENDARY"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 300.0
-
-	[Spells.Void-Tentacles]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "VOID"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "LEGENDARY"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 30.0
-
-	[Spells.Black-Hole]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "VOID"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "LEGENDARY"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 120.0
-
-	#Poison Spells
-	[Spells.Poison-Arrow]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "POISON"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 15.0
-
-	[Spells.Poison-Splash]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "POISON"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 20.0
-
-	[Spells.Poison-Breath]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "POISON"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 12.0
-
-	[Spells.Acid-Orb]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "POISON"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "COMMON"
-		ManaCostMultiplier = 1.0
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 15.0
-
-	[Spells.Spider-Aspect]
-		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "POISON"
-		MaxLevel = 8
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "RARE"
-		ManaCostMultiplier = 1.0
+		ManaCostMultiplier = 0.2
 		SpellPowerMultiplier = 1.0
 		CooldownInSeconds = 90.0
 
-	[Spells.Blight]
+	[Spells."irons_spellbooks:firefly_swarm"]
 		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "POISON"
-		MaxLevel = 8
+		School = "irons_spellbooks:nature"
+		MaxLevel = 20
 		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "RARE"
-		ManaCostMultiplier = 1.0
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 20.0
+
+	[Spells."irons_spellbooks:root"]
+		Enabled = true
+		School = "irons_spellbooks:nature"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
 		SpellPowerMultiplier = 1.0
 		CooldownInSeconds = 35.0
 
-	[Spells.Root]
+	[Spells."irons_spellbooks:blight"]
 		Enabled = true
-		#Allowed Values: FIRE, ICE, LIGHTNING, HOLY, ENDER, BLOOD, EVOCATION, VOID, POISON
-		School = "POISON"
+		School = "irons_spellbooks:nature"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 35.0
+
+	[Spells."irons_spellbooks:acid_orb"]
+		Enabled = true
+		School = "irons_spellbooks:nature"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 15.0
+
+	[Spells."irons_spellbooks:poison_breath"]
+		Enabled = true
+		School = "irons_spellbooks:nature"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 12.0
+
+	#irons_spellbooks:evocation
+	[Spells."irons_spellbooks:fang_ward"]
+		Enabled = true
+		School = "irons_spellbooks:evocation"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 15.0
+
+	[Spells."irons_spellbooks:fang_strike"]
+		Enabled = true
+		School = "irons_spellbooks:evocation"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 5.0
+
+	[Spells."irons_spellbooks:chain_creeper"]
+		Enabled = true
+		School = "irons_spellbooks:evocation"
 		MaxLevel = 10
 		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
 		MinRarity = "UNCOMMON"
-		ManaCostMultiplier = 1.0
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 15.0
+
+	[Spells."irons_spellbooks:gust"]
+		Enabled = true
+		School = "irons_spellbooks:evocation"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 12.0
+
+	[Spells."irons_spellbooks:invisibility"]
+		Enabled = true
+		School = "irons_spellbooks:evocation"
+		MaxLevel = 10
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 45.0
+
+	[Spells."irons_spellbooks:summon_vex"]
+		Enabled = true
+		School = "irons_spellbooks:evocation"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 150.0
+
+	[Spells."irons_spellbooks:lob_creeper"]
+		Enabled = true
+		School = "irons_spellbooks:evocation"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 2.0
+
+	[Spells."irons_spellbooks:shield"]
+		Enabled = true
+		School = "irons_spellbooks:evocation"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 8.0
+
+	[Spells."irons_spellbooks:summon_horse"]
+		Enabled = true
+		School = "irons_spellbooks:evocation"
+		MaxLevel = 10
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 20.0
+
+	[Spells."irons_spellbooks:spectral_hammer"]
+		Enabled = true
+		School = "irons_spellbooks:evocation"
+		MaxLevel = 10
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 10.0
+
+	[Spells."irons_spellbooks:firecracker"]
+		Enabled = true
+		School = "irons_spellbooks:evocation"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 1.5
+
+	#irons_spellbooks:ice
+	[Spells."irons_spellbooks:frostbite"]
+		Enabled = false
+		School = "irons_spellbooks:ice"
+		MaxLevel = 5
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 0.0
+
+	[Spells."irons_spellbooks:ice_block"]
+		Enabled = true
+		School = "irons_spellbooks:ice"
+		MaxLevel = 10
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 15.0
+
+	[Spells."irons_spellbooks:ray_of_frost"]
+		Enabled = true
+		School = "irons_spellbooks:ice"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 15.0
+
+	[Spells."irons_spellbooks:cone_of_cold"]
+		Enabled = true
+		School = "irons_spellbooks:ice"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 12.0
+
+	[Spells."irons_spellbooks:frost_step"]
+		Enabled = true
+		School = "irons_spellbooks:ice"
+		MaxLevel = 10
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 10.0
+
+	[Spells."irons_spellbooks:summon_polar_bear"]
+		Enabled = true
+		School = "irons_spellbooks:ice"
+		MaxLevel = 10
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 180.0
+
+	[Spells."irons_spellbooks:icicle"]
+		Enabled = true
+		School = "irons_spellbooks:ice"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 1.0
+
+	#irons_spellbooks:ender
+	[Spells."irons_spellbooks:abyssal_shroud"]
+		Enabled = true
+		School = "irons_spellbooks:ender"
+		MaxLevel = 10
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "LEGENDARY"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 300.0
+
+	[Spells."irons_spellbooks:evasion"]
+		Enabled = true
+		School = "irons_spellbooks:ender"
+		MaxLevel = 10
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "EPIC"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 180.0
+
+	[Spells."irons_spellbooks:magic_missile"]
+		Enabled = true
+		School = "irons_spellbooks:ender"
+		MaxLevel = 10
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 1.0
+
+	[Spells."irons_spellbooks:void_tentacles"]
+		Enabled = true
+		School = "irons_spellbooks:ender"
+		MaxLevel = 10
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "LEGENDARY"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 30.0
+
+	[Spells."irons_spellbooks:summon_ender_chest"]
+		Enabled = true
+		School = "irons_spellbooks:ender"
+		MaxLevel = 1
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 5.0
+
+	[Spells."irons_spellbooks:magic_arrow"]
+		Enabled = true
+		School = "irons_spellbooks:ender"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 8.0
+
+	[Spells."irons_spellbooks:teleport"]
+		Enabled = true
+		School = "irons_spellbooks:ender"
+		MaxLevel = 5
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 3.0
+
+	[Spells."irons_spellbooks:dragon_breath"]
+		Enabled = true
+		School = "irons_spellbooks:ender"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 12.0
+
+	[Spells."irons_spellbooks:black_hole"]
+		Enabled = true
+		School = "irons_spellbooks:ender"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "LEGENDARY"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 120.0
+
+	[Spells."irons_spellbooks:counterspell"]
+		Enabled = true
+		School = "irons_spellbooks:ender"
+		MaxLevel = 1
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 15.0
+
+	[Spells."irons_spellbooks:starfall"]
+		Enabled = true
+		School = "irons_spellbooks:ender"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 16.0
+
+	#irons_spellbooks:holy
+	[Spells."irons_spellbooks:healing_circle"]
+		Enabled = true
+		School = "irons_spellbooks:holy"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 25.0
+
+	[Spells."irons_spellbooks:blessing_of_life"]
+		Enabled = true
+		School = "irons_spellbooks:holy"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 10.0
+
+	[Spells."irons_spellbooks:angel_wing"]
+		Enabled = true
+		School = "irons_spellbooks:holy"
+		MaxLevel = 10
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "EPIC"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 120.0
+
+	[Spells."irons_spellbooks:sunbeam"]
+		Enabled = true
+		School = "irons_spellbooks:holy"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 20.0
+
+	[Spells."irons_spellbooks:fortify"]
+		Enabled = true
+		School = "irons_spellbooks:holy"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
 		SpellPowerMultiplier = 1.0
 		CooldownInSeconds = 35.0
+
+	[Spells."irons_spellbooks:guiding_bolt"]
+		Enabled = true
+		School = "irons_spellbooks:holy"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 8.0
+
+	[Spells."irons_spellbooks:heal"]
+		Enabled = true
+		School = "irons_spellbooks:holy"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 25.0
+
+	[Spells."irons_spellbooks:wisp"]
+		Enabled = true
+		School = "irons_spellbooks:holy"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 3.0
+
+	[Spells."irons_spellbooks:greater_heal"]
+		Enabled = true
+		School = "irons_spellbooks:holy"
+		MaxLevel = 1
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 45.0
+
+	[Spells."irons_spellbooks:cloud_of_regeneration"]
+		Enabled = true
+		School = "irons_spellbooks:holy"
+		MaxLevel = 10
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 35.0
+
+	#irons_spellbooks:blood
+	[Spells."irons_spellbooks:raise_dead"]
+		Enabled = true
+		School = "irons_spellbooks:blood"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 150.0
+
+	[Spells."irons_spellbooks:blood_slash"]
+		Enabled = true
+		School = "irons_spellbooks:blood"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 10.0
+
+	[Spells."irons_spellbooks:blood_step"]
+		Enabled = true
+		School = "irons_spellbooks:blood"
+		MaxLevel = 5
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 5.0
+
+	[Spells."irons_spellbooks:acupuncture"]
+		Enabled = true
+		School = "irons_spellbooks:blood"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 20.0
+
+	[Spells."irons_spellbooks:ray_of_siphoning"]
+		Enabled = true
+		School = "irons_spellbooks:blood"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 15.0
+
+	[Spells."irons_spellbooks:blood_needles"]
+		Enabled = true
+		School = "irons_spellbooks:blood"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 10.0
+
+	[Spells."irons_spellbooks:heartstop"]
+		Enabled = true
+		School = "irons_spellbooks:blood"
+		MaxLevel = 10
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 120.0
+
+	[Spells."irons_spellbooks:devour"]
+		Enabled = true
+		School = "irons_spellbooks:blood"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 20.0
+
+	[Spells."irons_spellbooks:wither_skull"]
+		Enabled = true
+		School = "irons_spellbooks:blood"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 1.0
+
+	#irons_spellbooks:lightning
+	[Spells."irons_spellbooks:ascension"]
+		Enabled = true
+		School = "irons_spellbooks:lightning"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 15.0
+
+	[Spells."irons_spellbooks:lightning_lance"]
+		Enabled = true
+		School = "irons_spellbooks:lightning"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 8.0
+
+	[Spells."irons_spellbooks:electrocute"]
+		Enabled = true
+		School = "irons_spellbooks:lightning"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 12.0
+
+	[Spells."irons_spellbooks:lightning_bolt"]
+		Enabled = true
+		School = "irons_spellbooks:lightning"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "EPIC"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 25.0
+
+	[Spells."irons_spellbooks:charge"]
+		Enabled = true
+		School = "irons_spellbooks:lightning"
+		MaxLevel = 5
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 40.0
+
+	[Spells."irons_spellbooks:chain_lightning"]
+		Enabled = true
+		School = "irons_spellbooks:lightning"
+		MaxLevel = 20
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 20.0
 

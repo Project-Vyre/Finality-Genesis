@@ -1,5 +1,4 @@
 // requires: caupona
-// requires: create
 // requires: kubejs_create
 
 console.log("If one certain recipe from Caupona errors with KubeJS, it is a concurrency issue with Rhino.")
@@ -9,6 +8,10 @@ let panMaterials = [
     'copper',
     'iron'
 ]
+
+ServerEvents.tags('item', event => {
+    event.add('forge:fruits/fig', 'caupona:fig')
+})
 
 ServerEvents.recipes(event => {
     panMaterials.forEach(material => {
@@ -20,4 +23,13 @@ ServerEvents.recipes(event => {
             S: 'minecraft:stick'
         }).id(`caupona:crafting/${material}_frying_pan`)
     })
+    // implement yeast and fermentation process
+    event.recipes.createMixing(Fluid.of('kubejs:fig_vinegar', 250), [
+        '2x minecraft:sugar',
+        '4x caupona:fig'
+    ]).id('finality:mixing/fig_vinegar_fermenting')
+    event.recipes.createFilling('caupona:vinegar_spice_jar', [
+        'minecraft:flower_pot',
+        Fluid.of('kubejs:fig_vinegar', 250)
+    ]).id('finality:filling/vinegar_spice_from_figs')
 })
