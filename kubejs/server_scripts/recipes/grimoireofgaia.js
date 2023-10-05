@@ -13,11 +13,24 @@ ServerEvents.recipes(event => {
     event.shapeless('4x grimoireofgaia:shiny_pearl', [
         'grimoireofgaia:pearl_block'
     ]).id('finality:pearl_block_decompression')
-    event.recipes.createMilling([
-        'minecraft:sand',
+    event.recipes.createCrushing([
         Item.of('minecraft:iron_nugget').withChance(0.25),
-        Item.of('minecraft:gold_nugget').withChance(0.25)
-    ], 'grimoireofgaia:shiny_pearl').id('finality:pearl_milling')
+        Item.of('minecraft:gold_nugget').withChance(0.25),
+        Item.of('grimoireofgaia:diamond_shard').withChance(0.25),
+        Item.of('grimoireofgaia:emerald_shard').withChance(0.25),
+        Item.of('create:experience_nugget').withChance(0.25)
+    ], 'grimoireofgaia:shiny_pearl').processingTime(25).id('finality:pearl_crushing')
+    event.recipes.createCrushing([
+        'minecraft:sand',
+        Item.of('minecraft:iron_block').withChance(0.25),
+        Item.of('minecraft:gold_block').withChance(0.25),
+        Item.of('minecraft:diamond_block').withChance(0.25),
+        Item.of('minecraft:emerald_block').withChance(0.25),
+        Item.of('create:experience_block').withChance(0.25)
+    ], 'grimoireofgaia:pearl_block').processingTime(50).id('finality:pearl_block_crushing')
+    event.shapeless('minecraft:totem_of_undying', [
+        '4x grimoireofgaia:totem_of_undying_fragment',
+    ]).id('finality:grimoireofgaia/undying_totem')
     event.shapeless('grimoireofgaia:headgear_arrow', [
         'minecraft:arrow'
     ]).id('finality:grimoireofgaia/headgear_arrow')

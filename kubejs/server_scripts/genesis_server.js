@@ -956,7 +956,6 @@ LootJS.modifiers((event) => {
     event.addBlockLootModifier('create:deepslate_zinc_ore')
         .randomChance(0.3).addLoot('create:raw_zinc')
     event.addBlockLootModifier('minecraft:spawner').addLoot('8x minecraft:structure_void')
-    event.addLootTypeModifier(LootType.CHEST).removeLoot('minecraft:bucket')
     event.addEntityLootModifier('minecraft:creeper')
         .randomChance(0.1).addLoot('create:zinc_nugget')
     event.addEntityLootModifier('minecraft:witch')
