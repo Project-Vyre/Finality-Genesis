@@ -12,6 +12,8 @@ ClientEvents.highPriorityAssets(event => {
     })
 })
 
+
+
 const $ScreenshakeHandler = Java.loadClass('team.lodestar.lodestone.handlers.ScreenshakeHandler')
 const $ScreenshakeInstance = Java.loadClass('team.lodestar.lodestone.systems.screenshake.ScreenshakeInstance')
 const $Easing = Java.loadClass('team.lodestar.lodestone.systems.easing.Easing')

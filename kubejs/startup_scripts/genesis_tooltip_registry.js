@@ -302,6 +302,9 @@ ClientEvents.init(event => {
     if (Platform.isLoaded('graveyard')) {
         GRAY_RED_PALETTE('graveyard:ossuary')
     }
+    if (Platform.isLoaded('grimoireofgaia')) {
+        GREEN_PALETTE('grimoireofgaia:taproot')
+    }
     if (Platform.isLoaded('monobank')) {
         STANDARD_PALETTE('monobank:monobank')
     }

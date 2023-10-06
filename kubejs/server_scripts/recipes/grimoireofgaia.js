@@ -1,4 +1,6 @@
 // requires: grimoireofgaia
+// requires: farmersdelight
+// requires: some_assembly_required
 // requires: kubejs_create
 
 console.log('Loading Grimoire of Gaia scripts...')
@@ -28,6 +30,11 @@ ServerEvents.recipes(event => {
         Item.of('minecraft:emerald_block').withChance(0.25),
         Item.of('create:experience_block').withChance(0.25)
     ], 'grimoireofgaia:pearl_block').processingTime(50).id('finality:pearl_block_crushing')
+    event.recipes.createMixing('grimoireofgaia:golden_apple_pie', [
+        'some_assembly_required:golden_apple_slices',
+        'minecraft:sugar',
+        'create:dough'
+    ]).heated().id('finality:grimoireofgaia/golden_apple_pie')
     event.shapeless('minecraft:totem_of_undying', [
         '4x grimoireofgaia:totem_of_undying_fragment',
     ]).id('finality:grimoireofgaia/undying_totem')
