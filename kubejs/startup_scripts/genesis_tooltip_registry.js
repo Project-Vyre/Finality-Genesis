@@ -87,7 +87,8 @@ let GREEN_REGISTRY = [
     'createchunkloading:chunk_loader'
 ]
 let YELLOW_REGISTRY = [
-    'minecraft:campfire'
+    'minecraft:campfire',
+    'kubejs:lemon'
 ]
 let RED_REGISTRY = [
     'kubejs:removed_item',
@@ -298,6 +299,9 @@ ClientEvents.init(event => {
         STANDARD_PALETTE('cloudstorage:balloon_stand')
         STANDARD_PALETTE('cloudstorage:cloud_chest')
         BLUE_PALETTE('cloudstorage:static_cloud_chest')
+    }
+    if (Platform.isLoaded('etched')) {
+        YELLOW_PALETTE('etched:boombox')
     }
     if (Platform.isLoaded('graveyard')) {
         GRAY_RED_PALETTE('graveyard:ossuary')

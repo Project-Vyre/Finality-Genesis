@@ -3,6 +3,7 @@
 // requires: lootjs
 
 ServerEvents.recipes(event => {
+    event.remove({ id: 'aether:aether_saddle' })
     event.custom({
         "type": "aether:enchanting",
         "category": "enchanting_blocks",

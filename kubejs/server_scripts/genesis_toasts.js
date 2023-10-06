@@ -11,7 +11,7 @@
  * @param {HEX} borderColorInput 
  */
 
-function bossToast(
+function bossDeathToast(
     entityID,
     itemIcon,
     titleColorInput,
@@ -43,6 +43,48 @@ function bossToast(
     })
 }
 
+/**
+ * 
+ * @param {Special.EntityType} entityID 
+ * @param {Special.itemIcon} itemIcon 
+ * @param {HEX} titleColorInput 
+ * @param {HEX} subtitleBossColor 
+ * @param {HEX} outlineColorInput 
+ * @param {HEX} backgroundColorInput 
+ * @param {HEX} borderColorInput 
+ */
+
+function wandererDeathToast(
+    entityID,
+    itemIcon,
+    titleColorInput,
+    outlineColorInput,
+    backgroundColorInput,
+    borderColorInput
+) {
+    EntityEvents.death(entityID, (event) => {
+        const {
+            server: { players },
+            source: { player: $player },
+        } = event
+        if (!$player) return
+        for (const player of players) {
+            player.notify(Notification.make(toast => {
+                toast.itemIcon = itemIcon
+                toast.outlineColor = outlineColorInput
+                toast.backgroundColor = backgroundColorInput
+                toast.borderColor = borderColorInput
+                toast.text = [
+                    Component.translate(`World Notification - A Wandering Trader has been killed!\n`).bold().color(titleColorInput),
+                    Component.translate(`entity.${entityID.namespace}.${entityID.path}`).green(),
+                    Component.of(' has been killed by '),
+                    Component.of(player.displayName).green()
+                ]
+            }))
+        }
+    })
+}
+
 let red = 0xFF5555
 let darkRed = 0xAA0000
 
@@ -65,7 +107,7 @@ let gray = 0xAAAAAA
 let darkGray = 0x555555
 let black = 0x000000
 
-bossToast(
+bossDeathToast(
     'minecraft:wither',
     'minecraft:wither_skeleton_skull',
     red,
@@ -75,7 +117,7 @@ bossToast(
     0x303030
 );
 
-bossToast(
+bossDeathToast(
     'minecraft:ender_dragon',
     'minecraft:dragon_head',
     purple,
@@ -86,7 +128,7 @@ bossToast(
 )
 
 if (Platform.isLoaded('apotheosis')) {
-    bossToast(
+    bossDeathToast(
         'minecraft:warden',
         'apotheosis:warden_tendril',
         darkAqua,
@@ -98,7 +140,7 @@ if (Platform.isLoaded('apotheosis')) {
 }
 
 if (Platform.isLoaded('aquamirae')) {
-    bossToast(
+    bossDeathToast(
         'aquamirae:captain_cornelia',
         'aquamirae:three_bolt_helmet',
         aqua,
@@ -110,16 +152,16 @@ if (Platform.isLoaded('aquamirae')) {
 }
 
 if (Platform.isLoaded('cataclysm')) {
-    bossToast(
+    bossDeathToast(
         'cataclysm:netherite_monstrosity',
         'cataclysm:infernal_forge',
         gold,
         red,
-        gold,
-        darkRed,
+        0x1E1013,
+        0x1E1013,
         yellow
     );
-    bossToast(
+    bossDeathToast(
         'cataclysm:ignis',
         'cataclysm:the_incinerator',
         gold,
@@ -128,7 +170,7 @@ if (Platform.isLoaded('cataclysm')) {
         0x1E1013,
         0x371920
     );
-    bossToast(
+    bossDeathToast(
         'cataclysm:ender_guardian',
         'cataclysm:gauntlet_of_guard',
         purple,
@@ -137,7 +179,7 @@ if (Platform.isLoaded('cataclysm')) {
         black,
         darkPurple
     );
-    bossToast(
+    bossDeathToast(
         'cataclysm:the_harbinger',
         'cataclysm:wither_assault_shoulder_weapon',
         red,
@@ -146,7 +188,7 @@ if (Platform.isLoaded('cataclysm')) {
         0x302116,
         darkRed
     );
-    bossToast(
+    bossDeathToast(
         'cataclysm:the_leviathan',
         'cataclysm:tidal_claws',
         purple,
@@ -158,8 +200,10 @@ if (Platform.isLoaded('cataclysm')) {
 }
 
 if (Platform.isLoaded('graveyard')) {
-    bossToast('graveyard:lich', 'minecraft:skeleton_skull', red, red, red, 0x001332, darkRed)
+    bossDeathToast('graveyard:lich', 'minecraft:skeleton_skull', red, red, red, 0x001332, darkRed)
 }
+
+wandererDeathToast('minecraft:wandering_trader', 'minecraft:emerald', green, green, 0x001332, darkRed)
 
 /* Old code that shouldn't be used.
 EntityEvents.death('minecraft:wither', event => {

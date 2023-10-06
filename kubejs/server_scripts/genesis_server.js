@@ -209,6 +209,34 @@ ServerEvents.recipes(event => {
         'minecraft:pointed_dripstone',
         'minecraft:prismarine_crystals'
     ]).id('finality:trident_prong')
+    event.shaped('minecraft:saddle', [
+        'LLL',
+        'LSL'
+    ], {
+        L: 'minecraft:leather',
+        S: 'minecraft:string'
+    }).id('finality:saddle')
+    event.shaped('minecraft:iron_horse_armor', [
+        'I I',
+        'III',
+        'I I'
+    ], {
+        I: 'minecraft:iron_ingot'
+    }).id('finality:iron_horse_armor')
+    event.shaped('minecraft:golden_horse_armor', [
+        'G G',
+        'GGG',
+        'G G'
+    ], {
+        G: 'minecraft:gold_ingot'
+    }).id('finality:golden_horse_armor')
+    event.shaped('minecraft:diamond_horse_armor', [
+        'D D',
+        'DDD',
+        'D D'
+    ], {
+        D: 'minecraft:diamond'
+    }).id('finality:diamond_horse_armor')
     event.recipes.createMixing('kubejs:high_entropy_alloy', [
         'extendedcrafting:the_ultimate_ingot',
         'extendedcrafting:crystaltine_ingot',
@@ -545,6 +573,38 @@ ServerEvents.recipes(event => {
         R: '#forge:rope',
         L: '#forge:leather'
     }).id('finality:supplementaries_quiver')
+    // nether wart
+    if (!Platform.isLoaded('quark')) {
+        event.shapeless('9x minecraft:nether_wart', [
+            'minecraft:nether_wart_block'
+        ]).id('finality:nether_wart_block_decompression')
+    }
+    if (Platform.isLoaded('quark')) {
+        event.shapeless('4x minecraft:nether_wart', [
+            'minecraft:nether_wart_block'
+        ]).id('finality:quark_compat_nether_wart_block_decompression')
+    }
+    // lemons
+    event.recipes.createCutting('4x kubejs:lemon_slice', 'kubejs:lemon').processingTime(25).id('finality:lemon_slicing_with_saw')
+    event.recipes.createCompacting([
+        Fluid.of('kubejs:lemon_juice', 100),
+        'kubejs:lemon_seeds'
+    ], 'kubejs:lemon').id('finality:whole_lemon_squeezing')
+    if (Platform.isLoaded('farmersdelight')) {
+        event.custom({
+            'type': 'farmersdelight:cutting',
+            'ingredients': [
+                { 'item': 'kubejs:lemon' }
+            ],
+            'result': [
+                {
+                    'count': 4,
+                    'item': 'kubejs:lemon_slice'
+                }
+            ],
+            'tool': { 'tag': 'forge:tools/knives' }
+        }).id('finality:lemon_cutting')
+    }
     // denied
     event.shapeless('kubejs:denied_result', [
         '4x minecraft:netherite_scrap',
