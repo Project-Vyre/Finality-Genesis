@@ -16,6 +16,12 @@ First things first...
   
 ### License clarifications
 Finality is released on CurseForge only as **All Rights Reserved.**
+However, there are exceptions such as:
+- Artwork from other mod authors and their respective teams. For example:
+  - Create's Precision Mechanism and casing textures.
+  - The original Tempad texture.
+  - Music made by [Cjbeards](https://www.youtube.com/@cjbeardsofficial), [Farabi Hasan Music](https://www.youtube.com/@FarabiHasanMusic) and [R3 Music Box](https://www.youtube.com/@r3musicbox_en)
+
 Please see the license page over here, thank you: https://project-vyre.github.io/finality-wiki/docs/credits/
 
 ### What does this mean?
@@ -23,25 +29,57 @@ Please see the license page over here, thank you: https://project-vyre.github.io
 * For others, **you are prohibited from redistributing any of the above folders or files in any publicly released packs without permission from us unless explicitly stated.** 
   * Again, this does not mean that you are not allowed to use the code as a reference on how to write things in KubeJS!
 
-## Mod List
-Updated as of 0.2-rc2
+## 1.19.2 Mod List
 
-### DO NOT UPDATE THESE
-- Cucumber Library (don't update)
-- Extended Crafting (don't update)
-- Iron's Spells 'n Spellbooks (don't update until after full rework)
-- Mystical Agriculture (don't update)
+<details>
 
-### The rest
+<summary>Updated mod list as of 0.2-dev.3</summary>
+
+
 - Abnormals Delight
 - Ad Astra
 - Alex's Mobs
-- Allurement
 - AmbientSounds 5
 - Apotheosis
 - AppleSkin
-- Aquamirae (Forge)
--
+- Aquamirae
+- Architect's Palette
+- Architectury API
+- Armor Stand Shift Swap
+- Artifacts
+- Atmospheric
+- AttributeFix
+- Audio Extension for FancyMenu
+- AutoRegLib
+- Autumnity
+- Auudio
+- Backpacked
+- Balm
+- Baubley Heart Canisters
+- Better Advancements
+- Better Chunk Loading
+- Better Climbing
+- Better Combat
+- Better Compatibility Checker
+- Better Third Person
+- Biomes O' Plenty
+- Block Runner
+- Blue Skies
+- Blueprint
+- Boatload
+- Bookshelf
+- Botarium
+- Buzzier Bees
+- Caelus API
+- Carry On
+- Catalogue
+- Caupona
+- Chalk
+- Chipped
+- Chunk Loaders
+- 
+
+</details>
 
 ***
 
