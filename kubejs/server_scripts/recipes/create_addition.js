@@ -8,8 +8,6 @@ ServerEvents.tags('item', event => {
 
 ServerEvents.recipes(event => {
     event.remove([
-        { output: 'createaddition:electrum_nugget' },
-        { output: 'createaddition:electrum_ingot' },
         { id: 'createaddition:crafting/electrum_amulet' },
         { id: 'createaddition:rolling/brass_ingot' },
         { id: 'createaddition:mixing/bioethanol' },

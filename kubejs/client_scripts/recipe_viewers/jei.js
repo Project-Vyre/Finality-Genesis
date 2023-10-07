@@ -70,20 +70,9 @@ let MYSHIDE = [
     'niotic_crystal',
     'spirited_crystal',
     'uraninite',
-    'gaia_spirit',
-    'awakened_draconium',
-    'neutronium',
     'nitro_crystal',
     'sulfur',
     'lead'
-]
-let MYS_FLUID_HIDE = [
-    'molten_inferium',
-    'molten_prudentium',
-    'molten_tertium',
-    'molten_imperium',
-    'molten_supremium',
-    'molten_soulium'
 ]
 let CAdditionsItems = [
     'straw',
@@ -118,25 +107,86 @@ JEIEvents.hideItems(event => {
     CAdditionsItems.forEach(name => {
         event.hide(`createaddition:${name}`)
     })
-    event.hide('mysticalagriculture:harvester')
+    event.hide([
+        'mysticalagriculture:harvester',
+        'mysticalagriculture:basic_reprocessor',
+        'mysticalagriculture:inferium_reprocessor',
+        'mysticalagriculture:prudentium_reprocessor',
+        'mysticalagriculture:tertium_reprocessor',
+        'mysticalagriculture:imperium_reprocessor',
+        'mysticalagriculture:supremium_reprocessor',
+        'mysticalagriculture:awakened_supremium_reprocessor'
+    ])
+
     if (Platform.isLoaded('abnormals_delight')) {
         event.hide('abnormals_delight:laurel_cabinet')
     }
+
     if (Platform.isLoaded('gag')) {
         event.hide([
             'gag:hearthstone',
             'gag:energized_hearthstone'
         ])
     }
-    if (Platform.isLoaded('incubation')) {
+
+    if (Platform.isLoaded('incubation') && Platform.isLoaded('farmersdelight')) {
         event.hide('incubation:fried_egg')
+    }
+
+    if (Platform.isLoaded('mysticalagriculture')
+        && Platform.isLoaded('mysticalagradditions')
+        && !Platform.isLoaded('avaritia')
+    ) {
+        event.hide([
+            'mysticalagriculture:neutronium_essence',
+            'mysticalagriculture:neutronium_seeds',
+            'mysticalagradditions:neutronium_crux'
+        ])
+    }
+
+    if (Platform.isLoaded('mysticalagriculture')
+        && Platform.isLoaded('mysticalagradditions')
+        && !Platform.isLoaded('botania')
+    ) {
+        event.hide([
+            'mysticalagriculture:gaia_spirit_seeds',
+            'mysticalagriculture:gaia_spirit_essence',
+            'mysticalagradditions:gaia_spirit_crux'
+        ])
+    }
+
+    if (Platform.isLoaded('mysticalagriculture')
+        && Platform.isLoaded('mysticalagradditions')
+        && !Platform.isLoaded('draconicevolution')
+    ) {
+        event.hide([
+            'mysticalagriculture:awakened_draconium_seeds',
+            'mysticalagriculture:awakened_draconium_essence',
+            'mysticalagradditions:awakened_draconium_crux'
+        ])
+    }
+
+    if (Platform.isLoaded('mysticalagriculture')
+        && Platform.isLoaded('mysticalagradditions')
+        && !Platform.isLoaded('powah')
+    ) {
+        event.hide([
+            'mysticalagriculture:nitro_crystal_seeds',
+            'mysticalagriculture:nitro_crystal_essence',
+            'mysticalagradditions:nitro_crystal_crux'
+        ])
     }
 })
 
 JEIEvents.hideFluids(event => {
-    MYS_FLUID_HIDE.forEach(name => {
-        event.hide(`mysticalagradditions:${name}`)
-    })
+    event.hide([
+        'mysticalagradditions:molten_inferium',
+        'mysticalagradditions:molten_prudentium',
+        'mysticalagradditions:molten_tertium',
+        'mysticalagradditions:molten_imperium',
+        'mysticalagradditions:molten_supremium',
+        'mysticalagradditions:molten_soulium'
+    ])
 })
 
 JEIEvents.information(event => {

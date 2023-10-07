@@ -293,6 +293,11 @@ ClientEvents.init(event => {
         YELLOW_PALETTE('cataclysm:ignitium_leggings')
         YELLOW_PALETTE('cataclysm:ignitium_boots')
         YELLOW_PALETTE('cataclysm:bulwark_of_the_flame')
+        PURPLE_PALETTE('cataclysm:abyss_eye')
+        PURPLE_PALETTE('cataclysm:void_eye')
+        RED_PALETTE('cataclysm:mech_eye')
+        YELLOW_PALETTE('cataclysm:flame_eye')
+        YELLOW_PALETTE('cataclysm:monstrous_eye')
     }
     if (Platform.isLoaded('cloudstorage')) {
         STANDARD_PALETTE('cloudstorage:balloon_bit')

@@ -41,10 +41,12 @@ ItemEvents.tooltip(event => {
         event.addAdvanced('cataclysm:ignitium_chestplate', (item, advanced, text) => {
             text.remove(1)
         })
-        event.addAdvanced('cataclysm:ignitium_leggings', (item, advanced, text) => {
+        event.addAdvanced('cataclysm:ignitium_boots', (item, advanced, text) => {
             text.remove(1)
         })
-        event.addAdvanced('cataclysm:ignitium_boots', (item, advanced, text) => {
+    }
+    if (Platform.isLoaded('etched')) {
+        event.addAdvanced('etched:boombox', (item, advanced, text) => {
             text.remove(1)
         })
     }

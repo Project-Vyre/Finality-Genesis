@@ -1,7 +1,14 @@
 // requires: morejs
 
 MoreJSEvents.villagerTrades(event => {
-
+    event.addTrade('minecraft:weaponsmith', 1, [
+        'minecraft:emerald',
+        'create:raw_zinc'
+    ], 'create:zinc_ingot')
+    event.addTrade('minecraft:weaponsmith', 1, [
+        'minecraft:emerald',
+        'minecraft:raw_copper'
+    ], 'minecraft:copper_ingot')
 })
 
 MoreJSEvents.wandererTrades(event => {

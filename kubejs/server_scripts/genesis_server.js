@@ -461,7 +461,23 @@ ServerEvents.recipes(event => {
     event.recipes.createCompacting('minecraft:ice', '9x minecraft:snow_block').id('finality:snow_compacting')
     // milling
     // crushing
-    event.remove({ id: 'create:crushing/netherrack' })
+    if (Platform.isLoaded('createaddition')) {
+        console.log()
+        event.recipes.createCrushing([
+            Item.of('minecraft:flint').withChance(0.25),
+            Item.of('minecraft:gold_nugget').withChance(0.10),
+            Item.of('create:copper_nugget').withChance(0.10),
+            Item.of('create:zinc_nugget').withChance(0.10),
+            Item.of('minecraft:iron_nugget').withChance(0.10)
+        ], 'minecraft:tuff').processingTime(350).id('create:crushing/tuff')
+        event.recipes.createCrushing([
+            Item.of('minecraft:flint').withChance(0.25),
+            Item.of('minecraft:gold_nugget').withChance(0.10),
+            Item.of('create:copper_nugget').withChance(0.10),
+            Item.of('create:zinc_nugget').withChance(0.10),
+            Item.of('minecraft:iron_nugget').withChance(0.10)
+        ], '#create:stone_types/tuff').processingTime(350).id('create:crushing/tuff_recycling')
+    }
     event.recipes.createCrushing([
         Item.of('minecraft:pointed_dripstone', 4),
         Item.of('minecraft:clay_ball').withChance(0.50),
@@ -472,6 +488,7 @@ ServerEvents.recipes(event => {
         Item.of('create:copper_nugget').withChance(0.05),
         Item.of('minecraft:gunpowder').withChance(0.10)
     ], 'minecraft:basalt').processingTime(250).id('finality:basalt_crushing')
+    event.remove({ id: 'create:crushing/netherrack' })
     event.recipes.createCrushing([
         'create:cinder_flour',
         Item.of('create:cinder_flour').withChance(0.50),
@@ -588,8 +605,12 @@ ServerEvents.recipes(event => {
     event.recipes.createCutting('4x kubejs:lemon_slice', 'kubejs:lemon').processingTime(25).id('finality:lemon_slicing_with_saw')
     event.recipes.createCompacting([
         Fluid.of('kubejs:lemon_juice', 100),
-        'kubejs:lemon_seeds'
+        'kubejs:lemon_seed'
     ], 'kubejs:lemon').id('finality:whole_lemon_squeezing')
+    event.recipes.createCompacting([
+        Fluid.of('kubejs:lemon_juice', 25),
+        'kubejs:lemon_seed'
+    ], 'kubejs:lemon_slice').id('finality:lemon_slice_squeezing')
     if (Platform.isLoaded('farmersdelight')) {
         event.custom({
             'type': 'farmersdelight:cutting',
