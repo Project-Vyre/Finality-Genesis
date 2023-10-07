@@ -62,6 +62,42 @@
         "count": 1,
         "item": "create:zinc_ingot"
       }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 25,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "item": "create:blaze_burner"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "create:empty_blaze_burner"
+      },
+      "secondary_payment_item": {
+        "count": 32,
+        "item": "minecraft:emerald"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 5,
+      "max_trades": 8,
+      "offer_item": {
+        "count": 8,
+        "item": "create:polished_rose_quartz"
+      },
+      "payment_item": {
+        "count": 8,
+        "item": "create:rose_quartz"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "item": "create:sand_paper"
+      },
+      "price_multiplier": 0.0
     }
   ]
 }

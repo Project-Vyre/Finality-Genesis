@@ -101,8 +101,7 @@
     },
     {
       "type": "goblintraders:basic",
-      "experience": 4,
-      "max_trades": 32,
+      "experience": 2,
       "offer_item": {
         "count": 1,
         "item": "create:andesite_alloy"
@@ -111,15 +110,15 @@
         "count": 1,
         "item": "minecraft:andesite"
       },
-      "price_multiplier": 0.0,
       "secondary_payment_item": {
         "count": 1,
         "item": "minecraft:iron_nugget"
-      }
+      },
+      "price_multiplier": 0.0
     },
     {
       "type": "goblintraders:basic",
-      "experience": 4,
+      "experience": 6,
       "max_trades": 30,
       "offer_item": {
         "count": 2,
@@ -128,6 +127,23 @@
       "payment_item": {
         "count": 1,
         "item": "create:raw_zinc"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 1,
+      "offer_item": {
+        "count": 1,
+        "item": "minecraft:calcite"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "minecraft:amethyst_shard"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "item": "minecraft:bone_meal"
       },
       "price_multiplier": 0.0
     }

@@ -987,7 +987,7 @@ const sets = [set];
 
 PlayerEvents.tick(check => {
     const { headArmorItem, chestArmorItem, legsArmorItem, feetArmorItem } = check.player;
-    if (check.player.level.time % 100 == 0) {
+    if (check.player.level.time % 100 === 0) {
         for (let armorSet in sets) {
             if (headArmorItem.id === sets[armorSet].name + '_helmet' &&
                 chestArmorItem.id === sets[armorSet].name + '_chestplate' &&
@@ -1001,9 +1001,9 @@ PlayerEvents.tick(check => {
                         sets[armorSet].effects[x].amplifier
                     );
                 }
-            };
+            }
         }
-    };
+    }
 });
 
 LootJS.modifiers((event) => {
