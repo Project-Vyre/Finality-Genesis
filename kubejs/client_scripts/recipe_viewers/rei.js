@@ -353,6 +353,16 @@ REIEvents.information(event => {
         'It has yellow grains on the ends of its stalks and is usually two blocks tall.'
     ])
     event.addItem('obscure_api:astral_dust', 'Acquisition', ['Used in making a special chestpiece. Can only be found in Frozen Chests.'])
+    if (Platform.isLoaded('aether')) {
+        event.addItem([
+            'aether:obsidian_helmet',
+            'aether:obsidian_chestplate',
+            'aether:obsidian_leggings',
+            'aether:obsidian_boots'
+        ], 'Acquisition', [
+            'Can only be acquired by wearing Phoenix Armor, then going into water to convert it to the respective Obsidian armor piece.'
+        ])
+    }
 })
 
 REIEvents.groupEntries(event => {
