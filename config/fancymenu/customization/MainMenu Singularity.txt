@@ -36,15 +36,6 @@ customization {
 }
 
 customization {
-  identifier = %id=button_compatibility_id:mc_titlescreen_multiplayer_button%
-  loopbackgroundanimations = true
-  restartbackgroundanimations = true
-  action = setbuttontexture
-  backgroundhovered = config/fancymenu/assets/big_buttons_hover.png
-  backgroundnormal = config/fancymenu/assets/big_buttons.png
-}
-
-customization {
   identifier = %id=376322%
   action = hidebutton
 }
@@ -74,15 +65,6 @@ customization {
 }
 
 customization {
-  identifier = %id=button_compatibility_id:mc_titlescreen_quit_button%
-  loopbackgroundanimations = true
-  restartbackgroundanimations = true
-  action = setbuttontexture
-  backgroundhovered = config/fancymenu/assets/big_buttons_hover.png
-  backgroundnormal = config/fancymenu/assets/big_buttons.png
-}
-
-customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
   orientation = mid-right
   x = -290
@@ -95,15 +77,6 @@ customization {
   width = 128
   action = resizebutton
   height = 20
-}
-
-customization {
-  identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
-  loopbackgroundanimations = true
-  restartbackgroundanimations = true
-  action = setbuttontexture
-  backgroundhovered = config/fancymenu/assets/big_buttons_hover.png
-  backgroundnormal = config/fancymenu/assets/big_buttons.png
 }
 
 customization {
@@ -165,15 +138,6 @@ customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
   action = setbuttonlabel
   value = Settings
-}
-
-customization {
-  identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
-  loopbackgroundanimations = true
-  restartbackgroundanimations = true
-  action = setbuttontexture
-  backgroundhovered = config/fancymenu/assets/big_buttons_hover.png
-  backgroundnormal = config/fancymenu/assets/big_buttons.png
 }
 
 customization {
@@ -343,7 +307,7 @@ customization {
   actionid = 6933b74a-1382-4bf0-9292-fd7ae16d24201679852528355
   action = addsplash
   y = 165
-  text = Bye, space sword
+  text = Bring me Ray Cokes!
 }
 
 customization {
@@ -409,18 +373,16 @@ customization {
 
 customization {
   orientation = element
-  restartbackgroundanimations = true
-  buttonaction = openlink;https://project-vyre.github.io/finality-wiki/docs/changelog_genesis%btnaction_splitter_fm%
-  backgroundhovered = config/fancymenu/assets/big_buttons_hover.png
-  label = Changelog
   loopbackgroundanimations = true
+  restartbackgroundanimations = true
   orientation_element = vanillabtn:button_compatibility_id:mc_titlescreen_singleplayer_button
+  buttonaction = openlink;https://project-vyre.github.io/finality-wiki/docs/changelog_genesis%btnaction_splitter_fm%
   x = 0
   width = 128
   action = addbutton
   actionid = 3d46971e-9005-41ee-8b4f-2ec8219a39d41682306825930
   y = 72
-  backgroundnormal = config/fancymenu/assets/big_buttons.png
+  label = Changelog
   height = 20
 }
 
