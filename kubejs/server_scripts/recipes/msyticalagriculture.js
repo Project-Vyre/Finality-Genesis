@@ -2,6 +2,83 @@
 // requires: mysticalagradditions
 // requires: create
 
+/**
+ * 
+ * @param {*} event 
+ * @param {string} seedInput 
+ * @param {string} essenceOutput 
+ */
+function seedMillstoneReprocessing(event, seedInput, essenceOutput) {
+    event.recipes.createMilling([
+        `2x mysticalagriculture:${essenceOutput}_essence`,
+        Item.of(`mysticalagriculture:${essenceOutput}_essence`).withChance(0.25)
+    ], `mysticalagriculture:${seedInput}_seeds`).processingTime(100).id(`finality:milling/${seedInput}_seed_reprocessing`)
+}
+
+let SEED_PROCESSING_ELIGIBLE = [
+    'air',
+    'earth',
+    'water',
+    'fire',
+    'stone',
+    'dirt',
+    'wood',
+    'ice',
+    'deepslate',
+    'nature',
+    'dye',
+    'nether',
+    'coal',
+    'coral',
+    'honey',
+    'amethyst',
+    'pig',
+    'chicken',
+    'cow',
+    'sheep',
+    'squid',
+    'fish',
+    'slime',
+    'turtle',
+    'limestone',
+    'iron',
+    'copper',
+    'nether_quartz',
+    'glowstone',
+    'redstone',
+    'obsidian',
+    'prismarine',
+    'zombie',
+    'skeleton',
+    'creeper',
+    'spider',
+    'rabbit',
+    'zinc',
+    'brass',
+    'gold',
+    'lapis_lazuli',
+    'end',
+    'experience',
+    'blaze',
+    'ghast',
+    'enderman',
+    'diamond',
+    'emerald',
+    'netherite',
+    'wither_skeleton',
+    'nether_star',
+    'dragon_egg'
+]
+
+let iumTiers = [
+    'inferium',
+    'prudentium',
+    'tertium',
+    'imperium',
+    'supremium',
+    'awakened_supremium'
+]
+
 ServerEvents.recipes(event => {
     // infusion essence
     event.recipes.createMixing([Fluid.of('kubejs:inferior_infusion_essence', 250)], [
@@ -382,16 +459,6 @@ ServerEvents.recipes(event => {
         D: 'mysticalagriculture:soulium_dagger',
         B: 'create:deployer'
     }).id('mysticalagriculture:soul_extractor')
-    event.shaped('mysticalagriculture:basic_reprocessor', [
-        'FSF',
-        'DRD',
-        'FSF'
-    ], {
-        F: 'mysticalagriculture:machine_frame',
-        S: 'mysticalagriculture:soulium_ingot',
-        D: 'mysticalagriculture:soulium_dagger',
-        R: 'create:radial_chassis'
-    }).id('mysticalagriculture:basic_reprocessor')
     event.shaped('kubejs:removed_item', [
         'ISI',
         'YMY',
@@ -420,4 +487,49 @@ ServerEvents.recipes(event => {
         '4x mysticalagriculture:fertilized_essence',
         'minecraft:diamond'
     ]).id('finality:mysta_mystical_fertilizer_better_eff')
+    event.remove({ type: 'mysticalagriculture:reprocessor' })
+    SEED_PROCESSING_ELIGIBLE.forEach(element => {
+        seedMillstoneReprocessing(event, element, element)
+    })
+    event.replaceOutput(
+        { output: 'mysticalagriculture:basic_reprocessor' },
+        'mysticalagriculture:basic_reprocessor',
+        'kubejs:removed_item'
+    )
+    event.custom({
+        "type": "mysticalagriculture:awakening",
+        "essences": {
+            "air": 40,
+            "earth": 40,
+            "water": 40,
+            "fire": 40
+        },
+        "input": {
+            "item": "mysticalagriculture:supremium_reprocessor"
+        },
+        "ingredients": [
+            {
+                "item": "mysticalagriculture:awakened_supremium_gemstone"
+            },
+            {
+                "item": "mysticalagriculture:awakened_supremium_ingot"
+            },
+            {
+                "item": "mysticalagriculture:awakened_supremium_gemstone"
+            },
+            {
+                "item": "mysticalagriculture:awakened_supremium_ingot"
+            }
+        ],
+        "result": {
+            "item": "kubejs:removed_item"
+        }
+    }).id('mysticalagriculture:awakened_supremium_reprocessor')
+    iumTiers.forEach(tier => {
+        event.replaceOutput(
+            { output: `mysticalagriculture:${tier}_reprocessor` },
+            `mysticalagriculture:${tier}_reprocessor`,
+            'kubejs:removed_item'
+        )
+    })
 })
