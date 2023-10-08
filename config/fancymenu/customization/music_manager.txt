@@ -3,17 +3,10 @@ type = menu
 customization-meta {
   identifier = %fancymenu:universal_layout%
   randomgroup = 1
-  biggerthanwidth = 1280
   renderorder = foreground
   randommode = false
   requiredmods = kubejs, kubejs_create, create
   randomonlyfirsttime = false
-  smallerthanwidth = 2560
-}
-
-customization {
-  action = setscale
-  scale = 2
 }
 
 customization {
