@@ -1,0 +1,60 @@
+{
+	default_hide_dependency_lines: true
+	default_quest_shape: ""
+	filename: "miscellaneous_utilities"
+	group: "668E3EA3A7A91B79"
+	id: "39AB89A7001538E5"
+	order_index: 5
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			id: "4B814A1F3CA7CA1A"
+			subtitle: "A hopper with filtering capabilities!"
+			tasks: [{
+				id: "68D012B91C555D81"
+				item: "goldenhopper:golden_hopper"
+				type: "item"
+			}]
+			title: "The Golden Hopper"
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			id: "4A80913A15F6CA82"
+			tasks: [{
+				id: "3019AB42121C2E64"
+				item: "echochest:echo_chest"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["2EF808209CCECE6A"]
+			id: "35DE8799CDD5E313"
+			tasks: [{
+				id: "6F50C61194779F98"
+				title: "Click me to reveal nodes..."
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			id: "7F2A0B88D493FCC2"
+			tasks: [{
+				id: "6F6DDF0492C2944D"
+				item: "portablehole:portable_hole"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+	]
+	subtitle: ["Some miscellaneous utilities..."]
+	title: "Miscellaneous Utilities"
+}

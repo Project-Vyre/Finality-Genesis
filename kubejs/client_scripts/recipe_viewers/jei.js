@@ -195,12 +195,27 @@ JEIEvents.information(event => {
     event.addItem('minecraft:dragon_egg', ['Can be used to make Dragon Breath.'])
     event.addItem('tempad:tempad', ['Allows you to teleport to points you placed throughout the world but has a 3 minute cooldown.'])
     event.addItem('tempad:he_who_remains_tempad', ['Can only be acquired from the End, somewhere.'])
-    event.addItem('mysticalagriculture:fertilized_essence', ['Can only be acquired from Mystical Agriculture crops upon harvesting.', 'Not a guaranteed drop!'])
+    event.addItem('mysticalagriculture:fertilized_essence', [
+        'Can only be acquired from Mystical Agriculture crops upon harvesting.',
+        'Not a guaranteed drop!'
+    ])
     event.addItem('cataclysm:burning_ashes', ['Used to summon Ignis.'])
-    event.addItem('minecraft:nether_star', ['If you find a deactivated and mechanical version of the Wither, give it a Nether Star.', 'Also extensively used in certain recipes.'])
-    event.addItem('cataclysm:abyssal_sacrifice', ['Required to summon the Leviathan.', 'Use on the Altar of Abyss located in the Sunken City.'])
-    event.addItem('cataclysm:abyssal_egg', ['Does not require anything special to hatch, simply place it down.', 'You will have to wait a while for the egg to hatch.'])
-    event.addItem('minecraft:ender_eye', ['There is a certain eye that can only be acquired from enchanting.', 'It is very rare, however.'])
+    event.addItem('minecraft:nether_star', [
+        'If you find a deactivated and mechanical version of the Wither, give it a Nether Star.',
+        'Also extensively used in certain recipes.'
+    ])
+    event.addItem('cataclysm:abyssal_sacrifice', [
+        'Required to summon the Leviathan.',
+        'Use on the Altar of Abyss located in the Sunken City.'
+    ])
+    event.addItem('cataclysm:abyssal_egg', [
+        'Does not require anything special to hatch, simply place it down.',
+        'You will have to wait a while for the egg to hatch.'
+    ])
+    event.addItem('minecraft:ender_eye', [
+        'There is a certain eye that can only be acquired from enchanting.',
+        'It is very rare, however.'
+    ])
     event.addItem('endrem:black_eye', ['Can be found in lost treasure chests.'])
     event.addItem('endrem:cold_eye', ['Found in igloos.'])
     event.addItem('endrem:corrupted_eye', ['Found in Pillager Outposts.'])
@@ -217,7 +232,10 @@ JEIEvents.information(event => {
     event.addItem('endrem:undead_eye', ['Requires a skeleton horse to be slain in order to acquire the Undead Soul.'])
     event.addItem('endrem:undead_soul', ['Acquired from slaying a skeleton horse.'])
     event.addItem('endrem:exotic_eye', ['Created by combining multiple exotic ingredients using a Crafting Core.'])
-    event.addItem(['farmersdelight:wild_cabbages', 'farmersdelight:cabbage_seeds'], [
+    event.addItem([
+        'farmersdelight:wild_cabbages',
+        'farmersdelight:cabbage_seeds'
+    ], [
         'Can be found on beaches.',
         'It looks like a large bush with small yellow flowers on top.'
     ])
@@ -247,13 +265,16 @@ JEIEvents.information(event => {
     ])
     event.addItem('obscure_api:astral_dust', ['Used in making a special chestpiece. Can only be found in Frozen Chests.'])
     if (Platform.isLoaded('aether')) {
-            event.addItem([
-                'aether:obsidian_helmet',
-                'aether:obsidian_chestplate',
-                'aether:obsidian_leggings',
-                'aether:obsidian_boots'
-            ], [
-                'Can only be acquired by wearing Phoenix Armor, then going into water to convert it to the respective Obsidian armor piece.'
-            ])
+        event.addItem([
+            'aether:obsidian_helmet',
+            'aether:obsidian_chestplate',
+            'aether:obsidian_leggings',
+            'aether:obsidian_boots',
+            'aether:obsidian_gloves'
+        ], [
+            'Can only be acquired by wearing Phoenix Armor, then wading into water to convert it to the respective Obsidian armor piece.',
+            'After a spending some time in water, the Phoenix Armor pieces are converted.',
+            'In other words, it is made by wearing Phoenix Armor, then quenching it with water.'
+        ])
     }
 })

@@ -36,7 +36,7 @@ function bossDeathToast(
                     Component.translate(`World Notification - Boss Eliminated!\n`).bold().color(titleColorInput),
                     Component.translate(`entity.${entityID.namespace}.${entityID.path}`).color(subtitleBossColor),
                     Component.of(' has been killed by '),
-                    Component.of(player.displayName).green()
+                    Component.of($player.displayName).green()
                 ]
             }))
         }
@@ -78,7 +78,7 @@ function wandererDeathToast(
                     Component.translate(`World Notification - A Wandering Trader has been killed!\n`).bold().color(titleColorInput),
                     Component.translate(`entity.${entityID.namespace}.${entityID.path}`).green(),
                     Component.of(' has been killed by '),
-                    Component.of(player.displayName).green()
+                    Component.of($player.displayName).green()
                 ]
             }))
         }

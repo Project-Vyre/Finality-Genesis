@@ -20,13 +20,13 @@ StartupEvents.registry('item', event => {
 
 StartupEvents.registry('block', event => {
     event.create('kubejs:lemon', 'crop')
-        .age(7, builder => {
+        .age(8, builder => {
             builder
                 .shape(0, 0, 0, 0, 16, 2, 16)
                 .shape(0, 0, 0, 0, 16, 4, 16)
                 .shape(1, 0, 0, 0, 16, 8, 16)
                 .shape(1, 0, 0, 0, 16, 16, 16)
-                .shape(2, 0, 0, 0, 16, 16, 16)
+                .shape(1, 0, 0, 0, 16, 16, 16)
                 .shape(2, 0, 0, 0, 16, 16, 16)
                 .shape(2, 0, 0, 0, 16, 16, 16)
                 .shape(3, 0, 0, 0, 16, 16, 16)
@@ -49,8 +49,13 @@ StartupEvents.registry('block', event => {
         })
         .texture(0, 'kubejs:block/lemon_tree_stage0')
         .texture(1, 'kubejs:block/lemon_tree_stage1')
-        .texture(2, 'kubejs:block/lemon_tree_stage2')
-        .texture(3, 'kubejs:block/lemon_tree_stage3')
+        .texture(2, 'kubejs:block/lemon_tree_stage1')
+        .texture(3, 'kubejs:block/lemon_tree_stage1')
+        .texture(4, 'kubejs:block/lemon_tree_stage2')
+        .texture(5, 'kubejs:block/lemon_tree_stage2')
+        .texture(6, 'kubejs:block/lemon_tree_stage2')
+        .texture(7, 'kubejs:block/lemon_tree_stage3')
+        .texture(8, 'kubejs:block/lemon_tree_stage3')
 })
 
 StartupEvents.registry('fluid', event => {

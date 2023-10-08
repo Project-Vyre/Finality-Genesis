@@ -98,7 +98,7 @@ let RED_REGISTRY = [
 let PURPLE_REGISTRY = [
     'minecraft:structure_void',
     'minecraft:dragon_egg',
-    'eccentrictome:tome',
+    'create:handheld_worldshaper',
     'kubejs:denied_result',
     'kubejs:command_block',
     'kubejs:chain_command_block',
@@ -113,7 +113,8 @@ let PURPLE_REGISTRY = [
     'kubejs:final_helmet',
     'kubejs:final_chestplate',
     'kubejs:final_leggings',
-    'kubejs:final_boots'
+    'kubejs:final_boots',
+    'eccentrictome:tome'
 ]
 let GRAY_REGISTRY = [
     'minecraft:rotten_flesh',
@@ -266,6 +267,8 @@ ClientEvents.init(event => {
         YELLOW_PALETTE('autumnity:sappy_maple_log')
         YELLOW_PALETTE('autumnity:sappy_maple_wood')
         YELLOW_PALETTE('autumnity:foul_berries')
+        YELLOW_PALETTE('autumnity:turkey')
+        YELLOW_PALETTE('autumnity:cooked_turkey')
     }
     if (Platform.isLoaded('backpacked')) {
         STANDARD_PALETTE('backpacked:backpack')

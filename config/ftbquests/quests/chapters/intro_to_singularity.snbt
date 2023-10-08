@@ -140,6 +140,11 @@
 					}
 					type: "item"
 				}
+				{
+					id: "173D685495C0B44E"
+					item: "ftbquests:book"
+					type: "item"
+				}
 			]
 			title: "Introduction Node - Hi! Welcome to Finality."
 			x: 0.0d
@@ -620,11 +625,6 @@
 				{
 					id: "1BDF17D753DA6548"
 					item: "create_mechanical_extruder:mechanical_extruder"
-					type: "item"
-				}
-				{
-					id: "5F5F07011AFB9FDF"
-					item: "echochest:echo_chest"
 					type: "item"
 				}
 				{
