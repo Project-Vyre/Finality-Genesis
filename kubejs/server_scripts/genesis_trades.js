@@ -15,6 +15,10 @@ MoreJSEvents.villagerTrades(event => {
         'minecraft:emerald',
         'minecraft:raw_copper'
     ], 'minecraft:copper_ingot')
+    event.addTrade('minecraft:farmer', 1, [
+        'create:millstone',
+        'minecraft:wheat_seeds'
+    ], 'kubejs:lemon_seed')
 })
 
 MoreJSEvents.wandererTrades(event => {
