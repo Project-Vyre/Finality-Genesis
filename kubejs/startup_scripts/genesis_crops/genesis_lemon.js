@@ -1,6 +1,13 @@
 // ignored: false
 // work in progress
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ * Sven H. for providing the initial basis
+ */
+
 StartupEvents.registry('item', event => {
     event.create('kubejs:lemon').food(food => {
         food

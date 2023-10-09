@@ -2,6 +2,13 @@
 // requires: create
 // requires: lodestone
 
+/**
+ * Authors
+ * 
+ * @squoshi Original screenshake script author
+ * @CelestialAbyss
+ */
+
 console.info('Genesis client scripts loaded. You will see this line every time client resources reload.')
 
 const $ScreenshakeHandler = Java.loadClass('team.lodestar.lodestone.handlers.ScreenshakeHandler')

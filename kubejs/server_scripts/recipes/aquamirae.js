@@ -1,6 +1,12 @@
 // requires: aquamirae
 // requires: kubejs_create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     event.shaped('aquamirae:oxygen_tank', [
         'IOI',

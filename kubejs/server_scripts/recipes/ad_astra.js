@@ -4,6 +4,12 @@
 // requires: extendedcrafting
 // and kjs 119 and above
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     event.recipes.createMixing(Fluid.of('ad_astra:oil', 250), [
         '2x minecraft:coal',

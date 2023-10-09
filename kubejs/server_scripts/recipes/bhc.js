@@ -2,6 +2,12 @@
 // requires: kubejs_create
 // requires: supplementaries
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     event.remove({ id: 'bhc:god_apple' })
     event.shaped('bhc:canister', [

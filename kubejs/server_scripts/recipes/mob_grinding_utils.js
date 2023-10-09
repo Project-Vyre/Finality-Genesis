@@ -3,6 +3,12 @@
 // requires: extendedcrafting
 
 /**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
+/**
  * To Do List
  * Rework all mob grinding utils upgrades to fit in thematically with Create and other add-ons
  * Make the incomplete spikes block texture and model, incomplete jumbo tank texture and model if possible

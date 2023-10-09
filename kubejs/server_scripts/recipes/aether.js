@@ -2,6 +2,12 @@
 // requires: kubejs_create
 // requires: lootjs
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     event.remove({ id: 'aether:aether_saddle' })
     event.custom({

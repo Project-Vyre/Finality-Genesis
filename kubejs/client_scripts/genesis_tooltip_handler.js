@@ -1,3 +1,9 @@
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ItemEvents.tooltip(event => {
     if (Platform.isLoaded('cataclysm')) {
         event.addAdvanced('cataclysm:bulwark_of_the_flame', (item, advanced, text) => {

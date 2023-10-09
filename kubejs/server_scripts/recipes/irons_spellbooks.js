@@ -1,6 +1,13 @@
 // requires: irons_spellbooks
 // requires: apotheosis
 // requires: create
+
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 /*
 let CORE_RARITIES = [
     'common',

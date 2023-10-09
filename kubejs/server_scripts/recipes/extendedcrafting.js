@@ -1,6 +1,12 @@
 // requires: extendedcrafting
 // requires: create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 let SAND = ['sand', 'red_sand']
 let VANILLAMATS = ['amethyst', 'copper', 'iron', 'redstone', 'gold', 'diamond', 'emerald', 'quartz', 'netherite', 'honey']
 let VANILLANOTSTANDARD = ['ender_pearl', 'gunpowder', 'sea_lantern', 'glowstone']

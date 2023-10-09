@@ -2,6 +2,14 @@
 
 console.log('Loaded Create tooltip registry.')
 
+/**
+ * Authors
+ * 
+ * @squoshi Initial implementation of ClientEvents.init()
+ * @CelestialAbyss Wrote function system
+ * @tizu69 (AKA tizu in the KJS Discord) Initial implementation via tooltip event
+ */
+
 /*
     public record Palette(Style primary, Style highlight) {
         public static final Palette STANDARD_CREATE = new Palette(styleFromColor(0xC9974C), styleFromColor(0xF1DD79));
@@ -312,6 +320,7 @@ ClientEvents.init(event => {
         YELLOW_PALETTE('etched:boombox')
     }
     if (Platform.isLoaded('graveyard')) {
+        GRAY_RED_PALETTE('graveyard:corruption')
         GRAY_RED_PALETTE('graveyard:ossuary')
     }
     if (Platform.isLoaded('grimoireofgaia')) {

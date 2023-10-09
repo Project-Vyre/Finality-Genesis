@@ -2,6 +2,12 @@
 // requires: create
 // requires: createaddition
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     event.shaped('4x red_power:node', [
         'IAI',

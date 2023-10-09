@@ -1,6 +1,12 @@
 // requires: lilwings
 // requires: create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     event.shapeless('minecraft:golden_carrot', [
         '#kubejs:grayling_wings',

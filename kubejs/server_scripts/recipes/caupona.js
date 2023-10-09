@@ -1,6 +1,12 @@
 // requires: caupona
 // requires: kubejs_create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 console.log("If one certain recipe from Caupona errors with KubeJS, it is a concurrency issue with Rhino.")
 console.log("DO NOT issue a bug report related to this issue to the mod author!")
 

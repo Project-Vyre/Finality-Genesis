@@ -1,6 +1,12 @@
 // requires: ponderjs
 // ignored: true
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 // Attempting to remove Create Crafts & Addition straw Ponder scene.
 /*
 const PonderRegistry = Java.loadClass("com.simibubi.create.foundation.ponder.PonderRegistry");

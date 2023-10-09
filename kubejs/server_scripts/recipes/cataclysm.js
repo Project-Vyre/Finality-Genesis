@@ -1,6 +1,12 @@
 // requires: cataclysm
 // requires: create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     event.shaped('cataclysm:athame', [
         ' P ',

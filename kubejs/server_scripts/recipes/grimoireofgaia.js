@@ -3,6 +3,12 @@
 // requires: some_assembly_required
 // requires: kubejs_create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 console.log('Loading Grimoire of Gaia scripts...')
 
 ServerEvents.recipes(event => {

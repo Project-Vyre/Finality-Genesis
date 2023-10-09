@@ -1,3 +1,12 @@
+// requires: netjs
+
+/**
+ * Authors
+ * 
+ * @KostromDan Original script author
+ * @CelestialAbyss
+ */
+
 const $BCC = Java.loadClass('dev.wuffs.bcc.BCC')
 // const $ConfirmScreen = Java.loadClass('net.minecraft.client.gui.screens.ConfirmScreen')
 let modpack_name = 'Finality Genesis'
@@ -33,7 +42,7 @@ function check_updates() {
                                 Component.gold(`${modpack_name}`),
                                 Component.yellow(` on CurseForge`)
                             ])),
-                        Component.white(" is available!"),
+                        Component.white(" is available!\n"),
                         Component.white("\nYou are playing on "),
                         Component.red(version),
                         Component.white(", the lastest is "),

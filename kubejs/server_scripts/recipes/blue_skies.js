@@ -1,6 +1,12 @@
 // requires: blue_skies
 // requires: kubejs_create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 let BSKIES_WOOD = ['bluebright', 'starlit', 'frostbright', 'lunar', 'dusk', 'maple', 'cherry', 'crystallized']
 ServerEvents.recipes(event => {
     BSKIES_WOOD.forEach(wood => {

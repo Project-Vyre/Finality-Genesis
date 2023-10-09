@@ -1,6 +1,13 @@
 // priority: 0
 
 /**
+ * Authors
+ * 
+ * @EvanHsieh0415 Creating the basis of the boss death toast notification. https://discord.com/channels/303440391124942858/1129981022554050630
+ * @CelestialAbyss
+ */
+
+/**
  * 
  * @param {Special.EntityType} entityID 
  * @param {Special.itemIcon} itemIcon 

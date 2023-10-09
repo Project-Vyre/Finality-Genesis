@@ -3,6 +3,12 @@
 // requires: create
 
 /**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
+/**
  * 
  * @param {*} event 
  * @param {string} seedInput 

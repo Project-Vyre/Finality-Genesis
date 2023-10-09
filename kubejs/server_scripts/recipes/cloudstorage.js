@@ -1,6 +1,12 @@
 // requires: cloudstorage
 // requires: kubejs_create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     COLOR.forEach(wool => {
         event.recipes.createMixing([

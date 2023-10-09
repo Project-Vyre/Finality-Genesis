@@ -4,6 +4,16 @@
 // requires: lodestone
 // requires: salt
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss 
+ * @squoshi Helped a lot early on in development. Thank you. Also helped translate my ideas into scripts!
+ * @pietro-lopes AKA Uncandango in the KubeJS Discord. Fixed issues related to damage cancel script
+ * @MaxNeedsSnacks Fixing KubeJS Create bugs
+ * 
+ */
+
 console.info('Implementing Finality recipes and compats...')
 
 const WOOD_TYPES = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'crimson', 'warped']
@@ -942,13 +952,86 @@ PlayerEvents.loggedIn(event => {
     if (!event.player.persistentData.contains('firstjoin')) {
         event.player.persistentData.putBoolean('firstjoin', true)
         event.player.give('ftbquests:book')
+        event.player.tell([
+            Component.of('First world load! Lag may be present for a few minutes. \n').bold().gold(),
+            Component.of("\nAlso, please check your Quest Book and read its tooltips to get your bearings. Before I go, do not forget to \n"),
+            Component.of('Hold <rainb>[w]</rainb> to Ponder! \n').yellow(),
+            Component.of('\nIf you experience '),
+            Component.of('any ').italic(),
+            Component.of('form of '),
+            Component.of('Z-fighting ').red(),
+            Component.of('or '),
+            Component.of('flickering ').red(),
+            Component.of('on blocks... '),
+            Component.of('go to [Video Settings < Performance] then '),
+            Component.of('disable or uncheck ').red(),
+            Component.of('the setting that says '),
+            Component.of('Use Compact Vertex Format').bold().darkAqua(),
+            Component.of('. Please note that this is only applicable with '),
+            Component.of('Embeddium 0.2+ ').lightPurple(),
+            Component.of('and does not work with '),
+            Component.of('Oculus ').lightPurple(),
+            Component.of('installed!\n'),
+            Component.of('\nIf you encounter any bugs after disabling it, please report them'),
+            Component.of(' [here] ')
+                .clickOpenUrl('https://github.com/Project-Vyre/Finality-Genesis/issues')
+                .hover('Opens the Finality Genesis GitHub Issues page.')
+                .yellow(),
+            Component.of('or speak directly to'),
+            Component.of(' embeddedt ').lightPurple(),
+            Component.of('himself in his '),
+            Component.of('[Discord server]')
+                .clickOpenUrl('https://discord.gg/rN9Y7caguP')
+                .hover("The link for embeddedt's Discord server.")
+                .color(0x5865F2),
+            Component.of('. Thank you!\n'),
+            Component.of('\nNote: You may need to open chat to see the full message.').underlined().yellow()
+        ])
+    } else if (event.player.persistentData.contains('firstjoin')) {
+        event.player.tell([
+            Component.of('Welcome back!\n').bold().green(),
+            Component.of('\nIf the world has recently been loaded, lag may be present for a few minutes. '),
+            Component.of('<shake>Please</shake> ').bold().red(),
+            Component.of("allow some time to fully stabilize. Don't forget to read tooltips for some helpful info and\n"),
+            Component.of("Hold <rainb>[w]</rainb> to Ponder!\n").yellow(),
+            Component.of('\nIf you experience '),
+            Component.of('any ').italic(),
+            Component.of('form of '),
+            Component.of('Z-fighting ').red(),
+            Component.of('or '),
+            Component.of('flickering ').red(),
+            Component.of('on blocks... '),
+            Component.of('go to [Video Settings < Performance] then '),
+            Component.of('disable or uncheck ').red(),
+            Component.of('the setting that says '),
+            Component.of('Use Compact Vertex Format').bold().darkAqua(),
+            Component.of('. Please note that this is only applicable with '),
+            Component.of('Embeddium 0.2+ ').lightPurple(),
+            Component.of('and does not work with '),
+            Component.of('Oculus ').lightPurple(),
+            Component.of('installed!\n'),
+            Component.of('\nIf you encounter any bugs after disabling it, please report them'),
+            Component.of(' [here] ')
+                .clickOpenUrl('https://github.com/Project-Vyre/Finality-Genesis/issues')
+                .hover('Opens the Finality Genesis GitHub Issues page.')
+                .yellow(),
+            Component.of('or speak directly to'),
+            Component.of(' embeddedt ').lightPurple(),
+            Component.of('himself in his '),
+            Component.of('[Discord server]')
+                .clickOpenUrl('https://discord.gg/rN9Y7caguP')
+                .hover("The link for embeddedt's Discord server.")
+                .color(0x5865F2),
+            Component.of('. Thank you!\n'),
+            Component.of('\nNote: You may need to open chat to see the full message.').underlined().yellow()
+        ])
     }
 })
 
 ServerEvents.loaded(event => {
     if (!event.server.persistentData.contains('firstload')) {
         event.server.persistentData.putBoolean('firstload', true)
-        console.warn('First server load! Lag may be present for a few minutes. Also, please check your Quest Book to get your bearings.')
+        console.warn('First server load! Lag may be present for a few minutes.')
     }
 })
 
@@ -1069,15 +1152,7 @@ PlayerEvents.inventoryChanged(event => {
     }
 })
 
-
-
 /*
-let CLOCK = 0
-let sentience = [repairHint, worldMaintenance,]
-ServerEvents.tick(event => {
-
-})
-
 BlockEvents.rightClicked('minecraft:bedrock', event => {
     event.entity.notify(Notification.make(n => {
         n.text = [

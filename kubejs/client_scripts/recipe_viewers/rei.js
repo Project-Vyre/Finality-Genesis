@@ -1,5 +1,15 @@
 // requires: roughlyenoughitems
 
+/**
+ * Authors
+ * @CelestialAbyss
+ * 
+ * Contributors & Helpers
+ * @Hunter19823 For helping with REI regex and grouping
+ * mercenaryarek For the groupChippedTags function
+ * p3lim function correction
+*/
+
 let REI_CREATE_COMPAT_ORES = [
     'osmium',
     'platinum',

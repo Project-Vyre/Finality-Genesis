@@ -3,6 +3,12 @@
 // requires: woodworks
 // requires: create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 console.log('Applying recipes and tags for Team Abnormals mods...')
 
 let AUTLOG = [

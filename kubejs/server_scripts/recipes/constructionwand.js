@@ -1,6 +1,12 @@
 // requires: constructionwand
 // requires: kubejs_create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     event.remove([
         { id: 'constructionwand:infinity_wand' },

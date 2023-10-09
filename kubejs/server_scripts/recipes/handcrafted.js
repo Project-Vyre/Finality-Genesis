@@ -1,6 +1,12 @@
 // requires: handcrafted
 // requires: create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 console.log('I do not know why Handcrafted is making Create look bad here by making the boards a random chance instead of being guaranteed like a stonecutter.')
 console.log('Also, please keep your recipe IDs consistent. It is either board or boards.')
 

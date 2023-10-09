@@ -1,6 +1,12 @@
 // requires: blockrunner
 // requires: create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 /*
 {
   "#blockrunner:very_slow_blocks": 0.45,

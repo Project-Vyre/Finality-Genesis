@@ -1,6 +1,12 @@
 // requires: endrem
 // requires: extendedcrafting
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     event.remove([
         { id: 'endrem:exotic_eye' },

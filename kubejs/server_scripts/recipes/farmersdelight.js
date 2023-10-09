@@ -1,6 +1,12 @@
 // requires: farmersdelight
 // requires: kubejs_create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     event.shaped('farmersdelight:skillet', [
         ' SS',

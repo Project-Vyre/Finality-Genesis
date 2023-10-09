@@ -1,5 +1,11 @@
 // requires: mysticalagriculture
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 let INFERIUM_TOOLS = 2048
 let PRUDENTIUM_TOOLS = 4096
 let TERTIUM_TOOLS = 4096

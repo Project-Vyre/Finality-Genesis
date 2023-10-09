@@ -2,6 +2,11 @@
 // requires: jeresources
 // requires: justenoughprofessions
 
+/**
+ * Authors
+ * @CelestialAbyss
+ */
+
 let MYSHIDE = [
     'rubber',
     'silicon',

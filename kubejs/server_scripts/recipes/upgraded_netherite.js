@@ -3,6 +3,12 @@
 // requires: upgradednetherite_creative
 // requires: kubejs_create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 let UPNETHERITE_TOOLS = ['sword', 'shovel', 'pickaxe', 'axe']
 let UPNETHERITE_ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
 

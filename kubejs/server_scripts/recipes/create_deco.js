@@ -1,6 +1,12 @@
 // requires: createdeco
 // requires: kubejs_create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 /*
 810 mB = 1 block
 90 mB = 1 ingot

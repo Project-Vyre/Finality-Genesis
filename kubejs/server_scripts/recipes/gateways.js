@@ -1,6 +1,12 @@
 // requires: gateways
 // requires: create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     event.shaped(Item.of('gateways:gate_pearl', '{gateway:"kubejs:drowned_gate_small"}'), [
         'CFC',

@@ -3,6 +3,16 @@
 // requires: create
 // requires: cataclysm
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ * @squoshi Helped me a lot very early on. Thank you. Also artist of the gold block texture.
+ * @ChiefArug Helped me a lot very early on. Thank you.
+ * @Hunter19823 Helped me a lot very early on. Thank you.
+ * @ladylexxie Helped a lot very early on. Thank you.
+ */
+
 Platform.mods.kubejs.name = 'Finality'
 
 console.info('Loading Finality startup scripts...')

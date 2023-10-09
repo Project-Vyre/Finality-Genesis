@@ -1,5 +1,11 @@
 // requires: morejs
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 MoreJSEvents.villagerTrades(event => {
     event.addTrade('minecraft:weaponsmith', 1, [
         'minecraft:emerald',

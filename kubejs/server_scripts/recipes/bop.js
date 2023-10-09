@@ -1,6 +1,12 @@
 // requires: biomesoplenty
 // requires: kubejs_create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.tags('item', event => {
     event.add('biomesoplenty:flesh', [
         'biomesoplenty:flesh',

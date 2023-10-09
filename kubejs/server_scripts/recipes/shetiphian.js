@@ -3,6 +3,12 @@
 // requires: extendedcrafting
 // requires: create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     event.remove([
         'enderchests:ender_bag',
