@@ -26,11 +26,10 @@ let CreateHighlighted = 0xF1DD79
 
 let DICE = 0
 
-ServerEvents.tick(event => {
-    let level = event.server.getLevel('minecraft:overworld')
-    // minute * seconds * ticks
-    if (level.time % 36000 != 0) return
-    DICE = Utils.random.nextInt(0, 12)
+let debug_messages = false
+
+function allMessages(event) {
+    DICE = Utils.random.nextInt(0, 17)
     switch (DICE) {
         case 0:
             /**
@@ -77,7 +76,7 @@ ServerEvents.tick(event => {
                 Component.of('the ').color(CreateStandard),
                 Component.of('timeline bar').underlined().color(CreateHighlighted),
                 Component.of(' like you would in a ').color(CreateStandard),
-                Component.of('YouTube video').red(),
+                Component.of('YouTube video ').red(),
                 Component.of('or ').italic().color(CreateStandard),
                 Component.of('toggle ').italic().color(CreateHighlighted),
                 Component.of('Comfy Reading ').color(CreateHighlighted),
@@ -97,7 +96,7 @@ ServerEvents.tick(event => {
                 Component.of('will ').italic(),
                 Component.of('<shake>chase you down</shake> ').red(),
                 Component.of('for long distances. \n'),
-                Component.of("Do not say I warned you!"),
+                Component.of('\nDo not say I never warned you!').red(),
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
@@ -142,7 +141,7 @@ ServerEvents.tick(event => {
                 Component.of('your valuables').color(CreateHighlighted),
                 Component.of('.\n').color(CreateStandard),
                 Component.of('\nThis is ').darkPurple(),
-                Component.of('not mentioned ' ).bold().italic().lightPurple(),
+                Component.of('not mentioned ').bold().italic().lightPurple(),
                 Component.of('in the base Ponder scene or ').darkPurple(),
                 Component.of('anywhere else ').lightPurple(),
                 Component.of('in base ').darkPurple(),
@@ -157,14 +156,7 @@ ServerEvents.tick(event => {
             ])
             break;
         case 4:
-            /**
-             * Did you know?
-             * 
-             * Everything Brass related such as Brass Funnels, Brass Tunnels and Smart Chutes
-             * all have the capability to transfer a maximum stack size of 64 items in
-             * addition to transferring specific stack sizes. I am sure you will find them
-             * quite enjoyable to use!
-             */
+            // are the only exception as they are unable to transfer specific stack sizes and
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
                 Component.of('Did you know?\n').bold().green(),
@@ -187,7 +179,18 @@ ServerEvents.tick(event => {
                 Component.of('64 items ').bold().green(),
                 Component.of('in addition to transferring ').color(CreateStandard),
                 Component.of('specific stack sizes').color(CreateHighlighted),
-                Component.of('. I am sure you will find them quite ').color(CreateStandard),
+                Component.of('.\n').color(CreateStandard),
+                Component.of('\nBrass Tunnels ').color(CreateHighlighted),
+                Component.of('are the ').color(CreateStandard),
+                Component.of('only ').italic().color(CreateStandard),
+                Component.of('exception as they are ').color(CreateStandard),
+                Component.of('unable ').red(),
+                Component.of('to transfer specific stack sizes and ').color(CreateStandard),
+                Component.of('require ').color(CreateHighlighted),
+                Component.of('the assistance of ').color(CreateStandard),
+                Component.of('Weighted Ejectors ').gold(),
+                Component.of('to do so.\n').color(CreateStandard),
+                Component.of('\nI am sure you will find them quite ').color(CreateStandard),
                 Component.of('enjoyable ').color(CreateHighlighted),
                 Component.of('to use!').color(CreateStandard),
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
@@ -200,25 +203,30 @@ ServerEvents.tick(event => {
              * Underwater exploration is made easy with Create's Copper Diving Helmet and 
              * Copper Backtank! Just be sure to fill your Copper Backtank with Air Pressure
              * by supplying it with rotational force through the top of your Copper Backtank.
+             * You can also anchor yourself to the floor in large bodies of water by using the
+             * Copper Diving Boots.
              */
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
                 Component.of('A helpful ').color(CreateStandard),
                 Component.of('Create ').color(CreateHighlighted),
-                Component.of('tip...\n'),
+                Component.of('tip...\n').color(CreateStandard),
                 Component.of("\nUnderwater exploration ").blue(),
                 Component.of('is made ').color(CreateStandard),
                 Component.of('easy ').italic().color(CreateHighlighted),
                 Component.of('with ').color(CreateStandard),
-                Component.of("Create's").color(CreateHighlighted),
-                Component.of('Copper Diving Helmet ').color(0xE9A36D),
-                Component.of('and '),
-                Component.of('Copper Backtank').color(0xE9A36D),
-                Component.of('! Just be sure to '),
-                Component.of('fill').bold().underlined(),
-                Component.of(' your ').italic(),
+                Component.of("Create's ").color(CreateHighlighted),
+                Component.of('diving gear comprised of the ').color(CreateStandard),
+                Component.of('Copper Diving Helmet, ').color(0xE9A36D),
+                Component.of('Copper Backtank ').color(0xE9A36D),
+                Component.of('and ').color(CreateStandard),
+                Component.of('Copper Diving Boots').color(0xE9A36D),
+                Component.of('. \n').color(CreateStandard),
+                Component.of('\nJust be sure to ').color(CreateStandard),
+                Component.of('fill').bold().color(CreateHighlighted),
+                Component.of(' your ').italic().color(CreateStandard),
                 Component.of('Copper Backtank ').color(0xE9A36D), //wit
-                Component.of('with ').italic(),
+                Component.of('with ').italic().color(CreateStandard),
                 Component.of('Air Pressure ').gray(),
                 Component.of('by ').color(CreateStandard),
                 Component.of('supplying it ').color(CreateHighlighted),
@@ -229,88 +237,223 @@ ServerEvents.tick(event => {
                 Component.of(' of ').color(CreateStandard),
                 Component.of('your ').italic().color(CreateStandard),
                 Component.of('Copper Backtank').color(0xE9A36D),
+                Component.of('.\n').color(CreateStandard),
+                Component.of('You can also ').color(CreateStandard),
+                Component.of('anchor yourself ').color(CreateHighlighted),
+                Component.of('to the floor in large bodies of water by ').color(CreateStandard),
+                Component.of('using ').color(CreateHighlighted),
+                Component.of('the ').color(CreateStandard),
+                Component.of('Copper Diving Boots').color(0xE9A36D),
+                Component.of('.\n').color(CreateStandard),
+                Component.of('\nThe ').color(CreateStandard),
+                Component.of('Copper Diving Equipment ').color(0xE9A36D),
+                Component.of('can be ').color(CreateStandard),
+                Component.of('upgraded ').color(CreateHighlighted),
+                Component.of('to ').color(CreateStandard),
+                Component.of('Netherite Diving Equipment ').darkGray(),
+                Component.of('once you have enough ').color(CreateStandard),
+                Component.of('Netherite ').darkGray(),
+                Component.of('to spare.').color(CreateStandard),
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
         case 6:
             /**
-             * Did you know?
+             * Finality Tip
              * 
              * In this modpack, spawners can be crafted with Structure Void. They can also be picked up
              * with the help of Carry On by sneaking and right clicking a Spawner with both hands empty.
              * 
              */
-            event.server.tell([
-                Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
-                Component.of('Placeholder text6'),
-                Component.of('Placeholder text6'),
-                Component.of('\n<rainb>-----------------------------------------------------</rainb>')
-            ])
+            if (Platform.isLoaded('carryon')) {
+                event.server.tell([
+                    Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
+                    Component.of('Finality Tip\n').bold().lightPurple(),
+                    Component.of('\nIn this modpack, spawners can be ').darkPurple(),
+                    Component.of('crafted ').lightPurple(),
+                    Component.of('with ').darkPurple(),
+                    Component.of('Structure Void').lightPurple(),
+                    Component.of('. They can also be ').darkPurple(),
+                    Component.of('picked up ').lightPurple(),
+                    Component.of('with the help of ').darkPurple(),
+                    Component.of('Carry On ').lightPurple(),
+                    Component.of('by ').darkPurple(),
+                    Component.of('sneaking ').lightPurple(),
+                    Component.of('and ').italic().darkPurple(),
+                    Component.of('right clicking ').lightPurple(),
+                    Component.of('while ').darkPurple(),
+                    Component.of('both ').italic().lightPurple(),
+                    Component.of('hands are ').lightPurple(),
+                    Component.of('empty').underlined().lightPurple(),
+                    Component.of(' when near it.').darkPurple(),
+                    Component.of('\n<rainb>-----------------------------------------------------</rainb>')
+                ])
+            }
             break;
         case 7:
             /**
+             * Create Tip
              * 
+             * You can shorten Mechanical Belts with the Wrench by clicking on the end of the belt
+             * instead of destroying the belt in its entirety and ruining all of your work.
              */
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
-                Component.of('Placeholder text7'),
-                Component.of('Placeholder text7'),
+                Component.of('Create Tip\n').bold().color(CreateHighlighted),
+                Component.of('\nYou can easily ').color(CreateStandard),
+                Component.of('shorten ').italic().color(CreateHighlighted),
+                Component.of('Mechanical Belts ').color(CreateHighlighted),
+                Component.of('with the ').color(CreateStandard),
+                Component.of('Wrench ').color(CreateHighlighted),
+                Component.of('by ').color(CreateStandard),
+                Component.of('[right-clicking] ').color(CreateHighlighted),
+                Component.of('on the ').color(CreateStandard),
+                Component.of('end').underlined().color(CreateHighlighted),
+                Component.of(' of the belt ').color(CreateHighlighted),
+                Component.of('instead of ').color(CreateStandard),
+                Component.of('<shake>destroying</shake>').red(),
+                Component.of(' the belt in its ').color(CreateStandard),
+                Component.of('<shake><wave><wiggle>entirety</wiggle></wave></shake>')
+                    .bold()
+                    .color(CreateHighlighted),
+                Component.of(' and ').italic().color(CreateStandard),
+                Component.of('ruining ').red(),
+                Component.of('all ').italic().color(CreateStandard),
+                Component.of('of your hard work.').color(CreateStandard),
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
         case 8:
-            /**
-             * 
-             */
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
-                Component.of('Placeholder text8'),
-                Component.of('Placeholder text8'),
+                Component.of('Create Tip\n').bold().color(CreateHighlighted),
+                Component.of('\nWhat was worthless is now ').color(CreateStandard),
+                Component.of('valuable').color(CreateHighlighted),
+                Component.of('.\n').color(CreateStandard),
+                Component.of('\nFrom ').color(CreateStandard),
+                Component.of('Cobblestone ').gray(),
+                Component.of('you can get ').color(CreateStandard),
+                Component.of('Gravel').gray(),
+                Component.of('.\n'),
+                Component.of('\nFrom ').color(CreateStandard),
+                Component.of('Gravel ').gray(),
+                Component.of('you can get ').color(CreateStandard),
+                Component.of('Iron Nuggets'),
+                Component.of('.').color(CreateStandard),
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
         case 9:
-            /**
-             * 
-             */
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
-                Component.of('Placeholder text9'),
-                Component.of('Placeholder text9'),
+                Component.of('Just got back from a tea break...\n').darkPurple(),
+                Component.of("\nI hope you've been using JEI or REI to check recipes. You ").darkPurple(),
+                Component.of("will ").italic().darkPurple(),
+                Component.of('find yourself lost very quickly.').darkPurple(),
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
         case 10:
-            /**
-             * 
-             */
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
-                Component.of('Placeholder text10'),
-                Component.of('Placeholder text10'),
+                Component.of('In case you have not found any Iron Ore, have some ').darkPurple(),
+                Component.of('[free] ')
+                    .lightPurple()
+                    .clickOpenUrl('https://www.youtube.com/watch?v=4xLVySuwbOo')
+                    .hover('<wave>frEEeeeE?</wave>'),
+                Component.of('Raw Iron'),
+                Component.of("! Hopefully this helps.").darkPurple(),
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
+            event.player.give('9x minecraft:raw_iron')
             break;
         case 11:
-            /**
-             * 
-             */
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
-                Component.of('Placeholder text10'),
-                Component.of('Placeholder text10'),
+                Component.of('Finality Tip\n').bold().lightPurple(),
+                Component.of('\nCampfires now regenerate your health when you are close to them. <wave>Cozy!</wave>').gold(),
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
         case 12:
+            event.server.tell([
+                Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
+                Component.of('I would be a bit surprised if you have not noticed that the days are much longer than usual...\n').darkPurple(),
+                Component.of('This does mean that the nights are longer as a consequence, however.').darkPurple(),
+                Component.of('\n<rainb>-----------------------------------------------------</rainb>')
+            ])
+            break;
+        case 13:
+            event.server.tell([
+                Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
+                Component.of('Running out of materials should be the least of your worries.\n').color(CreateStandard),
+                Component.of('Build ').color(CreateHighlighted),
+                Component.of("to your heart's desire!").color(CreateStandard),
+                Component.of('\n<rainb>-----------------------------------------------------</rainb>')
+            ])
+            break;
+        case 14:
+            event.server.tell([
+                Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
+                Component.of('Create Tip\n').bold().color(CreateHighlighted),
+                Component.of('\nDid you know you can get ').color(CreateStandard),
+                Component.of('Lime Dye ').color(0xAAE23A),
+                Component.of('from ').color(CreateStandard),
+                Component.of('Sea Pickles').darkGreen(),
+                Component.of('?').color(CreateStandard),
+                Component.of('\n<rainb>-----------------------------------------------------</rainb>')
+            ])
+            break;
+        case 15:
             /**
-             * 
+             * Ever accidentally placed a Shaft inside a Mechanical Belt and want to remove it?
+             * Don't fear! Simply right-click while not sneaking with a Wrench to safely retrieve said
+             * Shaft without breaking the entire belt and ruining your hard work.
              */
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
-                Component.of('Placeholder text10'),
-                Component.of('Placeholder text10'),
-                Component.of('\n<rainb>-----------------------------------------------------</rainb>')                
+                Component.of('Create Tip\n').bold().color(CreateHighlighted),
+                Component.of('\nEver ').color(CreateStandard),
+                Component.of('accidentally ').color(CreateHighlighted),
+                Component.of('placed a Shaft ').color(CreateStandard),
+                Component.of('inside ').color(CreateHighlighted),
+                Component.of('a Mechanical Belt and want to ').color(CreateStandard),
+                Component.of('remove ').color(CreateHighlighted),
+                Component.of('it?\n').color(CreateStandard),
+                Component.of("\nDon't fear! Simply").color(CreateStandard),
+                Component.of(' [right-click] ').color(CreateHighlighted),
+                Component.of('with a ').color(CreateStandard),
+                Component.of('Wrench ').color(CreateHighlighted),
+                Component.of('while ').color(CreateStandard),
+                Component.of('not ').italic().color(CreateHighlighted),
+                Component.of('sneaking ').color(CreateHighlighted),
+                Component.of('to ').color(CreateStandard),
+                Component.of('safely retrieve ').color(CreateHighlighted),
+                Component.of('said Shaft ').color(CreateStandard),
+                Component.of('without ').italic().color(CreateStandard),
+                Component.of('breaking ').color(CreateHighlighted),
+                Component.of('the entire belt ').color(CreateStandard),
+                Component.of('and ').color(CreateStandard),
+                Component.of('ruining ').red(),
+                Component.of('your hard work.').color(CreateStandard),
+                Component.of('\n<rainb>-----------------------------------------------------</rainb>')
+            ])
+            break;
+        case 16:
+            event.server.tell([
+                Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
+                Component.of('Create Tip\n').bold().color(CreateHighlighted),
+                Component.of('Toolboxes ').color(CreateHighlighted),
+                Component.of('can be ').color(CreateStandard),
+                Component.of('remotely accessed ').color(CreateHighlighted),
+                Component.of('by pressing').color(CreateStandard),
+                Component.of(' [Left Alt] ').color(CreateHighlighted),
+                Component.of('while ').color(CreateStandard),
+                Component.of('within ').color(CreateHighlighted),
+                Component.of('a radius of 10 blocks.\n').color(CreateStandard),
+                Component.of('\nPlease note that this keybind can be changed for your comfort.')
+                    .color(CreateStandard),
+                Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
         default:
@@ -321,4 +464,17 @@ ServerEvents.tick(event => {
             ])
             break;
     }
+}
+
+ServerEvents.tick(event => {
+    let level = event.server.getLevel('minecraft:overworld')
+    // minute * seconds * ticks
+    if (level.time % (30 * 60 * 20) !== 0) return
+    allMessages(event)
 })
+
+if (debug_messages) {
+    ItemEvents.rightClicked('minecraft:debug_stick', event => {
+        allMessages(event)
+    })
+}

@@ -505,8 +505,8 @@ ServerEvents.recipes(event => {
         Item.of('minecraft:netherite_scrap').withChance(0.0002)
     ], 'minecraft:netherrack').processingTime(250).id('finality:netherrack_crushing')
     event.recipes.createCrushing([
-        Item.of('minecraft:gold_nugget', 5).withChance(0.10),
-        Item.of('create:experience_nugget', 2).withChance(0.05)
+        Item.of('minecraft:gold_nugget', 5).withChance(0.25),
+        Item.of('create:experience_nugget', 2).withChance(0.12)
     ], 'minecraft:gilded_blackstone').processingTime(250).id('finality:gilded_blackstone_crushing')
     event.recipes.createCrushing(Item.of('9x kubejs:deepslate_shard').withChance(0.75), 'minecraft:deepslate').processingTime(250).id('finality:deepslate_shard_from_deepslate')
     event.recipes.createCrushing(Item.of('kubejs:deepslate_shard', 9).withChance(0.25), 'minecraft:cobbled_deepslate').processingTime(250).id('finality:deepslate_shard_from_cobbled_deepslate')
@@ -953,8 +953,8 @@ PlayerEvents.loggedIn(event => {
         event.player.persistentData.putBoolean('firstjoin', true)
         event.player.give('ftbquests:book')
         event.player.tell([
-            Component.of('First world load! Lag may be present for a few minutes. \n').bold().gold(),
-            Component.of("\nAlso, please check your Quest Book and read its tooltips to get your bearings. Before I go, do not forget to \n"),
+            Component.of('First world load! Lag may be present for a few minutes.\n').bold().gold(),
+            Component.of("Also, please check your Quest Book and read its tooltips to get your bearings. Before I go, do not forget to\n"),
             Component.of('Hold <rainb>[w]</rainb> to Ponder! \n').yellow(),
             Component.of('\nIf you experience '),
             Component.of('any ').italic(),
@@ -963,7 +963,11 @@ PlayerEvents.loggedIn(event => {
             Component.of('or '),
             Component.of('flickering ').red(),
             Component.of('on blocks... '),
-            Component.of('go to [Video Settings < Performance] then '),
+            Component.of('go to '),
+            Component.of('[Video Settings] ').aqua(),
+            Component.of('< '),
+            Component.of('[Performance] ').aqua(),
+            Component.of('then '),
             Component.of('disable or uncheck ').red(),
             Component.of('the setting that says '),
             Component.of('Use Compact Vertex Format').bold().darkAqua(),
@@ -990,7 +994,7 @@ PlayerEvents.loggedIn(event => {
     } else if (event.player.persistentData.contains('firstjoin')) {
         event.player.tell([
             Component.of('Welcome back!\n').bold().green(),
-            Component.of('\nIf the world has recently been loaded, lag may be present for a few minutes. '),
+            Component.of('If the world has recently been loaded, lag may be present for a few minutes. '),
             Component.of('<shake>Please</shake> ').bold().red(),
             Component.of("allow some time to fully stabilize. Don't forget to read tooltips for some helpful info and\n"),
             Component.of("Hold <rainb>[w]</rainb> to Ponder!\n").yellow(),
@@ -1001,7 +1005,11 @@ PlayerEvents.loggedIn(event => {
             Component.of('or '),
             Component.of('flickering ').red(),
             Component.of('on blocks... '),
-            Component.of('go to [Video Settings < Performance] then '),
+            Component.of('go to '),
+            Component.of('[Video Settings] ').aqua(),
+            Component.of('< '),
+            Component.of('[Performance] ').aqua(),
+            Component.of('then '),
             Component.of('disable or uncheck ').red(),
             Component.of('the setting that says '),
             Component.of('Use Compact Vertex Format').bold().darkAqua(),

@@ -114,6 +114,8 @@ let gray = 0xAAAAAA
 let darkGray = 0x555555
 let black = 0x000000
 
+let toast_debug = false
+
 bossDeathToast(
     'minecraft:wither',
     'minecraft:wither_skeleton_skull',
@@ -228,18 +230,20 @@ EntityEvents.death('minecraft:wither', event => {
 })
 */
 
-// Debugger
-ItemEvents.rightClicked('minecraft:debug_stick', event => {
-    event.player.notify(Notification.make(toast => {
-        toast.itemIcon = 'minecraft:wither_skeleton_skull'
-        toast.outlineColor = 0x00FFFF
-        toast.backgroundColor = 0xB6FF00
-        toast.borderColor = 0xFF0000
-        toast.text = [
-            Component.of('The Wither has been killed!\n').bold().red(),
-            Component.of('Nether Star ').yellow(),
-            Component.of('acquired. \n'),
-            Component.of('Debug Stick triggered.')
-        ]
-    }))
-})
+// Toast debugger
+if (toast_debug) {
+    ItemEvents.rightClicked('minecraft:debug_stick', event => {
+        event.player.notify(Notification.make(toast => {
+            toast.itemIcon = 'minecraft:wither_skeleton_skull'
+            toast.outlineColor = 0x00FFFF
+            toast.backgroundColor = 0xB6FF00
+            toast.borderColor = 0xFF0000
+            toast.text = [
+                Component.of('The Wither has been killed!\n').bold().red(),
+                Component.of('Nether Star ').yellow(),
+                Component.of('acquired. \n'),
+                Component.of('Debug Stick triggered.')
+            ]
+        }))
+    })
+}

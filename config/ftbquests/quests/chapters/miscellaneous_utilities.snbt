@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "miscellaneous_utilities"
 	group: "668E3EA3A7A91B79"
+	icon: "minecraft:experience_bottle"
 	id: "39AB89A7001538E5"
 	order_index: 5
 	progression_mode: "flexible"

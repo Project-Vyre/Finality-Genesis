@@ -396,6 +396,12 @@ REIEvents.information(event => {
             'In other words, it is made by wearing Phoenix Armor, then quenching it with water.'
         ])
     }
+    if (Platform.isLoaded('neapolitan')) {
+        event.addItem('neapolitan:adzuki_beans', 'Growth', [
+            'Can only be grown in non-tilled soil.',
+            'Does not require water!'
+        ])
+    }
 })
 
 REIEvents.groupEntries(event => {

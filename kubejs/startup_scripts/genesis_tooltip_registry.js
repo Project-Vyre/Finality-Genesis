@@ -319,6 +319,9 @@ ClientEvents.init(event => {
     if (Platform.isLoaded('etched')) {
         YELLOW_PALETTE('etched:boombox')
     }
+    if (Platform.isLoaded('goldenhopper')) {
+        YELLOW_PALETTE('goldenhopper:golden_hopper')
+    }
     if (Platform.isLoaded('graveyard')) {
         GRAY_RED_PALETTE('graveyard:corruption')
         GRAY_RED_PALETTE('graveyard:ossuary')
@@ -326,11 +329,14 @@ ClientEvents.init(event => {
     if (Platform.isLoaded('grimoireofgaia')) {
         GREEN_PALETTE('grimoireofgaia:taproot')
     }
+    if (Platform.isLoaded('lilwings')) {
+        STANDARD_PALETTE('minecraft:glass_bottle')
+    }
     if (Platform.isLoaded('monobank')) {
         STANDARD_PALETTE('monobank:monobank')
     }
-    if (Platform.isLoaded('lilwings')) {
-        STANDARD_PALETTE('minecraft:glass_bottle')
+    if (Platform.isLoaded('mysticalagriculture')) {
+        STANDARD_PALETTE('mysticalagriculture:infusion_altar')
     }
     if (Platform.isLoaded('quark')) {
         STANDARD_PALETTE('quark:abacus')
