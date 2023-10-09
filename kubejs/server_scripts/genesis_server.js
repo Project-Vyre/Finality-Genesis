@@ -546,7 +546,10 @@ ServerEvents.recipes(event => {
         'minecraft:dirt', 'minecraft:gravel'
     ]).id('finality:coarse_dirt')
     event.recipes.createMixing([Fluid.of('kubejs:molten_gold', 90)], ['minecraft:gold_ingot']).heated().id('finality:gold_ingot_melting')
-    event.recipes.createMixing(['minecraft:netherite_ingot'], [Item.of('minecraft:netherite_scrap', 4), Fluid.of('kubejs:molten_gold', 360)]).heated().id('finality:netherite_ingot_from_mixing')
+    event.recipes.createMixing('4x minecraft:netherite_ingot', [
+        Item.of('minecraft:netherite_scrap', 4),
+        Fluid.of('kubejs:molten_gold', 360)
+    ]).heated().id('finality:netherite_ingot_from_mixing')
     event.recipes.createMixing(['minecraft:emerald'], [
         'minecraft:quartz', 'minecraft:glass', '3x minecraft:iron_nugget'
     ]).superheated().id('finality:renew_emerald') // Be3Al2(SiO3)6

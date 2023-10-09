@@ -356,13 +356,15 @@ function allMessages(event) {
         case 10:
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
-                Component.of('In case you have not found any Iron Ore, have some ').darkPurple(),
+                Component.of('In case you have not found any ').darkPurple(),
+                Component.of('Iron Ore'),
+                Component.of(', have some ').darkPurple(),
                 Component.of('[free] ')
                     .lightPurple()
                     .clickOpenUrl('https://www.youtube.com/watch?v=4xLVySuwbOo')
                     .hover('<wave>frEEeeeE?</wave>'),
                 Component.of('Raw Iron'),
-                Component.of("! Hopefully this helps.").darkPurple(),
+                Component.of(" as a form of assistance! Hopefully this helps.").darkPurple(),
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             event.player.give('9x minecraft:raw_iron')
@@ -468,7 +470,7 @@ function allMessages(event) {
 
 ServerEvents.tick(event => {
     let level = event.server.getLevel('minecraft:overworld')
-    // minute * seconds * ticks
+    // minutes * seconds * ticks
     if (level.time % (30 * 60 * 20) !== 0) return
     allMessages(event)
 })

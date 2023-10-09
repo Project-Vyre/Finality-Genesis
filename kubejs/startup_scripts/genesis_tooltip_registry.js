@@ -267,6 +267,10 @@ ClientEvents.init(event => {
     if (Platform.isLoaded('alexsmobs')) {
         YELLOW_PALETTE('minecraft:pumpkin')
     }
+    if (Platform.isLoaded('apotheosis')) {
+        YELLOW_PALETTE('apotheosis:vial_of_expulsion')
+        PURPLE_PALETTE('apotheosis:vial_of_extraction')
+    }
     if (Platform.isLoaded('architects_palette')) {
         GRAY_BLUE_PALETTE('architects_palette:chiseled_abyssaline_bricks')
         GRAY_RED_PALETTE('architects_palette:chiseled_hadaline_bricks')

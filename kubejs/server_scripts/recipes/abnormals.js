@@ -52,6 +52,9 @@ ServerEvents.recipes(event => {
         event.shapeless(`woodworks:${insert}_trapped_chest`, [
             'minecraft:trapped_chest'
         ]).id(`finality:woodworks/vanilla_trapped_chest_to_${insert}_trapped_chest_conversion`)
+        event.shapeless(`minecraft:${insert}_planks`, [
+            `woodworks:${insert}_boards`
+        ]).id(`finality:woodworks/${insert}_boards_revert`)
     })
     event.remove({ id: 'abnormals_delight:atmospheric/laurel_cabinet' })
     if (Platform.isLoaded('incubation') && Platform.isLoaded('farmersdelight')) {
