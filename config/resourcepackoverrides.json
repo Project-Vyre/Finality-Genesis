@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "failed_reloads_per_session": 5,
+  "default_packs": [
+    "create:legacy_copper",
+    "file/Pixelated_v1.3.1_EnhancedVisuals(nox_cgt).zip",
+    "file/Nicer-Rain-1.0.0.zip",
+    "file/Slightly-Improved-Font-1.0.0.zip",
+    "file/Enhanced_Audio_r6.zip",
+    "file/Enhanced_Audio_Ambience_r1.zip"
+  ],
+  "default_overrides": {
+    "force_compatible": true
+  },
+  "pack_overrides": {
+    "genesis_resources": [
+      "file/Pixelated_v1.3.1_EnhancedVisuals(nox_cgt).zip",
+      "file/Nicer-Rain-1.0.0.zip",
+      "file/Slightly-Improved-Font-1.0.0.zip",
+      "file/Enhanced_Audio_r6.zip",
+      "file/Enhanced_Audio_Ambience_r1.zip"
+    ],
+    "$genesis_resources": {
+      "fixed_position": true,
+      "force_compatible": true,
+      "required": true
+    },
+    "loadmyresources.hiddenpack": {
+      "required": true,
+      "hidden": true
+    }
+  }
+}
