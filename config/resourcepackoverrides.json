@@ -6,8 +6,8 @@
     "file/Pixelated_v1.3.1_EnhancedVisuals(nox_cgt).zip",
     "file/Nicer-Rain-1.0.0.zip",
     "file/Slightly-Improved-Font-1.0.0.zip",
-    "file/Enhanced_Audio_r6.zip",
-    "file/Enhanced_Audio_Ambience_r1.zip"
+    "file/Enhanced Audio r6.zip",
+    "file/Enhanced Audio Ambience r1.zip"
   ],
   "default_overrides": {
     "force_compatible": true
@@ -17,8 +17,8 @@
       "file/Pixelated_v1.3.1_EnhancedVisuals(nox_cgt).zip",
       "file/Nicer-Rain-1.0.0.zip",
       "file/Slightly-Improved-Font-1.0.0.zip",
-      "file/Enhanced_Audio_r6.zip",
-      "file/Enhanced_Audio_Ambience_r1.zip"
+      "file/Enhanced Audio r6.zip",
+      "file/Enhanced Audio Ambience r1.zip"
     ],
     "$genesis_resources": {
       "fixed_position": true,
