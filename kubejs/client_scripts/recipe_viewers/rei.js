@@ -295,7 +295,7 @@ REIEvents.information(event => {
     event.addItem('minecraft:campfire', 'New Functionality', ['Campfires now regenerate your health. <wave>Cozy!</wave>'])
     event.addItem('minecraft:soul_campfire', 'New Functionality', ['Campfires now regenerate your health. <wave>Cozy!</wave>'])
     event.addItem('minecraft:dragon_egg', 'Uses', ['Can be used to make Dragon Breath.'])
-    event.addItem('kubejs:lemon_seed', 'Acquisition', ['Can only be acquired from grass or trading with farmers.'])
+    event.addItem('kubejs:lemon_seed', 'Acquisition', ['Can only be acquired from breaking grass or trading with farmers.'])
     event.addItem('tempad:tempad', 'Usage', ['Allows you to teleport to points you placed throughout the world but has a 3 minute cooldown.'])
     event.addItem('tempad:he_who_remains_tempad', 'Acquisition Method', ['Can only be acquired from the End, somewhere.'])
     event.addItem('mysticalagriculture:fertilized_essence', 'Acquisition', [
