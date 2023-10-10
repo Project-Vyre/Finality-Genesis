@@ -1,11 +1,13 @@
 {
-  "name": "singularity.extendedcrafting.redstone",
+  "name": "Redstone",
   "colors": [
-    "ff0000",
-    "8a0901"
+    "FF0000",
+    "8A0901"
   ],
   "ingredient": {
     "item": "minecraft:redstone_block"
   },
-  "materialCount": 16384
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

@@ -1,11 +1,13 @@
 {
   "name": "Netherite",
   "colors": [
-    "93847d",
-    "24110b"
+    "93847D",
+    "24110B"
   ],
   "ingredient": {
     "item": "minecraft:netherite_block"
   },
-  "materialCount": 8192
+  "materialCount": 8192,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

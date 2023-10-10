@@ -1,11 +1,13 @@
 {
-    "name": "Cyan Concrete",
-    "colors": [
-      "2dc2c2",
-      "146e7e"
-    ],
-    "ingredient": {
-      "item": "minecraft:cyan_concrete"
-    },
-    "materialCount": 16384
-  }
+  "name": "Cyan Concrete",
+  "colors": [
+    "2DC2C2",
+    "146E7E"
+  ],
+  "ingredient": {
+    "item": "minecraft:cyan_concrete"
+  },
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

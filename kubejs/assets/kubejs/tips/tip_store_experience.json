@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "kubejs"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create_enchantment_industry"
+    }
+  ],
+  "title": {
+    "text": "Finality Tip",
+    "bold": true,
+    "color": "light_purple"
+  },
+  "tip": {
+    "text": "Experience can be extracted using Disenchanters and then pumped into Fluid Tanks."
+  }
+}

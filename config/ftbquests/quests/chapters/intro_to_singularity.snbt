@@ -29,13 +29,17 @@
 				""
 				"The rest of the chapters can be accessed after you click the checkmark here and move your cursor to the left edge of your screen."
 				""
-				"Also, take the time now to SET YOUR KEYBINDS, only if you want to."
-				""
 				"If you are playing with friends, please do not forget to make a party with FTB Teams! Press E to open your inventory and look for three person figures on the top left corner."
 				""
-				"This modpack is not complete, but the end goal is reachable."
+				"This modpack is not complete and development is ongoing, but the end goal is reachable."
 				""
-				"If you wish to disable the immersion that &l&eReal Camera&r provides, press &6F6&r."
+				"If you wish to disable the immersion and first person model that &l&eReal Camera&r provides, press &6F6&r."
+				""
+				"If you wish to configure your character's gender, press &d&lG&r."
+				""
+				"Press &bX&r to crawl."
+				""
+				"Also, take the time now to SET YOUR KEYBINDS and adjust volume levels if needed."
 				""
 				"Tips for using &l&7Roughly Enough Items&r or &l&2JEI&r are on the next few pages. &eLootr&r chest info is on the following page. Just don't say I didn't warn you if your Lootr chest blows up."
 				"{@pagebreak}"
@@ -94,7 +98,7 @@
 				""
 				"&l&c<shake>Check for TNT or redstone around each Lootr chest.</shake>&r"
 				"{@pagebreak}"
-				"Thinking of no longer using Patchouli for the guide book..."
+				"Thinking of no longer using Patchouli for the guide book... information below is not relevant until it is more up to date."
 				""
 				"-+-"
 				""
@@ -136,6 +140,11 @@
 					}
 					type: "item"
 				}
+				{
+					id: "173D685495C0B44E"
+					item: "ftbquests:book"
+					type: "item"
+				}
 			]
 			title: "Introduction Node - Hi! Welcome to Finality."
 			x: 0.0d
@@ -144,6 +153,12 @@
 		{
 			dependencies: ["4A691BB889286C89"]
 			description: [
+				"You may notice in your inventory that you come with two different items... a &4dark ring&r and an &6amulet&r."
+				""
+				"The &6Enigmatic Amulet&r keeps &l&oall&r &aexperience&r and &ditems&r on &cdeath&r, just make sure it is in your player's inventory or in the Curios accessories charm slot."
+				""
+				"The ring on the other hand is a double edged sword that cuts deeply."
+				""
 				"Once you wear the &l&4Ring of the Seven Curses&r, it is bound to you... &ceternally&r."
 				""
 				"Keep an eye out for extra shiny loot that may grant you special abilities!"
@@ -298,6 +313,8 @@
 				"If you still find yourself running out of string or wool, gather &2flax seeds&r and plant them. &aFlax&r can then be refined with a &6Millstone&r to get additional string and seeds."
 				""
 				"This process can then be automated with &6Create&r and its &7Mechanical Harvesters&r."
+				""
+				"Also, if you didn't read the tooltip for &6Campfires&r like the majority of players who skim over &c<shake>everything</shake>&r, they can now regenerate your health. &6<wave>Cozy!</wave>&r"
 			]
 			hide: true
 			icon: "extendedcrafting:handheld_table"
@@ -318,6 +335,16 @@
 					id: "3407EBD71CDAC867"
 					type: "xp_levels"
 					xp_levels: 3
+				}
+				{
+					id: "139BB63F1B9DEB8C"
+					item: "supplementaries:flax"
+					type: "item"
+				}
+				{
+					id: "0B0A46007FC704BC"
+					item: "supplementaries:flax_seeds"
+					type: "item"
 				}
 			]
 			shape: "rsquare"
@@ -349,16 +376,6 @@
 					id: "6D0C51FCA5C0A1D2"
 					title: "Make sure to make an FTB Teams party to synchronize quest progress!"
 					type: "checkmark"
-				}
-				{
-					id: "695A99D91AD8683D"
-					item: "supplementaries:flax"
-					type: "item"
-				}
-				{
-					id: "1F862E8D540AD355"
-					item: "supplementaries:flax_seeds"
-					type: "item"
 				}
 				{
 					id: "7C483B82D80A8F75"
@@ -530,14 +547,15 @@
 		{
 			dependencies: ["2EF808209CCECE6A"]
 			description: [
+				"&lThis quest node description has multiple pages that contain information for each item that does not explain its use through a tooltip.&r"
+				""
+				"Please read through them to learn more."
+				"{@pagebreak}"
 				"About Tempad:"
 				""
 				"Think of the &dTempad&r device as a personal waystone with a cooldown. It is very effective and customizable as well!"
 				""
 				"This quest also has a hidden step, but it requires you to get to The End first."
-				""
-				"On a sidenote, this quest node description has multiple pages."
-				""
 				"{@pagebreak}"
 				"About Travel Anchors:"
 				""
@@ -553,10 +571,15 @@
 				""
 				"-+-"
 				""
-				"To unlock the Travel Anchor to rename it, use a stick!"
-				""
+				"To unlock the &3Travel Anchor&r to rename it, use a stick!"
 				"{@pagebreak}"
-				"Mechanical Extruders can be used to make Create's orestones quite easily and can make smooth stone if the recipe filter is set."
+				"About &eMega Torches&r from Torchmaster:"
+				""
+				"They prevent spawns in a 64 block radius from their position."
+				"{@pagebreak}"
+				"&7Mechanical Extruders&r can be used to make Create's orestones quite easily and can make smooth stone if the recipe filter is set."
+				"{@pagebreak}"
+				"The &aCreate Chunk Loader&r makes it so that trains and moving contraptions are able to load chunks themselves instead of using an incompatible stationary chunk loader."
 			]
 			icon: "tempad:tempad"
 			id: "5E5E9241EB84A4E9"
@@ -605,17 +628,17 @@
 					type: "item"
 				}
 				{
-					id: "5F5F07011AFB9FDF"
-					item: "echochest:echo_chest"
-					type: "item"
-				}
-				{
 					id: "6FECCB0334CF7626"
 					item: {
 						Count: 1b
 						id: "monobank:monobank"
 						tag: { }
 					}
+					type: "item"
+				}
+				{
+					id: "7F1707757DF45D46"
+					item: "createchunkloading:chunk_loader"
 					type: "item"
 				}
 			]
@@ -665,7 +688,7 @@
 				""
 				"You may notice that days and nights are longer as well, just so it does not feel like time is flying by."
 				""
-				"Also, I recommend making a backpack so you can handle loot more easily while you are out exploring and adventuring."
+				"Also, I recommend making a backpack so you can handle loot more easily while you are out exploring and adventuring. The default keybind for opening your backpack is &dB&r."
 			]
 			icon: {
 				Count: 1b
@@ -692,6 +715,12 @@
 					id: "74F16A4C8B3FAB4F"
 					type: "xp_levels"
 					xp_levels: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "37614DAB7EBD19E6"
+					table_id: 4925255154089711758L
+					type: "random"
 				}
 			]
 			shape: "rsquare"
@@ -764,13 +793,13 @@
 				""
 				"You can also access the <rainb>Ponder Index</rainb> from your Esc menu!"
 				""
-				"Go to the next page for tips for getting into Create and Apotheosis related information..."
+				"Here are some tips that I recommend following:"
 				""
 				"- Some <rainb>Ponder</rainb> views have &o&lmultiple scenes&r&r, so be sure to look at the bottom of your screen to see if there is a &lnext arrow&r."
 				""
 				"- Andesite, iron, copper and zinc are important. You will especially need andesite and iron."
 				""
-				"- Many useless vanilla items may no longer be useless when refined through Create's methods. For example, gravel."
+				"- Many useless vanilla items may no longer be useless when refined through Create's methods. Gravel can now be &9washed&r to make Iron Nuggets, for example."
 				""
 				"- Plan ahead with your logistics and the direction of your rotational force."
 			]
@@ -820,6 +849,12 @@
 					type: "xp_levels"
 					xp_levels: 3
 				}
+				{
+					exclude_from_claim_all: true
+					id: "2AD714DD20BB5FB1"
+					table_id: 3832275843975625545L
+					type: "random"
+				}
 			]
 			shape: "rsquare"
 			subtitle: "Be prepared."
@@ -834,12 +869,17 @@
 				}
 				type: "item"
 			}]
-			title: "The Vanilla Endgoal: Diamonds"
+			title: "Diamond Pickaxe Acquired!"
 			x: 3.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["13186E7B0D6B6115"]
+			description: [
+				"The &aNature's Compass&r allows you to find &lbiomes&r."
+				""
+				"The &7Explorer's Compass&r allows you to find &lstructures&r."
+			]
 			icon: "minecraft:compass"
 			id: "650B5FD6B6CAD69C"
 			rewards: [
@@ -916,6 +956,8 @@
 				""
 				"&7Tuff&r can be made from compacting either Gravel or Deepslate in a &bsuperheated&r or &6heated&r &7basin&r with some lava."
 				""
+				"&9Phantom Membranes&r can be made from &3<wave>haunting</wave>&r &4Rotten Flesh&r."
+				""
 				"&8Netherite&r is also now renewable with the use of Crushing Wheels by crushing &4Netherrack&r."
 				""
 				"Netherrack can now be renewed with &cInstant Health II&r potions, fully automated."
@@ -970,6 +1012,11 @@
 				{
 					id: "5712112A95EF8468"
 					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "33CDB492E3D94E84"
+					item: "minecraft:phantom_membrane"
 					type: "item"
 				}
 			]

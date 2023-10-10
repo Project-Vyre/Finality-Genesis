@@ -1,11 +1,13 @@
 {
   "name": "Light Gray Concrete",
   "colors": [
-    "a7a79f",
-    "74746b"
+    "A7A79F",
+    "74746B"
   ],
   "ingredient": {
     "item": "minecraft:light_gray_concrete"
   },
-  "materialCount": 16384
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

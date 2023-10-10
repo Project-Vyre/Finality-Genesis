@@ -1,6 +1,12 @@
 // requires: backpacked
 // planning on changing the recipes later.
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     event.shaped('backpacked:backpack', [
         'HHH',

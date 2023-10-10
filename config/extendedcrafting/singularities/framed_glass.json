@@ -1,11 +1,13 @@
 {
-    "name": "Framed Glass",
-    "colors": [
-      "c2dad9",
-      "73a2aa"
-    ],
-    "ingredient": {
-      "item": "create:framed_glass"
-    },
-    "materialCount": 16384
-  }
+  "name": "Framed Glass",
+  "colors": [
+    "C2DAD9",
+    "73A2AA"
+  ],
+  "ingredient": {
+    "item": "create:framed_glass"
+  },
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

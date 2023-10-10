@@ -1,11 +1,13 @@
 {
-    "name": "Tinted Glass",
-    "colors": [
-      "35283b",
-      "272528"
-    ],
-    "ingredient": {
-      "item": "minecraft:tinted_glass"
-    },
-    "materialCount": 8192
-  }
+  "name": "Tinted Glass",
+  "colors": [
+    "35283B",
+    "272528"
+  ],
+  "ingredient": {
+    "item": "minecraft:tinted_glass"
+  },
+  "materialCount": 8192,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

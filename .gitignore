@@ -9,7 +9,13 @@ _site/
 backups/
 crash-reports/
 downloads/
-essential/
+emojiful/
+essential/*-cache
+essential/*-caches
+essential/libraries
+essential/loader
+essential/lwjgl3-natives
+essential/*-metadata
 fancymenu_data/
 fancymenu_instance_data/
 fancymenu_setups/
@@ -28,29 +34,32 @@ XaeroWorldMap/
 modernfix/
 jei/world/local/
 debug/
-
+config/WildfireGender/*
 
 # Ignore files
 .curseclient
 .qmenu_opened.marker
 *.log
+*.zip
+essential/*.jar
+essential/*.json
 imgui.ini
 knownkeys.txt
 minecraftinstance.json
 patchouli_data.json
 rhino.local.properties
-*.zip
-
+config/spark/activity.json
 usercache.json
 usernamecache.json
-
-# Ignore dat
+bookmark.ini
+config/roughlyenoughitems/hints.json
+config/jei/world/server/*
 enigmatic_persistence.dat
 servers.dat
 *.dat
 *.dat_old
 servers.essential.dat
-bookmark.ini
-config/roughlyenoughitems/hints.json
-config/jei/world/server/*
 o_prof
+config/voicechat/username-cache.json
+blacksmith.jar
+config/aether/aether_customizations.txt

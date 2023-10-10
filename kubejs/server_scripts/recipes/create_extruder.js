@@ -1,4 +1,11 @@
 // requires: create_mechanical_extruder
+// requires: kubejs_create
+
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
 
 let ORESTONES = {
     asurine: 'create:raw_zinc_block',
@@ -6,6 +13,7 @@ let ORESTONES = {
     ochrum: 'minecraft:raw_gold_block',
     veridium: 'minecraft:raw_copper_block',
 }
+
 ServerEvents.recipes(event => {
     event.shaped('create_mechanical_extruder:mechanical_extruder', [
         ' S ',

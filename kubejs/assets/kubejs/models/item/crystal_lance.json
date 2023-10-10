@@ -1,15 +1,15 @@
 {
-    "parent": "item/handheld",
-    "loader": "forge:separate-perspective",
-    "base": {
-        "parent": "kubejs:item/crystal_lance_handheld"
+  "parent": "item/handheld",
+  "loader": "forge:separate-perspective",
+  "base": {
+    "parent": "kubejs:item/crystal_lance_handheld"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "kubejs:item/crystal_lance_gui"
     },
-    "perspectives": {
-        "gui": {
-            "parent": "kubejs:item/crystal_lance_gui"
-        },
-        "fixed": {
-            "parent": "kubejs:item/crystal_lance_gui"
-        }
+    "fixed": {
+      "parent": "kubejs:item/crystal_lance_gui"
     }
+  }
 }

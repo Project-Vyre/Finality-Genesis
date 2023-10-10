@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "jei"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "justenoughprofessions"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "jeresources"
+    }
+  ],
+  "title": {
+    "text": "JEI Tip",
+    "bold": true,
+    "color": "dark_green"
+  },
+  "tip": {
+    "text": "Hovering over an item and pressing U will show all recipe uses for that item."
+  }
+}

@@ -78,6 +78,15 @@
           "rightSleeve",
           "heldItem"
         ]
+      },
+      {
+        "f_14413_": {
+          "f_14413_": "create:potato_cannon",
+          "f_14414_": "holding"
+        },
+        "f_14414_": [
+          "disable_rendering"
+        ]
       }
     ],
     "fallFlying": true,

@@ -23,7 +23,7 @@
 		x: 0.0d
 		y: 0.0d
 	}]
-	order_index: 4
+	order_index: 6
 	quest_links: [ ]
 	quests: [
 		{
@@ -166,21 +166,6 @@
 					type: "item"
 				}
 				{
-					id: "15EFEF7011E4CE55"
-					item: {
-						Count: 1b
-						id: "irons_spellbooks:dragonskin_spell_book"
-						tag: {
-							ISB_spellbook: {
-								activeSpellIndex: -1
-								spellSlots: 10
-								spells: [ ]
-							}
-						}
-					}
-					type: "item"
-				}
-				{
 					id: "3EBE8EFBBFAF2CEF"
 					item: {
 						Count: 1b
@@ -199,6 +184,27 @@
 			title: "Late Game Spell Casting - Arcane Anvil"
 			x: 0.0d
 			y: 4.5d
+		}
+		{
+			dependencies: ["6FE2662391274D47"]
+			id: "0C9ADF4455034B25"
+			tasks: [{
+				id: "75D3BE374F8863ED"
+				item: {
+					Count: 1b
+					id: "irons_spellbooks:dragonskin_spell_book"
+					tag: {
+						ISB_spellbook: {
+							activeSpellIndex: -1
+							spellSlots: 10
+							spells: [ ]
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
 		}
 	]
 	subtitle: ["Powerful arcane magic! Quest tree is currently a work in progress."]

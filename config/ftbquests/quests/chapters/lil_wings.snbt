@@ -1,0 +1,544 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "lil_wings"
+	group: "6855847200ADBE3A"
+	icon: "lilwings:crystal_puff_wings"
+	id: "4917473A99009E96"
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 64.0d
+		hover: [ ]
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"It's a bit difficult to document all of the information for Lil' Wings as a quest tree, so please use the book in the meantime."
+				""
+				"&cDo not kill any butterflies or you will not get anything from them!&r &4You would be considered a <shake>monster</shake> if you do so.&r"
+			]
+			hide: true
+			icon: {
+				Count: 1b
+				id: "lilwings:butterfly_net"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "268A7C0D765BB120"
+			rewards: [{
+				id: "635EBA4EE8DF222E"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "Butterfly friends!"
+			tasks: [
+				{
+					id: "3D9E06CF839EC890"
+					item: {
+						Count: 1b
+						id: "patchouli:guide_book"
+						tag: {
+							"patchouli:book": "lilwings:great_butter_book"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3C46A74B014ACF67"
+					item: {
+						Count: 1b
+						id: "lilwings:butterfly_net"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Introduction to Lil' Wings"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"32EEC8E211111160"
+				"28B02EE3C3EA5323"
+			]
+			description: [
+				"Created with the help of the Buttergold butterfly."
+				""
+				"Be sure to have a &6dandelion&r flower on hand to lure them towards you."
+				""
+				"When placed in a butterfly jar that is above a cauldron filled with milk, it is slowly churned into butter."
+			]
+			icon: "lilwings:butter_gold_wings"
+			id: "745DEC9F317266A5"
+			rewards: [{
+				id: "455692353EC257AE"
+				type: "xp"
+				xp: 500
+			}]
+			subtitle: "Seek the assistance of a butterfly found in the sunflower plains."
+			tasks: [{
+				id: "252EADB9D61C7B52"
+				item: "lilwings:butter"
+				type: "item"
+			}]
+			title: "Acquire some Butter"
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"32EEC8E211111160"
+				"28B02EE3C3EA5323"
+			]
+			description: ["Catch a Swamphopper butterfly to help with this."]
+			icon: "lilwings:swamp_hopper_wings"
+			id: "118ACB0B3C5F9D65"
+			rewards: [{
+				id: "3038CDF5FB9A7855"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
+			subtitle: "Find them in swamps!"
+			tasks: [{
+				id: "2BC151001E86BB5B"
+				item: "lilwings:swamp_meal"
+				type: "item"
+			}]
+			title: "Swamphopper Butterflies"
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"32EEC8E211111160"
+				"28B02EE3C3EA5323"
+			]
+			description: [
+				"You are looking for the &8Painted Panther Butterfly&r. "
+				""
+				"It is dark in appearance and has eyes that seem to have &anight vision&r."
+				""
+				"Be sure to have &6cocoa beans&r on hand to lure them towards you."
+			]
+			icon: "lilwings:painted_panther_wings"
+			id: "7AB06782EA8B7BEF"
+			rewards: [{
+				id: "5AADC3047E703EBD"
+				type: "xp"
+				xp: 500
+			}]
+			subtitle: "Seek the assistance of a butterfly only found in jungle forests."
+			tasks: [{
+				id: "47CD73944AF1A060"
+				item: "lilwings:crimson_cocoa_beans"
+				type: "item"
+			}]
+			title: "Acquire Crimson Cocoa Beans"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"28B02EE3C3EA5323"
+				"32EEC8E211111160"
+			]
+			description: [
+				"Cloudypuff butterflies can only be found in the meadows."
+				""
+				"Be sure to bring a &6campfire&r with you to lure them towards you when it is placed."
+				""
+				"They can be milked for &djelly&r."
+				""
+				"Their wings can be used as substitution for &7ghast tears&r in crafting recipes."
+				""
+				"They can be housed in butterfly jars, but they will generate clouds around them."
+			]
+			icon: "lilwings:cloudy_puff_wings"
+			id: "3B7E54CCF66B5CD3"
+			rewards: [
+				{
+					id: "11B2395255FB742E"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5E29BE95433F06DB"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "Seek their assistance from the meadows."
+			tasks: [
+				{
+					id: "2F9395D1DED9AB45"
+					item: "lilwings:jelly_bucket"
+					type: "item"
+				}
+				{
+					id: "4FB5DB691D3E6619"
+					item: "lilwings:cloudy_puff_wings"
+					type: "item"
+				}
+			]
+			title: "Cloudypuff Butterflies"
+			x: 3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["268A7C0D765BB120"]
+			hide_dependent_lines: true
+			id: "32EEC8E211111160"
+			rewards: [{
+				id: "691ADC2371EBF6FC"
+				type: "xp"
+				xp: 75
+			}]
+			subtitle: "Create your very own butterfly wings!"
+			tasks: [{
+				id: "64AD581B763844AA"
+				item: "lilwings:paper_wings"
+				type: "item"
+			}]
+			title: "Paper Wings - Wing Infusion!"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["268A7C0D765BB120"]
+			hide_dependent_lines: true
+			id: "28B02EE3C3EA5323"
+			rewards: [{
+				id: "4F2C437C05D53794"
+				type: "xp"
+				xp: 75
+			}]
+			subtitle: "Please handle them with care."
+			tasks: [{
+				id: "5EE1AFD578589185"
+				item: "lilwings:cotton_ball"
+				type: "item"
+			}]
+			title: "Cotton Ball - Borrowing Essence from the Butterflies"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["268A7C0D765BB120"]
+			id: "39D5C6D2ADCE3977"
+			subtitle: "Butterflies will wander towards you with this!"
+			tasks: [{
+				id: "0B5C27472F4DADBC"
+				item: "lilwings:lantern_on_a_stick"
+				type: "item"
+			}]
+			title: "Luring Butterflies: Lantern on a Stick"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"28B02EE3C3EA5323"
+				"32EEC8E211111160"
+			]
+			description: [
+				"&dCrystalpuff butterflies&r can only be found in the flower forests."
+				""
+				"Be sure to have some &dlilac&r flowers on hand to lure them towards you!"
+				""
+				"When inside the butterfly jar, they help amethyst crystals grow faster."
+				""
+				"When their wings are combined with diamond, it is converted into &dButternite&r."
+			]
+			icon: "lilwings:crystal_puff_wings"
+			id: "44B1157B796CA875"
+			rewards: [{
+				id: "02D47B0F17D7580D"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
+			subtitle: "Seek the assistance of the Crystalpuff butterfly."
+			tasks: [{
+				id: "192BE3CCEBA95EDF"
+				item: "lilwings:butternite"
+				type: "item"
+			}]
+			title: "Acquire Butternite"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["45A52C65052B8D2C"]
+			description: ["The Golden Cake replenishes more hunger and saturation than the &cVelvet Cake&r in addition to applying a temporary &dregeneration&r and &eabsorption&r effect."]
+			id: "09CCEDC570C8B4BC"
+			rewards: [{
+				id: "1B61F07D45E171A7"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
+			subtitle: "The cake is a lie!"
+			tasks: [{
+				id: "715847900CD995CF"
+				item: "lilwings:golden_cake"
+				type: "item"
+			}]
+			title: "Upgraded Cakes: The Golden Cake"
+			x: -4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"745DEC9F317266A5"
+				"7AB06782EA8B7BEF"
+			]
+			description: [
+				"Not really special, but it does replenish more hunger and saturation than the regular cake."
+				""
+				"Required for making the &eGolden Cake&r."
+			]
+			id: "45A52C65052B8D2C"
+			rewards: [{
+				id: "7A7D805FBBEFE3BF"
+				type: "xp"
+				xp: 500
+			}]
+			subtitle: "Yay! Velvet cake!"
+			tasks: [{
+				id: "017E40CEBF3E9261"
+				item: "lilwings:crimson_cake"
+				type: "item"
+			}]
+			title: "Upgraded Cakes: The Velvet Cake"
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["268A7C0D765BB120"]
+			description: [
+				"To place down a butterfly jar, [Shift] + Right click the ground with a glass bottle. Then with a butterfly in your net in your main hand, right click the bottle."
+				""
+				"Instead of wandering aimlessly, you can let them help you! "
+				""
+				"Just like you are giving jobs for Blazes to heat your Basins and doing enchants for you."
+				""
+				"Unfortunately you can't give them Engineer's Goggles, they're far too heavy for such fragile creatures."
+			]
+			id: "0A014F473FD9803C"
+			subtitle: "Very helpful butterflies!"
+			tasks: [{
+				id: "24DC0A99BEECCB8F"
+				item: "minecraft:glass_bottle"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["44B1157B796CA875"]
+			id: "0E3C44733C0F12D3"
+			rewards: [
+				{
+					id: "41E6484EF3EA8EBF"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "2419CC55E4C7D691"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "The unbreakable butterfly net."
+			tasks: [{
+				id: "1E8CA983BBCB2FA2"
+				item: {
+					Count: 1b
+					id: "lilwings:enderfly_net"
+					tag: { }
+				}
+				type: "item"
+			}]
+			title: "The Enderfly Net"
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"28B02EE3C3EA5323"
+				"32EEC8E211111160"
+			]
+			description: [
+				"Red Applefly butterflies can only be found in oak forests."
+				""
+				"You can lure them towards you using &capples&r, &cred dye&r or &cpoppies&r. Holding redstone will &oscare&r them away."
+				""
+				"Their wings can be eaten as if they were apples."
+				""
+				"If you happen to have a Block of Gold, place the butterfly jar on top of it and watch them &o<rainb>transform</rainb>&r into &6Gold Applefly butterflies&r."
+			]
+			id: "39267D838EBA466E"
+			rewards: [{
+				id: "0184E62A2C6C941B"
+				type: "xp"
+				xp: 250
+			}]
+			subtitle: "Acquire the Red Applefly butterfly."
+			tasks: [{
+				id: "29B5D0245B143CB1"
+				item: "lilwings:red_applefly_wings"
+				type: "item"
+			}]
+			title: "Apple Wings!"
+			x: 3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["39267D838EBA466E"]
+			description: [
+				"You do not have to lure the &6Gold Applefly butterfly&r towards you as they &o&aalready&r try to follow you &lat all times&r."
+				""
+				"When in a butterfly jar, the &6Gold Applefly butterfly&r will provide potion effects to nearby players."
+			]
+			id: "5038080D730C3C95"
+			rewards: [
+				{
+					id: "7B0C34E4456D4F1E"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1186590E0DA138EC"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "Acquire the Gold Applefly butterfly."
+			tasks: [{
+				id: "36763654AB9ED251"
+				item: "lilwings:gold_applefly_wings"
+				type: "item"
+			}]
+			title: "Gold Apple Wings!"
+			x: 3.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"28B02EE3C3EA5323"
+				"32EEC8E211111160"
+			]
+			description: [
+				"You can lure them towards you with &aseeds&r."
+				""
+				"The Swallowtail butterfly helps accelerate crop growth rate when inside the butterfly jar!"
+			]
+			id: "1EAFD78AC41226ED"
+			rewards: [{
+				id: "4110A155D6B40D5B"
+				type: "xp"
+				xp: 500
+			}]
+			subtitle: "Can only be found around villages."
+			tasks: [{
+				id: "2C89AC21013E488A"
+				item: "lilwings:swallow_tail_wings"
+				type: "item"
+			}]
+			title: "Acquire the Swallowtail Butterfly"
+			x: -3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"28B02EE3C3EA5323"
+				"32EEC8E211111160"
+			]
+			description: [
+				"You can lure them towards you with &6brown mushrooms&r."
+				""
+				"Once in a butterfly jar, they will convert &cred mushrooms&r into &6brown mushrooms&r!"
+			]
+			id: "0484B1619CAC4135"
+			rewards: [{
+				id: "44B714C883C2DFCD"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
+			subtitle: "Can only be found in big taiga forests."
+			tasks: [{
+				id: "344F855C0DABDA3E"
+				item: "lilwings:aponi_wings"
+				type: "item"
+			}]
+			title: "Acquire the Aponi Butterfly"
+			x: 1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"32EEC8E211111160"
+				"28B02EE3C3EA5323"
+			]
+			description: [
+				"They can be lured towards you with &cred mushrooms&r."
+				""
+				"Once in a butterfly jar, they will convert &6brown mushrooms&r into &cred mushrooms&r!"
+			]
+			id: "234A9A4E65ABA1CF"
+			rewards: [{
+				id: "01FE83D094BCB67C"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
+			subtitle: "Can only be found on mushroom islands."
+			tasks: [{
+				id: "443EC9FB1E35C0EA"
+				item: "lilwings:shroom_skipper_wings"
+				type: "item"
+			}]
+			title: "Acquire the Shroom Skipper Butterfly"
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"28B02EE3C3EA5323"
+				"32EEC8E211111160"
+			]
+			description: [
+				"You can lure the White Fox butterfly towards you with the &bLily of the Valley flower&r."
+				""
+				"When in a butterfly jar, the White Fox butterfly will spawn patches of snow around it."
+				""
+				"Its wings can also be converted into &bice&r blocks."
+			]
+			id: "7C2C5813BC6D7EE7"
+			subtitle: "Only found in the highest frozen peaks."
+			tasks: [{
+				id: "38B157A966253DE3"
+				item: "lilwings:white_fox_wings"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -4.5d
+		}
+	]
+	subtitle: ["Butterflies are friendly and helpful!"]
+	title: "Lil' Wings"
+}

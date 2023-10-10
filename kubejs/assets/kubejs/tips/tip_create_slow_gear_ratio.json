@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "title": {
+    "text": "Create Tip",
+    "bold": true,
+    "color": "gold"
+  },
+  "tip": {
+    "text": "To slow down RPM, connect a small cogwheel to a large cogwheel and make sure the rotational power is being delivered through the smaller cogwheel."
+  }
+}

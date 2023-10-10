@@ -1,0 +1,51 @@
+#Enable Gold Upgraded Totem Effect : Reduce Damage ?
+EnableReduceDamageGoldTotem = true
+#By how much is the damage reduced in percentage ?
+#Range: 1 ~ 100
+ReduceDamageGoldTotem = 10
+#Enable Fire Upgraded Totem Effect : Reduce Damage ?
+EnableReduceDamageFireTotem = true
+#By how much is the damage reduced in percentage ?
+#Range: 1 ~ 100
+ReduceDamageFireTotem = 10
+#Enable Ender Upgraded Totem Effect : Reduce Damage ?
+EnableReduceDamageEnderTotem = true
+#By how much is the damage reduced in percentage ?
+#Range: 1 ~ 100
+ReduceDamageEnderTotem = 10
+#Enable Water Upgraded Totem Effect : Reduce Damage ?
+EnableReduceDamageWaterTotem = true
+#By how much is the damage reduced in percentage ?
+#Range: 1 ~ 100
+ReduceDamageWaterTotem = 10
+#Enable Wither Upgraded Totem Effect : Reduce Damage ?
+EnableReduceDamageWitherTotem = true
+#By how much is the damage reduced in percentage ?
+#Range: 1 ~ 100
+ReduceDamageWitherTotem = 10
+#Enable Poison Upgraded Totem Effect : Reduce Damage ?
+EnableReduceDamagePoisonTotem = true
+#By how much is the damage reduced in percentage ?
+#Range: 1 ~ 100
+ReduceDamagePoisonTotem = 10
+#Enable Phantom Upgraded Totem Effect : Reduce Damage ?
+EnableReduceDamagePhantomTotem = true
+#By how much is the damage reduced in percentage ?
+#Range: 1 ~ 100
+ReduceDamagePhantomTotem = 10
+#Enable Feather Upgraded Totem Effect : Reduce Damage ?
+EnableReduceDamageFeatherTotem = true
+#By how much is the damage reduced in percentage ?
+#Range: 1 ~ 100
+ReduceDamageFeatherTotem = 10
+#Enable Corrupt Upgraded Totem Effect : Reduce Damage ?
+EnableReduceDamageCorruptTotem = true
+#By how much is the damage reduced in percentage ?
+#Range: 1 ~ 100
+ReduceDamageCorruptTotem = 5
+#Enable Corrupt Upgraded Totem Effect : Reduce Damage ?
+EnableReduceDamageEchoTotem = true
+#By how much is the damage reduced in percentage ?
+#Range: 1 ~ 100
+ReduceDamageEchoTotem = 10
+

@@ -1,0 +1,14 @@
+{
+	icon: "artifacts:cloud_in_a_bottle"
+	id: "445A0577AFADD88E"
+	loot_size: 1
+	order_index: 15
+	rewards: [
+		{ item: "artifacts:aqua_dashers" }
+		{ item: "artifacts:running_shoes" }
+		{ item: "artifacts:pocket_piston" }
+		{ item: "artifacts:flippers" }
+		{ item: "artifacts:helium_flamingo" }
+	]
+	title: "Artifacts Tier 2"
+}

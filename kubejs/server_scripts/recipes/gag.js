@@ -1,5 +1,11 @@
 // requires: gag
-// requires: create
+// requires: kubejs_create
+
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
 
 ServerEvents.recipes(event => {
     event.recipes.createMechanicalCrafting('gag:time_sand_pouch', [

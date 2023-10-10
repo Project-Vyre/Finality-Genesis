@@ -30,9 +30,11 @@
 		{
 			dependencies: ["65FC712C5D7E312D"]
 			description: [
-				"Remember to use JEI and type &d@red_power&r to see all items from the mod!"
+				"Remember to use &7REI&r or &2JEI&r and type &d@red_power&r to see all items from the mod!"
 				""
 				"Recipes for Red Power related items have been changed to utilize Create materials."
+				""
+				"The basic premise of Red Power is modernized redstone signal transmission. It does &lnot&r transfer FE!"
 				""
 				"This section is a work in progress."
 			]

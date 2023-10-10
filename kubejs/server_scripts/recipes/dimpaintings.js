@@ -1,6 +1,13 @@
 // requires: dimpaintings
 // requires: endrem
 // requires: create
+// requires: kubejs_create
+
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
 
 ServerEvents.recipes(event => {
     event.shaped('dimpaintings:end_painting', [

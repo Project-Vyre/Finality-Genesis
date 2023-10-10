@@ -1,23 +1,29 @@
 // requires: handcrafted
 // requires: create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 console.log('I do not know why Handcrafted is making Create look bad here by making the boards a random chance instead of being guaranteed like a stonecutter.')
 console.log('Also, please keep your recipe IDs consistent. It is either board or boards.')
 
 ServerEvents.recipes(event => {
     event.remove([
-        'create:saw_acacia_board',
-        'create:saw_birch_boards',
-        'create:saw_dark_oak_boards',
-        'create:saw_jungle_boards',
-        'create:saw_mangrove_boards',
-        'create:saw_oak_boards',
-        'create:saw_spruce_boards',
-        'create:saw_crimson_board',
-        'create:saw_warped_boards'
+        { id: 'create:saw_acacia_board' },
+        { id: 'create:saw_birch_boards' },
+        { id: 'create:saw_dark_oak_boards' },
+        { id: 'create:saw_jungle_boards' },
+        { id: 'create:saw_mangrove_boards' },
+        { id: 'create:saw_oak_boards' },
+        { id: 'create:saw_spruce_boards' },
+        { id: 'create:saw_crimson_board' },
+        { id: 'create:saw_warped_boards' }
     ])
     WOOD_TYPES.forEach(insert => {
-        event.recipes.createCutting(`4x handcrafted:${insert}_board`, `minecraft:${insert}_planks`).id(`handcrafted:saw_${insert}_boards`)
+        event.recipes.createCutting(`4x handcrafted:${insert}_board`, `minecraft:${insert}_planks`).processingTime(150).id(`handcrafted:saw_${insert}_boards`)
         event.shaped(`handcrafted:${insert}_counter`, [
             'CCC',
             'BHB',

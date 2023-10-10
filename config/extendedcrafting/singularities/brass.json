@@ -1,11 +1,13 @@
 {
   "name": "Brass",
   "colors": [
-    "f2c16d",
-    "724c2b"
+    "F2C16D",
+    "724C2B"
   ],
   "ingredient": {
     "item": "create:brass_block"
   },
-  "materialCount": 8192
+  "materialCount": 8192,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

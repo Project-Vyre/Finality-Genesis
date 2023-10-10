@@ -1,11 +1,13 @@
 {
-  "name": "singularity.extendedcrafting.diamond",
+  "name": "Diamond",
   "colors": [
-    "a6fce9",
-    "1aaca8"
+    "A6FCE9",
+    "1AACA8"
   ],
   "ingredient": {
     "item": "minecraft:diamond_block"
   },
-  "materialCount": 8192
+  "materialCount": 8192,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

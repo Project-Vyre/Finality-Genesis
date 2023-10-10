@@ -1,14 +1,25 @@
 // requires: ad_astra
-// requires: create
+// requires: kubejs_create
+// requires: createaddition
 // requires: extendedcrafting
 // and kjs 119 and above
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
+    event.recipes.createMixing(Fluid.of('ad_astra:oil', 250), [
+        '2x minecraft:coal',
+        Fluid.of('createaddition:seed_oil', 250)
+    ]).id('finality:seed_oil_conversion')
     event.shaped('kubejs:denied_result', [
         'TLT',
         'PCP',
         'RBR'
-    ],  {
+    ], {
         T: 'minecraft:redstone_torch',
         L: 'minecraft:lever',
         P: 'ad_astra:steel_plate',

@@ -9,27 +9,27 @@
         },
         {
             "type": "patchouli:crafting",
-            "recipe": "minecraft:bucket",
+            "recipe": "finality:bucket",
             "text": "Recipe status: Finalized."
         },
         {
             "type": "patchouli:crafting",
-            "recipe": "minecraft:compass",
+            "recipe": "finality:compass",
             "text": "Recipe status: May revise in the future."
         },
         {
             "type": "patchouli:crafting",
-            "recipe": "minecraft:clock",
+            "recipe": "finality:clock",
             "text": "Recipe status: Unlikely to change in the future."
         },
         {
             "type": "patchouli:crafting",
-            "recipe": "minecraft:piston",
+            "recipe": "finality:piston",
             "text": "Recipe status: Finalized."
         },
         {
             "type": "patchouli:crafting",
-            "recipe": "minecraft:beacon",
+            "recipe": "finality:beacon",
             "text": "Recipe status: Finalized."
         }
     ]

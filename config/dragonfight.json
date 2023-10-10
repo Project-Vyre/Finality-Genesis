@@ -21,7 +21,7 @@
   },
   "disableDragonAreaSpawns": {
     "desc:": "Disables mob spawning on the Dragon island during the fight: default:true",
-    "disableDragonAreaSpawns": true
+    "disableDragonAreaSpawns": false
   },
   "spawnoncrystaldestroy": {
     "desc:": "List of mobs spawning when a crystal is destroyed at range, intended to be flying or ranged to close the gap: e.g. format :  [\"minecraft:zombie\", \"minecraft:creeper\"]",
@@ -38,7 +38,11 @@
   "spawnwhilelanded": {
     "desc:": "List of mobs spawning while the dragon is sitting in the middle, intended to be melee and not vulnerable to ranged: e.g. format :  [\"minecraft:zombie\", \"minecraft:creeper\"]",
     "spawnwhilelanded": [
-      "minecraft:enderman", "grimoireofgaia:banshee", "graveyard:nightmare", "grimoireofgaia:wither_cow", "grimoireofgaia:spriggan"
+      "minecraft:enderman",
+      "grimoireofgaia:banshee",
+      "graveyard:nightmare",
+      "grimoireofgaia:wither_cow",
+      "grimoireofgaia:spriggan"
     ]
   }
 }

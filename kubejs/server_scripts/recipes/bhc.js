@@ -1,8 +1,15 @@
 // requires: bhc
-// requires: create
+// requires: kubejs_create
 // requires: supplementaries
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
+    event.remove({ id: 'bhc:god_apple' })
     event.shaped('bhc:canister', [
         ' I ',
         'ICI',
@@ -24,10 +31,16 @@ ServerEvents.recipes(event => {
         '2x minecraft:diamond',
         '2x minecraft:emerald',
         'minecraft:golden_apple'
-    ]).id('finality:shapeless_mixing_compat')
-    event.recipes.create.haunting([
+    ]).id('finality:relic_apple_shapeless_mixing')
+    event.recipes.createHaunting([
         Item.of('bhc:wither_bone').withChance(0.25),
         Item.of('minecraft:coal').withChance(0.25),
         Item.of('supplementaries:ash').withChance(0.25)
     ], 'minecraft:bone').id('finality:bhc/haunting/wither_bone')
+    event.shapeless('bhc:red_heart_canister', [
+        'bhc:red_heart',
+        '#forge:wither_bones',
+        'bhc:relic_apple',
+        'bhc:canister'
+    ]).id('bhc:red_heart_canister')
 })

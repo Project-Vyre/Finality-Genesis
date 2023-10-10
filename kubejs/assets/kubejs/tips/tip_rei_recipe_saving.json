@@ -1,0 +1,24 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "roughlyenoughitems"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "roughlyenoughresources"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "roughlyenoughprofessions"
+    }
+  ],
+  "title": {
+    "text": "Roughly Enough Items Tip",
+    "bold": true,
+    "color": "gray"
+  },
+  "tip": {
+    "text": "You can click and drag recipe windows to bookmark them on the top left corner for easier viewing. None of that back and forth between the crafting grid and forgetting the recipe then having to check the recipe again."
+  }
+}

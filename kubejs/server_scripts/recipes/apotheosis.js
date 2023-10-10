@@ -1,5 +1,13 @@
 // requires: apotheosis
-// requires: create
+// requires: kubejs_create
+
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ * @TheonlyTazz For helping with for loops. Thank you.
+ */
+
 /*
 let CORE_RARITIES = [
     'common',

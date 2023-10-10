@@ -1,0 +1,36 @@
+
+[Armor]
+
+	[Armor."Set Option"]
+		#How many pieces of Creative Upgraded armor are needed to activate the effects?
+		#Range: 1 ~ 4
+		UpgradedPlayerCreativeArmorRequireSet = 4
+
+[Effect]
+
+	[Effect.Creative]
+
+		[Effect.Creative.Armor]
+			#Creative Upgraded Armor allow you to fly ?
+			EnableCreativeFlying = true
+			#Creative Upgraded Armor allow you to fly with noclip ?
+			EnableCreativeFlyNoClip = false
+			#Creative Upgraded Armor remove all damage ? (Excludes Void Damage)
+			EnableCreativeNoDamage = true
+			#Creative Upgraded Armor remove harmful effect ?
+			EnableCreativeNoHarmful = true
+			#Creative Upgraded Armor refills the food ?
+			EnableCreativeSaturation = true
+			#Creative Upgraded Armor heals ?
+			EnableCreativeHeal = true
+
+			[Effect.Creative.Armor.Durability]
+				#Creative Upgraded Armor, Tool and Weapon don't loose durability ?
+				EnableCreativeUnbreakable = true
+
+		[Effect.Creative."Tool&Weapon"]
+			#Creative Upgraded Weapon insta kill target ?
+			EnableCreativeIntaKill = true
+			#Creative Upgraded Tool insta break block ?
+			EnableCreativeInstaBreak = true
+

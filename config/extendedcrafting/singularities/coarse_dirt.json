@@ -1,11 +1,13 @@
 {
   "name": "Coarse Dirt",
   "colors": [
-    "5d5454",
-    "704f36"
+    "5D5454",
+    "704F36"
   ],
   "ingredient": {
     "item": "minecraft:coarse_dirt"
   },
-  "materialCount": 32768
+  "materialCount": 32768,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

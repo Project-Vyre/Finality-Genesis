@@ -1,11 +1,13 @@
 {
-  "name": "singularity.extendedcrafting.emerald",
+  "name": "Emerald",
   "colors": [
-    "7df8ac",
-    "8e1a"
+    "7DF8AC",
+    "008E1A"
   ],
   "ingredient": {
     "item": "minecraft:emerald_block"
   },
-  "materialCount": 4096
+  "materialCount": 4096,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

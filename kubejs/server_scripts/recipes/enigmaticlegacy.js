@@ -1,6 +1,12 @@
 // requires: enigmaticlegacy
 // requires: extendedcrafting
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     event.recipes.create.haunting([
         'enigmaticlegacy:etherium_scraps',

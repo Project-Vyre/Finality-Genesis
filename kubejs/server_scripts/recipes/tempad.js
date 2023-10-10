@@ -2,8 +2,14 @@
 // requires: create
 // requires: extendedcrafting
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
-    event.remove({id: 'tempad:tempad'})
+    event.remove({ id: 'tempad:tempad' })
     event.shaped('tempad:tempad', [
         'QQQ',
         'RTB',

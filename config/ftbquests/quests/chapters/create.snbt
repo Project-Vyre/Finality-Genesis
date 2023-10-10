@@ -2968,11 +2968,40 @@
 			description: [
 				"Hold [Shift] for more information!"
 				""
-				"The Potato Cannon is actually a very strong weapon."
+				"The &6Potato Cannon&r is actually a very strong weapon."
 				""
-				"Simply enchant it with a Power V or higher and use Golden Carrots as ammo."
+				"Simply enchant it with a &dPower V&r or higher and use food items as ammo. Don't worry, if the food item is unusable as ammunition, it simply won't consume the food item."
 				""
-				"Make sure to use a Copper / Netherite Backtank for safe operation with no risk for durability loss!"
+				"Make sure to use a &6Copper&r / &8Netherite&r Backtank for safe operation with no risk for durability loss!"
+				""
+				"See the next page for some common ammunition types and their effects. I won't list the rest however as that is for you to <rainb>try them and see</rainb>."
+				"{@pagebreak}"
+				"&6Blaze Cake&r"
+				"High damage, sets targets on fire."
+				""
+				"&eGolden Carrots&r"
+				"High damage output."
+				""
+				"&6Potatoes&r"
+				"Average damage output."
+				""
+				"&6Baked Potatoes&r"
+				"Average damage output, sets targets on fire."
+				""
+				"&2Poison Potatoes&r"
+				"Low damage output, poisons targets."
+				""
+				"&cSweet Berries&r and &4Chocolate Glazed Berries&r"
+				"Splits into three projectiles, low damage output."
+				""
+				"&6Glow Berries&r"
+				"Splits into two projectiles and applies the Glowing effect to targets."
+				""
+				"&eGolden Apple&r"
+				"Applies the effects of the Golden Apple and cures Zombie Villagers. Not intended as damaging ammunition."
+				""
+				"&bEnchanted Golden Apple&r"
+				"Applies Enchanted Golden Apple effects but can't cure Zombie Villagers. Not intended as damaging ammunition."
 			]
 			id: "73E8B028453BD86E"
 			rewards: [
@@ -3015,7 +3044,7 @@
 			description: [
 				"Hold [Shift] for more information!"
 				""
-				"The Wand of Symmetry is a very useful tool, make use of it when building structures!"
+				"The &6Wand of Symmetry&r is a very useful tool, make use of it when building structures!"
 			]
 			id: "53E2E000D9909FCE"
 			rewards: [
@@ -3054,7 +3083,7 @@
 				""
 				"Both an architect's and engineer's best friend for reaching long distances."
 				""
-				"Make sure to use a Copper / Netherite Backtank for safe operation with no risk for durability loss!"
+				"Make sure to use a &6Copper&r / &8Netherite&r Backtank for safe operation with no risk for durability loss!"
 			]
 			id: "5ADBAF0BF56632CD"
 			rewards: [
@@ -3393,6 +3422,8 @@
 			]
 			description: [
 				"Hold [w] to Ponder to learn more!"
+				""
+				"Notice: This quest node is a required dependency for &eElevator Pulleys&r from the &eBrass Age&r."
 				""
 				"Redstone Contacts paired with a Powered Toggle Latch can be utilized to make a Mechanical Piston or Gantry rotate in reverse with the help of a Gearshift."
 				""
@@ -3863,7 +3894,7 @@
 				"1406D000426425FC"
 			]
 			hide: true
-			hide_dependency_lines: false
+			hide_dependent_lines: true
 			id: "1BC189AE6AA14C57"
 			rewards: [
 				{
@@ -4057,7 +4088,7 @@
 		{
 			dependencies: ["2E4CFF3F7A4508AB"]
 			description: [
-				"Blaze Cakes are multi-purpose. They are only used for feeding your Blaze Burners so they can go into a &bsuperheated&r state."
+				"Blaze Cakes are multi-purpose. They are used for feeding your Blaze Burners so they can go into a &bsuperheated&r state in addition to being one of the strongest ammunition items for the &6Potato Cannon&r."
 				""
 				"What are &bsuperheated&r Blaze Burners used for?"
 				""
@@ -4119,7 +4150,7 @@
 			dependencies: ["1BC189AE6AA14C57"]
 			description: ["It might be a ticking time bomb, maaaaaybe."]
 			hide: true
-			hide_dependency_lines: true
+			hide_dependent_lines: true
 			id: "38298E81AD5B2875"
 			subtitle: "Totally nothing wrong with it!"
 			tasks: [{

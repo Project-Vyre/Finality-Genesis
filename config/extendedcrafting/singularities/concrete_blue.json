@@ -1,11 +1,13 @@
 {
-    "name": "Blue Concrete",
-    "colors": [
-      "4c53ab",
-      "2a2c86"
-    ],
-    "ingredient": {
-      "item": "minecraft:blue_concrete"
-    },
-    "materialCount": 16384
-  }
+  "name": "Blue Concrete",
+  "colors": [
+    "4C53AB",
+    "2A2C86"
+  ],
+  "ingredient": {
+    "item": "minecraft:blue_concrete"
+  },
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

@@ -1,0 +1,45 @@
+
+[Effect]
+
+	[Effect.Ultimate]
+
+		[Effect.Ultimate.Armor]
+			#Ultimate Upgraded Armor have Gold Upgraded Netherite Effect ?
+			EnableUltimateGoldArmorEffect = true
+			#Ultimate Upgraded Armor have Fire Upgraded Netherite Effect ?
+			EnableUltimateFireArmorEffect = true
+			#Ultimate Upgraded Armor have Ender Upgraded Netherite Effect ?
+			EnableUltimateEnderArmorEffect = true
+			#Ultimate Upgraded Armor have Water Upgraded Netherite Effect ?
+			EnableUltimateWaterArmorEffect = true
+			#Ultimate Upgraded Armor have Wither Upgraded Netherite Effect ?
+			EnableUltimateWitherArmorEffect = true
+			#Ultimate Upgraded Armor have Poison Upgraded Netherite Effect ?
+			EnableUltimatePoisonArmorEffect = true
+			#Ultimate Upgraded Armor have Phantom Upgraded Netherite Effect ?
+			EnableUltimatePhantomArmorEffect = true
+			#Ultimate Upgraded Armor have Feather Upgraded Netherite Effect ?
+			EnableUltimateFeatherArmorEffect = true
+			#Ultimate Upgraded Armor have Echo Upgraded Netherite Effect ?
+			EnableUltimateEchoArmorEffect = true
+
+		[Effect.Ultimate."Tool&Weapon"]
+			#Ultimate Upgraded Tool and Weapon have Gold Upgraded Netherite Effect ?
+			EnableUltimateGoldToolEffect = true
+			#Ultimate Upgraded Tool and Weapon have Fire Upgraded Netherite Effect ?
+			EnableUltimateFireToolEffect = true
+			#Ultimate Upgraded Tool and Weapon have Ender Upgraded Netherite Effect ?
+			EnableUltimateEnderToolEffect = true
+			#Ultimate Upgraded Tool and Weapon have Water Upgraded Netherite Effect ?
+			EnableUltimateWaterToolEffect = true
+			#Ultimate Upgraded Tool and Weapon have Wither Upgraded Netherite Effect ?
+			EnableUltimateWitherToolEffect = true
+			#Ultimate Upgraded Tool and Weapon have Poison Upgraded Netherite Effect ?
+			EnableUltimatePoisonToolEffect = true
+			#Ultimate Upgraded Tool and Weapon have Phantom Upgraded Netherite Effect ?
+			EnableUltimatePhantomToolEffect = true
+			#Ultimate Upgraded Tool and Weapon have Feather Upgraded Netherite Effect ?
+			EnableUltimateFeatherToolEffect = true
+			#Ultimate Upgraded Tool and Weapon have Echo Upgraded Netherite Effect ?
+			EnableUltimateEchoToolEffect = true
+

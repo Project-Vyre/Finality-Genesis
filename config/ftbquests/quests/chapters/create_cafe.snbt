@@ -1,0 +1,116 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_cafe"
+	group: "2B2D0B6DE31DE8D3"
+	icon: "createcafe:strawberry_iced_coffee"
+	id: "717445CD02F558D1"
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 64.0d
+		hover: [ ]
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["795154CF221D098B"]
+			icon: "createcafe:boba_cup"
+			id: "3D0EE24BC8646D5D"
+			tasks: [
+				{
+					id: "6251B1C67C049BEC"
+					item: "createcafe:empty_boba_cup"
+					type: "item"
+				}
+				{
+					id: "24CA5EBAA3A3CB2D"
+					item: "createcafe:boba_cup"
+					type: "item"
+				}
+			]
+			title: "Prepare a Boba Cup"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["795154CF221D098B"]
+			id: "67B6BF9C2F012DEC"
+			tasks: [
+				{
+					id: "7F7352A0B89CCB7C"
+					item: "createcafe:iced_coffee_cup"
+					type: "item"
+				}
+				{
+					id: "1C60892597C0E88A"
+					item: "createcafe:iced_coffee_cup_ice"
+					type: "item"
+				}
+			]
+			title: "Prepare an Iced Coffee Cup"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"16B642E5E7DBE75D"
+				"400260FDC774443B"
+				"527A4B10DDE51E37"
+			]
+			description: [
+				"Want to feel the effects of caffiene for a while? Automate this!"
+				""
+				"---"
+				""
+				"I'm aware that the tooltip suggests &910 seconds&r, but it was increased to &9300 seconds&r in &bserverconfig&r."
+				""
+				"So... you maaay have to copy it over from &ddefaultconfigs&r if you are playing from an older version of the modpack like pre &e0.1.4e&r."
+				""
+				"Go open modpack's instance directory and copy the &dcreatecafe-server.toml&r file from the &bdefaultconfigs&r folder and paste it into your world's &aserverconfig&r folder."
+				""
+				"If you can't locate your world saves, they are inside the &dsaves&r folder and use the same name that you typed in on world creation."
+			]
+			id: "795154CF221D098B"
+			subtitle: "They're worth it."
+			tasks: [{
+				id: "623C23DA61481FB5"
+				title: "Ready to start making drinks?"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3D0EE24BC8646D5D"]
+			id: "433EFCCAD688B1AC"
+			tasks: [{
+				id: "121D49E46DEFF824"
+				item: "createcafe:oreo_milk_tea"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["67B6BF9C2F012DEC"]
+			id: "531C230047DC1895"
+			tasks: [{
+				id: "42CA35E3FE261599"
+				item: "createcafe:strawberry_iced_coffee"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Work in progress."]
+	title: "Create Cafe"
+}

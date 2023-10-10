@@ -75,3 +75,6 @@ net.minecraft.client.gui.screens.TitleScreen {
 net.minecraft.client.gui.screens.PauseScreen {
 }
 
+me.jellysquid.mods.sodium.client.gui.SodiumOptionsGUI {
+}
+

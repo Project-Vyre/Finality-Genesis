@@ -1,6 +1,12 @@
 // requires: gateways
 // requires: create
 
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
 ServerEvents.recipes(event => {
     event.shaped(Item.of('gateways:gate_pearl', '{gateway:"kubejs:drowned_gate_small"}'), [
         'CFC',
@@ -34,7 +40,7 @@ ServerEvents.recipes(event => {
         'FEF',
         'CFC'
     ], {
-        C: 'create:iron_nugget',
+        C: 'minecraft:iron_nugget',
         F: 'minecraft:rotten_flesh',
         E: 'minecraft:ender_pearl'
     }).id('finality:husk_gate_small')

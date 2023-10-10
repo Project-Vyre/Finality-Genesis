@@ -1,10 +1,16 @@
 // requires: blue_skies
-// requires: create
+// requires: kubejs_create
+
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
 
 let BSKIES_WOOD = ['bluebright', 'starlit', 'frostbright', 'lunar', 'dusk', 'maple', 'cherry', 'crystallized']
 ServerEvents.recipes(event => {
     BSKIES_WOOD.forEach(wood => {
-        event.recipes.create.cutting([
+        event.recipes.createCutting([
             `blue_skies:${wood}_pressure_plate`, 
             `blue_skies:${wood}_slab`
         ], `blue_skies:${wood}_planks`).id(`kubejs:${wood}_pressure_plate_create_compat`)

@@ -1,11 +1,13 @@
 {
-    "name": "Pink Concrete",
-    "colors": [
-      "e6c3d1",
-      "c75e85"
-    ],
-    "ingredient": {
-      "item": "minecraft:pink_concrete"
-    },
-    "materialCount": 16384
-  }
+  "name": "Pink Concrete",
+  "colors": [
+    "E6C3D1",
+    "C75E85"
+  ],
+  "ingredient": {
+    "item": "minecraft:pink_concrete"
+  },
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

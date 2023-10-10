@@ -1,11 +1,13 @@
 {
   "name": "White Concrete",
   "colors": [
-    "e4e5e5",
-    "c2c7c8"
+    "E4E5E5",
+    "C2C7C8"
   ],
   "ingredient": {
     "item": "minecraft:white_concrete"
   },
-  "materialCount": 16384
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

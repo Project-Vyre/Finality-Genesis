@@ -1,11 +1,13 @@
 {
-    "name": "Yellow Concrete",
-    "colors": [
-      "e2daa9",
-      "e1a414"
-    ],
-    "ingredient": {
-      "item": "minecraft:yellow_concrete"
-    },
-    "materialCount": 16384
-  }
+  "name": "Yellow Concrete",
+  "colors": [
+    "E2DAA9",
+    "E1A414"
+  ],
+  "ingredient": {
+    "item": "minecraft:yellow_concrete"
+  },
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

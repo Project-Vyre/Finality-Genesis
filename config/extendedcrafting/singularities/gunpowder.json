@@ -2,10 +2,12 @@
   "name": "Gunpowder",
   "colors": [
     "888888",
-    "3d3d3d"
+    "3D3D3D"
   ],
   "ingredient": {
     "item": "minecraft:gunpowder"
   },
-  "materialCount": 16384
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

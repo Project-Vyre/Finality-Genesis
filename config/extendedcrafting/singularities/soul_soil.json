@@ -1,11 +1,13 @@
 {
-    "name": "Soul Soil",
-    "colors": [
-      "352922",
-      "46eff4"
-    ],
-    "ingredient": {
-      "item": "minecraft:soul_soil"
-    },
-    "materialCount": 8192
-  }
+  "name": "Soul Soil",
+  "colors": [
+    "352922",
+    "46EFF4"
+  ],
+  "ingredient": {
+    "item": "minecraft:soul_soil"
+  },
+  "materialCount": 8192,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

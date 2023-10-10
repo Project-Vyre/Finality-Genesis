@@ -5,7 +5,7 @@
 	group: "6855847200ADBE3A"
 	icon: "mysticalagriculture:infusion_altar"
 	id: "2C5FF9AF6ACD1D02"
-	order_index: 2
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
@@ -57,12 +57,14 @@
 		}
 		{
 			dependencies: ["3CCEE62A9B6D8F1E"]
+			icon: "mysticalagriculture:prudentium_essence"
 			id: "013A53FA6B5EA594"
 			rewards: [{
 				id: "2173A205521B0BC7"
 				type: "xp"
 				xp: 25
 			}]
+			subtitle: "Step two... yay."
 			tasks: [{
 				id: "56B96EC3B1857503"
 				item: "mysticalagriculture:prudentium_essence"
@@ -75,7 +77,7 @@
 		{
 			dependencies: ["3ED54EFC2FC65E99"]
 			description: [
-				"Please craft the Mystical Agriculture Guide Book. The documentation within is extensive."
+				"Please craft and read through the Mystical Agriculture Guide Book. The documentation within it is quite extensive."
 				""
 				"Also, for each tier of essence there are armor pieces and tools for that same tier."
 				""
@@ -84,6 +86,8 @@
 				"For example, iron is a Tier 3 resource which means you will need to use Tertium Essence to make Iron Seeds. Tiered essences can also be used to enrich the farmland to yield better results."
 				""
 				"Use Growth Accelerators under the farmland as well to accelerate the growth process."
+				""
+				"Also, if you wish to grow mob essence, use a Soulium Dagger WHILE you have a SOUL JAR in your inventory."
 			]
 			icon: "mysticalagriculture:inferium_essence"
 			id: "6E3E85ECD7204B4D"
@@ -124,17 +128,42 @@
 		}
 		{
 			dependencies: ["013A53FA6B5EA594"]
+			description: [
+				"At this point you should have access to the Nether. I suggest making the &6Soulium Dagger&r and making a &6Soul Jar&r in order to grow special mob essence."
+				""
+				"You can grow chicken essence right from your mystical garden!"
+			]
+			icon: "mysticalagriculture:tertium_essence"
 			id: "3E607B69558203C0"
 			rewards: [{
 				id: "6FB519933D3354E6"
 				type: "xp"
 				xp: 50
 			}]
-			tasks: [{
-				id: "5051D0D23964A3EC"
-				item: "mysticalagriculture:tertium_essence"
-				type: "item"
-			}]
+			subtitle: "Triple automation"
+			tasks: [
+				{
+					id: "5051D0D23964A3EC"
+					item: "mysticalagriculture:tertium_essence"
+					type: "item"
+				}
+				{
+					id: "4253283FB204F676"
+					item: {
+						Count: 1b
+						id: "mysticalagriculture:soulium_dagger"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "342ABDFC2FE8812C"
+					item: "mysticalagriculture:soul_jar"
+					type: "item"
+				}
+			]
 			title: "Tier 3 - Tertium"
 			x: 0.0d
 			y: 7.0d
