@@ -29,7 +29,7 @@ let DICE = 0
 let debug_messages = false
 
 function allMessages(event) {
-    DICE = Utils.random.nextInt(0, 17)
+    DICE = Utils.random.nextInt(0, 18)
     switch (DICE) {
         case 0:
             /**
@@ -455,6 +455,36 @@ function allMessages(event) {
                 Component.of('a radius of 10 blocks.\n').color(CreateStandard),
                 Component.of('\nPlease note that this keybind can be changed for your comfort.')
                     .color(CreateStandard),
+                Component.of('\n<rainb>-----------------------------------------------------</rainb>')
+            ])
+            break;
+        case 17:
+            event.server.tell([
+                Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
+                Component.of("Don't have an idea where to start with ").color(CreateStandard),
+                Component.of('Create').color(CreateHighlighted),
+                Component.of('?\n').color(CreateStandard),
+                Component.of('\nStart by making ').color(CreateHighlighted),
+                Component.of('Andesite Alloy').color(0xB4C1B8),
+                Component.of(' which can be made with ').color(CreateStandard),
+                Component.of('two ').color(CreateHighlighted),
+                Component.of('Iron '),
+                Component.of('or ').color(CreateStandard),
+                Component.of('Zinc ').color(0xC1ECC9),
+                Component.of('nuggets ').color(CreateStandard),
+                Component.of('and ').italic().color(CreateStandard),
+                Component.of('two ').color(CreateHighlighted),
+                Component.of('Andesite').color(0x9AA49D),
+                Component.of('. There is also the Create quest tree in the quests screen to provide some form of').color(CreateStandard),
+                Component.of(' guidance ').color(CreateHighlighted),
+                Component.of('for you.\n').color(CreateStandard),
+                Component.of('\nLater on after you have made some progression, make a ').color(CreateStandard),
+                Component.of('Mechanical Mixer ').color(CreateHighlighted),
+                Component.of('which lets you make ').color(CreateStandard),
+                Component.of('Andesite Alloy').color(0xB4C1B8),
+                Component.of(' with a ').color(CreateStandard),
+                Component.of('1:1 ratio').color(CreateHighlighted),
+                Component.of(' in terms of material cost.').color(CreateStandard),
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
