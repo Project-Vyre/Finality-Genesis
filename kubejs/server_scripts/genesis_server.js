@@ -1168,27 +1168,6 @@ PlayerEvents.inventoryChanged(event => {
     }
 })
 
-/*
-BlockEvents.rightClicked('minecraft:bedrock', event => {
-    event.entity.notify(Notification.make(n => {
-        n.text = [
-            'Why?',
-            'subtitle'
-        ]
-        n.icon = 'minecraft:bedrock'
-        n.outlineColor = '#006055'
-        n.backgroundColor = '#1b3a1b'
-        n.borderColor = '#267523'
-    }))
-})
-
-EntityEvents.death('minecraft:wither', event => event.player.notify({
-    itemIcon: 'minecraft:wither_skeleton_skull',
-    backgroundColor: 'darkPurple',
-    borderColor: '0x'
-}))
-*/
-
 LevelEvents.afterExplosion(event => {
     const { x, y, z, level } = event
     level.getEntitiesWithin(AABB.of(x - 20, y - 20, z - 20, x + 20, y + 20, z + 20)).forEach(entity => {

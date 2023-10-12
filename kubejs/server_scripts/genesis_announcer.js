@@ -289,6 +289,18 @@ function allMessages(event) {
                     Component.of('\n<rainb>-----------------------------------------------------</rainb>')
                 ])
             }
+            if (!Platform.isLoaded('carryon')) {
+                event.server.tell([
+                    Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
+                    Component.of('Finality Tip\n').bold().lightPurple(),
+                    Component.of('\nIn this modpack, spawners can be ').darkPurple(),
+                    Component.of('crafted ').lightPurple(),
+                    Component.of('with ').darkPurple(),
+                    Component.of('Structure Void').lightPurple(),
+                    Component.of('.').darkPurple(),
+                    Component.of('\n<rainb>-----------------------------------------------------</rainb>')
+                ])
+            }
             break;
         case 7:
             /**

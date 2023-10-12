@@ -47,6 +47,7 @@ let SEED_PROCESSING_ELIGIBLE = [
     'slime',
     'turtle',
     'limestone',
+    'inferium',
     'iron',
     'copper',
     'nether_quartz',
