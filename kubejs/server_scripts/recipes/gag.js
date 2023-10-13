@@ -28,5 +28,5 @@ ServerEvents.recipes(event => {
     ], {
         D: 'minecraft:polished_deepslate',
         A: 'minecraft:amethyst_block'
-    }).id('gag:heartstone')
+    }).id('gag:hearthstone')
 })

@@ -1,8 +1,43 @@
-// ignored: false
-
 /**
+ * Authors
+ * 
+ * @pietro-lopes AKA Uncandango
+ * @CelestialAbyss
+ * 
  * Preventive measures are a work in progress...
  */
+
+ItemEvents.firstRightClicked(event => {
+    const { item, level, player } = event
+    const { x, y, z } = player
+    if (item.getId() == 'supplementaries:soap' &&
+        player.persistentData.struckBySandpaper || player.persistentData.struckBySuperglue
+    ) {
+        player.persistentData.struckBySandpaper = false
+        player.persistentData.struckBySuperglue = false
+        player.tell([
+            Component.of('Heavenly Principles: ').bold().red(),
+            Component.of('You have been '),
+            Component.of('cleansed').green(),
+            Component.of(' of both curses.')
+        ])
+        player.inventory.clear('supplementaries:soap')
+        player.potionEffects.add('minecraft:slowness', 100, 255, false, false)
+        player.block.createEntity('graveyard:skeleton_creeper').spawn()
+    } else if (item.getId() == 'minecraft:milk_bucket' &&
+        player.persistentData.struckBySandpaper || player.persistentData.struckBySuperglue
+    ) {
+        player.tell([
+            Component.of('Heavenly Principles: ').bold().red(),
+            Component.of('Drinking milk will '),
+            Component.of('not').red(),
+            Component.of(' cure this curse.')
+        ])
+        player.inventory.clear('minecraft:milk_bucket')
+        player.potionEffects.add('minecraft:slowness', 999999, 255, false, false)
+        player.potionEffects.add('minecraft:wither', 999999, 255, false, false)
+    }
+})
 
 ItemEvents.foodEaten(event => {
     const { item } = event

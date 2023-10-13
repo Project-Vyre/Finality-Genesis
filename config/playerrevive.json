@@ -5,7 +5,7 @@
     "triggerForCreative": true,
     "bleedingMessage": true,
     "bleedingMessageTrackingOnly": true,
-    "shouldGlow": false,
+    "shouldGlow": true,
     "bleedingEffects": [
       {
         "effect": "minecraft:slowness",

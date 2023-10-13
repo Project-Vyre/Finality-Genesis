@@ -32,7 +32,6 @@ let MYSHIDE = [
     'uranium',
     'tungsten',
     'titanium',
-    'steel',
     'platinum',
     'nickel',
     'mithril',
@@ -105,26 +104,43 @@ JEIEvents.addItems(event => {
 })
 
 JEIEvents.hideItems(event => {
-    MYSHIDE.forEach(name => {
-        event.hide(`mysticalagriculture:${name}_essence`)
-        event.hide(`mysticalagriculture:${name}_seeds`)
-    })
-    CAdditionsItems.forEach(name => {
-        event.hide(`createaddition:${name}`)
-    })
-    event.hide([
-        'mysticalagriculture:harvester',
-        'mysticalagriculture:basic_reprocessor',
-        'mysticalagriculture:inferium_reprocessor',
-        'mysticalagriculture:prudentium_reprocessor',
-        'mysticalagriculture:tertium_reprocessor',
-        'mysticalagriculture:imperium_reprocessor',
-        'mysticalagriculture:supremium_reprocessor',
-        'mysticalagriculture:awakened_supremium_reprocessor'
-    ])
+    if (Platform.isLoaded('createaddition')) {
+        event.hide([
+            /^createaddition.*[_:\/]electrum(?![a-zA-Z0-9]).*/,
+            'createaddition:diamond_grit',
+            'createaddition:diamond_grit_sandpaper'
+        ])
+        CAdditionsItems.forEach(name => {
+            event.hide(`createaddition:${name}`)
+        })
+    }
+
+    if (Platform.isLoaded('mysticalagriculture')) {
+        MYSHIDE.forEach(name => {
+            event.hide(`mysticalagriculture:${name}_essence`)
+            event.hide(`mysticalagriculture:${name}_seeds`)
+        })
+        event.hide([
+            'mysticalagriculture:harvester',
+            'mysticalagriculture:basic_reprocessor',
+            'mysticalagriculture:inferium_reprocessor',
+            'mysticalagriculture:prudentium_reprocessor',
+            'mysticalagriculture:tertium_reprocessor',
+            'mysticalagriculture:imperium_reprocessor',
+            'mysticalagriculture:supremium_reprocessor',
+            'mysticalagriculture:awakened_supremium_reprocessor'
+        ])
+    }
 
     if (Platform.isLoaded('abnormals_delight')) {
         event.hide('abnormals_delight:laurel_cabinet')
+    }
+
+    if (!Platform.isLoaded('ad_astra')) {
+        event.hide([
+            'mysticalagriculture:steel_essence',
+            'mysticalagriculture:steel_seeds'
+        ])
     }
 
     if (Platform.isLoaded('gag')) {

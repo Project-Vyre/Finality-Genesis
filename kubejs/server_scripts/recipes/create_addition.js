@@ -10,6 +10,7 @@
 ServerEvents.tags('item', event => {
     event.add('create:blaze_burner_fuel/special', 'createaddition:bioethanol_bucket')
     event.add('create:blaze_burner_fuel/regular', 'createaddition:seed_oil_bucket')
+    event.remove('create:sandpaper', 'createaddition:diamond_grit_sandpaper')
 })
 
 ServerEvents.recipes(event => {
@@ -32,4 +33,13 @@ ServerEvents.recipes(event => {
         '3x minecraft:sugar',
         '9x createaddition:biomass'
     ]).id('finality:createaddition/mixing/bioethanol')
+    event.recipes.createCrushing([
+        'kubejs:removed_item'
+    ], [
+        'minecraft:diamond'
+    ]).processingTime(300).id('createaddition:crushing/diamond')
+    event.shapeless('kubejs:removed_item', [
+        'minecraft:paper',
+        'createaddition:diamond_grit'
+    ]).id('createaddition:crafting/diamond_grit_sandpaper')
 })

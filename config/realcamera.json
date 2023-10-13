@@ -4,7 +4,7 @@
     "classic": false,
     "clipToSpace": true,
     "dynamicCrosshair": true,
-    "renderModel": true,
+    "renderModel": false,
     "adjustStep": 0.25,
     "scale": 1.0
   },

@@ -11,6 +11,16 @@
 
 let UPNETHERITE_TOOLS = ['sword', 'shovel', 'pickaxe', 'axe']
 let UPNETHERITE_ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
+let UPNETHERITE_UPGRADES = [
+    'gold',
+    'fire',
+    'ender',
+    'water',
+    'wither',
+    'poison',
+    'phantom',
+    'feather',
+]
 
 ServerEvents.recipes(event => {
     event.remove({ id: 'upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot' })
@@ -32,6 +42,18 @@ ServerEvents.recipes(event => {
         'upgradednetherite:phantom_upgraded_netherite_ingot',
         'upgradednetherite:feather_upgraded_netherite_ingot'
     ]).id('finality:ultimerite_ingot')
+    event.smithing(
+        'upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot',
+        'minecraft:netherite_ingot',
+        'upgradednetherite_ultimate:ultimate_essence'
+    ).id('finality:ultimerite_ingot_from_netherite_ingot')
+    UPNETHERITE_UPGRADES.forEach(upgrade => {
+        event.smithing(
+            'upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot',
+            `upgradednetherite:${upgrade}_upgraded_netherite_ingot`,
+            'upgradednetherite_ultimate:ultimate_essence'
+        ).id(`finality:ultimerite_ingot_from_${upgrade}_upgraded_netherite_ingot`)
+    })
     // creativerite assembly
     event.recipes.createSequencedAssembly([
         Item.of('upgradednetherite_creative:creative_upgraded_netherite_ingot').withChance(25.0),

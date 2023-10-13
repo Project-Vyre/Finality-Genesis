@@ -757,6 +757,9 @@ ItemEvents.modification(event => {
             item.maxDamage = 2048
         })
     })
+    event.modify('create:super_glue', item => {
+        item.maxDamage = 128
+    })
     if (Platform.isLoaded('aether')) {
         TOOLS.forEach(tool => {
             event.modify(`aether:zanite_${tool}`, item => {

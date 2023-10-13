@@ -335,6 +335,8 @@ ClientEvents.init(event => {
     }
     if (Platform.isLoaded('lilwings')) {
         STANDARD_PALETTE('minecraft:glass_bottle')
+        STANDARD_PALETTE('lilwings:butterfly_net')
+        STANDARD_PALETTE('lilwings:enderfly_net')
     }
     if (Platform.isLoaded('monobank')) {
         STANDARD_PALETTE('monobank:monobank')

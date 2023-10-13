@@ -46,7 +46,6 @@ let MYSHIDE = [
     'uranium',
     'tungsten',
     'titanium',
-    'steel',
     'platinum',
     'nickel',
     'mithril',
@@ -160,29 +159,31 @@ REIEvents.hide('item', event => {
     REI_CREATE_COMPAT_ORES.forEach(ore => {
         event.hide(`create:crushed_raw_${ore}`)
     })
-    CAdditionsItems.forEach(name => {
-        event.hide(`createaddition:${name}`)
-    })
+
     event.hide([
-        /^createaddition.*[_:\/]electrum(?![a-zA-Z0-9]).*/,
         /^create_central_kitchen.*[_:\/]incomplete(?![a-zA-Z0-9]).*/,
         /^createcafe.*[_:\/]incomplete(?![a-zA-Z0-9]).*/
     ])
+
     if (Platform.isLoaded('abnormals_delight')) {
         event.hide('abnormals_delight:laurel_cabinet')
     }
+
     if (Platform.isLoaded('alexsmobs')) {
         event.hide(/^alexsmobs.*[_:\/]shard(?![a-zA-Z0-9]).*/)
         event.hide(/^alexsmobs.*[_:\/]inventory(?![a-zA-Z0-9]).*/)
         event.hide(/^alexsmobs.*[_:\/]empty(?![a-zA-Z0-9]).*/)
         event.hide(/^alexsmobs.*[_:\/]hand(?![a-zA-Z0-9]).*/)
     }
+
     if (Platform.isLoaded('biomesoplenty')) {
         event.hide('biomesoplenty:blood')
     }
+
     if (Platform.isLoaded('cataclysm')) {
         event.hide('cataclysm:void_shard')
     }
+
     if (Platform.isLoaded('domesticationinnovation')) {
         event.hide([
             'domesticationinnovation:deflection_shield',
@@ -192,36 +193,60 @@ REIEvents.hide('item', event => {
     if (Platform.isLoaded('incubation')) {
         event.hide('incubation:fried_egg')
     }
+
     if (Platform.isLoaded('irons_spellbooks')) {
         event.hide([
             'irons_spellbooks:legendary_spell_book',
             'irons_spellbooks:wimpy_spell_book'
         ])
     }
+
     if (Platform.isLoaded('gag')) {
         event.hide([
             'gag:hearthstone',
             'gag:energized_hearthstone'
         ])
     }
+
     if (Platform.isLoaded('graveyard')) {
         event.hide(/^graveyard.*[_:\/]lid(?![a-zA-Z0-9]).*/)
         event.hide(/^graveyard.*[_:\/]base(?![a-zA-Z0-9]).*/)
     }
-    MYSHIDE.forEach(name => {
-        event.hide(`mysticalagriculture:${name}_essence`)
-        event.hide(`mysticalagriculture:${name}_seeds`)
-    })
-    event.hide([
-        'mysticalagriculture:harvester',
-        'mysticalagriculture:basic_reprocessor',
-        'mysticalagriculture:inferium_reprocessor',
-        'mysticalagriculture:prudentium_reprocessor',
-        'mysticalagriculture:tertium_reprocessor',
-        'mysticalagriculture:imperium_reprocessor',
-        'mysticalagriculture:supremium_reprocessor',
-        'mysticalagriculture:awakened_supremium_reprocessor'
-    ])
+
+    if (Platform.isLoaded('createaddition')) {
+        event.hide([
+            /^createaddition.*[_:\/]electrum(?![a-zA-Z0-9]).*/,
+            'createaddition:diamond_grit',
+            'createaddition:diamond_grit_sandpaper'
+        ])
+        CAdditionsItems.forEach(name => {
+            event.hide(`createaddition:${name}`)
+        })
+    }
+
+    if (Platform.isLoaded('mysticalagriculture')) {
+        MYSHIDE.forEach(name => {
+            event.hide(`mysticalagriculture:${name}_essence`)
+            event.hide(`mysticalagriculture:${name}_seeds`)
+        })
+        event.hide([
+            'mysticalagriculture:harvester',
+            'mysticalagriculture:basic_reprocessor',
+            'mysticalagriculture:inferium_reprocessor',
+            'mysticalagriculture:prudentium_reprocessor',
+            'mysticalagriculture:tertium_reprocessor',
+            'mysticalagriculture:imperium_reprocessor',
+            'mysticalagriculture:supremium_reprocessor',
+            'mysticalagriculture:awakened_supremium_reprocessor'
+        ])
+    }
+
+    if (!Platform.isLoaded('ad_astra')) {
+        event.hide([
+            'mysticalagriculture:steel_essence',
+            'mysticalagriculture:steel_seeds'
+        ])
+    }
 
     if (Platform.isLoaded('abnormals_delight')) {
         event.hide('abnormals_delight:laurel_cabinet')

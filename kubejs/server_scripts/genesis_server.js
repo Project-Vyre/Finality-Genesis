@@ -194,11 +194,12 @@ ServerEvents.recipes(event => {
         R: 'minecraft:redstone'
     }).id('finality:piston')
     event.shaped('minecraft:hopper', [
-        'F F',
+        'FHF',
         'FCF',
         ' F '
     ], {
         F: 'create:iron_sheet',
+        H: 'create:chute',
         C: '#forge:chests/wooden'
     }).id('finality:hopper')
     event.shaped('minecraft:trident', [
@@ -921,23 +922,6 @@ ServerEvents.recipes(event => {
         '6': 'kubejs:six',
         '4': 'kubejs:four'
     }).id('finality:command/netherite_block_stack')
-    if (Platform.isLoaded('quark')) {
-        event.shaped('minecraft:hopper', [
-            'ILI',
-            'ILI',
-            ' I '
-        ], {
-            I: 'create:iron_sheet',
-            L: '#minecraft:logs'
-        }).id('quark:tweaks/crafting/utility/misc/easy_hopper')
-        event.shaped('4x kubejs:denied_result', [
-            'LLL',
-            'L L',
-            'LLL'
-        ], {
-            L: '#minecraft:logs'
-        }).id('quark:tweaks/crafting/utility/chests/mixed_chest_wood_but_without_exclusions')
-    }
 })
 
 ServerEvents.tags('item', event => {
@@ -1160,10 +1144,174 @@ PlayerEvents.inventoryChanged(event => {
     const { item, level, player } = event
     const { x, y, z } = player
     if (item.hasTag('create:sandpaper') && !player.persistentData.struckBySandpaper) {
-        if (item.hasEnchantment('minecraft:mending', 1) || item.hasEnchantment('minecraft:unbreaking', 1)) {
+        if (item.hasEnchantment('minecraft:mending', 1) ||
+            item.hasEnchantment('minecraft:unbreaking', 1) ||
+            item.hasEnchantment('apotheosis:life_mending', 1)
+        ) {
             level.spawnLightning(x, y, z, false)
-            player.tell(Text.darkRed("<shake>You are a lazy engineer.</shake>"))
+            player.tell([
+                Component.of('Heavenly Principles: ').bold().red(),
+                Component.of('You are a '),
+                Component.of('<shake>lazy</shake>').red(),
+                Component.of(' engineer. As a '),
+                Component.of('consequence').red(),
+                Component.of(', a '),
+                Component.of('curse').lightPurple(),
+                Component.of(' has been inflicted upon you. If you wish to '),
+                Component.of('remove').green(),
+                Component.of(' it, cleanse yourself with soap.')
+            ])
             player.persistentData.struckBySandpaper = true
+        }
+    } else if (item.hasTag('create:sandpaper') && player.persistentData.struckBySandpaper == true) {
+        if (item.hasEnchantment('minecraft:mending', 1) ||
+            item.hasEnchantment('minecraft:unbreaking', 1) ||
+            item.hasEnchantment('apotheosis:life_mending', 1)
+        ) {
+            player.potionEffects.add('minecraft:wither', 999999, 255, false, false)
+            player.tell([
+                Component.of('Heavenly Principles: ').bold().red(),
+                Component.of('If you insist on keeping it... ').red()
+            ])
+        }
+    }
+    if (item.getId() == 'create:super_glue' && !player.persistentData.struckBySuperglue) {
+        if (item.hasEnchantment('minecraft:mending', 1) ||
+            item.hasEnchantment('minecraft:unbreaking', 1) ||
+            item.hasEnchantment('apotheosis:life_mending', 1)
+        ) {
+            level.spawnLightning(x, y, z, false)
+            player.tell([
+                Component.of('Heavenly Principles: ').bold().red(),
+                Component.of('You are a '),
+                Component.of('<shake>lazy</shake>').red(),
+                Component.of(' engineer. As a '),
+                Component.of('consequence').red(),
+                Component.of(', a '),
+                Component.of('curse').lightPurple(),
+                Component.of(' has been inflicted upon you. If you wish to '),
+                Component.of('remove').green(),
+                Component.of(' it, cleanse yourself with soap.')
+            ])
+            player.persistentData.struckBySuperglue = true
+        }
+    } else if (item.getId() == 'create:super_glue' && player.persistentData.struckBySuperglue == true) {
+        if (item.hasEnchantment('minecraft:mending', 1) ||
+            item.hasEnchantment('minecraft:unbreaking', 1) ||
+            item.hasEnchantment('apotheosis:life_mending', 1)
+        ) {
+            player.potionEffects.add('minecraft:wither', 999999, 255, false, false)
+            player.tell([
+                Component.of('Heavenly Principles: ').bold().red(),
+                Component.of('If you insist on keeping it... ').red()
+            ])
+        }
+    }
+    switch (item.getId()) {
+        case 'kubejs:denied_result':
+            player.tell([
+                Component.of('System: ').bold().green(),
+                Component.of('That recipe result has been denied.').lightPurple()
+            ])
+            player.inventory.clear('kubejs:denied_result')
+            break;
+        case 'kubejs:removed_item':
+            player.tell([
+                Component.of('System: ').bold().green(),
+                Component.of('That item has been removed.').red()
+            ])
+            player.inventory.clear('kubejs:removed_item')
+            break;
+        default:
+            break;
+    }
+    if (Platform.isLoaded('createaddition')) {
+        switch (item.getId()) {
+            case 'createaddition:diamond_grit':
+                player.tell([
+                    Component.of('System: ').bold().green(),
+                    Component.of('That item has been removed.').red()
+                ])
+                player.inventory.clear('createaddition:diamond_grit')
+                break;
+
+            case 'createaddition:diamond_grit_sandpaper':
+                player.tell([
+                    Component.of('System: ').bold().green(),
+                    Component.of('That item has been removed.').red()
+                ])
+                player.inventory.clear('createaddition:diamond_grit_sandpaper')
+                break;
+
+            default:
+                break;
+        }
+    }
+    if (Platform.isLoaded('gag') && item.getId() == 'gag:hearthstone') {
+        level.spawnLightning(x, y, z, false)
+        player.tell(Text.darkRed('<shake>You have an item you that you were not supposed to have.</shake>'))
+        player.inventory.clear('gag:hearthstone')
+    }
+    if (Platform.isLoaded('mysticalagriculture')) {
+        switch (item.getId()) {
+            case 'mysticalagriculture:basic_reprocessor':
+                player.tell([
+                    Component.of('System: ').bold().green(),
+                    Component.of('That item has been removed.').red()
+                ])
+                player.inventory.clear('mysticalagriculture:basic_reprocessor')
+                break;
+
+            case 'mysticalagriculture:inferium_reprocessor':
+                player.tell([
+                    Component.of('System: ').bold().green(),
+                    Component.of('That item has been removed.').red()
+                ])
+                player.inventory.clear('mysticalagriculture:inferium_reprocessor')
+                break;
+
+            case 'mysticalagriculture:prudentium_reprocessor':
+                player.tell([
+                    Component.of('System: ').bold().green(),
+                    Component.of('That item has been removed.').red()
+                ])
+                player.inventory.clear('mysticalagriculture:prudentium_reprocessor')
+                break;
+
+            case 'mysticalagriculture:tertium_reprocessor':
+                player.tell([
+                    Component.of('System: ').bold().green(),
+                    Component.of('That item has been removed.').red()
+                ])
+                player.inventory.clear('mysticalagriculture:tertium_reprocessor')
+                break;
+
+            case 'mysticalagriculture:imperium_reprocessor':
+                player.tell([
+                    Component.of('System: ').bold().green(),
+                    Component.of('That item has been removed.').red()
+                ])
+                player.inventory.clear('mysticalagriculture:imperium_reprocessor')
+                break;
+
+            case 'mysticalagriculture:supremium_reprocessor':
+                player.tell([
+                    Component.of('System: ').bold().green(),
+                    Component.of('That item has been removed.').red()
+                ])
+                player.inventory.clear('mysticalagriculture:supremium_reprocessor')
+                break;
+
+            case 'mysticalagriculture:awakened_supremium_reprocessor':
+                player.tell([
+                    Component.of('System: ').bold().green(),
+                    Component.of('That item has been removed.').red()
+                ])
+                player.inventory.clear('mysticalagriculture:awakened_supremium_reprocessor')
+                break;
+
+            default:
+                break;
         }
     }
 })
@@ -1180,7 +1328,7 @@ LevelEvents.afterExplosion(event => {
     })
 })
 
-let BLACKLIST = {
+let modBlacklist = {
     ae2: 'Applied Energistics 2',
     ars_nouveau: 'Ars Nouveau',
     createcasing: 'Create Encased',
@@ -1207,14 +1355,14 @@ let BLACKLIST = {
     twilightforest: 'Twilight Forest'
 }
 
-Object.keys(BLACKLIST).forEach(modid => {
-    if (Platform.isLoaded(`${modid}`)) {
+Object.keys(modBlacklist).forEach(modID => {
+    if (Platform.isLoaded(`${modID}`)) {
         ServerEvents.recipes(event => {
             event.remove({})
         })
-        console.warn(`${BLACKLIST[modid]} has been detected, please remove it from the modpack.`)
+        console.warn(`${modBlacklist[modID]} has been detected, please remove it from the modpack.`)
         PlayerEvents.loggedIn(event => {
-            event.server.tell(`${BLACKLIST[modid]} has been detected, please remove it from the modpack.`)
+            event.server.tell(`${modBlacklist[modID]} has been detected, please remove it from the modpack.`)
         })
     }
 })

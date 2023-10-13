@@ -498,6 +498,12 @@ ServerEvents.recipes(event => {
     SEED_PROCESSING_ELIGIBLE.forEach(element => {
         seedMillstoneReprocessing(event, element, element)
     })
+    if (Platform.isLoaded('ad_astra')) {
+        event.recipes.createMilling([
+            '2x mysticalagriculture:steel_essence',
+            Item.of('mysticalagriculture:steel_essence').withChance(0.25)
+        ], 'mysticalagriculture:steel_seeds').processingTime(100).id('finality:milling/steel_seed_reprocessing')
+    }
     event.replaceOutput(
         { output: 'mysticalagriculture:basic_reprocessor' },
         'mysticalagriculture:basic_reprocessor',
