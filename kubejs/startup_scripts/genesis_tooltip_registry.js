@@ -351,6 +351,11 @@ ClientEvents.init(event => {
     if (Platform.isLoaded('salt')) {
         STANDARD_PALETTE('salt:salt')
     }
+    if (Platform.isLoaded('solapplepie')) {
+        STANDARD_PALETTE('solapplepie:lunchbag')
+        STANDARD_PALETTE('solapplepie:lunchbox')
+        YELLOW_PALETTE('solapplepie:golden_lunchbox')
+    }
     if (Platform.isLoaded('supplementaries')) {
         STANDARD_PALETTE('supplementaries:key')
         STANDARD_PALETTE('supplementaries:quiver')

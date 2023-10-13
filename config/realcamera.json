@@ -90,7 +90,7 @@
       }
     ],
     "fallFlying": true,
-    "swiming": false,
+    "swiming": true,
     "crawling": true,
     "sneaking": false,
     "sleeping": false
