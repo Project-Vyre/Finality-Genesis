@@ -11,7 +11,7 @@ ItemEvents.firstRightClicked(event => {
     const { item, level, player } = event
     const { x, y, z } = player
     if (item.getId() == 'supplementaries:soap' &&
-        player.persistentData.struckBySandpaper || player.persistentData.struckBySuperglue
+        (player.persistentData.struckBySandpaper || player.persistentData.struckBySuperglue)
     ) {
         player.persistentData.struckBySandpaper = false
         player.persistentData.struckBySuperglue = false
@@ -24,8 +24,9 @@ ItemEvents.firstRightClicked(event => {
         player.inventory.clear('supplementaries:soap')
         player.potionEffects.add('minecraft:slowness', 100, 255, false, false)
         player.block.createEntity('graveyard:skeleton_creeper').spawn()
-    } else if (item.getId() == 'minecraft:milk_bucket' &&
-        player.persistentData.struckBySandpaper || player.persistentData.struckBySuperglue
+    }
+    if (item.getId() == 'minecraft:milk_bucket' &&
+        (player.persistentData.struckBySandpaper || player.persistentData.struckBySuperglue)
     ) {
         player.tell([
             Component.of('Heavenly Principles: ').bold().red(),

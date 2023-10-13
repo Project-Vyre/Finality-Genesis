@@ -10,8 +10,9 @@
  * @CelestialAbyss 
  * @squoshi Helped a lot early on in development. Thank you. Also helped translate my ideas into scripts!
  * @pietro-lopes AKA Uncandango in the KubeJS Discord. Fixed issues related to damage cancel script
+ * @MundM2007 for helping with troubleshooting with fixing || statements
+ * @puu7693 for writing the script that grants potion effects when wearing a specific set of armor
  * @MaxNeedsSnacks Fixing KubeJS Create bugs
- * 
  */
 
 console.info('Implementing Finality recipes and compats...')
@@ -1163,7 +1164,7 @@ PlayerEvents.inventoryChanged(event => {
             ])
             player.persistentData.struckBySandpaper = true
         }
-    } else if (item.hasTag('create:sandpaper') && player.persistentData.struckBySandpaper == true) {
+    } else if (item.hasTag('create:sandpaper') && player.persistentData.struckBySandpaper) {
         if (item.hasEnchantment('minecraft:mending', 1) ||
             item.hasEnchantment('minecraft:unbreaking', 1) ||
             item.hasEnchantment('apotheosis:life_mending', 1)
@@ -1195,7 +1196,7 @@ PlayerEvents.inventoryChanged(event => {
             ])
             player.persistentData.struckBySuperglue = true
         }
-    } else if (item.getId() == 'create:super_glue' && player.persistentData.struckBySuperglue == true) {
+    } else if (item.getId() == 'create:super_glue' && player.persistentData.struckBySuperglue) {
         if (item.hasEnchantment('minecraft:mending', 1) ||
             item.hasEnchantment('minecraft:unbreaking', 1) ||
             item.hasEnchantment('apotheosis:life_mending', 1)
