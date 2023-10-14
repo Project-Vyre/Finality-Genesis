@@ -92,6 +92,48 @@ function wandererDeathToast(
     })
 }
 
+/**
+ * 
+ * @param {Special.EntityType} entityID 
+ * @param {Special.itemIcon} itemIcon 
+ * @param {HEX} titleColorInput 
+ * @param {HEX} outlineColorInput 
+ * @param {HEX} backgroundColorInput 
+ * @param {HEX} borderColorInput 
+ */
+
+function villagerDeathToast(
+    entityID,
+    itemIcon,
+    titleColorInput,
+    outlineColorInput,
+    backgroundColorInput,
+    borderColorInput
+) {
+    EntityEvents.death(entityID, (event) => {
+        const {
+            server: { players },
+            source: { player: $player },
+        } = event
+        if (!$player) return
+        for (const player of players) {
+            player.notify(Notification.make(toast => {
+                toast.itemIcon = itemIcon
+                toast.outlineColor = outlineColorInput
+                toast.backgroundColor = backgroundColorInput
+                toast.borderColor = borderColorInput
+                toast.text = [
+                    Component.translate(`World Notification - A Villager has been killed!\n`).bold().color(titleColorInput),
+                    Component.of('A '),
+                    Component.translate(`entity.${entityID.namespace}.${entityID.path}`).green(),
+                    Component.of(' has been killed by '),
+                    Component.of($player.displayName).green()
+                ]
+            }))
+        }
+    })
+}
+
 let red = 0xFF5555
 let darkRed = 0xAA0000
 
@@ -213,6 +255,8 @@ if (Platform.isLoaded('graveyard')) {
 }
 
 wandererDeathToast('minecraft:wandering_trader', 'minecraft:emerald', green, green, 0x001332, darkRed)
+
+villagerDeathToast('minecraft:villager', 'minecraft:emerald', green, green, 0x331C11, darkRed)
 
 /* Old code that shouldn't be used.
 EntityEvents.death('minecraft:wither', event => {

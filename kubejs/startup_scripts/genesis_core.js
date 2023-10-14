@@ -684,7 +684,7 @@ ItemEvents.toolTierRegistry(event => {
     event.add('crystalline_tool', tier => {
         tier.uses = -1
         tier.speed = 32
-        tier.attackDamageBonus = 10.0
+        tier.attackDamageBonus = 32.0
         tier.level = 5
         tier.enchantmentValue = 30
     })

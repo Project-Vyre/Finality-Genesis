@@ -81,3 +81,12 @@ ServerEvents.recipes(event => {
         Fluid.of('kubejs:shimmer', 250)
     ]).id('finality:irons_spellbooks/arcane_salvage_renewal_with_shimmer')
 })
+
+LootJS.modifiers(event => {
+    event.addEntityLootModifier('minecraft:witch')
+        .randomChance(0.1).addLoot('irons_spellbooks:common_ink')
+        .randomChance(0.07).addLoot('irons_spellbooks:uncommon_ink')
+        .randomChance(0.05).addLoot('irons_spellbooks:rare_ink')
+        .randomChance(0.03).addLoot('irons_spellbooks:epic_ink')
+        .randomChance(0.01).addLoot('irons_spellbooks:legendary_ink')
+})

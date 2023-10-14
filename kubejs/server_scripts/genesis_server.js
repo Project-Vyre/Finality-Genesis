@@ -18,6 +18,7 @@
 console.info('Implementing Finality recipes and compats...')
 
 const WOOD_TYPES = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'crimson', 'warped']
+const STANDARD_ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
 let STONEPLATES = ['stone', 'polished_blackstone']
 let FOUNDATION_METALS = ['iron', 'gold']
 let FOUNDATION_NONMETAL = [
@@ -521,6 +522,10 @@ ServerEvents.recipes(event => {
         'minecraft:netherite_scrap',
         Fluid.of('kubejs:molten_gold', 90)
     ]).id('finality:netherite_ingot_from_spout')
+    event.recipes.createFilling('minecraft:gilded_blackstone', [
+        'minecraft:blackstone',
+        Fluid.of('kubejs:molten_gold', 50)
+    ]).id('finality:gilded_blackstone')
     // haunting
     event.recipes.createHaunting(['minecraft:deepslate'], 'minecraft:andesite').id('finality:andesite_haunting')
     event.recipes.createHaunting(['minecraft:crying_obsidian'], 'minecraft:obsidian').id('finality:obsidian_haunting')
@@ -935,6 +940,13 @@ ServerEvents.tags('block', event => {
     event.add('minecraft:needs_stone_tool', 'minecraft:deepslate')
 })
 
+ServerEvents.loaded(event => {
+    if (!event.server.persistentData.contains('firstload')) {
+        event.server.persistentData.putBoolean('firstload', true)
+        console.warn('First server load! Lag may be present for a few minutes.')
+    }
+})
+
 PlayerEvents.loggedIn(event => {
     // Give the player the quest book on first join
     if (!event.player.persistentData.contains('firstjoin')) {
@@ -1021,13 +1033,6 @@ PlayerEvents.loggedIn(event => {
             Component.of('. Thank you!\n'),
             Component.of('\nNote: You may need to open chat to see the full message.').underlined().yellow()
         ])
-    }
-})
-
-ServerEvents.loaded(event => {
-    if (!event.server.persistentData.contains('firstload')) {
-        event.server.persistentData.putBoolean('firstload', true)
-        console.warn('First server load! Lag may be present for a few minutes.')
     }
 })
 
@@ -1125,20 +1130,6 @@ LootJS.modifiers((event) => {
     event.addBlockLootModifier('minecraft:grass')
         .randomChance(0.05)
         .addLoot('kubejs:lemon_seed')
-    if (Platform.isLoaded('aether')) {
-        event.addBlockLootModifier('aether:ambrosium_ore')
-            .randomChance(0.2).addLoot('aether:ambrosium_shard')
-        event.addBlockLootModifier('aether:zanite_ore')
-            .randomChance(0.12).addLoot('aether:zanite_gemstone')
-    }
-    if (Platform.isLoaded('irons_spellbooks')) {
-        event.addEntityLootModifier('minecraft:witch')
-            .randomChance(0.1).addLoot('irons_spellbooks:common_ink')
-            .randomChance(0.07).addLoot('irons_spellbooks:uncommon_ink')
-            .randomChance(0.05).addLoot('irons_spellbooks:rare_ink')
-            .randomChance(0.03).addLoot('irons_spellbooks:epic_ink')
-            .randomChance(0.01).addLoot('irons_spellbooks:legendary_ink')
-    }
 });
 
 PlayerEvents.inventoryChanged(event => {

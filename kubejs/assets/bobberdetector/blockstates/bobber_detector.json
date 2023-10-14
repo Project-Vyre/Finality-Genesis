@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=east,powered=false,lit=false": {
+      "model":  "bobberdetector:block/bobber_detector",
+      "y": 90
+    },
+    "facing=north,powered=false,lit=false": {
+      "model":  "bobberdetector:block/bobber_detector"
+    },
+    "facing=south,powered=false,lit=false": {
+      "model":  "bobberdetector:block/bobber_detector",
+      "y": 180
+    },
+    "facing=west,powered=false,lit=false": {
+      "model":  "bobberdetector:block/bobber_detector",
+      "y": 270
+    },
+    "facing=east,powered=true,lit=false": {
+      "model":  "bobberdetector:block/bobber_detector_powered",
+      "y": 90
+    },
+    "facing=north,powered=true,lit=false": {
+      "model":  "bobberdetector:block/bobber_detector_powered"
+    },
+    "facing=south,powered=true,lit=false": {
+      "model":  "bobberdetector:block/bobber_detector_powered",
+      "y": 180
+    },
+    "facing=west,powered=true,lit=false": {
+      "model":  "bobberdetector:block/bobber_detector_powered",
+      "y": 270
+    },
+    "facing=east,powered=false,lit=true": {
+      "model":  "bobberdetector:block/bobber_detector_lit",
+      "y": 90
+    },
+    "facing=north,powered=false,lit=true": {
+      "model":  "bobberdetector:block/bobber_detector_lit"
+    },
+    "facing=south,powered=false,lit=true": {
+      "model":  "bobberdetector:block/bobber_detector_lit",
+      "y": 180
+    },
+    "facing=west,powered=false,lit=true": {
+      "model":  "bobberdetector:block/bobber_detector_lit",
+      "y": 270
+    },
+    "facing=east,powered=true,lit=true": {
+      "model":  "bobberdetector:block/bobber_detector_powered_lit",
+      "y": 90
+    },
+    "facing=north,powered=true,lit=true": {
+      "model":  "bobberdetector:block/bobber_detector_powered_lit"
+    },
+    "facing=south,powered=true,lit=true": {
+      "model":  "bobberdetector:block/bobber_detector_powered_lit",
+      "y": 180
+    },
+    "facing=west,powered=true,lit=true": {
+      "model":  "bobberdetector:block/bobber_detector_powered_lit",
+      "y": 270
+    }
+  }
+}

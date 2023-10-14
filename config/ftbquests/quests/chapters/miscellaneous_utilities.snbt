@@ -25,11 +25,13 @@
 		{
 			dependencies: ["35DE8799CDD5E313"]
 			id: "4A80913A15F6CA82"
+			subtitle: "Made from the depths..."
 			tasks: [{
 				id: "3019AB42121C2E64"
 				item: "echochest:echo_chest"
 				type: "item"
 			}]
+			title: "An Ancient Chest"
 			x: -1.0d
 			y: 1.0d
 		}
@@ -47,13 +49,28 @@
 		{
 			dependencies: ["35DE8799CDD5E313"]
 			id: "7F2A0B88D493FCC2"
+			subtitle: "Wanted to go through walls? Use this."
 			tasks: [{
 				id: "6F6DDF0492C2944D"
 				item: "portablehole:portable_hole"
 				type: "item"
 			}]
+			title: "Wall Hacks 101!"
 			x: 0.0d
 			y: 1.0d
+		}
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			id: "0CF1E1640EB623A0"
+			subtitle: "It's automated fishing!"
+			tasks: [{
+				id: "75E40E6B48C6EAAD"
+				item: "bobberdetector:bobber_detector"
+				type: "item"
+			}]
+			title: "Fishing with Create"
+			x: 0.0d
+			y: -1.0d
 		}
 	]
 	subtitle: ["Some miscellaneous utilities..."]
