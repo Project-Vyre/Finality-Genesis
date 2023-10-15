@@ -476,13 +476,17 @@ ServerEvents.recipes(event => {
         Y: '#mysticalagriculture:diamond_scythes',
         M: 'mysticalagriculture:machine_frame',
     }).id('mysticalagriculture:harvester')
-    // soulstone related
+    // soulstone and soulium related
     event.recipes.createMixing('mysticalagriculture:soulstone', [
         'minecraft:soul_sand',
         'minecraft:stone',
         'create:cinder_flour',
         Fluid.of('kubejs:shimmer', 250)
     ]).id('finality:mixing/soulstone_renewal')
+    event.recipes.createCompacting('mysticalagriculture:soulium_ore', [
+        'mysticalagriculture:soulstone',
+        Fluid.of('kubejs:shimmer', 750)
+    ]).id('finality:compacting/soulium_ore_renewal')
     // miscellaneous
     event.recipes.createMixing(Item.of('mysticalagriculture:mystical_fertilizer', 4), [
         Item.of('mysticalagriculture:inferium_essence', 4),

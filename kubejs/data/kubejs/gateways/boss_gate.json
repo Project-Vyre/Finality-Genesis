@@ -174,11 +174,11 @@
       "entities": [
         {
           "type": "apotheosis:boss",
-          "boss": "kubejs:the_nether/ignited_revenant"
+          "boss": "kubejs:the_nether/citadel_keeper"
         },
         {
           "type": "apotheosis:boss",
-          "boss": "kubejs:the_nether/ignited_revenant"
+          "boss": "kubejs:the_nether/citadel_keeper"
         }
       ],
       "modifiers": [
@@ -226,24 +226,32 @@
       "entities": [
         {
           "type": "apotheosis:boss",
-          "boss": "kubejs:the_nether/netherite_monstrosity"
+          "boss": "kubejs:the_nether/ignited_revenant"
+        },
+        {
+          "type": "apotheosis:boss",
+          "boss": "kubejs:the_nether/ignited_revenant"
+        },
+        {
+          "type": "apotheosis:boss",
+          "boss": "kubejs:the_nether/ignited_revenant"
         }
       ],
       "modifiers": [
         {
           "attribute": "generic.max_health",
           "operation": "MULTIPLY_TOTAL",
-          "value": 0.75
+          "value": 7
         },
         {
           "attribute": "generic.armor",
           "operation": "ADDITION",
-          "value": 1.2
+          "value": 1.5
         },
         {
           "attribute": "generic.attack_damage",
           "operation": "MULTIPLY_TOTAL",
-          "value": 0.5
+          "value": 0.75
         },
         {
           "attribute": "generic.knockback_resistance",
@@ -275,12 +283,6 @@
   "completion_xp": 2500,
   "spawn_range": 5,
   "failures": [
-    {
-      "type": "explosion",
-      "strength": 7,
-      "fire": true,
-      "block_damage": false
-    },
     {
       "type": "summon",
       "entity": "alexsmobs:farseer",
