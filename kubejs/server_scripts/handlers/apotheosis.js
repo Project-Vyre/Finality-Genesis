@@ -18,6 +18,7 @@ let CORE_RARITIES = [
     'ancient'
 ]
 */
+
 let COREGEMS = [
     'ballast',
     'brawlers',
@@ -213,4 +214,13 @@ ServerEvents.recipes(event => {
         S: 'minecraft:stick',
         F: 'minecraft:feather'
     }).id('finality:diamond_mining_arrow_mechanical_crafting')
+})
+
+ServerEvents.tags('block', event => {
+    event.add('create:wrench_pickup', [
+        'apotheosis:simple_reforging_table',
+        'apotheosis:reforging_table',
+        'apotheosis:salvaging_table',
+        'apotheosis:gem_cutting_table'
+    ])
 })

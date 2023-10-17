@@ -374,6 +374,14 @@ ServerEvents.recipes(event => {
         E: 'kubejs:high_entropy_alloy',
         S: 'extendedcrafting:black_iron_ingot'
     }).id('finality:crafting/final_hoe')
+    event.shaped('kubejs:final_scythe', [
+        'EEE',
+        ' SE',
+        ' S '
+    ], {
+        E: 'kubejs:high_entropy_alloy',
+        S: 'extendedcrafting:black_iron_ingot'
+    }).id('finality:crafting/final_scythe')
     event.recipes.createMixing(Fluid.of('kubejs:mushroom_stew', 250), [
         'minecraft:brown_mushroom',
         'minecraft:red_mushroom'
@@ -938,6 +946,39 @@ ServerEvents.tags('item', event => {
 
 ServerEvents.tags('block', event => {
     event.add('minecraft:needs_stone_tool', 'minecraft:deepslate')
+    event.add('create:wrench_pickup', [
+        'create:peculiar_bell',
+        'create:haunted_bell',
+        '#create:seats',
+        'minecraft:iron_bars',
+        'minecraft:bell',
+        'minecraft:barrel',
+        'minecraft:redstone_lamp',
+        'minecraft:crafting_table',
+        'minecraft:smithing_table',
+        'minecraft:stonecutter',
+        'minecraft:grindstone',
+        'minecraft:furnace',
+        'minecraft:blast_furnace',
+        'minecraft:smoker',
+        'minecraft:lantern',
+        'minecraft:soul_lantern',
+        'minecraft:lectern',
+        'minecraft:note_block',
+        'minecraft:jukebox',
+        'minecraft:dispenser',
+        'minecraft:dropper',
+        'minecraft:cauldron',
+        'minecraft:anvil',
+        'minecraft:chipped_anvil',
+        'minecraft:damaged_anvil',
+        'minecraft:loom',
+        'minecraft:fletching_table',
+        'minecraft:ender_chest',
+        '#minecraft:doors',
+        '#minecraft:trapdoors',
+        '#forge:chests/wooden'
+    ])
 })
 
 ServerEvents.loaded(event => {

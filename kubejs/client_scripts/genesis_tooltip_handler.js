@@ -33,6 +33,9 @@ ItemEvents.tooltip(event => {
             text.remove(1)
             text.remove(1)
         })
+        event.addAdvanced('cataclysm:void_core', (item, advanced, text) => {
+            text.remove(1)
+        })
         event.addAdvanced('cataclysm:tidal_claws', (item, advanced, text) => {
             text.remove(1)
             text.remove(1)
@@ -48,6 +51,13 @@ ItemEvents.tooltip(event => {
             text.remove(1)
         })
         event.addAdvanced('cataclysm:ignitium_boots', (item, advanced, text) => {
+            text.remove(1)
+        })
+        event.addAdvanced('cataclysm:bloom_stone_pauldrons', (item, advanced, text) => {
+            text.remove(1)
+            text.remove(1)
+        })
+        event.addAdvanced('cataclysm:blessed_amethyst_crab_meat', (item, advanced, text) => {
             text.remove(1)
         })
     }

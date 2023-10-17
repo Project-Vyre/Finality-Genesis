@@ -51,7 +51,7 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "Pushing Create to its limits, with horror."
+	largeImageText = "Pushing Create to its limits."
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["menu"]
 	#The text that gets displayed when the small image is hovered
@@ -77,7 +77,7 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "Pushing Create to its limits, with horror."
+	largeImageText = "Pushing Create to its limits."
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["menu"]
 	#The text that gets displayed when the small image is hovered
@@ -103,7 +103,7 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "Pushing Create to its limits, with horror."
+	largeImageText = "Pushing Create to its limits."
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["menu"]
 	#The text that gets displayed when the small image is hovered
@@ -129,7 +129,7 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "Pushing Create to its limits, with horror."
+	largeImageText = "Pushing Create to its limits."
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["loading"]
 	#The text that gets displayed when the small image is hovered
@@ -155,7 +155,7 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "Pushing Create to its limits, with horror."
+	largeImageText = "Pushing Create to its limits."
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["%player%"]
 	#The text that gets displayed when the small image is hovered
@@ -181,7 +181,7 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "Pushing Create to its limits, with horror."
+	largeImageText = "Pushing Create to its limits."
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["%player%"]
 	#The text that gets displayed when the small image is hovered
@@ -207,7 +207,7 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "Pushing Create to its limits, with horror."
+	largeImageText = "Pushing Create to its limits."
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
@@ -231,7 +231,7 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["logo"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "Pushing Create to its limits, with horror."
+	largeImageText = "Pushing Create to its limits."
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered

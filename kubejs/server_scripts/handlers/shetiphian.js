@@ -9,6 +9,13 @@
  * @CelestialAbyss
  */
 
+ServerEvents.tags('block', event => {
+    event.add('create:wrench_pickup', [
+        'enderchests:ender_chest',
+        'endertanks:tank'
+    ])
+})
+
 ServerEvents.recipes(event => {
     event.remove([
         'enderchests:ender_bag',

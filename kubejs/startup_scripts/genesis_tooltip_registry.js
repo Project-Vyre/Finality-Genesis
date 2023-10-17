@@ -117,6 +117,7 @@ let PURPLE_REGISTRY = [
     'kubejs:final_shovel',
     'kubejs:final_hoe',
     'kubejs:final_sword',
+    'kubejs:final_scythe',
     'kubejs:final_lance',
     'kubejs:final_helmet',
     'kubejs:final_chestplate',
@@ -313,6 +314,8 @@ ClientEvents.init(event => {
         RED_PALETTE('cataclysm:mech_eye')
         YELLOW_PALETTE('cataclysm:flame_eye')
         YELLOW_PALETTE('cataclysm:monstrous_eye')
+        GREEN_PALETTE('cataclysm:bloom_stone_pauldrons')
+        GREEN_PALETTE('cataclysm:blessed_amethyst_crab_meat')
     }
     if (Platform.isLoaded('cloudstorage')) {
         STANDARD_PALETTE('cloudstorage:balloon_bit')

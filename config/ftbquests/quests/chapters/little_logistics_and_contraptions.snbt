@@ -1,0 +1,47 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "little_logistics_and_contraptions"
+	group: "668E3EA3A7A91B79"
+	icon: "littlelogistics:tug"
+	id: "7AFEAB44AB1108AA"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["36D7F83B5A60D017"]
+			id: "3C0D9A35EBF70184"
+			tasks: [{
+				id: "41E18E992F3929CA"
+				item: "littlelogistics:tug"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["36D7F83B5A60D017"]
+			id: "16D7F3186BE278E5"
+			tasks: [{
+				id: "33CDEE8DD0FC529E"
+				item: "littlelogistics:steam_locomotive"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["65FC712C5D7E312D"]
+			id: "36D7F83B5A60D017"
+			tasks: [{
+				id: "5FDFA72A0D0D57CD"
+				title: "Click me to unlock!"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Little boats for Create contraptions!"]
+	title: "Little Logistics"
+}

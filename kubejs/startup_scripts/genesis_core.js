@@ -273,6 +273,10 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .texture('kubejs:item/final_pickaxe')
         .maxStackSize(1)
         .fireResistant(true)
+        .tag('forge:pickaxes')
+        .tag('forge:tools')
+        .tag('forge:tools/pickaxe')
+        .tag('forge:tools/pickaxes')
         .group('tools')
     event.create('kubejs:final_axe', 'axe').tier('final_tool')
         .displayName('<rainb>Natura Exitium</rainb>')
@@ -280,6 +284,10 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .texture('kubejs:item/final_axe')
         .maxStackSize(1)
         .fireResistant(true)
+        .tag('forge:axes')
+        .tag('forge:tools')
+        .tag('forge:tools/axe')
+        .tag('forge:tools/axes')
         .group('tools')
     event.create('kubejs:final_shovel', 'shovel').tier('final_tool')
         .displayName('<rainb>Terra Confractus</rainb>')
@@ -287,6 +295,10 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .texture('kubejs:item/final_shovel')
         .maxStackSize(1)
         .fireResistant(true)
+        .tag('forge:shovels')
+        .tag('forge:tools')
+        .tag('forge:tools/shovel')
+        .tag('forge:tools/shovels')
         .group('tools')
     event.create('kubejs:final_hoe', 'hoe').tier('final_tool')
         .displayName('<rainb>Agricola Manus</rainb>')
@@ -294,6 +306,10 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .texture('kubejs:item/final_hoe')
         .maxStackSize(1)
         .fireResistant(true)
+        .tag('forge:hoes')
+        .tag('forge:tools')
+        .tag('forge:tools/hoe')
+        .tag('forge:tools/hoes')
         .group('tools')
     // weapons
     event.create('kubejs:final_sword', 'sword').tier('final_tool')
@@ -302,12 +318,27 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .texture('kubejs:item/final_sword')
         .maxStackSize(1)
         .fireResistant(true)
+        .tag('forge:swords')
+        .tag('forge:tools')
+        .tag('forge:tools/sword')
+        .tag('forge:tools/swords')
         .group('combat')
     event.create('kubejs:final_lance', 'sword').tier('final_tool')
         .displayName('<rainb>Tenebris Punctura</rainb>')
         .rarity('epic')
         .maxStackSize(1)
         .fireResistant(true)
+        .group('combat')
+    event.create('kubejs:final_scythe', 'sword').tier('final_tool')
+        .displayName('<rainb>Scythe of Eternal Oblivion<rainb>')
+        .rarity('epic')
+        .texture('kubejs:item/final_scythe')
+        .maxStackSize(1)
+        .fireResistant(true)
+        .tag('forge:scythes')
+        .tag('forge:tools')
+        .tag('forge:tools/scythe')
+        .tag('forge:tools/scythes')
         .group('combat')
     event.create('kubejs:final_katana', 'sword').tier('final_tool')
         .displayName('<rainb>Celeritas Obumbratio</rainb>')
@@ -329,6 +360,10 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .texture('kubejs:item/final_helmet')
         .maxStackSize(1)
         .fireResistant(true)
+        .tag('forge:helmets')
+        .tag('forge:armor')
+        .tag('forge:armors')
+        .tag('forge:armors/helmets')
         .group('combat')
     event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor')
         .displayName('<rainb>Vitale Cordis</rainb>')
@@ -336,6 +371,10 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .texture('kubejs:item/final_chestplate')
         .maxStackSize(1)
         .fireResistant(true)
+        .tag('forge:chestplates')
+        .tag('forge:armor')
+        .tag('forge:armors')
+        .tag('forge:armors/chestplates')
         .group('combat')
     event.create('kubejs:final_leggings', 'leggings').tier('final_armor')
         .displayName('<rainb>Universum Motus</rainb>')
@@ -343,6 +382,10 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .texture('kubejs:item/final_leggings')
         .maxStackSize(1)
         .fireResistant(true)
+        .tag('forge:leggings')
+        .tag('forge:armor')
+        .tag('forge:armors')
+        .tag('forge:armors/leggings')
         .group('combat')
     event.create('kubejs:final_boots', 'boots').tier('final_armor')
         .displayName('<rainb>Gravitas Anchoram</rainb>')
@@ -350,6 +393,10 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .texture('kubejs:item/final_boots')
         .maxStackSize(1)
         .fireResistant(true)
+        .tag('forge:boots')
+        .tag('forge:armor')
+        .tag('forge:armors')
+        .tag('forge:armors/boots')
         .group('combat')
     // shapes and alphanumeric
     Object.keys(global.SHAPES).forEach(shape => {
@@ -454,6 +501,7 @@ StartupEvents.registry('block', event => {
         .tagBlock('minecraft:dragon_immune')
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('forge:needs_netherite_tool')
+        .tagBlock('create:wrench_pickup')
     Object.keys(CMD).forEach(insert => {
         event.create(`kubejs:${insert}`)
             .displayName(`<rainb>${CMD[insert]}</rainb>`)
@@ -467,6 +515,7 @@ StartupEvents.registry('block', event => {
             .tagBlock('minecraft:dragon_immune')
             .tagBlock('minecraft:mineable/pickaxe')
             .tagBlock('forge:needs_netherite_tool')
+            .tagBlock('create:wrench_pickup')
             .tagItem('kubejs:command_blocks')
     })
     Object.keys(STONE_COMPACTING_INCEPTION).forEach(insert => {
@@ -702,6 +751,26 @@ ItemEvents.armorTierRegistry(event => {
 })
 
 ItemEvents.modification(event => {
+    event.modify('kubejs:final_pickaxe', item => {
+        if (!Platform.isLoaded('apotheosis')) { item.attackSpeed = 3 }
+        if (Platform.isLoaded('apotheosis')) { item.attackSpeed = -2 }
+    })
+    event.modify('kubejs:final_axe', item => {
+        if (!Platform.isLoaded('apotheosis')) { item.attackSpeed = 2 }
+        if (Platform.isLoaded('apotheosis')) { item.attackSpeed = -2.7 } 
+    })
+    event.modify('kubejs:final_scythe', item => {
+        if (!Platform.isLoaded('apotheosis')) { item.attackSpeed = 7 }
+        if (Platform.isLoaded('apotheosis')) { item.attackSpeed = -0.3 } // entity 4
+    })
+    event.modify('kubejs:final_katana', item => {
+        if (!Platform.isLoaded('apotheosis')) { item.attackSpeed = 9 }
+        if (Platform.isLoaded('apotheosis')) { item.attackSpeed = -0.1 }
+    })
+    event.modify('kubejs:final_lance', item => {
+        if (!Platform.isLoaded('apotheosis')) { item.attackSpeed = 6 }
+        if (Platform.isLoaded('apotheosis')) { item.attackSpeed = -1.5}
+    })
     TOOLS.forEach(tool => {
         event.modify(`minecraft:wooden_${tool}`, item => {
             item.maxDamage = 16
@@ -832,6 +901,7 @@ ItemEvents.modification(event => {
             item.maxDamage = -1
         })
     }
+
     if (Platform.isLoaded('aquamirae')) {
         LEGENDARY.forEach(insert => {
             event.modify(`aquamirae:${insert}`, item => {
@@ -864,12 +934,14 @@ ItemEvents.modification(event => {
             })
         })
     }
+
     if (Platform.isLoaded('bhc')) {
         event.modify('bhc:blade_of_vitality', item => {
             item.maxDamage = -1
             item.fireResistant = true
         })
     }
+
     if (Platform.isLoaded('enigmaticlegacy')) {
         EL_TOOLS.forEach(insert => {
             event.modify(`enigmaticlegacy:etherium_${insert}`, item => {
@@ -888,6 +960,7 @@ ItemEvents.modification(event => {
             item.fireResistant = true
         })
     }
+
     // farmer's delight
     event.modify('farmersdelight:flint_knife', item => {
         item.maxDamage = 256
@@ -901,15 +974,23 @@ ItemEvents.modification(event => {
     event.modify('farmersdelight:netherite_knife', item => {
         item.maxDamage = 4096
     })
+
     if (Platform.isLoaded('lilwings')) {
         event.modify('lilwings:enderfly_net', item => {
             item.maxDamage = -1
             item.fireResistant = true
         })
     }
+
     if (Platform.isLoaded('supplementaries')) {
         event.modify('supplementaries:key', item => {
             item.fireResistant = true
         })
     }
+})
+
+BlockEvents.modification(event => {
+    event.modify('create:industrial_iron_block', block => {
+        block.setExplosionResistance(1200)
+    })
 })
