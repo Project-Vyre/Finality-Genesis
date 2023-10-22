@@ -12,5 +12,14 @@
             ],
             "url": "./.vscode/probe.doc-schema.json"
         }
-    ]
+    ],
+    "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
+    "editor.detectIndentation": true,
+    "editor.indentSize": "tabSize",
+    "[javascript]": {
+        "editor.tabSize": 4
+    },
+    "[json]": {
+        "editor.tabSize": 2
+    },
 }
