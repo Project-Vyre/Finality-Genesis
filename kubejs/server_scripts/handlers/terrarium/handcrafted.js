@@ -1,5 +1,5 @@
 // requires: handcrafted
-// requires: create
+// requires: kubejs_create
 
 /**
  * Authors
