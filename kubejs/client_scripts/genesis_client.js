@@ -22,14 +22,12 @@ NetworkEvents.dataReceived('screenshake', event => {
 })
 
 /**
+ * @ChiefArug
  * Hello script file editor. Please don't disable this check unless you really know what you are doing,
  * and are aware that playing with these mods may cause everything from mild lore spoilers to full world corruption.
  * 
- * - ChiefArug
- * 
+ * @CelestialAbyss 
  * *cough* OptiFine *cough*
- * 
- * - CelestialAbyss
  */
 
 const BAD_MODS = ['optifine']
