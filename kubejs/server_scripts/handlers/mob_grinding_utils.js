@@ -10,11 +10,11 @@
 
 /**
  * To Do List
+ * 
  * Rework all mob grinding utils upgrades to fit in thematically with Create and other add-ons
  * Make the incomplete spikes block texture and model, incomplete jumbo tank texture and model if possible
  * Rework all mob grinding utils textures to 16px
  * Should the upgrades use brass? Maybe
- * 
  */
 
 ServerEvents.recipes(event => {
@@ -349,4 +349,24 @@ ServerEvents.recipes(event => {
             Fluid.of('mob_grinding_utils:fluid_xp', 200)
         ]).id('finality:mixing/mobgrindingutils_create_xp_compat')
     }
+})
+
+ServerEvents.tags('block', event => {
+    event.add('create:wrench_pickup', [
+        'mob_grinding_utils:fan',
+        'mob_grinding_utils:saw',
+        'mob_grinding_utils:absorption_hopper',
+        'mob_grinding_utils:spikes',
+        'mob_grinding_utils:tank',
+        'mob_grinding_utils:tank_sink',
+        'mob_grinding_utils:xp_tap',
+        'mob_grinding_utils:wither_muffler',
+        'mob_grinding_utils:dragon_muffler',
+        'mob_grinding_utils:entity_conveyor',
+        'mob_grinding_utils:ender_inhibitor_on',
+        'mob_grinding_utils:ender_inhibitor_off',
+        'mob_grinding_utils:jumbo_tank',
+        'mob_grinding_utils:xpsolidifier',
+        'mob_grinding_utils:entity_spawner'
+    ])
 })

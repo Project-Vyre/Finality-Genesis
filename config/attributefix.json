@@ -770,6 +770,17 @@
         "value": 10000000
       }
     },
+    "windswept:snow_speed": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 1,
+        "value": 1
+      }
+    },
     "apotheosis:life_steal": {
       "enabled": false,
       "min": {

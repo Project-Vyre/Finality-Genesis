@@ -11,6 +11,7 @@
 		{
 			dependencies: ["36D7F83B5A60D017"]
 			id: "3C0D9A35EBF70184"
+			subtitle: "The powerhouse for water related things."
 			tasks: [{
 				id: "41E18E992F3929CA"
 				item: "littlelogistics:tug"
@@ -22,6 +23,7 @@
 		{
 			dependencies: ["36D7F83B5A60D017"]
 			id: "16D7F3186BE278E5"
+			subtitle: "Miniature train networks!"
 			tasks: [{
 				id: "33CDEE8DD0FC529E"
 				item: "littlelogistics:steam_locomotive"

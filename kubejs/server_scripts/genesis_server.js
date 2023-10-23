@@ -19,6 +19,7 @@ console.info('Implementing Finality recipes and compats...')
 
 const WOOD_TYPES = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'crimson', 'warped']
 const STANDARD_ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
+const STANDARD_TOOLS_ALL = ['pickaxe', 'axe', 'hoe','shovel', 'sword']
 let STONEPLATES = ['stone', 'polished_blackstone']
 let FOUNDATION_METALS = ['iron', 'gold']
 let FOUNDATION_NONMETAL = [
@@ -384,8 +385,9 @@ ServerEvents.recipes(event => {
     }).id('finality:crafting/final_scythe')
     event.recipes.createMixing(Fluid.of('kubejs:mushroom_stew', 250), [
         'minecraft:brown_mushroom',
-        'minecraft:red_mushroom'
-    ]).id('finality:mushroom_stew_mixing')
+        'minecraft:red_mushroom',
+        Fluid.of('minecraft:water', 250)
+    ]).heated().id('finality:mushroom_stew_mixing')
     event.recipes.createFilling('minecraft:mushroom_stew', [
         'minecraft:bowl',
         Fluid.of('kubejs:mushroom_stew', 250)
@@ -557,9 +559,9 @@ ServerEvents.recipes(event => {
         'minecraft:gravel',
         '3x minecraft:bone_meal'
     ]).id('finality:dirt_from_gravel')
-    event.recipes.createMixing(['minecraft:coarse_dirt'], [
+    event.recipes.createMixing(['2x minecraft:coarse_dirt'], [
         'minecraft:dirt', 'minecraft:gravel'
-    ]).id('finality:coarse_dirt')
+    ]).id('finality:mixing/coarse_dirt')
     event.recipes.createMixing([Fluid.of('kubejs:molten_gold', 90)], ['minecraft:gold_ingot']).heated().id('finality:gold_ingot_melting')
     event.recipes.createMixing('4x minecraft:netherite_ingot', [
         Item.of('minecraft:netherite_scrap', 4),
@@ -609,15 +611,40 @@ ServerEvents.recipes(event => {
         ]).id('create:mixing/dough_by_mixing')
         event.remove({ id: 'farmersdelight:wheat_dough_from_water' })
     }
+    // repairing item recipes module
+    if (!Platform.isLoaded('pickletweaks')) {
+        event.recipes.minecraft.crafting_shapeless(Ingredient.of('minecraft:bow'), [
+            Ingredient.of('minecraft:bow'),
+            'minecraft:string'
+        ]).modifyResult((grid, result) => {
+            let repairable = grid.find(Ingredient.of('minecraft:bow'))
+            if (repairable.damaged) {
+                repairable.damageValue = 0
+                return repairable
+            }
+        }).id('finality:bow_repair');
+        event.recipes.minecraft.crafting_shapeless(Ingredient.of('minecraft:crossbow'), [
+            Ingredient.of('minecraft:crossbow'),
+            'minecraft:string'
+        ]).modifyResult((grid, result) => {
+            let repairable = grid.find(Ingredient.of('minecraft:crossbow'))
+            if (repairable.damaged) {
+                repairable.damageValue = 0
+                return repairable
+            }
+        }).id('finality:crossbow_repair');
+    }
     // supplementaries related
-    event.shaped('supplementaries:quiver', [
-        'RRL',
-        'RLL',
-        'LL '
-    ], {
-        R: '#forge:rope',
-        L: '#forge:leather'
-    }).id('finality:supplementaries_quiver')
+    if (Platform.isLoaded('supplementaries')) {
+        event.shaped('supplementaries:quiver', [
+            'RRL',
+            'RLL',
+            'LL '
+        ], {
+            R: '#forge:rope',
+            L: '#forge:leather'
+        }).id('finality:supplementaries_quiver')
+    }
     // nether wart
     if (!Platform.isLoaded('quark')) {
         event.shapeless('9x minecraft:nether_wart', [
@@ -911,6 +938,14 @@ ServerEvents.recipes(event => {
         R: 'kubejs:magenta_rectangle_corner'
     }).id('finality:emitter_shape_base')
     event.recipes.createDeploying('kubejs:emitter_shape', ['kubejs:emitter_shape_base', 'kubejs:white_star']).id('finality:emitter_shape')
+    event.shaped('kubejs:null_storage_block', [
+        'TTT',
+        'TBT',
+        'TTT'
+    ], {
+        T: 'minecraft:tinted_glass',
+        B: 'minecraft:barrel'
+    }).id('finality:crafting/null_storage_block')
     // give
     event.recipes.createMechanicalCrafting('64x minecraft:netherite_block', [
         '/GIVE @S ',

@@ -17,3 +17,9 @@ ServerEvents.recipes(event => {
         L: '#minecraft:logs'
     }).id('quark:tweaks/crafting/utility/chests/mixed_chest_wood_but_without_exclusions')  
 })
+
+ServerEvents.tags('block', event => {
+    event.add('create:fan_transparent', [
+        'quark:gold_bars'
+    ])
+})

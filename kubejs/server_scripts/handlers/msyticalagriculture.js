@@ -6,6 +6,11 @@
  * Authors
  * 
  * @CelestialAbyss
+ * 
+ * To-Do List
+ * 
+ * Rework essences, specifically Diamond, Brass, Steel and wherever applicable.
+ *  - This is mostly due to the amount of difference and to encourage more automation with Create.
  */
 
 /**
@@ -549,4 +554,23 @@ ServerEvents.recipes(event => {
             'kubejs:removed_item'
         )
     })
+    if (Platform.isLoaded('bhc')) {
+        event.shaped('bhc:wither_bone', [
+            'WWW',
+            'W W',
+            'WWW'
+        ], {
+            W: 'mysticalagriculture:wither_skeleton_essence'
+        }).id('finality:bhc/shaped/wither_bone')
+    }
+    if (Platform.isLoaded('architects_palette')) {
+        event.shaped('architects_palette:withered_bone', [
+            'WWW',
+            'WBW',
+            'WWW'
+        ], {
+            W: 'mysticalagriculture:wither_skeleton_essence',
+            B: 'minecraft:bone'
+        }).id('finality:architects_paltte/shaped/wither_bone')
+    }
 })

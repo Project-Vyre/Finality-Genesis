@@ -1,10 +1,17 @@
 // requires: farmersdelight
 // requires: kubejs_create
+// requires: morejs
 
 /**
  * Authors
  * 
  * @CelestialAbyss
+ */
+
+/**
+ * To-Do List
+ * 
+ * Create integration and reworking for Farmer's Delight addons
  */
 
 ServerEvents.recipes(event => {
@@ -38,6 +45,103 @@ ServerEvents.recipes(event => {
     event.smoking('farmersdelight:fried_egg', 'minecraft:egg')
         .cookingTime(100)
         .id('farmersdelight:fried_egg_from_smoking')
+    if (!Platform.isLoaded('farmersrespite')) {
+        event.remove([
+            'create_central_kitchen:mixing/lime_green_tea',
+            'create_central_kitchen:mixing/pomegranate_black_tea'
+        ])
+    }
+    if (Platform.isLoaded('delightful')) {
+        event.recipes.createMixing('kubejs:steamed_matcha_leaves', [
+            'delightful:green_tea_leaf',
+            Fluid.of('minecraft:water', 250)
+        ]).id('finality:mixing/steaming_matcha_leaves')
+        event.recipes.createMixing('kubejs:dried_matcha_leaves',
+            'kubejs:steamed_matcha_leaves'
+        ).heated().id('finality:mixing/matcha_leaf_drying')
+        event.recipes.createMilling('delightful:matcha',
+            'kubejs:dried_matcha_leaves'
+        ).processingTime(130).id('finality:milling/matcha_powder')
+    }
+    if (Platform.isLoaded('ends_delight')) {
+        event.recipes.createFilling('ends_delight:non_hatchable_dragon_egg', [
+            'minecraft:dragon_egg',
+            Fluid.of('kubejs:shimmer')
+        ]).id('finality:ends_delight/filling/non_hatchable_dragon_egg')
+    }
+    if (Platform.isLoaded('culturaldelights')) {
+        // test 1: Crabber's Delight and Nether's Delight don't cause the issue...
+        // test 2: Cultural Delights returns the error.
+        console.log("Please ignore com.google.gson.JsonParseException: java.io.EOFException as it is being caused by Cultural Delights.")
+        console.log("This was determined after doing a binary search to narrow down the cause.")
+        event.shapeless('minecraft:beetroot_soup', [
+            '6x minecraft:beetroot',
+            'minecraft:bowl'
+        ]).id('minecraft:beetroot_soup')
+        event.shapeless('minecraft:mushroom_stew', [
+            'minecraft:red_mushroom',
+            'minecraft:brown_mushroom',
+            'minecraft:bowl'
+        ]).id('minecraft:mushroom_stew')
+    }
+})
+
+ServerEvents.tags('item', event => {
+    if (Platform.isLoaded('culturaldelights')) {
+        event.add('minecraft:saplings', 'culturaldelights:avocado_sapling')
+    }
+})
+
+ServerEvents.tags('block', event => {
+    if (Platform.isLoaded('culturaldelights')) {
+        event.add('minecraft:saplings', 'culturaldelights:avocado_sapling')
+    }
+})
+
+MoreJSEvents.wandererTrades(event => {
+    event.addTrade(1, [
+        '3x minecraft:emerald'
+    ], 'farmersdelight:cabbage_seeds')
+    event.addTrade(1, [
+        '3x minecraft:emerald'
+    ], 'farmersdelight:tomato_seeds')
+    if (Platform.isLoaded('collectorsreap')) {
+        event.addTrade(1, [
+            '2x minecraft:emerald'
+        ], 'collectorsreap:portobello')
+    }
+    if (Platform.isLoaded('culturaldelights')) {
+        event.addTrade(1, [
+            '3x minecraft:emerald'
+        ], 'culturaldelights:cucumber_seeds')
+        event.addTrade(1, [
+            '3x minecraft:emerald'
+        ], 'culturaldelights:corn_kernels')
+        event.addTrade(1, [
+            '3x minecraft:emerald'
+        ], 'culturaldelights:eggplant_seeds')
+        event.addTrade(1, [
+            '3x minecraft:emerald'
+        ], 'culturaldelights:avocado_pit')
+        event.addTrade(1, [
+            '6x minecraft:emerald'
+        ], 'culturaldelights:avocado_sapling')
+    }
+    if (Platform.isLoaded('delightful')) {
+        event.addTrade(1, [
+            'minecraft:emerald'
+        ], '8x delightful:salmonberry_pips')
+        event.addTrade(1, [
+            'minecraft:emerald'
+        ], '16x biomesoplenty:clover')
+    }
+})
+
+LootJS.modifiers(event => {
+    if (Platform.isLoaded('biomesoplenty') && Platform.isLoaded('delightful')) {
+        event.addBlockLootModifier('biomesoplenty:huge_clover_petal')
+            .randomChance(0.50).addLoot('biomesoplenty:clover')
+    }
 })
 
 /*

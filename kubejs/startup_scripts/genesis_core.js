@@ -269,6 +269,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     // deprecate .displayName() in 1.20.1+
     event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_tool')
         .displayName('<rainb>Particula Eversorem</rainb>')
+        .translationKey('item.kubejs.final_pickaxe')
         .rarity('epic')
         .texture('kubejs:item/final_pickaxe')
         .maxStackSize(1)
@@ -278,8 +279,10 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:tools/pickaxe')
         .tag('forge:tools/pickaxes')
         .group('tools')
+
     event.create('kubejs:final_axe', 'axe').tier('final_tool')
         .displayName('<rainb>Natura Exitium</rainb>')
+        .translationKey('item.kubejs.final_axe')
         .rarity('epic')
         .texture('kubejs:item/final_axe')
         .maxStackSize(1)
@@ -289,8 +292,10 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:tools/axe')
         .tag('forge:tools/axes')
         .group('tools')
+
     event.create('kubejs:final_shovel', 'shovel').tier('final_tool')
         .displayName('<rainb>Terra Confractus</rainb>')
+        .translationKey('item.kubejs.final_shovel')
         .rarity('epic')
         .texture('kubejs:item/final_shovel')
         .maxStackSize(1)
@@ -300,8 +305,10 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:tools/shovel')
         .tag('forge:tools/shovels')
         .group('tools')
+
     event.create('kubejs:final_hoe', 'hoe').tier('final_tool')
         .displayName('<rainb>Agricola Manus</rainb>')
+        .translationKey('item.kubejs.final_hoe')
         .rarity('epic')
         .texture('kubejs:item/final_hoe')
         .maxStackSize(1)
@@ -314,6 +321,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     // weapons
     event.create('kubejs:final_sword', 'sword').tier('final_tool')
         .displayName('<rainb>Corevis Ultimatum</rainb>')
+        .translationKey('item.kubejs.final_sword')
         .rarity('epic')
         .texture('kubejs:item/final_sword')
         .maxStackSize(1)
@@ -323,14 +331,18 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:tools/sword')
         .tag('forge:tools/swords')
         .group('combat')
+
     event.create('kubejs:final_lance', 'sword').tier('final_tool')
         .displayName('<rainb>Tenebris Punctura</rainb>')
+        .translationKey('item.kubejs.final_lance')
         .rarity('epic')
         .maxStackSize(1)
         .fireResistant(true)
         .group('combat')
+
     event.create('kubejs:final_scythe', 'sword').tier('final_tool')
         .displayName('<rainb>Scythe of Eternal Oblivion<rainb>')
+        .translationKey('item.kubejs.final_scythe')
         .rarity('epic')
         .texture('kubejs:item/final_scythe')
         .maxStackSize(1)
@@ -340,15 +352,19 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:tools/scythe')
         .tag('forge:tools/scythes')
         .group('combat')
+
     event.create('kubejs:final_katana', 'sword').tier('final_tool')
         .displayName('<rainb>Celeritas Obumbratio</rainb>')
+        .translationKey('item.kubejs.final_katana')
         .rarity('epic')
         .texture('kubejs:item/final_katana')
         .maxStackSize(1)
         .fireResistant(true)
         .group('combat')
+
     event.create('kubejs:crystal_lance', 'sword').tier('crystalline_tool')
         .displayName('<rainb>Crystallus Hasta</rainb>')
+        .translationKey('item.kubejs.crystal_lance')
         .rarity('epic')
         .maxStackSize(1)
         .fireResistant(true)
@@ -356,6 +372,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     // armor
     event.create('kubejs:final_helmet', 'helmet').tier('final_armor')
         .displayName('<rainb>Conscientia Oculi</rainb>')
+        .translationKey('item.kubejs.final_helmet')
         .rarity('epic')
         .texture('kubejs:item/final_helmet')
         .maxStackSize(1)
@@ -365,6 +382,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:armors')
         .tag('forge:armors/helmets')
         .group('combat')
+
     event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor')
         .displayName('<rainb>Vitale Cordis</rainb>')
         .rarity('epic')
@@ -376,6 +394,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:armors')
         .tag('forge:armors/chestplates')
         .group('combat')
+
     event.create('kubejs:final_leggings', 'leggings').tier('final_armor')
         .displayName('<rainb>Universum Motus</rainb>')
         .rarity('epic')
@@ -387,6 +406,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:armors')
         .tag('forge:armors/leggings')
         .group('combat')
+
     event.create('kubejs:final_boots', 'boots').tier('final_armor')
         .displayName('<rainb>Gravitas Anchoram</rainb>')
         .rarity('epic')
@@ -399,6 +419,13 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:armors/boots')
         .group('combat')
     // shapes and alphanumeric
+    /**
+     * Work in progress replacement.
+     * for (const [shape, displayName] of Object.entries(global.SHAPES)) {
+     *     for (const [color, colorName] of Object.entries(global.RGBWCMY)) {
+     *     }
+     * }
+     */
     Object.keys(global.SHAPES).forEach(shape => {
         shapeItemGeneration(event, `uncolored_${shape}`, `§7Uncolored ${global.SHAPES[shape]}`, `uncolored_${shape}`)
         shapeItemGeneration(event, `uncolored_left_half_${shape}`, `§7Uncolored Left Half ${global.SHAPES[shape]}`, `halves/uncolored_left_half_${shape}`)
@@ -486,13 +513,23 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     Object.keys(global.RGBWCMY).forEach(item => {
         RGBWCMYK_OBJECTS(event, item, global.RGBWCMY[item])
     })
+    if (Platform.isLoaded('delightful')) {
+        event.create('kubejs:dried_matcha_leaves')
+            .displayName('Dried Matcha Leaves')
+            .texture('kubejs:item/dried_matcha_leaves')
+            .maxStackSize(64)
+        event.create('kubejs:steamed_matcha_leaves')
+            .displayName('Steamed Matcha Leaves')
+            .texture('kubejs:item/steamed_matcha_leaves')
+            .maxStackSize(64)
+    }
 })
 
 StartupEvents.registry('block', event => {
     event.create('kubejs:high_entropy_alloy_block')
         .displayName('<rainb>Block of High Entropy Alloy</rainb>')
         .textureAll('kubejs:block/high_entropy_alloy_block')
-        .material('netherite')
+        .soundType('netherite_block')
         .hardness(500)
         .resistance(1000)
         .lightLevel(1.0)
@@ -506,7 +543,7 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:${insert}`)
             .displayName(`<rainb>${CMD[insert]}</rainb>`)
             .textureAll(`kubejs:block/${insert}`)
-            .material('netherite')
+            .soundType('netherite_block')
             .hardness(500)
             .resistance(1000)
             .lightLevel(1.0)
@@ -517,12 +554,19 @@ StartupEvents.registry('block', event => {
             .tagBlock('forge:needs_netherite_tool')
             .tagBlock('create:wrench_pickup')
             .tagItem('kubejs:command_blocks')
+            .blockEntity(entityInfo => {
+                entityInfo.inventory(9, 1)
+                entityInfo.rightClickOpensInventory()
+                entityInfo.serverTick(20, 0, entity => {
+                    entity.inventory.insertItem('minecraft:netherite_block', false)
+                })
+            })
     })
     Object.keys(STONE_COMPACTING_INCEPTION).forEach(insert => {
         event.create(`kubejs:compressed_${insert}`)
             .displayName(`Compressed ${STONE_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/compressed_${insert}`)
-            .material('stone')
+            .soundType('stone')
             .hardness(25)
             .resistance(1000)
             .requiresTool(true)
@@ -530,7 +574,7 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:double_compressed_${insert}`)
             .displayName(`<shake>Double Compressed</shake> ${STONE_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/double_compressed_${insert}`)
-            .material('stone')
+            .soundType('stone')
             .hardness(50)
             .resistance(1000)
             .requiresTool(true)
@@ -538,7 +582,7 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:triple_compressed_${insert}`)
             .displayName(`<shake>Triple Compressed</shake> ${STONE_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
-            .material('stone')
+            .soundType('stone')
             .hardness(75)
             .resistance(1000)
             .requiresTool(true)
@@ -548,7 +592,7 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:compressed_${insert}`)
             .displayName(`Compressed ${DEEPSLATE_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/compressed_${insert}`)
-            .material('deepslate')
+            .soundType('deepslate')
             .hardness(25)
             .resistance(1000)
             .requiresTool(true)
@@ -556,7 +600,7 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:double_compressed_${insert}`)
             .displayName(`<shake>Double Compressed</shake> ${DEEPSLATE_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/double_compressed_${insert}`)
-            .material('deepslate')
+            .soundType('deepslate')
             .hardness(50)
             .resistance(1000)
             .requiresTool(true)
@@ -564,7 +608,7 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:triple_compressed_${insert}`)
             .displayName(`<shake>Triple Compressed</shake> ${DEEPSLATE_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
-            .material('deepslate')
+            .soundType('deepslate')
             .hardness(75)
             .resistance(1000)
             .requiresTool(true)
@@ -574,7 +618,7 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:compressed_${insert}`)
             .displayName(`Compressed ${GRAVEL_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/compressed_${insert}`)
-            .material('gravel')
+            .soundType('gravel')
             .hardness(25)
             .resistance(1000)
             .requiresTool(true)
@@ -582,7 +626,7 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:double_compressed_${insert}`)
             .displayName(`<shake>Double Compressed</shake> ${GRAVEL_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/double_compressed_${insert}`)
-            .material('gravel')
+            .soundType('gravel')
             .hardness(50)
             .resistance(1000)
             .requiresTool(true)
@@ -590,7 +634,7 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:triple_compressed_${insert}`)
             .displayName(`<shake>Triple Compressed</shake> ${GRAVEL_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
-            .material('gravel')
+            .soundType('gravel')
             .hardness(75)
             .resistance(1000)
             .requiresTool(true)
@@ -600,7 +644,7 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:compressed_${insert}`)
             .displayName(`Compressed ${SAND_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/compressed_${insert}`)
-            .material('sand')
+            .soundType('sand')
             .hardness(25)
             .resistance(1000)
             .requiresTool(true)
@@ -608,7 +652,7 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:double_compressed_${insert}`)
             .displayName(`<shake>Double Compressed</shake> ${SAND_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/double_compressed_${insert}`)
-            .material('sand')
+            .soundType('sand')
             .hardness(50)
             .resistance(1000)
             .requiresTool(true)
@@ -616,7 +660,7 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:triple_compressed_${insert}`)
             .displayName(`<shake>Triple Compressed</shake> ${SAND_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
-            .material('sand')
+            .soundType('sand')
             .hardness(75)
             .resistance(1000)
             .requiresTool(true)
@@ -626,7 +670,7 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:compressed_${insert}`)
             .displayName(`Compressed ${RED_SAND_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/compressed_${insert}`)
-            .material('sand')
+            .soundType('sand')
             .hardness(25)
             .resistance(1000)
             .requiresTool(true)
@@ -634,7 +678,7 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:double_compressed_${insert}`)
             .displayName(`<shake>Double Compressed</shake> ${RED_SAND_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/double_compressed_${insert}`)
-            .material('sand')
+            .soundType('sand')
             .hardness(50)
             .resistance(1000)
             .requiresTool(true)
@@ -642,23 +686,37 @@ StartupEvents.registry('block', event => {
         event.create(`kubejs:triple_compressed_${insert}`)
             .displayName(`<shake>Triple Compressed</shake> ${RED_SAND_COMPACTING_INCEPTION[insert]}`)
             .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
-            .material('sand')
+            .soundType('sand')
             .hardness(75)
             .resistance(1000)
             .requiresTool(true)
             .tagBlock('minecraft:mineable/shovel')
     })
+    event.create('kubejs:null_storage_block')
+        .textureAll('kubejs:block/null_storage')
+        .defaultCutout()
+        .defaultTranslucent()
+        .transparent(true)
+        .soundType('netherite_block')
+        .blockEntity(entityInfo => {
+            entityInfo.inventory(9, 9)
+            entityInfo.rightClickOpensInventory()
+        })
     if (Platform.isLoaded('mob_grinding_utils')) {
         event.create('kubejs:incomplete_spikes')
             .textureAll('kubejs:block/incomplete_placeholder_block')
-            .material('metal')
+            .defaultCutout()
+            .transparent(true)
+            .soundType('metal')
             .hardness(30)
             .resistance(1000)
             .requiresTool(true)
             .tagBlock('minecraft:mineable/pickaxe')
         event.create('kubejs:incomplete_jumbo_tank')
             .textureAll('kubejs:block/incomplete_placeholder_block')
-            .material('netherite')
+            .defaultCutout()
+            .transparent(true)
+            .soundType('netherite_block')
             .hardness(30)
             .resistance(1000)
             .requiresTool(true)
@@ -700,12 +758,17 @@ StartupEvents.registry('fluid', event => {
         .thickTexture(0xFC0000)
         .bucketColor(0xFC0000)
         .luminosity(15)
+
     event.create('kubejs:mushroom_stew')
         .thinTexture(0xCA9777)
         .bucketColor(0xCA9777)
-    event.create('kubejs:shimmer')
+
+    let shimmer = event.create('kubejs:shimmer')
         .flowingTexture('kubejs:block/shimmer_flow')
         .stillTexture('kubejs:block/shimmer_still')
+    shimmer.bucketItem.texture('kubejs:item/shimmer_bucket')
+    shimmer.bucketItem.glow(true);
+
     event.create('kubejs:walnut_oil')
         .thinTexture(0x98630B)
         .bucketColor(0x98630B)
@@ -733,7 +796,7 @@ ItemEvents.toolTierRegistry(event => {
     event.add('crystalline_tool', tier => {
         tier.uses = -1
         tier.speed = 32
-        tier.attackDamageBonus = 32.0
+        tier.attackDamageBonus = 42.0
         tier.level = 5
         tier.enchantmentValue = 30
     })
@@ -757,7 +820,7 @@ ItemEvents.modification(event => {
     })
     event.modify('kubejs:final_axe', item => {
         if (!Platform.isLoaded('apotheosis')) { item.attackSpeed = 2 }
-        if (Platform.isLoaded('apotheosis')) { item.attackSpeed = -2.7 } 
+        if (Platform.isLoaded('apotheosis')) { item.attackSpeed = -2.7 }
     })
     event.modify('kubejs:final_scythe', item => {
         if (!Platform.isLoaded('apotheosis')) { item.attackSpeed = 7 }
@@ -769,7 +832,7 @@ ItemEvents.modification(event => {
     })
     event.modify('kubejs:final_lance', item => {
         if (!Platform.isLoaded('apotheosis')) { item.attackSpeed = 6 }
-        if (Platform.isLoaded('apotheosis')) { item.attackSpeed = -1.5}
+        if (Platform.isLoaded('apotheosis')) { item.attackSpeed = -1.5 }
     })
     TOOLS.forEach(tool => {
         event.modify(`minecraft:wooden_${tool}`, item => {
@@ -900,6 +963,9 @@ ItemEvents.modification(event => {
         event.modify('aether:sentry_boots', item => {
             item.maxDamage = -1
         })
+        event.modify('aether:valkyrie_gloves', item => {
+            item.maxDamage = -1
+        })
     }
 
     if (Platform.isLoaded('aquamirae')) {
@@ -957,6 +1023,10 @@ ItemEvents.modification(event => {
         })
         event.modify('enigmaticlegacy:astral_breaker', item => {
             item.maxDamage = -1
+            item.fireResistant = true
+        })
+        event.modify('enigmaticlegacy:forbidden_axe', item => {
+            item.maxDamage = 2048
             item.fireResistant = true
         })
     }

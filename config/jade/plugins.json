@@ -97,6 +97,9 @@
   "mysticalagradditions": {
     "infused_farmland": true
   },
+  "delightful": {
+    "crop_progress": true
+  },
   "create": {
     "filter": true,
     "goggles.requires_goggles": true,

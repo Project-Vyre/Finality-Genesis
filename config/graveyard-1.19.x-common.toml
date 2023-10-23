@@ -3,7 +3,7 @@
 
 	["The Graveyard - Corrupted Champion Config".corruptedChampion]
 		#Range: 1.0 ~ 1024.0
-		healthInCastingPhase = 400.0
+		healthInCastingPhase = 600.0
 		isBossSummonableItem = ["item.minecraft.debug_stick"]
 		#Range: 1 ~ 100
 		maxAmountSkullsInShootSkullSpell = 5

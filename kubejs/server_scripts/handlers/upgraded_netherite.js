@@ -22,15 +22,54 @@ let UPNETHERITE_UPGRADES = [
     'feather',
 ]
 
+function netheriteUpgradedRepair(event, item, repairmaterial, recipeid) {
+    event.recipes.minecraft.crafting_shapeless(Ingredient.of(item), [
+        Ingredient.of(item),
+        repairmaterial
+    ]).modifyResult((grid, result) => {
+        let repairable = grid.find(Ingredient.of(item))
+        if (repairable.damaged) {
+            repairable.damageValue = 0
+            return repairable
+        }
+    }).id(recipeid);
+}
+
 ServerEvents.recipes(event => {
     event.remove({ id: 'upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot' })
     // figure out how to setup a shapeless recipe for later
-    //UPNETHERITE_INGOTS.forEach(upgrade => {
-    //    event.shapeless(`upgradednetherite:${upgrade}_bow`, [
-    //        `upgradednetherite:${upgrade}_bow`,
-    //        'minecraft:netherite_ingot'
-    //    ]).id(`finality:${upgrade}_bow_repair`)
-    //})
+    UPNETHERITE_UPGRADES.forEach(upgrade => {
+        netheriteUpgradedRepair(event,
+            `upgradednetherite:${upgrade}_upgraded_netherite_bow`,
+            'minecraft:string',
+            `finality:${upgrade}_upgraded_netherite_bow_repair`
+        )
+        netheriteUpgradedRepair(event,
+            `upgradednetherite:${upgrade}_upgraded_netherite_crossbow`,
+            'minecraft:string',
+            `finality:${upgrade}_upgraded_netherite_crossbow_repair`
+        )
+    })
+    netheriteUpgradedRepair(event,
+        'upgradednetherite_ultimate:ultimate_upgraded_netherite_bow',
+        'minecraft:string',
+        'finality:ultimate_upgraded_netherite_bow_repair'
+    )
+    netheriteUpgradedRepair(event,
+        'upgradednetherite_ultimate:ultimate_upgraded_netherite_crossbow',
+        'minecraft:string',
+        'finality:ultimate_upgraded_netherite_crossbow_repair'
+    )
+    event.recipes.minecraft.crafting_shapeless(Ingredient.of('upgradednetherite_ultimate:ultimate_upgraded_netherite_crossbow'), [
+        Ingredient.of('upgradednetherite_ultimate:ultimate_upgraded_netherite_crossbow'),
+        'minecraft:string'
+    ]).modifyResult((grid, result) => {
+        let repairable = grid.find(Ingredient.of('upgradednetherite_ultimate:ultimate_upgraded_netherite_crossbow'))
+        if (repairable.damaged) {
+            repairable.damageValue = 0
+            return repairable
+        }
+    }).id('finality:upgradednetherite_ultimate/ultimate_upgraded_crossbow_repair')
     event.shapeless('upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot', [
         'upgradednetherite:gold_upgraded_netherite_ingot',
         'upgradednetherite:fire_upgraded_netherite_ingot',

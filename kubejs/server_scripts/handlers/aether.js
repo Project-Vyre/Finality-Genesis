@@ -107,30 +107,36 @@ ServerEvents.recipes(event => {
     STANDARD_ARMOR.forEach(piece => {
         aetherRepairing(event,
             Item.of(`aether:neptune_${piece}`).toJson(),
-            4000,
+            600,
             `neptune_${piece}`
         )
         aetherRepairing(event,
             Item.of(`aether:phoenix_${piece}`).toJson(),
-            4000,
+            600,
             `phoenix_${piece}`
         )
         aetherRepairing(event,
             Item.of(`aether:obsidian_${piece}`).toJson(),
-            4000,
+            600,
             `obsidian_${piece}`
         )
     })
+    aetherRepairing(event, 'aether:obsidian_gloves', 600, Item.of('obsidian_gloves').toJson())
 })
 
-if (Platform.isLoaded('aether') && Platform.isLoaded('blockrunner')) {
-    ServerEvents.tags('block', event => {
+ServerEvents.tags('block', event => {
+    event.add('create:wrench_pickup', [
+        'aether:altar',
+        'aether:freezer',
+        'aether:incubator'
+    ])
+    if (Platform.isLoaded('aether') && Platform.isLoaded('blockrunner')) {
         event.add('blockrunner:very_quick_blocks', [
             'aether:quicksoil',
             'aether:quicksoil_glass'
         ])
-    })
-}
+    }
+})
 
 LootJS.modifiers(event => {
     event.addBlockLootModifier('aether:ambrosium_ore')

@@ -1,3 +1,4 @@
+// priority: 3
 // requires: roughlyenoughitems
 
 /**
@@ -420,6 +421,16 @@ REIEvents.information(event => {
             'Can only be acquired by wearing Phoenix Armor, then wading into water to convert it to the respective Obsidian armor piece.',
             'After a spending some time in water, the Phoenix Armor pieces are converted.',
             'In other words, it is made by wearing Phoenix Armor, then quenching it with water.'
+        ])
+    }
+    if (Platform.isLoaded('culturaldelights')) {
+        event.addItem('culturaldelights:avocado', 'Acquisition', [
+            'Can only be acquired by picking it off right from flowering leaf blocks on avocado trees.'
+        ])
+    }
+    if (Platform.isLoaded('delightful')) {
+        event.addItem('delightful:green_tea_leaf', 'Acquisition', [
+            'Can only be acquired by chance using a Knife on leaf blocks.'
         ])
     }
     if (Platform.isLoaded('neapolitan')) {

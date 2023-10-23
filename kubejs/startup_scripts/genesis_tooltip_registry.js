@@ -1,3 +1,4 @@
+// priority: 1
 // requires: create
 
 console.log('Loaded Create tooltip registry.')
@@ -123,6 +124,7 @@ let PURPLE_REGISTRY = [
     'kubejs:final_chestplate',
     'kubejs:final_leggings',
     'kubejs:final_boots',
+    'kubejs:null_storage_block',
     'eccentrictome:tome'
 ]
 let GRAY_REGISTRY = [
@@ -137,7 +139,7 @@ let GRAY_REGISTRY = [
 
 /**
  * 
- * @param {string} itemID 
+ * @param {Internal.ItemStack} itemID 
  */
 function STANDARD_PALETTE(itemID) {
     $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.STANDARD_CREATE))
@@ -257,9 +259,10 @@ ClientEvents.init(event => {
     GRAY_REGISTRY.forEach(item => {
         GRAY_PALETTE(item)
     })
+    // this was embarassingly broken for a while now oops...
     if (Platform.isLoaded('chalk')) {
         Object.keys(DYE).forEach(itemID => {
-            GRAY_PALETTE(`chalk:${itemID}`)
+            GRAY_PALETTE(`chalk:${itemID}_chalk`)
         })
     }
     if (Platform.isLoaded('aether')) {
@@ -322,6 +325,18 @@ ClientEvents.init(event => {
         STANDARD_PALETTE('cloudstorage:balloon_stand')
         STANDARD_PALETTE('cloudstorage:cloud_chest')
         BLUE_PALETTE('cloudstorage:static_cloud_chest')
+    }
+    if (Platform.isLoaded('chipped')) {
+        RED_PALETTE('chipped:arched_leaded_glass_pane_pillar')
+        Object.keys(DYE).forEach(blockID => {
+            RED_PALETTE(`chipped:arched_${blockID}_stained_glass_pane_pillar`) // 'chipped:arched_black_stained_glass_pane_pillar'
+        })
+    }
+    if (Platform.isLoaded('collectorsreap')) {
+        STANDARD_PALETTE('collectorsreap:portobello')
+    }
+    if (Platform.isLoaded('enigmaticlegacy') && Platform.isLoaded('apotheosis')) {
+        RED_PALETTE('enigmaticlegacy:enchanter_pearl')
     }
     if (Platform.isLoaded('etched')) {
         YELLOW_PALETTE('etched:boombox')

@@ -69,7 +69,20 @@
 				type: "item"
 			}]
 			title: "Fishing with Create"
-			x: 0.0d
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			id: "185EDDB4B4741310"
+			subtitle: "Automatic crafting from the future!"
+			tasks: [{
+				id: "77DCD61D7A530148"
+				item: "craftingautomat:autocrafter"
+				type: "item"
+			}]
+			title: "The Crafter"
+			x: 1.0d
 			y: -1.0d
 		}
 	]

@@ -1,10 +1,12 @@
 // requires: enigmaticlegacy
 // requires: extendedcrafting
+// requires: kubejs_create
 
 /**
  * Authors
  * 
  * @CelestialAbyss
+ * @Reveter for providing the basis of the repairable items script
  */
 
 ServerEvents.recipes(event => {
@@ -23,9 +25,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'extendedcrafting:combination',
         powerCost: 5000000,
-        input: {
-            item:'enigmaticlegacy:cosmic_heart'
-        },
+        input: { item: 'enigmaticlegacy:cosmic_heart' },
         ingredients: [
             Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
             Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
@@ -71,10 +71,8 @@ ServerEvents.recipes(event => {
             Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
             Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
             Ingredient.of('extendedcrafting:the_ultimate_block').toJson()
-            ],
-            result: {
-                item: 'enigmaticlegacy:enigmatic_item'
-            }
+        ],
+        result: { item: 'enigmaticlegacy:enigmatic_item' }
     }).id('finality:heart_of_creation')
     event.shaped(Item.of('enigmaticlegacy:earth_heart'), [
         'PSP',
@@ -85,4 +83,22 @@ ServerEvents.recipes(event => {
         P: 'mysticalagriculture:prosperity_shard',
         D: 'quark:diamond_heart'
     }).id('finality:earth_heart')
+    if (Platform.isLoaded('aether')) {
+        event.custom({
+            'type': 'aether:repairing',
+            'category': 'enchanting_repair',
+            'ingredient': Ingredient.of('enigmaticlegacy:forbidden_axe').toJson(),
+            'repairTime': 250
+        }).id('finality:enigmaticlegacy/aether/forbidden_axe_repairing')
+    }
+    event.recipes.minecraft.crafting_shapeless(Ingredient.of('enigmaticlegacy:forbidden_axe'), [
+        Ingredient.of('enigmaticlegacy:forbidden_axe'),
+        'minecraft:netherite_ingot'
+    ]).modifyResult((grid, result) => {
+        let repairable = grid.find(Ingredient.of('enigmaticlegacy:forbidden_axe'))
+        if (repairable.damaged) {
+            repairable.damageValue = 0
+            return repairable
+        }
+    }).id('finality:enigmaticlegacy/forbidden_axe_repair');
 })

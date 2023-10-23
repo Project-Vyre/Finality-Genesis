@@ -1,3 +1,4 @@
+// priority: 3
 // requires: jei
 // requires: jeresources
 // requires: justenoughprofessions
@@ -210,6 +211,13 @@ JEIEvents.hideFluids(event => {
     ])
 })
 
+
+JEIEvents.addItems(event => {
+    if (Platform.isLoaded('delightful')) {
+        event.add('delightful:green_tea_leaf')
+    }
+})
+
 JEIEvents.information(event => {
     event.addItem('minecraft:campfire', ['Campfires now regenerate your health. <wave>Cozy!</wave>'])
     event.addItem('minecraft:soul_campfire', ['Campfires now regenerate your health. <wave>Cozy!</wave>'])
@@ -297,6 +305,16 @@ JEIEvents.information(event => {
             'Can only be acquired by wearing Phoenix Armor, then wading into water to convert it to the respective Obsidian armor piece.',
             'After a spending some time in water, the Phoenix Armor pieces are converted.',
             'In other words, it is made by wearing Phoenix Armor, then quenching it with water.'
+        ])
+    }
+    if (Platform.isLoaded('culturaldelights')) {
+        event.addItem('culturaldelights:avocado', [
+            'Can only be acquired by picking it off right from flowering leaf blocks on avocado trees.'
+        ])
+    }
+    if (Platform.isLoaded('delightful')) {
+        event.addItem('delightful:green_tea_leaf', [
+            'Can only be acquired by chance using a Knife on leaf blocks.'
         ])
     }
     if (Platform.isLoaded('neapolitan')) {

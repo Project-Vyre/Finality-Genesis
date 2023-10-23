@@ -9,9 +9,8 @@
  * @CelestialAbyss
  */
 
-console.log('Applying recipes and tags for Team Abnormals mods...')
-
 ServerEvents.recipes(event => {
+    console.log('Applying chest compat recipes for Woodworks...')
     WOOD_TYPES.forEach(insert => {
         event.shapeless(`woodworks:${insert}_chest`, [
             'minecraft:chest'
@@ -25,6 +24,7 @@ ServerEvents.recipes(event => {
     })
     event.remove({ id: 'abnormals_delight:atmospheric/laurel_cabinet' })
     if (Platform.isLoaded('incubation') && Platform.isLoaded('farmersdelight')) {
+        console.log('Removing Incubation Fried Egg recipes to avoid conflicts.')
         event.remove([
             { id: 'incubation:fried_egg' },
             { id: 'incubation:fried_egg_from_smoking' },
@@ -32,6 +32,8 @@ ServerEvents.recipes(event => {
         ])
     }
 })
+
+console.log('Applying recipes and tags for Team Abnormals mods...')
 
 let AUTLOG = [
     'maple_log'
