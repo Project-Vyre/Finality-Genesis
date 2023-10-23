@@ -121,7 +121,11 @@ ServerEvents.recipes(event => {
             `obsidian_${piece}`
         )
     })
-    aetherRepairing(event, 'aether:obsidian_gloves', 600, Item.of('obsidian_gloves').toJson())
+    aetherRepairing(event,
+        Item.of('aether:obsidian_gloves').toJson(),
+        600,
+        'obsidian_gloves'
+    )
 })
 
 ServerEvents.tags('block', event => {
