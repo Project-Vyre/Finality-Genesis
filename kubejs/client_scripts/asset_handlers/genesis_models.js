@@ -11,6 +11,7 @@ This loader will be removed in 1.20.
  * Authors
  * 
  * @CelestialAbyss
+ * @squoshi - Artist of the crystal lance texture and lance model basis
  */
 
 let handheldModelItems = [
