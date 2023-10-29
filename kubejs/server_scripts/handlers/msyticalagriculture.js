@@ -1,6 +1,6 @@
 // requires: mysticalagriculture
 // requires: mysticalagradditions
-// requires: create
+// requires: kubejs_create
 
 /**
  * Authors
@@ -11,6 +11,8 @@
  * 
  * Rework essences, specifically Diamond, Brass, Steel and wherever applicable.
  *  - This is mostly due to the amount of difference and to encourage more automation with Create.
+ * 
+ * Rework recipes that require Supremium wherever applicable.
  */
 
 /**
@@ -91,13 +93,68 @@ let iumTiers = [
     'awakened_supremium'
 ]
 
+/**
+ * 
+ * @param {*} event 
+ * @param {Internal.ItemStack[]} outputs 
+ * @param {Internal.ItemStack[]} inputs 
+ * @param {string} id 
+ */
+function heatedEssenceCompacting(event, outputs, inputs, recipeId) {
+    event.recipes.createCompacting(outputs, inputs).heated().id(`finality:mysticalagriculture/heated_compacting/${recipeId}`)
+}
+
+/**
+ * 
+ * @param {*} event 
+ * @param {Internal.ItemStack[]} outputs 
+ * @param {Internal.ItemStack[]} inputs 
+ * @param {string} id 
+ */
+function superheatedEssenceCompacting(event, outputs, inputs, recipeId) {
+    event.recipes.createCompacting(outputs, inputs).superheated().id(`finality:mysticalagriculture/superheated_compacting/${recipeId}`)
+}
+
+/**
+ * 
+ * @param {*} event 
+ * @param {Internal.ItemStack[]} outputs 
+ * @param {Internal.ItemStack[]} inputs 
+ * @param {string} recipeId 
+ */
+function heatedEssenceMixing(event, outputs, inputs, recipeId) {
+    event.recipes.createMixing(outputs, inputs).heated().id(`finality:mysticalagriculture/heated_mixing/${recipeId}`)
+}
+
+/**
+ * 
+ * @param {*} event 
+ * @param {Internal.ItemStack[]} outputs 
+ * @param {Internal.ItemStack[]} inputs 
+ * @param {string} recipeId 
+ */
+function superheatedEssenceMixing(event, outputs, inputs, recipeId) {
+    event.recipes.createMixing(outputs, inputs).superheated().id(`finality:mysticalagriculture/superheated_mixing/${recipeId}`)
+}
+
+/**
+ * To-Do List
+ * 
+ * Rework essences, specifically Diamond, Brass, Steel and wherever applicable.
+ *  - This is mostly due to the amount of difference and to encourage more automation with Create.
+ */
+
 ServerEvents.recipes(event => {
     // infusion essence
-    event.recipes.createMixing([Fluid.of('kubejs:inferior_infusion_essence', 250)], [
+    event.recipes.createMixing([
+        Fluid.of('kubejs:inferior_infusion_essence', 250)
+    ], [
         '4x mysticalagriculture:inferium_essence',
         '4x mysticalagriculture:prosperity_shard',
     ]).id('finality:mysta_infusion_crystal_essence')
-    event.recipes.createMixing([Fluid.of('kubejs:supreme_infusion_essence', 250)], [
+    event.recipes.createMixing([
+        Fluid.of('kubejs:supreme_infusion_essence', 250)
+    ], [
         '4x mysticalagriculture:supremium_essence',
         '4x mysticalagriculture:prosperity_shard',
     ]).id('finality:mysta_master_infusion_crystal_essence')
@@ -128,6 +185,11 @@ ServerEvents.recipes(event => {
         'mysticalagriculture:supremium_gemstone',
         Fluid.of('kubejs:supreme_infusion_essence', 250)
     ]).id('finality:master_infusion_crystal')
+    // infusion crystal draining
+    event.recipes.createEmptying([
+        Fluid.of('kubejs:infusion_energy', 1000),
+        Item.of('mysticalagriculture:master_infusion_crystal')
+    ], 'mysticalagriculture:master_infusion_crystal').id('finality:master_infusion_crystal_draining')
     // renewable prosperity shards
     event.recipes.createCrushing([
         Item.of('mysticalagriculture:prosperity_shard').withChance(0.25),
@@ -135,18 +197,18 @@ ServerEvents.recipes(event => {
     ], 'minecraft:coarse_dirt').processingTime(250).id('finality:renew_prosperity')
     event.recipes.createCompacting([Fluid.of('minecraft:milk', 1000)], ['4x mysticalagriculture:cow_essence']).id('finality:milk_from_cow_essence')
     // redstone
-    event.shaped('16x minecraft:redstone', [
+    event.shaped('kubejs:denied_result', [
         'RRR',
-        'RFR',
+        'R R',
         'RRR'
     ], {
-        R: 'mysticalagriculture:redstone_essence',
-        F: 'create:cinder_flour'
+        R: 'mysticalagriculture:redstone_essence'
     }).id('mysticalagriculture:essence/minecraft/redstone')
-    event.recipes.createMixing(['16x minecraft:redstone'], [
+    event.recipes.createMixing('8x minecraft:redstone', [
         '8x mysticalagriculture:redstone_essence',
-        'create:cinder_flour'
-    ]).id('finality:mysta_mixing_redstone')
+        '8x create:cinder_flour',
+        Fluid.of('create:potion', 1000, '{Bottle: "REGULAR", Potion: "minecraft:strength"}')
+    ]).id('finality:mysticalagriculture/mixing/redstone')
     // fire essences
     event.shaped('16x minecraft:red_sand', [
         'DF',
@@ -161,7 +223,7 @@ ServerEvents.recipes(event => {
         '2x mysticalagriculture:fire_essence',
         'minecraft:gold_nugget'
     ]).id('finality:mysta_mix_red_sand')
-    event.shaped('16x minecraft:sand', [
+    event.shaped('4x minecraft:sand', [
         'DF',
         'FD'
     ], {
@@ -172,7 +234,7 @@ ServerEvents.recipes(event => {
         '2x mysticalagriculture:dirt_essence',
         '2x mysticalagriculture:fire_essence'
     ]).id('finality:mysta_mix_sand')
-    event.shaped('16x minecraft:soul_sand', [
+    event.shaped('8x minecraft:soul_sand', [
         'NNN',
         'NFN',
         'NNN'
@@ -185,7 +247,7 @@ ServerEvents.recipes(event => {
         'mysticalagriculture:fire_essence'
     ]).id('finality:mysta_mix_soul_sand')
     event.recipes.createCompacting([Fluid.of('minecraft:lava', 1000)], [
-        '4x mysticalagriculture:fire_essence'
+        '9x mysticalagriculture:fire_essence'
     ]).id('finality:mysta_compacting_lava')
     event.shaped('12x minecraft:tuff', [
         ' S ',
@@ -390,14 +452,6 @@ ServerEvents.recipes(event => {
     ], {
         L: 'mysticalagriculture:limestone_essence'
     }).id('mysticalagriculture:essence/create/limestone')
-    // diamond essence
-    event.shaped('minecraft:diamond', [
-        'DDD',
-        'DDD',
-        'DDD'
-    ], {
-        D: 'mysticalagriculture:diamond_essence'
-    }).id('mysticalagriculture:essence/minecraft/diamond')
     event.shaped('minecraft:heart_of_the_sea', [
         'SDP',
         'DND',
@@ -426,13 +480,6 @@ ServerEvents.recipes(event => {
         P: 'mysticalagriculture:prismarine_essence',
         N: 'minecraft:nautilus_shell'
     }).id('finality:mysta_mechanical_heart_of_the_sea')
-    event.shaped('minecraft:netherite_ingot', [
-        'EEE',
-        'EEE',
-        'EEE'
-    ], {
-        E: 'mysticalagriculture:netherite_essence'
-    }).id('mysticalagriculture:essence/minecraft/netherite_ingot')
     event.shaped('minecraft:honey_bottle', [
         'HB'
     ], {
@@ -503,6 +550,7 @@ ServerEvents.recipes(event => {
         '4x mysticalagriculture:fertilized_essence',
         'minecraft:diamond'
     ]).id('finality:mysta_mystical_fertilizer_better_eff')
+    // seed reprocessing via millstone
     event.remove({ type: 'mysticalagriculture:reprocessor' })
     SEED_PROCESSING_ELIGIBLE.forEach(element => {
         seedMillstoneReprocessing(event, element, element)
@@ -554,6 +602,44 @@ ServerEvents.recipes(event => {
             'kubejs:removed_item'
         )
     })
+    // full release 0.2 changes
+    event.remove([
+        { id: 'mysticalagriculture:essence/minecraft/iron_ingot' },
+        { id: 'mysticalagriculture:essence/minecraft/copper_ingot' },
+        { id: 'mysticalagriculture:essence/common/zinc_ingot' },
+        { id: 'mysticalagriculture:essence/common/brass_ingot' },
+        { id: 'mysticalagriculture:essence/common/steel_ingot' },
+        { id: 'mysticalagriculture:essence/minecraft/diamond' },
+        { id: 'mysticalagriculture:essence/minecraft/netherite_ingot' }
+    ])
+    /**
+     * Inferium Materials
+     */
+    /**
+     * Supremium Materials and Items
+     */
+    event.shapeless('mysticalagriculture:supremium_ingot', [
+        'mysticalagriculture:prosperity_ingot',
+        '2x minecraft:netherite_ingot',
+        '4x mysticalagriculture:supremium_essence'
+    ]).id('mysticalagriculture:supremium_ingot')
+    event.shapeless('mysticalagriculture:supremium_gemstone', [
+        'mysticalagriculture:prosperity_gemstone',
+        '4x mysticalagriculture:supremium_essence'
+    ]).id('mysticalagriculture:supremium_gemstone')
+    /**
+     * Awakened Supremium Materials
+     */
+    event.shapeless('mysticalagriculture:awakened_supremium_ingot', [
+        'mysticalagriculture:prosperity_ingot',
+        '2x minecraft:netherite_ingot',
+        '4x mysticalagriculture:awakened_supremium_essence'
+    ]).id('mysticalagriculture:awakened_supremium_ingot')
+    event.shapeless('mysticalagriculture:awakened_supremium_gemstone', [
+        'mysticalagriculture:prosperity_gemstone',
+        '4x mysticalagriculture:awakened_supremium_essence'
+    ]).id('mysticalagriculture:awakened_supremium_gemstone')
+
     if (Platform.isLoaded('bhc')) {
         event.shaped('bhc:wither_bone', [
             'WWW',
@@ -573,4 +659,53 @@ ServerEvents.recipes(event => {
             B: 'minecraft:bone'
         }).id('finality:architects_paltte/shaped/wither_bone')
     }
+    // heated essence compacting
+    // zinc ingot creation
+    heatedEssenceCompacting(event, [
+        'minecraft:iron_ingot'
+    ], [
+        '9x mysticalagriculture:iron_essence'
+    ], 'iron_ingot')
+    heatedEssenceCompacting(event, [
+        'minecraft:copper_ingot'
+    ], [
+        '9x mysticalagriculture:copper_essence'
+    ], 'copper_ingot')
+    heatedEssenceCompacting(event, [
+        'create:zinc_ingot'
+    ], [
+        '9x mysticalagriculture:zinc_essence'
+    ], 'zinc_ingot')
+    // brass ingot creation
+    heatedEssenceCompacting(event, [
+        'create:brass_ingot'
+    ], [
+        '9x mysticalagriculture:brass_essence'
+    ], 'brass_ingot')
+    if (Platform.isLoaded('ad_astra')) {
+        heatedEssenceCompacting(event, [
+            'ad_astra:steel_ingot'
+        ], [
+            '9x mysticalagriculture:steel_essence'
+        ], 'ad_astra/steel_ingot')
+    }
+    // superheated essence compacting
+    // diamond essence
+    superheatedEssenceCompacting(event, [
+        'minecraft:diamond'
+    ], [
+        '9x mysticalagriculture:diamond_essence',
+        Fluid.of('kubejs:infusion_energy', 1000)
+    ], 'diamond')
+    superheatedEssenceCompacting(event, [
+        'minecraft:netherite_ingot',
+        Item.of('minecraft:netherite_scrap').withChance(0.10)
+    ], [
+        '9x mysticalagriculture:netherite_essence',
+        Fluid.of('kubejs:infusion_energy', 1000)
+    ], 'netherite_ingot')
+    /**
+     * Infusion Energy Usage
+     */
+
 })

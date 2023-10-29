@@ -63,6 +63,20 @@ ServerEvents.recipes(event => {
             'kubejs:dried_matcha_leaves'
         ).processingTime(130).id('finality:milling/matcha_powder')
     }
+    if (Platform.isLoaded('miners_deight')) {
+        event.shaped('kubejs:denied_result', [
+            'C C',
+            ' C '
+        ], {
+            C: 'minecraft:copper_ingot'
+        }).id('miners_delight:copper_cup')
+        event.shaped('miners_delight:copper_cup', [
+            'C C',
+            ' C '
+        ], {
+            C: 'create:copper_sheet'
+        }).id('finality:miners_delight/copper_cup')
+    }
     if (Platform.isLoaded('ends_delight')) {
         event.recipes.createFilling('ends_delight:non_hatchable_dragon_egg', [
             'minecraft:dragon_egg',
