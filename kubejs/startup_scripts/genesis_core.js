@@ -1,5 +1,4 @@
 // priority: 0
-// requires: kubejs_create
 // requires: create
 // requires: cataclysm
 
@@ -17,56 +16,6 @@ Platform.mods.kubejs.name = 'Finality'
 
 console.info('Loading Finality startup scripts...')
 
-// let DYE_ID = ['white','orange','magenta','light_blue','lime','pink','purple','light_gray','gray','cyan','brown','green','blue','red','black','yellow']
-// let DYE_CAPS = ['WHITE','ORANGE','MAGENTA','LIGHT BLUE','LIME','PINK','PURPLE','LIGHT GRAY','GRAY','CYNA','BROWN','GREEN','BLUE','RED','BLACK','YELLOW']
-// let DISPLAY_COLOR = ['White', 'Orange', 'Magenta', 'Light Blue', 'Lime', 'Pink', 'Purple', 'Light Gray', 'Gray', 'Cyan', 'Brown', 'Green', 'Blue', 'Red', 'Black', 'Yellow']
-
-/*
-Note to self:
-.displayName() is deprecated on 1.20.1.
-*/
-let NATR = {
-    blue_ice: 'Blue Ice',
-    sand: 'Sand',
-    red_sand: 'Red Sand',
-    coarse_dirt: 'Coarse Dirt',
-    cobblestone: 'Cobblestone',
-    tinted_glass: 'Tinted Glass',
-    soul_sand: 'Soul Sand',
-    soul_soil: 'Soul Soil',
-    end_crystal: 'End Crystal'
-}
-let CMAT = {
-    andesite_alloy: 'Andesite Alloy',
-    zinc: 'Zinc',
-    copper: 'Copper',
-    brass: 'Brass',
-    rose_quartz: 'Rose Quartz',
-    framed_glass: 'Framed Glass',
-    precision_mechanism: 'Precision Mechanism',
-    sturdy_sheet: 'Sturdy Sheet',
-    track: 'Track',
-    chocolate: 'Chocolate',
-    builders_tea: "Builder's Tea"
-}
-let DYE = {
-    black: 'Black',
-    gray: 'Gray',
-    light_gray: 'Light Gray',
-    white: 'White',
-    pink: 'Pink',
-    light_blue: 'Light Blue',
-    brown: 'Brown',
-    red: 'Red',
-    orange: 'Orange',
-    yellow: 'Yellow',
-    lime: 'Lime',
-    green: 'Green',
-    cyan: 'Cyan',
-    blue: 'Blue',
-    purple: 'Purple',
-    magenta: 'Magenta'
-}
 let CMD = {
     command_block: 'Command Block',
     chain_command_block: 'Chain Command Block',
@@ -87,16 +36,7 @@ let SAND_COMPACTING_INCEPTION = {
 let RED_SAND_COMPACTING_INCEPTION = {
     red_sand: 'Red Sand'
 }
-let PRIMORDIAL_MECHANISMS = {
-    terra_mechanism: 'Terra Mechanism', // nature related, ingredient for entropy mechanism
-    gluttony_mechanism: 'Gluttony Mechanism', // delicacy related, ingredient for entropy mechanism
-    metallurgy_mechanism: 'Metallurgy Mechanism', // metal related, ingredient for entropy mechanism
-    lattice_mechanism: 'Lattice Mechanism', // crystal related, ingredient for entropy mechanism
-    umbral_mechanism: 'Umbral Mechanism', // darkness related, ingredient for entropy mechanism
-    genesis_mechanism: 'Genesis Mechanism', // create related, ingredient for entropy mechanism
-    ascendant_mechanism: 'Ascendant Mechanism', // experience related, ingredient for entropy mechanism
-    entropy_mechanism: 'Entropy Mechanism' // CONSOLIDATION
-}
+
 global.SHAPES = {
     circle: 'Circle',
     rectangle: 'Rectangle',
@@ -187,16 +127,7 @@ function RGBWCMYK_OBJECTS(event, color, displayNameString) {
     event.create(`kubejs:color_${color}`).displayName(`${displayNameString}`).texture(`kubejs:item/colors/${color}`).maxStackSize(64).fireResistant(true)
 }
 
-/**
- * 
- * @param {*} event 
- * @param {string} itemID 
- * @param {string} displayName 
- * @param {string} texturePath 
- */
-function transitionalItem(event, itemID, displayName, texturePath) {
-    event.create(`kubejs:${itemID}`, 'create:sequenced_assembly').displayName(displayName).texture(`kubejs:item/${texturePath}`)
-}
+
 
 /**
  * 
@@ -250,26 +181,17 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     FULL_CUSTOM(event, 'awakened_singularity_core', '<shake><rainb>Awakened Singularity Core</rainb></shake>', 'awakened_singularity_core', 8, true)
     FULL_CUSTOM(event, 'denied_result', '§d<shake>Denied Result</shake>', 'denied', 1, true)
     FULL_CUSTOM(event, 'removed_item', '§4<shake>Removed Item</shake>', 'removed', 1, true)
-    event.create('kubejs:high_entropy_alloy').displayName('<rainb>High Entropy Alloy</rainb>').texture('kubejs:item/final_ingot').maxStackSize(64).fireResistant(true).group('miscellaneous')
-    Object.keys(NATR).forEach(material => {
-        event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${NATR[material]} Singularity`).texture(`kubejs:item/incomplete_singularities/nature/incomplete_${material}`).maxStackSize(1)
-    })
-    Object.keys(CMAT).forEach(material => {
-        event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${CMAT[material]} Singularity`).texture(`kubejs:item/incomplete_singularities/incomplete_${material}`).maxStackSize(1)
-    })
-    // replace with Color.DYE.forEach() on 1902+ as the Colors automatically has all 16 MC colors
-    Object.keys(DYE).forEach(color => {
-        event.create(`kubejs:incomplete_concrete_${color}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${DYE[color]} Concrete Singularity`).texture(`kubejs:item/incomplete_singularities/concrete/incomplete_concrete_${color}`).maxStackSize(1)
-    })
-    Object.keys(PRIMORDIAL_MECHANISMS).forEach(mechanism => {
-        event.create(`kubejs:${mechanism}`).displayName(`<rainb>${PRIMORDIAL_MECHANISMS[mechanism]}</rainb>`).texture(`kubejs:item/${mechanism}`).maxStackSize(64).fireResistant(true)
-        event.create(`kubejs:incomplete_${mechanism}`, 'create:sequenced_assembly').displayName(`<rainb>Incomplete ${PRIMORDIAL_MECHANISMS[mechanism]}</rainb>`).texture(`kubejs:item/incomplete_${mechanism}`)
-    })
+    event.create('kubejs:high_entropy_alloy')
+        .displayName('<rainb>High Entropy Alloy</rainb>')
+        .texture('kubejs:item/final_ingot')
+        .maxStackSize(64)
+        .fireResistant(true)
+        .group('miscellaneous')
+
     // tools
     // deprecate .displayName() in 1.20.1+
     event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_tool')
         .displayName('<rainb>Particula Eversorem</rainb>')
-        .translationKey('item.kubejs.final_pickaxe')
         .rarity('epic')
         .texture('kubejs:item/final_pickaxe')
         .maxStackSize(1)
@@ -282,7 +204,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
 
     event.create('kubejs:final_axe', 'axe').tier('final_tool')
         .displayName('<rainb>Natura Exitium</rainb>')
-        .translationKey('item.kubejs.final_axe')
         .rarity('epic')
         .texture('kubejs:item/final_axe')
         .maxStackSize(1)
@@ -295,7 +216,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
 
     event.create('kubejs:final_shovel', 'shovel').tier('final_tool')
         .displayName('<rainb>Terra Confractus</rainb>')
-        .translationKey('item.kubejs.final_shovel')
         .rarity('epic')
         .texture('kubejs:item/final_shovel')
         .maxStackSize(1)
@@ -308,7 +228,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
 
     event.create('kubejs:final_hoe', 'hoe').tier('final_tool')
         .displayName('<rainb>Agricola Manus</rainb>')
-        .translationKey('item.kubejs.final_hoe')
         .rarity('epic')
         .texture('kubejs:item/final_hoe')
         .maxStackSize(1)
@@ -321,7 +240,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     // weapons
     event.create('kubejs:final_sword', 'sword').tier('final_tool')
         .displayName('<rainb>Corevis Ultimatum</rainb>')
-        .translationKey('item.kubejs.final_sword')
         .rarity('epic')
         .texture('kubejs:item/final_sword')
         .maxStackSize(1)
@@ -334,7 +252,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
 
     event.create('kubejs:final_lance', 'sword').tier('final_tool')
         .displayName('<rainb>Tenebris Punctura</rainb>')
-        .translationKey('item.kubejs.final_lance')
         .rarity('epic')
         .maxStackSize(1)
         .fireResistant(true)
@@ -342,7 +259,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
 
     event.create('kubejs:final_scythe', 'sword').tier('final_tool')
         .displayName('<rainb>Scythe of Eternal Oblivion<rainb>')
-        .translationKey('item.kubejs.final_scythe')
         .rarity('epic')
         .texture('kubejs:item/final_scythe')
         .maxStackSize(1)
@@ -355,7 +271,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
 
     event.create('kubejs:final_katana', 'sword').tier('final_tool')
         .displayName('<rainb>Celeritas Obumbratio</rainb>')
-        .translationKey('item.kubejs.final_katana')
         .rarity('epic')
         .texture('kubejs:item/final_katana')
         .maxStackSize(1)
@@ -364,7 +279,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
 
     event.create('kubejs:crystal_lance', 'sword').tier('crystalline_tool')
         .displayName('<rainb>Crystallus Hasta</rainb>')
-        .translationKey('item.kubejs.crystal_lance')
         .rarity('epic')
         .maxStackSize(1)
         .fireResistant(true)
@@ -372,7 +286,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     // armor
     event.create('kubejs:final_helmet', 'helmet').tier('final_armor')
         .displayName('<rainb>Conscientia Oculi</rainb>')
-        .translationKey('item.kubejs.final_helmet')
         .rarity('epic')
         .texture('kubejs:item/final_helmet')
         .maxStackSize(1)
@@ -469,8 +382,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     })
     FireResistantItem(event, 'blueprint_shape_base', '§9Blueprint Shape Base', 'shapes/blueprint_shape_base')
     FireResistantItem(event, 'blueprint_shape', '§9Blueprint Shape', 'shapes/blueprint_shape')
-    transitionalItem(event, 'incomplete_cpu_shape', '§aIncomplete CPU Substrate Shape', 'shapes/incomplete_cpu')
-    transitionalItem(event, 'incomplete_cpu_substrate_shape', '§aIncomplete CPU Substrate Shape', 'shapes/incomplete_cpu_substrate')
     FireResistantItem(event, 'cpu_foundation', '§aCPU Shape Foundation', 'shapes/cpu_foundation')
     FireResistantItem(event, 'cpu_substrate_shape', '§aCPU Substrate Shape', 'shapes/cpu_substrate_shape')
     FireResistantItem(event, 'cpu_shape', '§aCPU Shape', 'shapes/cpu_shape')
@@ -778,6 +689,11 @@ StartupEvents.registry('fluid', event => {
     event.create('kubejs:nether_wart_jam')
         .thinTexture(0x5C151A)
         .bucketColor(0x5C151A)
+    if (Platform.isLoaded('mysticalagriculture')) {
+        event.create('kubejs:infusion_energy')
+            .thinTexture(0x99FFF9)
+            .bucketColor(0x99FFF9)
+    }
 })
 /*
     event.create('kubejs:shimmer')
@@ -860,9 +776,11 @@ ItemEvents.modification(event => {
     event.modify('minecraft:trident', item => {
         item.maxDamage = 1024
     })
-    event.modify('eccentrictome:tome', item => {
-        item.fireResistant = true
-    })
+    if (Platform.isLoaded('eccentrictome')) {
+        event.modify('eccentrictome:tome', item => {
+            item.fireResistant = true
+        })
+    }
     // Armor durability is synchronized because it does not make sense as to why armor pieces have different durabilities.
     ARMOR.forEach(armor => {
         event.modify(`minecraft:leather_${armor}`, item => {

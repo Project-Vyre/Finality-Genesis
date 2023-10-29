@@ -53,9 +53,16 @@ public class SequencedAssemblyItem extends Item {
 }
 */
 
+/**
+ * Authors
+ * 
+ * @squoshi - Fixed this.
+ * @CelestialAbyss
+ */
+
 const $SequencedAssemblyItem = Java.loadClass('com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem')
 const $Properties = Java.loadClass('net.minecraft.world.item.Item$Properties')
 
 StartupEvents.registry('item', event => {
-    event.createCustom('kubejs:sequenced_assembly_example_item', new $SequencedAssemblyItem(new $Properties()))
+    event.createCustom('kubejs:sequenced_assembly_example_item', () => new $SequencedAssemblyItem(new $Properties()))
 })

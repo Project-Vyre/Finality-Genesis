@@ -22,6 +22,13 @@ let handheldModelItems = [
 ]
 
 ClientEvents.highPriorityAssets(event => {
+    // placeholder
+    //if (!Platform.isLoaded('kubejs_create')) {
+    //    let sequencedKubeJS = [
+    //        ''
+    //    ]
+    //    event.add('kubejs:models/item')
+    //}
     handheldModelItems.forEach(item => {
         // kubejs/models/final_sword.json
         event.add(`kubejs:models/item/${item}`, {
