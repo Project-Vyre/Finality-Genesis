@@ -46,7 +46,7 @@ function check_updates() {
                         Component.white(" is available!\n"),
                         Component.white("\nYou are playing on "),
                         Component.red(version),
-                        Component.white(", the lastest is "),
+                        Component.white(", the latest is "),
                         Component.green(latest_version),
                         Component.white('\nUpdate using the CurseForge app or the '),
                         Component.gold("[website]")
