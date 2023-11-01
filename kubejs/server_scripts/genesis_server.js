@@ -153,10 +153,7 @@ function COLOR_MIXING(event, output_color, color_one, color_two) {
  * @param {string} id 
  */
 global.shortSuperheatedCompacting = (event, outputs, inputs, id) => {
-    event.recipes.createCompacting(
-        outputs,
-        inputs
-    ).superheated().id(`finality:superheated_compacting/${id}`)
+    event.recipes.createCompacting(outputs, inputs).superheated().id(`finality:superheated_compacting/${id}`)
 }
 
 ServerEvents.recipes(event => {

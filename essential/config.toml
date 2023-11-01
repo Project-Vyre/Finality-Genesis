@@ -6,7 +6,6 @@
 		streamer_mode = false
 		modcore_warning = true
 		essential_gui_scale = 0
-		prompt_when_visiting_trusted_hosts = false
 
 	[general.online_status]
 		show_essential_indicator_on_tab = true
@@ -17,6 +16,8 @@
 		essential_menu_layout = 0
 		enable_essential = true
 		quick_action_bar = true
+		use_vanilla_button_texture = false
+		darken_re-textured_menu_buttons = false
 
 [hidden]
 
@@ -30,7 +31,8 @@
 	[emotes.general]
 		disable_emotes = false
 		play_emotes_in_third_person_view = true
-		emote_preview_in_first_person = true
+		emotes_preview = false
+		emote_preview = false
 
 [privacy]
 
@@ -50,6 +52,9 @@
 		online_friend_alert = true
 		message_notifications = true
 		group_message_notifications = true
+
+	[notifications.warnings]
+		link_opening_warning = true
 
 [quality_of_life]
 
@@ -78,6 +83,7 @@
 		"screenshot_quick_action_#2_-_top_right" = 2
 		"screenshot_quick_action_#3_-_bottom_left" = 1
 		"screenshot_quick_action_#4_-_bottom_right" = 4
+		post_screenshot_action = 0
 
 [cosmetics]
 
@@ -89,7 +95,7 @@
 		"cosmetic_&_armor_conflict_-_on_others" = 0
 
 [__meta]
-	version = 8
+	version = 11
 
 	[__meta.migration_log]
 
@@ -131,4 +137,15 @@
 
 			[__meta.migration_log.7.changed]
 				"cosmetics.general.hide_your_cosmetics" = false
+
+		[__meta.migration_log.9]
+
+			[__meta.migration_log.9.changed]
+				"general.general.prompt_when_visiting_trusted_hosts" = false
+
+		[__meta.migration_log.10]
+			added = ["emotes.general.emotes_preview"]
+
+			[__meta.migration_log.10.changed]
+				"emotes.general.emote_preview_in_first_person" = true
 
