@@ -1,4 +1,17 @@
-/*
+// ignored: true
+
+/**
+ * Authors
+ * 
+ * @CelestialAbyss
+ */
+
+/**
+ * Old stuff. May use later in the future.
+ * 
+ * Probably don't need the [] in some areas.
+ */
+
 ItemEvents.tooltip(event => {
     event.add('minecraft:campfire', Text.gold('Campfires can now regenerate your health. <wave>Cozy!</wave>'))
     event.add('minecraft:soul_campfire', Text.aqua('Soul Campfires can now regenerate your health. <wave>Cozy!</wave>'))
@@ -23,7 +36,11 @@ ItemEvents.tooltip(event => {
     }))
     event.addAdvanced('minecraft:wooden_pickaxe', (item, advanced, text) => {
         if (!event.isShift()) {
-            text.add(1, [Text.of('Hold ').gold(), Text.of('[Shift] ').yellow(), Text.of('to see more info.').gold()])
+            text.add(1, [
+                Text.of('Hold ').gold(),
+                Text.of('[Shift] ').yellow(),
+                Text.of('to see more info.').gold()
+            ])
         } else {
             text.add(1, [
                 Text.of('You can now ').white(),
@@ -46,7 +63,11 @@ ItemEvents.tooltip(event => {
     })
     event.addAdvanced('minecraft:stone_pickaxe', (item, advanced, text) => {
         if (!event.isShift()) {
-            text.add(1, [Text.of('Hold ').gold(), Text.of('[Shift] ').yellow(), Text.of('to see more info.').gold()])
+            text.add(1, [
+                Text.of('Hold ').gold(),
+                Text.of('[Shift] ').yellow(),
+                Text.of('to see more info.').gold()
+            ])
         } else {
             text.add(1, [
                 Text.of('You can now ').white(),
@@ -69,7 +90,11 @@ ItemEvents.tooltip(event => {
     })
     event.addAdvanced('minecraft:iron_pickaxe', (item, advanced, text) => {
         if (!event.isShift()) {
-            text.add(1, [Text.of('Hold ').gold(), Text.of('[Shift] ').yellow(), Text.of('to see more info.').gold()])
+            text.add(1, [
+                Text.of('Hold ').gold(),
+                Text.of('[Shift] ').yellow(),
+                Text.of('to see more info.').gold()
+            ])
         } else {
             text.add(1, [
                 Text.of('You can now ').white(),
@@ -92,11 +117,23 @@ ItemEvents.tooltip(event => {
     })
     event.addAdvanced('minecraft:beacon', (item, advanced, text) => {
         if (!event.isShift()) {
-            text.add(1, [Text.of('Hold ').gold(), Text.of('[Shift] ').yellow(), Text.of('to see more info.').gold()])
+            text.add(1, [
+                Text.of('Hold ').gold(),
+                Text.of('[Shift] ').yellow(),
+                Text.of('to see more info.').gold()
+            ])
         } else {
             text.add(1, Text.green('Gives positive effects to players in a certain radius.').bold(true))
             text.add(2, Text.red('Requires a base built out of precious metals or gems to function!'))
-            text.add(3, [Text.white('Iron, '), Text.gold('Gold '), Text.aqua('Diamond, '), Text.green('Emerald '), Text.white('or even '), Text.gray('Netherite '), Text.white('are valid materials.')])
+            text.add(3, [
+                Text.white('Iron, '),
+                Text.gold('Gold '),
+                Text.aqua('Diamond, '),
+                Text.green('Emerald '),
+                Text.white('or even '),
+                Text.gray('Netherite '),
+                Text.white('are valid materials.')
+            ])
         }
     })
     event.addAdvanced('extendedcrafting:handheld_table', (item, advanced, text) => {
@@ -106,7 +143,9 @@ ItemEvents.tooltip(event => {
     event.addAdvanced('farmersdelight:skillet', (item, advanced, text) => {
         if (!event.isShift()) {
             text.add(1, [
-                Text.of('Hold ').gold(), Text.of('[Shift] ').yellow(), Text.of('for more info.').gold()
+                Text.of('Hold ').gold(),
+                Text.of('[Shift] ').yellow(),
+                Text.of('for more info.').gold()
             ])
         } else {
             text.add(1, [
@@ -136,7 +175,9 @@ ItemEvents.tooltip(event => {
         event.addAdvanced('cloudstorage:cloud_chest', (item, advanced, text) => {
             if (!event.isShift()) {
                 text.add(1, [
-                    Text.of('Hold ').darkGray(), Text.of('[Shift] ').gray(), Text.of('for more info.').darkGray()
+                    Text.of('Hold ').darkGray(),
+                    Text.of('[Shift] ').gray(),
+                    Text.of('for more info.').darkGray()
                 ])
             } else {
                 text.add(1, [
@@ -164,7 +205,9 @@ ItemEvents.tooltip(event => {
         event.addAdvanced('cloudstorage:static_cloud_chest', (item, advanced, text) => {
             if (!event.isShift()) {
                 text.add(1, [
-                    Text.of('Hold ').darkGray(), Text.of('[Shift] ').gray(), Text.of('for more info.').darkGray()
+                    Text.of('Hold ').darkGray(),
+                    Text.of('[Shift] ').gray(),
+                    Text.of('for more info.').darkGray()
                 ])
             } else {
                 text.add(1, [
@@ -441,4 +484,3 @@ ItemEvents.tooltip(event => {
         })
     }
 })
-*/
