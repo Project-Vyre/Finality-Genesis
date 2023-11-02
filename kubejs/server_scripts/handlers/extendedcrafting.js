@@ -2,9 +2,9 @@
 // requires: create
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Extended Crafting.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ * @author tizu69 <https://github.com/tizu69> Wrote ExtendedCrafting table JSON auto-gen functions
  */
 
 let SAND = ['sand', 'red_sand']
@@ -12,7 +12,40 @@ let VANILLAMATS = ['amethyst', 'copper', 'iron', 'redstone', 'gold', 'diamond', 
 let VANILLANOTSTANDARD = ['ender_pearl', 'gunpowder', 'sea_lantern', 'glowstone']
 let CREATEITEMS = ['electron_tube', 'rose_quartz']
 let CREATEVALUED = ['brass', 'zinc']
+
+/**
+ * Generates a custom shaped recipe for the ExtendedCrafting mod.
+ * 
+ * @author tizu69 <https://github.com/tizu69>
+ * @author CelestialAbyss <https://github.com/CelestialAbyss>
+ * @param {Event} event - the event object
+ * @param {string} output - the output, as a stringed item id
+ * @param {number} outputQuantity - the quantity of the output
+ * @param {string[]} arrangement - the arrangement of the ingredients on the table
+ * @param {object} ingredientKeys - the keys representing the ingredients on the table, like a crafting table recipe
+ * @param {string} recipeId - the ID of the recipe
+ * @param {boolean} lock - whether the recipe should require a specified tier
+ * @param {number?} tierNumber - tier number 1-4
+ */
+function extendedTable(event, output, outputQuantity, arrangement, ingredientKeys, recipeId, lock, tierNumber) {
+    event.custom({
+        type: "extendedcrafting:shaped_table",
+        tier: lock ? tierNumber : 0,
+        pattern: arrangement,
+        key: ingredientKeys,
+        result: Item.of(output, outputQuantity).toJson(),
+    }).id(recipeId)
+}
+
 ServerEvents.recipes(event => {
+    extendedTable(event, 'extendedcrafting:crystaltine_ingot', 4, [
+        'RRRRRRR',
+        'RRRNRRR',
+        'RRRRRRR'
+    ], {
+        R: 'create:refined_radiance',
+        N: 'minecraft:nether_star'
+    }, 'kubejs:t3_table_func_test')
     event.shapeless('extendedcrafting:black_iron_ingot', [
         'minecraft:iron_ingot',
         'minecraft:black_dye',
@@ -27,9 +60,9 @@ ServerEvents.recipes(event => {
         S: 'extendedcrafting:ender_star',
         O: 'minecraft:obsidian'
     }).id('finality:beacon')
+    // Item.of('#forge:glass/colorless').toJson()
     event.recipes.createMechanicalCrafting(Item.of('extendedcrafting:crystaltine_ingot', 4), [
         'DLLLLLD',
-        'DGISIGD',
         'DGISIGD',
         'DLLLLLD'
     ], {

@@ -1,11 +1,10 @@
 // requires: irons_spellbooks
 // requires: apotheosis
-// requires: create
+// requires: kubejs_create
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Iron's Spells and Spellbooks.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 /*

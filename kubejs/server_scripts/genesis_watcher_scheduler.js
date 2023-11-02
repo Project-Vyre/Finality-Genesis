@@ -1,10 +1,9 @@
 // requires: netjs
 
 /**
- * Authors
- * 
- * @KostromDan Original script author
- * @CelestialAbyss
+ * @file Server side modpack update checker.
+ * @author KostromDan <https://github.com/KostromDan> Original script author
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 const $BCC = Java.loadClass('dev.wuffs.bcc.BCC')

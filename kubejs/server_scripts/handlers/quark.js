@@ -1,5 +1,10 @@
 // requires: quark
 
+/**
+ * @file Server handler for Quark.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ */
+
 ServerEvents.recipes(event => {
     event.shaped('kubejs:denied_result', [
         'ILI',

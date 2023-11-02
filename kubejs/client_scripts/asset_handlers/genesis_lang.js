@@ -3,10 +3,9 @@
 // requires: create
 
 /**
- * Authors
- * 
- * @LatvianModder Helped with setting this up and object entry iteration for easier lang input
- * @CelestialAbyss
+ * @file Everything lang file related.
+ * @author LatvianModder <https://github.com/LatvianModder> Helped with setting this up and object entry iteration for easier lang input
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 let standardArmor = ['helmet', 'chestplate', 'leggings', 'boots']

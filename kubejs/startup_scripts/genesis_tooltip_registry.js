@@ -4,11 +4,10 @@
 console.log('Loaded Create tooltip registry.')
 
 /**
- * Authors
- * 
- * @squoshi Initial implementation of ClientEvents.init()
- * @CelestialAbyss Wrote function system
- * @tizu69 (AKA tizu in the KJS Discord) Initial implementation via tooltip event
+ * @file Responsible for making tooltips using Create's tooltip registry.
+ * @author squoshi <https://github.com/squoshi> Initial implementation of ClientEvents.init()
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Wrote function system
+ * @author tizu69 <https://github.com/tizu69> (AKA tizu in the KJS Discord) Initial implementation via tooltip event
  */
 
 /*
@@ -259,6 +258,9 @@ ClientEvents.init(event => {
     GRAY_REGISTRY.forEach(item => {
         GRAY_PALETTE(item)
     })
+    MONO_GRAY_PALETTE('create:chromatic_compound')
+    GRAY_GOLD_PALETTE('create:refined_radiance')
+    GRAY_PALETTE('create:shadow_steel')
     // this was embarassingly broken for a while now oops...
     if (Platform.isLoaded('chalk')) {
         Object.keys(DYE).forEach(itemID => {

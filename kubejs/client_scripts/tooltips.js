@@ -1,16 +1,15 @@
 // ignored: true
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Adds tooltips without using Create's registry.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
-/**
- * Old stuff. May use later in the future.
- * 
- * Probably don't need the [] in some areas.
- */
+/*
+Old stuff. May use later in the future.
+
+Probably don't need the [] in some areas.
+*/
 
 ItemEvents.tooltip(event => {
     event.add('minecraft:campfire', Text.gold('Campfires can now regenerate your health. <wave>Cozy!</wave>'))

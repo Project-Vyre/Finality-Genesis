@@ -4,9 +4,8 @@
 // requires: kubejs_create
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for the Upgraded Netherite mods.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 let UPNETHERITE_TOOLS = ['sword', 'shovel', 'pickaxe', 'axe']

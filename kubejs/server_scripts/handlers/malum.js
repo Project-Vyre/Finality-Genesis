@@ -3,12 +3,17 @@
 // requires: lootjs
 
 /**
- * Malum To-Do List
- * 
- * - FTB Quests for introduction
- * - Create + Malum integration
- * - Wandering Trader trades for those on older versions
+ * @file Server handler for Malum.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
+
+/*
+Malum To-Do List
+
+- FTB Quests for introduction
+- Create + Malum integration
+- Wandering Trader trades for those on older versions
+*/
 
 ServerEvents.recipes(event => {
     console.log('Malum detected! Removing forgotten recipe with recipe ID malum:create/crushing/crush_rare_earths_block')
@@ -21,4 +26,6 @@ ServerEvents.recipes(event => {
     // recipes
 })
 
-LootJS
+LootJS.modifiers(event => {
+    
+})

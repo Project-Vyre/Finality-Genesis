@@ -1,14 +1,12 @@
 // priority: 6
 
 /**
- * Authors
- * 
- * @pietro-lopes AKA Uncandango
- * @CelestialAbyss
- * 
- * Preventive measures are a work in progress...
+ * @file Server handler for ShetiPhian's EnderChests and EnderTanks mods.
+ * @author pietro-lopes <https://github.com/pietro-lopes> AKA Uncandango
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
+// Preventive measures are a work in progress...
 ItemEvents.firstRightClicked(event => {
     const { item, level, player } = event
     const { x, y, z } = player

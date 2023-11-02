@@ -2,9 +2,8 @@
 // requires: extendedcrafting
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for End Remastered.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 ServerEvents.recipes(event => {

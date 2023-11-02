@@ -2,14 +2,12 @@
 // requires: roughlyenoughitems
 
 /**
- * Authors
- * @CelestialAbyss
- * 
- * Contributors & Helpers
- * @Hunter19823 For helping with REI regex and grouping
+ * @file Responsible for handling REI grouping, hiding, adding, etc.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ * @author Hunter19823 <https://github.com/Hunter19823> For helping with REI regex and grouping
  * mercenaryarek For the groupChippedTags function
  * p3lim function correction
-*/
+ */
 
 let REI_CREATE_COMPAT_ORES = [
     'osmium',
@@ -122,7 +120,14 @@ const REI_GROUPS = {
     'quark': 'Quark',
     'whisperwoods': 'Whisperwoods'
 }
-function groupChippedTags(modName, event, exclude) { // function written by mercenaryarek from the KubeJS Discord
+
+/**
+ * @author mercenaryarek <mercenaryarek> function written by mercenaryarek from the KubeJS Discord
+ * @param {string} modName 
+ * @param {*} event 
+ * @param {boolean} exclude 
+ */
+function groupChippedTags(modName, event, exclude) {
     const modIngredient = Ingredient.of(`@${modName}`)
     modIngredient.stacks.toList().stream()
         .flatMap(stack => stack.tags)
@@ -867,7 +872,10 @@ REIEvents.groupEntries(event => {
     event.groupSameItem('enderchests:rei_groups/shetiphian_enderchests_pouches', 'All Ender Pouches', 'enderchests:ender_pouch')
     event.groupSameItem('endertanks:rei_groups/shetiphian_endertanks', 'All Ender Tanks', 'endertanks:ender_tank')
     event.groupSameItem('endertanks:rei_groups/shetiphian_endertanks_buckets', 'All Ender Buckets', 'endertanks:ender_bucket')
-    Object.keys(REI_GROUPS).forEach((mod) => { // /^modid.*[_:\/]spawn(?![a-zA-Z0-9]).*/ regular expression provided by ILIKEPIEFOO2 developer of KubeJS Additions
+    /**
+     * @author Hunter19823 <https://github.com/Hunter19823> https://discord.com/channels/303440391124942858/1145987527073865779
+     */
+    Object.keys(REI_GROUPS).forEach((mod) => { // /^modid.*[_:\/]spawn(?![a-zA-Z0-9]).*/  regular expression provided by ILIKEPIEFOO2 developer of KubeJS Additions
         if (Platform.isLoaded(mod)) {
             let regex = new RegExp(`^${mod}.*[_:\/]spawn(?![a-zA-Z0-9]).*`);
             event.groupItems(`${mod}:rei_groups/spawn_eggs`, `${REI_GROUPS[mod]} Spawn Eggs`, regex);

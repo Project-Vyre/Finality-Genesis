@@ -2,9 +2,8 @@
 // requires: kubejs_create
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Create Cafe.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 console.log('Uhhmmm... Create Cafe, no one wants to drink non-water fluids.')

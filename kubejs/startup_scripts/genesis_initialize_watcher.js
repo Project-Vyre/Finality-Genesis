@@ -2,10 +2,9 @@
 // requires: netjs
 
 /**
- * Authors
- * 
- * @KostromDan Original script author
- * @CelestialAbyss
+ * @file Reads from and writes to the update_notifier.json file.
+ * @author KostromDan <https://github.com/KostromDan> Original script author
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 StartupEvents.init(event => {

@@ -1,9 +1,8 @@
 // priority: 3
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Tooltip removal.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 ItemEvents.tooltip(event => {

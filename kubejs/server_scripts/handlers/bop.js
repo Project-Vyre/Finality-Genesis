@@ -2,9 +2,8 @@
 // requires: kubejs_create
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Biomes O' Plenty.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 ServerEvents.tags('item', event => {

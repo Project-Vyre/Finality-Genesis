@@ -2,10 +2,9 @@
 // requires: kubejs_create
 
 /**
- * Authors
- * 
- * @CelestialAbyss
- * @TheonlyTazz For helping with for loops. Thank you.
+ * @file Server handler for Apotheosis.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ * @author TheonlyTazz <https://github.com/TheonlyTazz> For helping with for loops. Thank you.
  */
 
 /*

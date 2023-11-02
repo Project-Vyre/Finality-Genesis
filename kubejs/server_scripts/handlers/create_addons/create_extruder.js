@@ -2,9 +2,8 @@
 // requires: kubejs_create
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Create Mehcanical Extruder.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 let ORESTONES = {

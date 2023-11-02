@@ -3,9 +3,8 @@
 // requires: createaddition
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Red Power.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 ServerEvents.recipes(event => {

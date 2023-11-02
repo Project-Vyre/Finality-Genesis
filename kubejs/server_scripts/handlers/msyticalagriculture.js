@@ -3,17 +3,18 @@
 // requires: kubejs_create
 
 /**
- * Authors
- * 
- * @CelestialAbyss
- * 
- * To-Do List
- * 
- * Rework essences, specifically Diamond, Brass, Steel and wherever applicable.
- *  - This is mostly due to the amount of difference and to encourage more automation with Create.
- * 
- * Rework recipes that require Supremium wherever applicable.
+ * @file Server handler for Mystical Agriculture.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
+
+/*
+To-Do List
+
+Rework essences, specifically Diamond, Brass, Steel and wherever applicable.
+ - This is mostly due to the amount of difference and to encourage more automation with Create.
+
+Rework recipes that require Supremium wherever applicable.
+*/
 
 /**
  * 

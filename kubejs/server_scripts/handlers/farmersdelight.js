@@ -3,16 +3,15 @@
 // requires: morejs
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Farmer's Delight and add-ons, if detected.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
-/**
- * To-Do List
- * 
- * Create integration and reworking for Farmer's Delight addons
- */
+/*
+To-Do List
+
+Create integration and reworking for Farmer's Delight addons
+*/
 
 ServerEvents.recipes(event => {
     event.shaped('farmersdelight:skillet', [
@@ -55,7 +54,7 @@ ServerEvents.recipes(event => {
         event.recipes.createMixing('kubejs:steamed_matcha_leaves', [
             'delightful:green_tea_leaf',
             Fluid.of('minecraft:water', 250)
-        ]).id('finality:mixing/steaming_matcha_leaves')
+        ]).heated().id('finality:mixing/steaming_matcha_leaves')
         event.recipes.createMixing('kubejs:dried_matcha_leaves',
             'kubejs:steamed_matcha_leaves'
         ).heated().id('finality:mixing/matcha_leaf_drying')

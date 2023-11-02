@@ -2,9 +2,8 @@
 // requires: kubejs_create
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Handcrafted.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 console.log('I do not know why Handcrafted is making Create look bad here by making the boards a random chance instead of being guaranteed like a stonecutter.')

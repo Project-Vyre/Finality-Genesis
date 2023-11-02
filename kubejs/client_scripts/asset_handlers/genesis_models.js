@@ -1,18 +1,17 @@
 // ignored: false
 // priority: 0
 
+/**
+ * @file Responsible for loading models for blocks and items.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ * @author squoshi <https://github.com/squoshi> Artist of the crystal lance texture and lance model basis
+ */
+
 /*
 [20Oct2023 09:47:21.441] [Render thread/WARN] [net.minecraftforge.client.model.SeparateTransformsModel/]: 
 Model "kubejs:final_scythe#inventory" is using the deprecated loader "forge:separate-perspective" instead of "forge:separate_transforms".
 This loader will be removed in 1.20.
 */
-
-/**
- * Authors
- * 
- * @CelestialAbyss
- * @squoshi - Artist of the crystal lance texture and lance model basis
- */
 
 let handheldModelItems = [
     'final_sword',

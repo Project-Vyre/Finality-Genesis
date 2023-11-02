@@ -3,10 +3,10 @@
 // requires: kubejs_create
 
 /**
- * Authors
- * 
- * @CelestialAbyss
- * @Reveter for providing the basis of the repairable items script
+ * @file Server handler for Enigmatic Legacy.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ * @author Reveter <https://github.com/Reveter> for providing the basis of the repairable items script
+ * @author tizu69 <https://github.com/tizu69> fixed the abomination that was the heart of creation recipe
  */
 
 ServerEvents.recipes(event => {
@@ -26,52 +26,7 @@ ServerEvents.recipes(event => {
         type: 'extendedcrafting:combination',
         powerCost: 5000000,
         input: { item: 'enigmaticlegacy:cosmic_heart' },
-        ingredients: [
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson(),
-            Ingredient.of('extendedcrafting:the_ultimate_block').toJson()
-        ],
+        ingredients: Array(44).fill(Ingredient.of('extendedcrafting:the_ultimate_block').toJson()),
         result: { item: 'enigmaticlegacy:enigmatic_item' }
     }).id('finality:heart_of_creation')
     event.shaped(Item.of('enigmaticlegacy:earth_heart'), [

@@ -1,6 +1,11 @@
 // priority: 1
 // requires: kubejs_create
 
+/**
+ * @file Creates transitional items for use in Sequenced Assembly recipes, but requires KubeJS Create to be present.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ */
+
 console.log('KubeJS Create loaded! Registering sequenced assembly items...')
 
 // let DYE_ID = ['white','orange','magenta','light_blue','lime','pink','purple','light_gray','gray','cyan','brown','green','blue','red','black','yellow']

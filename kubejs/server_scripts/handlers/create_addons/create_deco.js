@@ -2,9 +2,8 @@
 // requires: kubejs_create
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Create Deco.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss>
  */
 
 /*

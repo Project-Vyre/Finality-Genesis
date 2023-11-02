@@ -1,9 +1,8 @@
 // requires: create_central_kitchen
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Create Central Kitchen.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 console.log("Removing unnecessary recipes from Create Central Kitchen.")

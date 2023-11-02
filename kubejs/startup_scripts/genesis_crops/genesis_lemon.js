@@ -2,10 +2,9 @@
 // work in progress
 
 /**
- * Authors
- * 
+ * @file Responsible for making the lemon crop.
  * @CelestialAbyss
- * Sven H. for providing the initial basis
+ * @author Sven H. <svenstihl2> for providing the initial basis https://discord.com/channels/303440391124942858/1101483030280933396
  */
 
 StartupEvents.registry('item', event => {

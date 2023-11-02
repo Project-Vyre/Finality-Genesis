@@ -6,9 +6,8 @@
 // and kjs 119 and above
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Ad Astra.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 /**

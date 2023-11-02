@@ -1,11 +1,9 @@
 // requires: tempad
 // requires: create
-// requires: extendedcrafting
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Tempad.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 ServerEvents.recipes(event => {

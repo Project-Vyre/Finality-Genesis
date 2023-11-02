@@ -1,12 +1,11 @@
-// requires: 100
 // requires: architects_palette
+// requires: kubejs_create
 // requires: v_slab_compat
-// requires: create
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Architect's Palette.
+ * @deprecated Mod may no longer maintained by the main author, do not use this in 1.20.1+ unless development continues.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 console.log("Fixing Jsburg's mistakes... Architect's Palette 1.3.3 for 1.19.2.")

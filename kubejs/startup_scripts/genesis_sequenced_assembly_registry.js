@@ -2,8 +2,21 @@
 // requires: create
 
 /**
- * Work in progress!
+ * @file Creates transitional items for use in Sequenced Assembly recipes.
+ * @author squoshi <https://github.com/squoshi> Fixed this.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
+
+/*
+Work in progress!
+*/
+
+const $SequencedAssemblyItem = Java.loadClass('com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem')
+const $Properties = Java.loadClass('net.minecraft.world.item.Item$Properties')
+
+StartupEvents.registry('item', event => {
+    event.createCustom('kubejs:sequenced_assembly_example_item', () => new $SequencedAssemblyItem(new $Properties()))
+})
 
 /*
 package com.simibubi.create.content.processing.sequenced;
@@ -52,17 +65,3 @@ public class SequencedAssemblyItem extends Item {
 
 }
 */
-
-/**
- * Authors
- * 
- * @squoshi - Fixed this.
- * @CelestialAbyss
- */
-
-const $SequencedAssemblyItem = Java.loadClass('com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem')
-const $Properties = Java.loadClass('net.minecraft.world.item.Item$Properties')
-
-StartupEvents.registry('item', event => {
-    event.createCustom('kubejs:sequenced_assembly_example_item', () => new $SequencedAssemblyItem(new $Properties()))
-})

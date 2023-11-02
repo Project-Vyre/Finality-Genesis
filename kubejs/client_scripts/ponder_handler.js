@@ -2,9 +2,8 @@
 // ignored: true
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file PonderJS stuff.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 // Attempting to remove Create Crafts & Addition straw Ponder scene.

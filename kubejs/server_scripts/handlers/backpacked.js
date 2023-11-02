@@ -1,16 +1,16 @@
 // requires: backpacked
+// requires: create
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Backpacked.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
-/**
- * To-Do List
- * 
- * - Planning on changing the recipes later at some point.
- */
+/*
+To-Do List
+
+- Planning on changing the recipes later at some point.
+*/
 
 ServerEvents.recipes(event => {
     event.shaped('backpacked:backpack', [

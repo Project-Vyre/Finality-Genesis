@@ -4,8 +4,8 @@
 // requires: justenoughprofessions
 
 /**
- * Authors
- * @CelestialAbyss
+ * @file Responsible for handling JEI hiding, adding, etc.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 let MYSHIDE = [

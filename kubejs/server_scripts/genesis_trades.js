@@ -1,9 +1,8 @@
 // requires: morejs
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for villager and wanderer trades.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 MoreJSEvents.villagerTrades(event => {

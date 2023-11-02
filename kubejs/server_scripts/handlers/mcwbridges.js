@@ -1,6 +1,11 @@
 // requires: mcwbridges
 
-console.log("Adjusting Macaw's Bridges recipes.")
+/**
+ * @file Server handler for Macaw's Bridges.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ */
+
+console.log("Macaw's Bridges detected! Adjusting recipes.")
 
 ServerEvents.recipes(event => {
     WOOD_TYPES.forEach(type => {

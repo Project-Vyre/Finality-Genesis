@@ -5,14 +5,14 @@
 // requires: salt
 
 /**
- * Authors
+ * @file Handler for core recipes.
  * 
- * @CelestialAbyss 
- * @squoshi Helped a lot early on in development. Thank you. Also helped translate my ideas into scripts!
- * @pietro-lopes AKA Uncandango in the KubeJS Discord. Fixed issues related to damage cancel script
- * @MundM2007 for helping with troubleshooting with fixing || statements
- * @puu7693 for writing the script that grants potion effects when wearing a specific set of armor
- * @MaxNeedsSnacks Fixing KubeJS Create bugs
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ * @author squoshi <https://github.com/squoshi> Helped a lot early on in development. Thank you. Also helped translate my ideas into scripts!
+ * @author pietro-lopes <https://github.com/pietro-lopes> AKA Uncandango in the KubeJS Discord. Fixed issues related to damage cancel script
+ * @author MundM2007 <https://github.com/MundM2007> for helping with troubleshooting with fixing || statements
+ * @author puu7693 <https://github.com/puu7693> for writing the script that grants potion effects when wearing a specific set of armor
+ * @author MaxNeedsSnacks <https://github.com/MaxNeedsSnacks> Fixing KubeJS Create bugs
  */
 
 console.info('Implementing Finality recipes and compats...')
@@ -432,17 +432,21 @@ ServerEvents.recipes(event => {
     event.shapeless('create:mechanical_piston', [
         'supplementaries:soap', 'create:sticky_mechanical_piston'
     ]).id('finality:mechanical_piston_soap_washing')
-    // item application
+    /**
+     * Item Application
+     */
     event.recipes.createItemApplication('minecraft:tinted_glass', [
         '#forge:glass/colorless', 'minecraft:amethyst_shard'
     ]).id('minecraft:tinted_glass')
-    // compacting
+    /**
+     * Compacting
+     */
     event.recipes.createCompacting([
         'minecraft:sponge',
         Fluid.of('minecraft:water', 1000)
     ], [
         'minecraft:wet_sponge'
-    ]).id('finality:sponge_squeezing')
+    ]).id('finality:sponge_squeezing');
     event.recipes.createCompacting([
         'minecraft:diamond',
         Item.of('create:experience_nugget').withChance(0.05)
@@ -491,12 +495,44 @@ ServerEvents.recipes(event => {
         'minecraft:amethyst_shard',
         'minecraft:cobbled_deepslate',
         'minecraft:bone_meal'
-    ]).heated().id('finality:renew_calcite')
-    event.recipes.createCompacting('minecraft:ice', '9x minecraft:snow_block').id('finality:snow_compacting')
-    // milling
-    // crushing
+    ]).heated().id('finality:renew_calcite');
+    event.recipes.createCompacting('minecraft:ice', '9x minecraft:snow_block').id('finality:snow_compacting');
+    /**
+     * Milling
+     */
+    /**
+     * Crushing
+     */
+    event.recipes.createCrushing([
+        Item.of('minecraft:pointed_dripstone', 4),
+        Item.of('minecraft:clay_ball').withChance(0.50),
+        Item.of('create:copper_nugget').withChance(0.25),
+        Item.of('create:experience_nugget').withChance(0.75)
+    ], 'minecraft:dripstone_block').processingTime(250).id('finality:dripstone_crushing');
+    event.recipes.createCrushing([
+        Item.of('create:copper_nugget').withChance(0.05),
+        Item.of('minecraft:gunpowder').withChance(0.10)
+    ], 'minecraft:basalt').processingTime(250).id('finality:basalt_crushing');
+    event.remove({ id: 'create:crushing/netherrack' })
+    event.recipes.createCrushing([
+        'create:cinder_flour',
+        Item.of('create:cinder_flour').withChance(0.50),
+        Item.of('minecraft:netherite_scrap').withChance(0.0002)
+    ], 'minecraft:netherrack').processingTime(250).id('finality:netherrack_crushing');
+    event.recipes.createCrushing([
+        Item.of('minecraft:gold_nugget', 5).withChance(0.25),
+        Item.of('create:experience_nugget', 2).withChance(0.12)
+    ], 'minecraft:gilded_blackstone').processingTime(250).id('finality:gilded_blackstone_crushing');
+    event.recipes.createCrushing([
+        Item.of('kubejs:deepslate_shard', 9).withChance(0.75),
+        Item.of('minecraft:gravel').withChance(0.12)
+    ], 'minecraft:deepslate').processingTime(250).id('finality:deepslate_shard_from_deepslate');
+    event.recipes.createCrushing([
+        Item.of('kubejs:deepslate_shard', 9).withChance(0.25),
+        Item.of('minecraft:gravel').withChance(0.24)
+    ], 'minecraft:cobbled_deepslate').processingTime(250).id('finality:deepslate_shard_from_cobbled_deepslate');
     if (Platform.isLoaded('createaddition')) {
-        console.log()
+        console.log('Create Crafts & Additions detected! Restoring Tuff crushing recipes.')
         event.recipes.createCrushing([
             Item.of('minecraft:flint').withChance(0.25),
             Item.of('minecraft:gold_nugget').withChance(0.10),
@@ -512,29 +548,9 @@ ServerEvents.recipes(event => {
             Item.of('minecraft:iron_nugget').withChance(0.10)
         ], '#create:stone_types/tuff').processingTime(350).id('create:crushing/tuff_recycling')
     }
-    event.recipes.createCrushing([
-        Item.of('minecraft:pointed_dripstone', 4),
-        Item.of('minecraft:clay_ball').withChance(0.50),
-        Item.of('create:copper_nugget').withChance(0.25),
-        Item.of('create:experience_nugget').withChance(0.75)
-    ], 'minecraft:dripstone_block').processingTime(250).id('finality:dripstone_crushing')
-    event.recipes.createCrushing([
-        Item.of('create:copper_nugget').withChance(0.05),
-        Item.of('minecraft:gunpowder').withChance(0.10)
-    ], 'minecraft:basalt').processingTime(250).id('finality:basalt_crushing')
-    event.remove({ id: 'create:crushing/netherrack' })
-    event.recipes.createCrushing([
-        'create:cinder_flour',
-        Item.of('create:cinder_flour').withChance(0.50),
-        Item.of('minecraft:netherite_scrap').withChance(0.0002)
-    ], 'minecraft:netherrack').processingTime(250).id('finality:netherrack_crushing')
-    event.recipes.createCrushing([
-        Item.of('minecraft:gold_nugget', 5).withChance(0.25),
-        Item.of('create:experience_nugget', 2).withChance(0.12)
-    ], 'minecraft:gilded_blackstone').processingTime(250).id('finality:gilded_blackstone_crushing')
-    event.recipes.createCrushing(Item.of('9x kubejs:deepslate_shard').withChance(0.75), 'minecraft:deepslate').processingTime(250).id('finality:deepslate_shard_from_deepslate')
-    event.recipes.createCrushing(Item.of('kubejs:deepslate_shard', 9).withChance(0.25), 'minecraft:cobbled_deepslate').processingTime(250).id('finality:deepslate_shard_from_cobbled_deepslate')
-    // filling
+    /**
+     * Filling
+     */
     event.recipes.createFilling('minecraft:netherrack', [
         'minecraft:cobblestone',
         Fluid.of('create:potion', 250, '{Bottle: "REGULAR", Potion: "minecraft:strong_healing"}'),
@@ -547,7 +563,9 @@ ServerEvents.recipes(event => {
         'minecraft:blackstone',
         Fluid.of('kubejs:molten_gold', 50)
     ]).id('finality:gilded_blackstone')
-    // haunting
+    /**
+     * Haunting
+     */
     event.recipes.createHaunting(['minecraft:deepslate'], 'minecraft:andesite').id('finality:andesite_haunting')
     event.recipes.createHaunting(['minecraft:crying_obsidian'], 'minecraft:obsidian').id('finality:obsidian_haunting')
     event.recipes.createHaunting(['minecraft:name_tag'], 'minecraft:writable_book').id('finality:soul_nametag')
@@ -560,12 +578,22 @@ ServerEvents.recipes(event => {
         'minecraft:wither_skeleton_skull',
         Item.of('minecraft:coal').withChance(0.25)
     ], 'minecraft:skeleton_skull').id('finality:haunting/wither_skeleton_skull')
-    // splashing
+    /**
+     * Splashing
+     */
     event.recipes.createSplashing(['minecraft:piston'], 'minecraft:sticky_piston').id('finality:sticky_piston_splashing')
     event.recipes.createSplashing(['create:mechanical_piston'], 'create:sticky_mechanical_piston').id('finality:sticky_mechanical_piston_splashing')
-    // blasting
+    /**
+     * Blasting
+     * 
+     * Notice: Automatically added by Create!
+     */
     event.blasting('create:zinc_block', 'create:raw_zinc_block').id('finality:zinc_block_blasting_compat')
-    // mixing 
+    /**
+     * Mixing
+     * 
+     * Notice: Shapeless recipes are automatically added by Create, unless if .damageIngredient or .keepIngredient() are used.
+     */
     event.recipes.createMixing('minecraft:dirt', [
         'minecraft:gravel',
         '3x minecraft:bone_meal'
@@ -589,6 +617,9 @@ ServerEvents.recipes(event => {
     event.recipes.createMixing('salt:salt', [
         Fluid.of('minecraft:water', 1000)
     ]).heated().id('finality:create_salt_compat')
+    /**
+     * >-----<
+     */
     event.shaped('minecraft:nautilus_shell', [
         'PFP',
         'FPF',
@@ -746,7 +777,9 @@ ServerEvents.recipes(event => {
         N: 'minecraft:nether_star',
         O: 'minecraft:obsidian'
     }).id('minecraft:beacon')
-    // removed create items
+    /**
+     * Removed Create Materials
+     */
     event.recipes.createMixing('create:chromatic_compound', [
         '3x minecraft:glowstone_dust',
         '3x create:powdered_obsidian',

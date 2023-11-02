@@ -3,10 +3,9 @@
 // requires: upgradednetherite_creative
 
 /**
- * Authors
- * 
- * @CelestialAbyss
- * @TheonlyTazz For helping with understanding for loops. Thank you.
+ * @file Responsible for modifying durability of Upgraded Netherite related items.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ * @author TheonlyTazz <https://github.com/TheonlyTazz> For helping with understanding for loops. Thank you.
  */
 
 let T2_TOOLS = 4096

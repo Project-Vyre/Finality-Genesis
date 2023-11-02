@@ -1,5 +1,10 @@
 // requires: craftingautomat
 
+/**
+ * @file Server handler for Crafting Automat.
+ * @deprecated The vanilla Crafter has been implemented in 1.20.2+.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ */
 ServerEvents.recipes(event => {
     event.remove({ id: 'craftingautomat:autocrafter' });
     event.shaped('craftingautomat:autocrafter', [

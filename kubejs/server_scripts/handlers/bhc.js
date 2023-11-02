@@ -3,9 +3,8 @@
 // requires: supplementaries
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Baubley Heart Canisters.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 ServerEvents.recipes(event => {

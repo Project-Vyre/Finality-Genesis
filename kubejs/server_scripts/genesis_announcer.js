@@ -25,6 +25,9 @@ let CreateStandard = 0xC9974C
  */
 let CreateHighlighted = 0xF1DD79
 
+let startRainbowLine = '<rainb>-----------------------------------------------------</rainb>\n'
+let endRainbowLine = '\n<rainb>-----------------------------------------------------</rainb>'
+
 let DICE = 0
 
 let debug_messages = false
@@ -87,7 +90,6 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         case 1:
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
@@ -101,7 +103,6 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         case 2:
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
@@ -118,7 +119,6 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         case 3:
             /**
              * Here is some information that is not well nown by most... mentioned by Kryppers
@@ -158,7 +158,6 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         case 4:
             // are the only exception as they are unable to transfer specific stack sizes and
             event.server.tell([
@@ -200,7 +199,6 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         case 5:
             /**
              * A helpful Create tip...
@@ -262,7 +260,6 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         case 6:
             /**
              * Finality Tip
@@ -308,7 +305,6 @@ function allMessages(event) {
                 ])
             }
             break;
-
         case 7:
             /**
              * Create Tip
@@ -342,7 +338,6 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         case 8:
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
@@ -363,7 +358,6 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         case 9:
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
@@ -374,7 +368,6 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         case 10:
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
@@ -391,7 +384,6 @@ function allMessages(event) {
             ])
             Utils.server.runCommandSilent('give @a minecraft:raw_iron 9')
             break;
-
         case 11:
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
@@ -400,7 +392,6 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         case 12:
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
@@ -409,7 +400,6 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         case 13:
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
@@ -419,7 +409,6 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         case 14:
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
@@ -432,7 +421,6 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         case 15:
             /**
              * Ever accidentally placed a Shaft inside a Mechanical Belt and want to remove it?
@@ -468,7 +456,6 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         case 16:
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
@@ -486,7 +473,6 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         case 17:
             event.server.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
@@ -517,11 +503,10 @@ function allMessages(event) {
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
             ])
             break;
-
         default:
             event.server.tell([
                 Component.of('<shake>-----------------------------------------------------</shake>\n').darkRed(),
-                Component.of('Note to self: If you see this, something in your switch statement broke!'),
+                Component.of('Note to self: If you see this, something in your switch statement broke!').red(),
                 Component.of('\n<shake>-----------------------------------------------------</shake>').darkRed()
             ])
             break;

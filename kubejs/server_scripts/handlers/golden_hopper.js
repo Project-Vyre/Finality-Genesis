@@ -2,13 +2,11 @@
 // requires: create
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for the Golden Hopper.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 ServerEvents.recipes(event => {
-    event.remove({ id: 'goldenhopper:golden_hopper' })
     event.shaped('goldenhopper:golden_hopper', [
         'ACA',
         'AHA',

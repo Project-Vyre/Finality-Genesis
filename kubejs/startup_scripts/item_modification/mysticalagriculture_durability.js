@@ -1,9 +1,8 @@
 // requires: mysticalagriculture
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Durability modification for Mystical Agriculture items.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 let INFERIUM_TOOLS = 2048

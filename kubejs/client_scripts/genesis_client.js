@@ -3,11 +3,10 @@
 // requires: lodestone
 
 /**
- * Authors
- * 
- * @squoshi Original screenshake script author
- * @ChiefArug Client mod blacklist
- * @CelestialAbyss
+ * @file Client handler for rendering and other core things.
+ * @author squoshi <https://github.com/squoshi> Original screenshake script author
+ * @author ChiefArug <https://github.com/ChiefArug> Client mod blacklist script
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 console.info('Genesis client scripts loaded. You will see this line every time client resources reload.')

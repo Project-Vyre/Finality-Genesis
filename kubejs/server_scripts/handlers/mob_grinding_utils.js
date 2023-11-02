@@ -3,18 +3,17 @@
 // requires: extendedcrafting
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Mob Grinding Utils.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
-/**
- * To Do List
- * 
- * Rework all mob grinding utils upgrades to fit in thematically with Create and other add-ons
- * Make the incomplete spikes block texture and model, incomplete jumbo tank texture and model if possible
- * Rework all mob grinding utils textures to 16px
- * Should the upgrades use brass? Maybe
+/*
+To Do List
+
+Rework all mob grinding utils upgrades to fit in thematically with Create and other add-ons
+Make the incomplete spikes block texture and model, incomplete jumbo tank texture and model if possible
+Rework all mob grinding utils textures to 16px
+Should the upgrades use brass? Maybe
  */
 
 ServerEvents.recipes(event => {

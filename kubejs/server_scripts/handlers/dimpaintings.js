@@ -1,12 +1,10 @@
 // requires: dimpaintings
 // requires: endrem
-// requires: create
 // requires: kubejs_create
 
 /**
- * Authors
- * 
- * @CelestialAbyss
+ * @file Server handler for Dimensional Paintings.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 ServerEvents.recipes(event => {

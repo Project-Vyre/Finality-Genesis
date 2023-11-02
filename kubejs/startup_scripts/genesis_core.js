@@ -3,13 +3,12 @@
 // requires: cataclysm
 
 /**
- * Authors
- * 
- * @CelestialAbyss
- * @squoshi Helped me a lot very early on. Thank you. Also artist of the gold block texture.
- * @ChiefArug Helped me a lot very early on. Thank you.
- * @Hunter19823 Helped me a lot very early on. Thank you.
- * @ladylexxie Helped a lot very early on. Thank you.
+ * @file The core registry, responsible for items, blocks, fluids, etc.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ * @author squoshi <https://github.com/squoshi> Helped me a lot very early on. Thank you. Also artist of the gold block texture.
+ * @author ChiefArug <https://github.com/ChiefArug> Helped me a lot very early on. Thank you.
+ * @author Hunter19823 <https://github.com/Hunter19823> Helped me a lot very early on. Thank you.
+ * @author ladylexxie <https://github.com/ladylexxie> Helped a lot very early on. Thank you.
  */
 
 Platform.mods.kubejs.name = 'Finality'
