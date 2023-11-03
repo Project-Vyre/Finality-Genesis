@@ -46,7 +46,7 @@ let NETHER_GEMS = [
 
 let END_GEMS = [
     'endersurge',
-    'mageslayer',
+    'mageslayer'
 ]
 
 ServerEvents.recipes(event => {
