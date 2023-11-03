@@ -466,7 +466,7 @@ ServerEvents.highPriorityData(event => {
             }
         ]
     })
-    event.addJson('malum:spirit/data/entity/grimoireofgaia/shaman.json', {
+    event.addJson('malum:spirit_data/entity/grimoireofgaia/shaman.json', {
         "registry_name": "grimoireofgaia:shaman",
         "primary_type": "wicked",
         "spirits": [
