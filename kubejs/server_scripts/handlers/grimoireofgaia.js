@@ -52,10 +52,40 @@ ServerEvents.recipes(event => {
     event.shapeless('minecraft:totem_of_undying', [
         '4x grimoireofgaia:totem_of_undying_fragment',
     ]).id('finality:grimoireofgaia/undying_totem')
+    // headgear accessories
     event.shapeless('grimoireofgaia:headgear_arrow', [
         'minecraft:arrow'
     ]).id('finality:grimoireofgaia/headgear_arrow')
+    event.shapeless('minecraft:arrow', [
+        'grimoireofgaia:headgear_arrow'
+    ]).id('finality:grimoireofgaia/headgear_arrow_revert')
+    event.shapeless('grimoireofgaia:headgear_book', [
+        'minecraft:book'
+    ]).id('finality:grimoireofgaia/headgear_book')
+    event.shapeless('minecraft:book', [
+        'grimoireofgaia:headgear_book'
+    ]).id('finality:grimoireofgaia/headgear_book_revert')
+    event.shaped('grimoireofgaia:headgear_mob', [
+        'BB',
+        'BB'
+    ], {
+        B: 'minecraft:iron_bars'
+    }).id('finality:grimoireofgaia/headgear_mob')
+    event.shapeless('4x minecraft:iron_bars', [
+        'grimoireofgaia:headgear_mob'
+    ]).id('finality:grimoireofgaia/headgear_mob_revert')
     event.shapeless('grimoireofgaia:doll_maid', [
         'grimoireofgaia:headgear_doll'
     ]).id('finality:headgear_doll_revert')
 })
+
+/**
+ * To-Do
+ * 
+ * Figure out how to implement conditionals properly for GoG and Goblin Traders
+ */
+//if (Platform.isLoaded('goblintraders')) {
+//    ServerEvents.lowPriorityData(event => {
+//        event.add('grimoireofgaia:goblintraders/goblin_traders_armor',)
+//    })
+//}
