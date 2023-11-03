@@ -18,18 +18,18 @@ let CREATEVALUED = ['brass', 'zinc']
  * 
  * @author tizu69 <https://github.com/tizu69>
  * @author CelestialAbyss <https://github.com/CelestialAbyss>
- * @param {Event} event - the event object
- * @param {string} output - the output, as a stringed item id
- * @param {number} outputQuantity - the quantity of the output
- * @param {string[]} arrangement - the arrangement of the ingredients on the table
- * @param {object} ingredientKeys - the keys representing the ingredients on the table, like a crafting table recipe
- * @param {string} recipeId - the ID of the recipe
- * @param {boolean} lock - whether the recipe should require a specified tier
- * @param {number?} tierNumber - tier number 1-4
+ * @param {Internal.RecipesEventJS} event - The event object
+ * @param {string} output - The output, as an item ID string
+ * @param {number} outputQuantity - The quantity of the output
+ * @param {string[]} arrangement - The arrangement of the ingredients on the table
+ * @param {object} ingredientKeys - The keys representing the ingredients on the table, like a crafting table recipe
+ * @param {string} recipeId - The ID of the recipe
+ * @param {boolean} lock - Whether the recipe should require a specified tier
+ * @param {number?} tierNumber - Tier number 1-4
  */
 function extendedTable(event, output, outputQuantity, arrangement, ingredientKeys, recipeId, lock, tierNumber) {
     event.custom({
-        type: "extendedcrafting:shaped_table",
+        type: 'extendedcrafting:shaped_table',
         tier: lock ? tierNumber : 0,
         pattern: arrangement,
         key: ingredientKeys,
@@ -38,14 +38,6 @@ function extendedTable(event, output, outputQuantity, arrangement, ingredientKey
 }
 
 ServerEvents.recipes(event => {
-    extendedTable(event, 'extendedcrafting:crystaltine_ingot', 4, [
-        'RRRRRRR',
-        'RRRNRRR',
-        'RRRRRRR'
-    ], {
-        R: 'create:refined_radiance',
-        N: 'minecraft:nether_star'
-    }, 'kubejs:t3_table_func_test')
     event.shapeless('extendedcrafting:black_iron_ingot', [
         'minecraft:iron_ingot',
         'minecraft:black_dye',
@@ -60,8 +52,29 @@ ServerEvents.recipes(event => {
         S: 'extendedcrafting:ender_star',
         O: 'minecraft:obsidian'
     }).id('finality:beacon')
-    // Item.of('#forge:glass/colorless').toJson()
-    event.recipes.createMechanicalCrafting(Item.of('extendedcrafting:crystaltine_ingot', 4), [
+    extendedTable(event, 'extendedcrafting:crystaltine_ingot', 4, [
+        'DLLLLLD',
+        'DAFNFAD',
+        'DAFNFAD',
+        'DLLLLLD'
+    ], {
+        L: 'minecraft:lapis_lazuli',
+        D: 'minecraft:diamond',
+        A: 'minecraft:iron_ingot',
+        N: 'minecraft:nether_star',
+        F: 'minecraft:gold_ingot'
+    }, 'extendedcrafting:crystaltine_ingot')
+    extendedTable(event, 'extendedcrafting:crystaltine_ingot', 4, [
+        'RRRRRRR',
+        'RRNRNRR',
+        'RNRNRNR',
+        'RRNRNRR',
+        'RRRRRRR'
+    ], {
+        R: 'create:refined_radiance',
+        N: 'minecraft:nether_star'
+    }, 'finality:extendedcrafting/crystaltine_ingot_alt')
+    event.recipes.createMechanicalCrafting('4x extendedcrafting:crystaltine_ingot', [
         'DLLLLLD',
         'DGISIGD',
         'DLLLLLD'
@@ -88,7 +101,10 @@ ServerEvents.recipes(event => {
         O: 'create:sturdy_sheet',
         I: 'kubejs:high_entropy_alloy'
     }).id('finality:create_worldshaper')
-    event.recipes.createMixing(['extendedcrafting:ender_star'], ['minecraft:nether_star', '4x minecraft:ender_eye']).heated().id('finality:ender_star_mixing')
+    event.recipes.createMixing('extendedcrafting:ender_star', [
+        'minecraft:nether_star',
+        '4x minecraft:ender_eye'
+    ]).heated().id('finality:ender_star_mixing')
     event.recipes.createDeploying([
         'extendedcrafting:nether_star_block',
         '18x minecraft:nether_star'
@@ -128,12 +144,14 @@ ServerEvents.recipes(event => {
     }).id('finality:dormant_singularity_core')
     // singularity step 2
     event.recipes.createCompacting([
-        Fluid.of('kubejs:condensed_universal_entropy', 250)
+        Fluid.of('kubejs:condensed_universal_entropy', 250),
+        Item.of('create:experience_nugget').withChance(0.25)
     ], [
         '5x minecraft:crying_obsidian'
     ]).id('finality:condensing_universe_essence')
     event.recipes.createCompacting([
-        Fluid.of('kubejs:condensed_universal_entropy', 500)
+        Fluid.of('kubejs:condensed_universal_entropy', 500),
+        Item.of('create:experience_nugget').withChance(0.50)
     ], [
         'minecraft:crying_obsidian'
     ]).superheated().id('finality:condensing_universe_essence_superheated')
