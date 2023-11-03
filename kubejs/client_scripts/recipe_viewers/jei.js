@@ -198,6 +198,10 @@ JEIEvents.hideItems(event => {
             'mysticalagradditions:nitro_crystal_crux'
         ])
     }
+
+    if (Platform.isLoaded('malum') && Platform.isLoaded('create')) {
+        event.hide('malum:copper_nugget')
+    }
 })
 
 JEIEvents.hideFluids(event => {

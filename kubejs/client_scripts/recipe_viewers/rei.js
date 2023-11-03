@@ -936,6 +936,9 @@ REIEvents.groupEntries(event => {
     if (Platform.isLoaded('irons_spellbooks')) {
         event.groupSameItem('irons_spellbooks:rei_groups/all_scrolls', "All Iron's Spell Scrolls", 'irons_spellbooks:scroll')
     }
+    if (Platform.isLoaded('malum') && Platform.isLoaded('create')) {
+        event.hide('malum:copper_nugget')
+    }
     if (Platform.isLoaded('quark')) {
         event.groupItemsByTag('quark:rei_groups/quark_runes', 'Quark Runes', 'quark:runes')
         event.groupSameItem('quark:rei_groups/seed_pouches', 'Quark Seed Pouches', 'quark:seed_pouch')
