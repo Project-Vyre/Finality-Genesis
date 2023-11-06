@@ -30,9 +30,9 @@ ServerEvents.recipes(event => {
         input: 'malum:copper_nugget',
         output: 'malum:copper_nugget'
     })
-    event.smelting('6x create:copper_nugget', 'malum:copper_node').cookingTime(200).xp(0.25)
+    event.recipes.minecraft.smelting('6x create:copper_nugget', 'malum:copper_node').cookingTime(200).xp(0.25)
         .id('malum:copper_from_node_smelting');
-    event.blasting('6x create:copper_nugget', 'malum:copper_node').cookingTime(100).xp(0.25)
+    event.recipes.minecraft.blasting('6x create:copper_nugget', 'malum:copper_node').cookingTime(100).xp(0.25)
         .id('malum:copper_from_node_blasting');
 })
 
@@ -377,7 +377,7 @@ ServerEvents.highPriorityData(event => {
         ],
         "spirit_item": { "item": "grimoireofgaia:spawn_ender_girl" }
     })
-    event.addJson('malum:spirit_data/entity/grmoireofgaia/slime_girl.json', {
+    event.addJson('malum:spirit_data/entity/grimoireofgaia/slime_girl.json', {
         "registry_name": "grmoireofgaia:slime_girl",
         "primary_type": "sacred",
         "spirits": [
