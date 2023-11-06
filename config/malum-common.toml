@@ -33,5 +33,5 @@
 
 		[common.item.rebound]
 			#If set to true, you may put rebound on any weapon in the game.
-			enableUltimateRebound = false
+			enableUltimateRebound = true
 

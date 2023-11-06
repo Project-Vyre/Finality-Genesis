@@ -35,7 +35,7 @@
 	#Set to false to stop quark from adding its own advancements
 	"Enable Quark Advancements" = true
 	#Set to false to disable the popup message telling you that you can config quark in the q menu
-	"Enable Onboarding" = true
+	"Enable Onboarding" = false
 	#Set to false to disable the behavior where quark will automatically hide any disabled items
 	"Hide Disabled Content" = true
 	#Set to false to disable Quark's item info when viewing recipe/uses for an item in JEI
@@ -63,7 +63,7 @@
 	"Jukebox Automation" = true
 	"Iron Rod" = true
 	Gravisand = true
-	"Feeding Trough" = true
+	"Feeding Trough" = false
 	"Ender Watcher" = true
 	"Dispensers Place Blocks" = true
 	Chute = true
@@ -569,7 +569,7 @@
 	"Compasses Work Everywhere" = true
 	"Campfires Boost Elytra" = true
 	"Better Elytra Rocket" = true
-	"Automatic Recipe Unlock" = true
+	"Automatic Recipe Unlock" = false
 	"Armed Armor Stands" = true
 	"Sponges Better" = true
 	"Map Washing" = true
