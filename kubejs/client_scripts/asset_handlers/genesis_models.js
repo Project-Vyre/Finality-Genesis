@@ -270,9 +270,16 @@ ClientEvents.highPriorityAssets(event => {
             "layer0": "kubejs:item/shimmer_bucket"
         }
     })
-    //event.addLang('item.kubejs.sequenced_assembly_example_item', 'Sequenced Assembly Test')
-    //event.addModel('item', 'kubejs:sequenced_assembly_example_item', model => {
-    //    model.parent('minecraft:item/generated')
-    //    model.texture('layer0', 'kubejs:item/sequenced_assembly_example_item')
-    //})
+    if (!Platform.isLoaded('kubejs_create')) {
+        let transitionalSeqItems = {
+            entropy_mechanism: '<rainb>Entropy Mechanism</rainb>'
+        }
+        for (const [key, name] of Object.entries(transitionalSeqItems)) {
+            event.addLang(`item.kubejs.${key}`, name)
+            event.addModel('item', `kubejs:${key}`, model => {
+                model.parent('item/generated')
+                model.textures({ 'layer0': `kubejs:item/${key}` })
+            })
+        }
+    }
 })

@@ -57,7 +57,7 @@ ServerEvents.recipes(event => {
             }
         ])
     });
-    event.recipes.createMixing(Fluid.of('ad_astra:oil', 250), [
+    event.recipes.create.mixing(Fluid.of('ad_astra:oil', 250), [
         '2x minecraft:coal',
         Fluid.of('createaddition:seed_oil', 250)
     ]).id('finality:seed_oil_conversion');
@@ -71,72 +71,72 @@ ServerEvents.recipes(event => {
     /**
      * Ad Astra Ore Processing
      */
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'ad_astra:cheese',
         Item.of('ad_astra:cheese').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:moon_cobblestone').withChance(0.12)
     ], 'ad_astra:moon_cheese_ore').processingTime(250).id('finality:ad_astra/crushing/moon_cheese_ore');
     // Desh Ore Processing
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'ad_astra:raw_desh',
         Item.of('ad_astra:raw_desh').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:moon_cobblestone').withChance(0.12)
     ], 'ad_astra:moon_desh_ore').processingTime(250).id('finality:ad_astra/crushing/moon_desh_ore');
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         '2x ad_astra:raw_desh',
         Item.of('ad_astra:raw_desh').withChance(0.25),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('minecraft:cobbled_deepslate').withChance(0.12)
     ], 'ad_astra:deepslate_desh_ore').processingTime(350).id('finality:ad_astra/crushing/deepslate_desh_ore');
     // Ice Shard Ore Processing
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'ad_astra:ice_shard',
         Item.of('ad_astra:ice_shard').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:moon_cobblestone').withChance(0.12)
     ], 'ad_astra:moon_ice_shard_ore').processingTime(250).id('finality:ad_astra/crushing/moon_ice_shard_ore');
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         '2x ad_astra:ice_shard',
         Item.of('ad_astra:ice_shard').withChance(0.25),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('minecraft:cobbled_deepslate').withChance(0.12)
     ], 'ad_astra:deepslate_ice_shard_ore').processingTime(350).id('finality:ad_astra/crushing/deepslate_ice_shard');
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'ad_astra:ice_shard',
         Item.of('ad_astra:ice_shard').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:mars_cobblestone').withChance(0.12)
     ], 'ad_astra:mars_ice_shard_ore').processingTime(250).id('finality:ad_astra/crushing/mars_ice_shard_ore');
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'ad_astra:ice_shard',
         Item.of('ad_astra:ice_shard').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:glacio_cobblestone').withChance(0.12)
     ], 'ad_astra:glacio_ice_shard_ore').processingTime(250).id('finality:ad_astra/crushing/glacio_ice_shard_ore');
     // Calorite Ore Processing
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'ad_astra:raw_calorite',
         Item.of('ad_astra:raw_calorite').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:venus_cobblestone').withChance(0.12)
     ], 'ad_astra:venus_calorite_ore').processingTime(250).id('finality:ad_astra/crushing/venus_calorite_ore');
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         '2x ad_astra:raw_calorite',
         Item.of('ad_astra:raw_calorite').withChance(0.25),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('minecraft:cobbled_deepslate').withChance(0.12)
     ], 'ad_astra:deepslate_calorite_ore').processingTime(350).id('finality:ad_astra/crushing/deepslate_calorite_ore');
     // Ostrum Ore Processing
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'ad_astra:raw_ostrum',
         Item.of('ad_astra:raw_ostrum').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:mars_cobblestone').withChance(0.12)
     ], 'ad_astra:mars_ostrum_ore').processingTime(250)
         .id('finality:ad_astra/crushing/mars_ostrum_ore');
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         '2x ad_astra:raw_ostrum',
         Item.of('ad_astra:raw_ostrum').withChance(0.25),
         Item.of('create:experience_nugget').withChance(0.75),
@@ -146,72 +146,72 @@ ServerEvents.recipes(event => {
      * Space Minecraft Ore Processing
      */
     // Space Coal Ore Processing
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'minecraft:coal',
         Item.of('minecraft:coal').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:venus_cobblestone').withChance(0.12)
     ], 'ad_astra:venus_coal_ore').processingTime(250).id('finality:ad_astra/crushing/venus_coal_ore');
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'minecraft:coal',
         Item.of('minecraft:coal').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:glacio_cobblestone').withChance(0.12)
     ], 'ad_astra:glacio_coal_ore').processingTime(250).id('finality:ad_astra/crushing/glacio_coal_ore');
     // Space Copper Ore Processing
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         '5x create:crushed_raw_copper',
         Item.of('create:crushed_raw_copper').withChance(0.25),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:glacio_cobblestone').withChance(0.12)
     ], 'ad_astra:glacio_copper_ore').processingTime(250).id('finality:ad_astra/crushing/glacio_copper_ore');
     // Space Iron Ore Processing
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'create:crushed_raw_iron',
         Item.of('create:crushed_raw_iron').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:moon_cobblestone').withChance(0.12)
     ], 'ad_astra:moon_iron_ore').processingTime(250).id('finality:ad_astra/crushing/moon_iron_ore');
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'create:crushed_raw_iron',
         Item.of('create:crushed_raw_iron').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:mars_cobblestone').withChance(0.12)
     ], 'ad_astra:mars_iron_ore').processingTime(250).id('finality:ad_astra/crushing/mars_iron_ore');
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'minecraft:raw_iron',
         Item.of('minecraft:raw_iron').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:mercury_cobblestone').withChance(0.12)
     ], 'ad_astra:mercury_iron_ore').processingTime(250).id('finality:ad_astra/crushing/mercury_iron_ore');
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'minecraft:raw_iron',
         Item.of('minecraft:raw_iron').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:glacio_cobblestone').withChance(0.12)
     ], 'ad_astra:glacio_iron_ore').processingTime(250).id('finality:ad_astra/crushing/glacio_iron_ore');
     // Space Gold Ore Processing
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'create:crushed_raw_gold',
         Item.of('create:crushed_raw_gold').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:venus_cobblestone').withChance(0.12)
     ], 'ad_astra:venus_gold_ore').processingTime(250).id('finality:ad_astra/crushing/venus_gold_ore');
     // Space Diamond Ore Processing
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'minecraft:diamond',
         Item.of('minecraft:diamond').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:mars_cobblestone').withChance(0.12)
     ], 'ad_astra:mars_diamond_ore').processingTime(250).id('finality:ad_astra/crushing/mars_diamond_ore');
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'minecraft:diamond',
         Item.of('minecraft:diamond').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('ad_astra:venus_cobblestone').withChance(0.12)
     ], 'ad_astra:venus_diamond_ore').processingTime(250).id('finality:ad_astra/crushing/venus_diamond_ore');
     // Space Lapis Lazuli Ore Processing
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         '10x minecraft:lapis_lazuli',
         Item.of('minecraft:lapis_lazuli').withChance(0.50),
         Item.of('create:experience_nugget').withChance(0.75),
@@ -233,7 +233,7 @@ ServerEvents.recipes(event => {
         R: 'minecraft:redstone_block',
         B: 'ad_astra:steel_block'
     }).id('ad_astra:recipes/nasa_workbench');
-    event.recipes.createMechanicalCrafting('ad_astra:nasa_workbench', [
+    event.recipes.create.mechanical_crafting('ad_astra:nasa_workbench', [
         'QLTLQ',
         'SCACS',
         'SAEAS',

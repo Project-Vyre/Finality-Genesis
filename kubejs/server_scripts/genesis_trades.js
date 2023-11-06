@@ -36,4 +36,24 @@ MoreJSEvents.wandererTrades(event => {
             'minecraft:emerald'
         ], 'minecraft:warden_spawn_egg')
     }
+    if (Platform.isLoaded('caupona')) {
+        event.addTrade(1, [
+            '8x minecraft:clay_ball',
+            'minecraft:emerald'
+        ], 'caupona:walnut_sapling')
+        event.addTrade(1, [
+            '8x minecraft:clay_ball',
+            'minecraft:emerald'
+        ], 'caupona:fig_sapling')
+        event.addTrade(1, [
+            '8x minecraft:clay_ball',
+            'minecraft:emerald'
+        ], 'caupona:wolfberry_sapling')
+    }
+    if (Platform.isLoaded('malum')) {
+        event.addTrade(1, [
+            'kubejs:deepslate_shard',
+            'minecraft:emerald'
+        ], 'malum:runewood_sapling')
+    }
 })

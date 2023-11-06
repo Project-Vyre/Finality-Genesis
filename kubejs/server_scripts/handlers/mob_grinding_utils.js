@@ -45,7 +45,7 @@ ServerEvents.recipes(event => {
         { id: 'mob_grinding_utils:recipe_entity_spawner' }
     ])
 
-    event.recipes.createSequencedAssembly([
+    event.recipes.create.sequenced_assembly([
         'mob_grinding_utils:spikes'
     ], 'minecraft:iron_block', [
         event.recipes.create.deploying('kubejs:incomplete_spikes', ['kubejs:incomplete_spikes', 'minecraft:slime_ball']),
@@ -166,7 +166,7 @@ ServerEvents.recipes(event => {
     }).id('finality:shaped/mobgrindingutils/absorption_hopper')
 
     // feeds
-    event.recipes.createMixing('mob_grinding_utils:gm_chicken_feed_cursed', [
+    event.recipes.create.mixing('mob_grinding_utils:gm_chicken_feed_cursed', [
         'minecraft:spider_eye',
         'minecraft:rotten_flesh',
         'minecraft:bone',
@@ -174,7 +174,7 @@ ServerEvents.recipes(event => {
         '#forge:seeds',
         Fluid.of('mob_grinding_utils:fluid_xp', 1000)
     ]).id('finality:mixing/mobgrindingutils_cursed_chicken_feed')
-    event.recipes.createMixing('mob_grinding_utils:nutritious_chicken_feed', [
+    event.recipes.create.mixing('mob_grinding_utils:nutritious_chicken_feed', [
         'minecraft:carrot',
         'minecraft:potato',
         'minecraft:beetroot',
@@ -188,12 +188,12 @@ ServerEvents.recipes(event => {
         'mob_grinding_utils:fluid_xp_bucket',
         'create:brass_sheet'
     ]).id('finality:mobgrindingutils_xp_mould_blank')
-    event.recipes.createCutting([
+    event.recipes.create.cutting([
         'mob_grinding_utils:solid_xp_mould_baby'
     ], 'mob_grinding_utils:solid_xp_mould_blank').processingTime(350).id('finality:cutting/mobgrindingutils_xp_mold_shaped')
 
     // the tanks
-    event.recipes.createMechanicalCrafting('mob_grinding_utils:tank', [
+    event.recipes.create.mechanical_crafting('mob_grinding_utils:tank', [
         'IGGGI',
         'G   G',
         'G S G',
@@ -205,7 +205,7 @@ ServerEvents.recipes(event => {
         S: Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:framed_glass"}').weakNBT()
     }).id('finality:mechanical_crafting/mobgrindingutils_tank')
 
-    event.recipes.createSequencedAssembly([
+    event.recipes.create.sequenced_assembly([
         'mob_grinding_utils:jumbo_tank'
     ], 'create:fluid_tank', [
         event.recipes.create.deploying('kubejs:incomplete_jumbo_tank', ['kubejs:incomplete_jumbo_tank', 'mob_grinding_utils:tank']),
@@ -214,7 +214,7 @@ ServerEvents.recipes(event => {
         event.recipes.create.deploying('kubejs:incomplete_jumbo_tank', ['kubejs:incomplete_jumbo_tank', 'mob_grinding_utils:tank'])
     ]).transitionalItem('kubejs:incomplete_jumbo_tank').loops(8).id('finality:sequenced_assembly/mobgrindingutils_jumbo_tank')
 
-    event.recipes.createMechanicalCrafting('mob_grinding_utils:fan', [
+    event.recipes.create.mechanical_crafting('mob_grinding_utils:fan', [
         'AAAAA',
         'BCD B',
         'BEFGB',
@@ -343,7 +343,7 @@ ServerEvents.recipes(event => {
             'create:zinc_nugget',
             'create:experience_nugget'
         ]).id('finality:shaped/cei_experience_rotor')
-        event.recipes.createMixing(Fluid.of('create_enchantment_industry:experience', 10), [
+        event.recipes.create.mixing(Fluid.of('create_enchantment_industry:experience', 10), [
             'create_enchantment_industry:experience_rotor',
             Fluid.of('mob_grinding_utils:fluid_xp', 200)
         ]).id('finality:mixing/mobgrindingutils_create_xp_compat')

@@ -7,7 +7,7 @@
  */
 
 ServerEvents.recipes(event => {
-    event.recipes.createMechanicalCrafting('gag:time_sand_pouch', [
+    event.recipes.create.mechanical_crafting('gag:time_sand_pouch', [
         ' GNG ',
         'LPPPL',
         'LPCPL',

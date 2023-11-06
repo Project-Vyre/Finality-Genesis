@@ -243,7 +243,7 @@ ServerEvents.recipes(event => {
         H: '#forge:chests/wooden',
         C: 'littlelogistics:seater_car'
     }).id('finality:littlelogistics/shaped/chest_car')
-    event.recipes.createDeploying('littlelogistics:chest_car', [
+    event.recipes.create.deploying('littlelogistics:chest_car', [
         'littlelogistics:seater_car',
         '#forge:chests/wooden'
     ]).id('finality:littlelogistics/deploying/chest_car')
@@ -263,7 +263,7 @@ ServerEvents.recipes(event => {
         F: 'create:fluid_tank',
         S: 'littlelogistics:seater_car'
     }).id('finality:littlelogistics/shapeless/fluid_car')
-    event.recipes.createDeploying('littlelogistics:fluid_car', [
+    event.recipes.create.deploying('littlelogistics:fluid_car', [
         'littlelogistics:seater_car',
         'create:fluid_tank'
     ]).id('finality:littlelogistics/deploying/fluid_car')

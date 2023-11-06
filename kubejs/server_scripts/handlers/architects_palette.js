@@ -24,16 +24,16 @@ ServerEvents.tags('item', event => {
 
 ServerEvents.recipes(event => {
     event.smoking('architects_palette:charcoal_block', '#minecraft:logs_that_burn').id('architects_palette:smelting/charcoal_block_from_logs_that_burn_smoking')
-    event.recipes.createMixing('architects_palette:heliodor_rod', [
+    event.recipes.create.mixing('architects_palette:heliodor_rod', [
         '4x minecraft:glowstone_dust',
         Fluid.of('kubejs:shimmer', 250)
     ]).id('finality:mixing/heliodor_rod_renewal')
-    event.recipes.createMixing('architects_palette:ekanite_rod', [
+    event.recipes.create.mixing('architects_palette:ekanite_rod', [
         'minecraft:emerald',
         '4x minecraft:glowstone_dust',
         Fluid.of('kubejs:shimmer', 250)
     ]).id('finality:mixing/ekanite_rod_renewal')
-    event.recipes.createMixing('architects_palette:monazite_rod', [
+    event.recipes.create.mixing('architects_palette:monazite_rod', [
         'create:cinder_flour',
         '4x minecraft:glowstone_dust',
         Fluid.of('kubejs:shimmer', 250)
@@ -60,7 +60,7 @@ ServerEvents.recipes(event => {
     event.shapeless('architects_palette:myonite_slab', [
         'architects_palette:myonite_vertical_slab'
     ]).id('kubejs:vertslabs/myonite_vertical_slab_revert')
-    event.stonecutting('2x architects_palette:myonite_vertical_slab', 'architects_palette:myonite').id('kubejs:vertslabs/stonecutting/myonite_vslab_from_myonite_stonecutting')
+    event.recipes.minecraft.stonecutting('2x architects_palette:myonite_vertical_slab', 'architects_palette:myonite').id('kubejs:vertslabs/stonecutting/myonite_vslab_from_myonite_stonecutting')
     // myonite brick 'architects_palette:myonite_bricks'
     event.shaped('3x architects_palette:myonite_brick_vertical_slab', [
         'M',
@@ -72,7 +72,7 @@ ServerEvents.recipes(event => {
     event.shapeless('architects_palette:myonite_brick_slab', [
         'architects_palette:myonite_brick_vertical_slab'
     ]).id('kubejs:vertslabs/myonite_brick_vertical_slab_revert')
-    event.stonecutting('2x architects_palette:myonite_brick_vertical_slab', '#architects_palette:myonite_tag_fix').id('kubejs:vertslabs/stonecutting/myonite_brick_vslab_from_myonite_and_myonite_bricks_stonecutting')
+    event.recipes.minecraft.stonecutting('2x architects_palette:myonite_brick_vertical_slab', '#architects_palette:myonite_tag_fix').id('kubejs:vertslabs/stonecutting/myonite_brick_vslab_from_myonite_and_myonite_bricks_stonecutting')
     // mushy myonite brick
     event.shaped('3x architects_palette:mushy_myonite_brick_vertical_slab', [
         'M',
@@ -84,5 +84,5 @@ ServerEvents.recipes(event => {
     event.shapeless('architects_palette:mushy_myonite_brick_slab', [
         'architects_palette:mushy_myonite_brick_vertical_slab'
     ]).id('kubejs:vertslabs/mushy_myonite_brick_vertical_slab_revert')
-    event.stonecutting('2x architects_palette:mushy_myonite_brick_vertical_slab', 'architects_palette:mushy_myonite_bricks').id('kubejs:vertslabs/stonecutting/mushy_myonite_brick_vslab_from_mushy_myonite_bricks_stonecutting')
+    event.recipes.minecraft.stonecutting('2x architects_palette:mushy_myonite_brick_vertical_slab', 'architects_palette:mushy_myonite_bricks').id('kubejs:vertslabs/stonecutting/mushy_myonite_brick_vslab_from_mushy_myonite_bricks_stonecutting')
 })

@@ -75,7 +75,7 @@ ServerEvents.recipes(event => {
         0,
         'finality:aether/aether_dirt_conversion'
     )
-    event.recipes.createItemApplication('aether:quicksoil', [
+    event.recipes.create.item_application('aether:quicksoil', [
         'minecraft:dirt',
         'aether:ambrosium_shard'
     ]).id('finality:aether/quicksoil_conversion')
@@ -91,13 +91,13 @@ ServerEvents.recipes(event => {
         'ingredient': { 'item': 'aether:blue_gummy_swet' },
         'result': 'aether:golden_gummy_swet'
     }).id('finality:aether/golden_gummy_swet')
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         '2x aether:ambrosium_shard',
         Item.of('aether:ambrosium_shard').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('aether:holystone').withChance(0.25)
     ], 'aether:ambrosium_ore').processingTime(250).id('finality:create/ambrosium_ore_crushing')
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         '2x aether:zanite_gemstone',
         Item.of('aether:zanite_gemstone').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),

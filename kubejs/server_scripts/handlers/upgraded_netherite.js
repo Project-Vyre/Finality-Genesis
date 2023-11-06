@@ -93,7 +93,7 @@ ServerEvents.recipes(event => {
         ).id(`finality:ultimerite_ingot_from_${upgrade}_upgraded_netherite_ingot`)
     })
     // creativerite assembly
-    event.recipes.createSequencedAssembly([
+    event.recipes.create.sequenced_assembly([
         Item.of('upgradednetherite_creative:creative_upgraded_netherite_ingot').withChance(25.0),
         Item.of('extendedcrafting:ultimate_singularity').withChance(25.0),
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:netherite"}').withChance(25.0),
@@ -102,11 +102,11 @@ ServerEvents.recipes(event => {
         'minecraft:netherite_block',
         'minecraft:ancient_debris'
     ], 'upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot', [
-        event.recipes.createFilling('extendedcrafting:the_ultimate_ingot', ['extendedcrafting:the_ultimate_ingot', Fluid.of('minecraft:lava', 500)]),
-        event.recipes.createDeploying('extendedcrafting:the_ultimate_ingot', ['extendedcrafting:the_ultimate_ingot', 'kubejs:chain_command_block']).keepHeldItem(),
-        event.recipes.createPressing('extendedcrafting:the_ultimate_ingot', 'extendedcrafting:the_ultimate_ingot'),
-        event.recipes.createPressing('extendedcrafting:the_ultimate_ingot', 'extendedcrafting:the_ultimate_ingot'),
-        event.recipes.createPressing('extendedcrafting:the_ultimate_ingot', 'extendedcrafting:the_ultimate_ingot')
+        event.recipes.create.filling('extendedcrafting:the_ultimate_ingot', ['extendedcrafting:the_ultimate_ingot', Fluid.of('minecraft:lava', 500)]),
+        event.recipes.create.deploying('extendedcrafting:the_ultimate_ingot', ['extendedcrafting:the_ultimate_ingot', 'kubejs:chain_command_block']).keepHeldItem(),
+        event.recipes.create.pressing('extendedcrafting:the_ultimate_ingot', 'extendedcrafting:the_ultimate_ingot'),
+        event.recipes.create.pressing('extendedcrafting:the_ultimate_ingot', 'extendedcrafting:the_ultimate_ingot'),
+        event.recipes.create.pressing('extendedcrafting:the_ultimate_ingot', 'extendedcrafting:the_ultimate_ingot')
     ]).transitionalItem('extendedcrafting:the_ultimate_ingot').loops(16).id('finality:creativerite_ingot')
     // creativerite smithing
     // output left, inputs right

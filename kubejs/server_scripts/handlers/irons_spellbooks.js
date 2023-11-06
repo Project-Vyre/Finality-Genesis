@@ -71,7 +71,7 @@ ServerEvents.recipes(event => {
             'kubejs:command_block'
         ]).keepHeldItem().id(`finality:irons_spellbooks_ancient_${IRONS_SPELLGEMS[i]}_upgrade`)
     }
-    event.recipes.createMixing([
+    event.recipes.create.mixing([
         'irons_spellbooks:arcane_salvage',
         Item.of('irons_spellbooks:arcane_essence').withChance(0.75),
         Item.of('irons_spellbooks:cinder_essence').withChance(0.25)

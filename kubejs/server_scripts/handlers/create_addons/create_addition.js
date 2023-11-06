@@ -24,15 +24,15 @@ ServerEvents.recipes(event => {
         { type: 'createaddition:liquid_burning' }
     ])
     // bioethanol balancing work in progress.
-    event.recipes.createMixing('3x createaddition:biomass', [
+    event.recipes.create.mixing('3x createaddition:biomass', [
         '3x create:wheat_flour',
         Fluid.of('createaddition:seed_oil', 1000)
     ]).heated().id('finality:createaddition/mixing/biomass_from_wheat')
-    event.recipes.createMixing(Fluid.of('createaddition:bioethanol', 100), [
+    event.recipes.create.mixing(Fluid.of('createaddition:bioethanol', 100), [
         '3x minecraft:sugar',
         '9x createaddition:biomass'
     ]).id('finality:createaddition/mixing/bioethanol')
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'kubejs:removed_item'
     ], [
         'minecraft:diamond'

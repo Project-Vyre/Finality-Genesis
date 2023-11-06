@@ -19,7 +19,7 @@
  * @param {string} metal 
  */
 function NUGGET_SOLIDIFY(event, nugget, metal) {
-    event.recipes.createCompacting(nugget, [
+    event.recipes.create.compacting(nugget, [
         Fluid.of(`kubejs:molten_${metal}`, 10)
     ]).id(`finality:molten_${metal}_to_${metal}_nugget`)
 }
@@ -31,7 +31,7 @@ function NUGGET_SOLIDIFY(event, nugget, metal) {
  * @param {string} coin 
  */
 function COIN_MELT_HEATED(event, moltenMetal, coinType) {
-    event.recipes.createMixing(Fluid.of(`kubejs:molten_${moltenMetal}`, 10), [
+    event.recipes.create.mixing(Fluid.of(`kubejs:molten_${moltenMetal}`, 10), [
         `createdeco:${coinType}_coin`
     ]).heated().id(`finality:createdeco/${coinType}_coin_melting`)
 }
@@ -43,7 +43,7 @@ function COIN_MELT_HEATED(event, moltenMetal, coinType) {
  * @param {string} coinType 
  */
 function COINSTACK_MELTING(event, moltenMetal, coinType) {
-    event.recipes.createMixing(Fluid.of(`kubejs:molten_${moltenMetal}`, 40), [
+    event.recipes.create.mixing(Fluid.of(`kubejs:molten_${moltenMetal}`, 40), [
         `createdeco:${coinType}_coinstack`
     ]).heated().id(`finality:createdeco/${coinType}_coinstack_melting`)
 }
@@ -61,7 +61,7 @@ ServerEvents.recipes(event => {
     COIN_MELT_HEATED(event, 'copper', 'copper')
     COIN_MELT_HEATED(event, 'zinc', 'zinc')
     COIN_MELT_HEATED(event, 'brass', 'brass')
-    event.recipes.createMixing(Fluid.of('kubejs:molten_netherite', 10), [
+    event.recipes.create.mixing(Fluid.of('kubejs:molten_netherite', 10), [
         'createdeco:netherite_coin'
     ]).superheated().id('finality:createdeco/netherite_coin_melting')
     COINSTACK_MELTING(event, 'iron', 'iron')
@@ -70,7 +70,7 @@ ServerEvents.recipes(event => {
     COINSTACK_MELTING(event, 'copper', 'copper')
     COINSTACK_MELTING(event, 'zinc', 'zinc')
     COINSTACK_MELTING(event, 'brass', 'brass')
-    event.recipes.createMixing(Fluid.of('kubejs:molten_netherite', 40), [
+    event.recipes.create.mixing(Fluid.of('kubejs:molten_netherite', 40), [
         'createdeco:netherite_coinstack'
     ]).superheated().id('finality:createdeco/netherite_coinstack_melting')
 })

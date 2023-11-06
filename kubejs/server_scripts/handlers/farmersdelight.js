@@ -32,16 +32,16 @@ ServerEvents.recipes(event => {
         H: 'minecraft:water_bucket',
         W: 'minecraft:wooden_shovel'
     }).id('farmersdelight:cooking_pot')
-    event.recipes.createCutting('2x farmersdelight:cutting_board', '#minecraft:wooden_slabs')
+    event.recipes.create.cutting('2x farmersdelight:cutting_board', '#minecraft:wooden_slabs')
         .processingTime(100)
         .id('farmersdelight:cutting_board')
-    event.smelting('farmersdelight:fried_egg', 'minecraft:egg')
+    event.recipes.minecraft.smelting('farmersdelight:fried_egg', 'minecraft:egg')
         .cookingTime(200)
         .id('farmersdelight:fried_egg')
-    event.campfireCooking('farmersdelight:fried_egg', 'minecraft:egg')
+    event.recipes.minecraft.campfire_cooking('farmersdelight:fried_egg', 'minecraft:egg')
         .cookingTime(600)
         .id('farmersdelight:fried_egg_from_campfire_cooking')
-    event.smoking('farmersdelight:fried_egg', 'minecraft:egg')
+    event.recipes.minecraft.smoking('farmersdelight:fried_egg', 'minecraft:egg')
         .cookingTime(100)
         .id('farmersdelight:fried_egg_from_smoking')
     if (!Platform.isLoaded('farmersrespite')) {
@@ -51,14 +51,14 @@ ServerEvents.recipes(event => {
         ])
     }
     if (Platform.isLoaded('delightful')) {
-        event.recipes.createMixing('kubejs:steamed_matcha_leaves', [
+        event.recipes.create.mixing('kubejs:steamed_matcha_leaves', [
             'delightful:green_tea_leaf',
             Fluid.of('minecraft:water', 250)
         ]).heated().id('finality:mixing/steaming_matcha_leaves')
-        event.recipes.createMixing('kubejs:dried_matcha_leaves',
+        event.recipes.create.mixing('kubejs:dried_matcha_leaves',
             'kubejs:steamed_matcha_leaves'
         ).heated().id('finality:mixing/matcha_leaf_drying')
-        event.recipes.createMilling('delightful:matcha',
+        event.recipes.create.milling('delightful:matcha',
             'kubejs:dried_matcha_leaves'
         ).processingTime(130).id('finality:milling/matcha_powder')
     }
@@ -77,7 +77,7 @@ ServerEvents.recipes(event => {
         }).id('finality:miners_delight/copper_cup')
     }
     if (Platform.isLoaded('ends_delight')) {
-        event.recipes.createFilling('ends_delight:non_hatchable_dragon_egg', [
+        event.recipes.create.filling('ends_delight:non_hatchable_dragon_egg', [
             'minecraft:dragon_egg',
             Fluid.of('kubejs:shimmer')
         ]).id('finality:ends_delight/filling/non_hatchable_dragon_egg')

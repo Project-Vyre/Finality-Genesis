@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
         { id: 'constructionwand:infinity_wand' },
         { id: 'constructionwand:diamond_wand' }
     ])
-    event.recipes.createFilling('kubejs:construction_core_diamond', [
+    event.recipes.create.filling('kubejs:construction_core_diamond', [
         'minecraft:diamond',
         Fluid.of('kubejs:condensed_universal_entropy', 90)
     ]).id('finality:construction_diamond_activation')

@@ -15,7 +15,7 @@ ServerEvents.recipes(event => {
         I: 'create:iron_sheet',
         O: 'aquamirae:oxygelium'
     }).id('aquamirae:oxygen_tank')
-    event.recipes.createMixing('aquamirae:ship_graveyard_echo', [
+    event.recipes.create.mixing('aquamirae:ship_graveyard_echo', [
         'minecraft:soul_sand',
         'minecraft:kelp',
         '#minecraft:boats',

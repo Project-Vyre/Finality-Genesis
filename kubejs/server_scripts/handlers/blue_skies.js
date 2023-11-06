@@ -55,7 +55,7 @@ ServerEvents.recipes(event => {
      */
     for (const [ore_type, raw_product] of Object.entries(BSKIES_ORE)) {
         for (const [stone_type, cobblestone_type] of Object.entries(BSKIES_ORE_STONE_TYPES)) {
-            event.recipes.createCrushing([
+            event.recipes.create.crushing([
                 raw_product,
                 Item.of(raw_product).withChance(0.75),
                 Item.of('create:experience_nugget').withChance(0.75),
@@ -69,13 +69,13 @@ ServerEvents.recipes(event => {
      * Note to self: Use Lunar Cobblestone instead of Turquise Cobblestone for Everdawn ores.
      */
     // everdawn emerald ore
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'blue_skies:raw_horizonite',
         Item.of('blue_skies:raw_horizonite').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('blue_skies:lunar_cobblestone').withChance(0.12)
     ], 'blue_skies:horizonite_ore').processingTime(250).id('finality:blue_skies/crushing/everdawn_horizonite_ore');
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'minecraft:emerald',
         Item.of('minecraft:emerald').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
@@ -87,20 +87,20 @@ ServerEvents.recipes(event => {
      * Note to self: Use Turquise Cobblestone and not Lunar Cobblestone for Everbright ores.
      */
     // everbright exclusive ores
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'blue_skies:raw_falsite',
         Item.of('blue_skies:raw_falsite').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('blue_skies:turquoise_cobblestone').withChance(0.12)
     ], 'blue_skies:falsite_ore').processingTime(250).id('finality:blue_skies/crushing/falsite_ore');
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'blue_skies:raw_ventium',
         Item.of('blue_skies:raw_ventium').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('blue_skies:turquoise_cobblestone').withChance(0.12)
     ], 'blue_skies:ventium_ore').processingTime(250).id('finality:blue_skies/crushing/ventium_ore');
     // everbright emerald ore
-    event.recipes.createCrushing([
+    event.recipes.create.crushing([
         'minecraft:emerald',
         Item.of('minecraft:emerald').withChance(0.75),
         Item.of('create:experience_nugget').withChance(0.75),
@@ -110,7 +110,7 @@ ServerEvents.recipes(event => {
      * Everything else
      */
     BSKIES_WOOD.forEach(wood => {
-        event.recipes.createCutting([
+        event.recipes.create.cutting([
             `blue_skies:${wood}_pressure_plate`,
             `blue_skies:${wood}_slab`
         ], `blue_skies:${wood}_planks`).id(`kubejs:${wood}_pressure_plate_create_compat`)

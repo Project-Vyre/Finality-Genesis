@@ -31,7 +31,7 @@ ServerEvents.recipes(event => {
         '2x minecraft:emerald',
         'minecraft:golden_apple'
     ]).id('finality:relic_apple_shapeless_mixing')
-    event.recipes.createHaunting([
+    event.recipes.create.haunting([
         Item.of('bhc:wither_bone').withChance(0.25),
         Item.of('minecraft:coal').withChance(0.25),
         Item.of('supplementaries:ash').withChance(0.25)

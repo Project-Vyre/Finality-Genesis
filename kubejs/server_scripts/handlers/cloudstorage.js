@@ -8,7 +8,7 @@
 
 ServerEvents.recipes(event => {
     COLOR.forEach(wool => {
-        event.recipes.createMixing([
+        event.recipes.create.mixing([
             'cloudstorage:static_cloud',
             `minecraft:${wool}_wool`
         ], [

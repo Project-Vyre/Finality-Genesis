@@ -88,7 +88,7 @@ ServerEvents.recipes(event => {
         P: 'minecraft:porkchop',
         E: 'minecraft:nether_star'
     }).id('finality:hoglin_gate_large')
-    event.recipes.createMechanicalCrafting(Item.of('gateways:gate_pearl', '{gateway:"apotheosis:boss_gate_small"}'), [
+    event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"apotheosis:boss_gate_small"}'), [
         'SDS',
         'DED',
         'SDS'
@@ -97,7 +97,7 @@ ServerEvents.recipes(event => {
         D: 'apotheosis:gem_dust',
         E: 'minecraft:ender_pearl'
     }).id('finality:boss_gate_small')
-    event.recipes.createMechanicalCrafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:boss_gate"}'), [
+    event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:boss_gate"}'), [
         'SDS',
         'DED',
         'SDS'
@@ -106,7 +106,7 @@ ServerEvents.recipes(event => {
         D: 'apotheosis:gem_dust',
         E: 'minecraft:ender_eye'
     }).id('finality:boss_gate')
-    event.recipes.createMechanicalCrafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:boss_gate_large"}'), [
+    event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:boss_gate_large"}'), [
         'SDS',
         'DED',
         'SDS'
