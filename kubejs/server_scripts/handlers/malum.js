@@ -43,25 +43,28 @@ ServerEvents.tags('item', event => {
     ])
 })
 
-/**
- * @example
-
- * @param {Internal.DataPackEventJS} event 
- * @param {string} entity 
- * @param {string} primarySpiritType 
- * @param {object[]} spirits 
- * @param {object} spiritItem 
- */
-function specialSituation(event, entity, primarySpiritType, spirits, spiritItem) {
-    event.addJson(`malum:spirit_data/entity/grimoireofgaia/${entity}.json`, {
-        "registry_name": `grimoireofgaia:${entity}`,
-        "primary_type": primarySpiritType,
-        "spirits": spirits,
-        "spirit_item": spiritItem
-    })
-}
+LootJS.modifiers(event => {
+    event.addBlockLootModifier('malum:block_of_cthonic_gold')
+        .randomChance(0.10).addLoot('malum:cthonic_gold');
+})
 
 ServerEvents.highPriorityData(event => {
+    /**
+     * 
+     * @param {Internal.DataPackEventJS} event 
+     * @param {string} entity 
+     * @param {string} primarySpiritType 
+     * @param {object[]} spirits 
+     * @param {object} spiritItem 
+     */
+    function specialSituation(entity, primarySpiritType, spirits, spiritItem) {
+        event.addJson(`malum:spirit_data/entity/grimoireofgaia/${entity}.json`, {
+            "registry_name": `grimoireofgaia:${entity}`,
+            "primary_type": primarySpiritType,
+            "spirits": spirits,
+            "spirit_item": spiritItem
+        })
+    }
     /**
      * See Original post here {@link https://discord.com/channels/488774215961542666/1160015944882602054}
      * 
@@ -344,21 +347,66 @@ ServerEvents.highPriorityData(event => {
      * Slime Girl: 2 sacred, 2 aqueous;
      * Trader: 2 sacred, 2 arcane;
      */
+    event.addJson('malum:spirit_data/entity/grimoireofgaia/creeper_girl.json', {
+        "registry_name": "grimoireofgaia:creeper_girl",
+        "primary_type": "sacred",
+        "spirits": [
+            {
+                "spirit": "sacred",
+                "count": 2
+            },
+            {
+                "spirit": "infernal",
+                "count": 2
+            }
+        ],
+        "spirit_item": { "item": "grimoireofgaia:spawn_creeper_girl" }
+    })
+    event.addJson('malum:spirit_data/entity/grimoireofgaia/ender_girl.json', {
+        "registry_name": "grimoireofgaia:ender_girl",
+        "primary_type": "sacred",
+        "spirits": [
+            {
+                "spirit": "sacred",
+                "count": 2
+            },
+            {
+                "spirit": "eldritch",
+                "count": 2
+            }
+        ],
+        "spirit_item": { "item": "grimoireofgaia:spawn_ender_girl" }
+    })
+    event.addJson('malum:spirit_data/entity/grmoireofgaia/slime_girl.json', {
+        "registry_name": "grmoireofgaia:slime_girl",
+        "primary_type": "sacred",
+        "spirits": [
+            {
+                "spirit": "sacred",
+                "count": 2
+            },
+            {
+                "spirit": "aqueous",
+                "count": 2
+            }
+        ],
+        "spirit_item": { "item": "grimoireofia:spawn_slime_girl" }
+    })
     event.addJson('malum:spirit_data/entity/grimoireofgaia/trader.json', {
         "registry_name": "grimoireofgaia:trader",
         "primary_type": "sacred",
         "spirits": [
-            { "spirit": "sacred", "count": 2 },
-            { "spirit": "arcane", "count": 2 }
+            {
+                "spirit": "sacred",
+                "count": 2
+            },
+            {
+                "spirit": "arcane",
+                "count": 2
+            }
         ],
         "spirit_item": { "item": "grimoireofgaia:spawn_trader" }
     })
-    //specialSituation(event, 
-    //    'trader', 
-    //    'sacred', [
-    //    { "spirit": "sacred", "count": 2 },
-    //    { "spirit": "arcane", "count": 2 }
-    //], { "item": "grimoireofgaia:spawn_trader" })
     /**
      * Wicked:
      * Dullahan: 2 wicked, 1 arcane, 1 eldritch;
@@ -930,6 +978,34 @@ ServerEvents.highPriorityData(event => {
             {
                 "spirit": "earthen",
                 "count": 2
+            }
+        ]
+    })
+    event.addJson('malum:spirit_data/entity/grimoireofgaia/spriggan.json', {
+        "registry_name": "grimoireofgaia:spriggan",
+        "primary_type": "earthen",
+        "spirits": [
+            {
+                "spirit": "earthen",
+                "count": 2
+            },
+            {
+                "spirit": "wicked",
+                "count": 1
+            }
+        ]
+    })
+    event.addJson('malum:spirit_data/entity/grimoireofgaia/werecat.json', {
+        "registry_name": "grimoireofgaia:werecat",
+        "primary_type": "earthen",
+        "spirits": [
+            {
+                "spirit": "earthen",
+                "count": 2
+            },
+            {
+                "spirit": "wicked",
+                "count": 1
             }
         ]
     })

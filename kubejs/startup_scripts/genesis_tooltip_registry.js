@@ -118,6 +118,7 @@ let PURPLE_REGISTRY = [
     'kubejs:final_hoe',
     'kubejs:final_sword',
     'kubejs:final_scythe',
+    'kubejs:final_katana',
     'kubejs:final_lance',
     'kubejs:final_helmet',
     'kubejs:final_chestplate',

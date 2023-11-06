@@ -199,6 +199,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:tools')
         .tag('forge:tools/pickaxe')
         .tag('forge:tools/pickaxes')
+        .tag('kubejs:final_tools')
         .group('tools')
 
     event.create('kubejs:final_axe', 'axe').tier('final_tool')
@@ -211,6 +212,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:tools')
         .tag('forge:tools/axe')
         .tag('forge:tools/axes')
+        .tag('kubejs:final_tools')
         .group('tools')
 
     event.create('kubejs:final_shovel', 'shovel').tier('final_tool')
@@ -223,6 +225,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:tools')
         .tag('forge:tools/shovel')
         .tag('forge:tools/shovels')
+        .tag('kubejs:final_tools')
         .group('tools')
 
     event.create('kubejs:final_hoe', 'hoe').tier('final_tool')
@@ -235,6 +238,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:tools')
         .tag('forge:tools/hoe')
         .tag('forge:tools/hoes')
+        .tag('kubejs:final_tools')
         .group('tools')
     // weapons
     event.create('kubejs:final_sword', 'sword').tier('final_tool')
@@ -247,6 +251,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:tools')
         .tag('forge:tools/sword')
         .tag('forge:tools/swords')
+        .tag('kubejs:final_tools')
         .group('combat')
 
     event.create('kubejs:final_lance', 'sword').tier('final_tool')
@@ -809,6 +814,19 @@ ItemEvents.modification(event => {
     event.modify('create:super_glue', item => {
         item.maxDamage = 128
     })
+    // farmer's delight
+    event.modify('farmersdelight:flint_knife', item => {
+        item.maxDamage = 256
+    })
+    event.modify('farmersdelight:iron_knife', item => {
+        item.maxDamage = 512
+    })
+    event.modify('farmersdelight:diamond_knife', item => {
+        item.maxDamage = 1820
+    })
+    event.modify('farmersdelight:netherite_knife', item => {
+        item.maxDamage = 4096
+    })
     if (Platform.isLoaded('aether')) {
         TOOLS.forEach(tool => {
             event.modify(`aether:zanite_${tool}`, item => {
@@ -948,19 +966,25 @@ ItemEvents.modification(event => {
         })
     }
 
-    // farmer's delight
-    event.modify('farmersdelight:flint_knife', item => {
-        item.maxDamage = 256
-    })
-    event.modify('farmersdelight:iron_knife', item => {
-        item.maxDamage = 512
-    })
-    event.modify('farmersdelight:diamond_knife', item => {
-        item.maxDamage = 1820
-    })
-    event.modify('farmersdelight:netherite_knife', item => {
-        item.maxDamage = 4096
-    })
+    if (Platform.isLoaded('grimoireofgaia')) {
+        let weaponBooks = [
+            'weapon_book',
+            'weapon_book_freezing',
+            'weapon_book_nightmare',
+            'weapon_book_metal',
+            'weapon_book_ender',
+            'weapon_book_hunger',
+            'weapon_book_battle',
+            'weapon_book_nature',
+            'weapon_book_wither'
+        ]
+        weaponBooks.forEach(book => {
+            event.modify(`grimoireofgaia:${book}`, item => {
+                item.maxDamage = 1024
+                item.fireResistant = true
+            })
+        })
+    }
 
     if (Platform.isLoaded('lilwings')) {
         event.modify('lilwings:enderfly_net', item => {
