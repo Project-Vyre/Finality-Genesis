@@ -62,6 +62,7 @@ GRAY_AND_RED
 */
 
 let STANDARD_PALETTE_REGISTRY = [
+    'minecraft:clock',
     'minecraft:wooden_pickaxe',
     'minecraft:stone_pickaxe',
     'minecraft:iron_pickaxe',
