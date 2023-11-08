@@ -208,11 +208,9 @@ ServerEvents.recipes(event => {
         R: 'minecraft:redstone'
     }).id('finality:piston')
     event.shaped('minecraft:hopper', [
-        'FHF',
-        'FCF',
-        ' F '
+        'H',
+        'C'
     ], {
-        F: 'create:iron_sheet',
         H: 'create:chute',
         C: '#forge:chests/wooden'
     }).id('finality:hopper')
