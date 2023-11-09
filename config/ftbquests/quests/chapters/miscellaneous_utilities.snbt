@@ -85,6 +85,24 @@
 			x: 1.0d
 			y: -1.0d
 		}
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			description: [
+				"Press H (default keybind) to access your skill slots."
+				""
+				"They are <rainb>magical</rainb> slots."
+			]
+			id: "61BBA4857719B2A4"
+			subtitle: "Storing items in skill slots."
+			tasks: [{
+				id: "75739AB63EF09B14"
+				item: "skillslots:unlock_slot"
+				type: "item"
+			}]
+			title: "Skill Slots"
+			x: 0.0d
+			y: -1.0d
+		}
 	]
 	subtitle: ["Some miscellaneous utilities..."]
 	title: "Miscellaneous Utilities"

@@ -31,13 +31,13 @@ simulationDistance:12
 entityDistanceScaling:1.0
 guiScale:2
 particles:0
-maxFps:140
+maxFps:260
 graphicsMode:1
 ao:2
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:"true"
-resourcePacks:["vanilla","mod_resources","Supplementaries Generated Pack","quark:emote_resources","loadmyresources.hiddenpack","V Slab Compat Generated Pack","builtin/aether_ctm_fix","create:legacy_copper"]
+resourcePacks:["vanilla","mod_resources","create:legacy_copper","Supplementaries Generated Pack","V Slab Compat Generated Pack","builtin/aether_ctm_fix","loadmyresources.hiddenpack","quark:emote_resources"]
 incompatibleResourcePacks:["loadmyresources.hiddenpack"]
 lastServer:
 lang:en_us
