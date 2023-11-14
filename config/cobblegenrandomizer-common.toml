@@ -29,5 +29,5 @@
 			#   ["cobblestone", "minecraft:diamond_block", ["minecraft:diamond_block"]],
 			#   ["cobblestone", "minecraft:dirt", ["forge:dirt"]],
 			#   ["cobblestone", "minecraft:white_wool", ["minecraft:wool"]]]
-			custom_generators = [["stone", "minecraft:bedrock", ["minecraft:deepslate"]], ["cobblestone", "kubejs:command_block", ["create:asurine|25", "create:crimsite|25", "create:ochrum|25", "create:veridium|25"]]]
+			custom_generators = [["stone", "minecraft:bedrock", ["minecraft:deepslate|75", "minecraft:tuff|25"]], ["cobblestone", "kubejs:command_block", ["create:asurine|25", "create:crimsite|25", "create:ochrum|25", "create:veridium|25"]]]
 

@@ -55,13 +55,32 @@ ClientEvents.lang('en_us', event => {
         }
     }
     event.addAll('minecraft', {
-        "effect.minecraft.absorption.desc": "Adds temporary hearts to absorb damage.",
-        "effect.minecraft.dolphins_grace.desc": "Increases swimming speed in the water.",
-        "effect.minecraft.resistance.desc": "Decreases amount of incoming damage.",
-        "effect.minecraft.glowing.desc": "Become visible to everyone around you.",
-        "effect.minecraft.levitation.desc": "You'll float too!",
-        "effect.minecraft.wither.desc": "It's poison, but actually kills!"
+        "item.minecraft.music_disc_13.desc": "Cjbeards - Mirror Mirror (Instrumental)",
+        "item.minecraft.music_disc_cat.desc": "C418 - cat",
+        "item.minecraft.music_disc_blocks.desc": "C418 - blocks",
+        "item.minecraft.music_disc_chirp.desc": "Farabi Hasan Music - Arlecchino Battle Theme Phase 1 & 2 (Fan-Made) | Genshin Impact",
+        "item.minecraft.music_disc_far.desc": "C418 - far",
+        "item.minecraft.music_disc_mall.desc": "C418 - mall",
+        "item.minecraft.music_disc_mellohi.desc": "C418 - mellohi",
+        "item.minecraft.music_disc_stal.desc": "Cjbeards - Bad Deeds (Instrumental)",
+        "item.minecraft.music_disc_strad.desc": "C418 - strad",
+        "item.minecraft.music_disc_ward.desc": "C418 - ward",
+        "item.minecraft.music_disc_11.desc": "Cjbeards - From the Shadows",
+        "item.minecraft.music_disc_wait.desc": "C418 - wait",
+        "item.minecraft.music_disc_pigstep.desc": "Lena Raine - Pigstep",
+        "item.minecraft.music_disc_otherside.desc": "Lena Raine - otherside",
+        "item.minecraft.music_disc_5.desc": "Cjbeards - Heart of the Wicked",
     })
+    if (Platform.isLoaded('jeed')) {
+        event.addAll('minecraft', {
+            "effect.minecraft.absorption.desc": "Adds temporary hearts to absorb damage.",
+            "effect.minecraft.dolphins_grace.desc": "Increases swimming speed in the water.",
+            "effect.minecraft.resistance.desc": "Decreases amount of incoming damage.",
+            "effect.minecraft.glowing.desc": "Become visible to everyone around you.",
+            "effect.minecraft.levitation.desc": "You'll float too!",
+            "effect.minecraft.wither.desc": "It's poison, but actually kills!"
+        })
+    }
     event.addAll('kubejs', {
         "item.kubejs.final_pickaxe": "<rainb>Particula Eversorem</rainb>",
         "item.kubejs.final_axe": "<rainb>Natura Exitium</rainb>",
