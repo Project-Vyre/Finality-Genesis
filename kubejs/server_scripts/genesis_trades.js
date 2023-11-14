@@ -56,4 +56,10 @@ MoreJSEvents.wandererTrades(event => {
             'minecraft:emerald'
         ], 'malum:runewood_sapling')
     }
+    if (Platform.isLoaded('quark')) {
+        event.addTrade(1, [
+            'minecraft:glowstone_dust',
+            'minecraft:emerald'
+        ], 'quark:glow_shroom')
+    }
 })
