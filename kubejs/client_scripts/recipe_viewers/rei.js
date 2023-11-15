@@ -438,6 +438,11 @@ REIEvents.information(event => {
             'Can only be acquired by chance using a Knife on leaf blocks.'
         ])
     }
+    if (Platform.isLoaded('mysticalagriculture')) {
+        event.addItem('mysticalagriculture:awakened_supremium_essence', 'Acquisition', [
+            'Can only be acquired through decompressing Awakened Supremium Blocks.'
+        ])
+    }
     if (Platform.isLoaded('neapolitan')) {
         event.addItem('neapolitan:adzuki_beans', 'Growth', [
             'Can only be grown in non-tilled soil.',

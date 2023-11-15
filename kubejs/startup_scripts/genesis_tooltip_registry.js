@@ -80,11 +80,11 @@ let STANDARD_PALETTE_REGISTRY = [
     'create:raw_zinc',
     'create:zinc_ingot',
     'create:zinc_nugget',
+    'create_power_loader:andesite_chunk_loader',
+    'create_power_loader:brass_chunk_loader',
     'chalk:chalk_box',
-    'extendedcrafting:handheld_table',
     'farmersdelight:skillet',
-    'farmersdelight:stove',
-    'ftbquests:book'
+    'farmersdelight:stove'
 ]
 let BLUE_REGISTRY = [
     'minecraft:soul_campfire',
@@ -92,8 +92,7 @@ let BLUE_REGISTRY = [
     'minecraft:lapis_lazuli'
 ]
 let GREEN_REGISTRY = [
-    'minecraft:bone_meal',
-    'createchunkloading:chunk_loader'
+    'minecraft:bone_meal'
 ]
 let YELLOW_REGISTRY = [
     'minecraft:campfire',
@@ -345,6 +344,12 @@ ClientEvents.init(event => {
     if (Platform.isLoaded('etched')) {
         YELLOW_PALETTE('etched:boombox')
     }
+    if (Platform.isLoaded('extendedcrafting')) {
+        STANDARD_PALETTE('extendedcrafting:handheld_table')
+    }
+    if (Platform.isLoaded('ftbquests')) {
+        STANDARD_PALETTE('ftbquests:book')
+    }
     if (Platform.isLoaded('goldenhopper')) {
         YELLOW_PALETTE('goldenhopper:golden_hopper')
     }
@@ -359,6 +364,10 @@ ClientEvents.init(event => {
         STANDARD_PALETTE('minecraft:glass_bottle')
         STANDARD_PALETTE('lilwings:butterfly_net')
         STANDARD_PALETTE('lilwings:enderfly_net')
+    }
+    if (Platform.isLoaded('malum')) {
+        PURPLE_PALETTE('malum:encyclopedia_arcana')
+        PURPLE_PALETTE('malum:tyrving')
     }
     if (Platform.isLoaded('monobank')) {
         STANDARD_PALETTE('monobank:monobank')

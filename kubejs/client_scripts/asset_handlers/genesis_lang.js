@@ -252,8 +252,6 @@ ClientEvents.lang('en_us', event => {
         "item.create.refined_radiance.tooltip.summary": "After being exposed to _bright light_, it is now in your hands.",
         "item.create.shadow_steel.tooltip": "SHADOW STEEL",
         "item.create.shadow_steel.tooltip.summary": "No light seems to come from this.",
-        "block.createchunkloading.chunk_loader.tooltip": "CHUNK LOADER",
-        "block.createchunkloading.chunk_loader.tooltip.summary": "Glue to Create _contraptions_ or _trains_ to give them the ability to _load_ chunks around them while they are moving.",
         "item.kubejs.deepslate_shard.tooltip": "DEEPSLATE SHARD",
         "item.kubejs.deepslate_shard.tooltip.summary": "Acquired from crushing Cobbled Deepslate.",
         "item.kubejs.deepslate_shard.tooltip.condition1": "When haunted",
@@ -347,11 +345,35 @@ ClientEvents.lang('en_us', event => {
         "item.bhc.red_heart.tooltip.condition1": "When melted",
         "item.bhc.red_heart.tooltip.behaviour1": "used for making Melted Yellow Hearts which can then be _upgraded_ further.",
     })
+    if (Platform.isLoaded('create_power_loader')) {
+        event.addAll('create_power_loader', {
+            "block.create_power_loader.andesite_chunk_loader.tooltip": "ANDESITE CHUNK LOADER",
+            "block.create_power_loader.andesite_chunk_loader.tooltip.summary": "Loads a single chunk when given _rotational_ energy. Also works on _moving_ contraptions!",
+            "block.create_power_loader.andesite_chunk_loader.tooltip.condition1": "Requirements",
+            "block.create_power_loader.andesite_chunk_loader.tooltip.behaviour1": "A _minimum_ RPM threshold of _60_ is needed for operation.",
+            "block.create_power_loader.brass_chunk_loader.tooltip": "BRASS CHUNK LOADER",
+            "block.create_power_loader.brass_chunk_loader.tooltip.summary": "Highly _configurable_. Loads a _maximum_ region size of _5x5_ chunks when given _rotational_ energy and works on _moving_ contraptions.",
+            "block.create_power_loader.brass_chunk_loader.tooltip.condition1": "Requirements",
+            "block.create_power_loader.brass_chunk_loader.tooltip.behaviour1": "A _minimum_ RPM threshold of _60_ is needed for operation. Larger chunk loading settings require more RPM.",
+        })
+    }
+    if (Platform.isLoaded('createchunkloading')) {
+        event.addAll('createchunkloading', {
+            "block.createchunkloading.chunk_loader.tooltip": "CHUNK LOADER",
+            "block.createchunkloading.chunk_loader.tooltip.summary": "Glue to Create _contraptions_ or _trains_ to give them the ability to _load_ chunks around them while they are moving.",
+        })
+    }
     if (Platform.isLoaded('malum')) {
         event.add('item.kubejs.final_scythe.tooltip.condition2', 'Soul Piercing')
         event.add('item.kubejs.final_scythe.tooltip.condition2', "Has the ability to _shatter_ souls! Use with _caution_.")
         event.add('item.kubejs.final_katana.tooltip.condition2', 'Soul Piercing')
         event.add('item.kubejs.final_katana.tooltip.behaviour2', "Has the ability to _shatter_ souls! Use with _caution_.")
+        event.addAll('malum', {
+            "item.malum.encyclopedia_arcana.tooltip": "ENCYCLOPEDIA ARCANA",
+            "item.malum.encyclopedia_arcana.tooltip.summary": "Your guide to the _dark arts_ of _Malum_.",
+            "item.malum.tyrving.tooltip": "TYRVING",
+            "item.malum.tyrving.tooltip.summary": "Deals _direct damage_ to the _soul_ of the entity that gets hit."
+        })
     }
 
     event.addAll('create', {
