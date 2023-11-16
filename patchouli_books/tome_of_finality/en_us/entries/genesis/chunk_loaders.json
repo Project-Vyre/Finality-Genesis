@@ -2,6 +2,7 @@
     "name": "Chunk Loaders 101",
     "icon": "chunkloaders:ultimate_chunk_loader",
     "category": "patchouli:genesis/tips",
+    "flag": "mod:chunkloaders",
     "pages": [
         {
             "type": "patchouli:text",

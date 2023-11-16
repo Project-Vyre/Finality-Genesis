@@ -2,6 +2,7 @@
     "name": "Modified Recipes",
     "icon": "extendedcrafting:basic_table",
     "category": "patchouli:genesis/introduction",
+    "flag": "mod:kubejs",
     "pages": [
         {
             "type": "patchouli:text",

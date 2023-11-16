@@ -2,6 +2,7 @@
     "name": "Chunk Claiming 101",
     "icon": "minecraft:map",
     "category": "patchouli:genesis/tips",
+    "flag": "mod:openpartiesandclaims",
     "pages": [
         {
             "type": "patchouli:text",
