@@ -8,6 +8,14 @@
 
 
 ServerEvents.lowPriorityData(event => {
+    if (Platform.isLoaded('goblintraders')) {
+        event.addJson('goblintraders:tags/entity_types/general_protection', {
+            "values": [
+                "goblintraders:goblin_trader",
+                "goblintraders:vein_goblin_trader"
+            ]
+        })
+    }
     if (Platform.isLoaded('grimoireofgaia')) {
         /**
         * Sacred:
@@ -17,7 +25,7 @@ ServerEvents.lowPriorityData(event => {
         * Slime Girl: 2 sacred, 2 aqueous;
         * Trader: 2 sacred, 2 arcane;
         */
-        event.addJson('grimoireofgaia:tags/entity_types/general_protection.json', {
+        event.addJson('grimoireofgaia:tags/entity_types/general_protection', {
             "values": [
                 "grimoireofgaia:creeper_girl",
                 "grimoireofgaia:ender_girl",
@@ -27,7 +35,7 @@ ServerEvents.lowPriorityData(event => {
         })
     }
     if (Platform.isLoaded('quark')) {
-        event.addJson('quark:tags/entity_types/general_protection.json', {
+        event.addJson('quark:tags/entity_types/general_protection', {
             "values": [
                 "quark:shiba_inu"
             ]

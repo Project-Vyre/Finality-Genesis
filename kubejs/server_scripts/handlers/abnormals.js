@@ -69,18 +69,16 @@ ServerEvents.tags('item', event => {
 })
 
 ServerEvents.tags('block', event => {
-    if (Platform.isLoaded('woodworks')) {
-        event.add('create:wrench_pickup', [
-            'woodworks:spruce_ladder',
-            'woodworks:birch_ladder',
-            'woodworks:jungle_ladder',
-            'woodworks:acacia_ladder',
-            'woodworks:dark_oak_ladder',
-            'woodworks:mangrove_ladder', // mangrove, crimson, warped
-            'woodworks:crimson_ladder',
-            'woodworks:warped_ladder'
-        ])
-    }
+    event.add('create:wrench_pickup', [
+        'woodworks:spruce_ladder',
+        'woodworks:birch_ladder',
+        'woodworks:jungle_ladder',
+        'woodworks:acacia_ladder',
+        'woodworks:dark_oak_ladder',
+        'woodworks:mangrove_ladder', // mangrove, crimson, warped
+        'woodworks:crimson_ladder',
+        'woodworks:warped_ladder'
+    ])
 })
 
 /* Old code that should not be used.
