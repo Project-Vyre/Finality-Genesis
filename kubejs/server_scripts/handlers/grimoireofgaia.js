@@ -2,6 +2,7 @@
 // requires: farmersdelight
 // requires: some_assembly_required
 // requires: kubejs_create
+// requires: lootjs
 
 /**
  * @file Server handler for Grimoire of Gaia.
@@ -79,9 +80,15 @@ ServerEvents.recipes(event => {
     ]).id('finality:headgear_doll_revert')
 })
 
+LootJS.modifiers(event => {
+    event.addEntityLootModifier('grimoireofgaia:mimic')
+        .randomChance(0.01).addLoot('grimoireofgaia:doll_maid')
+        .randomChanceWithEnchantment('minecraft:looting', [0, 0.05, 0.1, 0.25])
+})
+
 /**
  * To-Do
- * 
+ *
  * Figure out how to implement conditionals properly for GoG and Goblin Traders
  */
 //if (Platform.isLoaded('goblintraders')) {

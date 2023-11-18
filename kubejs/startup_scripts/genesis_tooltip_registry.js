@@ -358,6 +358,19 @@ ClientEvents.init(event => {
         GRAY_RED_PALETTE('graveyard:ossuary')
     }
     if (Platform.isLoaded('grimoireofgaia')) {
+        let gog_dolls = [
+            'creeper_girl',
+            'dryad',
+            'dullahan',
+            'ender_girl',
+            'maid',
+            'mermaid',
+            'nine_tails',
+            'slime_girl'
+        ]
+        gog_dolls.forEach(key => {
+            YELLOW_PALETTE(`grimoireofgaia:doll_${key}`)
+        })
         GREEN_PALETTE('grimoireofgaia:taproot')
     }
     if (Platform.isLoaded('lilwings')) {

@@ -1952,6 +1952,74 @@ ServerEvents.highPriorityData(event => {
                         "count": 1,
                         "item": "grimoireofgaia:trader_token"
                     }
+                },
+                {
+                    "type": "goblintraders:basic",
+                    "offer_item": {
+                        "count": 1,
+                        "item": "grimoireofgaia:spawn_slime_girl"
+                    },
+                    "payment_item": {
+                        "count": 1,
+                        "item": "minecraft:slime_ball"
+                    },
+                    "price_multiplier": 0.0,
+                    "max_trades": 1,
+                    "secondary_payment_item": {
+                        "count": 1,
+                        "item": "minecraft:egg"
+                    }
+                },
+                {
+                    "type": "goblintraders:basic",
+                    "offer_item": {
+                        "count": 1,
+                        "item": "grimoireofgaia:spawn_creeper_girl"
+                    },
+                    "payment_item": {
+                        "count": 1,
+                        "item": "minecraft:gunpowder"
+                    },
+                    "price_multiplier": 0.0,
+                    "max_trades": 1,
+                    "secondary_payment_item": {
+                        "count": 1,
+                        "item": "minecraft:egg"
+                    }
+                },
+                {
+                    "type": "goblintraders:basic",
+                    "offer_item": {
+                        "count": 1,
+                        "item": "grimoireofgaia:spawn_ender_girl"
+                    },
+                    "payment_item": {
+                        "count": 1,
+                        "item": "minecraft:ender_pearl"
+                    },
+                    "price_multiplier": 0.0,
+                    "max_trades": 1,
+                    "secondary_payment_item": {
+                        "count": 1,
+                        "item": "minecraft:egg"
+                    }
+                },
+                {
+                    "type": "goblintraders:basic",
+                    "offer_item": {
+                        "count": 1,
+                        "item": "grimoireofgaia:spawn_trader"
+                    },
+                    "payment_item": {
+                        "count": 1,
+                        "item": "minecraft:gold_ingot"
+                    },
+                    "price_multiplier": 0.0,
+                    "max_trades": 1,
+                    "secondary_payment_item": {
+                        "count": 1,
+                        "item": "minecraft:egg"
+                    }
                 }
             ]
         })
