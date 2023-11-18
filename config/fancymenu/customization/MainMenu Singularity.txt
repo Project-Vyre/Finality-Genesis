@@ -110,15 +110,6 @@ customization {
 }
 
 customization {
-  identifier = %id=button_compatibility_id:mc_titlescreen_accessibility_button%
-  loopbackgroundanimations = true
-  restartbackgroundanimations = true
-  action = setbuttontexture
-  backgroundhovered = config/fancymenu/assets/big_buttons_hover.png
-  backgroundnormal = config/fancymenu/assets/big_buttons.png
-}
-
-customization {
   identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
   orientation = element
   orientation_element = vanillabtn:button_compatibility_id:mc_titlescreen_singleplayer_button
@@ -158,15 +149,6 @@ customization {
   width = 90
   action = resizebutton
   height = 20
-}
-
-customization {
-  identifier = %id=button_compatibility_id:mc_titlescreen_language_button%
-  loopbackgroundanimations = true
-  restartbackgroundanimations = true
-  action = setbuttontexture
-  backgroundhovered = config/fancymenu/assets/big_buttons_hover.png
-  backgroundnormal = config/fancymenu/assets/big_buttons.png
 }
 
 customization {
@@ -307,7 +289,7 @@ customization {
   actionid = 6933b74a-1382-4bf0-9292-fd7ae16d24201679852528355
   action = addsplash
   y = 165
-  text = Bring me Ray Cokes!
+  text = It's here!
 }
 
 customization {
@@ -315,7 +297,7 @@ customization {
   enable_scrolling = true
   shadow = true
   scale = 1.0
-  source = https://raw.githubusercontent.com/Project-Vyre/finality-fm-live/main/finality-genesis.txt
+  source = https://raw.githubusercontent.com/Project-Vyre/finality-fm-live/main/finality-genesis-1.19.2.txt
   text_border = 0
   case_mode = normal
   source_mode = web
