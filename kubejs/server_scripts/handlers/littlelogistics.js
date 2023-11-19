@@ -6,6 +6,7 @@
  * @file Server handler for Little Logistics and Little Contraptions.
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
+
 ServerEvents.recipes(event => {
     // rapid hopper
     event.shaped('kubejs:denied_result', [

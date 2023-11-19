@@ -118,5 +118,8 @@
     "infused_farmland": true,
     "crop": true,
     "inferium_crop": true
+  },
+  "fruittrees": {
+    "bee": true
   }
 }

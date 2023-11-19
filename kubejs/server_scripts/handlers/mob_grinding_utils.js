@@ -174,6 +174,7 @@ ServerEvents.recipes(event => {
         '#forge:seeds',
         Fluid.of('mob_grinding_utils:fluid_xp', 1000)
     ]).id('finality:mixing/mobgrindingutils_cursed_chicken_feed')
+
     event.recipes.create.mixing('mob_grinding_utils:nutritious_chicken_feed', [
         'minecraft:carrot',
         'minecraft:potato',
@@ -231,41 +232,24 @@ ServerEvents.recipes(event => {
     }).id('finality:mechanical_crafting/mobgrindingutils_fan')
 
     event.custom({
-        "tier": 2,
-        "type": "extendedcrafting:shaped_table",
-        "pattern": [
-            "AAAAA",
-            "BCD B",
-            "BEFGB",
-            "BCD B",
-            "AAAAA"
-        ],
-        "key": {
-            "A": {
-                "item": "create:iron_sheet"
-            },
-            "B": {
-                "item": "minecraft:iron_bars"
-            },
-            "C": {
-                "item": "extendedcrafting:redstone_component"
-            },
-            "D": {
-                "item": "extendedcrafting:black_iron_slate"
-            },
-            "E": {
-                "item": "extendedcrafting:redstone_catalyst"
-            },
-            "F": {
-                "item": "create:gantry_shaft"
-            },
-            "G": {
-                "item": "create:propeller"
-            }
+        tier: 2,
+        type: 'extendedcrafting:shaped_table',
+        pattern: [
+            'AAAAA',
+            'BCD B',
+            'BEFGB',
+            'BCD B',
+            'AAAAA'
+        ], key: {
+            A: Item.of("create:iron_sheet").toJson(),
+            B: Item.of("minecraft:iron_bars").toJson(),
+            C: Item.of("extendedcrafting:redstone_component").toJson(),
+            D: Item.of("extendedcrafting:black_iron_slate").toJson(),
+            E: Item.of("extendedcrafting:redstone_catalyst").toJson(),
+            F: Item.of("create:gantry_shaft").toJson(),
+            G: Item.of("create:propeller").toJson()
         },
-        "result": {
-            "item": "mob_grinding_utils:fan"
-        }
+        result: Item.of('mob_grinding_utils:fan').toJson()
     }).id('finality:extendedcrafting/mobgrindingutils_fan')
 
     event.shaped('mob_grinding_utils:saw', [
@@ -301,18 +285,11 @@ ServerEvents.recipes(event => {
         G: 'minecraft:glowstone_dust'
     }).id('finality:shaped/mobgrindingutils_ender_inhibitor')
 
-    event.recipes.createItemApplication('mob_grinding_utils:tinted_glass', [
+    event.recipes.create.item_application('mob_grinding_utils:tinted_glass', [
         'minecraft:tinted_glass',
         '#forge:wither_bones'
     ]).id('finality:item_application/mobgrindingutils_tinted_glass')
 
-    if (Platform.isLoaded('mysticalagriculture')) {
-        event.remove({ id: 'mysticalagriculture:witherproof_glass' })
-        event.recipes.createItemApplication('mysticalagriculture:witherproof_glass', [
-            'mysticalagriculture:soul_glass',
-            'mysticalagriculture:wither_skeleton_essence'
-        ]).id('finality:item_application/mysticalagriculture/witherproof_glass')
-    }
     event.shaped('mob_grinding_utils:xpsolidifier', [
         ' P ',
         'IBI',
@@ -337,8 +314,10 @@ ServerEvents.recipes(event => {
     }).id('finality:shaped/mobgrindingutils_entity_spawner')
 
     if (Platform.isLoaded('create_enchantment_industry') && Platform.isLoaded('mob_grinding_utils')) {
-        event.remove({ id: 'create_enchantment_industry:crafting/experience_rotor' })
-        event.remove({ id: 'create_enchantment_industry:compat/mob_grinding_utils/mixing/experience_conversion' })
+        event.remove([
+            { id: 'create_enchantment_industry:crafting/experience_rotor' },
+            { id: 'create_enchantment_industry:compat/mob_grinding_utils/mixing/experience_conversion' }
+        ])
         event.shapeless('create_enchantment_industry:experience_rotor', [
             'create:zinc_nugget',
             'create:experience_nugget'

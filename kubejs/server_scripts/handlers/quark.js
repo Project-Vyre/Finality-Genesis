@@ -1,4 +1,5 @@
 // requires: quark
+// requires: create
 
 /**
  * @file Server handler for Quark.
@@ -11,7 +12,7 @@ ServerEvents.recipes(event => {
         'ILI',
         ' I '
     ], {
-        I: 'create:iron_sheet',
+        I: 'minecraft:iron_ingot',
         L: '#minecraft:logs'
     }).id('quark:tweaks/crafting/utility/misc/easy_hopper')
     event.shaped('4x kubejs:denied_result', [
@@ -25,6 +26,9 @@ ServerEvents.recipes(event => {
 
 ServerEvents.tags('block', event => {
     event.add('create:fan_transparent', [
+        'quark:gold_bars'
+    ])
+    event.add('create:wrench_pickup', [
         'quark:gold_bars'
     ])
 })
