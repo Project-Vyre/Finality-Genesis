@@ -6,7 +6,7 @@
         {
             "type": "patchouli:spotlight",
             "item": "create:mechanical_mixer",
-            "text": "Notice: Has a minimum RPM requirement of 32 RPM to operate. $(br2)It also integrates differently, using a horizontally placed cogwheel as stress input instead of a shaft connection."
+            "text": "Notice: Has a minimum RPM requirement of 30 RPM to operate. $(br2)It also integrates differently, using a horizontally placed cogwheel as stress input instead of a shaft connection."
         },
         {
             "type": "patchouli:text",
