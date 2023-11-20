@@ -24,14 +24,22 @@ ClientEvents.highPriorityAssets(event => {
      * @param {string} categoryDescription 
      * @param {Internal.ItemStack} categoryIcon 
      * @param {number} sortNumber 
+     * @param {string} flags
      */
     function headCategory(
-        categoryResourceName, categoryName, categoryDescription, categoryIcon, sortNumber) {
+        categoryResourceName,
+        categoryName,
+        categoryDescription,
+        categoryIcon,
+        sortNumber,
+        flags
+    ) {
         event.add(`patchouli:patchouli_books/tome_of_finality/en_us/categories/${categoryResourceName}/${categoryResourceName}`, {
             "name": categoryName,
             "description": categoryDescription,
             "icon": categoryIcon,
-            "sortnum": sortNumber
+            "sortnum": sortNumber,
+            "flag": flags
         })
     }
     /**
@@ -42,6 +50,12 @@ ClientEvents.highPriorityAssets(event => {
      * @param {Internal.ItemStack} categoryIcon 
      * @param {string} categoryDescription 
      * @param {ResourceLocation_} parent 
+     * @param {string} flags
+     * @example flag examples
+     * "debug": Is true when the game is being loaded from an IDE Debug mode
+     * "advancements_disabled": Is true when the "Disable Advancement Locking" option in the Patchouli config is true
+     * "testing_mode": Is true when the "Testing Mode" option in the Patchouli config is true
+     * "mod:MOD_ID": Is true when the mod mod_id is loaded in the game
      */
     function subCategory(categoryFolder, fileName, categoryName, categoryDescription, categoryIcon, parent) {
         event.add(`patchouli:patchouli_books/tome_of_finality/en_us/categories/${categoryFolder}/${fileName}`, {
@@ -60,15 +74,15 @@ ClientEvents.highPriorityAssets(event => {
      * @param {com.google.gson.JsonElement_} entryContents 
      */
     function entry(resourcePath, entryName, entryIcon, entryCategory, entryContents) {
-        event.add(`kubejs:patchouli_books/tome_of_finality/en_us/entries/${resourcePath}`, {
+        event.add(`patchouli:patchouli_books/tome_of_finality/en_us/entries/${resourcePath}`, {
             "name": entryName,
             "icon": entryIcon,
-            "category": `kubejs:${entryCategory}`,
+            "category": `patchouli:${entryCategory}`,
             "pages": entryContents
         })
     }
     // categories
-    headCategory('adventure', 'Adventure', 'For all your adventuring and combat needs.', 'minecraft:iron_sword', 2)
+    headCategory('adventure', 'Adventure', 'For all your adventuring and combat needs.', 'minecraft:iron_sword', 2, 'mod:aquamirae')
     subCategory('adventure', 'aquamirae', 'Aquamirae',
         'This entry contains information on the mini-bosses and bosses of Aquamirae and is not spoiler free! Entities displayed here have been set to a scale of 0.75 and do not reflect their actual size in-game. $(br2)Notice: The Harbinger and Leviathan are 1.19+ exclusive along with their tools.',
         'aquamirae:rune_of_the_storm',
