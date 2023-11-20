@@ -50,6 +50,26 @@ MoreJSEvents.wandererTrades(event => {
             'minecraft:emerald'
         ], 'caupona:wolfberry_sapling')
     }
+    if (Platform.isLoaded('fruittrees')) {
+        let fruittrees_saplings = [
+            'cherry',
+            'redlove',
+            'mandarin',
+            'lime',
+            'citron',
+            'pomelo',
+            'orange',
+            'lemon',
+            'grapefruit',
+            'apple'
+        ]
+        fruittrees_saplings.forEach(tree => {
+            event.addTrade(1, [
+                '8x minecraft:bread',
+                'minecraft:emerald'
+            ], `fruittrees:${tree}_sapling`)
+        })
+    }
     if (Platform.isLoaded('malum')) {
         event.addTrade(1, [
             'kubejs:deepslate_shard',

@@ -1242,7 +1242,9 @@ PlayerEvents.tick(check => {
                     check.player.potionEffects.add(
                         sets[armorSet].effects[x].effect,
                         sets[armorSet].effects[x].duration,
-                        sets[armorSet].effects[x].amplifier
+                        sets[armorSet].effects[x].amplifier,
+                        false,
+                        false
                     );
                 }
             }

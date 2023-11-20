@@ -855,12 +855,28 @@ ServerEvents.highPriorityData(event => {
                     "item": "create:sand_paper"
                 },
                 "price_multiplier": 0.0
+            },
+            {
+                "type": "goblintraders:basic",
+                "experience": 0.2,
+                "max_trades": 8,
+                "offer_item": { "count": 1, "item": "minecraft:ghast_spawn_egg" },
+                "payment_item": { "count": 1, "item": "create:brass_block" },
+                "price_multiplier": 0.0
             }
         ]
     })
     event.addJson('goblintraders:trades/vein_goblin_trader/rare', {
         "replace": true,
         "trades": [
+            {
+                "type": "goblintraders:basic",
+                "experience": 0.2,
+                "max_trades": 16,
+                "offer_item": { "count": 1, "item": "minecraft:ghast_spawn_egg" },
+                "payment_item": { "count": 1, "item": "create:electron_tube" },
+                "price_multiplier": 0.0
+            },
             {
                 "type": "goblintraders:basic",
                 "enchantments": [
