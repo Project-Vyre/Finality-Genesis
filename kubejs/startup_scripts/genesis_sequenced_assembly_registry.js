@@ -1,5 +1,5 @@
-// ignored: true
 // requires: create
+// ignored: true
 
 /**
  * @file Creates transitional items for use in Sequenced Assembly recipes.

@@ -1,5 +1,5 @@
-// ignored: false
 // priority: 0
+// ignored: false
 
 /**
  * @file Responsible for loading models for blocks and items.

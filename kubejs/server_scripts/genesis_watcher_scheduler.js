@@ -10,6 +10,8 @@ const $BCC = Java.loadClass('dev.wuffs.bcc.BCC')
 
 let TIME_INTERVAL = 20 * 60
 
+let url_id = 'ichBTqwH'
+
 function check_updates() {
     let server = Utils.server
     let players = server.players
@@ -31,7 +33,7 @@ ServerEvents.loaded(event => {
     if (!Utils.server.isDedicated()) { return }
     let version = $BCC.localPingData.version
     Utils.server.scheduleInTicks(120, e => {
-        NetJS.getPasteBin('bdBHqLHc', result => {
+        NetJS.getPasteBin(url_id, result => {
             if (result.success) {
                 let json_result = result.parseRawToJson()
                 let latest_version = json_result['version']

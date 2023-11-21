@@ -10,6 +10,7 @@
 const $BCC = Java.loadClass('dev.wuffs.bcc.BCC')
 // const $ConfirmScreen = Java.loadClass('net.minecraft.client.gui.screens.ConfirmScreen')
 let modpack_name = 'Finality Genesis'
+let url_id = 'ichBTqwH'
 
 NetworkEvents.dataReceived('update_notifier_check', event => {
     check_updates()
@@ -23,7 +24,7 @@ function check_updates() {
     if (!("is_notified_at_this_launch" in current)) { current["is_notified_at_this_launch"] = false }
     JsonIO.write('kubejs/update_notifier.json', current)
     if (current["is_notified_at_this_launch"]) { return }
-    NetJS.getPasteBin('bdBHqLHc', result => {
+    NetJS.getPasteBin(url_id, result => {
         if (result.success) {
             let json_result = result.parseRawToJson()
             let latest_version = json_result['version']

@@ -1,6 +1,6 @@
-// ignored: false
 // priority: 0
 // requires: create
+// ignored: false
 
 /**
  * @file Everything lang file related.

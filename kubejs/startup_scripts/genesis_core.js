@@ -1,6 +1,5 @@
 // priority: 0
 // requires: create
-// requires: cataclysm
 
 /**
  * @file The core registry, responsible for items, blocks, fluids, etc.

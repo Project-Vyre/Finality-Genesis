@@ -1,5 +1,5 @@
-// ignored: true
 // requires: patchouli
+// ignored: true
 
 /**
  * @file Patchouli assets handler.
