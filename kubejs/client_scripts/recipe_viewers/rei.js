@@ -1,6 +1,7 @@
 // priority: 3
 // requires: roughlyenoughitems
 // requires: roughlyenoughresources
+// requires: create
 
 /**
  * @file Responsible for handling REI grouping, hiding, adding, etc.
@@ -167,10 +168,14 @@ REIEvents.hide('item', event => {
         event.hide(`create:crushed_raw_${ore}`)
     })
 
-    event.hide([
-        /^create_central_kitchen.*[_:\/]incomplete(?![a-zA-Z0-9]).*/,
-        /^createcafe.*[_:\/]incomplete(?![a-zA-Z0-9]).*/
-    ])
+    if (Platform.isLoaded('create_central_kitchen')
+        && Platform.isLoaded('createcafe')
+    ) {
+        event.hide([
+            /^create_central_kitchen.*[_:\/]incomplete(?![a-zA-Z0-9]).*/,
+            /^createcafe.*[_:\/]incomplete(?![a-zA-Z0-9]).*/
+        ])
+    }
 
     if (Platform.isLoaded('abnormals_delight')) {
         event.hide('abnormals_delight:laurel_cabinet')
@@ -302,6 +307,10 @@ REIEvents.hide('item', event => {
             'mysticalagradditions:nitro_crystal_crux'
         ])
     }
+
+    if (Platform.isLoaded('malum') && Platform.isLoaded('create')) {
+        event.hide('malum:copper_nugget')
+    }
     // developer tools hidden
     event.hide([
         /^citadel.*[_:\/]item(?![a-zA-Z0-9]).*/,
@@ -315,9 +324,11 @@ REIEvents.hide('item', event => {
 })
 
 REIEvents.hide('fluid', event => {
-    MYS_FLUID_HIDE.forEach(name => {
-        event.hide(`mysticalagradditions:${name}`)
-    })
+    if (Platform.isLoaded('mysticalagradditions')) {
+        MYS_FLUID_HIDE.forEach(name => {
+            event.hide(`mysticalagradditions:${name}`)
+        })
+    }
     if (Platform.isLoaded('decorative_blocks')) {
         event.hide('decorative_blocks:thatch')
     }
@@ -624,54 +635,57 @@ REIEvents.groupEntries(event => {
     event.groupItemsByTag('minecraft:rei_groups/shulker_boxes', 'Shulker Boxes', 'minecraft:shulker_boxes')
     event.groupItemsByTag('minecraft:rei_groups/banners', 'Minecraft Banners', 'minecraft:banners')
     event.groupItems('minecraft:rei_groups/infested_blocks', 'Minecraft Infested Blocks', /^$minecraft.*[_:\/]infested(?![a-zA-Z0-9]).*/)
-    event.groupItemsIf('kubejs:rei_groups/concrete_singularities', 'Concrete Singularities', Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id.includes('concrete_')))
-    event.groupItemsIf('kubejs:rei_groups/minecraft_valued_singularities', 'Minecraft Valued Singularities', [
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:lapis_lazuli')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:redstone')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:diamond')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:iron')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:gold')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:emerald')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:copper')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:amethyst')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:coal')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:quartz')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:netherite'))
-    ])
-    event.groupItemsIf('kubejs:rei_groups/minecraft_dimensional_singularities', 'Minecraft Dimensional Singularities', [
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:soul_sand')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:soul_soil')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:end_crystal'))
-    ])
-    event.groupItemsIf('kubejs:rei_groups/minecraft_natural_singularities', 'Minecraft Natural Singularities', [
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:coarse_dirt')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:cobblestone')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sand')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:red_sand')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:honey')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:blue_ice')),
-    ])
-    event.groupItemsIf('kubejs:rei_groups/minecraft_miscellaneous_singularities', 'Minecraft Miscellaneous Singularities', [
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:gunpowder')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:ender_pearl')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sea_lantern')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:tinted_glass')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:glowstone')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sea_lantern'))
-    ])
-    event.groupItemsIf('kubejs:rei_groups/create_singularities', 'Create Singularities', [
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:precision_mechanism')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:framed_glass')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:electron_tube')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:rose_quartz')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:chocolate')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:andesite_alloy')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:zinc')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:brass')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sturdy_sheet')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:train_track')),
-        Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:builders_tea'))
-    ])
+    event.groupItemsByTag('kubejs:rei_groups/all_normal_signs', 'All Normal Signs', 'minecraft:signs')
+    if (Platform.isLoaded('extendedcrafting')) {
+        event.groupItemsIf('kubejs:rei_groups/concrete_singularities', 'Concrete Singularities', Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id.includes('concrete_')))
+        event.groupItemsIf('kubejs:rei_groups/minecraft_valued_singularities', 'Minecraft Valued Singularities', [
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:lapis_lazuli')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:redstone')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:diamond')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:iron')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:gold')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:emerald')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:copper')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:amethyst')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:coal')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:quartz')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:netherite'))
+        ])
+        event.groupItemsIf('kubejs:rei_groups/minecraft_dimensional_singularities', 'Minecraft Dimensional Singularities', [
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:soul_sand')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:soul_soil')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:end_crystal'))
+        ])
+        event.groupItemsIf('kubejs:rei_groups/minecraft_natural_singularities', 'Minecraft Natural Singularities', [
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:coarse_dirt')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:cobblestone')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sand')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:red_sand')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:honey')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:blue_ice')),
+        ])
+        event.groupItemsIf('kubejs:rei_groups/minecraft_miscellaneous_singularities', 'Minecraft Miscellaneous Singularities', [
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:gunpowder')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:ender_pearl')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sea_lantern')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:tinted_glass')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:glowstone')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sea_lantern'))
+        ])
+        event.groupItemsIf('kubejs:rei_groups/create_singularities', 'Create Singularities', [
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:precision_mechanism')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:framed_glass')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:electron_tube')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:rose_quartz')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:chocolate')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:andesite_alloy')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:zinc')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:brass')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sturdy_sheet')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:train_track')),
+            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:builders_tea'))
+        ])
+    }
     event.groupItems('create:rei_groups/colored_valve_handles', 'Colored Valve Handles', [
         'create:black_valve_handle',
         'create:blue_valve_handle',
@@ -692,204 +706,219 @@ REIEvents.groupEntries(event => {
     ])
     event.groupItemsByTag('create:rei_groups/toolboxes', 'Create Toolboxes', 'create:toolboxes')
     event.groupItemsByTag('create:rei_groups/seats', 'Create Seats', 'create:seats')
-    event.groupItemsByTag('farmersdelight:rei_groups/canvas_signs', 'Canvas Signs', 'farmersdelight:canvas_signs')
-    event.groupItemsByTag('supplementaries:rei_groups/hanging_signs', 'Hanging Signs', 'supplementaries:hanging_signs')
-    event.groupItemsByTag('supplementaries:rei_groups/sign_posts', 'Sign Posts', 'supplementaries:sign_posts')
-    event.groupItemsByTag('kubejs:rei_groups/all_normal_signs', 'All Normal Signs', 'minecraft:signs')
-    // caupona calcite columns
-    event.groupItems('caupona:rei_groups/fluted_calcite_column', 'Fluted Calcite Column Components', [
-        'caupona:calcite_acanthine_column_capital',
-        'caupona:calcite_ionic_column_capital',
-        'caupona:calcite_column_fluted_shaft',
-        'caupona:calcite_column_fluted_plinth'
-    ])
-    event.groupItems('caupona:rei_groups/smooth_calcite_column', 'Calcite Column Components', [
-        'caupona:calcite_tuscan_column_capital',
-        'caupona:calcite_column_shaft',
-        'caupona:calcite_column_plinth'
-    ])
-    // caupona stone columns
-    event.groupItems('caupona:rei_groups/fluted_stone_column', 'Fluted Stone Column Components', [
-        'caupona:stone_acanthine_column_capital',
-        'caupona:stone_ionic_column_capital',
-        'caupona:stone_column_fluted_shaft',
-        'caupona:stone_column_fluted_plinth'
-    ])
-    event.groupItems('caupona:rei_groups/smooth_stone_column', 'Smooth Stone Column Components', [
-        'caupona:stone_tuscan_column_capital',
-        'caupona:stone_column_shaft',
-        'caupona:stone_column_plinth'
-    ])
-    // caupona felsic tuff column
-    event.groupItems('caupona:rei_groups/fluted_felsic_tuff_column', 'Fluted Felsic Tuff Column Components', [
-        'caupona:felsic_tuff_acanthine_column_capital',
-        'caupona:felsic_tuff_ionic_column_capital',
-        'caupona:felsic_tuff_column_fluted_shaft',
-        'caupona:felsic_tuff_column_fluted_plinth'
-    ])
-    event.groupItems('caupona:rei_groups/smooth_felsic_tuff_column', 'Felsic Tuff Column Components', [
-        'caupona:felsic_tuff_tuscan_column_capital',
-        'caupona:felsic_tuff_column_shaft',
-        'caupona:felsic_tuff_column_plinth'
-    ])
-    // caupona quartz column
-    event.groupItems('caupona:rei_groups/fluted_quartz_column', 'Fluted Quartz Column Components', [
-        'caupona:quartz_acanthine_column_capital',
-        'caupona:quartz_ionic_column_capital',
-        'caupona:quartz_column_fluted_shaft',
-        'caupona:quartz_column_fluted_plinth'
-    ])
-    event.groupItems('caupona:rei_groups/smooth_quartz_column', 'Smooth Quartz Column', [
-        'caupona:quartz_tuscan_column_capital',
-        'caupona:quartz_column_shaft',
-        'caupona:quartz_column_plinth'
-    ])
-    event.groupItemsByTag('caupona:rei_groups/aspics', 'Aspics', 'caupona:aspics')
-    event.groupItemsByTag('caupona:rei_groups/stews', 'Stews', 'caupona:stews')
-    // caupona frying utilities
-    event.groupItems('capona:rei_groups/frying_utilities', 'Frying Utilities', [
-        'caupona:stone_griddle',
-        'caupona:copper_frying_pan',
-        'caupona:iron_frying_pan',
-    ])
-    // caupona mud and drystone palette utilities (not same format)
-    event.groupItems('capona:rei_groups/mud_kitchen_palette', 'Mud and Drystone Utilities', [
-        'caupona:mud_kitchen_stove',
-        'caupona:mud_counter',
-        'caupona:mud_counter_with_dolium',
-    ])
-    event.groupItems('caupona:rei_groups/mud_chimney_components', 'Mud and Drystone Utilities', [
-        'caupona:mud_chimney_flue',
-        'caupona:mud_chimney_pot'
-    ])
-    // caupona brick palette utilities
-    event.groupItems('capona:rei_groups/brick_kitchen_palette', 'Brick Kitchen Utilities', [
-        'caupona:brick_kitchen_stove',
-        'caupona:brick_counter',
-        'caupona:brick_counter_with_dolium',
-    ])
-    event.groupItems('caupona:rei_groups/brick_chimney_components', 'Brick Chimney Utilities', [
-        'caupona:brick_chimney_flue',
-        'caupona:brick_chimney_pot'
-    ])
-    event.groupItems('caupona:rei_groups/brick_bath_components', 'Brick Bath Components', [
-        'caupona:brick_caliduct',
-        'caupona:brick_hypocaust_firebox'
-    ])
-    // caupona opus incertum palette utilities
-    event.groupItems('capona:rei_groups/opus_incertum_kitchen_palette', 'Opus Incertum Kitchen Utilities', [
-        'caupona:opus_incertum_kitchen_stove',
-        'caupona:opus_incertum_counter',
-        'caupona:opus_incertum_counter_with_dolium',
-    ])
-    event.groupItems('caupona:rei_groups/opus_incertum_chimney_components', 'Opus Incertum Chimney Utilities', [
-        'caupona:opus_incertum_chimney_flue',
-        'caupona:opus_incertum_chimney_pot'
-    ])
-    event.groupItems('caupona:rei_groups/opus_incertum_bath_components', 'Opus Incertum Bath Components', [
-        'caupona:opus_incertum_caliduct',
-        'caupona:opus_incertum_hypocaust_firebox'
-    ])
-    // caupona opus latericium palette utilities
-    event.groupItems('capona:rei_groups/opus_latericium_kitchen_palette', 'Opus Latericium Kitchen Utilities', [
-        'caupona:opus_latericium_kitchen_stove',
-        'caupona:opus_latericium_counter',
-        'caupona:opus_latericium_counter_with_dolium',
-    ])
-    event.groupItems('caupona:rei_groups/opus_latericium_chimney_components', 'Opus Latericium Chimney Utilities', [
-        'caupona:opus_latericium_chimney_flue',
-        'caupona:opus_latericium_chimney_pot'
-    ])
-    event.groupItems('caupona:rei_groups/opus_latericium_bath_components', 'Opus Latericium Bath Components', [
-        'caupona:opus_latericium_caliduct',
-        'caupona:opus_latericium_hypocaust_firebox'
-    ])
-    // caupona stone brick palette utilities
-    event.groupItems('capona:rei_groups/stone_brick_kitchen_palette', 'Stone Brick Kitchen Utilities', [
-        'caupona:stone_brick_kitchen_stove',
-        'caupona:stone_brick_counter',
-        'caupona:stone_brick_counter_with_dolium',
-    ])
-    event.groupItems('caupona:rei_groups/stone_brick_chimney_components', 'Stone Brick Chimney Utilities', [
-        'caupona:stone_brick_chimney_flue',
-        'caupona:stone_brick_chimney_pot'
-    ])
-    event.groupItems('caupona:rei_groups/stone_brick_bath_components', 'Stone Brick Bath Components', [
-        'caupona:stone_brick_caliduct',
-        'caupona:stone_brick_hypocaust_firebox'
-    ])
-    event.groupItems('createcafe:rei_groups/createcafe_all_items', 'Create Cafe Items', [/^(createcafe:).*$/])
-    event.groupFluids('createcafe:rei_groups/createcafe_other_fluids', 'Create Cafe Basic Fluids', [
-        'createcafe:melted_sugar',
-        'createcafe:filling',
-        'createcafe:coffee'
-    ])
-    event.groupFluids('createcafe:rei_groups/createcafe_all_tea', 'Create Cafe Tea', [
-        'createcafe:oreo_tea',
-        'createcafe:mango_tea',
-        'createcafe:lime_tea',
-        'createcafe:lychee_tea',
-        'createcafe:kiwi_tea',
-        'createcafe:mana_tea',
-        'createcafe:blood_tea',
-        'createcafe:lemon_tea',
-        'createcafe:watermelon_tea',
-        'createcafe:strawberry_tea',
-        'createcafe:blueberry_tea',
-        'createcafe:vanilla_tea',
-        'createcafe:orange_tea',
-        'createcafe:peach_tea',
-        'createcafe:pineapple_tea',
-        'createcafe:banana_tea',
-        'createcafe:yucca_tea',
-        'createcafe:cherry_tea',
-        'createcafe:plum_tea',
-        'createcafe:aloe_tea',
-        'createcafe:apple_tea',
-        'createcafe:blackberry_tea',
-        'createcafe:pumpkin_tea',
-        'createcafe:jackfruit_tea',
-        'createcafe:coconut_tea',
-        'createcafe:dragonfruit_tea',
-        'createcafe:apricot_tea',
-        'createcafe:avocado_tea',
-        'createcafe:sweetberry_tea',
-        'createcafe:durian_tea',
-        'createcafe:fig_tea',
-        'createcafe:tamarind_tea',
-        'createcafe:gooseberry_tea',
-        'createcafe:grape_tea',
-        'createcafe:grapefruit_tea',
-        'createcafe:papaya_tea',
-        'createcafe:guava_tea',
-        'createcafe:passionfruit_tea',
-        'createcafe:pomegranate_tea',
-        'createcafe:persimmon_tea',
-        'createcafe:raspberry_tea',
-        'createcafe:starfruit_tea',
-        'createcafe:lavender_tea',
-        'createcafe:pomelo_tea',
-        'createcafe:mandarin_tea',
-        'createcafe:citron_tea',
-        'createcafe:redlove_tea',
-        'createcafe:barberry_tea',
-    ])
-    event.groupFluids('createcafe:rei_groups/createcafe_all_fluids', 'Create Cafe Syrup', [
-        'createcafe:strawberry_syrup',
-        'createcafe:vanilla_syrup',
-        'createcafe:raspberry_syrup',
-        'createcafe:mint_syrup',
-        'createcafe:caramel_syrup',
-        'createcafe:coconut_syrup',
-        'createcafe:banana_syrup',
-    ])
-    event.groupItems('sliceanddice:rei_groups/create_sliceanddice_all', 'Create Slice and Dice', [/^(sliceanddice:).*$/])
-    event.groupItems('createdeco:rei_groups/create_deco_all', 'Create Deco', [/^(createdeco:).*$/])
-    event.groupItems('chalk:rei_groups/chalk_all', 'All Chalks', [/^(chalk:).*(_chalk)$/])
-    event.groupSameItem('enderchests:rei_groups/shetiphian_enderchests', 'All Ender Chests', 'enderchests:ender_chest')
-    event.groupSameItem('enderchests:rei_groups/shetiphian_enderchests_pouches', 'All Ender Pouches', 'enderchests:ender_pouch')
-    event.groupSameItem('endertanks:rei_groups/shetiphian_endertanks', 'All Ender Tanks', 'endertanks:ender_tank')
-    event.groupSameItem('endertanks:rei_groups/shetiphian_endertanks_buckets', 'All Ender Buckets', 'endertanks:ender_bucket')
+    if (Platform.isLoaded('farmersdelight')) {
+        event.groupItemsByTag('farmersdelight:rei_groups/canvas_signs', 'Canvas Signs', 'farmersdelight:canvas_signs')
+    }
+    if (Platform.isLoaded('supplementaries')) {
+        event.groupItemsByTag('supplementaries:rei_groups/hanging_signs', 'Hanging Signs', 'supplementaries:hanging_signs')
+        event.groupItemsByTag('supplementaries:rei_groups/sign_posts', 'Sign Posts', 'supplementaries:sign_posts')
+    }
+    if (Platform.isLoaded('chalk')) {
+        event.groupItems('chalk:rei_groups/chalk_all', 'All Chalks', [/^(chalk:).*(_chalk)$/])
+    }
+    if (Platform.isLoaded('caupona')) {
+        // caupona calcite columns
+        event.groupItems('caupona:rei_groups/fluted_calcite_column', 'Fluted Calcite Column Components', [
+            'caupona:calcite_acanthine_column_capital',
+            'caupona:calcite_ionic_column_capital',
+            'caupona:calcite_column_fluted_shaft',
+            'caupona:calcite_column_fluted_plinth'
+        ])
+        event.groupItems('caupona:rei_groups/smooth_calcite_column', 'Calcite Column Components', [
+            'caupona:calcite_tuscan_column_capital',
+            'caupona:calcite_column_shaft',
+            'caupona:calcite_column_plinth'
+        ])
+        // caupona stone columns
+        event.groupItems('caupona:rei_groups/fluted_stone_column', 'Fluted Stone Column Components', [
+            'caupona:stone_acanthine_column_capital',
+            'caupona:stone_ionic_column_capital',
+            'caupona:stone_column_fluted_shaft',
+            'caupona:stone_column_fluted_plinth'
+        ])
+        event.groupItems('caupona:rei_groups/smooth_stone_column', 'Smooth Stone Column Components', [
+            'caupona:stone_tuscan_column_capital',
+            'caupona:stone_column_shaft',
+            'caupona:stone_column_plinth'
+        ])
+        // caupona felsic tuff column
+        event.groupItems('caupona:rei_groups/fluted_felsic_tuff_column', 'Fluted Felsic Tuff Column Components', [
+            'caupona:felsic_tuff_acanthine_column_capital',
+            'caupona:felsic_tuff_ionic_column_capital',
+            'caupona:felsic_tuff_column_fluted_shaft',
+            'caupona:felsic_tuff_column_fluted_plinth'
+        ])
+        event.groupItems('caupona:rei_groups/smooth_felsic_tuff_column', 'Felsic Tuff Column Components', [
+            'caupona:felsic_tuff_tuscan_column_capital',
+            'caupona:felsic_tuff_column_shaft',
+            'caupona:felsic_tuff_column_plinth'
+        ])
+        // caupona quartz column
+        event.groupItems('caupona:rei_groups/fluted_quartz_column', 'Fluted Quartz Column Components', [
+            'caupona:quartz_acanthine_column_capital',
+            'caupona:quartz_ionic_column_capital',
+            'caupona:quartz_column_fluted_shaft',
+            'caupona:quartz_column_fluted_plinth'
+        ])
+        event.groupItems('caupona:rei_groups/smooth_quartz_column', 'Smooth Quartz Column', [
+            'caupona:quartz_tuscan_column_capital',
+            'caupona:quartz_column_shaft',
+            'caupona:quartz_column_plinth'
+        ])
+        event.groupItemsByTag('caupona:rei_groups/aspics', 'Aspics', 'caupona:aspics')
+        event.groupItemsByTag('caupona:rei_groups/stews', 'Stews', 'caupona:stews')
+        // caupona frying utilities
+        event.groupItems('capona:rei_groups/frying_utilities', 'Frying Utilities', [
+            'caupona:stone_griddle',
+            'caupona:copper_frying_pan',
+            'caupona:iron_frying_pan',
+        ])
+        // caupona mud and drystone palette utilities (not same format)
+        event.groupItems('capona:rei_groups/mud_kitchen_palette', 'Mud and Drystone Utilities', [
+            'caupona:mud_kitchen_stove',
+            'caupona:mud_counter',
+            'caupona:mud_counter_with_dolium',
+        ])
+        event.groupItems('caupona:rei_groups/mud_chimney_components', 'Mud and Drystone Utilities', [
+            'caupona:mud_chimney_flue',
+            'caupona:mud_chimney_pot'
+        ])
+        // caupona brick palette utilities
+        event.groupItems('capona:rei_groups/brick_kitchen_palette', 'Brick Kitchen Utilities', [
+            'caupona:brick_kitchen_stove',
+            'caupona:brick_counter',
+            'caupona:brick_counter_with_dolium',
+        ])
+        event.groupItems('caupona:rei_groups/brick_chimney_components', 'Brick Chimney Utilities', [
+            'caupona:brick_chimney_flue',
+            'caupona:brick_chimney_pot'
+        ])
+        event.groupItems('caupona:rei_groups/brick_bath_components', 'Brick Bath Components', [
+            'caupona:brick_caliduct',
+            'caupona:brick_hypocaust_firebox'
+        ])
+        // caupona opus incertum palette utilities
+        event.groupItems('capona:rei_groups/opus_incertum_kitchen_palette', 'Opus Incertum Kitchen Utilities', [
+            'caupona:opus_incertum_kitchen_stove',
+            'caupona:opus_incertum_counter',
+            'caupona:opus_incertum_counter_with_dolium',
+        ])
+        event.groupItems('caupona:rei_groups/opus_incertum_chimney_components', 'Opus Incertum Chimney Utilities', [
+            'caupona:opus_incertum_chimney_flue',
+            'caupona:opus_incertum_chimney_pot'
+        ])
+        event.groupItems('caupona:rei_groups/opus_incertum_bath_components', 'Opus Incertum Bath Components', [
+            'caupona:opus_incertum_caliduct',
+            'caupona:opus_incertum_hypocaust_firebox'
+        ])
+        // caupona opus latericium palette utilities
+        event.groupItems('capona:rei_groups/opus_latericium_kitchen_palette', 'Opus Latericium Kitchen Utilities', [
+            'caupona:opus_latericium_kitchen_stove',
+            'caupona:opus_latericium_counter',
+            'caupona:opus_latericium_counter_with_dolium',
+        ])
+        event.groupItems('caupona:rei_groups/opus_latericium_chimney_components', 'Opus Latericium Chimney Utilities', [
+            'caupona:opus_latericium_chimney_flue',
+            'caupona:opus_latericium_chimney_pot'
+        ])
+        event.groupItems('caupona:rei_groups/opus_latericium_bath_components', 'Opus Latericium Bath Components', [
+            'caupona:opus_latericium_caliduct',
+            'caupona:opus_latericium_hypocaust_firebox'
+        ])
+        // caupona stone brick palette utilities
+        event.groupItems('capona:rei_groups/stone_brick_kitchen_palette', 'Stone Brick Kitchen Utilities', [
+            'caupona:stone_brick_kitchen_stove',
+            'caupona:stone_brick_counter',
+            'caupona:stone_brick_counter_with_dolium',
+        ])
+        event.groupItems('caupona:rei_groups/stone_brick_chimney_components', 'Stone Brick Chimney Utilities', [
+            'caupona:stone_brick_chimney_flue',
+            'caupona:stone_brick_chimney_pot'
+        ])
+        event.groupItems('caupona:rei_groups/stone_brick_bath_components', 'Stone Brick Bath Components', [
+            'caupona:stone_brick_caliduct',
+            'caupona:stone_brick_hypocaust_firebox'
+        ])
+    }
+    if (Platform.isLoaded('createcafe')) {
+        event.groupItems('createcafe:rei_groups/createcafe_all_items', 'Create Cafe Items', [/^(createcafe:).*$/])
+        event.groupFluids('createcafe:rei_groups/createcafe_other_fluids', 'Create Cafe Basic Fluids', [
+            'createcafe:melted_sugar',
+            'createcafe:filling',
+            'createcafe:coffee'
+        ])
+        event.groupFluids('createcafe:rei_groups/createcafe_all_tea', 'Create Cafe Tea', [
+            'createcafe:oreo_tea',
+            'createcafe:mango_tea',
+            'createcafe:lime_tea',
+            'createcafe:lychee_tea',
+            'createcafe:kiwi_tea',
+            'createcafe:mana_tea',
+            'createcafe:blood_tea',
+            'createcafe:lemon_tea',
+            'createcafe:watermelon_tea',
+            'createcafe:strawberry_tea',
+            'createcafe:blueberry_tea',
+            'createcafe:vanilla_tea',
+            'createcafe:orange_tea',
+            'createcafe:peach_tea',
+            'createcafe:pineapple_tea',
+            'createcafe:banana_tea',
+            'createcafe:yucca_tea',
+            'createcafe:cherry_tea',
+            'createcafe:plum_tea',
+            'createcafe:aloe_tea',
+            'createcafe:apple_tea',
+            'createcafe:blackberry_tea',
+            'createcafe:pumpkin_tea',
+            'createcafe:jackfruit_tea',
+            'createcafe:coconut_tea',
+            'createcafe:dragonfruit_tea',
+            'createcafe:apricot_tea',
+            'createcafe:avocado_tea',
+            'createcafe:sweetberry_tea',
+            'createcafe:durian_tea',
+            'createcafe:fig_tea',
+            'createcafe:tamarind_tea',
+            'createcafe:gooseberry_tea',
+            'createcafe:grape_tea',
+            'createcafe:grapefruit_tea',
+            'createcafe:papaya_tea',
+            'createcafe:guava_tea',
+            'createcafe:passionfruit_tea',
+            'createcafe:pomegranate_tea',
+            'createcafe:persimmon_tea',
+            'createcafe:raspberry_tea',
+            'createcafe:starfruit_tea',
+            'createcafe:lavender_tea',
+            'createcafe:pomelo_tea',
+            'createcafe:mandarin_tea',
+            'createcafe:citron_tea',
+            'createcafe:redlove_tea',
+            'createcafe:barberry_tea',
+        ])
+        event.groupFluids('createcafe:rei_groups/createcafe_all_fluids', 'Create Cafe Syrup', [
+            'createcafe:strawberry_syrup',
+            'createcafe:vanilla_syrup',
+            'createcafe:raspberry_syrup',
+            'createcafe:mint_syrup',
+            'createcafe:caramel_syrup',
+            'createcafe:coconut_syrup',
+            'createcafe:banana_syrup',
+        ])
+    }
+    if (Platform.isLoaded('createdeco')) {
+        event.groupItems('createdeco:rei_groups/create_deco_all', 'Create Deco', [/^(createdeco:).*$/])
+    }
+    if (Platform.isLoaded('sliceanddice')) {
+        event.groupItems('sliceanddice:rei_groups/create_sliceanddice_all', 'Create Slice and Dice', [/^(sliceanddice:).*$/])
+    }
+    if (Platform.isLoaded('enderchests') && Platform.isLoaded('endertanks')) {
+        event.groupSameItem('enderchests:rei_groups/shetiphian_enderchests', 'All Ender Chests', 'enderchests:ender_chest')
+        event.groupSameItem('enderchests:rei_groups/shetiphian_enderchests_pouches', 'All Ender Pouches', 'enderchests:ender_pouch')
+        event.groupSameItem('endertanks:rei_groups/shetiphian_endertanks', 'All Ender Tanks', 'endertanks:ender_tank')
+        event.groupSameItem('endertanks:rei_groups/shetiphian_endertanks_buckets', 'All Ender Buckets', 'endertanks:ender_bucket')
+    }
     /**
      * @author Hunter19823 <https://github.com/Hunter19823> https://discord.com/channels/303440391124942858/1145987527073865779
      */
@@ -953,9 +982,6 @@ REIEvents.groupEntries(event => {
     }
     if (Platform.isLoaded('irons_spellbooks')) {
         event.groupSameItem('irons_spellbooks:rei_groups/all_scrolls', "All Iron's Spell Scrolls", 'irons_spellbooks:scroll')
-    }
-    if (Platform.isLoaded('malum') && Platform.isLoaded('create')) {
-        event.hide('malum:copper_nugget')
     }
     if (Platform.isLoaded('quark')) {
         event.groupItemsByTag('quark:rei_groups/quark_runes', 'Quark Runes', 'quark:runes')

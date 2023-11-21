@@ -2,6 +2,7 @@
 // requires: jei
 // requires: jeresources
 // requires: justenoughprofessions
+// requires: create
 
 /**
  * @file Responsible for handling JEI hiding, adding, etc.
@@ -205,14 +206,16 @@ JEIEvents.hideItems(event => {
 })
 
 JEIEvents.hideFluids(event => {
-    event.hide([
-        'mysticalagradditions:molten_inferium',
-        'mysticalagradditions:molten_prudentium',
-        'mysticalagradditions:molten_tertium',
-        'mysticalagradditions:molten_imperium',
-        'mysticalagradditions:molten_supremium',
-        'mysticalagradditions:molten_soulium'
-    ])
+    if (Platform.isLoaded('mysticalagradditions')) {
+        event.hide([
+            'mysticalagradditions:molten_inferium',
+            'mysticalagradditions:molten_prudentium',
+            'mysticalagradditions:molten_tertium',
+            'mysticalagradditions:molten_imperium',
+            'mysticalagradditions:molten_supremium',
+            'mysticalagradditions:molten_soulium'
+        ])
+    }
 })
 
 
