@@ -10,7 +10,7 @@ const $BCC = Java.loadClass('dev.wuffs.bcc.BCC')
 
 let TIME_INTERVAL = 20 * 60
 
-let url_id = 'ichBTqwH'
+let url_id = 'bdBHqLHc'
 
 function check_updates() {
     let server = Utils.server
