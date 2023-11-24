@@ -231,26 +231,21 @@ ServerEvents.recipes(event => {
         G: 'create:propeller'
     }).id('finality:mechanical_crafting/mobgrindingutils_fan')
 
-    event.custom({
-        tier: 2,
-        type: 'extendedcrafting:shaped_table',
-        pattern: [
-            'AAAAA',
-            'BCD B',
-            'BEFGB',
-            'BCD B',
-            'AAAAA'
-        ], key: {
-            A: Item.of("create:iron_sheet").toJson(),
-            B: Item.of("minecraft:iron_bars").toJson(),
-            C: Item.of("extendedcrafting:redstone_component").toJson(),
-            D: Item.of("extendedcrafting:black_iron_slate").toJson(),
-            E: Item.of("extendedcrafting:redstone_catalyst").toJson(),
-            F: Item.of("create:gantry_shaft").toJson(),
-            G: Item.of("create:propeller").toJson()
-        },
-        result: Item.of('mob_grinding_utils:fan').toJson()
-    }).id('finality:extendedcrafting/mobgrindingutils_fan')
+    event.recipes.extendedcrafting.shaped_table('mob_grinding_utils:fan', [
+        'AAAAA',
+        'BCD B',
+        'BEFGB',
+        'BCD B',
+        'AAAAA'
+    ], {
+        A: 'create:iron_sheet',
+        B: 'minecraft:iron_bars',
+        C: 'extendedcrafting:redstone_component',
+        D: 'extendedcrafting:black_iron_slate',
+        E: 'extendedcrafting:redstone_catalyst',
+        F: 'create:gantry_shaft',
+        G: 'create:propeller'
+    }).merge({ tier: 2 }).id('finality:extendedcrafting/mobgrindingutils_fan')
 
     event.shaped('mob_grinding_utils:saw', [
         'SDS',

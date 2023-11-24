@@ -13,30 +13,6 @@ let VANILLANOTSTANDARD = ['ender_pearl', 'gunpowder', 'sea_lantern', 'glowstone'
 let CREATEITEMS = ['electron_tube', 'rose_quartz']
 let CREATEVALUED = ['brass', 'zinc']
 
-/**
- * Generates a custom shaped recipe for the ExtendedCrafting mod.
- * 
- * @author tizu69 <https://github.com/tizu69>
- * @author CelestialAbyss <https://github.com/CelestialAbyss>
- * @param {Internal.RecipesEventJS} event - The event object
- * @param {string} output - The output, as an item ID string
- * @param {number} outputQuantity - The quantity of the output
- * @param {string[]} arrangement - The arrangement of the ingredients on the table
- * @param {object} ingredientKeys - The keys representing the ingredients on the table, like a crafting table recipe
- * @param {string} recipeId - The ID of the recipe
- * @param {boolean} lock - Whether the recipe should require a specified tier
- * @param {number?} tierNumber - Tier number 1-4
- */
-function extendedTable(event, output, outputQuantity, arrangement, ingredientKeys, recipeId, lock, tierNumber) {
-    event.custom({
-        type: 'extendedcrafting:shaped_table',
-        tier: lock ? tierNumber : 0,
-        pattern: arrangement,
-        key: ingredientKeys,
-        result: Item.of(output, outputQuantity).toJson(),
-    }).id(recipeId)
-}
-
 ServerEvents.recipes(event => {
     event.shapeless('extendedcrafting:black_iron_ingot', [
         'minecraft:iron_ingot',
@@ -60,13 +36,13 @@ ServerEvents.recipes(event => {
         'DAFNFAD',
         'DLLLLLD'
     ]
-    extendedTable(event, 'extendedcrafting:crystaltine_ingot', 4, material_crystaltine_pattern, {
+    event.recipes.extendedcrafting.shaped_table('4x extendedcrafting:crystaltine_ingot', material_crystaltine_pattern, {
         L: 'minecraft:lapis_lazuli',
         D: 'minecraft:diamond',
         A: 'minecraft:iron_ingot',
         N: 'minecraft:nether_star',
         F: 'minecraft:gold_ingot'
-    }, 'extendedcrafting:crystaltine_ingot')
+    }).id('extendedcrafting:crystaltine_ingot')
     event.recipes.create.mechanical_crafting('4x extendedcrafting:crystaltine_ingot', material_crystaltine_pattern, {
         L: 'minecraft:lapis_lazuli',
         D: 'minecraft:diamond',
@@ -82,10 +58,10 @@ ServerEvents.recipes(event => {
         'RRNRNRR',
         'RRRRRRR'
     ]
-    extendedTable(event, 'extendedcrafting:crystaltine_ingot', 4, radiant_crystaltine_pattern, {
+    event.recipes.extendedcrafting.shaped_table('4x extendedcrafting:crystaltine_ingot', radiant_crystaltine_pattern, {
         R: 'create:refined_radiance',
         N: 'minecraft:nether_star'
-    }, 'finality:extendedcrafting/crystaltine_ingot_alt')
+    }).id('finality:extendedcrafting/crystaltine_ingot_alt')
     event.recipes.create.mechanical_crafting('4x extendedcrafting:crystaltine_ingot', radiant_crystaltine_pattern, {
         R: 'create:refined_radiance',
         N: 'minecraft:nether_star'
@@ -585,4 +561,79 @@ ServerEvents.recipes(event => {
         event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:blueprint_shape']),
         event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:emitter_shape'])
     ]).transitionalItem('kubejs:incomplete_entropy_mechanism').loops(3).id('finality:sequenced_assembly/entropy_mechanism_creation')
+    console.log('Forcibly applying Ultimate Singularity recipe. If it is missing again, please report this to the GitHub Issue tracker, thank you.')
+    event.recipes.extendedcrafting.shapeless_table('extendedcrafting:ultimate_singularity', [
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_red"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_green"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_blue"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_white"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_cyan"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_yellow"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_magenta"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_black"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_pink"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_orange"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_gray"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_brown"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_light_gray"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_light_blue"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_lime"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_purple"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:lapis_lazuli"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:gunpowder"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:builders_tea"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:redstone"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:ender_pearl"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:diamond"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:iron"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:tinted_glass"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:electron_tube"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:emerald"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:chocolate"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:sturdy_sheet"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:brass"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:andesite_alloy"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:copper"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:end_crystal"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:amethyst"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:coarse_dirt"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:blue_ice"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:coal"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:zinc"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:sea_lantern"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:honey"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:sand"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:precision_mechanism"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:glowstone"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:rose_quartz"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:framed_glass"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:soul_sand"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:red_sand"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:soul_soil"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:netherite"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:train_track"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:cobblestone"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:quartz"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:gold"}').strongNBT(),
+    ]).merge({ tier: 4 }).id('kubejs:cucumber_library_failure')
+})
+
+ServerEvents.loaded(event => {
+    Utils.server.scheduleInTicks(130, t => {
+        t.server.tell([
+            Component.of('-----------------------------------------------------\n').darkAqua(),
+            Component.of('System: ').bold().green(),
+            Component.of('Forcibly applied Ultimate Singularity recipe.\n'),
+            Component.of('\nIf it is ever '),
+            Component.of('missing ').bold().red(),
+            Component.of('again, please report this to the\n'),
+            Component.of('[GitHub Issue tracker]')
+                .bold().yellow()
+                .hover('https://github.com/Project-Vyre/Finality-Genesis/issues')
+                .clickOpenUrl('https://github.com/Project-Vyre/Finality-Genesis/issues'),
+            Component.of(', thank you. '),
+            Component.of('- CelestialAbyss').lightPurple(),
+            Component.of('\n-----------------------------------------------------').darkAqua()
+        ])
+    })
 })

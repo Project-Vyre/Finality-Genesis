@@ -2,7 +2,7 @@
 #Settings for Singularities.
 [Singularities]
 	#Should the default recipe for the Ultimate Singularity be generated?
-	ultimateSingularityRecipe = true
+	ultimateSingularityRecipe = false
 	#The default amount of items required to create a Singularity.
 	#Range: > 1
 	defaultMaterialsRequired = 10000
