@@ -230,6 +230,8 @@ ClientEvents.highPriorityAssets(event => {
     createTip('windmill_radial_farm', 'A Windmill Bearing is an easy way to make a radial farm. Superglue is not needed if you are using Linear and Radial Chassis blocks, simply right click with a Slime Ball.')
     specialCreateTip('ponder', '<shake>Hold [w] to Ponder. PLEASE.</shake>')
     specialCreateTip('use_wrench_not_pickaxe', 'Remember to use your Wrench instead of your pickaxe when picking up most Create blocks!')
+    // thank you for bringing this up firekylea1205
+    createTip('mixer_minimum_rpm', 'Did you know the absolute minimum required RPM for Mechanical Mixers is actually 30 RPM? 32 RPM is more commonly known, however.')
     // create addons
     if (Platform.isLoaded('create_enchantment_indsutry')) {
         finTip('store_experience', 'Experience can be extracted using Disenchanters and then pumped into Fluid Tanks.')

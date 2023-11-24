@@ -365,7 +365,7 @@ ClientEvents.lang('en_us', event => {
     }
     if (Platform.isLoaded('malum')) {
         event.add('item.kubejs.final_scythe.tooltip.condition2', 'Soul Piercing')
-        event.add('item.kubejs.final_scythe.tooltip.condition2', "Has the ability to _shatter_ souls! Use with _caution_.")
+        event.add('item.kubejs.final_scythe.tooltip.behaviour2', "Has the ability to _shatter_ souls! Use with _caution_.")
         event.add('item.kubejs.final_katana.tooltip.condition2', 'Soul Piercing')
         event.add('item.kubejs.final_katana.tooltip.behaviour2', "Has the ability to _shatter_ souls! Use with _caution_.")
         event.addAll('malum', {
