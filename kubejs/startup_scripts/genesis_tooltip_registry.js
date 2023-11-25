@@ -1,5 +1,6 @@
 // priority: 1
 // requires: create
+// side: client
 
 console.log('Loaded Create tooltip registry.')
 
@@ -237,6 +238,9 @@ const $ItemDescription = Java.loadClass('com.simibubi.create.foundation.item.Ite
 const $TooltipModifier = Java.loadClass('com.simibubi.create.foundation.item.TooltipModifier')
 const $Palette = Java.loadClass('com.simibubi.create.foundation.item.TooltipHelper$Palette')
 
+if (Platform.isClientEnvironment()) {
+
+}
 ClientEvents.init(event => {
     STANDARD_PALETTE_REGISTRY.forEach(item => {
         STANDARD_PALETTE(item)
