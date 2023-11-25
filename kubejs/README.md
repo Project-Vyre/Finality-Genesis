@@ -1,5 +1,5 @@
 # Copyright Info
-Current keyholders are CelestialAbyss, squoshi and 
+Current keyholders are CelestialAbyss, squoshi and Skensian.
 
 ## Modpack Assets
 This includes scripts, models, pixel art and textures.
