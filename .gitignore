@@ -4,7 +4,6 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
-profile.json
 
 # Ignore folders 
 backups/
@@ -63,3 +62,4 @@ o_prof
 config/voicechat/username-cache.json
 blacksmith.jar
 config/aether/aether_customizations.txt
+profile.json
