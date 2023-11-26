@@ -10,7 +10,7 @@
 const $BCC = Java.loadClass('dev.wuffs.bcc.BCC')
 // const $ConfirmScreen = Java.loadClass('net.minecraft.client.gui.screens.ConfirmScreen')
 let modpack_name = 'Finality Genesis'
-let url_id = 'bdBHqLHc'
+let url_id = 'UaA7h39j'
 
 NetworkEvents.dataReceived('update_notifier_check', event => {
     check_updates()
