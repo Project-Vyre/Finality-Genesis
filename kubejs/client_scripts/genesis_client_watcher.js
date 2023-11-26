@@ -37,26 +37,26 @@ function check_updates() {
                         Component.gold(`${modpack_name}`)
                             .click({
                                 "action": "open_url",
-                                "value": json_result["curseforge_link"]
+                                "value": json_result["modrinth_link"]
                             })
                             .hover(Component.join([
                                 Component.gold(`${modpack_name}`),
-                                Component.yellow(` on CurseForge`)
+                                Component.yellow(` on Modrinth`)
                             ])),
                         Component.white(" is available!\n"),
                         Component.white("\nYou are playing on "),
                         Component.red(version),
                         Component.white(", the latest is "),
                         Component.green(latest_version),
-                        Component.white('\nUpdate using the CurseForge app or the '),
+                        Component.white('\nUpdate using the Modrinth app or the '),
                         Component.gold("[website]")
                             .click({
                                 "action": "open_url",
-                                "value": `${json_result["curseforge_link"]}/files`
+                                "value": `${json_result["modrinth_link"]}/files`
                             })
                             .hover(Component.join([
                                 Component.gold(`${modpack_name} `),
-                                Component.yellow(`downloads page on CurseForge.`)
+                                Component.yellow(`downloads page on Modrinth.`)
                             ])),
                         Component.white("."),
                         Component.white('\nYou can also '),
