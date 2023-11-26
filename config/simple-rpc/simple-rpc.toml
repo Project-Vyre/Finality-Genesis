@@ -34,7 +34,7 @@
 	#The buttons to display on Discord
 	[[init.buttons]]
 		label = "Get the modpack here!"
-		url = "https://curseforge.com/minecraft/modpacks/finality-genesis"
+		url = "https://modrinth.com/modpack/finality-genesis"
 
 	[[init.buttons]]
 		label = "Modpack Wiki"
@@ -60,7 +60,7 @@
 	#The buttons to display on Discord
 	[[main_menu.buttons]]
 		label = "Get the modpack here!"
-		url = "https://curseforge.com/minecraft/modpacks/finality-genesis"
+		url = "https://modrinth.com/modpack/finality-genesis"
 
 	[[main_menu.buttons]]
 		label = "Modpack Wiki"
@@ -86,7 +86,7 @@
 	#The buttons to display on Discord
 	[[server_list.buttons]]
 		label = "Get the modpack here!"
-		url = "https://curseforge.com/minecraft/modpacks/finality-genesis"
+		url = "https://modrinth.com/modpack/finality-genesis"
 
 	[[server_list.buttons]]
 		label = "Modpack Wiki"
@@ -112,7 +112,7 @@
 	#The buttons to display on Discord
 	[[realms_list.buttons]]
 		label = "Get the modpack here!"
-		url = "https://curseforge.com/minecraft/modpacks/finality-genesis"
+		url = "https://modrinth.com/modpack/finality-genesis"
 
 	[[realms_list.buttons]]
 		label = "Modpack Wiki"
@@ -138,7 +138,7 @@
 	#The buttons to display on Discord
 	[[join_game.buttons]]
 		label = "Get the modpack here!"
-		url = "https://curseforge.com/minecraft/modpacks/finality-genesis"
+		url = "https://modrinth.com/modpack/finality-genesis"
 
 	[[join_game.buttons]]
 		label = "Modpack Wiki"
@@ -164,7 +164,7 @@
 	#The buttons to display on Discord
 	[[single_player.buttons]]
 		label = "Get the modpack here!"
-		url = "https://curseforge.com/minecraft/modpacks/finality-genesis"
+		url = "https://modrinth.com/modpack/finality-genesis"
 
 	[[single_player.buttons]]
 		label = "Modpack Wiki"
@@ -190,7 +190,7 @@
 	#The buttons to display on Discord
 	[[multi_player.buttons]]
 		label = "Get the modpack here!"
-		url = "https://curseforge.com/minecraft/modpacks/finality-genesis"
+		url = "https://modrinth.com/modpack/finality-genesis"
 
 	[[multi_player.buttons]]
 		label = "Modpack Wiki"
@@ -216,7 +216,7 @@
 	#The buttons to display on Discord
 	[[realms.buttons]]
 		label = "Get the modpack here!"
-		url = "https://curseforge.com/minecraft/modpacks/finality-genesis"
+		url = "https://modrinth.com/modpack/finality-genesis"
 
 	[[realms.buttons]]
 		label = "Modpack Wiki"
@@ -240,7 +240,7 @@
 	#The buttons to display on Discord
 	[[generic.buttons]]
 		label = "Get the modpack here!"
-		url = "https://curseforge.com/minecraft/modpacks/finality-genesis"
+		url = "https://modrinth.com/modpack/finality-genesis"
 
 	[[generic.buttons]]
 		label = "Modpack Wiki"
@@ -278,7 +278,7 @@
 		#The buttons to display on Discord
 		[[dimension_overrides.dimensions.buttons]]
 			label = "Get the modpack here!"
-			url = "https://curseforge.com/minecraft/modpacks/finality-genesis"
+			url = "https://modrinth.com/modpack/finality-genesis"
 
 		[[dimension_overrides.dimensions.buttons]]
 			label = "Modpack Wiki"
@@ -303,7 +303,7 @@
 		#The buttons to display on Discord
 		[[dimension_overrides.dimensions.buttons]]
 			label = "Get the modpack here!"
-			url = "https://curseforge.com/minecraft/modpacks/finality-genesis"
+			url = "https://modrinth.com/modpack/finality-genesis"
 
 		[[dimension_overrides.dimensions.buttons]]
 			label = "Modpack Wiki"
@@ -328,7 +328,7 @@
 		#The buttons to display on Discord
 		[[dimension_overrides.dimensions.buttons]]
 			label = "Get the modpack here!"
-			url = "https://curseforge.com/minecraft/modpacks/finality-genesis"
+			url = "https://modrinth.com/modpack/finality-genesis"
 
 		[[dimension_overrides.dimensions.buttons]]
 			label = "Modpack Wiki"
