@@ -1,0 +1,13 @@
+{
+  "name": "Red Concrete",
+  "colors": [
+    "BE554D",
+    "841E1E"
+  ],
+  "ingredient": {
+    "item": "minecraft:red_concrete"
+  },
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

@@ -1,0 +1,191 @@
+{
+  "biomes": [
+    [
+      {
+        "type": "BIOME_TAG",
+        "negate": true,
+        "value": "minecraft:is_end"
+      },
+      {
+        "type": "BIOME_TAG",
+        "negate": true,
+        "value": "minecraft:is_nether"
+      },
+      {
+        "type": "BIOME_TAG",
+        "negate": true,
+        "value": "minecraft:is_overworld"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "minecraft:the_void"
+      },
+      {
+        "type": "BIOME_TAG",
+        "negate": true,
+        "value": "aether:is_aether"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "ad_astra:lunar_wastelands"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "ad_astra:glacio_ice_peaks"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "ad_astra:infernal_venus_barrens"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "ad_astra:martian_canyon_creek"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "ad_astra:martian_polar_caps"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "ad_astra:martian_wastelands"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "ad_astra:mercury_deltas"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "ad_astra:orbit"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "ad_astra:venus_wastelands"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:calming_skies"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:brightland"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:slushlands"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:frostbitten_forest"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:frostbitten_forest_clearing"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:peeking_ocean"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:deep_peeking_ocean"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:brumble_forest"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:midday_shore"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:snow_covered_pines"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:brisk_meadow"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:polar_highland"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:unorthodox_valley"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:shaded_woodlands"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:crystal_dunes"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:crystal_dunes_spikes"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:sunset_maple_forest"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:rising_creek"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:moonlit_reservoir"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:crystal_roughs"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:searing_grassland"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:crescent_orchard"
+      },
+      {
+        "type": "REGISTRY_NAME",
+        "negate": true,
+        "value": "blue_skies:crescent_orchard_lake"
+      }
+    ]
+  ]
+}

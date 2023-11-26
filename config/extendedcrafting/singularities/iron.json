@@ -1,0 +1,13 @@
+{
+  "name": "Iron",
+  "colors": [
+    "E1E1E1",
+    "6C6C6C"
+  ],
+  "ingredient": {
+    "item": "minecraft:iron_block"
+  },
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

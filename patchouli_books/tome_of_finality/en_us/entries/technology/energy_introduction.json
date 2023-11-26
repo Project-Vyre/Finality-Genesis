@@ -1,0 +1,33 @@
+{
+    "name": "Introduction to Energy",
+    "icon": "minecraft:command_block",
+    "category": "patchouli:technology/energy_intro",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "RF (aka Redstone Flux) was the original concept for power in modded Minecraft. Now, it is unified with the introduction of FE, also known as Forge Energy. $(br2)Currently there are multiple ways of generating FE in the modpack."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "The two easiest options for generating FE would be the following blocks: $(li)Alternator (Create Crafts & Additions) $(li)Stirling Dynamo (Thermal Series) $(br2)You can then store this energy with either the Accumulator or a Redstone Flux Cell. $(br2)You can see the items individually over the next few pages."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "createaddition:alternator",
+            "text": "This is the Alternator, introduced with Create Crafts & Additions. It requires a minimum of 32 RPM to be able to generate FE."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "createaddition:modular_accumulator",
+            "text": "This requires some setup to input power into as it requires Connectors to be placed on top of the Accumulator block. $(br2)Those Connectors then need to be linked with either a wire from a Gold Spool or Copper Spool."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "You may need the Wrench to help assist in the setup process and correctly set up the Connectors."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Placeholder text"
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+type = menu
+
+customization-meta {
+  identifier = de.keksuccino.drippyloadingscreen.customization.DrippyOverlayScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  original_pos_size_calculation = true
+  x = 228
+  width = 504
+  action = deep_customization_element:drippy_overlay_logo
+  actionid = 43be9de7-7144-4f7e-884a-6f6dc21a38041679378608509
+  y = 189
+  height = 126
+}
+
+customization {
+  custom_color_hex = #21140D
+  orientation = top-left
+  hidden = false
+  x = -1000000
+  width = 0
+  action = deep_customization_element:drippy_overlay_background
+  actionid = 7e9971b1-4991-47d2-ba2b-4926abf82a9f1679378608518
+  y = -1000000
+  height = 0
+}
+
+customization {
+  custom_color_hex = #b1a0ff
+  orientation = top-left
+  hidden = true
+  original_pos_size_calculation = true
+  x = 210
+  width = 540
+  action = deep_customization_element:drippy_overlay_progress_bar
+  actionid = 3cc0826e-4e6f-4cf5-8ba5-eca8671b24131679378608518
+  y = 444
+  height = 10
+}
+
+customization {
+  path = config/fancymenu/assets/loading_cube.png
+  orientation = mid-centered
+  x = -91
+  width = 183
+  action = addtexture
+  actionid = 4b4e4696-547f-497e-9cef-35dcbb49b94c1693277420003
+  y = -91
+  height = 183
+}
+
+customization {
+  path = config/fancymenu/assets/packtitle.png
+  orientation = top-centered
+  x = -208
+  width = 417
+  action = addtexture
+  actionid = cbd2dd09-d874-46a2-965d-7580441aec341693277380035
+  y = 0
+  height = 146
+}
+
+customization {
+  orientation = mid-centered
+  background_color = #101010
+  x = -100
+  width = 200
+  bar_color = #FFEB8C
+  action = custom_layout_element:drippy_custom_loading_bar
+  actionid = d3feeb59-9ad4-4123-9983-1e265f5a906c1679498824256
+  y = 127
+  progress_for_element_orientation = true
+  direction = right
+  height = 16
+}
+
+customization {
+  orientation = mid-centered
+  enable_scrolling = true
+  shadow = true
+  scale = 1.0
+  source = Please be patient while the game loads!%n%Some freezing may occur.
+  text_border = 0
+  case_mode = normal
+  source_mode = direct
+  line_spacing = 1
+  x = -100
+  width = 200
+  action = custom_layout_element:fancymenu_customization_item_text
+  actionid = 6ca1a53b-15df-4862-a31c-e59463e2d2fe1682304850488
+  y = 156
+  alignment = centered
+  base_color = #FFEB8C
+  height = 40
+}
+
+customization {
+  orientation = mid-centered
+  basecolor = #FFEB8C
+  shadow = true
+  rotation = 0.0
+  scale = 1.0
+  refresh = false
+  bouncing = true
+  vanilla-like = false
+  x = -27
+  actionid = 65ec34b5-2208-4f92-836d-f0d91bdc99bd1679852705057
+  action = addsplash
+  y = 103
+  text = Loading interface...
+}
+

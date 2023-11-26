@@ -1,0 +1,13 @@
+{
+  "name": "Copper",
+  "colors": [
+    "FA977C",
+    "BC5430"
+  ],
+  "ingredient": {
+    "item": "minecraft:copper_block"
+  },
+  "materialCount": 8192,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

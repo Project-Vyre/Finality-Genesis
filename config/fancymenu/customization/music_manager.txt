@@ -1,0 +1,44 @@
+type = menu
+
+customization-meta {
+  identifier = %fancymenu:universal_layout%
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  [loading_requirement_group:larger_than_1600_width_check] = [group_mode:or]
+  requiredmods = kubejs, kubejs_create, create
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:larger_than_1600_width_check][req_id:d8deb547-6b05-4cd5-88b0-2a4e2e0db23f1696762799685] = 1920
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:larger_than_1600_width_check][req_id:ba3dd873-0da5-44ea-8d48-12a069a792c51696762917858] = 1680
+  randomonlyfirsttime = false
+}
+
+customization {
+  action = setscale
+  scale = 2
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  orientation = mid-centered
+  audio_source:4942cf00-2d9b-45d6-967e-546ee9b58dfa1695726272672 = kubejs/assets/minecraft/sounds/music/menu/menu4.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:cf7ee897-3670-4249-be79-184a3c918b3e1695726237946 = kubejs/assets/minecraft/sounds/music/menu/menu1.ogg;EXTERNAL_LOCAL;100;0
+  [loading_requirement:fancymenu_loading_requirement_is_world_loaded][requirement_mode:if_not][req_id:ac8ea68e-9b00-41c4-8719-d80121251b501691181789776] = 
+  channel = music
+  audio_source:2a3bf5b2-bc1f-402f-bd38-aa7f595686db1695726433517 = config/fancymenu/assets/menu_music/hide_and_seek_r3_music_box.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:ed50fe2e-50ef-4a37-a521-b2308b7e99ec1695726266683 = kubejs/assets/minecraft/sounds/music/menu/menu3.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:1e693ff8-7c42-4836-aed6-3999857d9bcc1695726412048 = config/fancymenu/assets/menu_music/cjbeards_bad_deeds_inst.ogg;EXTERNAL_LOCAL;100;0
+  loop = true
+  x = -25
+  width = 50
+  action = custom_layout_element:fancymenu_extension:audio_item
+  actionid = b3036c15-7a45-4558-a042-16a0b6821d751682981884968
+  y = -25
+  audio_source:00432011-1e55-4eb2-93c9-8583a274ca771695726258686 = kubejs/assets/minecraft/sounds/music/menu/menu2.ogg;EXTERNAL_LOCAL;100;0
+  once_per_session = false
+  height = 50
+}
+

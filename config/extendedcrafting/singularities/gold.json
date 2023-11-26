@@ -1,0 +1,13 @@
+{
+  "name": "Gold",
+  "colors": [
+    "FDF55F",
+    "D98E04"
+  ],
+  "ingredient": {
+    "item": "minecraft:gold_block"
+  },
+  "materialCount": 8192,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

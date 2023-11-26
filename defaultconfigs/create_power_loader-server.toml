@@ -1,0 +1,23 @@
+#.
+#Number of ticks between chunk loading checks. Does not affect contraptions
+#Range: 0 ~ 200
+chunkUpdateInterval = 10
+#.
+#Minimum number of ticks between loss of power and chunk unloading. Rounds up to multiples of update interval
+#Range: 0 ~ 1200
+unloadGracePeriod = 20
+#.
+#A multiplier for the speed requirements for andesite chunk loaders
+#Range: 0.0 ~ 128.0
+andesiteSpeedMultiplier = 1.0
+#.
+#A multiplier for the speed requirements for brass chunk loaders
+#Range: 0.0 ~ 128.0
+brassSpeedMultiplier = 1.0
+#.
+#Whether andesite chunk loaders function on contraptions. WARNING: does not update existing contraptions
+andesiteOnContraption = false
+#.
+#Whether brass chunk loaders function on contraptions. WARNING: does not update existing contraptions
+brassOnContraption = true
+

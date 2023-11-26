@@ -1,0 +1,11 @@
+{
+  "name": "Tome of Finality",
+  "book_texture": "patchouli:textures/gui/book_purple.png",
+  "landing_text": "Welcome to Finality,$(br)$(playername). $(br2)This variant has a focus on Create and adventure while not having an excess of mods. $(br2)Despite not being finished, you can still look forward to endgame automation.",
+  "model": "patchouli:book_purple",
+  "version": 0,
+  "nameplate_color": "FF55FF",
+  "subtitle": "Genesis Edition",
+  "show_progress": false,
+  "use_resource_pack": true
+}

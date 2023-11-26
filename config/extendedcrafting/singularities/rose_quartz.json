@@ -1,0 +1,13 @@
+{
+  "name": "Rose Quartz",
+  "colors": [
+    "F74572",
+    "741A41"
+  ],
+  "ingredient": {
+    "item": "create:polished_rose_quartz"
+  },
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

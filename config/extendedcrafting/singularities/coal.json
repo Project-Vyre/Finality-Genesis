@@ -1,0 +1,13 @@
+{
+  "name": "Coal",
+  "colors": [
+    "363739",
+    "261E24"
+  ],
+  "ingredient": {
+    "item": "minecraft:coal_block"
+  },
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

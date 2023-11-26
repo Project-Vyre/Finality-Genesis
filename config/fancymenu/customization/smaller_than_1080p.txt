@@ -1,0 +1,51 @@
+type = menu
+
+customization-meta {
+  identifier = %fancymenu:universal_layout%
+  randomgroup = 1
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:cb3cd903-78f1-4ac6-8a3b-2bac9d273e881696761610359] = 1280
+  renderorder = foreground
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:20cbe427-0718-4e37-8a72-ebecfd9fbaf41696762954670] = 1176
+  randomonlyfirsttime = false
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:061aa09c-7d66-468e-9873-e732657be9671696761829777] = 1366
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:d3c49387-a5ce-4ea7-9825-df52661a87ac1696763249821] = 1440
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:56f74327-7921-48db-8de8-aaf290707d431696762971470] = 1152
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:ca411e08-3ea8-40d0-a7e6-66748ffc7aca1696763342956] = 1600
+  randommode = false
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:d34eb85d-065d-40a7-841b-3581c78239941696761912526] = 1024
+  [loading_requirement_group:less_than_1600_width_res_check] = [group_mode:or]
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:00624cfa-a45c-482e-bf5f-c2e2739526b11696762466730] = 1360
+  smallerthanwidth = 1920
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:e08a45ff-67c1-495b-a701-59b3350eb9bf1696762878132] = 800
+}
+
+customization {
+  action = setscale
+  scale = 1
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  orientation = mid-centered
+  audio_source:4942cf00-2d9b-45d6-967e-546ee9b58dfa1695726272672 = kubejs/assets/minecraft/sounds/music/menu/menu4.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:cf7ee897-3670-4249-be79-184a3c918b3e1695726237946 = kubejs/assets/minecraft/sounds/music/menu/menu1.ogg;EXTERNAL_LOCAL;100;0
+  [loading_requirement:fancymenu_loading_requirement_is_world_loaded][requirement_mode:if_not][req_id:ac8ea68e-9b00-41c4-8719-d80121251b501691181789776] = 
+  channel = music
+  audio_source:2a3bf5b2-bc1f-402f-bd38-aa7f595686db1695726433517 = config/fancymenu/assets/menu_music/hide_and_seek_r3_music_box.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:ed50fe2e-50ef-4a37-a521-b2308b7e99ec1695726266683 = kubejs/assets/minecraft/sounds/music/menu/menu3.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:1e693ff8-7c42-4836-aed6-3999857d9bcc1695726412048 = config/fancymenu/assets/menu_music/cjbeards_bad_deeds_inst.ogg;EXTERNAL_LOCAL;100;0
+  loop = true
+  x = -24
+  width = 50
+  action = custom_layout_element:fancymenu_extension:audio_item
+  actionid = 6926671f-beb9-4a4b-a163-c61a25ab1eaf1696761078698
+  y = -25
+  audio_source:00432011-1e55-4eb2-93c9-8583a274ca771695726258686 = kubejs/assets/minecraft/sounds/music/menu/menu2.ogg;EXTERNAL_LOCAL;100;0
+  once_per_session = false
+  height = 50
+}
+
