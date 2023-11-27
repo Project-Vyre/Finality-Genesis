@@ -396,7 +396,6 @@
 		SpellPowerMultiplier = 1.0
 		CooldownInSeconds = 1.0
 
-	#irons_spellbooks:ender
 	[Spells."irons_spellbooks:abyssal_shroud"]
 		Enabled = true
 		School = "irons_spellbooks:ender"
@@ -426,16 +425,6 @@
 		ManaCostMultiplier = 0.2
 		SpellPowerMultiplier = 1.0
 		CooldownInSeconds = 1.0
-
-	[Spells."irons_spellbooks:void_tentacles"]
-		Enabled = true
-		School = "irons_spellbooks:ender"
-		MaxLevel = 10
-		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
-		MinRarity = "LEGENDARY"
-		ManaCostMultiplier = 0.2
-		SpellPowerMultiplier = 1.0
-		CooldownInSeconds = 30.0
 
 	[Spells."irons_spellbooks:summon_ender_chest"]
 		Enabled = true
@@ -477,6 +466,7 @@
 		SpellPowerMultiplier = 1.0
 		CooldownInSeconds = 12.0
 
+	#irons_spellbooks:ender
 	[Spells."irons_spellbooks:black_hole"]
 		Enabled = true
 		School = "irons_spellbooks:ender"
@@ -699,7 +689,6 @@
 		SpellPowerMultiplier = 1.0
 		CooldownInSeconds = 1.0
 
-	#irons_spellbooks:lightning
 	[Spells."irons_spellbooks:ascension"]
 		Enabled = true
 		School = "irons_spellbooks:lightning"
@@ -759,4 +748,96 @@
 		ManaCostMultiplier = 0.2
 		SpellPowerMultiplier = 1.0
 		CooldownInSeconds = 20.0
+
+	[Spells."irons_spellbooks:coldwave"]
+		Enabled = true
+		School = "irons_spellbooks:ice"
+		MaxLevel = 8
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 30.0
+
+	#irons_spellbooks:eldritch
+	[Spells."irons_spellbooks:sculk_tentacles"]
+		Enabled = true
+		School = "irons_spellbooks:eldritch"
+		MaxLevel = 4
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "LEGENDARY"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 30.0
+
+	[Spells."irons_spellbooks:telekinesis"]
+		Enabled = true
+		School = "irons_spellbooks:eldritch"
+		MaxLevel = 5
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "LEGENDARY"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 35.0
+
+	[Spells."irons_spellbooks:planar_sight"]
+		Enabled = true
+		School = "irons_spellbooks:eldritch"
+		MaxLevel = 3
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "LEGENDARY"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 200.0
+
+	[Spells."irons_spellbooks:eldritch_blast"]
+		Enabled = true
+		School = "irons_spellbooks:eldritch"
+		MaxLevel = 5
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "LEGENDARY"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 15.0
+
+	[Spells."irons_spellbooks:sonic_boom"]
+		Enabled = true
+		School = "irons_spellbooks:eldritch"
+		MaxLevel = 3
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "LEGENDARY"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 25.0
+
+	[Spells."irons_spellbooks:divine_smite"]
+		Enabled = true
+		School = "irons_spellbooks:holy"
+		MaxLevel = 5
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "COMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 15.0
+
+	[Spells."irons_spellbooks:sacrifice"]
+		Enabled = true
+		School = "irons_spellbooks:blood"
+		MaxLevel = 10
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "RARE"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 20.0
+
+	#irons_spellbooks:lightning
+	[Spells."irons_spellbooks:thunder_step"]
+		Enabled = true
+		School = "irons_spellbooks:lightning"
+		MaxLevel = 5
+		#Allowed Values: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY
+		MinRarity = "UNCOMMON"
+		ManaCostMultiplier = 0.2
+		SpellPowerMultiplier = 1.0
+		CooldownInSeconds = 8.0
 
