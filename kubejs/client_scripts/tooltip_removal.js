@@ -67,4 +67,9 @@ ItemEvents.tooltip(event => {
             text.remove(1)
         })
     }
+    if (Platform.isLoaded('supplementaries')) {
+        event.addAdvanced('supplementaries:cage', (item, advanced, text) => {
+            text.remove(1)
+        })
+    }
 })

@@ -44,6 +44,47 @@ let allColors = {
 }
 
 ClientEvents.lang('en_us', event => {
+    /**
+     * @summary Adds a Create item tooltip.
+     * @
+     * @param {string} namespace 
+     * @param {string} key 
+     * @param {string} cap 
+     */
+    let itemT = (namespace, key, cap) => {
+        event.add(namespace, `item.${namespace}.${key}.tooltip`, cap)
+    }
+    /**
+     * 
+     * @param {string} namespace 
+     * @param {string} key 
+     * @param {string} summary 
+     */
+    let itemSu = (namespace, key, summary) => {
+        event.add(namespace, `item.${namespace}.${key}.tooltip.summary`, summary)
+    }
+    /**
+     * 
+     * @param {string} namespace 
+     * @param {string} key 
+     * @param {string} condition 
+     * @param {string} behaviour 
+     */
+    let itemCb1 = (namespace, key, condition, behaviour) => {
+        event.add(namespace, `item.${namespace}.${key}.tooltip.condition1`, condition)
+        event.add(namespace, `item.${namespace}.${key}.tooltip.behaviour1`, behaviour)
+    }
+    /**
+     * 
+     * @param {string} namespace 
+     * @param {string} key 
+     * @param {string} condition 
+     * @param {string} behaviour 
+     */
+    let itemCb2 = (namespace, key, condition, behaviour) => {
+        event.add(namespace, `item.${namespace}.${key}.tooltip.condition2`, condition)
+        event.add(namespace, `item.${namespace}.${key}.tooltip.behaviour2`, behaviour)
+    }
     for (const [tool, TOOLCAP] of Object.entries(standardTools)) {
         for (const [material, MATCAP] of Object.entries(minecraftMaterialTools)) {
             event.add('kubejs', `item.minecraft.${material}_${tool}.tooltip`, `${MATCAP} ${TOOLCAP}`)
@@ -3532,14 +3573,30 @@ ClientEvents.lang('en_us', event => {
 
     if (Platform.isLoaded('supplementaries')) {
         event.addAll('supplementaries', {
+            "block.supplementaries.cage.tooltip": "CAGE",
+            "block.supplementaries.cage.tooltip.summary": "Allows for the trapping of small animals for convenient transportation.",
+            "block.supplementaries.cage.tooltip.condition1": "On R-Click on small animal",
+            "block.supplementaries.cage.tooltip.behaviour1": "_Captures_ the small animal.",
+            "block.supplementaries.cage.tooltip.condition2": "On R-click on ground with small animal",
+            "block.supplementaries.cage.tooltip.behaviour2": "_Releases_ the small animal back into the world.",
+            "block.supplementaries.cage.tooltip.condition3": "On Shift + R-Click",
+            "block.supplementaries.cage.tooltip.behaviour3": "_Places_ the cage as a block.",
             "item.supplementaries.key.tooltip": "KEY",
             "item.supplementaries.key.tooltip.summary": "Able to _lock_ many Supplementaries related things. You should probably _rename_ it with some _lore_ to use as a personal passkey.",
             "item.supplementaries.key.tooltip.condition1": "On R-click",
             "item.supplementaries.key.tooltip.behaviour1": "Fully _locks_ eligible Supplementaries blocks. You _can't_ clear the lock once it is set, so _DO NOT_ lose your key.",
+            "block.supplementaries.pedestal.tooltip": "PEDESTAL",
+            "block.supplementaries.pedestal.tooltip.summary": "An _elegant_ display for whatever you place onto it.",
             "item.supplementaries.quiver.tooltip": "QUIVER",
             "item.supplementaries.quiver.tooltip.summary": "Easily _stores_ arrows to _save_ space in your inventory and does not have to be worn to be used. Holds _nine_ stacks of arrows.",
             "item.supplementaries.quiver.tooltip.condition1": "Storing arrows",
-            "item.supplementaries.quiver.tooltip.behaviour1": "To store arrows in the Quiver, grab any stack size of arrows with your cursor then _right click_ over the Quiver."
+            "item.supplementaries.quiver.tooltip.behaviour1": "To store arrows in the Quiver, grab any stack size of arrows with your cursor then _right click_ over the Quiver.",
+            "block.supplementaries.sack.tooltip": "SACK",
+            "block.supplementaries.sack.tooltip.summary": "A convenient way to carry items on your person. Careful not to carry more than two sacks!",
+            "block.supplementaries.statue.tooltip": "STATUE",
+            "block.supplementaries.statue.tooltip.summary": "A customizable statue for decorative use.",
+            "block.supplementaries.enderman_head.tooltip": "ENDERMAN HEAD",
+            "block.supplementaries.enderman_head.tooltip.summary": "Stare at it, I dare you."
         })
     }
 

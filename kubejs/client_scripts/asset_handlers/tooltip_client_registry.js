@@ -1,7 +1,12 @@
-// priority: 1
+// priority: 5
 // requires: create
+// ignored: true
 
-console.log('Loaded Create tooltip registry.')
+console.log('Loaded Create tooltip registry with lang event...')
+
+const $ItemDescription = Java.loadClass('com.simibubi.create.foundation.item.ItemDescription$Modifier')
+const $TooltipModifier = Java.loadClass('com.simibubi.create.foundation.item.TooltipModifier')
+const $Palette = Java.loadClass('com.simibubi.create.foundation.item.TooltipHelper$Palette')
 
 /**
  * @file Responsible for making tooltips using Create's tooltip registry.
@@ -60,6 +65,25 @@ GRAY_AND_RED
     "item.create.example_item.tooltip.action1": "These controls are displayed.",
 }
 */
+
+let DYE = {
+    black: 'Black',
+    gray: 'Gray',
+    light_gray: 'Light Gray',
+    white: 'White',
+    pink: 'Pink',
+    light_blue: 'Light Blue',
+    brown: 'Brown',
+    red: 'Red',
+    orange: 'Orange',
+    yellow: 'Yellow',
+    lime: 'Lime',
+    green: 'Green',
+    cyan: 'Cyan',
+    blue: 'Blue',
+    purple: 'Purple',
+    magenta: 'Magenta'
+}
 
 let STANDARD_PALETTE_REGISTRY = [
     'minecraft:clock',
@@ -233,11 +257,7 @@ function GRAY_RED_PALETTE(itemID) {
     $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_RED))
 }
 
-const $ItemDescription = Java.loadClass('com.simibubi.create.foundation.item.ItemDescription$Modifier')
-const $TooltipModifier = Java.loadClass('com.simibubi.create.foundation.item.TooltipModifier')
-const $Palette = Java.loadClass('com.simibubi.create.foundation.item.TooltipHelper$Palette')
-
-ClientEvents.init(event => {
+ClientEvents.lang('en_us', event => {
     STANDARD_PALETTE_REGISTRY.forEach(item => {
         STANDARD_PALETTE(item)
     })
@@ -401,13 +421,8 @@ ClientEvents.init(event => {
         YELLOW_PALETTE('solapplepie:golden_lunchbox')
     }
     if (Platform.isLoaded('supplementaries')) {
-        GRAY_PALETTE('supplementaries:cage')
-        PURPLE_PALETTE('supplementaries:enderman_head')
         STANDARD_PALETTE('supplementaries:key')
-        GRAY_PALETTE('supplementaries:pedestal')
         STANDARD_PALETTE('supplementaries:quiver')
-        STANDARD_PALETTE('supplementaries:sack')
-        STANDARD_PALETTE('supplementaries:statue')
     }
     if (Platform.isLoaded('tempad')) {
         PURPLE_PALETTE('tempad:tempad')
