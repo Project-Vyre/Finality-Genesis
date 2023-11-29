@@ -1,4 +1,4 @@
-// priority: 1
+// priority: 10
 // requires: create
 // ignored: false
 
@@ -238,7 +238,7 @@ const $ItemDescription = Java.loadClass('com.simibubi.create.foundation.item.Ite
 const $TooltipModifier = Java.loadClass('com.simibubi.create.foundation.item.TooltipModifier')
 const $Palette = Java.loadClass('com.simibubi.create.foundation.item.TooltipHelper$Palette')
 
-ClientEvents.init(event => {
+ClientEvents.lang(event => {
     STANDARD_PALETTE_REGISTRY.forEach(item => {
         STANDARD_PALETTE(item)
     })
