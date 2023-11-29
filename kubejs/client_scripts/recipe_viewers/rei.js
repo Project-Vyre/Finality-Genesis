@@ -235,6 +235,12 @@ REIEvents.hide('item', event => {
             event.hide(`createaddition:${name}`)
         })
     }
+    if (Platform.isLoaded('createdeco')) {
+        event.hide([
+            'createdeco:netherite_sheet',
+            'createdeco:zinc_sheet'
+        ])
+    }
 
     if (Platform.isLoaded('mysticalagriculture')) {
         MYSHIDE.forEach(name => {

@@ -110,11 +110,18 @@ JEIEvents.hideItems(event => {
         event.hide([
             /^createaddition.*[_:\/]electrum(?![a-zA-Z0-9]).*/,
             'createaddition:diamond_grit',
-            'createaddition:diamond_grit_sandpaper'
+            'createaddition:diamond_grit_sandpaper',
+            'createaddition:zinc_sheet'
         ])
         CAdditionsItems.forEach(name => {
             event.hide(`createaddition:${name}`)
         })
+    }
+    if (Platform.isLoaded('createdeco')) {
+        event.hide([
+            'createdeco:netherite_sheet',
+            'createdeco:zinc_sheet'
+        ])
     }
 
     if (Platform.isLoaded('mysticalagriculture')) {
