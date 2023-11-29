@@ -242,6 +242,8 @@ declare namespace Registry {
     }
     class StructureModifierSerializers extends Internal.RegistryEventJS {
     }
+    class FruitType extends Internal.RegistryEventJS {
+    }
     class TimeEffect extends Internal.RegistryEventJS {
     }
     class JsonConditions extends Internal.RegistryEventJS {

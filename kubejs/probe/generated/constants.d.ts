@@ -1,6 +1,6 @@
 /// <reference path="./globals.d.ts" />
 declare const HOUR: 3600000.0;
-declare const global: {"shortSuperheatedCompacting": {}, "RGBWCMY": {"uncolored": "§7Uncolored", "red": "§cColor Red", "green": "§aColor Green", "blue": "§9Color Blue", "white": "§lColor White", "cyan": "§bColor Cyan", "magenta": "§dColor Magenta", "yellow": "§eColor Yellow"}, "jeiRuntime": Internal.JeiRuntime, "SHAPES": {"circle": "Circle", "rectangle": "Rectangle", "windmill": "Windmill", "star": "Star"}};
+declare const global: {"shortSuperheatedCompacting": {}, "RGBWCMY": {}, "jeiRuntime": Internal.JeiRuntime, "SHAPES": {}};
 declare const IngredientHelper: Internal.IngredientForgeHelper;
 declare const ForgeModEvents: Internal.ForgeEventWrapper;
 declare const Painter: Internal.Painter;

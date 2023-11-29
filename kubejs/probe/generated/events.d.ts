@@ -32,18 +32,18 @@ command(handler: (event: Internal.CommandEventJS) => void):void,
      * @at *server*
     */
 blockLootTables(handler: (event: Internal.BlockLootEventJS) => void):void,
-tags(type: "dimension_type", handler: (event: TagEvent.DimensionType) => void): void
-tags(type: "minecraft:dimension_type", handler: (event: TagEvent.DimensionType) => void): void
-tags(type: "worldgen/flat_level_generator_preset", handler: (event: TagEvent.FlatLevelGeneratorPreset) => void): void
-tags(type: "minecraft:worldgen/flat_level_generator_preset", handler: (event: TagEvent.FlatLevelGeneratorPreset) => void): void
-tags(type: "worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
-tags(type: "minecraft:worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
-tags(type: "worldgen/structure", handler: (event: TagEvent.Structure) => void): void
-tags(type: "minecraft:worldgen/structure", handler: (event: TagEvent.Structure) => void): void
 tags(type: "worldgen/world_preset", handler: (event: TagEvent.WorldPreset) => void): void
 tags(type: "minecraft:worldgen/world_preset", handler: (event: TagEvent.WorldPreset) => void): void
+tags(type: "worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
+tags(type: "minecraft:worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
 tags(type: "worldgen/biome", handler: (event: TagEvent.Biome) => void): void
 tags(type: "minecraft:worldgen/biome", handler: (event: TagEvent.Biome) => void): void
+tags(type: "worldgen/structure", handler: (event: TagEvent.Structure) => void): void
+tags(type: "minecraft:worldgen/structure", handler: (event: TagEvent.Structure) => void): void
+tags(type: "worldgen/flat_level_generator_preset", handler: (event: TagEvent.FlatLevelGeneratorPreset) => void): void
+tags(type: "minecraft:worldgen/flat_level_generator_preset", handler: (event: TagEvent.FlatLevelGeneratorPreset) => void): void
+tags(type: "dimension_type", handler: (event: TagEvent.DimensionType) => void): void
+tags(type: "minecraft:dimension_type", handler: (event: TagEvent.DimensionType) => void): void
 tags(type: "game_event", handler: (event: TagEvent.GameEvent) => void): void
 tags(type: "minecraft:game_event", handler: (event: TagEvent.GameEvent) => void): void
 tags(type: "fluid", handler: (event: TagEvent.Fluid) => void): void
@@ -828,6 +828,7 @@ registry(type: "forge:global_loot_modifier_serializers", handler: (event: Regist
 registry(type: "forge:holder_set_type", handler: (event: Registry.HolderSetType) => void):void,
 registry(type: "forge:structure_modifier", handler: (event: Registry.StructureModifier) => void):void,
 registry(type: "forge:structure_modifier_serializers", handler: (event: Registry.StructureModifierSerializers) => void):void,
+registry(type: "fruittrees:fruit_type", handler: (event: Registry.FruitType) => void):void,
 registry(type: "hourglass:time_effect", handler: (event: Registry.TimeEffect) => void):void,
 registry(type: "integrated_api:json_conditions", handler: (event: Registry.JsonConditions) => void):void,
 registry(type: "irons_spellbooks:schools", handler: (event: Registry.Schools) => void):void,
