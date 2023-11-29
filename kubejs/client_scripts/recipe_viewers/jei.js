@@ -155,7 +155,16 @@ JEIEvents.hideItems(event => {
     if (Platform.isLoaded('incubation') && Platform.isLoaded('farmersdelight')) {
         event.hide('incubation:fried_egg')
     }
-
+    if (Platform.isLoaded('mysticalagradditions') && !Platform.isLoaded('tinkersconstruct')) {
+        event.hide([
+            'mysticalagradditions:molten_inferium_bucket',
+            'mysticalagradditions:molten_prudentium_bucket',
+            'mysticalagradditions:molten_tertium_bucket',
+            'mysticalagradditions:molten_imperium_bucket',
+            'mysticalagradditions:molten_supremium_bucket',
+            'mysticalagradditions:molten_soulium_bucket',
+        ])
+    }
     if (Platform.isLoaded('mysticalagriculture')
         && Platform.isLoaded('mysticalagradditions')
         && !Platform.isLoaded('avaritia')
@@ -207,14 +216,12 @@ JEIEvents.hideItems(event => {
 
 JEIEvents.hideFluids(event => {
     if (Platform.isLoaded('mysticalagradditions')) {
-        event.hide([
-            'mysticalagradditions:molten_inferium',
-            'mysticalagradditions:molten_prudentium',
-            'mysticalagradditions:molten_tertium',
-            'mysticalagradditions:molten_imperium',
-            'mysticalagradditions:molten_supremium',
-            'mysticalagradditions:molten_soulium'
-        ])
+        event.hide('mysticalagradditions:molten_inferium')
+        event.hide('mysticalagradditions:molten_prudentium')
+        event.hide('mysticalagradditions:molten_tertium')
+        event.hide('mysticalagradditions:molten_imperium')
+        event.hide('mysticalagradditions:molten_supremium')
+        event.hide('mysticalagradditions:molten_soulium')
     }
 })
 

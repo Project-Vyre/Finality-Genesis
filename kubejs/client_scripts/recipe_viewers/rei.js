@@ -264,6 +264,17 @@ REIEvents.hide('item', event => {
         event.hide('abnormals_delight:laurel_cabinet')
     }
 
+    if (Platform.isLoaded('mysticalagradditions') && !Platform.isLoaded('tinkersconstruct')) {
+        event.hide([
+            'mysticalagradditions:molten_inferium_bucket',
+            'mysticalagradditions:molten_prudentium_bucket',
+            'mysticalagradditions:molten_tertium_bucket',
+            'mysticalagradditions:molten_imperium_bucket',
+            'mysticalagradditions:molten_supremium_bucket',
+            'mysticalagradditions:molten_soulium_bucket',
+        ])
+    }
+
     if (Platform.isLoaded('mysticalagriculture')
         && Platform.isLoaded('mysticalagradditions')
         && !Platform.isLoaded('avaritia')
