@@ -1089,46 +1089,92 @@ PlayerEvents.loggedIn(event => {
     // Give the player the quest book on first join
     if (!event.player.persistentData.contains('firstjoin')) {
         event.player.persistentData.putBoolean('firstjoin', true)
-        event.player.give('ftbquests:book')
-        event.player.tell([
-            Component.of('First world load! Lag may be present for a few minutes.\n').bold().gold(),
-            Component.of("Also, please check your Quest Book and read its tooltips to get your bearings. Before I go, do not forget to\n"),
-            Component.of('Hold <rainb>[w]</rainb> to Ponder! \n').yellow(),
-            Component.of('\nIf you experience '),
-            Component.of('any ').italic(),
-            Component.of('form of '),
-            Component.of('Z-fighting ').red(),
-            Component.of('or '),
-            Component.of('flickering ').red(),
-            Component.of('on blocks... '),
-            Component.of('go to '),
-            Component.of('[Video Settings] ').aqua(),
-            Component.of('< '),
-            Component.of('[Performance] ').aqua(),
-            Component.of('then '),
-            Component.of('disable or uncheck ').red(),
-            Component.of('the setting that says '),
-            Component.of('Use Compact Vertex Format').bold().darkAqua(),
-            Component.of('. Please note that this is only applicable with '),
-            Component.of('Embeddium 0.2+ ').lightPurple(),
-            Component.of('and does not work with '),
-            Component.of('Oculus ').lightPurple(),
-            Component.of('installed!\n'),
-            Component.of('\nIf you encounter any bugs after disabling it, please report them'),
-            Component.of(' [here] ')
-                .clickOpenUrl('https://github.com/Project-Vyre/Finality-Genesis/issues')
-                .hover('Opens the Finality Genesis GitHub Issues page.')
-                .yellow(),
-            Component.of('or speak directly to'),
-            Component.of(' embeddedt ').lightPurple(),
-            Component.of('himself in his '),
-            Component.of('[Discord server]')
-                .clickOpenUrl('https://discord.gg/rN9Y7caguP')
-                .hover("The link for embeddedt's Discord server.")
-                .color(0x5865F2),
-            Component.of('. Thank you!\n'),
-            Component.of('\nNote: You may need to open chat to see the full message.').underlined().yellow()
-        ])
+        if (!Platform.isLoaded('ftbquests')) {
+            event.player.tell([
+                Component.of('First world load! Lag may be present for a few minutes.\n').bold().gold(),
+                Component.of('Do not forget to'),
+                Component.of('Hold <rainb>[w]</rainb> to Ponder! \n').yellow(),
+                Component.of('\nIf you experience '),
+                Component.of('any ').italic(),
+                Component.of('form of '),
+                Component.of('Z-fighting ').red(),
+                Component.of('or '),
+                Component.of('flickering ').red(),
+                Component.of('on blocks... '),
+                Component.of('go to '),
+                Component.of('[Video Settings] ').aqua(),
+                Component.of('< '),
+                Component.of('[Performance] ').aqua(),
+                Component.of('then '),
+                Component.of('disable or uncheck ').red(),
+                Component.of('the setting that says '),
+                Component.of('Use Compact Vertex Format').bold().darkAqua(),
+                Component.of('. Please note that this is only applicable with '),
+                Component.of('Embeddium 0.2+ ').lightPurple(),
+                Component.of('and does not work with '),
+                Component.of('Oculus ').lightPurple(),
+                Component.of('installed!\n'),
+                Component.of('\nIf you encounter any bugs after disabling it, please report them'),
+                Component.of(' [here] ')
+                    .clickOpenUrl('https://github.com/Project-Vyre/Finality-Genesis/issues')
+                    .hover('Opens the Finality Genesis GitHub Issues page.')
+                    .yellow(),
+                Component.of('or speak directly to'),
+                Component.of(' embeddedt ').lightPurple(),
+                Component.of('himself in his '),
+                Component.of('[Discord server]')
+                    .clickOpenUrl('https://discord.gg/rN9Y7caguP')
+                    .hover("The link for embeddedt's Discord server.")
+                    .color(0x5865F2),
+                Component.of('. Thank you!\n'),
+                Component.of('\nNote: You may need to open chat to see the full message.').underlined().yellow()
+            ])
+        }
+        if (Platform.isLoaded('ftbquests') &&
+            Platform.isLoaded('supplementaries')
+        ) {
+            event.player.give('ftbquests:book')
+            event.player.give('supplementaries:sack')
+            event.player.tell([
+                Component.of('First world load! Lag may be present for a few minutes.\n').bold().gold(),
+                Component.of("Also, please check your Quest Book and read its tooltips to get your bearings. Before I go, do not forget to\n"),
+                Component.of('Hold <rainb>[w]</rainb> to Ponder! \n').yellow(),
+                Component.of('\nIf you experience '),
+                Component.of('any ').italic(),
+                Component.of('form of '),
+                Component.of('Z-fighting ').red(),
+                Component.of('or '),
+                Component.of('flickering ').red(),
+                Component.of('on blocks... '),
+                Component.of('go to '),
+                Component.of('[Video Settings] ').aqua(),
+                Component.of('< '),
+                Component.of('[Performance] ').aqua(),
+                Component.of('then '),
+                Component.of('disable or uncheck ').red(),
+                Component.of('the setting that says '),
+                Component.of('Use Compact Vertex Format').bold().darkAqua(),
+                Component.of('. Please note that this is only applicable with '),
+                Component.of('Embeddium 0.2+ ').lightPurple(),
+                Component.of('and does not work with '),
+                Component.of('Oculus ').lightPurple(),
+                Component.of('installed!\n'),
+                Component.of('\nIf you encounter any bugs after disabling it, please report them'),
+                Component.of(' [here] ')
+                    .clickOpenUrl('https://github.com/Project-Vyre/Finality-Genesis/issues')
+                    .hover('Opens the Finality Genesis GitHub Issues page.')
+                    .yellow(),
+                Component.of('or speak directly to'),
+                Component.of(' embeddedt ').lightPurple(),
+                Component.of('himself in his '),
+                Component.of('[Discord server]')
+                    .clickOpenUrl('https://discord.gg/rN9Y7caguP')
+                    .hover("The link for embeddedt's Discord server.")
+                    .color(0x5865F2),
+                Component.of('. Thank you!\n'),
+                Component.of('\nNote: You may need to open chat to see the full message.').underlined().yellow()
+            ])
+        }
     } else if (event.player.persistentData.contains('firstjoin')) {
         event.player.tell([
             Component.of('Welcome back!\n').bold().green(),
@@ -1180,9 +1226,7 @@ EntityEvents.hurt(event => {
         event.player.getChestArmorItem() === 'kubejs:final_chestplate' &&
         event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
         event.player.getFeetArmorItem() === 'kubejs:final_boots'
-    ) {
-        event.cancel()
-    }
+    ) { event.cancel() }
 })
 
 const set = {

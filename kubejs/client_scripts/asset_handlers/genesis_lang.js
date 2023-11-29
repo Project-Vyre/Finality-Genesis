@@ -3591,12 +3591,17 @@ ClientEvents.lang('en_us', event => {
             "item.supplementaries.quiver.tooltip.summary": "Easily _stores_ arrows to _save_ space in your inventory and does not have to be worn to be used. Holds _nine_ stacks of arrows.",
             "item.supplementaries.quiver.tooltip.condition1": "Storing arrows",
             "item.supplementaries.quiver.tooltip.behaviour1": "To store arrows in the Quiver, grab any stack size of arrows with your cursor then _right click_ over the Quiver.",
+            // sack does not work
             "block.supplementaries.sack.tooltip": "SACK",
             "block.supplementaries.sack.tooltip.summary": "A convenient way to carry items on your person. Careful not to carry more than two sacks!",
             "block.supplementaries.statue.tooltip": "STATUE",
-            "block.supplementaries.statue.tooltip.summary": "A customizable statue for decorative use.",
+            "block.supplementaries.statue.tooltip.summary": "A small statue for decorative use and is able to _hold_ items. Some items have _special poses_ such as candles, tools and swords.",
+            "block.supplementaries.statue.tooltip.condition1": "When powered by redstone",
+            "block.supplementaries.statue.tooltip.behaviour1": "Proceeds to _wave_.",
             "block.supplementaries.enderman_head.tooltip": "ENDERMAN HEAD",
-            "block.supplementaries.enderman_head.tooltip.summary": "Stare at it, I dare you."
+            "block.supplementaries.enderman_head.tooltip.summary": "It's just an Enderman head. _Stare_ at it, I dare you.",
+            "block.supplementaries.enderman_head.tooltip.condition1": "When stared at",
+            "block.supplementaries.enderman_head.tooltip.behaviour1": "_Provides_ redstone power."
         })
     }
 
