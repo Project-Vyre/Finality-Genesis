@@ -1,7 +1,6 @@
 // priority: 0
 // requires: kubejs_create
 // requires: supplementaries
-// requires: salt
 
 /**
  * @file Handler for core recipes.
@@ -602,16 +601,58 @@ ServerEvents.recipes(event => {
         '3x minecraft:bone_meal'
     ]).id('finality:dirt_from_gravel')
     event.recipes.create.mixing('2x minecraft:coarse_dirt', [
-        'minecraft:dirt', 'minecraft:gravel'
+        'minecraft:dirt',
+        'minecraft:gravel'
     ]).id('finality:mixing/coarse_dirt')
+    /**
+     * @summary Heated 1x ingot melting
+     * @param {Internal.OutputFluid} outputFluid 
+     * @param {Internal.InputItem} inputIngot 
+     */
+    let ingotMeltingHeated = (outputFluid, inputIngot) => {
+        event.recipes.create.mixing(
+            Fluid.of(`kubejs:molten_${outputFluid}`, 90),
+            inputIngot
+        ).heated().id(`finality:basin/${outputFluid}_sheet_melting`)
+    }
+    let blockMeltingHeated = (outputFluid, inputBlock) => {
+        event.recipes.create.mixing(
+            Fluid.of(`kubejs:molten_${outputFluid}`, 810),
+            inputBlock
+        ).heated().id(`finality:basin/${outputFluid}_block_melting`)
+    }
+    let ingot_melting_eligible = {
+        copper: 'create:copper_sheet',
+        iron: 'create:iron_sheet',
+        gold: 'create:golden_sheet',
+        zinc: 'kubejs:zinc_sheet',
+        brass: 'create:brass_sheet'
+    }
+    let block_melting_eligible = {
+        copper: 'minecraft:copper_block',
+        iron: 'minecraft:iron_block',
+        gold: 'minecraft:gold_block',
+        zinc: 'create:zinc_block',
+        brass: 'create:brass_block'
+    }
+    Object.keys(ingot_melting_eligible).forEach(type => {
+        ingotMeltingHeated(type, ingot_melting_eligible[type])
+    })
+    Object.keys(block_melting_eligible).forEach(type => {
+        blockMeltingHeated(type, block_melting_eligible[type])
+    })
     event.recipes.create.mixing(
-        Fluid.of('kubejs:molten_gold', 90),
-        'minecraft:gold_ingot'
-    ).heated().id('finality:gold_ingot_melting')
+        Fluid.of('kubejs:molten_netherite', 90),
+        'kubejs:netherite_sheet'
+    ).superheated().id('finality:mixing/netherite_sheet_melting')
+    event.recipes.create.mixing(
+        Fluid.of('kubejs:molten_netherite', 810),
+        'minecraft:netherite_block'
+    ).superheated().id('finality:mixing/netherite_block_melting')
     event.recipes.create.mixing('4x minecraft:netherite_ingot', [
         Item.of('minecraft:netherite_scrap', 4),
         Fluid.of('kubejs:molten_gold', 360)
-    ]).heated().id('finality:netherite_ingot_from_mixing')
+    ]).heated().id('finality:mixing/netherite_ingot_from_mixing')
     event.recipes.create.mixing('minecraft:emerald', [
         'minecraft:quartz', 'minecraft:glass', '3x minecraft:iron_nugget'
     ]).superheated().id('finality:renew_emerald') // Be3Al2(SiO3)6
@@ -620,12 +661,17 @@ ServerEvents.recipes(event => {
         '18x minecraft:gold_nugget',
         Fluid.of('minecraft:lava', 180)
     ]).id('finality:nether_gold_ore_deco') // Thank you to FunnyMan4579 on the official Create Discord for giving me this idea :3
-    event.recipes.create.mixing('salt:salt', [
-        Fluid.of('minecraft:water', 1000)
-    ]).heated().id('finality:create_salt_compat')
+    if (Platform.isLoaded('salt')) {
+        event.recipes.create.mixing(
+            'salt:salt',
+            Fluid.of('minecraft:water', 1000)
+        ).heated().id('finality:create_salt_compat')
+    }
     /**
      * >-----<
      */
+    event.recipes.create.pressing('kubejs:zinc_sheet', 'create:zinc_ingot').id('finality:pressing/zinc_ingot')
+    event.recipes.create.pressing('kubejs:netherite_sheet', 'minecraft:netherite_ingot').id('finality:pressing/netherite_ingot')
     event.shaped('minecraft:nautilus_shell', [
         'PFP',
         'FPF',

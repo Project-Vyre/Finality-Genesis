@@ -1,5 +1,6 @@
 // requires: mysticalagriculture
 // requires: mysticalagradditions
+// requires: extendedcrafting
 // requires: kubejs_create
 
 /**
@@ -694,28 +695,48 @@ ServerEvents.recipes(event => {
             "water": 40,
             "fire": 40
         },
-        input: {
-            "item": "mysticalagriculture:supremium_reprocessor"
-        },
+        input: Item.of('mysticalagriculture:supremium_reprocessor').toJson(),
         ingredients: [
+            Ingredient.of('mysticalagriculture:awakened_supremium_gemstone').toJson(),
+            Ingredient.of('mysticalagriculture:awakened_supremium_ingot').toJson(),
+            Ingredient.of('mysticalagriculture:awakened_supremium_gemstone').toJson(),
+            Ingredient.of('mysticalagriculture:awakened_supremium_ingot').toJson(),
+            Ingredient.of('mysticalagriculture:awakened_supremium_gemstone').toJson(),
+            Ingredient.of('mysticalagriculture:awakened_supremium_ingot').toJson(),
+            Ingredient.of('mysticalagriculture:awakened_supremium_gemstone').toJson(),
+            Ingredient.of('mysticalagriculture:awakened_supremium_ingot').toJson(),
+        ],
+        result: Item.of('kubejs:removed_item').toJson()
+    }).id('mysticalagriculture:awakened_supremium_reprocessor')
+    event.shaped('mysticalagriculture:unattuned_augment', [
+        'SSS',
+        'SBS',
+        'SSS'
+    ], {
+        S: 'mysticalagriculture:prosperity_shard',
+        B: 'extendedcrafting:basic_catalyst'
+    }).id('mysticalagriculture:unattuned_augment')
+    event.custom({
+        type: 'mysticalagriculture:infusion',
+        conditions: [
             {
-                "item": "mysticalagriculture:awakened_supremium_gemstone"
-            },
-            {
-                "item": "mysticalagriculture:awakened_supremium_ingot"
-            },
-            {
-                "item": "mysticalagriculture:awakened_supremium_gemstone"
-            },
-            {
-                "item": "mysticalagriculture:awakened_supremium_ingot"
+                "type": "mysticalagriculture:augment_enabled",
+                "augment": "mysticalagriculture:flight"
             }
         ],
-        "result": {
-            "item": "kubejs:removed_item"
-        }
-    }).id('mysticalagriculture:awakened_supremium_reprocessor')
-
+        input: Item.of('mysticalagriculture:unattuned_augment').toJson(),
+        ingredients: [
+            Ingredient.of('extendedcrafting:flux_star').toJson(),
+            Ingredient.of('kubejs:command_block').toJson(),
+            Ingredient.of('extendedcrafting:flux_star').toJson(),
+            Ingredient.of('kubejs:command_block').toJson(),
+            Ingredient.of('extendedcrafting:flux_star').toJson(),
+            Ingredient.of('kubejs:command_block').toJson(),
+            Ingredient.of('extendedcrafting:flux_star').toJson(),
+            Ingredient.of('kubejs:command_block').toJson()
+        ],
+        result: Item.of('mysticalagriculture:flight_augment').toJson()
+    }).id('mysticalagriculture:augment/flight')
     iumTiers.forEach(tier => {
         event.replaceOutput(
             { output: `mysticalagriculture:${tier}_reprocessor` },
