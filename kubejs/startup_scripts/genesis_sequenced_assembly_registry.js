@@ -2,7 +2,7 @@
 // ignored: true
 
 /**
- * @file Creates transitional items for use in Sequenced Assembly recipes.
+ * @file Creates transitional items for use in Sequenced Assembly recipes when KubeJS Create is not present.
  * @author squoshi <https://github.com/squoshi> Fixed this.
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
