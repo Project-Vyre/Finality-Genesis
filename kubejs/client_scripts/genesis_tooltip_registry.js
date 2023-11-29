@@ -381,6 +381,7 @@ ClientEvents.lang('en_us', event => {
     }
     if (Platform.isLoaded('malum')) {
         PURPLE_PALETTE('malum:encyclopedia_arcana')
+        PURPLE_PALETTE('malum:spirit_pouch')
         PURPLE_PALETTE('malum:tyrving')
     }
     if (Platform.isLoaded('monobank')) {

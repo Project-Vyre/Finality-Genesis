@@ -45,8 +45,7 @@ const DYE = {
 
 ClientEvents.lang('en_us', event => {
     /**
-     * @summary Adds a Create item tooltip.
-     * @
+     * Adds a Create item tooltip. 
      * @param {string} namespace 
      * @param {string} key 
      * @param {string} cap 
@@ -55,7 +54,7 @@ ClientEvents.lang('en_us', event => {
         event.add(namespace, `item.${namespace}.${key}.tooltip`, cap)
     }
     /**
-     * 
+     * Adds a Create item summary to the tooltip.
      * @param {string} namespace 
      * @param {string} key 
      * @param {string} summary 
@@ -64,7 +63,7 @@ ClientEvents.lang('en_us', event => {
         event.add(namespace, `item.${namespace}.${key}.tooltip.summary`, summary)
     }
     /**
-     * 
+     * Adds item condition1 and behaviour1
      * @param {string} namespace 
      * @param {string} key 
      * @param {string} condition 
@@ -75,13 +74,75 @@ ClientEvents.lang('en_us', event => {
         event.add(namespace, `item.${namespace}.${key}.tooltip.behaviour1`, behaviour)
     }
     /**
-     * 
+     * Adds item condition2 and behaviour2
      * @param {string} namespace 
      * @param {string} key 
      * @param {string} condition 
      * @param {string} behaviour 
      */
     let itemCb2 = (namespace, key, condition, behaviour) => {
+        event.add(namespace, `item.${namespace}.${key}.tooltip.condition2`, condition)
+        event.add(namespace, `item.${namespace}.${key}.tooltip.behaviour2`, behaviour)
+    }
+    /**
+     * Adds item condition3 and behaviour3
+     * @param {string} namespace 
+     * @param {string} key 
+     * @param {string} condition 
+     * @param {string} behaviour 
+     */
+    let itemCb3 = (namespace, key, condition, behaviour) => {
+        event.add(namespace, `item.${namespace}.${key}.tooltip.condition2`, condition)
+        event.add(namespace, `item.${namespace}.${key}.tooltip.behaviour2`, behaviour)
+    }
+    /**
+     * Adds a Create block tooltip.
+     * @param {string} namespace 
+     * @param {string} key 
+     * @param {string} cap 
+     */
+    let blockT = (namespace, key, cap) => {
+        event.add(namespace, `block.${namespace}.${key}.tooltip`, cap)
+    }
+    /**
+     * Adds a Create block summary to the tooltip
+     * @param {string} namespace 
+     * @param {string} key 
+     * @param {string} summary 
+     */
+    let blockSu = (namespace, key, summary) => {
+        event.add(namespace, `block.${namespace}.${key}.tooltip.summary`, summary)
+    }
+    /**
+     * Adds block condition1 and behaviour1
+     * @param {string} namespace 
+     * @param {string} key 
+     * @param {string} condition 
+     * @param {string} behaviour 
+     */
+    let blockCb1 = (namespace, key, condition, behaviour) => {
+        event.add(namespace, `item.${namespace}.${key}.tooltip.condition1`, condition)
+        event.add(namespace, `item.${namespace}.${key}.tooltip.behaviour1`, behaviour)
+    }
+    /**
+     * Adds block condition2 and behaviour2
+     * @param {string} namespace 
+     * @param {string} key 
+     * @param {string} condition 
+     * @param {string} behaviour 
+     */
+    let blockCb2 = (namespace, key, condition, behaviour) => {
+        event.add(namespace, `item.${namespace}.${key}.tooltip.condition2`, condition)
+        event.add(namespace, `item.${namespace}.${key}.tooltip.behaviour2`, behaviour)
+    }
+    /**
+     * Adds block condition3 and behaviour3
+     * @param {string} namespace 
+     * @param {string} key 
+     * @param {string} condition 
+     * @param {string} behaviour 
+     */
+    let blockCb3 = (namespace, key, condition, behaviour) => {
         event.add(namespace, `item.${namespace}.${key}.tooltip.condition2`, condition)
         event.add(namespace, `item.${namespace}.${key}.tooltip.behaviour2`, behaviour)
     }
@@ -405,16 +466,27 @@ ClientEvents.lang('en_us', event => {
         })
     }
     if (Platform.isLoaded('malum')) {
-        event.add('item.kubejs.final_scythe.tooltip.condition2', 'Soul Piercing')
-        event.add('item.kubejs.final_scythe.tooltip.behaviour2', "Has the ability to _shatter_ souls! Use with _caution_.")
-        event.add('item.kubejs.final_katana.tooltip.condition2', 'Soul Piercing')
-        event.add('item.kubejs.final_katana.tooltip.behaviour2', "Has the ability to _shatter_ souls! Use with _caution_.")
-        event.addAll('malum', {
+        itemCb2(
+            'kubejs', 'final_scythe',
+            'Soul Piercing', 'Has the ability to _shatter_ souls! Use with _caution_.'
+        )
+        itemCb2(
+            'kubejs', 'final_katana',
+            'Soul Piercing', 'Has the ability to _shatter_ souls! Use with _caution_.'
+        )
+        itemT('malum', 'encyclopedia_arcana', 'ENCYCLOPEDIA ARCANA')
+        itemSu('malum', 'encyclopedia_arcana', 'Your guide to the _dark arts_ of _Malum_.')
+        itemT('malum', 'spirit_pouch', 'SPIRIT POUCH')
+        itemSu('malum', 'spirit_pouch', '_Automatically stores souls_ that you acquire. No longer will you have to worry about storage on your person.')
+        itemCb1('malum', 'spirit_pouch', 'On R-Click', '_Opens_ the Spirit Pouch inventory.')
+        itemT('malum', 'tyrving', 'TYRVING')
+        itemSu('malum', 'tyrving', 'Deals _direct damage_ to the _soul_ of the entity that gets hit.')
+        /*event.addAll('malum', {
             "item.malum.encyclopedia_arcana.tooltip": "ENCYCLOPEDIA ARCANA",
             "item.malum.encyclopedia_arcana.tooltip.summary": "Your guide to the _dark arts_ of _Malum_.",
             "item.malum.tyrving.tooltip": "TYRVING",
             "item.malum.tyrving.tooltip.summary": "Deals _direct damage_ to the _soul_ of the entity that gets hit."
-        })
+        })*/
     }
 
     event.addAll('create', {
