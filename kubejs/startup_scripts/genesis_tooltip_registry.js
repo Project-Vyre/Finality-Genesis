@@ -1,5 +1,6 @@
 // priority: 1
 // requires: create
+// ignored: false
 
 console.log('Loaded Create tooltip registry.')
 
@@ -401,13 +402,13 @@ ClientEvents.init(event => {
         YELLOW_PALETTE('solapplepie:golden_lunchbox')
     }
     if (Platform.isLoaded('supplementaries')) {
+        // currently the sack and vault do not accept Create's tooltips.
         GRAY_PALETTE('supplementaries:cage')
         PURPLE_PALETTE('supplementaries:enderman_head')
         STANDARD_PALETTE('supplementaries:key')
         GRAY_PALETTE('supplementaries:pedestal')
         STANDARD_PALETTE('supplementaries:quiver')
-        STANDARD_PALETTE('supplementaries:sack')
-        STANDARD_PALETTE('supplementaries:statue')
+        GRAY_PALETTE('supplementaries:statue')
     }
     if (Platform.isLoaded('tempad')) {
         PURPLE_PALETTE('tempad:tempad')
