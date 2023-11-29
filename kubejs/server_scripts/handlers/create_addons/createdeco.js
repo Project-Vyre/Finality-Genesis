@@ -49,6 +49,16 @@ function COINSTACK_MELTING(event, moltenMetal, coinType) {
 }
 
 ServerEvents.recipes(event => {
+    event.remove([
+        {
+            type: 'create:pressing',
+            output: 'createdeco:zinc_sheet'
+        },
+        {
+            type: 'create:pressing',
+            output: 'createdeco:netherite_sheet'
+        }
+    ])
     NUGGET_SOLIDIFY(event, 'minecraft:iron_nugget', 'iron')
     NUGGET_SOLIDIFY(event, 'minecraft:gold_nugget', 'gold')
     NUGGET_SOLIDIFY(event, 'create:copper_nugget', 'copper')

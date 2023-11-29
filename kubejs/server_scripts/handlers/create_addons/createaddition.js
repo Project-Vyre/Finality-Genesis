@@ -21,7 +21,11 @@ ServerEvents.recipes(event => {
         { id: 'createaddition:rolling/straw' },
         { id: 'createaddition:mixing/biomass_from_sticks' },
         { id: 'createaddition:mixing/biomass_from_honeycomb' },
-        { type: 'createaddition:liquid_burning' }
+        { type: 'createaddition:liquid_burning' },
+        {
+            type: 'create:pressing',
+            output: 'createaddition:zinc_sheet'
+        }
     ])
     // bioethanol balancing work in progress.
     event.recipes.create.mixing('3x createaddition:biomass', [
