@@ -238,7 +238,7 @@ const $ItemDescription = Java.loadClass('com.simibubi.create.foundation.item.Ite
 const $TooltipModifier = Java.loadClass('com.simibubi.create.foundation.item.TooltipModifier')
 const $Palette = Java.loadClass('com.simibubi.create.foundation.item.TooltipHelper$Palette')
 
-ClientEvents.lang(event => {
+ClientEvents.lang('en_us', event => {
     STANDARD_PALETTE_REGISTRY.forEach(item => {
         STANDARD_PALETTE(item)
     })

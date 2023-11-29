@@ -24,7 +24,7 @@ const minecraftMaterialTools = {
     iron: 'IRON'
 }
 
-let allColors = {
+const DYE = {
     black: 'BLACK',
     gray: 'GRAY',
     light_gray: 'LIGHT GRAY',
@@ -384,7 +384,7 @@ ClientEvents.lang('en_us', event => {
         "item.bhc.red_heart.tooltip": "RED HEART",
         "item.bhc.red_heart.tooltip.summary": "Adds more health when used with the _Heart Amulet_ as a Red Heart Canister.",
         "item.bhc.red_heart.tooltip.condition1": "When melted",
-        "item.bhc.red_heart.tooltip.behaviour1": "used for making Melted Yellow Hearts which can then be _upgraded_ further.",
+        "item.bhc.red_heart.tooltip.behaviour1": "Used for making Melted Yellow Hearts which can then be _upgraded_ further.",
     })
     if (Platform.isLoaded('create_power_loader')) {
         event.addAll('create_power_loader', {
@@ -3195,8 +3195,8 @@ ClientEvents.lang('en_us', event => {
             "item.chalk.chalk_box.tooltip.condition2": "Additional Info",
             "item.chalk.chalk_box.tooltip.behaviour2": "Marks are drawn with the _leftmost chalk_ in order. To change _active_ chalk, simply _[Shift]_ + _[R-click]_ while _not looking_ at any block with the Chalk Box in hand."
         })
-        Object.keys(allColors).forEach(insert => {
-            event.add('chalk', `item.chalk.${insert}_chalk.tooltip`, `${allColors[insert]} CHALK`);
+        Object.keys(DYE).forEach(insert => {
+            event.add('chalk', `item.chalk.${insert}_chalk.tooltip`, `${DYE[insert]} CHALK`);
             event.add('chalk', `item.chalk.${insert}_chalk.tooltip.summary`, "Useful for _planning_, _navigation_ and drawing. Can be stored in the _Chalk Box_ for easier management and utility. _Additional symbols_ are _unlocked_ through advancements.");
             event.add('chalk', `item.chalk.${insert}_chalk.tooltip.condition1`, "Usage");
             event.add('chalk', `item.chalk.${insert}_chalk.tooltip.behaviour1`, "Right click on a block face to _draw_ a mark. Depending on the _angle_ and _distance_ away from the _center_ of the block, the _direction_ of your drawing will change. A _dot mark_ is drawn by clicking in the center of the block.");
@@ -3210,8 +3210,8 @@ ClientEvents.lang('en_us', event => {
     if (Platform.isLoaded('chipped')) {
         event.add('chipped', 'block.chipped.arched_leaded_glass_pane_pillar.tooltip', 'CHIPPED LEADED GLASS PANE PILLAR')
         event.add('chipped', 'block.chipped.arched_leaded_glass_pane_pillar.tooltip.summary', 'The textures are _currently broken_ and will not show correctly. It has also been confirmed that the textures are not working as intended _with or without_ Embeddium.')
-        Object.keys(allColors).forEach(insert => {
-            event.add('chipped', `block.chipped.arched_${insert}_stained_glass_pane_pillar.tooltip`, `ARCHED ${allColors[insert]} STAINED GLASS PANE PILLAR`) //'chipped:arched_black_stained_glass_pane_pillar'
+        Object.keys(DYE).forEach(insert => {
+            event.add('chipped', `block.chipped.arched_${insert}_stained_glass_pane_pillar.tooltip`, `ARCHED ${DYE[insert]} STAINED GLASS PANE PILLAR`) //'chipped:arched_black_stained_glass_pane_pillar'
             event.add('chipped', `block.chipped.arched_${insert}_stained_glass_pane_pillar.tooltip.summary`, 'The textures are _currently broken_ and will not show correctly. It has also been confirmed that the textures are not working as intended _with or without_ Embeddium.')
         })
     }
