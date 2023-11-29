@@ -19,6 +19,34 @@ ServerEvents.recipes(event => {
         'minecraft:black_dye',
         'create:powdered_obsidian'
     ]).id('extendedcrafting:black_iron_ingot')
+    event.shaped('extendedcrafting:black_iron_slate', [
+        'BB'
+    ], {
+        B: 'extendedcrafting:black_iron_ingot'
+    }).id('extendedcrafting:black_iron_slate')
+    event.shaped('kubejs:denied_result', [
+        'CAC',
+        'MIM',
+        'CSC'
+    ], {
+        C: 'extendedcrafting:basic_component',
+        A: 'extendedcrafting:basic_catalyst',
+        M: 'minecraft:crafting_table',
+        I: 'minecraft:iron_block',
+        S: 'extendedcrafting:black_iron_slate'
+    }).id('extendedcrafting:basic_table')
+    event.recipes.create.mechanical_crafting('extendedcrafting:basic_table', [
+        'CAAAC',
+        'SMMMS',
+        ' S S ',
+        ' S S ',
+        'SCCCS'
+    ], {
+        C: 'extendedcrafting:basic_component',
+        A: 'extendedcrafting:basic_catalyst',
+        M: 'create:mechanical_crafter',
+        S: 'extendedcrafting:black_iron_slate'
+    }).id('finality:mechanical_crafting/basic_table')
 
     event.shaped('minecraft:beacon', [
         'GGG',
