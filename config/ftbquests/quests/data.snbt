@@ -17,7 +17,7 @@
 		}
 		{ Count: 1b, id: "ftbquests:book" }
 	]
-	emergency_items_cooldown: 300
+	emergency_items_cooldown: 5
 	grid_scale: 0.5d
 	icon: "extendedcrafting:ultimate_singularity"
 	lock_message: ""

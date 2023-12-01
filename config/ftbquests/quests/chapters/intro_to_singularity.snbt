@@ -638,7 +638,12 @@
 				}
 				{
 					id: "7F1707757DF45D46"
-					item: "createchunkloading:chunk_loader"
+					item: "create_power_loader:andesite_chunk_loader"
+					type: "item"
+				}
+				{
+					id: "65A741FBD62349C1"
+					item: "create_power_loader:brass_chunk_loader"
 					type: "item"
 				}
 			]

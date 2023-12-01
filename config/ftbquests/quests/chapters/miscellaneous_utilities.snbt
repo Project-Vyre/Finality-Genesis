@@ -103,32 +103,6 @@
 			x: 0.0d
 			y: -1.5d
 		}
-		{
-			dependencies: ["35DE8799CDD5E313"]
-			id: "0F8DBBC1CF912A01"
-			subtitle: "The beginner chunk loader!"
-			tasks: [{
-				id: "52F50A022B390A38"
-				item: "create_power_loader:andesite_chunk_loader"
-				type: "item"
-			}]
-			title: "Andesite Chunk Loader"
-			x: -1.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["35DE8799CDD5E313"]
-			id: "11A1D0726EA71354"
-			subtitle: "Advanced and customizable!"
-			tasks: [{
-				id: "59246D5E2C634767"
-				item: "create_power_loader:brass_chunk_loader"
-				type: "item"
-			}]
-			title: "Brass Chunk Loader"
-			x: 1.5d
-			y: 0.0d
-		}
 	]
 	subtitle: ["Some miscellaneous utilities..."]
 	title: "Miscellaneous Utilities"
