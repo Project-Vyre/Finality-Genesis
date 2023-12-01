@@ -647,11 +647,13 @@ ServerEvents.recipes(event => {
 })
 
 ServerEvents.loaded(event => {
-    Utils.server.scheduleInTicks(130, t => {
-        t.server.tell([
+    Utils.server.scheduleInTicks(250, t => {
+        event.server.tell([
             Component.of('-----------------------------------------------------\n').darkAqua(),
             Component.of('System: ').bold().green(),
-            Component.of('Forcibly applied Ultimate Singularity recipe.\n'),
+            Component.of('This is a scheduled message to let you know that the Ultimate Singularity recipe has been'),
+            Component.of(' forcibly ').bold().red(),
+            Component.of('applied.\n'),
             Component.of('\nIf it is ever '),
             Component.of('missing ').bold().red(),
             Component.of('again, please report this to the\n'),

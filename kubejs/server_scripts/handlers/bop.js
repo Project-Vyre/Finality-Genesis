@@ -14,9 +14,10 @@ ServerEvents.tags('item', event => {
 })
 
 ServerEvents.recipes(event => {
-    event.shapeless('create:rose_quartz', [
-        '3x biomesoplenty:rose_quartz_shard'
-    ]).id('finality:bop/rose_quartz_conversion')
+    event.recipes.create.sandpaper_polishing(
+        'create:polished_rose_quartz',
+        'biomesoplenty:rose_quartz_shard'
+    ).id('finality:create/sandpaper_polishing/bop_rose_quartz')
     event.shapeless('4x biomesoplenty:rose_quartz_shard', [
         'biomesoplenty:rose_quartz_block'
     ]).id('finality:bop/rose_quartz_block_decompression')

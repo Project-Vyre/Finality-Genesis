@@ -380,6 +380,7 @@
 				{
 					id: "7C483B82D80A8F75"
 					item: "minecraft:bone_meal"
+					match_nbt: false
 					type: "item"
 				}
 			]
