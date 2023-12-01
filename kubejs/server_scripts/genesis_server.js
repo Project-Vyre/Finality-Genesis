@@ -1,4 +1,4 @@
-// priority: 0
+// priority: 100
 // requires: kubejs_create
 // requires: supplementaries
 
@@ -116,44 +116,6 @@ let INTEGER_BINARY = {
     nine: '00111001'
 }
 
-function BINARYCONVERSION(event, output, arrangement) {
-    event.recipes.create.mechanical_crafting(`kubejs:${output}`, [
-        arrangement
-    ], {
-        '0': 'kubejs:zero',
-        '1': 'kubejs:one'
-    }).id(`finality:mechanical_crafting/${output}`)
-}
-
-function HEXCODES(event, out, arrangement) {
-    event.recipes.create.mechanical_crafting(`kubejs:color_${out}`, [
-        arrangement
-    ], {
-        '#': 'kubejs:octothorpe',
-        '0': 'kubejs:zero',
-        'F': 'kubejs:letter_f'
-    }).id(`finality:mechanical_crafting/color_${out}`)
-}
-
-function COLOR_MIXING(event, output_color, color_one, color_two) {
-    event.recipes.create.mixing(`kubejs:color_${output_color}`, [
-        `kubejs:color_${color_one}`,
-        `kubejs:color_${color_two}`,
-        Fluid.of('kubejs:shimmer', 500)
-    ]).id(`finality:mixing/color_${output_color}`)
-}
-
-/**
- * 
- * @param {*} event 
- * @param {Internal.ItemStack[]} outputs 
- * @param {Internal.ItemStack[]} inputs 
- * @param {string} id 
- */
-global.shortSuperheatedCompacting = (event, outputs, inputs, id) => {
-    event.recipes.create.compacting(outputs, inputs).superheated().id(`finality:superheated_compacting/${id}`)
-}
-
 ServerEvents.recipes(event => {
     FOUNDATION_NONMETAL.forEach(insert => { // why can you even smelt and blast these ores? YOU LITERALLY LOSE SO MUCH!
         event.remove([
@@ -170,6 +132,30 @@ ServerEvents.recipes(event => {
     CURSEDRECIPES.forEach(insert => { // removing cursed recipes pt2
         event.remove({ id: `minecraft:${insert}` })
     })
+    let BINARYCONVERSION = (output, arrangement) => {
+        event.recipes.create.mechanical_crafting(`kubejs:${output}`, [
+            arrangement
+        ], {
+            '0': 'kubejs:zero',
+            '1': 'kubejs:one'
+        }).id(`finality:mechanical_crafting/${output}`)
+    }
+    let HEXCODES = (out, arrangement) => {
+        event.recipes.create.mechanical_crafting(`kubejs:color_${out}`, [
+            arrangement
+        ], {
+            '#': 'kubejs:octothorpe',
+            '0': 'kubejs:zero',
+            'F': 'kubejs:letter_f'
+        }).id(`finality:mechanical_crafting/color_${out}`)
+    }
+    let COLOR_MIXING = (output_color, color_one, color_two) => {
+        event.recipes.create.mixing(`kubejs:color_${output_color}`, [
+            `kubejs:color_${color_one}`,
+            `kubejs:color_${color_two}`,
+            Fluid.of('kubejs:shimmer', 500)
+        ]).id(`finality:mixing/color_${output_color}`)
+    }
     event.shapeless(Item.of('patchouli:guide_book', '{"patchouli:book":"patchouli:tome_of_finality"}'), [
         '#forge:rods/wooden', '#forge:rods/wooden'
     ]).id('finality:documentation_book')
@@ -615,6 +601,11 @@ ServerEvents.recipes(event => {
             inputIngot
         ).heated().id(`finality:basin/${outputFluid}_sheet_melting`)
     }
+    /**
+     * 
+     * @param {Internal.OutputFluid} outputFluid 
+     * @param {Internal.InputItem} inputBlock 
+     */
     let blockMeltingHeated = (outputFluid, inputBlock) => {
         event.recipes.create.mixing(
             Fluid.of(`kubejs:molten_${outputFluid}`, 810),
@@ -767,25 +758,6 @@ ServerEvents.recipes(event => {
             result: [Item.of('kubejs:lemon_slice', 4).toJson()],
             tool: Ingredient.of('#forge:tools/knives').toJson()
         }).id('finality:lemon_cutting')
-    }
-    if (Platform.isLoaded('fruittrees')) {
-        event.recipes.create.cutting('4x kubejs:lemon_slice', 'fruittrees:lemon').processingTime(25).id('finality:fruittrees/cutting/lemon_slice')
-        event.recipes.create.compacting([
-            Fluid.of('kubejs:lemon_juice', 100),
-            'kubejs:lemon_seed'
-        ], 'fruittrees:lemon').id('finality:fruittrees/compacting/whole_lemon')
-        if (Platform.isLoaded('farmersdelight')) {
-            event.custom({
-                'type': 'farmersdelight:cutting',
-                'ingredients': [
-                    Ingredient.of('fruittrees:lemon').toJson()
-                ],
-                'result': [
-                    Item.of('kubejs:lemon_slice', 4).toJson()
-                ],
-                'tool': Ingredient.of('#forge:tools/knives').toJson()
-            }).id('finality:fruittrees/fd_cutting/lemon')
-        }
     }
     // denied
     event.shapeless('kubejs:denied_result', [
@@ -946,24 +918,24 @@ ServerEvents.recipes(event => {
         '#': 'kubejs:octothorpe',
         'F': 'kubejs:letter_f'
     }).id('finality:mechanical_crafting/color_white')
-    HEXCODES(event, 'red', '#FF0000')
-    HEXCODES(event, 'green', '#00FF00')
-    HEXCODES(event, 'blue', '#0000FF')
-    HEXCODES(event, 'magenta', '#FF00FF')
-    HEXCODES(event, 'yellow', '#00FFFF')
-    HEXCODES(event, 'cyan', '#00FFFF')
-    COLOR_MIXING(event, 'magenta', 'red', 'blue')
-    COLOR_MIXING(event, 'yellow', 'red', 'green')
-    COLOR_MIXING(event, 'cyan', 'green', 'blue')
+    HEXCODES('red', '#FF0000')
+    HEXCODES('green', '#00FF00')
+    HEXCODES('blue', '#0000FF')
+    HEXCODES('magenta', '#FF00FF')
+    HEXCODES('yellow', '#00FFFF')
+    HEXCODES('cyan', '#00FFFF')
+    COLOR_MIXING('magenta', 'red', 'blue')
+    COLOR_MIXING('yellow', 'red', 'green')
+    COLOR_MIXING('cyan', 'green', 'blue')
     Object.keys(LETTER_BINARY_CODES).forEach(insert => {
-        BINARYCONVERSION(event, `${insert}`, `${LETTER_BINARY_CODES[insert]}`)
+        BINARYCONVERSION(`${insert}`, `${LETTER_BINARY_CODES[insert]}`)
     })
     Object.keys(INTEGER_BINARY).forEach(insert => {
-        BINARYCONVERSION(event, `${insert}`, `${INTEGER_BINARY[insert]}`)
+        BINARYCONVERSION(`${insert}`, `${INTEGER_BINARY[insert]}`)
     })
-    BINARYCONVERSION(event, 'octothorpe', '00100011')
-    BINARYCONVERSION(event, 'slash', '00101111')
-    BINARYCONVERSION(event, 'at_sign', '01000000')
+    BINARYCONVERSION('octothorpe', '00100011')
+    BINARYCONVERSION('slash', '00101111')
+    BINARYCONVERSION('at_sign', '01000000')
     Object.keys(global.SHAPES).forEach(shape => {
         VALID_COLOR_MIX.forEach(color => {
             event.recipes.create.mixing(`kubejs:${color}_${shape}`, [
@@ -1175,6 +1147,7 @@ PlayerEvents.loggedIn(event => {
                 Component.of('. Thank you!\n'),
                 Component.of('\nNote: You may need to open chat to see the full message.').underlined().yellow()
             ])
+            lootrMsg(event)
         }
         if (Platform.isLoaded('ftbquests') &&
             Platform.isLoaded('supplementaries')
@@ -1220,6 +1193,7 @@ PlayerEvents.loggedIn(event => {
                 Component.of('. Thank you!\n'),
                 Component.of('\nNote: You may need to open chat to see the full message.').underlined().yellow()
             ])
+            lootrMsg(event)
         }
     } else if (event.player.persistentData.contains('firstjoin')) {
         event.player.tell([
@@ -1263,8 +1237,36 @@ PlayerEvents.loggedIn(event => {
             Component.of('. Thank you!\n'),
             Component.of('\nNote: You may need to open chat to see the full message.').underlined().yellow()
         ])
+        lootrMsg(event)
     }
 })
+
+function lootrMsg(event) {
+    if (Platform.isLoaded('lootr') && Platform.isLoaded('carryon')) {
+        event.server.scheduleInTicks(300, t => {
+            event.player.tell([
+                Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
+                Component.of('Please remember that it\'s common courtesy to not break'),
+                Component.of(' Lootr ').bold().green(),
+                Component.of('chests so friends and other players can loot the same chest.\n'),
+                Component.of('\nIf need be, '),
+                Component.of('[Shift] + R-Click ').aqua(),
+                Component.of('on the '),
+                Component.of('Lootr ').bold().green(),
+                Component.of('chest with the '),
+                Component.of('power ').bold().yellow(),
+                Component.of('of '),
+                Component.of('Carry On ').bold().gold(),
+                Component.of('to '),
+                Component.of('move ').italic().gold(),
+                Component.of('it and R-Click again to place it down somewhere else. It was'),
+                Component.of(' not ').bold().italic().red(),
+                Component.of('that hard, right?'),
+                Component.of('\n<rainb>-----------------------------------------------------</rainb>')
+            ])
+        })
+    }
+}
 
 EntityEvents.hurt(event => {
     if (!event.player) return

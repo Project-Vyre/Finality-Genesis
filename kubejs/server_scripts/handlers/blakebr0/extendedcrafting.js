@@ -1,3 +1,4 @@
+// priority: 5
 // requires: extendedcrafting
 // requires: create
 
@@ -647,11 +648,11 @@ ServerEvents.recipes(event => {
 })
 
 ServerEvents.loaded(event => {
-    Utils.server.scheduleInTicks(250, t => {
+    event.server.scheduleInTicks(720, t => {
         event.server.tell([
             Component.of('-----------------------------------------------------\n').darkAqua(),
             Component.of('System: ').bold().green(),
-            Component.of('This is a scheduled message to let you know that the Ultimate Singularity recipe has been'),
+            Component.of('This is a scheduled message that was delayed to let you know that the Ultimate Singularity recipe has been'),
             Component.of(' forcibly ').bold().red(),
             Component.of('applied.\n'),
             Component.of('\nIf it is ever '),
@@ -661,8 +662,8 @@ ServerEvents.loaded(event => {
                 .bold().yellow()
                 .hover('https://github.com/Project-Vyre/Finality-Genesis/issues')
                 .clickOpenUrl('https://github.com/Project-Vyre/Finality-Genesis/issues'),
-            Component.of(', thank you. '),
-            Component.of('- CelestialAbyss').lightPurple(),
+            Component.of(', thank you. - '),
+            Component.of('CelestialAbyss').lightPurple(),
             Component.of('\n-----------------------------------------------------').darkAqua()
         ])
     })

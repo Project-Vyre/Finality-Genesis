@@ -37,7 +37,7 @@ ServerEvents.lowPriorityData(event => {
     if (Platform.isLoaded('quark')) {
         event.addJson('quark:tags/entity_types/general_protection', {
             "values": [
-                "quark:shiba_inu"
+                "quark:shiba"
             ]
         })
     }

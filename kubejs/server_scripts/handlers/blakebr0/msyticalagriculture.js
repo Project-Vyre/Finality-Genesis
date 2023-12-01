@@ -17,19 +17,6 @@ Rework essences, specifically Diamond, Brass, Steel and wherever applicable.
 Rework recipes that require Supremium wherever applicable.
 */
 
-/**
- * 
- * @param {*} event 
- * @param {string} seedInput 
- * @param {string} essenceOutput 
- */
-function seedMillstoneReprocessing(event, seedInput, essenceOutput) {
-    event.recipes.create.milling([
-        `2x mysticalagriculture:${essenceOutput}_essence`,
-        Item.of(`mysticalagriculture:${essenceOutput}_essence`).withChance(0.25)
-    ], `mysticalagriculture:${seedInput}_seeds`).processingTime(100).id(`finality:mysticalagriculture/milling/${seedInput}_seed_reprocessing`)
-}
-
 let SEED_PROCESSING_ELIGIBLE = [
     'air',
     'earth',
@@ -95,58 +82,56 @@ let iumTiers = [
     'awakened_supremium'
 ]
 
-/**
- * 
- * @param {*} event 
- * @param {Internal.ItemStack[]} outputs 
- * @param {Internal.ItemStack[]} inputs 
- * @param {string} id 
- */
-function heatedEssenceCompacting(event, outputs, inputs, recipeId) {
-    event.recipes.create.compacting(outputs, inputs).heated().id(`finality:mysticalagriculture/heated_compacting/${recipeId}`)
-}
-
-/**
- * 
- * @param {*} event 
- * @param {Internal.ItemStack[]} outputs 
- * @param {Internal.ItemStack[]} inputs 
- * @param {string} id 
- */
-function superheatedEssenceCompacting(event, outputs, inputs, recipeId) {
-    event.recipes.create.compacting(outputs, inputs).superheated().id(`finality:mysticalagriculture/superheated_compacting/${recipeId}`)
-}
-
-/**
- * 
- * @param {*} event 
- * @param {Internal.ItemStack[]} outputs 
- * @param {Internal.ItemStack[]} inputs 
- * @param {string} recipeId 
- */
-function heatedEssenceMixing(event, outputs, inputs, recipeId) {
-    event.recipes.create.mixing(outputs, inputs).heated().id(`finality:mysticalagriculture/heated_mixing/${recipeId}`)
-}
-
-/**
- * 
- * @param {*} event 
- * @param {Internal.ItemStack[]} outputs 
- * @param {Internal.ItemStack[]} inputs 
- * @param {string} recipeId 
- */
-function superheatedEssenceMixing(event, outputs, inputs, recipeId) {
-    event.recipes.create.mixing(outputs, inputs).superheated().id(`finality:mysticalagriculture/superheated_mixing/${recipeId}`)
-}
-
-/**
- * To-Do List
- * 
- * Rework essences, specifically Diamond, Brass, Steel and wherever applicable.
- *  - This is mostly due to the amount of difference and to encourage more automation with Create.
- */
-
 ServerEvents.recipes(event => {
+    /**
+     * 
+     * @param {string} seedInput 
+     * @param {string} essenceOutput 
+     */
+    let seedMillstoneReprocessing = (seedInput, essenceOutput) => {
+        event.recipes.create.milling([
+            `2x mysticalagriculture:${essenceOutput}_essence`,
+            Item.of(`mysticalagriculture:${essenceOutput}_essence`).withChance(0.25)
+        ], `mysticalagriculture:${seedInput}_seeds`).processingTime(100).id(`finality:mysticalagriculture/milling/${seedInput}_seed_reprocessing`)
+    }
+    /**
+     * 
+     * @param {Internal.ItemStack[]} outputs 
+     * @param {Internal.ItemStack[]} inputs 
+     * @param {string} id 
+     */
+    let heatedEssenceCompacting = (outputs, inputs, recipeId) => {
+        event.recipes.create.compacting(outputs, inputs).heated().id(`finality:mysticalagriculture/heated_compacting/${recipeId}`)
+    }
+    /**
+     * 
+     * @param {Internal.ItemStack[]} outputs 
+     * @param {Internal.ItemStack[]} inputs 
+     * @param {string} id 
+     */
+    let superheatedEssenceCompacting = (outputs, inputs, recipeId) => {
+        event.recipes.create.compacting(outputs, inputs).superheated().id(`finality:mysticalagriculture/superheated_compacting/${recipeId}`)
+    }
+
+    /**
+     * 
+     * @param {Internal.ItemStack[]} outputs 
+     * @param {Internal.ItemStack[]} inputs 
+     * @param {string} recipeId 
+     */
+    let heatedEssenceMixing = (outputs, inputs, recipeId) => {
+        event.recipes.create.mixing(outputs, inputs).heated().id(`finality:mysticalagriculture/heated_mixing/${recipeId}`)
+    }
+
+    /**
+     * 
+     * @param {Internal.ItemStack[]} outputs 
+     * @param {Internal.ItemStack[]} inputs 
+     * @param {string} recipeId 
+     */
+    let superheatedEssenceMixing = (outputs, inputs, recipeId) => {
+        event.recipes.create.mixing(outputs, inputs).superheated().id(`finality:mysticalagriculture/superheated_mixing/${recipeId}`)
+    }
     event.remove([
         { type: 'mysticalagriculture:reprocessor' },
         { id: 'mysticalagriculture:essence/minecraft/iron_ingot' },
@@ -671,7 +656,7 @@ ServerEvents.recipes(event => {
 
     // seed reprocessing via millstone
     SEED_PROCESSING_ELIGIBLE.forEach(element => {
-        seedMillstoneReprocessing(event, element, element)
+        seedMillstoneReprocessing(element, element)
     })
 
     if (Platform.isLoaded('ad_astra')) {
@@ -798,32 +783,32 @@ ServerEvents.recipes(event => {
     }
 
     // heated essence compacting
-    heatedEssenceCompacting(event, [
+    heatedEssenceCompacting([
         'minecraft:iron_ingot'
     ], [
         '9x mysticalagriculture:iron_essence'
     ], 'iron_ingot')
 
-    heatedEssenceCompacting(event, [
+    heatedEssenceCompacting([
         'minecraft:copper_ingot'
     ], [
         '9x mysticalagriculture:copper_essence'
     ], 'copper_ingot')
 
-    heatedEssenceCompacting(event, [
+    heatedEssenceCompacting([
         'create:zinc_ingot'
     ], [
         '9x mysticalagriculture:zinc_essence'
     ], 'zinc_ingot')
 
-    heatedEssenceCompacting(event, [
+    heatedEssenceCompacting([
         'create:brass_ingot'
     ], [
         '9x mysticalagriculture:brass_essence'
     ], 'brass_ingot')
 
     if (Platform.isLoaded('ad_astra')) {
-        heatedEssenceCompacting(event, [
+        heatedEssenceCompacting([
             'ad_astra:steel_ingot'
         ], [
             '9x mysticalagriculture:steel_essence'
@@ -831,14 +816,14 @@ ServerEvents.recipes(event => {
     }
 
     // superheated essence compacting
-    superheatedEssenceCompacting(event, [
+    superheatedEssenceCompacting([
         'minecraft:diamond'
     ], [
         '9x mysticalagriculture:diamond_essence',
         Fluid.of('kubejs:infusion_energy', 1000)
     ], 'diamond')
 
-    superheatedEssenceCompacting(event, [
+    superheatedEssenceCompacting([
         'minecraft:netherite_ingot',
         Item.of('minecraft:netherite_scrap').withChance(0.10)
     ], [
