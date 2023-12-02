@@ -352,7 +352,6 @@ ClientEvents.lang('en_us', event => {
         GRAY_GOLD_PALETTE('exposure:color_film')
         GRAY_WHITE_PALETTE('exposure:developed_black_and_white_film')
         GRAY_GOLD_PALETTE('exposure:developed_color_film')
-
     }
     if (Platform.isLoaded('extendedcrafting')) {
         STANDARD_PALETTE('extendedcrafting:handheld_table')
