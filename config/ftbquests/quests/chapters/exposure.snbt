@@ -1,0 +1,66 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "exposure"
+	group: "668E3EA3A7A91B79"
+	icon: "exposure:camera"
+	id: "5FD5CBBF5D8545DF"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["65FC712C5D7E312D"]
+			description: ["But wait! Where's the film?"]
+			id: "57E75D5A97254564"
+			rewards: [{
+				id: "74A8D5C10339AF27"
+				item: "create:experience_block"
+				type: "item"
+			}]
+			subtitle: "Every photographer needs these."
+			tasks: [
+				{
+					id: "5C01302E1CBEBE30"
+					item: "exposure:lightroom"
+					type: "item"
+				}
+				{
+					id: "4F82549540C6E436"
+					item: "exposure:camera"
+					type: "item"
+				}
+			]
+			title: "Photography Essentials"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["57E75D5A97254564"]
+			id: "6CECAE79F2DBABC6"
+			rewards: [{
+				count: 10
+				id: "7C4ADE77F4E38565"
+				item: "create:experience_block"
+				type: "item"
+			}]
+			subtitle: "Obviously you need these."
+			tasks: [
+				{
+					id: "60D71C27F3B0C9F8"
+					item: "exposure:black_and_white_film"
+					type: "item"
+				}
+				{
+					id: "20CAC2284BC0D957"
+					item: "exposure:color_film"
+					type: "item"
+				}
+			]
+			title: "Film for Days"
+			x: 0.0d
+			y: 2.0d
+		}
+	]
+	subtitle: ["A photo contains more than a thousand words."]
+	title: "Exposure"
+}

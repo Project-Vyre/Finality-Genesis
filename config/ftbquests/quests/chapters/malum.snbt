@@ -1,6 +1,6 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
+	default_quest_shape: "rsquare"
 	filename: "malum"
 	group: "6855847200ADBE3A"
 	icon: {
@@ -12,23 +12,91 @@
 	}
 	id: "483F9D15A7662A70"
 	order_index: 5
+	progression_mode: "flexible"
 	quest_links: [ ]
-	quests: [{
-		dependencies: ["4A691BB889286C89"]
-		description: ["Quest tree is a work in progress, but you are provided with a book should you slay an undead entity and acquire its souls."]
-		hide: true
-		id: "664F0A4CD1F442F9"
-		progression_mode: "linear"
-		subtitle: "You are going to be on your own for this one."
-		tasks: [{
-			id: "0FBE2DA967A39E51"
-			item: "malum:encyclopedia_arcana"
-			type: "item"
-		}]
-		title: "Introduction to Malum - The Encyclopedia"
-		x: 0.0d
-		y: 0.0d
-	}]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: ["Quest tree is a work in progress, but you are provided with a book should you slay an undead entity and acquire its souls."]
+			hide: true
+			icon: "malum:encyclopedia_arcana"
+			id: "664F0A4CD1F442F9"
+			progression_mode: "linear"
+			subtitle: "You are going to be on your own for this one."
+			tasks: [
+				{
+					id: "0FBE2DA967A39E51"
+					item: "malum:encyclopedia_arcana"
+					type: "item"
+				}
+				{
+					id: "10261CC39D834E39"
+					item: {
+						Count: 1b
+						id: "malum:crude_scythe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Introduction to Malum"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["09BC57F448E77F7A"]
+			id: "010F65DAC98B3D33"
+			subtitle: "Spirits no longer take up inventory space, yay!"
+			tasks: [{
+				id: "7E76B9C729ED5130"
+				item: "malum:spirit_pouch"
+				type: "item"
+			}]
+			title: "Easy Storage - Spirit Pouch"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["664F0A4CD1F442F9"]
+			description: [
+				"Soul Stone can be found in the world. Explore and mine!"
+				""
+				"You will also have to find Runewood trees or get Runewood saplings from a Wandering Trader who happens to be selling one."
+			]
+			icon: "malum:spirit_altar"
+			id: "09BC57F448E77F7A"
+			subtitle: "You need this."
+			tasks: [
+				{
+					id: "03690DCDA1A9CB3E"
+					item: "malum:processed_soulstone"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "780564B2E09879DF"
+					item: "malum:runewood_planks"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "51290C3B536361CD"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					id: "3F4BFFFAC5E17DD2"
+					item: "malum:spirit_altar"
+					type: "item"
+				}
+			]
+			title: "The Spirit Altar"
+			x: 0.0d
+			y: 1.5d
+		}
+	]
 	subtitle: ["Love shattering souls and dark magic? Malum is for you!"]
 	title: "Malum"
 }

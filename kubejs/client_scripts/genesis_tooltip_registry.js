@@ -345,6 +345,15 @@ ClientEvents.lang('en_us', event => {
     if (Platform.isLoaded('etched')) {
         YELLOW_PALETTE('etched:boombox')
     }
+    if (Platform.isLoaded('exposure')) {
+        STANDARD_PALETTE('exposure:camera')
+        STANDARD_PALETTE('exposure:lightroom')
+        GRAY_WHITE_PALETTE('exposure:black_and_white_film')
+        GRAY_GOLD_PALETTE('exposure:color_film')
+        GRAY_WHITE_PALETTE('exposure:developed_black_and_white_film')
+        GRAY_GOLD_PALETTE('exposure:developed_color_film')
+
+    }
     if (Platform.isLoaded('extendedcrafting')) {
         STANDARD_PALETTE('extendedcrafting:handheld_table')
     }

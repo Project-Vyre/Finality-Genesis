@@ -19,7 +19,7 @@
 	]
 	emergency_items_cooldown: 5
 	grid_scale: 0.5d
-	icon: "extendedcrafting:ultimate_singularity"
+	icon: "create:brass_block"
 	lock_message: ""
 	loot_crate_no_drop: {
 		boss: 0

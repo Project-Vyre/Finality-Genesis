@@ -121,8 +121,8 @@ ClientEvents.lang('en_us', event => {
      * @param {string} behaviour 
      */
     let blockCb1 = (namespace, key, condition, behaviour) => {
-        event.add(namespace, `item.${namespace}.${key}.tooltip.condition1`, condition)
-        event.add(namespace, `item.${namespace}.${key}.tooltip.behaviour1`, behaviour)
+        event.add(namespace, `block.${namespace}.${key}.tooltip.condition1`, condition)
+        event.add(namespace, `block.${namespace}.${key}.tooltip.behaviour1`, behaviour)
     }
     /**
      * Adds block condition2 and behaviour2
@@ -132,8 +132,8 @@ ClientEvents.lang('en_us', event => {
      * @param {string} behaviour 
      */
     let blockCb2 = (namespace, key, condition, behaviour) => {
-        event.add(namespace, `item.${namespace}.${key}.tooltip.condition2`, condition)
-        event.add(namespace, `item.${namespace}.${key}.tooltip.behaviour2`, behaviour)
+        event.add(namespace, `block.${namespace}.${key}.tooltip.condition2`, condition)
+        event.add(namespace, `block.${namespace}.${key}.tooltip.behaviour2`, behaviour)
     }
     /**
      * Adds block condition3 and behaviour3
@@ -816,6 +816,43 @@ ClientEvents.lang('en_us', event => {
             "item.etched.boombox.tooltip.condition2": "On R-click with Music Disc on cursor",
             "item.etched.boombox.tooltip.behaviour2": "_Inserts_ Music Disc into boombox."
         })
+    }
+
+    if (Platform.isLoaded('exposure')) {
+        blockT('exposure', 'lightroom', 'LIGHTROOM')
+        blockSu('exposure', 'lightroom',
+            'Where your photographs come to life. Have some _paper_ ready to print your photos onto!'
+        )
+        blockCb1('exposure', 'lightroom',
+            'For black and white photos',
+            'Put _black dye_ in the fourth slot.'
+        )
+        blockCb2('exposure', 'lightroom',
+            'For color film',
+            'Put _cyan_, _magenta_, and _yellow_ dye in that order in the bottom dye slots.'
+        )
+        itemT('exposure', 'camera', 'TOOLTIP')
+        itemSu('exposure', 'camera', 'Feel free to _capture_ special moments or your creations with this camera.')
+        itemCb1('exposure', 'camera',
+            'On Sneak + R-Click',
+            'Opens the _configuration_ screen.'
+        )
+        itemCb2('exposure', 'camera',
+            'On Sneak while in photo-taking mode',
+            'Allows for _fine-tuning_ of the camera.'
+        )
+        itemCb3('exposure', 'camera',
+            'After use',
+            '_Wash_ your film after using it with a _Bottle of Water_. Use a _Lightroom_ to _view_ and _print_ your photos.'
+        )
+        itemT('exposure', 'black_and_white_film', 'BLACK AND WHITE FILM')
+        itemSu('exposure', 'black_and_white_film', 'Takes a photograph in monochromatic _black and white_.')
+        itemT('exposure', 'color_film', 'COLOR FILM')
+        itemSu('exposure', 'color_film', 'Takes a photograph in _color_.')
+        itemT('exposure', 'developed_black_and_white_film', 'DEVELOPED BLACK AND WHITE FILM')
+        itemSu('exposure', 'developed_black_and_white_film', 'The next step is to _wash_ the film with a _small amount of water_.')
+        itemT('exposure', 'developed_color_film', 'DEVELOPED COLOR FILM')
+        itemSu('exposure', 'developed_color_film', 'The next step is to _wash_ the film with a _small amount of water_.')
     }
 
     if (Platform.isLoaded('extendedcrafting')) {
