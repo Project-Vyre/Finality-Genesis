@@ -33,4 +33,25 @@ ServerEvents.recipes(event => {
         'minecraft:wet_sponge',
         '8x minecraft:rotten_flesh'
     ]).id('finality:bop/porous_flesh_block')
+    if (Platform.isLoaded('aether')) {
+        event.shaped('minecraft:chest', [
+            'WWW',
+            'W W',
+            'WWW'
+        ], {
+            W: [
+                'biomesoplenty:fir_planks',
+                'biomesoplenty:redwood_planks',
+                'biomesoplenty:cherry_planks', // deprecate in 1.20.x+
+                'biomesoplenty:mahogany_planks',
+                'biomesoplenty:jacaranda_planks',
+                'biomesoplenty:palm_planks',
+                'biomesoplenty:willow_planks',
+                'biomesoplenty:dead_planks',
+                'biomesoplenty:magic_planks',
+                'biomesoplenty:umbran_planks',
+                'biomesoplenty:hellbark_planks',
+            ]
+        }).id(`finality:biomesoplenty/crafting/vanilla_chest_fallback`)
+    }
 })

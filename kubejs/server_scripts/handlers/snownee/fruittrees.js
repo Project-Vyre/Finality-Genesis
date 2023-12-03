@@ -1,6 +1,8 @@
 // requires: fruittrees
 // requires: farmersdelight
 
+
+
 ServerEvents.recipes(event => {
     event.recipes.create.cutting('4x kubejs:lemon_slice', 'fruittrees:lemon').processingTime(25).id('finality:fruittrees/cutting/lemon_slice')
     event.recipes.create.compacting([
@@ -17,4 +19,16 @@ ServerEvents.recipes(event => {
         ],
         tool: Ingredient.of('#forge:tools/knives').toJson()
     }).id('finality:fruittrees/fd_cutting/lemon')
+    if (Platform.isLoaded('aether')) {
+        event.shaped('minecraft:chest', [
+            'WWW',
+            'W W',
+            'WWW'
+        ], {
+            W: [
+                'fruittrees:cherry_planks',
+                'fruittrees:citrus_planks'
+            ]
+        }).id('finality:fruittrees/crafting/vanilla_chest_fallback')
+    }
 })

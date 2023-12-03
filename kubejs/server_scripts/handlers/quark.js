@@ -21,7 +21,21 @@ ServerEvents.recipes(event => {
         'LLL'
     ], {
         L: '#minecraft:logs'
-    }).id('quark:tweaks/crafting/utility/chests/mixed_chest_wood_but_without_exclusions')  
+    }).id('quark:tweaks/crafting/utility/chests/mixed_chest_wood_but_without_exclusions')
+    if (Platform.isLoaded('aether')) {
+        event.shaped('minecraft:chest', [
+            'WWW',
+            'W W',
+            'WWW'
+        ], {
+            W: [
+                'quark:ancient_planks',
+                'quark:blossom_planks',
+                'quark:azalea_planks',
+                'quark:bamboo_planks' // deprecate in 1.20.x+
+            ]
+        }).id('finality:quark/crafting/vanilla_chest_fallback')
+    }
 })
 
 ServerEvents.tags('block', event => {
