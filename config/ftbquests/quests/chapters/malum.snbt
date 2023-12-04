@@ -22,6 +22,26 @@
 			icon: "malum:encyclopedia_arcana"
 			id: "664F0A4CD1F442F9"
 			progression_mode: "linear"
+			rewards: [
+				{
+					count: 9
+					id: "532DBCAE0F13EFD8"
+					item: "create:experience_nugget"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1A9EA4A625F030C7"
+					table_id: 7159138545964995551L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "4608A913A52063B1"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+			]
 			subtitle: "You are going to be on your own for this one."
 			tasks: [
 				{
@@ -95,6 +115,36 @@
 			title: "The Spirit Altar"
 			x: 0.0d
 			y: 1.5d
+		}
+		{
+			dependencies: ["4D7E41AD90C70979"]
+			id: "3F0A1A756E147C0F"
+			subtitle: "Direct soul damage."
+			tasks: [{
+				id: "3B006EEDB4547588"
+				item: {
+					Count: 1b
+					id: "malum:tyrving"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "The Tyrving"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["010F65DAC98B3D33"]
+			id: "4D7E41AD90C70979"
+			tasks: [{
+				id: "4AE32255865B4512"
+				item: "malum:soul_stained_steel_ingot"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.5d
 		}
 	]
 	subtitle: ["Love shattering souls and dark magic? Malum is for you!"]

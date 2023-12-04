@@ -14,9 +14,6 @@
     "cameraX": 3.25,
     "cameraY": 2.0,
     "cameraZ": 0.0,
-    "referX": 3.25,
-    "referY": 2.0,
-    "referZ": 0.0,
     "bindPitching": true,
     "bindYawing": true,
     "bindRolling": true,
@@ -29,9 +26,6 @@
     "cameraX": -60.0,
     "cameraY": 2.0,
     "cameraZ": -16.0,
-    "referX": 3.25,
-    "referY": 2.0,
-    "referZ": 0.0,
     "centerX": 0.0,
     "centerY": -3.4,
     "centerZ": 0.0,
@@ -57,42 +51,38 @@
     ],
     "customConditions": [
       {
-        "f_14413_": {
-          "f_14413_": "minecraft:spyglass",
-          "f_14414_": "using"
-        },
-        "f_14414_": [
-          "disable_rendering"
+        "left": "holding",
+        "middle": [
+          "new item id"
+        ],
+        "right": [
+          "new action"
         ]
       },
       {
-        "f_14413_": {
-          "f_14413_": "Example--minecraft:filled_map",
-          "f_14414_": "holding"
-        },
-        "f_14414_": [
-          "allow_rendering_hand",
-          "leftArm",
-          "rightArm",
-          "leftSleeve",
-          "rightSleeve",
-          "heldItem"
+        "left": "holding",
+        "middle": [
+          "new item id"
+        ],
+        "right": [
+          "new action"
         ]
       },
       {
-        "f_14413_": {
-          "f_14413_": "create:potato_cannon",
-          "f_14414_": "holding"
-        },
-        "f_14414_": [
-          "disable_rendering"
+        "left": "holding",
+        "middle": [
+          "new item id"
+        ],
+        "right": [
+          "new action"
         ]
       }
     ],
     "fallFlying": true,
-    "swiming": true,
+    "swimming": true,
     "crawling": true,
     "sneaking": false,
-    "sleeping": false
+    "sleeping": false,
+    "screenOpened": false
   }
 }
