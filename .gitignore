@@ -34,6 +34,7 @@ XaeroWorldMap/
 modernfix/
 jei/world/local/
 debug/
+exposures/*
 
 # Ignore files
 .curseclient
