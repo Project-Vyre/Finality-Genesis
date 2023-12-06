@@ -881,7 +881,7 @@ ServerEvents.recipes(event => {
     ], {
         N: 'kubejs:netherite_nugget'
     }).id('finality:netherite_ingot_from_nuggets')
-    event.shapeless('9x kubejs:netherite_nugget', 'minecraft:netherite_ingot').id('finality:netherite_ingot_from_nuggets')
+    event.shapeless('9x kubejs:netherite_nugget', 'minecraft:netherite_ingot').id('finality:netherite_nugget')
     event.shapeless('minecraft:dragon_breath', [
         'minecraft:dragon_egg',
         'minecraft:glass_bottle'
