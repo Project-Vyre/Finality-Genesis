@@ -1,6 +1,11 @@
 // requires: create_power_loader
 // requires: kubejs_create
 
+/**
+ * @file Server handler for Create: Power Loader 
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ */
+
 ServerEvents.recipes(event => {
     event.recipes.minecraft.crafting_shaped('create_power_loader:empty_andesite_chunk_loader', [
         'BBB',

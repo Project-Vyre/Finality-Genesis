@@ -1,6 +1,11 @@
 // requires: goblintraders
 // requires: create
 
+/**
+ * @file Server handler for Goblin Traders
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ */
+
 ServerEvents.highPriorityData(event => {
     // original file path goblintraders/trades/goblin_trader
     event.addJson('goblintraders:trades/goblin_trader/common', {
