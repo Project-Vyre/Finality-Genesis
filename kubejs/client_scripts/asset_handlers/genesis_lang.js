@@ -1,6 +1,6 @@
 // priority: 0
 // requires: create
-// ignored: false
+// ignored: true
 
 /**
  * @file Everything lang file related.
@@ -819,40 +819,41 @@ ClientEvents.lang('en_us', event => {
     }
 
     if (Platform.isLoaded('exposure')) {
-        blockT('exposure', 'lightroom', 'LIGHTROOM')
-        blockSu('exposure', 'lightroom',
-            'Where your photographs come to life. Have some _paper_ ready to print your photos onto!'
-        )
-        blockCb1('exposure', 'lightroom',
-            'For black and white photos',
-            'Put _black dye_ in the fourth slot.'
-        )
-        blockCb2('exposure', 'lightroom',
-            'For color film',
-            'Put _cyan_, _magenta_, and _yellow_ dye in that order in the bottom dye slots.'
-        )
-        itemT('exposure', 'camera', 'TOOLTIP')
-        itemSu('exposure', 'camera', 'Feel free to _capture_ special moments or your creations with this camera.')
-        itemCb1('exposure', 'camera',
-            'On Sneak + R-Click',
-            'Opens the _configuration_ screen.'
-        )
-        itemCb2('exposure', 'camera',
-            'On Sneak while in photo-taking mode',
-            'Allows for _fine-tuning_ of the camera.'
-        )
-        itemCb3('exposure', 'camera',
-            'After use',
-            '_Wash_ your film after using it with a _Bottle of Water_. Use a _Lightroom_ to _view_ and _print_ your photos.'
-        )
-        itemT('exposure', 'black_and_white_film', 'BLACK AND WHITE FILM')
-        itemSu('exposure', 'black_and_white_film', 'Takes a photograph in monochromatic _black and white_.')
-        itemT('exposure', 'color_film', 'COLOR FILM')
-        itemSu('exposure', 'color_film', 'Takes a photograph in _color_.')
-        itemT('exposure', 'developed_black_and_white_film', 'DEVELOPED BLACK AND WHITE FILM')
-        itemSu('exposure', 'developed_black_and_white_film', 'The next step is to _wash_ the film with a _small amount of water_.')
-        itemT('exposure', 'developed_color_film', 'DEVELOPED COLOR FILM')
-        itemSu('exposure', 'developed_color_film', 'The next step is to _wash_ the film with a _small amount of water_.')
+
+        //blockT('exposure', 'lightroom', 'LIGHTROOM')
+        //blockSu('exposure', 'lightroom',
+        //    'Where your photographs come to life. Have some _paper_ ready to print your photos onto!'
+        //)
+        //blockCb1('exposure', 'lightroom',
+        //    'For black and white photos',
+        //    'Put _black dye_ in the fourth slot.'
+        //)
+        //blockCb2('exposure', 'lightroom',
+        //    'For color film',
+        //    'Put _cyan_, _magenta_, and _yellow_ dye in that order in the bottom dye slots.'
+        //)
+        //itemT('exposure', 'camera', 'TOOLTIP')
+        //itemSu('exposure', 'camera', 'Feel free to _capture_ special moments or your creations with this camera.')
+        //itemCb1('exposure', 'camera',
+        //    'On Sneak + R-Click',
+        //    'Opens the _configuration_ screen.'
+        //)
+        //itemCb2('exposure', 'camera',
+        //    'On Sneak while in photo-taking mode',
+        //    'Allows for _fine-tuning_ of the camera.'
+        //)
+        //itemCb3('exposure', 'camera',
+        //    'After use',
+        //    '_Wash_ your film after using it with a _Bottle of Water_. Use a _Lightroom_ to _view_ and _print_ your photos.'
+        //)
+        //itemT('exposure', 'black_and_white_film', 'BLACK AND WHITE FILM')
+        //itemSu('exposure', 'black_and_white_film', 'Takes a photograph in monochromatic _black and white_.')
+        //itemT('exposure', 'color_film', 'COLOR FILM')
+        //itemSu('exposure', 'color_film', 'Takes a photograph in _color_.')
+        //itemT('exposure', 'developed_black_and_white_film', 'DEVELOPED BLACK AND WHITE FILM')
+        //itemSu('exposure', 'developed_black_and_white_film', 'The next step is to _wash_ the film with a _small amount of water_.')
+        //itemT('exposure', 'developed_color_film', 'DEVELOPED COLOR FILM')
+        //itemSu('exposure', 'developed_color_film', 'The next step is to _wash_ the film with a _small amount of water_.')
     }
 
     if (Platform.isLoaded('extendedcrafting')) {
@@ -1223,7 +1224,7 @@ ClientEvents.lang('en_us', event => {
     }
 })
 
-/* The full JSON lang archive
+/* The full JSON lang archive TYPED BY HAND
 {
   "item.kubejs.final_pickaxe": "<rainb>Particula Eversorem</rainb>",
   "item.kubejs.final_axe": "<rainb>Natura Exitium</rainb>",

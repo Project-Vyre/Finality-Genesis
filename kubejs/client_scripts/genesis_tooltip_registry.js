@@ -2,14 +2,16 @@
 // requires: create
 // ignored: false
 
-console.log('Loaded Create tooltip registry.')
-
 /**
  * @file Responsible for making tooltips using Create's tooltip registry.
+ * @version 0.5.1f
+ * @author pietro-lopes <https://github.com/pietro-lopes> Author of the CreateTooltip prototyping class
  * @author squoshi <https://github.com/squoshi> Initial implementation of ClientEvents.init()
- * @author CelestialAbyss <https://github.com/CelestialAbyss> Wrote function system
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Wrote the old function system
  * @author tizu69 <https://github.com/tizu69> (AKA tizu in the KJS Discord) Initial implementation via tooltip event
  */
+
+console.log('Loaded Create tooltip registry.')
 
 /*
     public record Palette(Style primary, Style highlight) {
@@ -138,107 +140,152 @@ let GRAY_REGISTRY = [
     'kubejs:deepslate_shard'
 ]
 
-/**
- * 
- * @param {Internal.ItemStack} itemID 
- */
-function STANDARD_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.STANDARD_CREATE))
-}
-
-/**
- * 
- * @param {string} itemID 
- */
-function BLUE_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.BLUE))
-}
-
-/**
- * 
- * @param {string} itemID 
- */
-function GREEN_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GREEN))
-}
-
-/**
- * 
- * @param {string} itemID 
- */
-function YELLOW_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.YELLOW))
-}
-
-/**
- * 
- * @param {string} itemID 
- */
-function RED_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.RED))
-}
-
-/**
- * 
- * @param {string} itemID 
- */
-function PURPLE_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.PURPLE))
-}
-
-/**
- * 
- * @param {string} itemID 
- */
-function GRAY_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY))
-}
-
-/**
- * 
- * @param {string} itemID 
- */
-function MONO_GRAY_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.ALL_GRAY))
-}
-
-/**
- * 
- * @param {string} itemID 
- */
-function GRAY_BLUE_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_BLUE))
-}
-
-/**
- * 
- * @param {string} itemID 
- */
-function GRAY_WHITE_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_WHITE))
-}
-
-/**
- * 
- * @param {string} itemID 
- */
-function GRAY_GOLD_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_GOLD))
-}
-
-/**
- * 
- * @param {string} itemID 
- */
-function GRAY_RED_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_RED))
-}
-
 const $ItemDescription = Java.loadClass('com.simibubi.create.foundation.item.ItemDescription$Modifier')
 const $TooltipModifier = Java.loadClass('com.simibubi.create.foundation.item.TooltipModifier')
 const $Palette = Java.loadClass('com.simibubi.create.foundation.item.TooltipHelper$Palette')
 
+
+/**
+ * 
+ * @param {string} itemId 
+ */
+function CreateTooltip(itemId) {
+    this.itemId = Item.of(itemId).idLocation
+    this.descriptionId = Item.of(itemId).descriptionId
+    this.summary = ""
+    this.conditions = []
+    this.behaviours = []
+    this.controls = []
+    this.actions = []
+    this.palette = $Palette.STANDARD_CREATE
+}
+CreateTooltip.prototype = {
+    /**
+     * 
+     * @param {string} summary 
+     * @returns 
+     */
+    addSummary: function (summary) {
+        this.summary = summary
+        return this
+    },
+    /**
+     * 
+     * @param {string[]} conditions 
+     * @returns 
+     */
+    addConditions: function (conditions) {
+        this.conditions = Array.isArray(conditions) ? conditions : [conditions]
+        return this
+    },
+    /**
+     * 
+     * @param {string[]} behaviours 
+     * @returns 
+     */
+    addBehaviours: function (behaviours) {
+        this.behaviours = Array.isArray(behaviours) ? behaviours : [behaviours]
+        return this
+    },
+    /**
+     * 
+     * @param {string[]} controls 
+     * @returns 
+     */
+    addControls: function (controls) {
+        this.controls = Array.isArray(controls) ? controls : [controls]
+        return this
+    },
+    /**
+     * 
+     * @param {string[]} actions 
+     * @returns 
+     */
+    addActions: function (actions) {
+        this.actions = Array.isArray(actions) ? actions : [actions]
+        return this
+    },
+    /**
+     * 
+     * @param {*} palette 
+     * @info Create's color palettes. Only accepts the following:
+     * @example $Palette.STANDARD_CREATE
+     * @example $Palette.BLUE
+     * @example $Palette.GREEN
+     * @example $Palette.YELLOW
+     * @example $Palette.RED
+     * @example $Palette.PURPLE
+     * @example $Palette.GRAY
+     * @example $Palette.ALL_GRAY
+     * @example $Palette.GRAY_AND_BLUE
+     * @example $Palette.GRAY_AND_WHITE
+     * @example $Palette.GRAY_AND_GOLD
+     * @example $Palette.GRAY_AND_RED
+     * @returns 
+     */
+    setPalette: function (palette) {
+        this.palette = palette
+        return this
+    },
+    build: function () {
+        $TooltipModifier.REGISTRY.registerDeferred(
+            this.itemId, (item) => new $ItemDescription(
+                item,
+                this.palette
+            )
+        )
+        let map = Utils.newMap()
+        map.putIfAbsent(this.descriptionId + ".tooltip", this.itemId.path.toUpperCase())
+        if (this.summary != "") {
+            map.putIfAbsent(this.descriptionId + ".tooltip.summary", this.summary)
+        }
+        for (let index = 0; index < this.conditions.length; index++) {
+            map.putIfAbsent(this.descriptionId + ".tooltip.condition" + (index + 1), this.conditions[index])
+        }
+        for (let index = 0; index < this.behaviours.length; index++) {
+            map.putIfAbsent(this.descriptionId + ".tooltip.behaviour" + (index + 1), this.behaviours[index])
+        }
+        for (let index = 0; index < this.controls.length; index++) {
+            map.putIfAbsent(this.descriptionId + ".tooltip.control" + (index + 1), this.controls[index])
+        }
+        for (let index = 0; index < this.actions.length; index++) {
+            map.putIfAbsent(this.descriptionId + ".tooltip.action" + (index + 1), this.actions[index])
+        }
+        return map
+    }
+}
+
 ClientEvents.lang('en_us', event => {
+    event.addAll('exposure',
+        new CreateTooltip('exposure:lightroom')
+            .addSummary('Where your photographs come to life. Have some _paper_ ready to print your photos onto!')
+            .addConditions([
+                'For black and white photos',
+                'For color film'
+            ])
+            .addBehaviours([
+                'Put _black dye_ in the fourth slot.',
+                'Put _cyan_, _magenta_, and _yellow_ dye in that order in the bottom dye slots.'
+            ])
+            .build(),
+        new CreateTooltip('exposure:camera')
+            .addSummary('Feel free to _capture_ special moments or your creations with this camera.')
+            .addConditions([
+                'On Sneak + R-Click',
+                'On Sneak while taking a photo',
+                'If Redstone Lamp is present on the top slot',
+                'If Spyglass is present in middle slot',
+                'If Colored Glass Pane is present in bottom slot'
+            ])
+            .addBehaviours([
+                'Opens the _configuration_ screen for components.',
+                'Shows the camera controls.',
+                'Implements the _flash_ module. Please note that you _need to enable it_ while taking a photo by holding your _sneak_ key.',
+                'Behaves as if a _teleconverter_ has been installed.',
+                'Puts a color filter on photos taken.'
+            ])
+            .build()
+    )
     STANDARD_PALETTE_REGISTRY.forEach(item => {
         STANDARD_PALETTE(item)
     })
