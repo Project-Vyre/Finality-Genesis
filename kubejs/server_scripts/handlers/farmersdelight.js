@@ -1,5 +1,6 @@
 // requires: farmersdelight
 // requires: kubejs_create
+// requires: lootjs
 // requires: morejs
 
 /**

@@ -1,7 +1,10 @@
 // requires: fruittrees
 // requires: farmersdelight
 
-
+/**
+ * @file Server handler for Fruit Trees.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ */
 
 ServerEvents.recipes(event => {
     event.recipes.create.cutting('4x kubejs:lemon_slice', 'fruittrees:lemon').processingTime(25).id('finality:fruittrees/cutting/lemon_slice')

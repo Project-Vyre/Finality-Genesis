@@ -1,7 +1,7 @@
 // priority: 6
 
 /**
- * @file Server handler for ShetiPhian's EnderChests and EnderTanks mods.
+ * @file Server handler for certain player actions...
  * @author pietro-lopes <https://github.com/pietro-lopes> AKA Uncandango
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */

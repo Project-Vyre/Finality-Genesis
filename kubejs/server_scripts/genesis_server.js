@@ -426,54 +426,70 @@ ServerEvents.recipes(event => {
     /**
      * Compacting
      */
+    /**
+     * 
+     * @param {string} nugget 
+     * @param {string} metal 
+     */
+    let NUGGET_SOLIDIFY = (nugget, metal) => {
+        event.recipes.create.compacting(nugget, Fluid.of(`kubejs:molten_${metal}`, 10)).id(`finality:molten_${metal}_to_${metal}_nugget`)
+    }
+    /**
+     * 
+     * @param {string} ingot 
+     * @param {string} metal 
+     */
+    let INGOT_SOLIDIFY = (ingot, metal) => {
+        event.recipes.create.compacting(ingot, Fluid.of(`kubejs:molten_${metal}`, 90)).id(`finality:molten_${metal}_to_${metal}_ingot`)
+    }
+    NUGGET_SOLIDIFY('minecraft:iron_nugget', 'iron')
+    NUGGET_SOLIDIFY('minecraft:gold_nugget', 'gold')
+    NUGGET_SOLIDIFY('create:copper_nugget', 'copper')
+    NUGGET_SOLIDIFY('create:zinc_nugget', 'zinc')
+    NUGGET_SOLIDIFY('create:brass_nugget', 'brass')
+    NUGGET_SOLIDIFY('kubejs:netherite_nugget', 'netherite')
+    INGOT_SOLIDIFY('minecraft:iron_ingot', 'iron')
+    INGOT_SOLIDIFY('minecraft:gold_ingot', 'gold')
+    INGOT_SOLIDIFY('minecraft:copper_ingot', 'copper')
+    INGOT_SOLIDIFY('create:zinc_ingot', 'zinc')
+    INGOT_SOLIDIFY('create:brass_ingot', 'brass')
+    INGOT_SOLIDIFY('minecraft:netherite_ingot', 'netherite')
     event.recipes.create.compacting([
         'minecraft:sponge',
         Fluid.of('minecraft:water', 1000)
-    ], [
-        'minecraft:wet_sponge'
-    ]).id('finality:compacting/sponge_squeezing')
+    ], 'minecraft:wet_sponge').id('finality:compacting/sponge_squeezing')
     event.recipes.create.compacting([
         'minecraft:diamond',
         Item.of('create:experience_nugget').withChance(0.05)
     ], [
-        Item.of('minecraft:coal_block', 1),
+        'minecraft:coal_block',
         Fluid.of('minecraft:lava', 250)
     ]).superheated().id('finality:compacting/renew_diamond')
     event.recipes.create.compacting([
         'minecraft:diamond_block',
         Item.of('create:experience_nugget').withChance(0.25)
     ], [
-        Item.of('minecraft:coal_block', 9),
+        '9x minecraft:coal_block',
         Fluid.of('minecraft:lava', 250)
     ]).superheated().id('finality:compacting/renew_diamond_bulk')
     event.recipes.create.compacting([
         'minecraft:coal',
         Item.of('create:experience_nugget').withChance(0.05)
-    ], [
-        Item.of('minecraft:dried_kelp_block', 1)
-    ]).heated().id('finality:compacting/renew_coal')
+    ], 'minecraft:dried_kelp_block').heated().id('finality:compacting/renew_coal')
     event.recipes.create.compacting([
         'minecraft:coal_block',
         Item.of('create:experience_nugget').withChance(0.25)
-    ], [
-        Item.of('minecraft:dried_kelp_block', 9)
-    ]).heated().id('finality:compacting/renew_coal_bulk')
-    event.recipes.create.compacting([
-        'minecraft:basalt'
-    ], [
+    ], 'minecraft:dried_kelp_block').heated().id('finality:compacting/renew_coal_bulk')
+    event.recipes.create.compacting('minecraft:basalt', [
         'minecraft:blue_ice',
         Fluid.of('minecraft:lava', 500)
     ]).id('finality:compacting/basalt')
-    event.recipes.create.compacting([
-        'minecraft:tuff'
-    ], [
-        Item.of('minecraft:gravel', 9),
+    event.recipes.create.compacting('minecraft:tuff', [
+        '9x minecraft:gravel',
         Fluid.of('minecraft:lava', 250)
     ]).superheated().id('finality:compacting/renew_tuff')
-    event.recipes.create.compacting([
-        'minecraft:tuff'
-    ], [
-        Item.of('minecraft:deepslate', 9),
+    event.recipes.create.compacting('minecraft:tuff', [
+        '9x minecraft:deepslate',
         Fluid.of('minecraft:lava', 250)
     ]).heated().id('finality:compacting/renew_deepslate_tuff')
     event.recipes.create.compacting('minecraft:calcite', [
@@ -489,7 +505,7 @@ ServerEvents.recipes(event => {
      * Crushing
      */
     event.recipes.create.crushing([
-        Item.of('minecraft:pointed_dripstone', 4),
+        '4x minecraft:pointed_dripstone',
         Item.of('minecraft:clay_ball').withChance(0.50),
         Item.of('create:copper_nugget').withChance(0.25),
         Item.of('create:experience_nugget').withChance(0.75)
@@ -644,7 +660,7 @@ ServerEvents.recipes(event => {
         'minecraft:netherite_block'
     ).superheated().id('finality:mixing/netherite_block_melting')
     event.recipes.create.mixing('4x minecraft:netherite_ingot', [
-        Item.of('minecraft:netherite_scrap', 4),
+        '4x minecraft:netherite_scrap',
         Fluid.of('kubejs:molten_gold', 360)
     ]).heated().id('finality:mixing/netherite_ingot_from_mixing')
     event.recipes.create.mixing('minecraft:emerald', [
@@ -858,6 +874,14 @@ ServerEvents.recipes(event => {
         event.shapeless(`9x kubejs:compressed_${insert}`, `kubejs:double_compressed_${insert}`).id(`finality:double_compressed_${insert}_decompression`)
         event.shapeless(`9x minecraft:${insert}`, `kubejs:compressed_${insert}`).id(`finality:compressed_${insert}_decompression`)
     })
+    event.shaped('minecraft:netherite_ingot', [
+        'NNN',
+        'NNN',
+        'NNN'
+    ], {
+        N: 'kubejs:netherite_nugget'
+    }).id('finality:netherite_ingot_from_nuggets')
+    event.shapeless('9x kubejs:netherite_nugget', 'minecraft:netherite_ingot').id('finality:netherite_ingot_from_nuggets')
     event.shapeless('minecraft:dragon_breath', [
         'minecraft:dragon_egg',
         'minecraft:glass_bottle'

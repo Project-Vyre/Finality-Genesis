@@ -1,6 +1,5 @@
 // requires: grimoireofgaia
 // requires: farmersdelight
-// requires: some_assembly_required
 // requires: kubejs_create
 // requires: lootjs
 
@@ -45,11 +44,13 @@ ServerEvents.recipes(event => {
         'minecraft:glass_bottle',
         Fluid.of('kubejs:nether_wart_jam', 250)
     ]).id('finality:grimoireofgaia/filling/nether_wart_jam_jar')
-    event.recipes.create.mixing('grimoireofgaia:golden_apple_pie', [
-        'some_assembly_required:golden_apple_slices',
-        'minecraft:sugar',
-        'create:dough'
-    ]).heated().id('finality:grimoireofgaia/golden_apple_pie')
+    if (Platform.isLoaded('some_assembly_required')) {
+        event.recipes.create.mixing('grimoireofgaia:golden_apple_pie', [
+            'some_assembly_required:golden_apple_slices',
+            'minecraft:sugar',
+            'create:dough'
+        ]).heated().id('finality:grimoireofgaia/golden_apple_pie')
+    }
     event.shapeless('minecraft:totem_of_undying', [
         '4x grimoireofgaia:totem_of_undying_fragment',
     ]).id('finality:grimoireofgaia/undying_totem')

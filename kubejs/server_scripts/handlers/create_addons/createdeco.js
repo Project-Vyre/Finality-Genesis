@@ -12,43 +12,29 @@
 10 mB = 1 nugget
 */
 
-/**
- * 
- * @param {*} event 
- * @param {string} nugget 
- * @param {string} metal 
- */
-function NUGGET_SOLIDIFY(event, nugget, metal) {
-    event.recipes.create.compacting(nugget, [
-        Fluid.of(`kubejs:molten_${metal}`, 10)
-    ]).id(`finality:molten_${metal}_to_${metal}_nugget`)
-}
-
-/**
- * 
- * @param {*} event 
- * @param {string} moltenMetal 
- * @param {string} coin 
- */
-function COIN_MELT_HEATED(event, moltenMetal, coinType) {
-    event.recipes.create.mixing(Fluid.of(`kubejs:molten_${moltenMetal}`, 10), [
-        `createdeco:${coinType}_coin`
-    ]).heated().id(`finality:createdeco/${coinType}_coin_melting`)
-}
-
-/**
- * 
- * @param {*} event 
- * @param {string} moltenMetal 
- * @param {string} coinType 
- */
-function COINSTACK_MELTING(event, moltenMetal, coinType) {
-    event.recipes.create.mixing(Fluid.of(`kubejs:molten_${moltenMetal}`, 40), [
-        `createdeco:${coinType}_coinstack`
-    ]).heated().id(`finality:createdeco/${coinType}_coinstack_melting`)
-}
-
 ServerEvents.recipes(event => {
+    /**
+     * 
+     * @param {*} event 
+     * @param {string} moltenMetal 
+     * @param {string} coin 
+     */
+    let COIN_MELT_HEATED = (moltenMetal, coinType) => {
+        event.recipes.create.mixing(Fluid.of(`kubejs:molten_${moltenMetal}`, 10), [
+            `createdeco:${coinType}_coin`
+        ]).heated().id(`finality:createdeco/${coinType}_coin_melting`)
+    }
+    /**
+     * 
+     * @param {*} event 
+     * @param {string} moltenMetal 
+     * @param {string} coinType 
+     */
+    let COINSTACK_MELTING = (moltenMetal, coinType) => {
+        event.recipes.create.mixing(Fluid.of(`kubejs:molten_${moltenMetal}`, 40), [
+            `createdeco:${coinType}_coinstack`
+        ]).heated().id(`finality:createdeco/${coinType}_coinstack_melting`)
+    }
     event.remove([
         {
             type: 'create:pressing',
@@ -59,27 +45,21 @@ ServerEvents.recipes(event => {
             output: 'createdeco:netherite_sheet'
         }
     ])
-    NUGGET_SOLIDIFY(event, 'minecraft:iron_nugget', 'iron')
-    NUGGET_SOLIDIFY(event, 'minecraft:gold_nugget', 'gold')
-    NUGGET_SOLIDIFY(event, 'create:copper_nugget', 'copper')
-    NUGGET_SOLIDIFY(event, 'create:zinc_nugget', 'zinc')
-    NUGGET_SOLIDIFY(event, 'create:brass_nugget', 'brass')
-    NUGGET_SOLIDIFY(event, 'createdeco:netherite_nugget', 'netherite')
-    COIN_MELT_HEATED(event, 'iron', 'iron')
-    COIN_MELT_HEATED(event, 'iron', 'cast_iron')
-    COIN_MELT_HEATED(event, 'gold', 'gold')
-    COIN_MELT_HEATED(event, 'copper', 'copper')
-    COIN_MELT_HEATED(event, 'zinc', 'zinc')
-    COIN_MELT_HEATED(event, 'brass', 'brass')
+    COIN_MELT_HEATED('iron', 'iron')
+    COIN_MELT_HEATED('iron', 'cast_iron')
+    COIN_MELT_HEATED('gold', 'gold')
+    COIN_MELT_HEATED('copper', 'copper')
+    COIN_MELT_HEATED('zinc', 'zinc')
+    COIN_MELT_HEATED('brass', 'brass')
     event.recipes.create.mixing(Fluid.of('kubejs:molten_netherite', 10), [
         'createdeco:netherite_coin'
     ]).superheated().id('finality:createdeco/netherite_coin_melting')
-    COINSTACK_MELTING(event, 'iron', 'iron')
-    COINSTACK_MELTING(event, 'iron', 'cast_iron')
-    COINSTACK_MELTING(event, 'gold', 'gold')
-    COINSTACK_MELTING(event, 'copper', 'copper')
-    COINSTACK_MELTING(event, 'zinc', 'zinc')
-    COINSTACK_MELTING(event, 'brass', 'brass')
+    COINSTACK_MELTING('iron', 'iron')
+    COINSTACK_MELTING('iron', 'cast_iron')
+    COINSTACK_MELTING('gold', 'gold')
+    COINSTACK_MELTING('copper', 'copper')
+    COINSTACK_MELTING('zinc', 'zinc')
+    COINSTACK_MELTING('brass', 'brass')
     event.recipes.create.mixing(Fluid.of('kubejs:molten_netherite', 40), [
         'createdeco:netherite_coinstack'
     ]).superheated().id('finality:createdeco/netherite_coinstack_melting')

@@ -10,6 +10,7 @@ const $BCC = Java.loadClass('dev.wuffs.bcc.BCC')
 
 let TIME_INTERVAL = 20 * 60
 
+let modpack_name = 'Finality Genesis'
 let url_id = 'bdBHqLHc'
 
 function check_updates() {
