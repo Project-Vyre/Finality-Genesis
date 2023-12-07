@@ -1,11 +1,11 @@
-// priority: 10
+// priority: 1000
 // requires: create
 // ignored: false
 
 /**
  * @file Responsible for making tooltips using Create's tooltip registry.
  * @version 0.5.1f
- * @author pietro-lopes <https://github.com/pietro-lopes> Author of the CreateTooltip prototyping class
+ * @author pietro-lopes <https://github.com/pietro-lopes> Author of the CreateTooltip prototype class
  * @author squoshi <https://github.com/squoshi> Initial implementation of ClientEvents.init()
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Wrote the old function system
  * @author tizu69 <https://github.com/tizu69> (AKA tizu in the KJS Discord) Initial implementation via tooltip event
@@ -64,6 +64,41 @@ GRAY_AND_RED
 }
 */
 
+let standardArmor = ['helmet', 'chestplate', 'leggings', 'boots']
+
+const standardTools = {
+    pickaxe: 'PICKAXE',
+    axe: 'AXE',
+    shovel: 'SHOVEL',
+    hoe: 'HOE',
+    sword: 'SWORD'
+}
+
+const minecraftMaterialTools = {
+    wooden: 'WOODEN',
+    stone: 'STONE',
+    iron: 'IRON'
+}
+
+const DYE = {
+    black: 'BLACK',
+    gray: 'GRAY',
+    light_gray: 'LIGHT GRAY',
+    white: 'WHITE',
+    pink: 'PINK',
+    light_blue: 'LIGHT BLUE',
+    brown: 'BROWN',
+    red: 'RED',
+    orange: 'ORANGE',
+    yellow: 'YELLOW',
+    lime: 'LIME',
+    green: 'GREEN',
+    cyan: 'CYAN',
+    blue: 'BLUE',
+    purple: 'PURPLE',
+    magenta: 'MAGENTA'
+}
+
 let STANDARD_PALETTE_REGISTRY = [
     'minecraft:clock',
     'minecraft:wooden_pickaxe',
@@ -85,7 +120,6 @@ let STANDARD_PALETTE_REGISTRY = [
     'create:zinc_nugget',
     'create_power_loader:andesite_chunk_loader',
     'create_power_loader:brass_chunk_loader',
-    'chalk:chalk_box',
     'farmersdelight:skillet',
     'farmersdelight:stove'
 ]
@@ -128,7 +162,6 @@ let PURPLE_REGISTRY = [
     'kubejs:final_leggings',
     'kubejs:final_boots',
     'kubejs:null_storage_block',
-    'eccentrictome:tome'
 ]
 let GRAY_REGISTRY = [
     'minecraft:rotten_flesh',
@@ -144,12 +177,27 @@ const $ItemDescription = Java.loadClass('com.simibubi.create.foundation.item.Ite
 const $TooltipModifier = Java.loadClass('com.simibubi.create.foundation.item.TooltipModifier')
 const $Palette = Java.loadClass('com.simibubi.create.foundation.item.TooltipHelper$Palette')
 
-
 /**
- * 
+ * Prototype class to handle both registering and lang using Create's tooltip registry.
+ * @author pietro-lopes <https://github.com/pietro-lopes> Author of the CreateTooltip prototype class
+ * @example
+ * event.addAll(
+ *   createTooltip("tfc:stone/hoe/sedimentary") // works with modded items!
+ *     .addSummary("Test _summary_.")
+ *     .addBehaviour(["When this", "Then this item does _this_."])
+ *     .addBehaviour(["And When this", "You can add as many _behaviours_ as you like"])
+ *     .addAction(["This is the control1", "This is the _action1_"])
+ *     .addAction(["This is the control2", "This is the _action2_"])
+ *     .setPalette($Palette.YELLOW) // optional, default is $Palette.STANDARD_CREATE, custom can be like: .setPalette($Palette.ofColors(Color.AQUA, Color.DARK_AQUA))
+ *     .build()
+ * )
  * @param {string} itemId 
  */
-function CreateTooltip(itemId) {
+function createTooltip(/** @type {Special.Item} */ itemId) {
+    return new CreateTooltipBuilder(itemId)
+}
+
+function CreateTooltipBuilder(itemId) {
     this.itemId = Item.of(itemId).idLocation
     this.descriptionId = Item.of(itemId).descriptionId
     this.summary = ""
@@ -159,81 +207,60 @@ function CreateTooltip(itemId) {
     this.actions = []
     this.palette = $Palette.STANDARD_CREATE
 }
-CreateTooltip.prototype = {
-    /**
-     * 
-     * @param {string} summary 
-     * @returns 
-     */
-    addSummary: function (summary) {
+CreateTooltipBuilder.prototype = {
+    addSummary: function (
+        /**
+         * @type {string} 
+         */
+        summary
+    ) {
         this.summary = summary
         return this
     },
-    /**
-     * 
-     * @param {string[]} conditions 
-     * @returns 
-     */
-    addConditions: function (conditions) {
-        this.conditions = Array.isArray(conditions) ? conditions : [conditions]
+    addBehaviour: function (
+        /**
+         * @type {string[]} 
+         */
+        conditionAndBehaviour
+    ) {
+        this.conditions.push(conditionAndBehaviour[0])
+        this.behaviours.push(conditionAndBehaviour[1])
         return this
     },
-    /**
-     * 
-     * @param {string[]} behaviours 
-     * @returns 
-     */
-    addBehaviours: function (behaviours) {
-        this.behaviours = Array.isArray(behaviours) ? behaviours : [behaviours]
+    addAction: function (
+        /**
+         * @type {string[]} 
+         */
+        controlsAndActions
+    ) {
+        this.controls.push(controlsAndActions[0])
+        this.actions.push(controlsAndActions[1])
         return this
     },
-    /**
-     * 
-     * @param {string[]} controls 
-     * @returns 
-     */
-    addControls: function (controls) {
-        this.controls = Array.isArray(controls) ? controls : [controls]
-        return this
-    },
-    /**
-     * 
-     * @param {string[]} actions 
-     * @returns 
-     */
-    addActions: function (actions) {
-        this.actions = Array.isArray(actions) ? actions : [actions]
-        return this
-    },
-    /**
-     * 
-     * @param {*} palette 
-     * @info Create's color palettes. Only accepts the following:
-     * @example $Palette.STANDARD_CREATE
-     * @example $Palette.BLUE
-     * @example $Palette.GREEN
-     * @example $Palette.YELLOW
-     * @example $Palette.RED
-     * @example $Palette.PURPLE
-     * @example $Palette.GRAY
-     * @example $Palette.ALL_GRAY
-     * @example $Palette.GRAY_AND_BLUE
-     * @example $Palette.GRAY_AND_WHITE
-     * @example $Palette.GRAY_AND_GOLD
-     * @example $Palette.GRAY_AND_RED
-     * @returns 
-     */
-    setPalette: function (palette) {
+    setPalette: function (
+        /**
+         * @type {Internal.TooltipHelper$Palette} 
+         * @info Create's color palettes. Only accepts the following:
+         * @default $Palette.STANDARD_CREATE
+         * @example $Palette.BLUE
+         * @example $Palette.GREEN
+         * @example $Palette.YELLOW
+         * @example $Palette.RED
+         * @example $Palette.PURPLE
+         * @example $Palette.GRAY
+         * @example $Palette.ALL_GRAY
+         * @example $Palette.GRAY_AND_BLUE
+         * @example $Palette.GRAY_AND_WHITE
+         * @example $Palette.GRAY_AND_GOLD
+         * @example $Palette.GRAY_AND_RED
+         */
+        palette
+    ) {
         this.palette = palette
         return this
     },
     build: function () {
-        $TooltipModifier.REGISTRY.registerDeferred(
-            this.itemId, (item) => new $ItemDescription(
-                item,
-                this.palette
-            )
-        )
+        $TooltipModifier.REGISTRY.registerDeferred(this.itemId, (item) => new $ItemDescription(item, this.palette))
         let map = Utils.newMap()
         map.putIfAbsent(this.descriptionId + ".tooltip", this.itemId.path.toUpperCase())
         if (this.summary != "") {
@@ -255,37 +282,113 @@ CreateTooltip.prototype = {
     }
 }
 
+/**
+ * 
+ * @param {string} itemID 
+ */
+function STANDARD_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.STANDARD_CREATE))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function BLUE_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.BLUE))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function GREEN_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GREEN))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function YELLOW_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.YELLOW))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function RED_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.RED))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function PURPLE_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.PURPLE))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function GRAY_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function MONO_GRAY_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.ALL_GRAY))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function GRAY_BLUE_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_BLUE))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function GRAY_WHITE_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_WHITE))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function GRAY_GOLD_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_GOLD))
+}
+
+/**
+ * 
+ * @param {string} itemID 
+ */
+function GRAY_RED_PALETTE(itemID) {
+    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_RED))
+}
+
 ClientEvents.lang('en_us', event => {
-    event.addAll('exposure',
-        new CreateTooltip('exposure:lightroom')
-            .addSummary('Where your photographs come to life. Have some _paper_ ready to print your photos onto!')
-            .addConditions([
-                'For black and white photos',
-                'For color film'
-            ])
-            .addBehaviours([
-                'Put _black dye_ in the fourth slot.',
-                'Put _cyan_, _magenta_, and _yellow_ dye in that order in the bottom dye slots.'
-            ])
-            .build(),
-        new CreateTooltip('exposure:camera')
-            .addSummary('Feel free to _capture_ special moments or your creations with this camera.')
-            .addConditions([
-                'On Sneak + R-Click',
-                'On Sneak while taking a photo',
-                'If Redstone Lamp is present on the top slot',
-                'If Spyglass is present in middle slot',
-                'If Colored Glass Pane is present in bottom slot'
-            ])
-            .addBehaviours([
-                'Opens the _configuration_ screen for components.',
-                'Shows the camera controls.',
-                'Implements the _flash_ module. Please note that you _need to enable it_ while taking a photo by holding your _sneak_ key.',
-                'Behaves as if a _teleconverter_ has been installed.',
-                'Puts a color filter on photos taken.'
-            ])
-            .build()
-    )
+    for (const [tool, TOOLCAP] of Object.entries(standardTools)) {
+        for (const [material, MATCAP] of Object.entries(minecraftMaterialTools)) {
+            event.add('kubejs', `item.minecraft.${material}_${tool}.tooltip`, `${MATCAP} ${TOOLCAP}`)
+            event.add('kubejs', `item.minecraft.${material}_${tool}.tooltip.summary`, "You can now _repair_ tools with the material they are made of.")
+            event.add('kubejs', `item.minecraft.${material}_${tool}.tooltip.condition1`, "How to repair:")
+            event.add('kubejs', `item.minecraft.${material}_${tool}.tooltip.behaviour1`, "Put your _tool_ and its _respective crafting material_ in any _crafting grid_.")
+            event.add('kubejs', `item.minecraft.${material}_${tool}.tooltip.condition2`, "Additional Info")
+            event.add('kubejs', `item.minecraft.${material}_${tool}.tooltip.behaviour2`, "If you were wondering... yes, this also applies to Diamond and Netherite tools as well. This tooltip will not appear on Diamond and Netherite tools.")
+        }
+    }
     STANDARD_PALETTE_REGISTRY.forEach(item => {
         STANDARD_PALETTE(item)
     })
@@ -310,164 +413,4 @@ ClientEvents.lang('en_us', event => {
     MONO_GRAY_PALETTE('create:chromatic_compound')
     GRAY_GOLD_PALETTE('create:refined_radiance')
     GRAY_PALETTE('create:shadow_steel')
-    // this was embarassingly broken for a while now oops...
-    if (Platform.isLoaded('chalk')) {
-        Object.keys(DYE).forEach(itemID => {
-            GRAY_PALETTE(`chalk:${itemID}_chalk`)
-        })
-    }
-    if (Platform.isLoaded('aether')) {
-        GRAY_PALETTE('aether:book_of_lore')
-    }
-    if (Platform.isLoaded('alexsmobs')) {
-        YELLOW_PALETTE('minecraft:pumpkin')
-    }
-    if (Platform.isLoaded('apotheosis')) {
-        YELLOW_PALETTE('apotheosis:vial_of_expulsion')
-        PURPLE_PALETTE('apotheosis:vial_of_extraction')
-    }
-    if (Platform.isLoaded('architects_palette')) {
-        GRAY_BLUE_PALETTE('architects_palette:chiseled_abyssaline_bricks')
-        GRAY_RED_PALETTE('architects_palette:chiseled_hadaline_bricks')
-    }
-    if (Platform.isLoaded('autumnity')) {
-        YELLOW_PALETTE('autumnity:sappy_maple_log')
-        YELLOW_PALETTE('autumnity:sappy_maple_wood')
-        YELLOW_PALETTE('autumnity:foul_berries')
-        YELLOW_PALETTE('autumnity:turkey')
-        YELLOW_PALETTE('autumnity:cooked_turkey')
-    }
-    if (Platform.isLoaded('backpacked')) {
-        STANDARD_PALETTE('backpacked:backpack')
-    }
-    if (Platform.isLoaded('bhc')) {
-        RED_PALETTE('bhc:red_heart')
-    }
-    if (Platform.isLoaded('cataclysm')) {
-        PURPLE_PALETTE('cataclysm:gauntlet_of_guard')
-        PURPLE_PALETTE('cataclysm:gauntlet_of_bulwark')
-        PURPLE_PALETTE('cataclysm:void_scatter_arrow')
-        PURPLE_PALETTE('cataclysm:void_core')
-        PURPLE_PALETTE('cataclysm:void_forge')
-        PURPLE_PALETTE('cataclysm:void_assault_shoulder_weapon')
-        PURPLE_PALETTE('cataclysm:abyssal_sacrifice')
-        PURPLE_PALETTE('cataclysm:tidal_claws')
-        PURPLE_PALETTE('cataclysm:abyssal_egg')
-        RED_PALETTE('cataclysm:wither_assault_shoulder_weapon')
-        YELLOW_PALETTE('cataclysm:infernal_forge')
-        YELLOW_PALETTE('cataclysm:monstrous_helm')
-        YELLOW_PALETTE('cataclysm:burning_ashes')
-        YELLOW_PALETTE('cataclysm:the_incinerator')
-        YELLOW_PALETTE('cataclysm:ignitium_helmet')
-        YELLOW_PALETTE('cataclysm:ignitium_chestplate')
-        YELLOW_PALETTE('cataclysm:ignitium_leggings')
-        YELLOW_PALETTE('cataclysm:ignitium_boots')
-        YELLOW_PALETTE('cataclysm:bulwark_of_the_flame')
-        PURPLE_PALETTE('cataclysm:abyss_eye')
-        PURPLE_PALETTE('cataclysm:void_eye')
-        RED_PALETTE('cataclysm:mech_eye')
-        YELLOW_PALETTE('cataclysm:flame_eye')
-        YELLOW_PALETTE('cataclysm:monstrous_eye')
-        GREEN_PALETTE('cataclysm:bloom_stone_pauldrons')
-        GREEN_PALETTE('cataclysm:blessed_amethyst_crab_meat')
-    }
-    if (Platform.isLoaded('cloudstorage')) {
-        STANDARD_PALETTE('cloudstorage:balloon_bit')
-        STANDARD_PALETTE('cloudstorage:balloon_stand')
-        STANDARD_PALETTE('cloudstorage:cloud_chest')
-        BLUE_PALETTE('cloudstorage:static_cloud_chest')
-    }
-    if (Platform.isLoaded('chipped')) {
-        RED_PALETTE('chipped:arched_leaded_glass_pane_pillar')
-        Object.keys(DYE).forEach(blockID => {
-            RED_PALETTE(`chipped:arched_${blockID}_stained_glass_pane_pillar`) // 'chipped:arched_black_stained_glass_pane_pillar'
-        })
-    }
-    if (Platform.isLoaded('collectorsreap')) {
-        STANDARD_PALETTE('collectorsreap:portobello')
-    }
-    if (Platform.isLoaded('enigmaticlegacy') && Platform.isLoaded('apotheosis')) {
-        RED_PALETTE('enigmaticlegacy:enchanter_pearl')
-    }
-    if (Platform.isLoaded('etched')) {
-        YELLOW_PALETTE('etched:boombox')
-    }
-    if (Platform.isLoaded('exposure')) {
-        STANDARD_PALETTE('exposure:camera')
-        STANDARD_PALETTE('exposure:lightroom')
-        GRAY_WHITE_PALETTE('exposure:black_and_white_film')
-        GRAY_GOLD_PALETTE('exposure:color_film')
-        GRAY_WHITE_PALETTE('exposure:developed_black_and_white_film')
-        GRAY_GOLD_PALETTE('exposure:developed_color_film')
-    }
-    if (Platform.isLoaded('extendedcrafting')) {
-        STANDARD_PALETTE('extendedcrafting:handheld_table')
-    }
-    if (Platform.isLoaded('ftbquests')) {
-        STANDARD_PALETTE('ftbquests:book')
-    }
-    if (Platform.isLoaded('goldenhopper')) {
-        YELLOW_PALETTE('goldenhopper:golden_hopper')
-    }
-    if (Platform.isLoaded('graveyard')) {
-        GRAY_RED_PALETTE('graveyard:corruption')
-        GRAY_RED_PALETTE('graveyard:ossuary')
-    }
-    if (Platform.isLoaded('grimoireofgaia')) {
-        let gog_dolls = [
-            'creeper_girl',
-            'dryad',
-            'dullahan',
-            'ender_girl',
-            'maid',
-            'mermaid',
-            'nine_tails',
-            'slime_girl'
-        ]
-        gog_dolls.forEach(key => {
-            YELLOW_PALETTE(`grimoireofgaia:doll_${key}`)
-        })
-        GREEN_PALETTE('grimoireofgaia:taproot')
-    }
-    if (Platform.isLoaded('lilwings')) {
-        STANDARD_PALETTE('minecraft:glass_bottle')
-        STANDARD_PALETTE('lilwings:butterfly_net')
-        STANDARD_PALETTE('lilwings:enderfly_net')
-    }
-    if (Platform.isLoaded('malum')) {
-        PURPLE_PALETTE('malum:encyclopedia_arcana')
-        PURPLE_PALETTE('malum:spirit_pouch')
-        PURPLE_PALETTE('malum:tyrving')
-    }
-    if (Platform.isLoaded('monobank')) {
-        STANDARD_PALETTE('monobank:monobank')
-    }
-    if (Platform.isLoaded('mysticalagriculture')) {
-        STANDARD_PALETTE('mysticalagriculture:infusion_altar')
-    }
-    if (Platform.isLoaded('quark')) {
-        STANDARD_PALETTE('quark:abacus')
-        STANDARD_PALETTE('quark:crate')
-    }
-    if (Platform.isLoaded('salt')) {
-        STANDARD_PALETTE('salt:salt')
-    }
-    if (Platform.isLoaded('solapplepie')) {
-        STANDARD_PALETTE('solapplepie:lunchbag')
-        STANDARD_PALETTE('solapplepie:lunchbox')
-        YELLOW_PALETTE('solapplepie:golden_lunchbox')
-    }
-    if (Platform.isLoaded('supplementaries')) {
-        // currently the sack and vault do not accept Create's tooltips.
-        GRAY_PALETTE('supplementaries:cage')
-        PURPLE_PALETTE('supplementaries:enderman_head')
-        STANDARD_PALETTE('supplementaries:key')
-        GRAY_PALETTE('supplementaries:pedestal')
-        STANDARD_PALETTE('supplementaries:quiver')
-        GRAY_PALETTE('supplementaries:statue')
-    }
-    if (Platform.isLoaded('tempad')) {
-        PURPLE_PALETTE('tempad:tempad')
-        PURPLE_PALETTE('tempad:he_who_remains_tempad')
-    }
 })
