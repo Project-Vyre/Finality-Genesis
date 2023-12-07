@@ -208,54 +208,40 @@ function CreateTooltipBuilder(itemId) {
     this.palette = $Palette.STANDARD_CREATE
 }
 CreateTooltipBuilder.prototype = {
-    addSummary: function (
-        /**
-         * @type {string} 
-         */
-        summary
-    ) {
+    addSummary: function (/** @type {string} */ summary) {
         this.summary = summary
         return this
     },
-    addBehaviour: function (
-        /**
-         * @type {string[]} 
-         */
-        conditionAndBehaviour
+    addBehaviour: function (/** @type {string[]} */ conditionAndBehaviour
     ) {
         this.conditions.push(conditionAndBehaviour[0])
         this.behaviours.push(conditionAndBehaviour[1])
         return this
     },
-    addAction: function (
-        /**
-         * @type {string[]} 
-         */
-        controlsAndActions
-    ) {
+    addAction: function (/** @type {string[]} */ controlsAndActions) {
         this.controls.push(controlsAndActions[0])
         this.actions.push(controlsAndActions[1])
         return this
     },
+    /**
+     * 
+     * @info Sets the color of the Create tooltip text. Only accepts the following:
+     * @default $Palette.STANDARD_CREATE
+     * @example $Palette.BLUE
+     * @example $Palette.GREEN
+     * @example $Palette.YELLOW
+     * @example $Palette.RED
+     * @example $Palette.PURPLE
+     * @example $Palette.GRAY
+     * @example $Palette.ALL_GRAY
+     * @example $Palette.GRAY_AND_BLUE
+     * @example $Palette.GRAY_AND_WHITE
+     * @example $Palette.GRAY_AND_GOLD
+     * @example $Palette.GRAY_AND_RED
+     * @returns 
+     */
     setPalette: function (
-        /**
-         * @type {Internal.TooltipHelper$Palette} 
-         * @info Create's color palettes. Only accepts the following:
-         * @default $Palette.STANDARD_CREATE
-         * @example $Palette.BLUE
-         * @example $Palette.GREEN
-         * @example $Palette.YELLOW
-         * @example $Palette.RED
-         * @example $Palette.PURPLE
-         * @example $Palette.GRAY
-         * @example $Palette.ALL_GRAY
-         * @example $Palette.GRAY_AND_BLUE
-         * @example $Palette.GRAY_AND_WHITE
-         * @example $Palette.GRAY_AND_GOLD
-         * @example $Palette.GRAY_AND_RED
-         */
-        palette
-    ) {
+        /** @type {Internal.TooltipHelper$Palette} */ palette) {
         this.palette = palette
         return this
     },
@@ -281,7 +267,6 @@ CreateTooltipBuilder.prototype = {
         return map
     }
 }
-
 /**
  * 
  * @param {string} itemID 
@@ -289,7 +274,6 @@ CreateTooltipBuilder.prototype = {
 function STANDARD_PALETTE(itemID) {
     $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.STANDARD_CREATE))
 }
-
 /**
  * 
  * @param {string} itemID 
@@ -297,7 +281,6 @@ function STANDARD_PALETTE(itemID) {
 function BLUE_PALETTE(itemID) {
     $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.BLUE))
 }
-
 /**
  * 
  * @param {string} itemID 
@@ -305,7 +288,6 @@ function BLUE_PALETTE(itemID) {
 function GREEN_PALETTE(itemID) {
     $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GREEN))
 }
-
 /**
  * 
  * @param {string} itemID 
@@ -313,7 +295,6 @@ function GREEN_PALETTE(itemID) {
 function YELLOW_PALETTE(itemID) {
     $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.YELLOW))
 }
-
 /**
  * 
  * @param {string} itemID 
@@ -321,7 +302,6 @@ function YELLOW_PALETTE(itemID) {
 function RED_PALETTE(itemID) {
     $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.RED))
 }
-
 /**
  * 
  * @param {string} itemID 
@@ -329,7 +309,6 @@ function RED_PALETTE(itemID) {
 function PURPLE_PALETTE(itemID) {
     $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.PURPLE))
 }
-
 /**
  * 
  * @param {string} itemID 
@@ -337,7 +316,6 @@ function PURPLE_PALETTE(itemID) {
 function GRAY_PALETTE(itemID) {
     $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY))
 }
-
 /**
  * 
  * @param {string} itemID 
@@ -345,7 +323,6 @@ function GRAY_PALETTE(itemID) {
 function MONO_GRAY_PALETTE(itemID) {
     $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.ALL_GRAY))
 }
-
 /**
  * 
  * @param {string} itemID 
@@ -353,7 +330,6 @@ function MONO_GRAY_PALETTE(itemID) {
 function GRAY_BLUE_PALETTE(itemID) {
     $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_BLUE))
 }
-
 /**
  * 
  * @param {string} itemID 
@@ -361,7 +337,6 @@ function GRAY_BLUE_PALETTE(itemID) {
 function GRAY_WHITE_PALETTE(itemID) {
     $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_WHITE))
 }
-
 /**
  * 
  * @param {string} itemID 
@@ -369,7 +344,6 @@ function GRAY_WHITE_PALETTE(itemID) {
 function GRAY_GOLD_PALETTE(itemID) {
     $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_GOLD))
 }
-
 /**
  * 
  * @param {string} itemID 
@@ -379,16 +353,6 @@ function GRAY_RED_PALETTE(itemID) {
 }
 
 ClientEvents.lang('en_us', event => {
-    for (const [tool, TOOLCAP] of Object.entries(standardTools)) {
-        for (const [material, MATCAP] of Object.entries(minecraftMaterialTools)) {
-            event.add('kubejs', `item.minecraft.${material}_${tool}.tooltip`, `${MATCAP} ${TOOLCAP}`)
-            event.add('kubejs', `item.minecraft.${material}_${tool}.tooltip.summary`, "You can now _repair_ tools with the material they are made of.")
-            event.add('kubejs', `item.minecraft.${material}_${tool}.tooltip.condition1`, "How to repair:")
-            event.add('kubejs', `item.minecraft.${material}_${tool}.tooltip.behaviour1`, "Put your _tool_ and its _respective crafting material_ in any _crafting grid_.")
-            event.add('kubejs', `item.minecraft.${material}_${tool}.tooltip.condition2`, "Additional Info")
-            event.add('kubejs', `item.minecraft.${material}_${tool}.tooltip.behaviour2`, "If you were wondering... yes, this also applies to Diamond and Netherite tools as well. This tooltip will not appear on Diamond and Netherite tools.")
-        }
-    }
     STANDARD_PALETTE_REGISTRY.forEach(item => {
         STANDARD_PALETTE(item)
     })
@@ -410,7 +374,7 @@ ClientEvents.lang('en_us', event => {
     GRAY_REGISTRY.forEach(item => {
         GRAY_PALETTE(item)
     })
-    MONO_GRAY_PALETTE('create:chromatic_compound')
+    GRAY_WHITE_PALETTE('create:chromatic_compound')
     GRAY_GOLD_PALETTE('create:refined_radiance')
     GRAY_PALETTE('create:shadow_steel')
 })
