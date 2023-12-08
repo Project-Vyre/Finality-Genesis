@@ -152,8 +152,6 @@ function groupChippedTags(modName, event, exclude) {
 
 REIEvents.hide('item', event => {
     event.hide([
-        'kubejs:denied_result',
-        'kubejs:removed_item',
         /^kubejs.*[_:\/]incomplete(?![a-zA-Z0-9]).*/,
         /^create.*[_:\/]andesite_encased(?![a-zA-Z0-9]).*/,
         /^create.*[_:\/]brass_encased(?![a-zA-Z0-9]).*/,
