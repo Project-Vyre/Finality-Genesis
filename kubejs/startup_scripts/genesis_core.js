@@ -630,6 +630,11 @@ StartupEvents.registry('block', event => {
             entityInfo.inventory(9, 9)
             entityInfo.rightClickOpensInventory()
         })
+    event.create('kubejs:dripstone_transitional_stone')
+        .textureAll('kubejs:block/dripstone_stone')
+        .requiresTool(true)
+        .soundType('stone')
+        .tagBlock('minecraft:mineable/pickaxe')
     if (Platform.isLoaded('mob_grinding_utils')) {
         event.create('kubejs:incomplete_spikes')
             .textureAll('kubejs:block/incomplete_placeholder_block')
