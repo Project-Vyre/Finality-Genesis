@@ -33,7 +33,7 @@ let debug_messages = false
 let DICE = 0
 
 function allMessages(event) {
-    DICE = Utils.random.nextInt(0, 19)
+    DICE = Utils.random.nextInt(0, 20)
     switch (DICE) {
         case 0:
             /**
@@ -526,6 +526,23 @@ function allMessages(event) {
                     Component.of('viewing.\n'),
                     Component.of('No longer will you have to go back and forth, ever!'),
                     Component.of(endRainbowLine)
+                ])
+            }
+            break;
+        case 19:
+            if (Platform.isLoaded('betterfortresses')) {
+                event.server.tell([
+                    Component.of(startRainbowLine),
+                    Component.of('Finality Tip\n').bold().lightPurple(),
+                    Component.of('\nDid you know every Nether Fortress has one guaranteed block of Ancient Debris somewhere?\n'),
+                    Component.of('It\'s very well hidden under some lava, however. '),
+                    Component.of(endRainbowLine)
+                ])
+            } else if (!Platform.isLoaded('betterfortresses')) {
+                event.server.tell([
+                    Component.of('<shake>-----------------------------------------------------</shake>\n').darkRed(),
+                    Component.of('Looks like the mod this tip is meant for is missing!'),
+                    Component.of('\n<shake>-----------------------------------------------------</shake>').darkRed()
                 ])
             }
             break;
