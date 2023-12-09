@@ -505,10 +505,11 @@ ServerEvents.recipes(event => {
      * Crushing
      */
     event.recipes.create.crushing([
-        '4x minecraft:pointed_dripstone',
-        Item.of('minecraft:clay_ball').withChance(0.50),
-        Item.of('create:copper_nugget').withChance(0.25),
-        Item.of('create:experience_nugget').withChance(0.75)
+        'minecraft:clay_ball',
+        Item.of('minecraft:clay_ball', 2).withChance(0.25),
+        Item.of('create:copper_nugget').withChance(0.12),
+        Item.of('minecraft:iron_nugget').withChance(0.12),
+        Item.of('create:experience_nugget').withChance(0.25)
     ], 'minecraft:dripstone_block').processingTime(250).id('finality:crushing/dripstone')
     event.recipes.create.crushing([
         Item.of('create:copper_nugget').withChance(0.05),
@@ -700,9 +701,17 @@ ServerEvents.recipes(event => {
         I: 'minecraft:ink_sac',
         N: 'minecraft:nautilus_shell'
     }).id('finality:heart_of_the_sea')
-    event.shapeless('4x minecraft:quartz', [
+    event.shapeless(
+        '4x minecraft:quartz',
         '#forge:storage_blocks/quartz'
-    ]).id('finality:quartz_block_revert')
+    ).id('finality:quartz_block_revert')
+    event.shapeless(
+        '4x minecraft:pointed_dripstone',
+        'minecraft:dripstone_block'
+    ).id('finality:pointed_dripstone_from_block')
+    event.recipes.create.sequenced_assembly('minecraft:dripstone_block', 'minecraft:stone', [
+        event.recipes.create.filling('kubejs:dripstone_transitional_stone', ['kubejs:dripstone_transitional_stone', Fluid.of('minecraft:water', 25)])
+    ]).transitionalItem('kubejs:dripstone_transitional_stone').loops(7).id('finality:sequenced_assembly/dripstone_block')
     if (Platform.isLoaded('farmersdelight')) {
         console.log("Farmer's Delight detected, correcting to recipes to 1:1 ratio.")
         event.shapeless('create:dough', [
@@ -783,12 +792,6 @@ ServerEvents.recipes(event => {
         '4x minecraft:netherite_scrap',
         '4x minecraft:gold_ingot'
     ]).id('minecraft:netherite_ingot')
-    event.shaped('kubejs:denied_result', [
-        'I I',
-        ' I '
-    ], {
-        I: 'minecraft:iron_ingot'
-    }).id('minecraft:bucket')
     event.shaped('kubejs:denied_result', [
         ' G ',
         'GMG',
@@ -1177,10 +1180,12 @@ PlayerEvents.loggedIn(event => {
             lootrMsg(event)
         }
         if (Platform.isLoaded('ftbquests') &&
-            Platform.isLoaded('supplementaries')
+            Platform.isLoaded('supplementaries') &&
+            Platform.isLoaded('backpacked')
         ) {
             event.player.give('ftbquests:book')
             event.player.give('supplementaries:sack')
+            event.player.give('backpacked:backpack')
             event.player.tell([
                 Component.of('First world load! Lag may be present for a few minutes.\n').bold().gold(),
                 Component.of("Also, please check your Quest Book and read its tooltips to get your bearings. Before I go, do not forget to\n"),
