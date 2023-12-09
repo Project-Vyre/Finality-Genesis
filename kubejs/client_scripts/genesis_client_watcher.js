@@ -1,4 +1,4 @@
-// priority: 1
+// priority: 10
 // requires: netjs
 
 /**

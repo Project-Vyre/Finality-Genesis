@@ -1,4 +1,4 @@
-// priority: 3
+// priority: 20
 
 /**
  * @file Tooltip removal.

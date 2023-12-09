@@ -118,8 +118,6 @@ let STANDARD_PALETTE_REGISTRY = [
     'create:raw_zinc',
     'create:zinc_ingot',
     'create:zinc_nugget',
-    'create_power_loader:andesite_chunk_loader',
-    'create_power_loader:brass_chunk_loader',
     'farmersdelight:skillet',
     'farmersdelight:stove'
 ]
