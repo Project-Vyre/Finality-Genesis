@@ -212,12 +212,7 @@
         {
           "type": "apotheosis:affix",
           "rarity": "epic"
-        },
-        {
-          "type": "stack",
-          "stack": "apotheosis:gem_dust",
-          "count": 64
-        }      
+        }  
       ],
       "max_wave_time": 96000,
       "setup_time": 400

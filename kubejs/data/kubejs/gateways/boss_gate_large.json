@@ -43,6 +43,12 @@
           "value": 0.10
         }
       ],
+      "rewards": [
+        {
+          "type": "apotheosis:affix",
+          "rarity": "epic"
+        }
+      ],
       "max_wave_time": 72000,
       "setup_time": 400
     },
@@ -75,6 +81,12 @@
           "value": 0.10
         }
       ],
+      "rewards": [
+        {
+          "type": "apotheosis:affix",
+          "rarity": "epic"
+        }
+      ],
       "max_wave_time": 96000,
       "setup_time": 400
     },
@@ -83,6 +95,12 @@
         {
           "type": "apotheosis:boss",
           "boss": "kubejs:wither"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "apotheosis:affix",
+          "rarity": "epic"
         }
       ],
       "max_wave_time": 96000,
@@ -124,6 +142,12 @@
           "attribute": "generic.movement_speed",
           "operation": "MULTIPLY_TOTAL",
           "value": 0.10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "apotheosis:affix",
+          "rarity": "epic"
         }
       ],
       "max_wave_time": 96000,
@@ -163,6 +187,12 @@
           "value": 0.10
         }
       ],
+      "rewards": [
+        {
+          "type": "apotheosis:affix",
+          "rarity": "epic"
+        }
+      ],
       "max_wave_time": 96000,
       "setup_time": 600
     },
@@ -198,6 +228,12 @@
           "attribute": "generic.movement_speed",
           "operation": "MULTIPLY_TOTAL",
           "value": 0.10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "apotheosis:affix",
+          "rarity": "epic"
         }
       ],
       "max_wave_time": 96000,
@@ -242,12 +278,6 @@
           "boss": "kubejs:overworld/lich"
         }
       ],
-      "rewards": [
-        {
-          "type": "apotheosis:affix",
-          "rarity": "mythic"
-        }
-      ],
       "modifiers": [
         {
           "attribute": "generic.armor",
@@ -263,6 +293,12 @@
           "attribute": "generic.knockback_resistance",
           "operation": "ADDITION",
           "value": 0.10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "apotheosis:affix",
+          "rarity": "mythic"
         }
       ],
       "max_wave_time": 96000,
