@@ -227,6 +227,15 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('kubejs:final_tools')
         .group('tools')
 
+    if (Platform.isLoaded('paxeljs')) {
+        event.create('kubejs:final_paxel', 'paxel').tier('final_tool')
+            .displayName('<rainb>Omni Figura</rainb>')
+            .rarity('epic')
+            .texture('kubejs:item/final_paxel')
+            .maxStackSize(1)
+            .fireResistant(true)
+    }
+
     event.create('kubejs:final_hoe', 'hoe').tier('final_tool')
         .displayName('<rainb>Agricola Manus</rainb>')
         .rarity('epic')
