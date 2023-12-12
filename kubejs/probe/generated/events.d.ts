@@ -32,20 +32,22 @@ command(handler: (event: Internal.CommandEventJS) => void):void,
      * @at *server*
     */
 blockLootTables(handler: (event: Internal.BlockLootEventJS) => void):void,
-tags(type: "worldgen/world_preset", handler: (event: TagEvent.WorldPreset) => void): void
-tags(type: "minecraft:worldgen/world_preset", handler: (event: TagEvent.WorldPreset) => void): void
 tags(type: "worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
 tags(type: "minecraft:worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
-tags(type: "worldgen/biome", handler: (event: TagEvent.Biome) => void): void
-tags(type: "minecraft:worldgen/biome", handler: (event: TagEvent.Biome) => void): void
+tags(type: "worldgen/world_preset", handler: (event: TagEvent.WorldPreset) => void): void
+tags(type: "minecraft:worldgen/world_preset", handler: (event: TagEvent.WorldPreset) => void): void
 tags(type: "worldgen/structure", handler: (event: TagEvent.Structure) => void): void
 tags(type: "minecraft:worldgen/structure", handler: (event: TagEvent.Structure) => void): void
+tags(type: "worldgen/biome", handler: (event: TagEvent.Biome) => void): void
+tags(type: "minecraft:worldgen/biome", handler: (event: TagEvent.Biome) => void): void
 tags(type: "worldgen/flat_level_generator_preset", handler: (event: TagEvent.FlatLevelGeneratorPreset) => void): void
 tags(type: "minecraft:worldgen/flat_level_generator_preset", handler: (event: TagEvent.FlatLevelGeneratorPreset) => void): void
 tags(type: "dimension_type", handler: (event: TagEvent.DimensionType) => void): void
 tags(type: "minecraft:dimension_type", handler: (event: TagEvent.DimensionType) => void): void
 tags(type: "game_event", handler: (event: TagEvent.GameEvent) => void): void
 tags(type: "minecraft:game_event", handler: (event: TagEvent.GameEvent) => void): void
+tags(type: "sound_event", handler: (event: TagEvent.SoundEvent) => void): void
+tags(type: "minecraft:sound_event", handler: (event: TagEvent.SoundEvent) => void): void
 tags(type: "fluid", handler: (event: TagEvent.Fluid) => void): void
 tags(type: "minecraft:fluid", handler: (event: TagEvent.Fluid) => void): void
 tags(type: "mob_effect", handler: (event: TagEvent.MobEffect) => void): void
