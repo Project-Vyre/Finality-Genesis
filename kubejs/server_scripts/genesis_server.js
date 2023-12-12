@@ -672,12 +672,6 @@ ServerEvents.recipes(event => {
         '18x minecraft:gold_nugget',
         Fluid.of('minecraft:lava', 180)
     ]).id('finality:nether_gold_ore_deco') // Thank you to FunnyMan4579 on the official Create Discord for giving me this idea :3
-    if (Platform.isLoaded('salt')) {
-        event.recipes.create.mixing(
-            'salt:salt',
-            Fluid.of('minecraft:water', 1000)
-        ).heated().id('finality:create_salt_compat')
-    }
     /**
      * >-----<
      */
@@ -1583,6 +1577,7 @@ let modBlacklist = {
     creategoggles: 'Create Goggles',
     createsifter: 'Create Sifting',
     create_things_and_misc: 'Create: Things and Misc',
+    createutilities: 'Create Utilities',
     cgm: "MrCrayFish's Gun Mod",
     extendedgears: 'Create: Extended Cogwheels',
     alloyed: 'Create: Alloyed',
@@ -1604,7 +1599,9 @@ Object.keys(modBlacklist).forEach(modID => {
         ServerEvents.recipes(event => {
             event.remove({})
         })
-        console.warn(`${modBlacklist[modID]} has been detected, please remove it from the modpack.`)
+        ServerEvents.tick(event => {
+            console.error(`${modBlacklist[modID]} has been detected, please remove it from the modpack.`)
+        })
         PlayerEvents.loggedIn(event => {
             event.server.tell(`${modBlacklist[modID]} has been detected, please remove it from the modpack.`)
         })

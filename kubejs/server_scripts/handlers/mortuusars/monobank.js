@@ -5,6 +5,7 @@
  * @file Server handler for Monobank.
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
+
 ServerEvents.tags('block', event => {
     event.add('create:wrench_pickup', [
         'monobank:monobank'
