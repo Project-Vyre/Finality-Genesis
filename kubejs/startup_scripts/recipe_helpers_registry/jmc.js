@@ -7,9 +7,11 @@
  * @author CelestialAbyss <https://github.com/CelestialAbyss>
  */
 
+// Not sure if I'm going to need to use this.
+
 let jmc_flavors = [
     'cupcake',
-    'chocolate',
+    // chocolate "icing" already exists as create:chocolate
     'carrot',
     'pumpkin',
     'watermelon',
