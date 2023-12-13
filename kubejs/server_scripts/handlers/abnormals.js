@@ -77,7 +77,8 @@ ServerEvents.tags('block', event => {
         'woodworks:dark_oak_ladder',
         'woodworks:mangrove_ladder', // mangrove, crimson, warped
         'woodworks:crimson_ladder',
-        'woodworks:warped_ladder'
+        'woodworks:warped_ladder',
+        'woodworks:sawmill'
     ])
 })
 
