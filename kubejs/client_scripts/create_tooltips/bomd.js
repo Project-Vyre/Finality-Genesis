@@ -87,7 +87,7 @@ ClientEvents.lang('en_us', event => {
     event.addAll(
         'kubejs',
         createTooltip('bosses_of_mass_destruction:monolith_block')
-            .addSummary('When placed, _increases explosion power_ by _30_ in 64 blocks in any direction. _DOES NOT_ stack.')
+            .addSummary('When placed, _increases explosion power_ by _30_ in 64 blocks in any direction. The effect _DOES NOT_ stack.')
             .addBehaviour([
                 'On R-Click on top of a block',
                 '_Places the monolith_ on the ground.'
