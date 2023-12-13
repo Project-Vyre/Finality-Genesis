@@ -275,7 +275,7 @@
 	#
 	# If the Mutant Blaze breaks certain types of blocks it walks into, helps with pathfinding
 	# usually set to true
-	"Walk Griefing" = true
+	"Walk Griefing" = false
 	#
 	# If blocks the Mutant Blaze breaks by walking drop themselves as items, allowing them to be recovered, impacts performance
 	# usually set to false
@@ -295,7 +295,7 @@
 	#
 	# If the Mutant Blaze's rod projectiles break blocks that they collide with
 	# usually set to true
-	"Rod Griefing" = true
+	"Rod Griefing" = false
 	#
 	# If blocks the Mutant Blaze's rod projectiles break on collision drop themselves as items, allowing them to be recovered, impacts performance
 	# usually set to false
@@ -315,7 +315,7 @@
 	#
 	# If the Mutant Blaze breaks blocks around it after getting hurt, similarly to the Wither, helps prevent cheesing
 	# usually set to true
-	"Hurt Griefing" = true
+	"Hurt Griefing" = false
 	#
 	# If blocks the Mutant Blaze breaks after getting hurt drop themselves as items, allowing them to be recovered, impacts performance
 	# usually set to false

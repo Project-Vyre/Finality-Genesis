@@ -323,7 +323,7 @@
 	#
 	# If the Mutant Wither Skeleton breaks certain types of blocks it walks into, helps with pathfinding
 	# usually set to true
-	"Walk Griefing" = true
+	"Walk Griefing" = false
 	#
 	# If blocks the Mutant Wither Skeleton breaks by walking drop themselves as items, allowing them to be recovered, impacts performance
 	# usually set to false
@@ -331,7 +331,7 @@
 	#
 	# If the Mutant Wither Skeleton breaks blocks it leaps into, helps prevent cheesing
 	# usually set to true
-	"Jump Griefing" = true
+	"Jump Griefing" = false
 	#
 	# If the Mutant Wither Skeleton breaks only one layer of blocks that it jumps into, setting to false will make the Mutant Wither Skeleton break all blocks it jumps into
 	# usually set to true
@@ -347,7 +347,7 @@
 	#
 	# If the Mutant Wither Skeleton breaks blocks around it after getting hurt, similarly to the Wither, helps prevent cheesing
 	# usually set to true
-	"Hurt Griefing" = true
+	"Hurt Griefing" = false
 	#
 	# If blocks the Mutant Wither Skeleton breaks after getting hurt drop themselves as items, allowing them to be recovered, impacts performance
 	# usually set to false
