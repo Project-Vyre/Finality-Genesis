@@ -37,8 +37,8 @@ ao:2
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:"true"
-resourcePacks:["vanilla","mod_resources","create:legacy_copper","Supplementaries Generated Pack","V Slab Compat Generated Pack","builtin/aether_ctm_fix","loadmyresources.hiddenpack","quark:emote_resources"]
-incompatibleResourcePacks:["loadmyresources.hiddenpack"]
+resourcePacks:["create:legacy_copper","file/Pixelated_v1.3.1_EnhancedVisuals(nox_cgt).zip","file/Nicer-Rain-1.0.0.zip","file/Slightly-Improved-Font-1.0.0.zip","file/Enhanced Audio r6.zip","file/Enhanced Audio Ambience r1.zip"]
+incompatibleResourcePacks:[]
 lastServer:
 lang:en_us
 soundDevice:"OpenAL Soft on Wave Link Game (Elgato Wave:3)"
