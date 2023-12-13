@@ -64,3 +64,50 @@ ServerEvents.recipes(event => {
         'createdeco:netherite_coinstack'
     ]).superheated().id('finality:createdeco/netherite_coinstack_melting')
 })
+
+let cdeco_lamp_colors = [
+    'yellow',
+    'red',
+    'green',
+    'blue'
+]
+let cdeco_lamp_mats = [
+    'gold',
+    'netherite',
+    'andesite',
+    'brass',
+    'cast_iron',
+    'iron',
+    'copper',
+    'zinc'
+]
+
+ServerEvents.tags('block', event => {
+    event.add('create:wrench_pickup', [
+        'createdeco:gold_bars',
+        'createdeco:gold_bars_overlay',
+        'createdeco:netherite_bars',
+        'createdeco:netherite_bars_overlay',
+        'createdeco:andesite_bars',
+        'createdeco:andesite_bars_overlay',
+        'createdeco:brass_bars',
+        'createdeco:brass_bars_overlay',
+        'createdeco:cast_iron_bars',
+        'createdeco:cast_iron_bars_overlay',
+        'createdeco:polished_iron_bars',
+        'createdeco:polished_iron_bars_overlay',
+        'createdeco:iron_bars_overlay',
+        'createdeco:copper_bars',
+        'createdeco:copper_bars_overlay',
+        'createdeco:zinc_bars',
+        'createdeco:zinc_bars_overlay'
+    ])
+    for (let index = 0; index < cdeco_lamp_mats.length; index++) {
+        event.add('create:wrench_pickup', [
+            `createdeco:yellow_${cdeco_lamp_mats[index]}_lamp`,
+            `createdeco:red_${cdeco_lamp_mats[index]}_lamp`,
+            `createdeco:green_${cdeco_lamp_mats[index]}_lamp`,
+            `createdeco:blue_${cdeco_lamp_mats[index]}_lamp`
+        ])
+    }
+})

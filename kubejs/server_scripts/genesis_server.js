@@ -1126,9 +1126,17 @@ ServerEvents.tags('block', event => {
         'minecraft:loom',
         'minecraft:fletching_table',
         'minecraft:ender_chest',
+        'minecraft:lightning_rod',
         '#minecraft:doors',
         '#minecraft:trapdoors',
-        '#forge:chests/wooden'
+        '#forge:chests',
+        '#minecraft:shulker_boxes',
+        '#minecraft:planks',
+        '#minecraft:wool_carpets',
+        '#minecraft:signs',
+        '#minecraft:beds',
+        '#minecraft:fence_gates',
+        'minecraft:beacon',
     ])
 })
 
