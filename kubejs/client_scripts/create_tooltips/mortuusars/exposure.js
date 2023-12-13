@@ -65,6 +65,18 @@ ClientEvents.lang('en_us', event => {
     event.addAll('exposure',
         createTooltip('exposure:color_film')
             .addSummary('Takes a photograph in _color_. It does require a more complex mix to develop it, however.')
+            .addBehaviour([
+                'Requires Awkward Potion',
+                'An Awkward potion is made with _1x Nether Wart_ and _water_ The water can also be contained in a heated _Basin_ for automated potion brewing.'
+            ])
+            .addBehaviour([
+                'Requires Mundane Potion',
+                'A Mundane Potion can be made with any of the following options with a plain _water bottle_ or water in a heated _Basin_, though REI / JEI will show you all the possibilities... _Blaze Powder_, _Spider Eye_, _Sugar_, _Redstone_...'
+            ])
+            .addBehaviour([
+                'Requires Thick Potion',
+                'A Thick Potion can only be brewed with _Glowstone Dust_.'
+            ])
             .setPalette($Palette.GRAY_AND_GOLD)
             .build()
     )
