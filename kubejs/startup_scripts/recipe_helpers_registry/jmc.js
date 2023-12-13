@@ -25,14 +25,16 @@ let jmc_flavors = [
 
 StartupEvents.registry('item', event => {
     jmc_flavors.forEach(type => {
-        event.create(`kubejs:incomplete_${type}_cake`)
+        event.create(`kubejs:incomplete_${type}_cake`, 'create:sequenced_assembly')
+        .texture(`kubejs:item/incomplete_cakes/${type}`)
     })
+    event.create('kubejs:incomplete_triple_tier_cake')
 })
 
 StartupEvents.registry('fluid', event => {
     event.create('kubejs:cupcake_icing')
     event.create('kubejs:carrot_icing')
     event.create('kubejs:pumpkin_icing')
-    event.create('kubejs:watermelon')
-    event.create('kubejs:creamcheese_icing')
+    event.create('kubejs:watermelon_icing')
+    event.create('kubejs:cheese_icing')
 })
