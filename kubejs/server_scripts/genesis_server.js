@@ -360,6 +360,18 @@ ServerEvents.recipes(event => {
         E: 'kubejs:high_entropy_alloy',
         S: 'extendedcrafting:black_iron_ingot'
     }).id('finality:crafting/final_shovel')
+    if (Platform.isLoaded('paxeljs')) {
+        event.shaped('kubejs:final_paxel', [
+            'ABC',
+            ' S ',
+            ' S '
+        ], {
+            A: 'kubejs:final_axe',
+            B: 'kubejs:final_shovel',
+            C: 'kubejs:final_pickaxe',
+            S: 'extendedcrafting:black_iron_ingot'
+        }).id('finality:crafting/final_paxel')
+    }
     event.shaped('kubejs:final_hoe', [
         'EE',
         ' S',

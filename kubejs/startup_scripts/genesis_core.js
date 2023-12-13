@@ -1032,3 +1032,38 @@ BlockEvents.modification(event => {
         block.setExplosionResistance(1200)
     })
 })
+
+let blacklist = {
+    ae2: 'This mod does not belong in this variant of the modpack. Make your own storage systems.',
+    ars_nouveau: 'Not supported in this variant of the modpack.',
+    createcasing: 'Not supported.',
+    createdieselgenerators: 'Not supported.',
+    create_confectionery: 'MCreator mod.',
+    create_jetpack: 'Not supported.',
+    create_sa: 'MCreator mod. NOT to be confused with Create CRAFTS & Additions which is an actual mod.',
+    creategoggles: 'Replaced by Curios API.',
+    createsifter: 'Not supported.',
+    create_things_and_misc: 'MCreator mod.',
+    createutilities: 'Might as well not play Create at all if you are this lazy.',
+    cgm: 'Not supported.',
+    extendedgears: 'Not supported.',
+    alloyed: 'Loves crashing the game on startup and causes other bugs to occur.',
+    createendertransmission: 'Might as well not play Create at all if you are this lazy.',
+    create_compressed: 'MCreator mod.',
+    mekanism: 'Might as well not play Create at all as Mekanism overshadows it.',
+    optifine: 'Why are you using OptiFine? Do you want to see rainbows of glitched graphics or a repeat of #forge-bugs in the Create server?',
+    immersiveengineering: 'Not supported in this variant of the modpack.',
+    ftbultimine: 'Too OP and not configurable enough to balance it.',
+    unusualend: 'MCreator mod.',
+    hammerlib: 'Not supported by KubeJS.',
+    solarflux: 'Not supported by KubeJS, requires HammerLib',
+    strange: 'Causes the server to stall.',
+    lucky: 'Not supported in this variant of the modpack. Also causes bugs.',
+    twilightforest: 'Not supported in this variant of the modpack.'
+}
+
+StartupEvents.postInit(event => {
+    Object.keys(blacklist).forEach((mod) => {
+        Platform.isLoaded(mod) && console.error(`This mod is not supported: ${mod} - Reason: ${blacklist[mod]}`)
+    })
+})

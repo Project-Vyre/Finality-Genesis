@@ -3585,7 +3585,10 @@
 			y: -14.0d
 		}
 		{
-			dependencies: ["0CD722C2B48DF862"]
+			dependencies: [
+				"0CD722C2B48DF862"
+				"0F8883072FD3C1E3"
+			]
 			description: [
 				"Hold [w] to Ponder to learn more!"
 				""

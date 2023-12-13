@@ -68,18 +68,16 @@ let PRIMORDIAL_MECHANISMS = {
     entropy_mechanism: 'Entropy Mechanism' // CONSOLIDATION
 }
 
-/**
- * 
- * @param {*} event 
- * @param {string} itemID 
- * @param {string} displayName 
- * @param {string} texturePath 
- */
-function transitionalItem(event, itemID, displayName, texturePath) {
-    event.create(`kubejs:${itemID}`, 'create:sequenced_assembly').displayName(displayName).texture(`kubejs:item/${texturePath}`)
-}
-
 StartupEvents.registry('item', event => {
+    /**
+     * 
+     * @param {string} itemID 
+     * @param {string} displayName 
+     * @param {string} texturePath 
+     */
+    let transitionalItem = (itemID, displayName, texturePath) => {
+        event.create(`kubejs:${itemID}`, 'create:sequenced_assembly').displayName(displayName).texture(`kubejs:item/${texturePath}`)
+    }
     Object.keys(NATR).forEach(material => {
         event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${NATR[material]} Singularity`).texture(`kubejs:item/incomplete_singularities/nature/incomplete_${material}`).maxStackSize(1)
     })
@@ -94,6 +92,6 @@ StartupEvents.registry('item', event => {
         event.create(`kubejs:${mechanism}`).displayName(`<rainb>${PRIMORDIAL_MECHANISMS[mechanism]}</rainb>`).texture(`kubejs:item/${mechanism}`).maxStackSize(64).fireResistant(true)
         event.create(`kubejs:incomplete_${mechanism}`, 'create:sequenced_assembly').displayName(`<rainb>Incomplete ${PRIMORDIAL_MECHANISMS[mechanism]}</rainb>`).texture(`kubejs:item/incomplete_${mechanism}`)
     })
-    transitionalItem(event, 'incomplete_cpu_shape', '§aIncomplete CPU Substrate Shape', 'shapes/incomplete_cpu')
-    transitionalItem(event, 'incomplete_cpu_substrate_shape', '§aIncomplete CPU Substrate Shape', 'shapes/incomplete_cpu_substrate')
+    transitionalItem('incomplete_cpu_shape', '§aIncomplete CPU Substrate Shape', 'shapes/incomplete_cpu')
+    transitionalItem('incomplete_cpu_substrate_shape', '§aIncomplete CPU Substrate Shape', 'shapes/incomplete_cpu_substrate')
 })
