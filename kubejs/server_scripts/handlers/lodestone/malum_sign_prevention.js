@@ -2,11 +2,6 @@
 // requires: malum
 // ignored: true
 
-/* 
-Not going to use this because it's too intensive for server TPS, but 
-I'll keep it here in mind for potential other use cases - CelestialAbyss 
-*/
-
 console.log('Implementing preventive measures to prevent client crash from Malum signs.')
 
 BlockEvents.rightClicked(event => {
@@ -52,6 +47,11 @@ PlayerEvents.inventoryChanged(event => {
             break;
     }
 })
+
+/* 
+Not going to use this because it's too intensive for server TPS, but 
+I'll keep it here in mind for potential other use cases - CelestialAbyss 
+*/
 
 /**
  * @summary Destroys block entities.
