@@ -32,9 +32,7 @@ ServerEvents.recipes(event => {
     console.log('Please ignore any errors related to parsing recipes from Malum.')
     event.remove([
         { id: 'malum:malum/blazing_sconce' },
-        { id: 'malum:create/crushing/crush_rare_earths_block' },
-        { output: 'malum:runewood_sign' },
-        { output: 'malum:soulwood_sign' }
+        { id: 'malum:create/crushing/crush_rare_earths_block' }
     ])
     malumOres.forEach(ore => {
         event.remove([
@@ -86,29 +84,6 @@ LootJS.modifiers(event => {
         .randomChance(0.2).addLoot('malum:raw_soulstone')
     event.addBlockLootModifier('malum:blazing_quartz_ore')
         .randomChance(0.25).addLoot('malum:blazing_quartz')
-})
-
-console.log('Implementing preventive measures to prevent client crash from Malum signs.')
-
-BlockEvents.rightClicked(event => {
-    if (event.getBlock() == 'malum:runewood_sign') {
-        console.log('Cancelled placement of runewood_sign, re-launch your world.')
-        event.cancel()
-    }
-    if (event.getBlock() == 'malum:soulwood_sign') {
-        console.log('Cancelled placement of soulwood_sign, re-launch your world.')
-        event.cancel()
-    }
-})
-BlockEvents.placed(event => {
-    if (event.getBlock() == 'malum:runewood_sign') {
-        console.log('Cancelled placement of runewood_sign, re-launch your world.')
-        event.cancel()
-    }
-    if (event.getBlock() == 'malum:soulwood_sign') {
-        console.log('Cancelled placement of soulwood_sign, re-launch your world.')
-        event.cancel()
-    }
 })
 
 ServerEvents.highPriorityData(event => {
