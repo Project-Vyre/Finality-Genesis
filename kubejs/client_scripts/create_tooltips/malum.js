@@ -24,6 +24,7 @@ ClientEvents.lang('en_us', event => {
             .setPalette($Palette.PURPLE)
             .build()
     )
+    /*
     event.addAll('malum',
         createTooltip('malum:runewood_sign')
             .addSummary('_DO NOT PLACE_ OR YOU WILL _SOFTLOCK ACCESS FROM YOUR WORLD_!')
@@ -36,10 +37,11 @@ ClientEvents.lang('en_us', event => {
             .setPalette($Palette.RED)
             .build()
     )
-    /*event.addAll('malum', {
+    event.addAll('malum', {
         "item.malum.encyclopedia_arcana.tooltip": "ENCYCLOPEDIA ARCANA",
         "item.malum.encyclopedia_arcana.tooltip.summary": "Your guide to the _dark arts_ of _Malum_.",
         "item.malum.tyrving.tooltip": "TYRVING",
         "item.malum.tyrving.tooltip.summary": "Deals _direct damage_ to the _soul_ of the entity that gets hit."
-    })*/
+    })
+    */
 })
