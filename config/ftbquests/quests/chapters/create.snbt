@@ -3594,6 +3594,7 @@
 				""
 				"Mostly used for decorative purposes."
 			]
+			hide: true
 			id: "1BD09AD0A5B739CA"
 			rewards: [
 				{
