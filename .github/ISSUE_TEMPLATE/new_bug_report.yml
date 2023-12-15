@@ -1,0 +1,41 @@
+name: Bug Report
+description: Found a bug or something doesn't seem right? Choose this template.
+title: "[Bug]: "
+labels: ["bug"]
+assignees: 
+- celestialabyss
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for the bug you have encountered.
+      options:
+        - label: I have searched the existing issues and have ensured there are no duplicates.
+          required: true
+  - type: checkboxes
+    attributes:
+      label: Mod Verification
+      description: Were any of these mods installed at the time of this incident occurring? If so, then uninstall those mods first before publishing this issue.
+      options:
+        - label: Rubidium
+        - label: Oculus
+        - label: Iris & Oculus Flywheel Compat
+        - label: Canary
+        - label: Pluto
+        - label: Saturn
+        - label: Sound Physics Remastered
+        - label: OptiFine
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+

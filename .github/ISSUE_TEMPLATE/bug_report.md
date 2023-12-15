@@ -1,7 +1,7 @@
 ---
-name: Bug report
-about: Found a bug or something doesn't seem right? Choose this template.
-title: ''
+name: Bug Report
+description: Found a bug or something doesn't seem right? Choose this template.
+title: '[Bug] - '
 labels: bug
 assignees: ''
 
