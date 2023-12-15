@@ -23,4 +23,10 @@ ClientEvents.lang('en_us', event => {
         "item.ftbquests.book.tooltip.condition7": "Default Keybinds - Real Camera",
         "item.ftbquests.book.tooltip.behaviour7": "Don't like the camera being attached to the player head realistically? Press _F6_ to _toggle_ the perspective.",
     })
+    if (Platform.isLoaded('findme')) {
+        event.addAll('kubejs', {
+            "item.ftbquests.book.tooltip.condition8": "Default Keybinds - Real Camera",
+            "item.ftbquests.book.tooltip.behaviour8": "Press _Y_ on an item in JEI to find that item in nearby chests. Look for _white particles_ that go through the wall!",  
+        })
+    }
 })
