@@ -332,7 +332,8 @@ ClientEvents.lang('en_us', event => {
             "kubejs.hoglin_gate": "Hoglin Gate",
             "kubejs.hoglin_gate_large": "Large Hoglin Gate",
             "kubejs.boss_gate": "Apothic Boss Gate",
-            "kubejs.boss_gate_large": "Large Apothic Boss Gate"
+            "kubejs.boss_gate_large": "Large Apothic Boss Gate",
+            "kubejs.ultimatum_boss_gate": "Ultimatum Boss Gate"
         })
     }
     if (Platform.isLoaded('atmospheric')) {

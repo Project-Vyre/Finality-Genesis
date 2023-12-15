@@ -1,0 +1,131 @@
+{
+  "conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "adventure"
+    }
+  ],
+  "size": "large",
+  "color": "#AE03FA",
+  "leash_range": 1024,
+  "waves": [
+    {
+      "entities": [
+        {
+          "type": "apotheosis:boss",
+          "boss": "kubejs:overworld/captain_cornelia"
+        }
+      ],
+      "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 10
+        },
+        {
+          "attribute": "generic.armor",
+          "operation": "ADDITION",
+          "value": 100
+        },
+        {
+          "attribute": "generic.attack_damage",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.75
+        },
+        {
+          "attribute": "generic.knockback_resistance",
+          "operation": "ADDITION",
+          "value": 10
+        },
+        {
+          "attribute": "generic.movement_speed",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "apotheosis:affix",
+          "rarity": "mythic"
+        }
+      ],
+      "max_wave_time": 72000,
+      "setup_time": 400
+    },
+    {
+      "entities": [
+        {
+          "type": "apotheosis:boss",
+          "boss": "kubejs:overworld/the_leviathan"
+        }
+      ],
+      "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 10
+        },
+        {
+          "attribute": "generic.armor",
+          "operation": "ADDITION",
+          "value": 100
+        },
+        {
+          "attribute": "generic.attack_damage",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.75
+        },
+        {
+          "attribute": "generic.knockback_resistance",
+          "operation": "ADDITION",
+          "value": 10
+        },
+        {
+          "attribute": "generic.movement_speed",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "apotheosis:affix",
+          "rarity": "mythic"
+        }
+      ],
+      "max_wave_time": 72000,
+      "setup_time": 400
+    }
+  ],
+  "rewards": [
+    {
+      "type": "apotheosis:affix",
+      "rarity": "mythic"
+    },
+    {
+      "type": "apotheosis:affix",
+      "rarity": "mythic"
+    },
+    {
+      "type": "apotheosis:affix",
+      "rarity": "mythic"
+    },
+    {
+      "type": "apotheosis:affix",
+      "rarity": "mythic"
+    },
+    {
+      "type": "apotheosis:affix",
+      "rarity": "mythic"
+    },
+    {
+      "type": "apotheosis:affix",
+      "rarity": "mythic"
+    },
+    {
+      "type": "apotheosis:affix",
+      "rarity": "mythic"
+    }
+  ],
+  "completion_xp": 2700,
+  "spawn_range": 7
+}

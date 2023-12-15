@@ -35,7 +35,7 @@
         {
           "attribute": "generic.knockback_resistance",
           "operation": "ADDITION",
-          "value": 0.10
+          "value": 1
         },
         {
           "attribute": "generic.movement_speed",
@@ -63,7 +63,12 @@
         {
           "attribute": "generic.max_health",
           "operation": "MULTIPLY_TOTAL",
-          "value": 4
+          "value": 10
+        },
+        {
+          "attribute": "generic.armor",
+          "operation": "ADDITION",
+          "value": 1.5
         },
         {
           "attribute": "generic.attack_damage",
@@ -73,7 +78,7 @@
         {
           "attribute": "generic.knockback_resistance",
           "operation": "ADDITION",
-          "value": 0.10
+          "value": 10
         },
         {
           "attribute": "generic.movement_speed",
@@ -97,10 +102,38 @@
           "boss": "kubejs:wither"
         }
       ],
+      "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 2
+        },
+        {
+          "attribute": "generic.attack_damage",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.75
+        },
+        {
+          "attribute": "generic.knockback_resistance",
+          "operation": "ADDITION",
+          "value": 10
+        },
+        {
+          "attribute": "generic.movement_speed",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.10
+        }
+      ],
       "rewards": [
         {
           "type": "apotheosis:affix",
           "rarity": "epic"
+        },
+        {
+          "type": "stack",
+          "stack": {
+            "item": "minecraft:nether_star"
+          }
         }
       ],
       "max_wave_time": 96000,
@@ -121,12 +154,12 @@
         {
           "attribute": "generic.max_health",
           "operation": "MULTIPLY_TOTAL",
-          "value": 7
+          "value": 10
         },
         {
           "attribute": "generic.armor",
           "operation": "ADDITION",
-          "value": 1.5
+          "value": 5
         },
         {
           "attribute": "generic.attack_damage",
@@ -136,7 +169,7 @@
         {
           "attribute": "generic.knockback_resistance",
           "operation": "ADDITION",
-          "value": 0.10
+          "value": 25
         },
         {
           "attribute": "generic.movement_speed",
@@ -164,17 +197,17 @@
         {
           "attribute": "generic.max_health",
           "operation": "MULTIPLY_TOTAL",
-          "value": 7
+          "value": 10
         },
         {
           "attribute": "generic.armor",
           "operation": "ADDITION",
-          "value": 1.5
+          "value": 6
         },
         {
           "attribute": "generic.attack_damage",
           "operation": "MULTIPLY_TOTAL",
-          "value": 0.2
+          "value": 1.25
         },
         {
           "attribute": "generic.knockback_resistance",
@@ -207,7 +240,7 @@
         {
           "attribute": "generic.max_health",
           "operation": "MULTIPLY_TOTAL",
-          "value": 5
+          "value": 10
         },
         {
           "attribute": "generic.armor",
@@ -217,7 +250,7 @@
         {
           "attribute": "generic.attack_damage",
           "operation": "MULTIPLY_TOTAL",
-          "value": 0.5
+          "value": 1.50
         },
         {
           "attribute": "generic.knockback_resistance",
@@ -246,6 +279,33 @@
           "boss": "kubejs:overworld/the_harbinger"
         }
       ],
+      "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 10
+        },
+        {
+          "attribute": "generic.armor",
+          "operation": "ADDITION",
+          "value": 7.5
+        },
+        {
+          "attribute": "generic.attack_damage",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 1.50
+        },
+        {
+          "attribute": "generic.knockback_resistance",
+          "operation": "ADDITION",
+          "value": 0.10
+        },
+        {
+          "attribute": "generic.movement_speed",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.10
+        }
+      ],
       "rewards": [
         {
           "type": "apotheosis:affix",
@@ -260,6 +320,80 @@
         {
           "type": "apotheosis:boss",
           "boss": "kubejs:overworld/dead_king"
+        }
+      ],
+      "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 25
+        },
+        {
+          "attribute": "generic.armor",
+          "operation": "ADDITION",
+          "value": 35
+        },
+        {
+          "attribute": "generic.attack_damage",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 1.25
+        },
+        {
+          "attribute": "generic.knockback_resistance",
+          "operation": "ADDITION",
+          "value": 0.10
+        },
+        {
+          "attribute": "generic.movement_speed",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "apotheosis:affix",
+          "rarity": "mythic"
+        }
+      ],
+      "max_wave_time": 96000,
+      "setup_time": 600
+    },
+    {
+      "entities": [
+        {
+          "type": "apotheosis:boss",
+          "boss": "kubejs:farseer"
+        },
+        {
+          "type": "apotheosis:boss",
+          "boss": "kubejs:farseer"
+        }
+      ],
+      "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 25
+        },
+        {
+          "attribute": "generic.armor",
+          "operation": "ADDITION",
+          "value": 10
+        },
+        {
+          "attribute": "generic.attack_damage",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 1.25
+        },
+        {
+          "attribute": "generic.knockback_resistance",
+          "operation": "ADDITION",
+          "value": 0.10
+        },
+        {
+          "attribute": "generic.movement_speed",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.10
         }
       ],
       "rewards": [
@@ -280,65 +414,23 @@
       ],
       "modifiers": [
         {
-          "attribute": "generic.armor",
-          "operation": "ADDITION",
-          "value": 2
-        },
-        {
-          "attribute": "generic.attack_damage",
-          "operation": "MULTIPLY_TOTAL",
-          "value": 0.5
-        },
-        {
-          "attribute": "generic.knockback_resistance",
-          "operation": "ADDITION",
-          "value": 0.10
-        }
-      ],
-      "rewards": [
-        {
-          "type": "apotheosis:affix",
-          "rarity": "mythic"
-        }
-      ],
-      "max_wave_time": 96000,
-      "setup_time": 800
-    },
-    {
-      "entities": [
-        {
-          "type": "apotheosis:boss",
-          "boss": "kubejs:farseer"
-        },
-        {
-          "type": "apotheosis:boss",
-          "boss": "kubejs:farseer"
-        }
-      ],
-      "modifiers": [
-        {
           "attribute": "generic.max_health",
           "operation": "MULTIPLY_TOTAL",
-          "value": 10
+          "value": 5
         },
         {
           "attribute": "generic.armor",
           "operation": "ADDITION",
-          "value": 2
+          "value": 75
         },
         {
           "attribute": "generic.attack_damage",
           "operation": "MULTIPLY_TOTAL",
-          "value": 1
+          "value": 2.50
         },
         {
           "attribute": "generic.knockback_resistance",
           "operation": "ADDITION",
-          "value": 0.10
-        },
-        {
-          "attribute": "generic.movement_speed",
-          "operation": "MULTIPLY_TOTAL",
           "value": 0.10
         }
       ],
@@ -353,26 +445,6 @@
     }
   ],
   "rewards": [
-    {
-      "type": "apotheosis:affix",
-      "rarity": "mythic"
-    },
-    {
-      "type": "apotheosis:affix",
-      "rarity": "mythic"
-    },
-    {
-      "type": "apotheosis:affix",
-      "rarity": "mythic"
-    },
-    {
-      "type": "apotheosis:affix",
-      "rarity": "mythic"
-    },
-    {
-      "type": "apotheosis:affix",
-      "rarity": "mythic"
-    },
     {
       "type": "apotheosis:affix",
       "rarity": "mythic"
