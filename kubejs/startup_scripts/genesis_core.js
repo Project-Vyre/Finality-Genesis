@@ -1059,11 +1059,15 @@ let blacklist = {
     solarflux: 'Not supported by KubeJS, requires HammerLib',
     strange: 'Causes the server to stall.',
     lucky: 'Not supported in this variant of the modpack. Also causes bugs.',
-    twilightforest: 'Not supported in this variant of the modpack.'
+    twilightforest: 'Not supported in this variant of the modpack.',
+    createunlimited: 'NOT SUPPORTED AT ALL. Remove it.'
 }
 
 StartupEvents.postInit(event => {
-    Object.keys(blacklist).forEach((mod) => {
+    Object.keys(blacklist).forEach(mod => {
         Platform.isLoaded(mod) && console.error(`This mod is not supported: ${mod} - Reason: ${blacklist[mod]}`)
     })
+    if (!Platform.isLoaded('embeddium') && Platform.isLoaded('rubidium')) {
+        console.error('This mod is not supported: rubidium - Reason: Embeddium has replaced Rubidium. <shake>Stop using Rubidium.</shake>')
+    }
 })

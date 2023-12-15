@@ -1611,7 +1611,8 @@ let modBlacklist = {
     solarflux: 'Solar Flux Reborn',
     strange: 'Strange Lucky Blocks',
     lucky: 'Lucky Blocks',
-    twilightforest: 'Twilight Forest'
+    twilightforest: 'Twilight Forest',
+    createunlimited: 'Create: Unlimited'
 }
 
 Object.keys(modBlacklist).forEach(modID => {
