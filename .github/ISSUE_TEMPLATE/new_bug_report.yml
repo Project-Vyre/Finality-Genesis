@@ -22,6 +22,7 @@ body:
       description: Were any of these mods installed at the time of this incident occurring? If so, then uninstall those mods first before publishing this issue.
       options:
         - label: Rubidium
+        - label: Radium
         - label: Oculus
         - label: Iris & Oculus Flywheel Compat
         - label: Canary
