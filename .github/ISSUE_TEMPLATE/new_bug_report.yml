@@ -2,8 +2,6 @@ name: Bug Report (New, work in progress)
 description: Found a bug or something doesn't seem right? Choose this template.
 title: "[Bug]: "
 labels: ["bug"]
-assignees: 
-- celestialabyss
 body:
   - type: markdown
     attributes:
