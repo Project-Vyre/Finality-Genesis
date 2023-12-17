@@ -3,6 +3,22 @@
     {
       "type": "apotheosis:module",
       "module": "adventure"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "kubejs"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "cataclysm"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "aquamirae"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "irons_spellbooks"
     }
   ],
   "size": "medium",
@@ -212,7 +228,7 @@
         {
           "type": "apotheosis:affix",
           "rarity": "epic"
-        }  
+        }
       ],
       "max_wave_time": 96000,
       "setup_time": 400
