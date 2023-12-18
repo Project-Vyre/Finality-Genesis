@@ -15,7 +15,7 @@ display_actions = ["SPRINTING", "SWIMMING", "CRAWLING", "CROUCHING", "FLYING", "
 scale = 5
 #Offset on y-axis from original doll position.
 #Range: > -2147483648
-offset_y = 0
+offset_y = 10
 #Amount of ticks the paper doll will be kept on screen after its display conditions are no longer met. Set to 0 to always display the doll.
 #Range: > 0
 display_time = 20
