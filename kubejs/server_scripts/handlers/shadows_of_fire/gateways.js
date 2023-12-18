@@ -115,4 +115,13 @@ ServerEvents.recipes(event => {
         D: 'apotheosis:gem_dust',
         E: 'minecraft:nether_star'
     }).id('finality:boss_gate_large')
+    event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:ultimatum_boss_gate"}'), [
+        'SDS',
+        'DED',
+        'SDS'
+    ], {
+        S: 'apotheosis:mythic_material',
+        D: 'minecraft:crying_obsidian',
+        E: 'minecraft:nether_star'
+    }).id('finality:ultimatum_boss_gate')
 })

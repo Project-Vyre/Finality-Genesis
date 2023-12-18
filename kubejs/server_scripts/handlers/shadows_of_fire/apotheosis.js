@@ -223,39 +223,3 @@ ServerEvents.tags('block', event => {
         'apotheosis:gem_cutting_table'
     ])
 })
-
-ServerEvents.lowPriorityData(event => {
-    event.addJson('kubejs:enchanting_stats/command_block.json', {
-        "block": "kubejs:command_block",
-        "stats": {
-            "maxEterna": 900000,
-            "eterna": 900000,
-            "quanta": 0,
-            "arcana": 0
-        }
-    })
-    event.addJson('kubejs:enchanting_stats/chain_command_block.json', {
-        "block": "kubejs:chain_command_block",
-        "stats": {
-            "maxEterna": 0,
-            "eterna": 0,
-            "quanta": 900000,
-            "arcana": 0
-        }
-    })
-    event.addJson('kubejs:enchanting_stats/repeating_command_block.json', {
-        "block": "kubejs:repeating_command_block",
-        "stats": {
-            "maxEterna": 0,
-            "eterna": 0,
-            "quanta": 0,
-            "arcana": 900000
-        }
-    })
-    event.addJson('kubejs:enchanting_stats/high_entropy_alloy_block.json', {
-        "block": "kubejs:high_entropy_alloy_block",
-        "stats": {
-            "rectification": 900000
-        }
-    })
-})

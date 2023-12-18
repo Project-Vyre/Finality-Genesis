@@ -1,0 +1,9 @@
+{
+  "block": "kubejs:chain_command_block",
+  "stats": {
+      "maxEterna": 0,
+      "eterna": 0,
+      "quanta": 900000,
+      "arcana": 0
+  }
+}

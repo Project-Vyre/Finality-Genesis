@@ -1,0 +1,9 @@
+{
+  "block": "kubejs:repeating_command_block",
+  "stats": {
+      "maxEterna": 0,
+      "eterna": 0,
+      "quanta": 0,
+      "arcana": 900000
+  }
+}
