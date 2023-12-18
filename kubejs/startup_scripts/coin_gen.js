@@ -12,15 +12,18 @@
 // Note to self: Coin textures and villager / quest exchange implementation
 
 StartupEvents.registry('item', event => {
-    let coins = [
-        'copper',
-        'iron',
-        'gold',
-        'diamond',
-        'netherite',
-        'entropy',
-    ]
-    for (let index = 0; index < array.length; index++) {
-        event.create(`kubejs:${coins[index]}_coin`)
-    }
+    // figure out how to give display names hex code colors
+    event.create('kubejs:copper_coin')
+        .texture('kubejs:item/copper_coin')
+    event.create('kubejs:iron_coin')
+        .texture('kubejs:item/iron_coin')
+    event.create('kubejs:gold_coin')
+        .texture('kubejs:item/gold_coin')
+    event.create('kubejs:netherite_coin')
+        .texture('kubejs:item/netherite_coin')
+        .fireResistant(true)
+    event.create('kubejs:entropy_coin')
+        .texture('kubejs:item/entropy_coin')
+        .fireResistant(true)
+        .glow(true)
 })

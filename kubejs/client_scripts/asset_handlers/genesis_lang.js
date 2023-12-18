@@ -275,6 +275,21 @@ ClientEvents.lang('en_us', event => {
         "item.kubejs.final_boots.tooltip.condition1": "On wearing the full set",
         "item.kubejs.final_boots.tooltip.behaviour1": "Become _invulnerable_ to _all_ damage, including falling out of the world.",
     })
+    event.add('block.kubejs.la_lettre_a_focalors', 'La Lettre a Focalors')
+    event.addAll(
+        'kubejs',
+        createTooltip('kubejs:la_lettre_a_focalors')
+            .addSummary('This cake is a _work in progress_!')
+            .build()
+    )
+    event.add('block.kubejs.pour_la_justice', 'Pour la Justice')
+    event.addAll(
+        'kubejs',
+        createTooltip('kubejs:pour_la_justice')
+            .addSummary('This cake is a _work in progress_!')
+            .setPalette($Palette.BLUE)
+            .build()
+    )
     if (Platform.isLoaded('malum')) {
         event.addAll({
             'item.kubejs.final_scythe.tooltip.condition2': 'Soul Piercing',
