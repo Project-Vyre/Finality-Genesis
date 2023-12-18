@@ -250,7 +250,7 @@ ServerEvents.recipes(event => {
         S: 'ad_astra:steel_plate',
         C: 'extendedcrafting:redstone_component',
         A: 'extendedcrafting:redstone_catalyst',
-        E: 'extendedcrafting:ultimate_auto_table',
+        E: 'extendedcrafting:ultimate_table',
         N: 'extendedcrafting:enhanced_redstone_catalyst',
         B: 'minecraft:redstone_block',
         I: 'ad_astra:steel_block'

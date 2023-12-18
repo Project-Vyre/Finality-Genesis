@@ -1,5 +1,5 @@
 // requires: quark
-// requires: create
+// requires: kubejs_create
 
 /**
  * @file Server handler for Quark.
@@ -22,6 +22,10 @@ ServerEvents.recipes(event => {
     ], {
         L: '#minecraft:logs'
     }).id('quark:tweaks/crafting/utility/chests/mixed_chest_wood_but_without_exclusions')
+    event.recipes.create.compacting(
+        '3x minecraft:iron_ingot',
+        '8x quark:iron_plate'
+    ).id('finality:quark/compacting/iron_plate_revert')
     if (Platform.isLoaded('aether')) {
         event.shaped('minecraft:chest', [
             'WWW',

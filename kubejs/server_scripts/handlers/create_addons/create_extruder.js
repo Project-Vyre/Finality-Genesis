@@ -56,7 +56,7 @@ ServerEvents.recipes(event => {
     if (Platform.isLoaded('malum')) {
         event.recipes.create_mechanical_extruder.extruding(Item.of('malum:block_of_cthonic_gold').withChance(0.12), [
             Item.of('minecraft:raw_gold_block'),
-            Fluid.of('minecraft:lava')
+            Fluid.of('kubejs:condensed_universal_entropy')
         ]).requiredBonks(6).withCatalyst('malum:twisted_rock').id('finality:malum/extruder_cthonic_gold')
     }
 })

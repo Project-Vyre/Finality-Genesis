@@ -491,7 +491,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.compacting([
         'minecraft:coal_block',
         Item.of('create:experience_nugget').withChance(0.25)
-    ], 'minecraft:dried_kelp_block').heated().id('finality:compacting/renew_coal_bulk')
+    ], '9x minecraft:dried_kelp_block').heated().id('finality:compacting/renew_coal_bulk')
     event.recipes.create.compacting('minecraft:basalt', [
         'minecraft:blue_ice',
         Fluid.of('minecraft:lava', 500)
