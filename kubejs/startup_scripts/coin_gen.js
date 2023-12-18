@@ -2,7 +2,7 @@
 // requires: lootjs
 // requires: morejs
 // requires: kubejs_create
-// ignored: true
+// ignored: false
 
 /**
  * @file Handles coin item generation
