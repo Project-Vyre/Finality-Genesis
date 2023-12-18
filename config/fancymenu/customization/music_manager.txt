@@ -5,16 +5,8 @@ customization-meta {
   randomgroup = 1
   renderorder = foreground
   randommode = false
-  [loading_requirement_group:larger_than_1600_width_check] = [group_mode:or]
   requiredmods = kubejs, kubejs_create, create
-  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:larger_than_1600_width_check][req_id:d8deb547-6b05-4cd5-88b0-2a4e2e0db23f1696762799685] = 1920
-  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:larger_than_1600_width_check][req_id:ba3dd873-0da5-44ea-8d48-12a069a792c51696762917858] = 1680
   randomonlyfirsttime = false
-}
-
-customization {
-  action = setscale
-  scale = 2
 }
 
 customization {
