@@ -31,6 +31,10 @@
 			description: [
 				"Early game spell casting utilizes &escrolls&r which are consumed upon use. &l&c<shake>However</shake>&r, it is recommended to save them until you can &binscribe&r them into a &dspell book&r."
 				""
+				"When &binscribed&r within a &dspell book&r, the magic spells from the spell book can be used <rainb>infinitely</rainb> instead of being consumed after being used."
+				""
+				"Explore, collect, learn!"
+				""
 				"While this quest tree is a work in progress, utilize the guide book in the meantime."
 			]
 			hide: true
