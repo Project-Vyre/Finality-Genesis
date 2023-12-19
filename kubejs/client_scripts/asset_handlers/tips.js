@@ -1,8 +1,9 @@
-// ignored: false
+// priority: 15
 // requires: tipsmod
 // requires: textanimator
 // requires: create
 // requires: lootjs
+// ignored: false
 
 /**
  * @file Tips factory script.

@@ -1,4 +1,4 @@
-// priority: 70
+// priority: 100
 // requires: create
 // ignored: false
 
@@ -291,7 +291,7 @@ ClientEvents.lang('en_us', event => {
     //        .build()
     //)
     if (Platform.isLoaded('malum')) {
-        event.addAll({
+        event.addAll('kubejs', {
             'item.kubejs.final_scythe.tooltip.condition2': 'Soul Piercing',
             'item.kubejs.final_scythe.tooltip.behaviour2': 'Has the ability to _shatter_ souls! Use with _caution_.',
             'item.kubejs.final_katana.tooltip.condition2': 'Soul Piercing',
@@ -326,7 +326,7 @@ ClientEvents.lang('en_us', event => {
         "item.create.blaze_cake.tooltip.summary": "A delicious treat for your hard-working _Blaze Burners_. Gets them all fired up!"
     })
     if (Platform.isLoaded('roughlyenoughitems')) {
-        event.add('text.rei.recipe_id', '\n%sRecipe ID: %s')
+        event.add('roughlyenoughitems', 'text.rei.recipe_id', '\n%sRecipe ID: %s')
     }
     if (Platform.isLoaded('alexsmobs')) {
         event.addAll('alexsmobs', {
@@ -348,7 +348,8 @@ ClientEvents.lang('en_us', event => {
             "kubejs.hoglin_gate_large": "Large Hoglin Gate",
             "kubejs.boss_gate": "Apothic Boss Gate",
             "kubejs.boss_gate_large": "Large Apothic Boss Gate",
-            "kubejs.ultimatum_boss_gate": "Ultimatum Boss Gate"
+            "kubejs.ultimatum_boss_gate": "Ultimatum Boss Gate",
+            "kubejs.mutant_boss_gate_large": "Large Mutant Boss Gate"
         })
     }
     if (Platform.isLoaded('atmospheric')) {
