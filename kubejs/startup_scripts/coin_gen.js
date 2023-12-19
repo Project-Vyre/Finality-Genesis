@@ -1,7 +1,4 @@
 // requires: create
-// requires: lootjs
-// requires: morejs
-// requires: kubejs_create
 // ignored: false
 
 /**
