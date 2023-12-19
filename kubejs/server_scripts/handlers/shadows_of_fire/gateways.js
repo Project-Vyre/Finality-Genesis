@@ -97,31 +97,46 @@ ServerEvents.recipes(event => {
         D: 'apotheosis:gem_dust',
         E: 'minecraft:ender_pearl'
     }).id('finality:boss_gate_small')
-    event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:boss_gate"}'), [
-        'SDS',
-        'DED',
-        'SDS'
-    ], {
-        S: 'apotheosis:epic_material',
-        D: 'apotheosis:gem_dust',
-        E: 'minecraft:ender_eye'
-    }).id('finality:boss_gate')
-    event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:boss_gate_large"}'), [
-        'SDS',
-        'DED',
-        'SDS'
-    ], {
-        S: 'apotheosis:mythic_material',
-        D: 'apotheosis:gem_dust',
-        E: 'minecraft:nether_star'
-    }).id('finality:boss_gate_large')
-    event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:ultimatum_boss_gate"}'), [
-        'SDS',
-        'DED',
-        'SDS'
-    ], {
-        S: 'apotheosis:mythic_material',
-        D: 'minecraft:crying_obsidian',
-        E: 'minecraft:nether_star'
-    }).id('finality:ultimatum_boss_gate')
+    if (Platform.isLoaded('cataclysm') &&
+        Platform.isLoaded('aquamirae') &&
+        Platform.isLoaded('irons_spellbooks')
+    ) {
+        event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:boss_gate"}'), [
+            'SDS',
+            'DED',
+            'SDS'
+        ], {
+            S: 'apotheosis:epic_material',
+            D: 'apotheosis:gem_dust',
+            E: 'minecraft:ender_eye'
+        }).id('finality:boss_gate')
+        event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:boss_gate_large"}'), [
+            'SDS',
+            'DED',
+            'SDS'
+        ], {
+            S: 'apotheosis:mythic_material',
+            D: 'apotheosis:gem_dust',
+            E: 'minecraft:nether_star'
+        }).id('finality:boss_gate_large')
+        event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:ultimatum_boss_gate"}'), [
+            'SDS',
+            'DED',
+            'SDS'
+        ], {
+            S: 'apotheosis:mythic_material',
+            D: 'minecraft:crying_obsidian',
+            E: 'minecraft:nether_star'
+        }).id('finality:ultimatum_boss_gate')
+    }
+    if (Platform.isLoaded('mutantmonsters') && Platform.isLoaded('mutantmore')) {
+        event.recipes.create.filling(Item.of('gateways:gate_pearl', '{gateway:"kubejs:mutant_boss_gate_large"}'), [
+            'minecraft:ender_eye',
+            Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"mutantmonsters:chemical_x"}')
+        ]).id('finality:filling/mutant_boss_gate_pearl')
+    }
 })
+
+/*
+Item.of('create:fluid_tank', '{BlockEntityTag:{Boiler:{ActiveHeat:0,Engines:0,PassiveHeat:0b,Supply:0.0f,Update:0b,Whistles:0},Height:1,LastKnownPos:{X:3,Y:56,Z:307},Luminosity:0,Owner:[I;-1625681629,1160660015,-2025764060,883666804],Size:1,TankContent:{Amount:1000,FluidName:"create:potion",Tag:{Bottle:"REGULAR",Potion:"mutantmonsters:chemical_x"}},Window:1b,id:"create:fluid_tank"},display:{Lore:[\'"(+NBT)"\']}}')
+*/
