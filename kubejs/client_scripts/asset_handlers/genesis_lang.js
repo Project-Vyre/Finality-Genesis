@@ -275,6 +275,41 @@ ClientEvents.lang('en_us', event => {
         "item.kubejs.final_boots.tooltip.condition1": "On wearing the full set",
         "item.kubejs.final_boots.tooltip.behaviour1": "Become _invulnerable_ to _all_ damage, including falling out of the world.",
     })
+    event.addAll(
+        'kubejs',
+        createTooltip('kubejs:copper_coin')
+            .addSummary('The currency of _this world_.')
+            .setPalette($Palette.GRAY)
+            .build()
+    )
+    event.addAll(
+        'kubejs',
+        createTooltip('kubejs:iron_coin')
+            .addSummary('The currency of _this world_.')
+            .setPalette($Palette.GRAY_AND_WHITE)
+            .build()
+    )
+    event.addAll(
+        'kubejs',
+        createTooltip('kubejs:gold_coin')
+            .addSummary('The currency of _this world_.')
+            .setPalette($Palette.YELLOW)
+            .build()
+    )
+    event.addAll(
+        'kubejs',
+        createTooltip('kubejs:netherite_coin')
+            .addSummary('The currency of _this world_.')
+            .setPalette($Palette.GRAY_AND_RED)
+            .build()
+    )
+    event.addAll(
+        'kubejs',
+        createTooltip('kubejs:entropy_coin')
+            .addSummary('The currency of _this world_.')
+            .setPalette($Palette.PURPLE)
+            .build()
+    )
     //event.add('block.kubejs.la_lettre_a_focalors', 'La Lettre a Focalors')
     //event.addAll(
     //    'kubejs',

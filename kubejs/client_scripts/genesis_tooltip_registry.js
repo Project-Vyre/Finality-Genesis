@@ -238,8 +238,7 @@ CreateTooltipBuilder.prototype = {
      * @example $Palette.GRAY_AND_RED
      * @returns 
      */
-    setPalette: function (
-        /** @type {Internal.TooltipHelper$Palette} */ palette) {
+    setPalette: function (/** @type {Internal.TooltipHelper$Palette} */ palette) {
         this.palette = palette
         return this
     },
