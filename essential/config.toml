@@ -25,6 +25,9 @@
 		emote_perspective = 1
 		screenshotbrowseritemsperrow = 3
 		spspinnedgamerules = ""
+		coinsselectedcurrency = "USD"
+		coinspurchasecreatorcode = "__default__"
+		showemotepagekeybindbanner = true
 
 [emotes]
 
