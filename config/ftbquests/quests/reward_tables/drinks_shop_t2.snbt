@@ -1,0 +1,15 @@
+{
+	icon: "create:builders_tea"
+	id: "41DFBBA5E34F7C5D"
+	loot_size: 1
+	order_index: 18
+	rewards: [
+		{ item: "delightful:lavender_tea" }
+		{ item: "ends_delight:chorus_flower_tea" }
+		{ item: "createcafe:blueberry_milk_tea" }
+		{ item: "createcafe:pomegranate_milk_tea" }
+		{ item: "createcafe:fig_milk_tea" }
+	]
+	title: "Drinks Shop T2"
+	use_title: true
+}

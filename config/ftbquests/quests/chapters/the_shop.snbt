@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	disable_toast: true
 	filename: "the_shop"
-	group: "6855847200ADBE3A"
+	group: ""
 	hide_quest_until_deps_visible: true
 	icon: "kubejs:command_block"
 	id: "15C85C831AC7FA1A"
@@ -19,7 +19,7 @@
 		x: 0.0d
 		y: 0.0d
 	}]
-	order_index: 0
+	order_index: 1
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
@@ -27,6 +27,11 @@
 			dependencies: ["4A691BB889286C89"]
 			description: ["The shop page is in early development. Stay tuned!"]
 			id: "464C6D59436C1B33"
+			rewards: [{
+				id: "1336EE5513B7D6FB"
+				item: "create:experience_block"
+				type: "item"
+			}]
 			subtitle: "Click me."
 			tasks: [{
 				id: "4AD313EA8898920D"
@@ -225,6 +230,76 @@
 			}]
 			title: "Andesite Starter Pack Exchange"
 			x: -2.5d
+			y: -4.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "7AB0BBEC1FF068D1"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "0A945AA01B2E1F49"
+				table_id: 4746718853429427293L
+				type: "choice"
+			}]
+			subtitle: "Need drinks in exchange for iron coins?"
+			tasks: [{
+				consume_items: true
+				disable_toast: true
+				id: "10F4CF6386CBCF38"
+				item: "kubejs:iron_coin"
+				type: "item"
+			}]
+			title: "Drinks Shop (Iron)"
+			x: 2.5d
+			y: -3.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "7668713ED74C351F"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "4E4C92F04BDBA50A"
+				table_id: 8698495603632491656L
+				type: "choice"
+			}]
+			subtitle: "Need food in exchange for iron coins?"
+			tasks: [{
+				consume_items: true
+				count: 2L
+				disable_toast: true
+				id: "19CD4FE61DCB5999"
+				item: "kubejs:iron_coin"
+				type: "item"
+			}]
+			title: "Food Shop (Iron)"
+			x: 3.5d
+			y: -2.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "7223C624C7DE9C7D"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "4A072AFEE6F42563"
+				table_id: 2071744225430230389L
+				type: "choice"
+			}]
+			subtitle: "Need a toolbox?"
+			tasks: [{
+				consume_items: true
+				disable_toast: true
+				id: "3DB4DA23B6CC3AB1"
+				item: "kubejs:iron_coin"
+				type: "item"
+			}]
+			title: "Toolbox Shop"
+			x: 2.5d
 			y: -4.5d
 		}
 	]
