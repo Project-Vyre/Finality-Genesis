@@ -6,21 +6,17 @@
     },
     {
       "type": "forge:mod_loaded",
-      "modid": "mutantmonsters"
-    },
-    {
-      "type": "forge:mod_loaded",
-      "modid": "mutantmore"
+      "modid": "bosses_of_mass_destruction"
     }
   ],
   "size": "large",
-  "color": "#111111",
-  "leash_range": 256,
+  "color": "#7FD2FF",
+  "leash_range": 1024,
   "waves": [
     {
       "entities": [
         {
-          "entity": "mutantmonsters:mutant_skeleton"
+          "entity": "bosses_of_mass_destruction:void_blossom"
         }
       ],
       "modifiers": [
@@ -53,17 +49,17 @@
       "rewards": [
         {
           "type": "entity_loot",
-          "entity": "minecraft:skeleton",
+          "entity": "bosses_of_mass_destruction:void_blossom",
           "rolls": 20
         }
       ],
-      "max_wave_time": 7200,
+      "max_wave_time": 36000,
       "setup_time": 150
     },
     {
       "entities": [
         {
-          "entity": "mutantmonsters:mutant_zombie"
+          "entity": "bosses_of_mass_destruction:lich"
         }
       ],
       "modifiers": [
@@ -96,17 +92,17 @@
       "rewards": [
         {
           "type": "entity_loot",
-          "entity": "minecraft:zombie",
+          "entity": "bosses_of_mass_destruction:lich",
           "rolls": 20
         }
       ],
-      "max_wave_time": 9600,
+      "max_wave_time": 36000,
       "setup_time": 150
     },
     {
       "entities": [
         {
-          "entity": "mutantmonsters:mutant_creeper"
+          "entity": "bosses_of_mass_destruction:gauntlet"
         }
       ],
       "modifiers": [
@@ -139,17 +135,17 @@
       "rewards": [
         {
           "type": "entity_loot",
-          "entity": "minecraft:creeper",
+          "entity": "bosses_of_mass_destruction:gauntlet",
           "rolls": 20
         }
       ],
-      "max_wave_time": 7200,
+      "max_wave_time": 36000,
       "setup_time": 150
     },
     {
       "entities": [
         {
-          "entity": "mutantmonsters:mutant_enderman"
+          "entity": "bosses_of_mass_destruction:obsidilith"
         }
       ],
       "modifiers": [
@@ -182,97 +178,11 @@
       "rewards": [
         {
           "type": "entity_loot",
-          "entity": "minecraft:enderman",
+          "entity": "minecraft:shulker",
           "rolls": 20
         }
       ],
-      "max_wave_time": 9600,
-      "setup_time": 150
-    },
-    {
-      "entities": [
-        {
-          "entity": "mutantmore:mutant_wither_skeleton"
-        }
-      ],
-      "modifiers": [
-        {
-          "attribute": "generic.max_health",
-          "operation": "MULTIPLY_TOTAL",
-          "value": 70
-        },
-        {
-          "attribute": "generic.armor",
-          "operation": "ADDITION",
-          "value": 10.5
-        },
-        {
-          "attribute": "generic.attack_damage",
-          "operation": "MULTIPLY_TOTAL",
-          "value": 0.75
-        },
-        {
-          "attribute": "generic.knockback_resistance",
-          "operation": "ADDITION",
-          "value": 1
-        },
-        {
-          "attribute": "generic.movement_speed",
-          "operation": "MULTIPLY_TOTAL",
-          "value": 0.10
-        }
-      ],
-      "rewards": [
-        {
-          "type": "entity_loot",
-          "entity": "minecraft:wither_skeleton",
-          "rolls": 20
-        }
-      ],
-      "max_wave_time": 7200,
-      "setup_time": 150
-    },
-    {
-      "entities": [
-        {
-          "entity": "mutantmore:mutant_blaze"
-        }
-      ],
-      "modifiers": [
-        {
-          "attribute": "generic.max_health",
-          "operation": "MULTIPLY_TOTAL",
-          "value": 70
-        },
-        {
-          "attribute": "generic.armor",
-          "operation": "ADDITION",
-          "value": 10.5
-        },
-        {
-          "attribute": "generic.attack_damage",
-          "operation": "MULTIPLY_TOTAL",
-          "value": 0.75
-        },
-        {
-          "attribute": "generic.knockback_resistance",
-          "operation": "ADDITION",
-          "value": 1
-        },
-        {
-          "attribute": "generic.movement_speed",
-          "operation": "MULTIPLY_TOTAL",
-          "value": 0.10
-        }
-      ],
-      "rewards": [
-        {
-          "type": "entity_loot",
-          "entity": "minecraft:blaze",
-          "rolls": 20
-        }
-      ],
-      "max_wave_time": 18000,
+      "max_wave_time": 36000,
       "setup_time": 150
     }
   ],
