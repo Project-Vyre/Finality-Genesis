@@ -24,7 +24,6 @@ localconfigs/
 logs/
 mods/
 profileImage/
-resources/
 saves/
 schematics/
 screenshots/
@@ -63,3 +62,4 @@ o_prof
 config/voicechat/username-cache.json
 blacksmith.jar
 config/aether/aether_customizations.txt
+*.tar.gz
