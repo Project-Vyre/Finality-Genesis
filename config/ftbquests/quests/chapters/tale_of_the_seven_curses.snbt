@@ -6,7 +6,7 @@
 	hide_quest_details_until_startable: true
 	icon: "enigmaticlegacy:cursed_ring"
 	id: "017D0DB69CFA7AD9"
-	order_index: 6
+	order_index: 7
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [

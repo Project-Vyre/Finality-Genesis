@@ -1,0 +1,233 @@
+{
+	default_hide_dependency_lines: true
+	default_quest_shape: "rsquare"
+	disable_toast: true
+	filename: "the_shop"
+	group: "6855847200ADBE3A"
+	hide_quest_until_deps_visible: true
+	icon: "kubejs:command_block"
+	id: "15C85C831AC7FA1A"
+	images: [{
+		click: ""
+		corner: false
+		dev: false
+		height: 64.0d
+		hover: [ ]
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
+	order_index: 0
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: ["The shop page is in early development. Stay tuned!"]
+			id: "464C6D59436C1B33"
+			subtitle: "Click me."
+			tasks: [{
+				id: "4AD313EA8898920D"
+				title: "Click me to unlock the shop!"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "6125CD812662B22A"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "0443826F9DFE5134"
+				table_id: 6978865987231553331L
+				type: "choice"
+			}]
+			subtitle: "Need food?"
+			tasks: [{
+				consume_items: true
+				count: 8L
+				disable_toast: true
+				id: "34DAE683DC73C80E"
+				item: "kubejs:copper_coin"
+				type: "item"
+			}]
+			title: "Food Shop (Copper)"
+			x: -3.5d
+			y: -2.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "4C1F4A695F9BBFF8"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "2AE85BA86E044D57"
+				table_id: 5839215924496777821L
+				type: "choice"
+			}]
+			subtitle: "Need drinks in exchange for copper coins?"
+			tasks: [{
+				consume_items: true
+				count: 8L
+				disable_toast: true
+				id: "2771EF97E438D16B"
+				item: "kubejs:copper_coin"
+				type: "item"
+			}]
+			title: "Drinks Shop (Copper)"
+			x: -2.5d
+			y: -3.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "287A537B379E1C44"
+			rewards: [{
+				id: "00213BD34B33C2A7"
+				item: "kubejs:iron_coin"
+				type: "item"
+			}]
+			size: 2.0d
+			subtitle: "Convert your copper coins to iron coins here!"
+			tasks: [{
+				consume_items: true
+				count: 64L
+				disable_toast: true
+				id: "0BA1540FA5867EDE"
+				item: "kubejs:copper_coin"
+				type: "item"
+			}]
+			title: "Copper to Iron Exchange"
+			x: -4.0d
+			y: -4.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "35437AB80C8CA1B5"
+			rewards: [{
+				id: "408E5C817B512DF9"
+				item: "kubejs:gold_coin"
+				type: "item"
+			}]
+			size: 2.0d
+			subtitle: "Convert your iron coins to gold coins here!"
+			tasks: [{
+				consume_items: true
+				count: 64L
+				disable_toast: true
+				id: "08200AB6353A46BA"
+				item: "kubejs:iron_coin"
+				type: "item"
+			}]
+			title: "Iron to Gold Exchange"
+			x: 4.0d
+			y: -4.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "5126E7214D6F789F"
+			rewards: [{
+				id: "7FB30ACCAB51D320"
+				item: "kubejs:netherite_coin"
+				type: "item"
+			}]
+			size: 2.0d
+			subtitle: "Convert your gold coins to netherite coins here!"
+			tasks: [{
+				consume_items: true
+				count: 64L
+				disable_toast: true
+				id: "628D5E97E477FE62"
+				item: "kubejs:gold_coin"
+				type: "item"
+			}]
+			title: "Gold to Netherite Exchange"
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "24074206F8BB13F4"
+			rewards: [{
+				id: "4B19176415503320"
+				item: "kubejs:entropy_coin"
+				type: "item"
+			}]
+			size: 2.0d
+			subtitle: "Convert your netherite coins to entropy coins here!"
+			tasks: [{
+				consume_items: true
+				count: 64L
+				disable_toast: true
+				id: "0D5188385C225B86"
+				item: "kubejs:netherite_coin"
+				type: "item"
+			}]
+			title: "Netherite to Entropy Exchange"
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			hide: true
+			id: "46E204F9603B8D2D"
+			rewards: [{
+				count: 64
+				id: "7B7EAC3BEB18FA07"
+				item: "kubejs:netherite_coin"
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				disable_toast: true
+				id: "46B59CAB9D70E7B2"
+				item: "kubejs:entropy_coin"
+				type: "item"
+			}]
+			title: "Entropy to Netherite Conversion"
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "69217C9CACF88D91"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "14F59F858E23037F"
+				table_id: 7477086534417165542L
+				type: "random"
+			}]
+			subtitle: "The starter lootbox..."
+			tasks: [{
+				consume_items: true
+				count: 16L
+				disable_toast: true
+				id: "2FDDFBA8C5FDDA5E"
+				item: "kubejs:copper_coin"
+				type: "item"
+			}]
+			title: "Andesite Starter Pack Exchange"
+			x: -2.5d
+			y: -4.5d
+		}
+	]
+	subtitle: ["Currency exchange for coins."]
+	title: "The Shop"
+}
