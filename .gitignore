@@ -55,8 +55,8 @@ config/roughlyenoughitems/hints.json
 config/jei/world/server/*
 enigmatic_persistence.dat
 servers.dat
-*.dat
-*.dat_old
+!config/defaultoptions/servers.dat
+servers.dat_old
 servers.essential.dat
 o_prof
 config/voicechat/username-cache.json
