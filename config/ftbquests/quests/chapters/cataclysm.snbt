@@ -481,6 +481,8 @@
 				"Once you complete this full set of armor, you can brave the freezing waters... "
 				""
 				"The question remains... where is the helmet?"
+				""
+				"If you're wondering where to find the &dIce Maze&r head to a Frozen Deep Ocean biome and look for ice with snow spirals on top of it. There's also going to be more ice than usual."
 			]
 			hide: true
 			icon: "aquamirae:ship_graveyard_echo"
@@ -496,7 +498,7 @@
 					biome: "minecraft:deep_frozen_ocean"
 					icon: "minecraft:packed_ice"
 					id: "6D3CFB6CF95E34F5"
-					title: "Suit up."
+					title: "Suit up and fine a Deep Cold Ocean biome."
 					type: "biome"
 				}
 				{

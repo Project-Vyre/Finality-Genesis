@@ -174,7 +174,13 @@
 		}
 		{
 			dependencies: ["0621698FB6DA317F"]
-			description: ["Think of the Cloud Chest as an expandable Ender Chest as it is only accessible by you."]
+			description: [
+				"Think of the Cloud Chest as an expandable Ender Chest as it is only accessible by you."
+				""
+				"If you plan on sharing storage with everyone else, then wait for a &bthunderstorm&r and get some &bstatically&r charged clouds."
+				""
+				"Once you have enough &bstatically charged&r clouds gathered craft the &bStatic Cloud Chest&r which is publicly accessible by everyone, as long as they share the same balloon color."
+			]
 			icon: "cloudstorage:cloud_chest"
 			id: "54AB904AF8AB6C07"
 			rewards: [
