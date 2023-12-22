@@ -249,6 +249,9 @@ ClientEvents.highPriorityAssets(event => {
     if (Platform.isLoaded('backpacked')) {
         finTip('backpacked', "It is recommended to make a backpack. 6 Leather, 2 String and 1 Iron Ingot is all you need.")
     }
+    if (Platform.isLoaded('betterchunkloading')) {
+        finTip('predictive_chunk_loading', 'This is more of a fun fact, but the modpack uses predictive chunk loading from Better Chunk Loading. Sorry if chunks are a bit weird on occasion.')
+    }
     if (Platform.isLoaded('bhc')) {
         finTip('bhc_wither_bones', 'Bones can be haunted into Wither Bones.')
     }
