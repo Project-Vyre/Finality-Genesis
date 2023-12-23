@@ -117,11 +117,6 @@
           "value": 10.5
         },
         {
-          "attribute": "generic.attack_damage",
-          "operation": "MULTIPLY_TOTAL",
-          "value": 0.75
-        },
-        {
           "attribute": "generic.knockback_resistance",
           "operation": "ADDITION",
           "value": 1
