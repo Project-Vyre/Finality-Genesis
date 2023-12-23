@@ -6,18 +6,36 @@
  */
 
 MoreJSEvents.villagerTrades(event => {
-    event.addTrade('minecraft:weaponsmith', 1, [
+    event.addTrade('minecraft:weaponsmith', 2, [
         'minecraft:emerald',
         'create:raw_zinc'
-    ], '2x create:zinc_ingot')
+    ], '2x create:zinc_ingot').maxUses(8)
     event.addTrade('minecraft:weaponsmith', 1, [
         'minecraft:emerald',
         'minecraft:raw_copper'
-    ], '2x minecraft:copper_ingot')
+    ], '2x minecraft:copper_ingot').maxUses(8)
     event.addTrade('minecraft:farmer', 1, [
         'create:millstone',
-        'minecraft:wheat_seeds'
-    ], 'kubejs:lemon_seed')
+        '16x minecraft:wheat_seeds'
+    ], '8x kubejs:lemon_seed').maxUses(1)
+    // coins
+    event.addTrade('minecraft:weaponsmith', 2, [
+        '3x minecraft:iron_block',
+        '4x minecraft:iron_ingot'
+    ], '2x kubejs:iron_coin').maxUses(1)
+    event.addTrade('minecraft:weaponsmith', 3, [
+        'minecraft:iron_sword'
+    ], '8x kubejs:copper_coin')
+    event.addTrade('minecraft:weaponsmith', 2, [
+        '4x create:brass_ingot'
+    ], '32x kubejs:copper_coin').maxUses(2)
+    event.addTrade('minecraft:farmer', 1, [
+        '32x kubejs:copper_coin'
+    ], '8x kubejs:lemon_seed').maxUses(1)
+    event.addTrade('minecraft:fisherman', 2, [
+        'minecraft:pufferfish'
+    ], '1x kubejs:iron_coin').maxUses(1)
+    //coinTrade(event)
 })
 
 MoreJSEvents.wandererTrades(event => {
@@ -89,12 +107,13 @@ MoreJSEvents.wandererTrades(event => {
             'grapefruit',
             'apple'
         ]
-        fruittrees_saplings.forEach(tree => {
+        for (let i = 0; i < fruittrees_saplings.length; i++) {
+            let tree = fruittrees_saplings[i];
             event.addTrade(1, [
                 '8x minecraft:bread',
                 'minecraft:emerald'
             ], `fruittrees:${tree}_sapling`)
-        })
+        }
     }
     if (Platform.isLoaded('malum')) {
         event.addTrade(1, [
@@ -109,3 +128,98 @@ MoreJSEvents.wandererTrades(event => {
         ], 'quark:glow_shroom')
     }
 })
+
+/*
+COINS CONVERSION RATE
+
+64x Copper Coins = 1x Iron Coin
+64x Iron Coins = 1x Gold Coin
+64x Gold Coins = 1x Netherite Coin
+64x Netherite Coins = 1x Entropy Coin
+*/
+
+//let trade_dice = 0
+
+/**
+ * Anti coin farming prevention.
+ * @param {event} event 
+ */
+/*
+function coinTrade(event) {
+    trade_dice = Utils.random.nextInt(0, 21)
+    switch (trade_dice) {
+        case 0:
+            event.addTrade('minecraft:weaponsmith', 2, [
+                '4x create:brass_ingot'
+            ], '32x kubejs:copper_coin').maxUses(2)
+            event.addTrade('minecraft:farmer', 1, [
+                '32x kubejs:copper_coin',
+                'minecraft:wheat_seeds'
+            ], 'create:millstone')
+            break;
+        case 1:
+            event.addTrade('minecraft:fisherman', 1, )
+            break;
+        case 2:
+            event.addTrade()
+            break;
+        case 3:
+            event.addTrade()
+            break;
+        case 4:
+            event.addTrade()
+            break;
+        case 5:
+            event.addTrade()
+            break;
+        case 6:
+            event.addTrade()
+            break;
+        case 7:
+            event.addTrade()
+            break;
+        case 8:
+            event.addTrade()
+            break;
+        case 9:
+            event.addTrade()
+            break;
+        case 10:
+            event.addTrade()
+            break;
+        case 11:
+            event.addTrade()
+            break;
+        case 12:
+            event.addTrade()
+            break;
+        case 13:
+            event.addTrade()
+            break;
+        case 14:
+            event.addTrade()
+            break;
+        case 15:
+            event.addTrade()
+            break;
+        case 16:
+            event.addTrade()
+            break;
+        case 17:
+            event.addTrade()
+            break;
+        case 18:
+            event.addTrade()
+            break;
+        case 19:
+            event.addTrade()
+            break;
+        case 20:
+            event.addTrade()
+            break;
+        default:
+            event.addTrade()
+            break;
+    }
+}
+*/

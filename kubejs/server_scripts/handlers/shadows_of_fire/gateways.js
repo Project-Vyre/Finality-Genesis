@@ -135,6 +135,20 @@ ServerEvents.recipes(event => {
             Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"mutantmonsters:chemical_x"}')
         ]).id('finality:filling/mutant_boss_gate_pearl')
     }
+    if (Platform.isLoaded('bosses_of_mass_destruction')) {
+        event.recipes.minecraft.crafting_shaped(Item.of('gateways:gate_pearl', '{gateway:"kubejs:mass_destruction_boss_gate_large"}'), [
+            'SBS',
+            'AEC',
+            'SDS'
+        ], {
+            A: 'minecraft:moss_block',
+            B: 'minecraft:bone_block',
+            C: 'minecraft:nether_bricks',
+            D: 'minecraft:crying_obsidian',
+            S: 'create:experience_block',
+            E: 'minecraft:nether_star'
+        }).id('finality:crafting/mass_destruction_boss_gate')
+    }
 })
 
 /*

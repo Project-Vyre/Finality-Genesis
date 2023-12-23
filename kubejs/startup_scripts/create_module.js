@@ -12,7 +12,7 @@ console.log('KubeJS Create loaded! Registering sequenced assembly items...')
 // let DYE_CAPS = ['WHITE','ORANGE','MAGENTA','LIGHT BLUE','LIME','PINK','PURPLE','LIGHT GRAY','GRAY','CYNA','BROWN','GREEN','BLUE','RED','BLACK','YELLOW']
 // let DISPLAY_COLOR = ['White', 'Orange', 'Magenta', 'Light Blue', 'Lime', 'Pink', 'Purple', 'Light Gray', 'Gray', 'Cyan', 'Brown', 'Green', 'Blue', 'Red', 'Black', 'Yellow']
 
-let DYE = {
+let seqDYE = {
     black: 'Black',
     gray: 'Gray',
     light_gray: 'Light Gray',
@@ -78,20 +78,20 @@ StartupEvents.registry('item', event => {
     let transitionalItem = (itemID, displayName, texturePath) => {
         event.create(`kubejs:${itemID}`, 'create:sequenced_assembly').displayName(displayName).texture(`kubejs:item/${texturePath}`)
     }
-    Object.keys(NATR).forEach(material => {
-        event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${NATR[material]} Singularity`).texture(`kubejs:item/incomplete_singularities/nature/incomplete_${material}`).maxStackSize(1)
-    })
-    Object.keys(CMAT).forEach(material => {
-        event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${CMAT[material]} Singularity`).texture(`kubejs:item/incomplete_singularities/incomplete_${material}`).maxStackSize(1)
-    })
+    for (let [material, name] of Object.entries(NATR)) {
+        event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${name} Singularity`).texture(`kubejs:item/incomplete_singularities/nature/incomplete_${material}`).maxStackSize(1)
+    }
+    for (let [material, name] of Object.entries(CMAT)) {
+        event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${name} Singularity`).texture(`kubejs:item/incomplete_singularities/incomplete_${material}`).maxStackSize(1)
+    }
     // replace with Color.DYE.forEach() on 1902+ as the Colors automatically has all 16 MC colors
-    Object.keys(DYE).forEach(color => {
-        event.create(`kubejs:incomplete_concrete_${color}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${DYE[color]} Concrete Singularity`).texture(`kubejs:item/incomplete_singularities/concrete/incomplete_concrete_${color}`).maxStackSize(1)
-    })
-    Object.keys(PRIMORDIAL_MECHANISMS).forEach(mechanism => {
-        event.create(`kubejs:${mechanism}`).displayName(`<rainb>${PRIMORDIAL_MECHANISMS[mechanism]}</rainb>`).texture(`kubejs:item/${mechanism}`).maxStackSize(64).fireResistant(true)
-        event.create(`kubejs:incomplete_${mechanism}`, 'create:sequenced_assembly').displayName(`<rainb>Incomplete ${PRIMORDIAL_MECHANISMS[mechanism]}</rainb>`).texture(`kubejs:item/incomplete_${mechanism}`)
-    })
+    for (let [color, name] of Object.entries(seqDYE)) {
+        event.create(`kubejs:incomplete_concrete_${color}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${name} Concrete Singularity`).texture(`kubejs:item/incomplete_singularities/concrete/incomplete_concrete_${color}`).maxStackSize(1)
+    }
+    for (let [mechanism, name] of Object.entries(PRIMORDIAL_MECHANISMS)) {
+        event.create(`kubejs:${mechanism}`).displayName(`<rainb>${name}</rainb>`).texture(`kubejs:item/${mechanism}`).maxStackSize(64).fireResistant(true)
+        event.create(`kubejs:incomplete_${mechanism}`, 'create:sequenced_assembly').displayName(`<rainb>Incomplete ${name}</rainb>`).texture(`kubejs:item/incomplete_${mechanism}`)
+    }
     transitionalItem('incomplete_cpu_shape', '§aIncomplete CPU Substrate Shape', 'shapes/incomplete_cpu')
     transitionalItem('incomplete_cpu_substrate_shape', '§aIncomplete CPU Substrate Shape', 'shapes/incomplete_cpu_substrate')
     event.create('kubejs:incomplete_copper_coin', 'create:sequenced_assembly')

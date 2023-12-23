@@ -29,7 +29,8 @@ ClientEvents.highPriorityAssets(event => {
     //    ]
     //    event.add('kubejs:models/item')
     //}
-    handheldModelItems.forEach(item => {
+    for (let i = 0; i < handheldModelItems.length; i++) {
+        let item = handheldModelItems[i];
         // kubejs/models/final_sword.json
         event.add(`kubejs:models/item/${item}`, {
             "parent": "item/handheld",
@@ -53,7 +54,7 @@ ClientEvents.highPriorityAssets(event => {
                 "layer0": `kubejs:item/${item}_gui`
             }
         })
-    })
+    }
     // kubejs/models/final_sword_handheld.json
     event.add('kubejs:models/item/final_sword_handheld', {
         "credit": "Made with Blockbench",

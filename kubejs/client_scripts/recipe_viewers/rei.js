@@ -442,6 +442,11 @@ REIEvents.information(event => {
         ])
     }
     if (Platform.isLoaded('aether')) {
+        event.addItem('aether:holystone', 'Renewal', [
+            'Can now be renewed using a set up similar to Basalt generation except the following:\n',
+            'The Blue Ice is replaced with a Magma block.\n',
+            'The Soul Soil is replaced with Quick Soil.'
+        ])
         event.addItem([
             'aether:obsidian_helmet',
             'aether:obsidian_chestplate',

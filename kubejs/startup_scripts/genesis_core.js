@@ -365,47 +365,47 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
      *     }
      * }
      */
-    Object.keys(global.SHAPES).forEach(shape => {
-        shapeItemGeneration(event, `uncolored_${shape}`, `§7Uncolored ${global.SHAPES[shape]}`, `uncolored_${shape}`)
-        shapeItemGeneration(event, `uncolored_left_half_${shape}`, `§7Uncolored Left Half ${global.SHAPES[shape]}`, `halves/uncolored_left_half_${shape}`)
-        shapeItemGeneration(event, `uncolored_right_half_${shape}`, `§7Uncolored Right Half ${global.SHAPES[shape]}`, `halves/uncolored_right_half_${shape}`)
-        shapeItemGeneration(event, `uncolored_${shape}_corner`, `§7Uncolored ${global.SHAPES[shape]} Corner`, `corners/uncolored_${shape}_corner`)
+    for (let [shape, name] of Object.entries(global.SHAPES)) {
+        shapeItemGeneration(event, `uncolored_${shape}`, `§7Uncolored ${name}`, `uncolored_${shape}`)
+        shapeItemGeneration(event, `uncolored_left_half_${shape}`, `§7Uncolored Left Half ${name}`, `halves/uncolored_left_half_${shape}`)
+        shapeItemGeneration(event, `uncolored_right_half_${shape}`, `§7Uncolored Right Half ${name}`, `halves/uncolored_right_half_${shape}`)
+        shapeItemGeneration(event, `uncolored_${shape}_corner`, `§7Uncolored ${name} Corner`, `corners/uncolored_${shape}_corner`)
         // red
-        shapeItemGeneration(event, `red_${shape}`, `§l§cRed ${global.SHAPES[shape]}`, `red_${shape}`)
-        shapeItemGeneration(event, `red_left_half_${shape}`, `§cRed Left Half ${global.SHAPES[shape]}`, `halves/red_left_half_${shape}`)
-        shapeItemGeneration(event, `red_right_half_${shape}`, `§cRed Right Half ${global.SHAPES[shape]}`, `halves/red_right_half_${shape}`)
-        shapeItemGeneration(event, `red_${shape}_corner`, `§cRed ${global.SHAPES[shape]} Corner`, `corners/red_${shape}_corner`)
+        shapeItemGeneration(event, `red_${shape}`, `§l§cRed ${name}`, `red_${shape}`)
+        shapeItemGeneration(event, `red_left_half_${shape}`, `§cRed Left Half ${name}`, `halves/red_left_half_${shape}`)
+        shapeItemGeneration(event, `red_right_half_${shape}`, `§cRed Right Half ${name}`, `halves/red_right_half_${shape}`)
+        shapeItemGeneration(event, `red_${shape}_corner`, `§cRed ${name} Corner`, `corners/red_${shape}_corner`)
         // green
-        shapeItemGeneration(event, `green_${shape}`, `§aGreen ${global.SHAPES[shape]}`, `green_${shape}`)
-        shapeItemGeneration(event, `green_left_half_${shape}`, `§aGreen Left Half ${global.SHAPES[shape]}`, `halves/green_left_half_${shape}`)
-        shapeItemGeneration(event, `green_right_half_${shape}`, `§aGreen Right Half ${global.SHAPES[shape]}`, `halves/green_right_half_${shape}`)
-        shapeItemGeneration(event, `green_${shape}_corner`, `§aGreen ${global.SHAPES[shape]} Corner`, `corners/green_${shape}_corner`)
+        shapeItemGeneration(event, `green_${shape}`, `§aGreen ${name}`, `green_${shape}`)
+        shapeItemGeneration(event, `green_left_half_${shape}`, `§aGreen Left Half ${name}`, `halves/green_left_half_${shape}`)
+        shapeItemGeneration(event, `green_right_half_${shape}`, `§aGreen Right Half ${name}`, `halves/green_right_half_${shape}`)
+        shapeItemGeneration(event, `green_${shape}_corner`, `§aGreen ${name} Corner`, `corners/green_${shape}_corner`)
         // blue
-        shapeItemGeneration(event, `blue_${shape}`, `§9Blue ${global.SHAPES[shape]}`, `blue_${shape}`)
-        shapeItemGeneration(event, `blue_left_half_${shape}`, `§9Blue Left Half ${global.SHAPES[shape]}`, `halves/blue_left_half_${shape}`)
-        shapeItemGeneration(event, `blue_right_half_${shape}`, `§9Blue Right Half ${global.SHAPES[shape]}`, `halves/blue_right_half_${shape}`)
-        shapeItemGeneration(event, `blue_${shape}_corner`, `§9Blue ${global.SHAPES[shape]} Corner`, `corners/blue_${shape}_corner`)
+        shapeItemGeneration(event, `blue_${shape}`, `§9Blue ${name}`, `blue_${shape}`)
+        shapeItemGeneration(event, `blue_left_half_${shape}`, `§9Blue Left Half ${name}`, `halves/blue_left_half_${shape}`)
+        shapeItemGeneration(event, `blue_right_half_${shape}`, `§9Blue Right Half ${name}`, `halves/blue_right_half_${shape}`)
+        shapeItemGeneration(event, `blue_${shape}_corner`, `§9Blue ${name} Corner`, `corners/blue_${shape}_corner`)
         // cyan
-        shapeItemGeneration(event, `cyan_${shape}`, `§bCyan ${global.SHAPES[shape]}`, `cyan_${shape}`)
-        shapeItemGeneration(event, `cyan_left_half_${shape}`, `§bCyan Left Half ${global.SHAPES[shape]}`, `halves/cyan_left_half_${shape}`)
-        shapeItemGeneration(event, `cyan_right_half_${shape}`, `§bCyan Right Half ${global.SHAPES[shape]}`, `halves/cyan_right_half_${shape}`)
-        shapeItemGeneration(event, `cyan_${shape}_corner`, `§bCyan ${global.SHAPES[shape]} Corner`, `corners/cyan_${shape}_corner`)
+        shapeItemGeneration(event, `cyan_${shape}`, `§bCyan ${name}`, `cyan_${shape}`)
+        shapeItemGeneration(event, `cyan_left_half_${shape}`, `§bCyan Left Half ${name}`, `halves/cyan_left_half_${shape}`)
+        shapeItemGeneration(event, `cyan_right_half_${shape}`, `§bCyan Right Half ${name}`, `halves/cyan_right_half_${shape}`)
+        shapeItemGeneration(event, `cyan_${shape}_corner`, `§bCyan ${name} Corner`, `corners/cyan_${shape}_corner`)
         // magenta
-        shapeItemGeneration(event, `magenta_${shape}`, `§dMagenta ${global.SHAPES[shape]}`, `magenta_${shape}`)
-        shapeItemGeneration(event, `magenta_left_half_${shape}`, `§dMagenta Left Half ${global.SHAPES[shape]}`, `halves/magenta_left_half_${shape}`)
-        shapeItemGeneration(event, `magenta_right_half_${shape}`, `§dMagenta Right Half ${global.SHAPES[shape]}`, `halves/magenta_right_half_${shape}`)
-        shapeItemGeneration(event, `magenta_${shape}_corner`, `§dMagenta ${global.SHAPES[shape]} Corner`, `corners/magenta_${shape}_corner`)
+        shapeItemGeneration(event, `magenta_${shape}`, `§dMagenta ${name}`, `magenta_${shape}`)
+        shapeItemGeneration(event, `magenta_left_half_${shape}`, `§dMagenta Left Half ${name}`, `halves/magenta_left_half_${shape}`)
+        shapeItemGeneration(event, `magenta_right_half_${shape}`, `§dMagenta Right Half ${name}`, `halves/magenta_right_half_${shape}`)
+        shapeItemGeneration(event, `magenta_${shape}_corner`, `§dMagenta ${name} Corner`, `corners/magenta_${shape}_corner`)
         // yellow
-        shapeItemGeneration(event, `yellow_${shape}`, `§eYellow ${global.SHAPES[shape]}`, `yellow_${shape}`)
-        shapeItemGeneration(event, `yellow_left_half_${shape}`, `§eYellow Left Half ${global.SHAPES[shape]}`, `halves/yellow_left_half_${shape}`)
-        shapeItemGeneration(event, `yellow_right_half_${shape}`, `§eYellow Right Half ${global.SHAPES[shape]}`, `halves/yellow_right_half_${shape}`)
-        shapeItemGeneration(event, `yellow_${shape}_corner`, `§eYellow ${global.SHAPES[shape]} Corner`, `corners/yellow_${shape}_corner`)
+        shapeItemGeneration(event, `yellow_${shape}`, `§eYellow ${name}`, `yellow_${shape}`)
+        shapeItemGeneration(event, `yellow_left_half_${shape}`, `§eYellow Left Half ${name}`, `halves/yellow_left_half_${shape}`)
+        shapeItemGeneration(event, `yellow_right_half_${shape}`, `§eYellow Right Half ${name}`, `halves/yellow_right_half_${shape}`)
+        shapeItemGeneration(event, `yellow_${shape}_corner`, `§eYellow ${name} Corner`, `corners/yellow_${shape}_corner`)
         // white
-        shapeItemGeneration(event, `white_${shape}`, `§lWhite ${global.SHAPES[shape]}`, `white_${shape}`)
-        shapeItemGeneration(event, `white_left_half_${shape}`, `§lWhite Left Half ${global.SHAPES[shape]}`, `halves/white_left_half_${shape}`)
-        shapeItemGeneration(event, `white_right_half_${shape}`, `§lWhite Right Half ${global.SHAPES[shape]}`, `halves/white_right_half_${shape}`)
-        shapeItemGeneration(event, `white_${shape}_corner`, `§lWhite ${global.SHAPES[shape]} Corner`, `corners/white_${shape}_corner`)
-    })
+        shapeItemGeneration(event, `white_${shape}`, `§lWhite ${name}`, `white_${shape}`)
+        shapeItemGeneration(event, `white_left_half_${shape}`, `§lWhite Left Half ${name}`, `halves/white_left_half_${shape}`)
+        shapeItemGeneration(event, `white_right_half_${shape}`, `§lWhite Right Half ${name}`, `halves/white_right_half_${shape}`)
+        shapeItemGeneration(event, `white_${shape}_corner`, `§lWhite ${name} Corner`, `corners/white_${shape}_corner`)
+    }
     FireResistantItem(event, 'blueprint_shape_base', '§9Blueprint Shape Base', 'shapes/blueprint_shape_base')
     FireResistantItem(event, 'blueprint_shape', '§9Blueprint Shape', 'shapes/blueprint_shape')
     FireResistantItem(event, 'cpu_foundation', '§aCPU Shape Foundation', 'shapes/cpu_foundation')
@@ -413,22 +413,22 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     FireResistantItem(event, 'cpu_shape', '§aCPU Shape', 'shapes/cpu_shape')
     FireResistantItem(event, 'emitter_shape_base', '§dEmitter Shape Base', 'shapes/emitter_shape_base')
     FireResistantItem(event, 'emitter_shape', '§dEmitter Shape', 'shapes/emitter_shape')
-    Object.keys(LETTERS).forEach(character => {
+    for (let [character, name] of Object.entries(LETTERS)) {
         event.create(`kubejs:letter_${character}`)
-            .displayName(`<rainb>Letter ${LETTERS[character]}</rainb>`)
+            .displayName(`<rainb>Letter ${name}</rainb>`)
             .texture(`kubejs:item/alphanumeric_characters/letter_${character}`)
             .maxStackSize(64)
             .fireResistant(true)
             .glow(true)
-    })
-    Object.keys(INTEGERS).forEach(number => {
+    }
+    for (let [number, name] of Object.entries(INTEGERS)) {
         event.create(`kubejs:${number}`)
-            .displayName(`<rainb>Number ${INTEGERS[number]}</rainb>`)
+            .displayName(`<rainb>Number ${name}</rainb>`)
             .texture(`kubejs:item/alphanumeric_characters/${number}`)
             .maxStackSize(64)
             .fireResistant(true)
             .glow(true)
-    })
+    }
     event.create('kubejs:octothorpe')
         .displayName('<rainb>Hashtag</rainb>')
         .texture('kubejs:item/national_characters/octothorpe')
@@ -447,9 +447,9 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .maxStackSize(64)
         .fireResistant(true)
         .glow(true)
-    Object.keys(global.RGBWCMY).forEach(item => {
-        RGBWCMYK_OBJECTS(event, item, global.RGBWCMY[item])
-    })
+    for (let [item, name] of Object.entries(global.RGBWCMY)) {
+        RGBWCMYK_OBJECTS(event, item, name)
+    }
     if (Platform.isLoaded('delightful')) {
         event.create('kubejs:dried_matcha_leaves')
             .displayName('Dried Matcha Leaves')
@@ -476,9 +476,9 @@ StartupEvents.registry('block', event => {
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('forge:needs_netherite_tool')
         .tagBlock('create:wrench_pickup')
-    Object.keys(CMD).forEach(insert => {
+    for (let [insert, name] of Object.entries(CMD)) {
         event.create(`kubejs:${insert}`)
-            .displayName(`<rainb>${CMD[insert]}</rainb>`)
+            .displayName(`<rainb>${name}</rainb>`)
             .textureAll(`kubejs:block/${insert}`)
             .soundType('netherite_block')
             .hardness(500)
@@ -498,10 +498,10 @@ StartupEvents.registry('block', event => {
                     entity.inventory.insertItem('minecraft:netherite_block', false)
                 })
             })
-    })
-    Object.keys(STONE_COMPACTING_INCEPTION).forEach(insert => {
+    }
+    for (let [insert, name] of Object.entries(STONE_COMPACTING_INCEPTION)) {
         event.create(`kubejs:compressed_${insert}`)
-            .displayName(`Compressed ${STONE_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`Compressed ${name}`)
             .textureAll(`kubejs:block/compression/compressed_${insert}`)
             .soundType('stone')
             .hardness(25)
@@ -509,7 +509,7 @@ StartupEvents.registry('block', event => {
             .requiresTool(true)
             .tagBlock('minecraft:mineable/pickaxe')
         event.create(`kubejs:double_compressed_${insert}`)
-            .displayName(`<shake>Double Compressed</shake> ${STONE_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`<shake>Double Compressed</shake> ${name}`)
             .textureAll(`kubejs:block/compression/double_compressed_${insert}`)
             .soundType('stone')
             .hardness(50)
@@ -517,17 +517,17 @@ StartupEvents.registry('block', event => {
             .requiresTool(true)
             .tagBlock('minecraft:mineable/pickaxe')
         event.create(`kubejs:triple_compressed_${insert}`)
-            .displayName(`<shake>Triple Compressed</shake> ${STONE_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`<shake>Triple Compressed</shake> ${name}`)
             .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
             .soundType('stone')
             .hardness(75)
             .resistance(1000)
             .requiresTool(true)
             .tagBlock('minecraft:mineable/pickaxe')
-    })
-    Object.keys(DEEPSLATE_COMPACTING_INCEPTION).forEach(insert => {
+    }
+    for (let [insert, name] of Object.entries(DEEPSLATE_COMPACTING_INCEPTION)) {
         event.create(`kubejs:compressed_${insert}`)
-            .displayName(`Compressed ${DEEPSLATE_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`Compressed ${name}`)
             .textureAll(`kubejs:block/compression/compressed_${insert}`)
             .soundType('deepslate')
             .hardness(25)
@@ -535,7 +535,7 @@ StartupEvents.registry('block', event => {
             .requiresTool(true)
             .tagBlock('minecraft:mineable/pickaxe')
         event.create(`kubejs:double_compressed_${insert}`)
-            .displayName(`<shake>Double Compressed</shake> ${DEEPSLATE_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`<shake>Double Compressed</shake> ${name}`)
             .textureAll(`kubejs:block/compression/double_compressed_${insert}`)
             .soundType('deepslate')
             .hardness(50)
@@ -543,17 +543,17 @@ StartupEvents.registry('block', event => {
             .requiresTool(true)
             .tagBlock('minecraft:mineable/pickaxe')
         event.create(`kubejs:triple_compressed_${insert}`)
-            .displayName(`<shake>Triple Compressed</shake> ${DEEPSLATE_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`<shake>Triple Compressed</shake> ${name}`)
             .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
             .soundType('deepslate')
             .hardness(75)
             .resistance(1000)
             .requiresTool(true)
             .tagBlock('minecraft:mineable/pickaxe')
-    })
-    Object.keys(GRAVEL_COMPACTING_INCEPTION).forEach(insert => {
+    }
+    for (let [insert, name] of Object.entries(GRAVEL_COMPACTING_INCEPTION)) {
         event.create(`kubejs:compressed_${insert}`)
-            .displayName(`Compressed ${GRAVEL_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`Compressed ${name}`)
             .textureAll(`kubejs:block/compression/compressed_${insert}`)
             .soundType('gravel')
             .hardness(25)
@@ -561,7 +561,7 @@ StartupEvents.registry('block', event => {
             .requiresTool(true)
             .tagBlock('minecraft:mineable/shovel')
         event.create(`kubejs:double_compressed_${insert}`)
-            .displayName(`<shake>Double Compressed</shake> ${GRAVEL_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`<shake>Double Compressed</shake> ${name}`)
             .textureAll(`kubejs:block/compression/double_compressed_${insert}`)
             .soundType('gravel')
             .hardness(50)
@@ -569,17 +569,17 @@ StartupEvents.registry('block', event => {
             .requiresTool(true)
             .tagBlock('minecraft:mineable/shovel')
         event.create(`kubejs:triple_compressed_${insert}`)
-            .displayName(`<shake>Triple Compressed</shake> ${GRAVEL_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`<shake>Triple Compressed</shake> ${name}`)
             .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
             .soundType('gravel')
             .hardness(75)
             .resistance(1000)
             .requiresTool(true)
             .tagBlock('minecraft:mineable/shovel')
-    })
-    Object.keys(SAND_COMPACTING_INCEPTION).forEach(insert => {
+    }
+    for (let [insert, name] of Object.entries(SAND_COMPACTING_INCEPTION)) {
         event.create(`kubejs:compressed_${insert}`)
-            .displayName(`Compressed ${SAND_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`Compressed ${name}`)
             .textureAll(`kubejs:block/compression/compressed_${insert}`)
             .soundType('sand')
             .hardness(25)
@@ -587,7 +587,7 @@ StartupEvents.registry('block', event => {
             .requiresTool(true)
             .tagBlock('minecraft:mineable/shovel')
         event.create(`kubejs:double_compressed_${insert}`)
-            .displayName(`<shake>Double Compressed</shake> ${SAND_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`<shake>Double Compressed</shake> ${name}`)
             .textureAll(`kubejs:block/compression/double_compressed_${insert}`)
             .soundType('sand')
             .hardness(50)
@@ -595,17 +595,17 @@ StartupEvents.registry('block', event => {
             .requiresTool(true)
             .tagBlock('minecraft:mineable/shovel')
         event.create(`kubejs:triple_compressed_${insert}`)
-            .displayName(`<shake>Triple Compressed</shake> ${SAND_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`<shake>Triple Compressed</shake> ${name}`)
             .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
             .soundType('sand')
             .hardness(75)
             .resistance(1000)
             .requiresTool(true)
             .tagBlock('minecraft:mineable/shovel')
-    })
-    Object.keys(RED_SAND_COMPACTING_INCEPTION).forEach(insert => {
+    }
+    for (let [insert, name] of Object.entries(RED_SAND_COMPACTING_INCEPTION)) {
         event.create(`kubejs:compressed_${insert}`)
-            .displayName(`Compressed ${RED_SAND_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`Compressed ${name}`)
             .textureAll(`kubejs:block/compression/compressed_${insert}`)
             .soundType('sand')
             .hardness(25)
@@ -613,7 +613,7 @@ StartupEvents.registry('block', event => {
             .requiresTool(true)
             .tagBlock('minecraft:mineable/shovel')
         event.create(`kubejs:double_compressed_${insert}`)
-            .displayName(`<shake>Double Compressed</shake> ${RED_SAND_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`<shake>Double Compressed</shake> ${name}`)
             .textureAll(`kubejs:block/compression/double_compressed_${insert}`)
             .soundType('sand')
             .hardness(50)
@@ -621,14 +621,14 @@ StartupEvents.registry('block', event => {
             .requiresTool(true)
             .tagBlock('minecraft:mineable/shovel')
         event.create(`kubejs:triple_compressed_${insert}`)
-            .displayName(`<shake>Triple Compressed</shake> ${RED_SAND_COMPACTING_INCEPTION[insert]}`)
+            .displayName(`<shake>Triple Compressed</shake> ${name}`)
             .textureAll(`kubejs:block/compression/triple_compressed_${insert}`)
             .soundType('sand')
             .hardness(75)
             .resistance(1000)
             .requiresTool(true)
             .tagBlock('minecraft:mineable/shovel')
-    })
+    }
     event.create('kubejs:null_storage_block')
         .textureAll('kubejs:block/null_storage')
         .defaultCutout()
@@ -781,7 +781,8 @@ ItemEvents.modification(event => {
         if (!Platform.isLoaded('apotheosis')) { item.attackSpeed = 6 }
         if (Platform.isLoaded('apotheosis')) { item.attackSpeed = -1.5 }
     })
-    TOOLS.forEach(tool => {
+    for (let i = 0; i < TOOLS.length; i++) {
+        let tool = TOOLS[i];
         event.modify(`minecraft:wooden_${tool}`, item => {
             item.maxDamage = 16
         })
@@ -797,7 +798,7 @@ ItemEvents.modification(event => {
         event.modify(`minecraft:netherite_${tool}`, item => {
             item.maxDamage = 4096
         })
-    })
+    }
     event.modify('minecraft:shears', item => {
         item.maxDamage = 256
     })
@@ -813,7 +814,8 @@ ItemEvents.modification(event => {
         })
     }
     // Armor durability is synchronized because it does not make sense as to why armor pieces have different durabilities.
-    ARMOR.forEach(armor => {
+    for (let i = 0; i < ARMOR.length; i++) {
+        let armor = ARMOR[i];
         event.modify(`minecraft:leather_${armor}`, item => {
             item.maxDamage = 128
         })
@@ -829,15 +831,16 @@ ItemEvents.modification(event => {
         event.modify(`minecraft:netherite_${armor}`, item => {
             item.maxDamage = 2048
         })
-    })
-    DIVING.forEach(armor => {
+    }
+    for (let i = 0; i < DIVING.length; i++) {
+        let armor = DIVING[i];
         event.modify(`create:copper_${armor}`, item => {
             item.maxDamage = 128
         })
         event.modify(`create:netherite_${armor}`, item => {
             item.maxDamage = 2048
         })
-    })
+    }
     event.modify('create:super_glue', item => {
         item.maxDamage = 128
     })
@@ -855,14 +858,15 @@ ItemEvents.modification(event => {
         item.maxDamage = 4096
     })
     if (Platform.isLoaded('aether')) {
-        TOOLS.forEach(tool => {
+        for (let i = 0; i < TOOLS.length; i++) {
+            let tool = TOOLS[i];
             event.modify(`aether:zanite_${tool}`, item => {
                 item.maxDamage = 256
             })
             event.modify(`aether:gravitite_${tool}`, item => {
                 item.maxDamage = 2048
             })
-        })
+        }
         event.modify('aether:valkyrie_pickaxe', item => {
             item.maxDamage = -1
         })
@@ -902,7 +906,8 @@ ItemEvents.modification(event => {
         event.modify('aether:phoenix_bow', item => {
             item.maxDamage = -1
         })
-        ARMOR.forEach(armor => {
+        for (let i = 0; i < ARMOR.length; i++) {
+            let armor = ARMOR[i];
             event.modify(`aether:zanite_${armor}`, item => {
                 item.maxDamage = 256
             })
@@ -921,7 +926,7 @@ ItemEvents.modification(event => {
             event.modify(`aether:obsidian_${armor}`, item => {
                 item.maxDamage = 2048
             })
-        })
+        }
         event.modify('aether:sentry_boots', item => {
             item.maxDamage = -1
         })
@@ -931,18 +936,20 @@ ItemEvents.modification(event => {
     }
 
     if (Platform.isLoaded('aquamirae')) {
-        LEGENDARY.forEach(insert => {
+        for (let i = 0; i < LEGENDARY.length; i++) {
+            let insert = LEGENDARY[i];
             event.modify(`aquamirae:${insert}`, item => {
                 item.maxDamage = -1
                 item.fireResistant = true
             })
-        })
-        ABYSS_ARMOR.forEach(insert => {
+        }
+        for (let i = 0; i < ABYSS_ARMOR.length; i++) {
+            let insert = ABYSS_ARMOR[i];
             event.modify(`aquamirae:abyssal_${insert}`, item => {
                 item.maxDamage = -1
                 item.fireResistant = true
             })
-        })
+        }
         event.modify('aquamirae:abyssal_tiara', item => {
             item.maxDamage = -1
             item.fireResistant = true
@@ -955,12 +962,13 @@ ItemEvents.modification(event => {
             item.maxDamage = -1
             item.fireResistant = true
         })
-        ARMOR.forEach(insert => {
+        for (let i = 0; i < ARMOR.length; i++) {
+            let insert = ARMOR[i];
             event.modify(`aquamirae:three_bolt_${insert}`, item => {
                 item.maxDamage = -1
                 item.fireResistant = true
             })
-        })
+        }
     }
 
     if (Platform.isLoaded('bhc')) {
@@ -971,18 +979,20 @@ ItemEvents.modification(event => {
     }
 
     if (Platform.isLoaded('enigmaticlegacy')) {
-        EL_TOOLS.forEach(insert => {
+        for (let i = 0; i < EL_TOOLS.length; i++) {
+            let insert = EL_TOOLS[i];
             event.modify(`enigmaticlegacy:etherium_${insert}`, item => {
                 item.maxDamage = -1
                 item.fireResistant = true
             })
-        })
-        ARMOR.forEach(insert => {
+        }
+        for (let i = 0; i < ARMOR.length; i++) {
+            let insert = ARMOR[i];
             event.modify(`enigmaticlegacy:etherium${insert}`, item => {
                 item.maxDamage = -1
                 item.fireResistant = true
             })
-        })
+        }
         event.modify('enigmaticlegacy:astral_breaker', item => {
             item.maxDamage = -1
             item.fireResistant = true
@@ -1005,12 +1015,13 @@ ItemEvents.modification(event => {
             'weapon_book_nature',
             'weapon_book_wither'
         ]
-        weaponBooks.forEach(book => {
+        for (let i = 0; i < weaponBooks.length; i++) {
+            let book = weaponBooks[i];
             event.modify(`grimoireofgaia:${book}`, item => {
                 item.maxDamage = 1024
                 item.fireResistant = true
             })
-        })
+        }
     }
 
     if (Platform.isLoaded('lilwings')) {
@@ -1053,7 +1064,6 @@ let blacklist = {
     mekanism: 'Might as well not play Create at all as Mekanism overshadows it.',
     optifine: 'Why are you using OptiFine? Do you want to see rainbows of glitched graphics or a repeat of #forge-bugs in the Create server?',
     immersiveengineering: 'Not supported in this variant of the modpack.',
-    ftbultimine: 'Too OP and not configurable enough to balance it.',
     unusualend: 'MCreator mod.',
     hammerlib: 'Not supported by KubeJS.',
     solarflux: 'Not supported by KubeJS, requires HammerLib',
@@ -1064,9 +1074,9 @@ let blacklist = {
 }
 
 StartupEvents.postInit(event => {
-    Object.keys(blacklist).forEach(mod => {
-        Platform.isLoaded(mod) && console.error(`This mod is not supported: ${mod} - Reason: ${blacklist[mod]}`)
-    })
+    for (let [mod, reason] of Object.entries(blacklist)) {
+        Platform.isLoaded(mod) && console.error(`This mod is not supported: ${mod} - Reason: ${reason}`)
+    }
     if (!Platform.isLoaded('embeddium') && Platform.isLoaded('rubidium')) {
         console.error('This mod is not supported: rubidium - Reason: Embeddium has replaced Rubidium. <shake>Stop using Rubidium.</shake>')
     }

@@ -34,7 +34,8 @@ ServerEvents.recipes(event => {
 })
 
 ServerEvents.tags('block', event => {
-    WOOD_TYPES.forEach(wood => {
+    for (let i = 0; i < WOOD_TYPES.length; i++) {
+        let wood = WOOD_TYPES[i];
         event.add('create:wrench_pickup', `backpacked:${wood}_backpack_shelf`)
-    })
+    }
 })

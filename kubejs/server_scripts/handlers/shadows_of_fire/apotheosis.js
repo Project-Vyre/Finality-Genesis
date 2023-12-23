@@ -51,113 +51,117 @@ let END_GEMS = [
 
 ServerEvents.recipes(event => {
     for (let i = 0; i < COREGEMS.length; i++) {
+        let gem = COREGEMS[i];
         event.recipes.create.milling([
             'apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust').withChance(0.25)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:core/${COREGEMS[i]}",rarity:"common"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_core_common_${COREGEMS[i]}_gem_crushing`)
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:core/${gem}",rarity:"common"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_core_common_${gem}_gem_crushing`)
         event.recipes.create.milling([
             'apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 2).withChance(0.25)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:core/${COREGEMS[i]}",rarity:"uncommon"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_core_uncommon_${COREGEMS[i]}_gem_crushing`)
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:core/${gem}",rarity:"uncommon"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_core_uncommon_${gem}_gem_crushing`)
         event.recipes.create.milling([
             '2x apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 2).withChance(0.30)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:core/${COREGEMS[i]}",rarity:"rare"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_core_rare_${COREGEMS[i]}_gem_crushing`)
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:core/${gem}",rarity:"rare"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_core_rare_${gem}_gem_crushing`)
         event.recipes.create.milling([
             '2x apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 3).withChance(0.40)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:core/${COREGEMS[i]}",rarity:"epic"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_core_epic_${COREGEMS[i]}_gem_crushing`)
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:core/${gem}",rarity:"epic"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_core_epic_${gem}_gem_crushing`)
         event.recipes.create.milling([
             '3x apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 3).withChance(0.50)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:core/${COREGEMS[i]}",rarity:"mythic"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_core_mythic_${COREGEMS[i]}_gem_crushing`)
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:core/${gem}",rarity:"mythic"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_core_mythic_${gem}_gem_crushing`)
         event.recipes.create.milling([
             '4x apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 6).withChance(0.55)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:core/${COREGEMS[i]}",rarity:"ancient"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_core_ancient_${COREGEMS[i]}_gem_crushing`)
-        event.recipes.create.deploying(Item.of('apotheosis:gem', `{gem:"apotheosis:core/${COREGEMS[i]}",rarity:"ancient"}`).weakNBT(), [
-            Item.of('apotheosis:gem', `{gem:"apotheosis:core/${COREGEMS[i]}",rarity:"mythic"}`).weakNBT(),
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:core/${gem}",rarity:"ancient"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_core_ancient_${gem}_gem_crushing`)
+        event.recipes.create.deploying(Item.of('apotheosis:gem', `{gem:"apotheosis:core/${gem}",rarity:"ancient"}`).weakNBT(), [
+            Item.of('apotheosis:gem', `{gem:"apotheosis:core/${gem}",rarity:"mythic"}`).weakNBT(),
             'kubejs:command_block'
-        ]).keepHeldItem().id(`finality:ancient_${COREGEMS[i]}_upgrade`)
+        ]).keepHeldItem().id(`finality:ancient_${gem}_upgrade`)
     }
     for (let i = 0; i < OVERWORLD_GEMS.length; i++) {
+        let gem = OVERWORLD_GEMS[i];
         event.recipes.create.milling([
             '2x apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 2).withChance(0.30)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:overworld/${OVERWORLD_GEMS[i]}",rarity:"rare"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_overworld_rare_${OVERWORLD_GEMS[i]}_gem_crushing`)
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:overworld/${gem}",rarity:"rare"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_overworld_rare_${gem}_gem_crushing`)
         event.recipes.create.milling([
             '2x apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 3).withChance(0.40)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:overworld/${OVERWORLD_GEMS[i]}",rarity:"epic"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_overworld_epic_${OVERWORLD_GEMS[i]}_gem_crushing`)
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:overworld/${gem}",rarity:"epic"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_overworld_epic_${gem}_gem_crushing`)
         event.recipes.create.milling([
             '3x apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 3).withChance(0.50)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:overworld/${OVERWORLD_GEMS[i]}",rarity:"mythic"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_overworld_mythic_${OVERWORLD_GEMS[i]}_gem_crushing`)
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:overworld/${gem}",rarity:"mythic"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_overworld_mythic_${gem}_gem_crushing`)
         event.recipes.create.milling([
             '4x apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 6).withChance(0.55)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:overworld/${OVERWORLD_GEMS[i]}",rarity:"ancient"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_overworld_ancient_${OVERWORLD_GEMS[i]}_gem_crushing`)
-        event.recipes.create.deploying(Item.of('apotheosis:gem', `{gem:"apotheosis:overworld/${OVERWORLD_GEMS[i]}",rarity:"ancient"}`).weakNBT(), [
-            Item.of('apotheosis:gem', `{gem:"apotheosis:overworld/${OVERWORLD_GEMS[i]}",rarity:"mythic"}`).weakNBT(),
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:overworld/${gem}",rarity:"ancient"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_overworld_ancient_${gem}_gem_crushing`)
+        event.recipes.create.deploying(Item.of('apotheosis:gem', `{gem:"apotheosis:overworld/${gem}",rarity:"ancient"}`).weakNBT(), [
+            Item.of('apotheosis:gem', `{gem:"apotheosis:overworld/${gem}",rarity:"mythic"}`).weakNBT(),
             'kubejs:command_block'
-        ]).keepHeldItem().id(`finality:ancient_${OVERWORLD_GEMS[i]}_upgrade`)
+        ]).keepHeldItem().id(`finality:ancient_${gem}_upgrade`)
     }
     for (let i = 0; i < NETHER_GEMS.length; i++) {
+        let gem = NETHER_GEMS[i];
         event.recipes.create.milling([
             '2x apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 2).withChance(0.30)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:the_nether/${NETHER_GEMS[i]}",rarity:"rare"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_nether_rare_${NETHER_GEMS[i]}_gem_crushing`)
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:the_nether/${gem}",rarity:"rare"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_nether_rare_${gem}_gem_crushing`)
         event.recipes.create.milling([
             '2x apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 3).withChance(0.40)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:the_nether/${NETHER_GEMS[i]}",rarity:"epic"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_nether_epic_${NETHER_GEMS[i]}_gem_crushing`)
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:the_nether/${gem}",rarity:"epic"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_nether_epic_${gem}_gem_crushing`)
         event.recipes.create.milling([
             '3x apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 3).withChance(0.50)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:the_nether/${NETHER_GEMS[i]}",rarity:"mythic"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_nether_mythic_${NETHER_GEMS[i]}_gem_crushing`)
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:the_nether/${gem}",rarity:"mythic"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_nether_mythic_${gem}_gem_crushing`)
         event.recipes.create.milling([
             '4x apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 6).withChance(0.55)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:the_nether/${NETHER_GEMS[i]}",rarity:"ancient"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_nether_ancient_${NETHER_GEMS[i]}_gem_crushing`)
-        event.recipes.create.deploying(Item.of('apotheosis:gem', `{gem:"apotheosis:the_nether/${NETHER_GEMS[i]}",rarity:"ancient"}`).weakNBT(), [
-            Item.of('apotheosis:gem', `{gem:"apotheosis:the_nether/${NETHER_GEMS[i]}",rarity:"mythic"}`).weakNBT(),
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:the_nether/${gem}",rarity:"ancient"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_nether_ancient_${gem}_gem_crushing`)
+        event.recipes.create.deploying(Item.of('apotheosis:gem', `{gem:"apotheosis:the_nether/${gem}",rarity:"ancient"}`).weakNBT(), [
+            Item.of('apotheosis:gem', `{gem:"apotheosis:the_nether/${gem}",rarity:"mythic"}`).weakNBT(),
             'kubejs:command_block'
-        ]).keepHeldItem().id(`finality:ancient_${NETHER_GEMS[i]}_upgrade`)
+        ]).keepHeldItem().id(`finality:ancient_${gem}_upgrade`)
     }
     for (let i = 0; i < END_GEMS.length; i++) {
+        let gem = END_GEMS[i];
         event.recipes.create.milling([
             '2x apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 3).withChance(0.40)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:the_end/${END_GEMS[i]}",rarity:"epic"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_end_epic_${END_GEMS[i]}_gem_crushing`)
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:the_end/${gem}",rarity:"epic"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_end_epic_${gem}_gem_crushing`)
         event.recipes.create.milling([
             '3x apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 3).withChance(0.50)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:the_end/${END_GEMS[i]}",rarity:"mythic"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_end_mythic_${END_GEMS[i]}_gem_crushing`)
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:the_end/${gem}",rarity:"mythic"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_end_mythic_${gem}_gem_crushing`)
         event.recipes.create.milling([
             '4x apotheosis:gem_dust',
             Item.of('apotheosis:gem_dust', 6).withChance(0.55)
-        ], Item.of('apotheosis:gem', `{gem:"apotheosis:the_end/${END_GEMS[i]}",rarity:"ancient"}`).weakNBT()
-        ).processingTime(150).id(`finality:apotheosis_end_ancient_${END_GEMS[i]}_gem_crushing`)
-        event.recipes.create.deploying(Item.of('apotheosis:gem', `{gem:"apotheosis:the_end/${END_GEMS[i]}",rarity:"ancient"}`).weakNBT(), [
-            Item.of('apotheosis:gem', `{gem:"apotheosis:the_end/${END_GEMS[i]}",rarity:"mythic"}`).weakNBT(),
+        ], Item.of('apotheosis:gem', `{gem:"apotheosis:the_end/${gem}",rarity:"ancient"}`).weakNBT()
+        ).processingTime(150).id(`finality:apotheosis_end_ancient_${gem}_gem_crushing`)
+        event.recipes.create.deploying(Item.of('apotheosis:gem', `{gem:"apotheosis:the_end/${gem}",rarity:"ancient"}`).weakNBT(), [
+            Item.of('apotheosis:gem', `{gem:"apotheosis:the_end/${gem}",rarity:"mythic"}`).weakNBT(),
             'kubejs:command_block'
-        ]).keepHeldItem().id(`finality:ancient_${END_GEMS[i]}_upgrade`)
+        ]).keepHeldItem().id(`finality:ancient_${gem}_upgrade`)
     }
     event.shaped('6x minecraft:arrow', [
         'F',

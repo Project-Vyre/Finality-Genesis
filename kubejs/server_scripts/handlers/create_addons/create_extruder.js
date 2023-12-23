@@ -6,7 +6,7 @@
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
-let ORESTONES = {
+let orestones = {
     asurine: 'create:raw_zinc_block',
     crimsite: 'minecraft:raw_iron_block',
     ochrum: 'minecraft:raw_gold_block',
@@ -23,16 +23,16 @@ ServerEvents.recipes(event => {
         G: '#forge:glass',
         P: 'create:mechanical_press'
     }).id('create_mechanical_extruder:mechanical_extruder')
-    Object.keys(ORESTONES).forEach(material => {
+    for (let [material, raw] of Object.entries(orestones)) {
         event.recipes.create_mechanical_extruder.extruding(Item.of(`create:${material}`, 64), [
-            Item.of(`${ORESTONES[material]}`),
+            Item.of(raw),
             Fluid.of('kubejs:condensed_universal_entropy')
         ]).requiredBonks(1).withCatalyst('kubejs:repeating_command_block').requiredBonks(1).id(`finality:repeating_command_block/${material}`)
         event.recipes.create_mechanical_extruder.extruding(Item.of(`create:${material}`).withChance(0.75), [
-            Item.of(`${ORESTONES[material]}`),
+            Item.of(raw),
             Fluid.of('kubejs:condensed_universal_entropy')
         ]).requiredBonks(5).withCatalyst('minecraft:crying_obsidian').id(`finality:renew_extruder_${material}_with_crying_obsidian`)
-    })
+    }
     event.recipes.create_mechanical_extruder.extruding(Item.of('create:limestone'), [
         Fluid.of('create:honey'),
         Fluid.of('minecraft:lava')

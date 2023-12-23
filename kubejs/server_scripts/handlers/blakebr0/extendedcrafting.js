@@ -187,16 +187,15 @@ ServerEvents.recipes(event => {
         event.recipes.create.deploying(['kubejs:incomplete_andesite_alloy_singularity'], ['kubejs:incomplete_andesite_alloy_singularity', 'create:andesite_alloy_block']),
         event.recipes.create.pressing(['kubejs:incomplete_andesite_alloy_singularity'], ['kubejs:incomplete_andesite_alloy_singularity'])
     ]).transitionalItem('kubejs:incomplete_andesite_alloy_singularity').loops(256).id('finality:sequenced_assembly/andesite_alloy_singularity')
-
-    CREATEVALUED.forEach(valued => {
+    for (let i = 0; i < CREATEVALUED.length; i++) {
+        let valued = CREATEVALUED[i];
         event.recipes.create.sequenced_assembly([
             Item.of('extendedcrafting:singularity', `{Id:"extendedcrafting:${valued}"}`)
         ], 'kubejs:awakened_singularity_core', [
             event.recipes.create.deploying([`kubejs:incomplete_${valued}_singularity`], [`kubejs:incomplete_${valued}_singularity`, `create:${valued}_block`]),
             event.recipes.create.pressing([`kubejs:incomplete_${valued}_singularity`], [`kubejs:incomplete_${valued}_singularity`])
         ]).transitionalItem(`kubejs:incomplete_${valued}_singularity`).loops(256).id(`finality:sequenced_assembly/${valued}_singularity`)
-    })
-
+    }
     event.recipes.create.sequenced_assembly([
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:train_track"}'),
     ], 'kubejs:awakened_singularity_core', [
@@ -225,15 +224,18 @@ ServerEvents.recipes(event => {
         event.recipes.create.pressing('kubejs:incomplete_coarse_dirt_singularity', 'kubejs:incomplete_coarse_dirt_singularity')
     ]).transitionalItem('kubejs:incomplete_coarse_dirt_singularity').loops(16).id('finality:sequenced_assembly/coarse_dirt_singularity')
 
-    SAND.forEach(insert => event.recipes.create.sequenced_assembly([
-        Item.of('extendedcrafting:singularity', `{Id:"extendedcrafting:${insert}"}`)
-    ], 'kubejs:awakened_singularity_core', [
-        event.recipes.create.deploying(`kubejs:incomplete_${insert}_singularity`, [`kubejs:incomplete_${insert}_singularity`, `minecraft:${insert}`]),
-        event.recipes.create.pressing(`kubejs:incomplete_${insert}_singularity`, `kubejs:incomplete_${insert}_singularity`),
-        event.recipes.create.pressing(`kubejs:incomplete_${insert}_singularity`, `kubejs:incomplete_${insert}_singularity`),
-        event.recipes.create.pressing(`kubejs:incomplete_${insert}_singularity`, `kubejs:incomplete_${insert}_singularity`),
-        event.recipes.create.pressing(`kubejs:incomplete_${insert}_singularity`, `kubejs:incomplete_${insert}_singularity`)
-    ]).transitionalItem(`kubejs:incomplete_${insert}_singularity`).loops(16).id(`finality:sequenced_assembly/${insert}_singularity`))
+    for (let i = 0; i < SAND.length; i++) {
+        let insert = SAND[i];
+        event.recipes.create.sequenced_assembly([
+            Item.of('extendedcrafting:singularity', `{Id:"extendedcrafting:${insert}"}`)
+        ], 'kubejs:awakened_singularity_core', [
+            event.recipes.create.deploying(`kubejs:incomplete_${insert}_singularity`, [`kubejs:incomplete_${insert}_singularity`, `minecraft:${insert}`]),
+            event.recipes.create.pressing(`kubejs:incomplete_${insert}_singularity`, `kubejs:incomplete_${insert}_singularity`),
+            event.recipes.create.pressing(`kubejs:incomplete_${insert}_singularity`, `kubejs:incomplete_${insert}_singularity`),
+            event.recipes.create.pressing(`kubejs:incomplete_${insert}_singularity`, `kubejs:incomplete_${insert}_singularity`),
+            event.recipes.create.pressing(`kubejs:incomplete_${insert}_singularity`, `kubejs:incomplete_${insert}_singularity`)
+        ]).transitionalItem(`kubejs:incomplete_${insert}_singularity`).loops(16).id(`finality:sequenced_assembly/${insert}_singularity`)
+    }
 
     event.recipes.create.sequenced_assembly([
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:soul_sand"}')
@@ -344,15 +346,18 @@ ServerEvents.recipes(event => {
     ]).transitionalItem('kubejs:incomplete_end_crystal_singularity').loops(9).id('finality:sequenced_assembly/end_crystal_singularity')
 
     // concrete singularities
-    COLOR.forEach(color => event.recipes.create.sequenced_assembly([
-        Item.of('extendedcrafting:singularity', `{Id:"extendedcrafting:concrete_${color}"}`)
-    ], `minecraft:${color}_concrete`, [
-        event.recipes.create.deploying(`kubejs:incomplete_concrete_${color}_singularity`, [`kubejs:incomplete_concrete_${color}_singularity`, `minecraft:${color}_concrete_powder`]),
-        event.recipes.create.filling(`kubejs:incomplete_concrete_${color}_singularity`, [`kubejs:incomplete_concrete_${color}_singularity`, Fluid.of('minecraft:water', 500)]),
-        event.recipes.create.pressing(`kubejs:incomplete_concrete_${color}_singularity`, `kubejs:incomplete_concrete_${color}_singularity`),
-        event.recipes.create.pressing(`kubejs:incomplete_concrete_${color}_singularity`, `kubejs:incomplete_concrete_${color}_singularity`),
-        event.recipes.create.pressing(`kubejs:incomplete_concrete_${color}_singularity`, `kubejs:incomplete_concrete_${color}_singularity`)
-    ]).transitionalItem(`kubejs:incomplete_concrete_${color}_singularity`).loops(128).id(`finality:sequenced_assembly/${color}_concrete_singularity`))
+    for (let i = 0; i < COLOR.length; i++) {
+        let color = COLOR[i];
+        event.recipes.create.sequenced_assembly([
+            Item.of('extendedcrafting:singularity', `{Id:"extendedcrafting:concrete_${color}"}`)
+        ], `minecraft:${color}_concrete`, [
+            event.recipes.create.deploying(`kubejs:incomplete_concrete_${color}_singularity`, [`kubejs:incomplete_concrete_${color}_singularity`, `minecraft:${color}_concrete_powder`]),
+            event.recipes.create.filling(`kubejs:incomplete_concrete_${color}_singularity`, [`kubejs:incomplete_concrete_${color}_singularity`, Fluid.of('minecraft:water', 500)]),
+            event.recipes.create.pressing(`kubejs:incomplete_concrete_${color}_singularity`, `kubejs:incomplete_concrete_${color}_singularity`),
+            event.recipes.create.pressing(`kubejs:incomplete_concrete_${color}_singularity`, `kubejs:incomplete_concrete_${color}_singularity`),
+            event.recipes.create.pressing(`kubejs:incomplete_concrete_${color}_singularity`, `kubejs:incomplete_concrete_${color}_singularity`)
+        ]).transitionalItem(`kubejs:incomplete_concrete_${color}_singularity`).loops(128).id(`finality:sequenced_assembly/${color}_concrete_singularity`)
+    }
 
     // mechanical crafting singularities
     event.recipes.create.mechanical_crafting(Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:coal"}'), [
@@ -386,7 +391,8 @@ ServerEvents.recipes(event => {
         O: 'minecraft:lapis_block'
     }).id('finality:mechanical_crafting/lapis_singularity')
 
-    VANILLAMATS.forEach(vanilla => {
+    for (let i = 0; i < VANILLAMATS.length; i++) {
+        let vanilla = VANILLAMATS[i];
         event.recipes.create.mechanical_crafting(Item.of('extendedcrafting:singularity', `{Id:"extendedcrafting:${vanilla}"}`), [
             ' LLLLLLL ',
             'LLLOOOLLL',
@@ -402,9 +408,11 @@ ServerEvents.recipes(event => {
             C: 'kubejs:awakened_singularity_core',
             O: `minecraft:${vanilla}_block`
         }).id(`finality:mechanical_crafting/${vanilla}_singularity`)
-    })
+    }
 
-    VANILLANOTSTANDARD.forEach(insert => {
+    let vnonstan = VANILLANOTSTANDARD.length;
+    for (let i = 0; i < vnonstan; i++) {
+        let insert = VANILLANOTSTANDARD[i];
         event.recipes.create.mechanical_crafting(Item.of('extendedcrafting:singularity', `{Id:"extendedcrafting:${insert}"}`), [
             ' LLLLLLL ',
             'LLLOOOLLL',
@@ -420,9 +428,13 @@ ServerEvents.recipes(event => {
             C: 'kubejs:awakened_singularity_core',
             O: `minecraft:${insert}`
         }).id(`finality:mechanical_crafting/${insert}_singularity`)
-    })
+    }
 
-    CREATEITEMS.forEach(insert => {
+    let x = 0, l = CREATEITEMS.length;
+    let insert;
+    while (x < l) {
+        insert = CREATEITEMS[x];
+        ++x;
         event.recipes.create.mechanical_crafting(Item.of('extendedcrafting:singularity', `{Id:"extendedcrafting:${insert}"}`), [
             ' LLLLLLL ',
             'LLLRRRLLL',
@@ -438,7 +450,7 @@ ServerEvents.recipes(event => {
             C: 'kubejs:awakened_singularity_core',
             R: `create:${insert}`
         }).id(`finality:mechanical_crafting/${insert}singularity`)
-    })
+    }
 
     event.recipes.create.mechanical_crafting('kubejs:command_block', [
         'IIGIIGII',
@@ -571,6 +583,34 @@ ServerEvents.recipes(event => {
         event.recipes.create.pressing('kubejs:incomplete_ascendant_mechanism', 'kubejs:incomplete_ascendant_mechanism')
     ]).transitionalItem('kubejs:incomplete_ascendant_mechanism').loops(5).id('finality:sequenced_assembly/ascendant_mechanism_creation')
 
+    /*
+    let RNG1 = 0
+    let RNG2 = 0
+    let RNG3 = 0
+    let RNG4 = 0
+    let RNG5 = 0
+    enRI1 = [
+        'create:sequenced_gearshift',
+    ]
+    enRI2 = [
+        'extendedcrafting:crystaltine_nugget'
+    ]
+    enRI3 = [
+        'kubejs:cpu_shape'
+    ]
+    enRI4 = [
+        'kubejs:blueprint_shape'
+    ]
+    enRI5 = [
+        []
+    ]
+    RNG1 = Utils.random.nextInt(0, enRI1.length - 1)
+    RNG2 = Utils.random.nextInt(0, enRI2.length - 1)
+    RNG3 = Utils.random.nextInt(0, enRI3.length - 1)
+    RNG4 = Utils.random.nextInt(0, enRI4.length - 1)
+    RNG5 = Utils.random.nextInt(0, enRI5.length - 1)
+    event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', enRI1[RNG1]])
+    */
     event.recipes.create.sequenced_assembly([
         Item.of('kubejs:entropy_mechanism').withChance(110.0),
         Item.of('minecraft:structure_void').withChance(50.0),
@@ -648,7 +688,7 @@ ServerEvents.recipes(event => {
 })
 
 ServerEvents.loaded(event => {
-    event.server.scheduleInTicks(720, t => {
+    event.server.scheduleInTicks(1200, t => {
         event.server.tell([
             Component.of('-----------------------------------------------------\n').darkAqua(),
             Component.of('System: ').bold().green(),

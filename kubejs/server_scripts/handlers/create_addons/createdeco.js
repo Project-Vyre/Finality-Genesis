@@ -63,6 +63,9 @@ ServerEvents.recipes(event => {
     event.recipes.create.mixing(Fluid.of('kubejs:molten_netherite', 40), [
         'createdeco:netherite_coinstack'
     ]).superheated().id('finality:createdeco/netherite_coinstack_melting')
+    event.recipes.create.mixing(Fluid.of('kubejs:molten_iron', 90), 'createdeco:cast_iron_sheet')
+        .heated()
+        .id('finality:createdeco/basin/cast_iron_sheet_melting')
 })
 
 let cdeco_lamp_colors = [
@@ -103,11 +106,12 @@ ServerEvents.tags('block', event => {
         'createdeco:zinc_bars_overlay'
     ])
     for (let index = 0; index < cdeco_lamp_mats.length; index++) {
+        let mat = cdeco_lamp_mats[index];
         event.add('create:wrench_pickup', [
-            `createdeco:yellow_${cdeco_lamp_mats[index]}_lamp`,
-            `createdeco:red_${cdeco_lamp_mats[index]}_lamp`,
-            `createdeco:green_${cdeco_lamp_mats[index]}_lamp`,
-            `createdeco:blue_${cdeco_lamp_mats[index]}_lamp`
+            `createdeco:yellow_${mat}_lamp`,
+            `createdeco:red_${mat}_lamp`,
+            `createdeco:green_${mat}_lamp`,
+            `createdeco:blue_${mat}_lamp`
         ])
     }
 })

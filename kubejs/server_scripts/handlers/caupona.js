@@ -25,7 +25,8 @@ ServerEvents.tags('item', event => {
 })
 
 ServerEvents.recipes(event => {
-    panMaterials.forEach(material => {
+    for (let i = 0; i < panMaterials.length; i++) {
+        let material = panMaterials[i];
         event.shaped(`caupona:${material}_frying_pan`, [
             'MM ',
             'MMS'
@@ -33,7 +34,7 @@ ServerEvents.recipes(event => {
             M: `create:${material}_sheet`,
             S: 'minecraft:stick'
         }).id(`caupona:crafting/${material}_frying_pan`)
-    })
+    }
     // implement yeast and fermentation process
     event.recipes.create.mixing(Fluid.of('kubejs:fig_vinegar', 250), [
         '2x minecraft:sugar',

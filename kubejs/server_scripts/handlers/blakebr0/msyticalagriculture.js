@@ -655,9 +655,10 @@ ServerEvents.recipes(event => {
     ]).id('finality:mysticalagriculture/mixing/honey_agglomeratio')
 
     // seed reprocessing via millstone
-    SEED_PROCESSING_ELIGIBLE.forEach(element => {
+    for (let i = 0; i < SEED_PROCESSING_ELIGIBLE.length; i++) {
+        let element = SEED_PROCESSING_ELIGIBLE[i];
         seedMillstoneReprocessing(element, element)
-    })
+    }
 
     if (Platform.isLoaded('ad_astra')) {
         event.recipes.create.milling([
@@ -722,13 +723,14 @@ ServerEvents.recipes(event => {
         ],
         result: Item.of('mysticalagriculture:flight_augment').toJson()
     }).id('mysticalagriculture:augment/flight')
-    iumTiers.forEach(tier => {
+    for (let i = 0; i < iumTiers.length; i++) {
+        let tier = iumTiers[i];
         event.replaceOutput(
             { output: `mysticalagriculture:${tier}_reprocessor` },
             `mysticalagriculture:${tier}_reprocessor`,
             'kubejs:removed_item'
         )
-    })
+    }
 
     /**
      * Inferium Materials
@@ -804,7 +806,8 @@ ServerEvents.recipes(event => {
     heatedEssenceCompacting([
         'create:brass_ingot'
     ], [
-        '9x mysticalagriculture:brass_essence'
+        '9x mysticalagriculture:brass_essence',
+        Fluid.of('kubejs:infusion_energy', 1000)
     ], 'brass_ingot')
 
     if (Platform.isLoaded('ad_astra')) {
@@ -817,7 +820,8 @@ ServerEvents.recipes(event => {
 
     // superheated essence compacting
     superheatedEssenceCompacting([
-        'minecraft:diamond'
+        'minecraft:diamond',
+        Item.of('create:experience_nugget').withChance(0.05)
     ], [
         '9x mysticalagriculture:diamond_essence',
         Fluid.of('kubejs:infusion_energy', 1000)
@@ -825,7 +829,8 @@ ServerEvents.recipes(event => {
 
     superheatedEssenceCompacting([
         'minecraft:netherite_ingot',
-        Item.of('minecraft:netherite_scrap').withChance(0.10)
+        Item.of('minecraft:netherite_scrap').withChance(0.10),
+        Item.of('create:experience_nugget').withChance(0.05)
     ], [
         '9x mysticalagriculture:netherite_essence',
         Fluid.of('kubejs:infusion_energy', 1000)

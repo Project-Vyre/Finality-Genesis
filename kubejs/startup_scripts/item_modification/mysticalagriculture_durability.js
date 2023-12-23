@@ -16,7 +16,8 @@ let TERTIUM_ARMOR = 2048
 let IMPERIUM_ARMOR = 4096
 
 ItemEvents.modification(event => {
-    TOOLS.forEach(instool => {
+    for (let i = 0; i < TOOLS.length; i++) {
+        let instool = TOOLS[i];
         event.modify(`mysticalagriculture:inferium_${instool}`, item => {
             item.maxDamage = INFERIUM_TOOLS
         })
@@ -29,8 +30,9 @@ ItemEvents.modification(event => {
         event.modify(`mysticalagriculture:imperium_${instool}`, item => {
             item.maxDamage = IMPERIUM_TOOLS
         })
-    })
-    ARMOR.forEach(insarmor => {
+    }
+    for (let i = 0; i < ARMOR.length; i++) {
+        let insarmor = ARMOR[i];
         event.modify(`mysticalagriculture:inferium_${insarmor}`, item => {
             item.maxDamage = INFERIUM_ARMOR
         })
@@ -49,5 +51,5 @@ ItemEvents.modification(event => {
         event.modify(`mysticalagriculture:awakened_supremium_${insarmor}`, item => {
             item.maxDamage = -1
         })
-    })
+    }
 })

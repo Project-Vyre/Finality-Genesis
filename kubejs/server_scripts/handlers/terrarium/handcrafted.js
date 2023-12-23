@@ -21,7 +21,8 @@ ServerEvents.recipes(event => {
         { id: 'create:saw_crimson_board' },
         { id: 'create:saw_warped_boards' }
     ])
-    WOOD_TYPES.forEach(insert => {
+    for (let i = 0; i < WOOD_TYPES.length; i++) {
+        let insert = WOOD_TYPES[i];
         event.recipes.create.cutting(`4x handcrafted:${insert}_board`, `minecraft:${insert}_planks`).processingTime(150).id(`handcrafted:saw_${insert}_boards`)
         event.shaped(`handcrafted:${insert}_counter`, [
             'CCC',
@@ -67,5 +68,5 @@ ServerEvents.recipes(event => {
             B: `handcrafted:${insert}_board`,
             H: '#forge:chests/wooden'
         }).id(`handcrafted:${insert}_nightstand`)
-    })
+    }
 })

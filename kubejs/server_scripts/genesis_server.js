@@ -117,7 +117,9 @@ let INTEGER_BINARY = {
 }
 
 ServerEvents.recipes(event => {
-    FOUNDATION_NONMETAL.forEach(insert => { // why can you even smelt and blast these ores? YOU LITERALLY LOSE SO MUCH!
+    for (let i = 0; i < FOUNDATION_NONMETAL.length; i++) {
+        // why can you even smelt and blast these ores? YOU LITERALLY LOSE SO MUCH!
+        let insert = FOUNDATION_NONMETAL[i];
         event.remove([
             {
                 type: 'minecraft:smelting',
@@ -128,10 +130,12 @@ ServerEvents.recipes(event => {
                 output: `minecraft:${insert}`
             }
         ])
-    })
-    CURSEDRECIPES.forEach(insert => { // removing cursed recipes pt2
+    }
+    for (let i = 0; i < CURSEDRECIPES.length; i++) {
+        // removing cursed recipes pt2
+        let insert = CURSEDRECIPES[i];
         event.remove({ id: `minecraft:${insert}` })
-    })
+    }
     let BINARYCONVERSION = (output, arrangement) => {
         event.recipes.create.mechanical_crafting(`kubejs:${output}`, [
             arrangement
@@ -397,18 +401,20 @@ ServerEvents.recipes(event => {
         'minecraft:bowl',
         Fluid.of('kubejs:mushroom_stew', 250)
     ]).id('finality:mushroom_stew_pouring')
-    STONEPLATES.forEach(stone => {
+    for (let i = 0; i < STONEPLATES.length; i++) {
+        let stone = STONEPLATES[i];
         event.recipes.create.cutting([
             `minecraft:${stone}_pressure_plate`,
             `minecraft:${stone}_slab`
         ], `${stone}`).processingTime(50).id(`finality:${stone}_pressure_plate`)
-    })
-    WOOD_TYPES.forEach(wood => {
+    }
+    for (let i = 0; i < WOOD_TYPES.length; i++) {
+        let wood = WOOD_TYPES[i];
         event.recipes.create.cutting([
             `minecraft:${wood}_pressure_plate`,
             `minecraft:${wood}_slab`
         ], `${wood}_planks`).processingTime(50).id(`finality:${wood}_pressure_plate`)
-    })
+    }
     event.shaped('minecraft:light_weighted_pressure_plate', [
         'G',
         'R'
@@ -472,7 +478,7 @@ ServerEvents.recipes(event => {
     ], 'minecraft:wet_sponge').id('finality:compacting/sponge_squeezing')
     event.recipes.create.compacting([
         'minecraft:diamond',
-        Item.of('create:experience_nugget').withChance(0.05)
+        Item.of('create:experience_nugget').withChance(0.25)
     ], [
         'minecraft:coal_block',
         Fluid.of('minecraft:lava', 250)
@@ -486,7 +492,7 @@ ServerEvents.recipes(event => {
     ]).superheated().id('finality:compacting/renew_diamond_bulk')
     event.recipes.create.compacting([
         'minecraft:coal',
-        Item.of('create:experience_nugget').withChance(0.05)
+        Item.of('create:experience_nugget').withChance(0.25)
     ], 'minecraft:dried_kelp_block').heated().id('finality:compacting/renew_coal')
     event.recipes.create.compacting([
         'minecraft:coal_block',
@@ -609,6 +615,7 @@ ServerEvents.recipes(event => {
      * Notice: Automatically added by Create!
      */
     event.recipes.minecraft.blasting('create:zinc_block', 'create:raw_zinc_block').id('finality:blasting/raw_zinc_block')
+    event.recipes.minecraft.blasting('minecraft:skeleton_skull', 'minecraft:zombie_head').id('finality:blasting/zombie_head_flesh_burning')
     /**
      * Mixing
      * 
@@ -658,12 +665,12 @@ ServerEvents.recipes(event => {
         zinc: 'create:zinc_block',
         brass: 'create:brass_block'
     }
-    Object.keys(ingot_melting_eligible).forEach(type => {
-        ingotMeltingHeated(type, ingot_melting_eligible[type])
-    })
-    Object.keys(block_melting_eligible).forEach(type => {
-        blockMeltingHeated(type, block_melting_eligible[type])
-    })
+    for (let [type, sheet] of Object.entries(ingot_melting_eligible)) {
+        ingotMeltingHeated(type, sheet)
+    }
+    for (let [type, block] of Object.entries(block_melting_eligible)) {
+        blockMeltingHeated(type, block)
+    }
     event.recipes.create.mixing(
         Fluid.of('kubejs:molten_netherite', 90),
         'kubejs:netherite_sheet'
@@ -718,6 +725,21 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly('minecraft:dripstone_block', 'minecraft:stone', [
         event.recipes.create.filling('kubejs:dripstone_transitional_stone', ['kubejs:dripstone_transitional_stone', Fluid.of('minecraft:water', 25)])
     ]).transitionalItem('kubejs:dripstone_transitional_stone').loops(7).id('finality:sequenced_assembly/dripstone_block')
+    /**
+     * 
+     * @param {OutputItem[]} outputs 
+     * @param {Internal.ItemStack} input 
+     * @param {string} transitional 
+     * @param {string} recipeId 
+     */
+    /*
+    let coinCreation = (outputs, input, transitional, recipeId) => {
+        event.recipes.create.sequenced_assembly([outputs], input, [
+            event.recipes.create.deploying(transitional, [transitional, 'minecraft:emerald_block']),
+            event.recipes.create.deploying(transitional, [transitional, 'create:experience_nugget'])
+        ]).transitionalItem(transitional).loops(9).id(`finality:sequenced_assembly/${recipeId}`)
+    }
+    */
     if (Platform.isLoaded('farmersdelight')) {
         console.log("Farmer's Delight detected, correcting to recipes to 1:1 ratio.")
         event.shapeless('create:dough', [
@@ -857,7 +879,8 @@ ServerEvents.recipes(event => {
         '#forge:stripped_logs',
         'create:shadow_steel'
     ]).id('create:shadow_steel_casing')
-    STORAGE_INCEPTION.forEach(insert => {
+    for (let i = 0; i < STORAGE_INCEPTION.length; i++) {
+        let insert = STORAGE_INCEPTION[i];
         event.shaped(`kubejs:compressed_${insert}`, [
             'BBB',
             'BBB',
@@ -882,7 +905,7 @@ ServerEvents.recipes(event => {
         event.shapeless(`9x kubejs:double_compressed_${insert}`, `kubejs:triple_compressed_${insert}`).id(`finality:triple_compressed_${insert}_decompression`)
         event.shapeless(`9x kubejs:compressed_${insert}`, `kubejs:double_compressed_${insert}`).id(`finality:double_compressed_${insert}_decompression`)
         event.shapeless(`9x minecraft:${insert}`, `kubejs:compressed_${insert}`).id(`finality:compressed_${insert}_decompression`)
-    })
+    }
     event.shaped('minecraft:netherite_ingot', [
         'NNN',
         'NNN',
@@ -903,7 +926,8 @@ ServerEvents.recipes(event => {
         V: 'minecraft:structure_void',
         S: 'minecraft:soul_campfire'
     }).id('finality:spawner')
-    CMD.forEach(insert => {
+    for (let i = 0; i < CMD.length; i++) {
+        let insert = CMD[i];
         event.recipes.create.deploying([
             'kubejs:zero',
             'kubejs:one',
@@ -919,7 +943,7 @@ ServerEvents.recipes(event => {
             `kubejs:${insert}`,
             'kubejs:final_hoe'
         ]).keepHeldItem().id(`finality:structure_void_from_${insert}`)
-    })
+    }
     event.recipes.create.deploying([
         'kubejs:command_block',
         'kubejs:uncolored_rectangle'
@@ -963,17 +987,17 @@ ServerEvents.recipes(event => {
     COLOR_MIXING('magenta', 'red', 'blue')
     COLOR_MIXING('yellow', 'red', 'green')
     COLOR_MIXING('cyan', 'green', 'blue')
-    Object.keys(LETTER_BINARY_CODES).forEach(insert => {
-        BINARYCONVERSION(`${insert}`, `${LETTER_BINARY_CODES[insert]}`)
-    })
-    Object.keys(INTEGER_BINARY).forEach(insert => {
-        BINARYCONVERSION(`${insert}`, `${INTEGER_BINARY[insert]}`)
-    })
+    for (const [letter, binary] of Object.entries(LETTER_BINARY_CODES)) {
+        BINARYCONVERSION(`${letter}`, `${binary}`)
+    }
+    for (const [integer, binary] of Object.entries(INTEGER_BINARY)) {
+        BINARYCONVERSION(`${integer}`, `${binary}`)
+    }
     BINARYCONVERSION('octothorpe', '00100011')
     BINARYCONVERSION('slash', '00101111')
     BINARYCONVERSION('at_sign', '01000000')
-    Object.keys(global.SHAPES).forEach(shape => {
-        VALID_COLOR_MIX.forEach(color => {
+    for (let [shape, string] of Object.entries(global.SHAPES)) {
+        for (let color of VALID_COLOR_MIX) {
             event.recipes.create.mixing(`kubejs:${color}_${shape}`, [
                 `kubejs:uncolored_${shape}`,
                 `kubejs:color_${color}`,
@@ -984,16 +1008,18 @@ ServerEvents.recipes(event => {
                 'supplementaries:soap',
                 Fluid.of('minecraft:water', 500)
             ]).id(`finality:${color}_${shape}_washing`)
-        })
-        Object.keys(global.RGBWCMY).forEach(color => {
+        }
+        for (let [color, string] of Object.entries(global.RGBWCMY)) {
             event.recipes.create.cutting([
                 `kubejs:${color}_left_half_${shape}`,
                 `kubejs:${color}_right_half_${shape}`
             ], `kubejs:${color}_${shape}`).id(`finality:${color}_${shape}_halving`)
-            event.recipes.create.cutting(`2x kubejs:${color}_${shape}_corner`, `kubejs:${color}_left_half_${shape}`).id(`finality:${color}_${shape}_left_half_halving`)
-            event.recipes.create.cutting(`2x kubejs:${color}_${shape}_corner`, `kubejs:${color}_right_half_${shape}`).id(`finality:${color}_${shape}_right_half_halving`)
-        })
-    })
+            event.recipes.create.cutting(`2x kubejs:${color}_${shape}_corner`, `kubejs:${color}_left_half_${shape}`)
+                .id(`finality:${color}_${shape}_left_half_halving`)
+            event.recipes.create.cutting(`2x kubejs:${color}_${shape}_corner`, `kubejs:${color}_right_half_${shape}`)
+                .id(`finality:${color}_${shape}_right_half_halving`)
+        }
+    }
     event.recipes.create.mixing('kubejs:color_white', [
         'kubejs:color_red',
         'kubejs:color_green',
@@ -1136,7 +1162,11 @@ ServerEvents.tags('block', event => {
         '#minecraft:signs',
         '#minecraft:beds',
         '#minecraft:fence_gates',
+        '#minecraft:fences',
         'minecraft:beacon',
+        'minecraft:beehive',
+        'minecraft:chain',
+        'minecraft:cartography_table',
     ])
 })
 
@@ -1151,10 +1181,16 @@ PlayerEvents.loggedIn(event => {
     // Give the player the quest book on first join
     if (!event.player.persistentData.contains('firstjoin')) {
         event.player.persistentData.putBoolean('firstjoin', true)
-        if (!Platform.isLoaded('ftbquests')) {
+        if (!Platform.isLoaded('ftbquests') &&
+            Platform.isLoaded('supplementaries') &&
+            !Platform.isLoaded('backpacked')
+        ) {
+            event.player.give('supplementaries:sack')
             event.player.tell([
                 Component.of('First world load! Lag may be present for a few minutes.\n').bold().gold(),
-                Component.of('Do not forget to'),
+                Component.of('Words enclosed with the '),
+                Component.of('[] ').bold().green(),
+                Component.of('brackets are usually links! Do not forget to '),
                 Component.of('Hold <rainb>[w]</rainb> to Ponder! \n').yellow(),
                 Component.of('\nIf you experience '),
                 Component.of('any ').italic(),
@@ -1192,6 +1228,7 @@ PlayerEvents.loggedIn(event => {
                 Component.of('\nNote: You may need to open chat to see the full message.').underlined().yellow()
             ])
             lootrMsg(event)
+            findMeMsg(event)
         }
         if (Platform.isLoaded('ftbquests') &&
             Platform.isLoaded('supplementaries') &&
@@ -1202,7 +1239,9 @@ PlayerEvents.loggedIn(event => {
             event.player.give('backpacked:backpack')
             event.player.tell([
                 Component.of('First world load! Lag may be present for a few minutes.\n').bold().gold(),
-                Component.of("Also, please check your Quest Book and read its tooltips to get your bearings. Before I go, do not forget to\n"),
+                Component.of('Words enclosed with the '),
+                Component.of('[] ').bold().green(),
+                Component.of('brackets are usually links! Also, please check your Quest Book and read its tooltips to get your bearings. Before I go, do not forget to '),
                 Component.of('Hold <rainb>[w]</rainb> to Ponder! \n').yellow(),
                 Component.of('\nIf you experience '),
                 Component.of('any ').italic(),
@@ -1240,13 +1279,17 @@ PlayerEvents.loggedIn(event => {
                 Component.of('\nNote: You may need to open chat to see the full message.').underlined().yellow()
             ])
             lootrMsg(event)
+            findMeMsg(event)
         }
     } else if (event.player.persistentData.contains('firstjoin')) {
         event.player.tell([
             Component.of('Welcome back!\n').bold().green(),
             Component.of('If the world has recently been loaded, lag may be present for a few minutes. '),
             Component.of('<shake>Please</shake> ').bold().red(),
-            Component.of("allow some time to fully stabilize. Don't forget to read tooltips for some helpful info and\n"),
+            Component.of('allow some time to fully stabilize.\n'),
+            Component.of('In case you didn\'t see previously, words enclosed with the '),
+            Component.of('[] ').bold().green(),
+            Component.of('brackets are links so feel free to mouse over them. Don\'t forget to read tooltips for some helpful info and '),
             Component.of("Hold <rainb>[w]</rainb> to Ponder!\n").yellow(),
             Component.of('\nIf you experience '),
             Component.of('any ').italic(),
@@ -1284,12 +1327,13 @@ PlayerEvents.loggedIn(event => {
             Component.of('\nNote: You may need to open chat to see the full message.').underlined().yellow()
         ])
         lootrMsg(event)
+        findMeMsg(event)
     }
 })
 
 function lootrMsg(event) {
     if (Platform.isLoaded('lootr') && Platform.isLoaded('carryon')) {
-        event.server.scheduleInTicks(300, t => {
+        event.server.scheduleInTicks(420, t => {
             event.player.tell([
                 Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
                 Component.of('Please remember that it\'s common courtesy to not break'),
@@ -1309,6 +1353,23 @@ function lootrMsg(event) {
                 Component.of(' not ').bold().italic().red(),
                 Component.of('that hard, right?'),
                 Component.of('\n<rainb>-----------------------------------------------------</rainb>')
+            ])
+        })
+    }
+}
+
+function findMeMsg(event) {
+    if (Platform.isLoaded('findme')) {
+        event.server.scheduleInTicks(720, t => {
+            event.player.tell([
+                Component.of('-----------------------------------------------------\n').green(),
+                Component.of('Also another thing, '),
+                Component.of('FindMe ').bold().aqua(),
+                Component.of('has been added so you can '),
+                Component.of('press ').yellow(),
+                Component.of('[Y] ').green(),
+                Component.of('while hovering over an item to search nearby chests.'),
+                Component.of('\n-----------------------------------------------------').green()
             ])
         })
     }
@@ -1390,10 +1451,11 @@ PlayerEvents.tick(check => {
 });
 
 LootJS.modifiers((event) => {
-    FOUNDATION_METALS.forEach(metal => {
+    for (let i = 0; i < FOUNDATION_METALS.length; i++) {
+        let metal = FOUNDATION_METALS[i];
         event.addBlockLootModifier(`minecraft:${metal}_ore`).randomChance(0.2).addLoot(`minecraft:raw_${metal}`)
         event.addBlockLootModifier(`minecraft:deepslate_${metal}_ore`).randomChance(0.3).addLoot(`minecraft:raw_${metal}`)
-    })
+    }
     event.addBlockLootModifier('create:zinc_ore')
         .randomChance(0.2).addLoot('create:raw_zinc')
     event.addBlockLootModifier('create:deepslate_zinc_ore')
@@ -1605,7 +1667,6 @@ let modBlacklist = {
     create_compressed: 'Create: Compressed',
     mekanism: 'Mekanism',
     immersiveengineering: 'Immersive Engineering',
-    ftbultimine: 'FTB Ultimine',
     unusualend: 'Unusual End',
     hammerlib: 'HammerLib',
     solarflux: 'Solar Flux Reborn',
@@ -1615,16 +1676,16 @@ let modBlacklist = {
     createunlimited: 'Create: Unlimited'
 }
 
-Object.keys(modBlacklist).forEach(modID => {
-    if (Platform.isLoaded(`${modID}`)) {
+for (let [id, name] of Object.entries(modBlacklist)) {
+    if (Platform.isLoaded(`${id}`)) {
         ServerEvents.recipes(event => {
             event.remove({})
         })
         ServerEvents.tick(event => {
-            console.error(`${modBlacklist[modID]} has been detected, please remove it from the modpack.`)
+            console.error(`${name} has been detected, please remove it from the modpack.`)
         })
         PlayerEvents.loggedIn(event => {
-            event.server.tell(`${modBlacklist[modID]} has been detected, please remove it from the modpack.`)
+            event.server.tell(`${name} has been detected, please remove it from the modpack.`)
         })
     }
-})
+}

@@ -109,34 +109,39 @@ ServerEvents.recipes(event => {
     /**
      * Everything else
      */
-    BSKIES_WOOD.forEach(wood => {
+    for (let i = 0; i < BSKIES_WOOD.length; i++) {
+        let wood = BSKIES_WOOD[i];
         event.recipes.create.cutting([
             `blue_skies:${wood}_pressure_plate`,
             `blue_skies:${wood}_slab`
         ], `blue_skies:${wood}_planks`).id(`kubejs:${wood}_pressure_plate_create_compat`)
-    })
+    }
     if (Platform.isLoaded('aether')) {
         console.log('Aether detected! Applying repairing recipes for Blue Skies.')
-        STANDARD_TOOLS_ALL.forEach(standard => {
-            BSKIES_TOOL_VALID.forEach(tool => {
+        for (let i = 0; i < STANDARD_TOOLS_ALL.length; i++) {
+            let standard = STANDARD_TOOLS_ALL[i];
+            for (let i = 0; i < BSKIES_TOOL_VALID.length; i++) {
+                let tool = BSKIES_TOOL_VALID[i];
                 event.custom({
                     'type': 'aether:repairing',
                     'category': 'enchanting_repair',
                     'ingredient': Ingredient.of(`blue_skies:${tool}_${standard}`).toJson(),
                     'repairTime': 200
                 }).id(`finality:blue_skies/aether/${tool}_${standard}_repairing`)
-            })
-        })
-        STANDARD_ARMOR.forEach(standard => {
-            BSKIES_ARMOR_VALID.forEach(armor => {
+            }
+        }
+        for (let i = 0; i < STANDARD_ARMOR.length; i++) {
+            let standard = STANDARD_ARMOR[i];
+            for (let i = 0; i < BSKIES_ARMOR_VALID.length; i++) {
+                let armor = BSKIES_ARMOR_VALID[i];
                 event.custom({
                     'type': 'aether:repairing',
                     'category': 'enchanting_repair',
                     'ingredient': Ingredient.of(`blue_skies:${armor}_${standard}`).toJson(),
                     'repairTime': 200
                 }).id(`finality:blue_skies/aether/${armor}_${standard}_repairing`)
-            })
-        })
+            }
+        }
     }
 })
 

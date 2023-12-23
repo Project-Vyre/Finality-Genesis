@@ -103,7 +103,8 @@ ServerEvents.recipes(event => {
         Item.of('create:experience_nugget').withChance(0.75),
         Item.of('aether:holystone').withChance(0.25)
     ], 'aether:zanite_ore').processingTime(250).id('finality:create/zanite_ore_crushing')
-    STANDARD_ARMOR.forEach(piece => {
+    for (let i = 0; i < STANDARD_ARMOR.length; i++) {
+        let piece = STANDARD_ARMOR[i];
         aetherRepairing(event,
             Item.of(`aether:neptune_${piece}`).toJson(),
             600,
@@ -119,7 +120,7 @@ ServerEvents.recipes(event => {
             600,
             `obsidian_${piece}`
         )
-    })
+    }
     aetherRepairing(event,
         Item.of('aether:obsidian_gloves').toJson(),
         600,

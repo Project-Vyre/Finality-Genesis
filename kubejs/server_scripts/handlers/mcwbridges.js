@@ -8,14 +8,15 @@
 console.log("Macaw's Bridges detected! Adjusting recipes.")
 
 ServerEvents.recipes(event => {
-    WOOD_TYPES.forEach(type => {
+    for (let i = 0; i < WOOD_TYPES.length; i++) {
+        let type = WOOD_TYPES[i];
         event.shapeless(`mcwbridges:${type}_log_bridge_stair`, [
             `mcwbridges:${type}_log_bridge_middle`
         ]).id(`mcwbridges:${type}_log_bridge_stair`)
         event.shapeless(`mcwbridges:${type}_rope_bridge_stair`, [
             `mcwbridges:rope_${type}_bridge`
         ]).id(`mcwbridges:${type}_rope_bridge_stair`)
-    })
+    }
     event.shapeless('mcwbridges:iron_bridge_stair', [
         'mcwbridges:iron_bridge'
     ]).id('mcwbridges:iron_bridge_stair')

@@ -26,10 +26,11 @@ let jmc_flavors = [
 ]
 
 StartupEvents.registry('item', event => {
-    jmc_flavors.forEach(type => {
+    for (let i = 0; i < jmc_flavors.length; i++) {
+        let type = jmc_flavors[i];
         event.create(`kubejs:incomplete_${type}_cake`, 'create:sequenced_assembly')
-        .texture(`kubejs:item/incomplete_cakes/${type}`)
-    })
+            .texture(`kubejs:item/incomplete_cakes/${type}`)
+    }
     event.create('kubejs:incomplete_triple_tier_cake')
 })
 

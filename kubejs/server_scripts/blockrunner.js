@@ -92,13 +92,14 @@ ServerEvents.tags('block', event => {
         'minecraft:red_concrete',
         'minecraft:black_concrete'
     ])
-    CREATE_PALETTE_BLOCKS.forEach(block => {
+    for (let i = 0; i < CREATE_PALETTE_BLOCKS.length; i++) {
+        let block = CREATE_PALETTE_BLOCKS[i];
         event.add('blockrunner:very_quick_blocks', [
             `create:layered_${block}`,
             `create:${block}_pillar`,
             `create:polished_cut_${block}`
         ])
-    })
+    }
     if (Platform.isLoaded('architects_palette')) {
         event.add('blockrunner:slightly_quick_blocks', [
             'architects_palette:abyssaline_plating',
