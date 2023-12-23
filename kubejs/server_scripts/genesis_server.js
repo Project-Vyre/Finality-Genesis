@@ -516,6 +516,11 @@ ServerEvents.recipes(event => {
         'minecraft:bone_meal'
     ]).heated().id('finality:compacting/renew_calcite')
     event.recipes.create.compacting('minecraft:ice', '9x minecraft:snow_block').id('finality:snow_compacting')
+    event.recipes.create.compacting('minecraft:coal', [
+        'minecraft:charcoal',
+        'minecraft:moss_block',
+        Fluid.of('create:potion', '{Bottle:"REGULAR",Potion:"minecraft:thick"}') // Item.of('minecraft:potion', '{Potion:"minecraft:thick"}') {Bottle:"REGULAR",Potion:"mutantmonsters:chemical_x"}
+    ]).heated().id('finality:compacting/charcoal_to_coal_conversion')
     /**
      * Milling
      */
