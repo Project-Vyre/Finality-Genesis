@@ -7,5 +7,7 @@
   "ingredient": {
     "item": "create:builders_tea"
   },
-  "materialCount": 1024
+  "materialCount": 16384,
+  "inUltimateSingularity": true,
+  "enabled": true
 }

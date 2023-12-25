@@ -1,0 +1,13 @@
+{
+  "name": "Salt",
+  "colors": [
+    "A89A9A",
+    "685353"
+  ],
+  "ingredient": {
+    "item": "salt:salt"
+  },
+  "materialCount": 16777216,
+  "inUltimateSingularity": true,
+  "enabled": true
+}

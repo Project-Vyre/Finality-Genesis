@@ -40,6 +40,7 @@ exposures/*
 .qmenu_opened.marker
 *.log
 *.zip
+*.tar.gz
 essential/*.jar
 essential/*.json
 imgui.ini
@@ -62,4 +63,3 @@ o_prof
 config/voicechat/username-cache.json
 blacksmith.jar
 config/aether/aether_customizations.txt
-*.tar.gz
