@@ -23,6 +23,7 @@ customization {
   audio_source:2a3bf5b2-bc1f-402f-bd38-aa7f595686db1695726433517 = config/fancymenu/assets/menu_music/hide_and_seek_r3_music_box.ogg;EXTERNAL_LOCAL;100;0
   audio_source:807700b1-6ac5-4909-9c09-ba539f109c221702962288781 = config/fancymenu/assets/menu_music/cjbeards_get_away_instrumental.ogg;EXTERNAL_LOCAL;100;0
   audio_source:ed50fe2e-50ef-4a37-a521-b2308b7e99ec1695726266683 = kubejs/assets/minecraft/sounds/music/menu/menu3.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:20e16131-73b5-41ae-bb64-be910539d11e1703458836713 = config/fancymenu/assets/menu_music/cjbeards_silent_night.ogg;EXTERNAL_LOCAL;100;0
   audio_source:1e693ff8-7c42-4836-aed6-3999857d9bcc1695726412048 = config/fancymenu/assets/menu_music/cjbeards_bad_deeds_inst.ogg;EXTERNAL_LOCAL;100;0
   loop = true
   audio_source:568d5cc8-e304-4a48-aae4-f8d5431ca1ea1702962336230 = config/fancymenu/assets/menu_music/cjbeards_worst_nightmare_instrumental.ogg;EXTERNAL_LOCAL;100;0
