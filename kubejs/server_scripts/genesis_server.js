@@ -335,16 +335,16 @@ ServerEvents.recipes(event => {
         S: 'kubejs:high_entropy_alloy_rod'
     }).id('finality:crafting/final_sword')
     event.recipes.create.mechanical_crafting('kubejs:crystal_lance', [
-        ' A ',
-        ' A ',
+        'BAB',
+        'BAB',
         'NNN',
-        ' B ',
-        ' B ',
-        ' B ',
-        ' B '
+        ' N ',
+        ' N ',
+        ' N ',
+        ' N '
     ], {
         A: 'minecraft:amethyst_shard',
-        B: 'kubejs:echo_shard',
+        B: 'minecraft:echo_shard',
         N: 'minecraft:netherite_ingot'
     }).id('finality:crystal_lance')
     event.recipes.create.mechanical_crafting('kubejs:final_katana', [
@@ -423,6 +423,17 @@ ServerEvents.recipes(event => {
         E: 'kubejs:high_entropy_alloy',
         S: 'kubejs:high_entropy_alloy_rod'
     }).id('finality:crafting/final_scythe')
+    event.recipes.create.mechanical_crafting('create:handheld_worldshaper', [
+        'CPULOO',
+        'II    '
+    ], {
+        C: 'kubejs:repeating_command_block',
+        P: 'kubejs:entropy_mechanism',
+        U: 'kubejs:chain_command_block',
+        L: 'kubejs:command_block',
+        O: 'kubejs:high_entropy_alloy_sheet',
+        I: 'kubejs:high_entropy_alloy'
+    }).id('finality:mechanical_crafting/create_worldshaper')
     event.recipes.create.mixing(Fluid.of('kubejs:mushroom_stew', 250), [
         'minecraft:brown_mushroom',
         'minecraft:red_mushroom',

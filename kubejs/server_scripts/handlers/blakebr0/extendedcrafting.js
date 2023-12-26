@@ -15,6 +15,10 @@ let CREATEITEMS = ['electron_tube', 'rose_quartz']
 let CREATEVALUED = ['brass', 'zinc']
 
 ServerEvents.recipes(event => {
+    event.remove([
+        { id: 'extendedcrafting:ultimate_singularity' },
+        { id: 'extendedcrafting:compressor' }
+    ])
     event.shapeless('extendedcrafting:black_iron_ingot', [
         'minecraft:iron_ingot',
         'minecraft:black_dye',
@@ -102,17 +106,20 @@ ServerEvents.recipes(event => {
         Item.of('extendedcrafting:ultimate_singularity').withChance(0.75)
     ], 'extendedcrafting:ultimate_singularity').processingTime(500).id('finality:the_ultimate_nugget')
 
-    event.recipes.create.mechanical_crafting('create:handheld_worldshaper', [
-        'CPULOO',
-        'II    '
+    event.recipes.extendedcrafting.shaped_table('extendedcrafting:compressor', [
+        'IOOOI',
+        'AQQQA',
+        'AQFQA',
+        'AQQQA',
+        'ILLLI'
     ], {
-        C: 'kubejs:repeating_command_block',
-        P: 'kubejs:entropy_mechanism',
-        U: 'kubejs:chain_command_block',
-        L: 'kubejs:command_block',
-        O: 'kubejs:high_entropy_alloy_sheet',
-        I: 'kubejs:high_entropy_alloy'
-    }).id('finality:mechanical_crafting/create_worldshaper')
+        I: 'extendedcrafting:black_iron_ingot',
+        O: 'extendedcrafting:elite_component',
+        A: 'extendedcrafting:elite_catalyst',
+        Q: 'kubejs:qubit',
+        F: 'extendedcrafting:frame',
+        L: 'extendedcrafting:black_iron_slate'
+    }).id('finality:extendedcrafting/compressor')
 
     event.recipes.create.mixing('extendedcrafting:ender_star', [
         'minecraft:nether_star',
@@ -653,7 +660,7 @@ ServerEvents.recipes(event => {
         event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:emitter_shape'])
     ]).transitionalItem('kubejs:incomplete_entropy_mechanism').loops(3).id('finality:sequenced_assembly/entropy_mechanism_creation')
     console.log('Forcibly applying Ultimate Singularity recipe. If it is missing again, please report this to the GitHub Issue tracker, thank you.')
-    event.remove({ id: 'extendedcrafting:ultimate_singularity' })
+
     event.recipes.extendedcrafting.shapeless_table('extendedcrafting:ultimate_singularity', [
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_red"}').strongNBT(),
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_green"}').strongNBT(),
