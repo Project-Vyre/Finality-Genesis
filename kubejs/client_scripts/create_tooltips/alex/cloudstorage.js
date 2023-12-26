@@ -24,7 +24,7 @@ ClientEvents.lang('en_us', event => {
         "block.cloudstorage.cloud_chest.tooltip.condition2": "How to Switch Channels",
         "block.cloudstorage.cloud_chest.tooltip.behaviour2": "Right click the cloud chest with a _normal_ balloon in your hand, not one with a static charge.",
         "block.cloudstorage.static_cloud_chest.tooltip": "STATIC CLOUD CHEST",
-        "block.cloudstorage.static_cloud_chest.tooltip.summary": "The publicly accessible cloud chest.",
+        "block.cloudstorage.static_cloud_chest.tooltip.summary": "The publicly accessible cloud chest. _Anyone_ with matching _balloon colors_ can _access_ the inventory associated with it.",
         "block.cloudstorage.static_cloud_chest.tooltip.condition1": "How to Expand Storage",
         "block.cloudstorage.static_cloud_chest.tooltip.behaviour1": "Unlike the normal cloud chest, a static cloud chest uses balloons with a _static charge_. So if you want to expand storage for your static cloud chest MAKE SURE you use balloons with a _static charge_.",
         "block.cloudstorage.static_cloud_chest.tooltip.condition2": "How to Switch Channels",
