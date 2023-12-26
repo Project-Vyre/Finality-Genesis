@@ -243,6 +243,14 @@ JEIEvents.information(event => {
     event.addItem('minecraft:campfire', ['Campfires now regenerate your health. <wave>Cozy!</wave>'])
     event.addItem('minecraft:soul_campfire', ['Campfires now regenerate your health. <wave>Cozy!</wave>'])
     event.addItem('minecraft:dragon_egg', ['Can be used to make Dragon Breath.'])
+    event.addItem('create:refined_radiance', [
+        'When Chromatic Compound is thrown into a grid of Beacons, it changes form and becomes Refined Radiance.',
+        'Take advantage of its floating properties, perhaps you can automate this?'
+    ])
+    event.addItem('create:shadow_steel', [
+        'When Chromatic Compound is thrown into the darkness of the Void, it changes form and becomes Shadow Steel.',
+        'Take advantage of its floating properties, perhaps you can automate this?'
+    ])
     event.addItem('kubejs:lemon_seed', ['Can only be acquired from breaking grass or trading with farmers.'])
     if (Platform.isLoaded('cataclysm')) {
         event.addItem('minecraft:nether_star', [
