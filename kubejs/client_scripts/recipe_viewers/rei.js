@@ -377,6 +377,18 @@ REIEvents.information(event => {
             'You will have to wait a while for the egg to hatch.'
         ])
     }
+    if (Platform.isLoaded('enderchests')) {
+        event.addItem('enderchests:ender_bag', 'Usage', [
+            'On Sneak + R-Click on an Ender Chest',
+            '_Copies_ color channels from the Ender Chest onto the pouch.'
+        ])
+    }
+    if (Platform.isLoaded('endertanks')) {
+        event.addItem('endertanks:ender_bucket', 'Usage', [
+            'On Sneak + R-Click on an Ender Tank',
+            '_Copies_ color channels from the Ender Tank onto the bucket.'
+        ])
+    }
     if (Platform.isLoaded('endrem')) {
         event.addItem('minecraft:ender_eye', 'Acquisition', [
             'There is a certain eye that can only be acquired from enchanting.',
