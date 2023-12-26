@@ -168,8 +168,8 @@
 		}
 		{
 			dependencies: [
-				"7076B3EE15B33C23"
-				"4F8E459413F29159"
+				"48F7AA720F364C68"
+				"16EFBAF2CDCCCA8C"
 			]
 			icon: "extendedcrafting:ultimate_singularity"
 			id: "123D0E0F69B73A88"
@@ -212,6 +212,7 @@
 				item: "kubejs:entropy_mechanism"
 				type: "item"
 			}]
+			title: "Creating the Entropy Mechanism"
 			x: 0.0d
 			y: -3.5d
 		}
@@ -1111,6 +1112,30 @@
 			}]
 			x: -18.0d
 			y: -20.0d
+		}
+		{
+			dependencies: ["7076B3EE15B33C23"]
+			id: "48F7AA720F364C68"
+			subtitle: "Probably easy to automate..."
+			tasks: [{
+				id: "6B3E71A642D817B7"
+				item: "kubejs:potion_base_singularity"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4F8E459413F29159"]
+			id: "16EFBAF2CDCCCA8C"
+			subtitle: "This should be a piece of cake... right?"
+			tasks: [{
+				id: "74929691DDBBDC17"
+				item: "kubejs:blaze_cake_singularity"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 4.5d
 		}
 	]
 	subtitle: ["<rainb>Are you sure you want to do this?</rainb>"]
