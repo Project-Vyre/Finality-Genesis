@@ -39,6 +39,13 @@ ServerEvents.recipes(event => {
             'minecraft:sugar_cane'
         ]).id('finality:mysticalagriculture/crafting/atmospheric_cactus_agglomeratio')
     }
+    if (Platform.isLoaded('neapolitan')) {
+        console.log('Neapolitan detected! Forcefully overriding recipe to use Create\'s Bar of Chocolate.')
+        event.recipes.create.compacting(
+            'create:bar_of_chocolate',
+            Fluid.of('create:chocolate', 250)
+        ).id('create:compacting/chocolate')
+    }
 })
 
 console.log('Applying recipes and tags for Team Abnormals mods...')

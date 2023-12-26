@@ -110,7 +110,7 @@ ServerEvents.recipes(event => {
         P: 'kubejs:entropy_mechanism',
         U: 'kubejs:chain_command_block',
         L: 'kubejs:command_block',
-        O: 'create:sturdy_sheet',
+        O: 'kubejs:high_entropy_alloy_sheet',
         I: 'kubejs:high_entropy_alloy'
     }).id('finality:mechanical_crafting/create_worldshaper')
 
@@ -452,6 +452,17 @@ ServerEvents.recipes(event => {
         }).id(`finality:mechanical_crafting/${insert}singularity`)
     }
 
+    event.recipes.create.sequenced_assembly([
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:salt"}').withChance(0.25),
+        Item.of('salt:salt_block').withChance(0.25),
+        Item.of('salt:salt').withChance(0.25),
+        Item.of('minecraft:dripstone_block').withChance(0.25),
+    ], 'kubejs:awakened_singularity_core', [
+        event.recipes.create.deploying('kubejs:incomplete_salt_singularity', ['kubejs:incomplete_salt_singularity', 'salt:salt_block']),
+        event.recipes.create.pressing('kubejs:incomplete_salt_singularity', 'kubejs:incomplete_salt_singularity'),
+        event.recipes.create.pressing('kubejs:incomplete_salt_singularity', 'kubejs:incomplete_salt_singularity')
+    ]).transitionalItem('kubejs:incomplete_salt_singularity').loops(128).id('finality:sequenced_assembly/salt_singularity')
+
     event.recipes.create.mechanical_crafting('kubejs:command_block', [
         'IIGIIGII',
         'IIQPPQII',
@@ -583,6 +594,16 @@ ServerEvents.recipes(event => {
         event.recipes.create.pressing('kubejs:incomplete_ascendant_mechanism', 'kubejs:incomplete_ascendant_mechanism')
     ]).transitionalItem('kubejs:incomplete_ascendant_mechanism').loops(5).id('finality:sequenced_assembly/ascendant_mechanism_creation')
 
+    event.recipes.create.emptying([
+        Fluid.of('kubejs:condensed_universal_order', 250),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:blue_ice"}').withChance(0.25)
+    ], Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:blue_ice"}')).id('finality:emptying/condensed_universal_order')
+
+    event.recipes.create.mixing('kubejs:high_entropy_alloy_nugget', [
+        '9x kubejs:stable_entropy_particles',
+        '4x extendedcrafting:the_ultimate_catalyst',
+        '4x extendedcrafting:crystaltine_catalyst'
+    ]).superheated().id('finality:extendedcrafting/mixing/high_entropy_nugget')
     /*
     let RNG1 = 0
     let RNG2 = 0
@@ -612,7 +633,8 @@ ServerEvents.recipes(event => {
     event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', enRI1[RNG1]])
     */
     event.recipes.create.sequenced_assembly([
-        Item.of('kubejs:entropy_mechanism').withChance(110.0),
+        Item.of('kubejs:entropy_mechanism').withChance(80.0),
+        Item.of('kubejs:errored_result').withChance(0.75),
         Item.of('minecraft:structure_void').withChance(50.0),
         Item.of('minecraft:debug_stick').withChance(50.0),
         Item.of('minecraft:jigsaw').withChance(50.0),
@@ -625,12 +647,13 @@ ServerEvents.recipes(event => {
     ], 'kubejs:ascendant_mechanism', [
         event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:awakened_singularity_core']),
         event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'create:sequenced_gearshift']),
-        event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'extendedcrafting:crystaltine_nugget']),
+        event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:qubit']),
         event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:cpu_shape']),
         event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:blueprint_shape']),
         event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:emitter_shape'])
     ]).transitionalItem('kubejs:incomplete_entropy_mechanism').loops(3).id('finality:sequenced_assembly/entropy_mechanism_creation')
     console.log('Forcibly applying Ultimate Singularity recipe. If it is missing again, please report this to the GitHub Issue tracker, thank you.')
+    event.remove({ id: 'extendedcrafting:ultimate_singularity' })
     event.recipes.extendedcrafting.shapeless_table('extendedcrafting:ultimate_singularity', [
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_red"}').strongNBT(),
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:concrete_green"}').strongNBT(),
@@ -684,6 +707,9 @@ ServerEvents.recipes(event => {
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:cobblestone"}').strongNBT(),
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:quartz"}').strongNBT(),
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:gold"}').strongNBT(),
+        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:salt"}').strongNBT(),
+        'kubejs:potion_base_singularity',
+        'kubejs:blaze_cake_singularity'
     ]).merge({ tier: 4 }).id('kubejs:cucumber_library_failure')
 })
 

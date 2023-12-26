@@ -352,3 +352,15 @@ ServerEvents.recipes(event => {
         I: 'create:industrial_iron_block'
     }).id('finality:littlelogistics/shaped/tug_dock')
 })
+
+ServerEvents.tags('block', event => {
+    event.add('create:wrench_pickup', [
+        'littlelogistics:rapid_hopper',
+        'littlelogistics:fluid_hopper',
+        'littlelogistics:tug_dock',
+        'littlelogistics:barge_dock',
+        'littlelogistics:guide_rail_corner',
+        'littlelogistics:vessel_detector',
+        'littlelogistics:guide_rail_tug'
+    ])
+})

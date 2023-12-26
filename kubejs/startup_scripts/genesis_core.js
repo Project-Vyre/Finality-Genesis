@@ -104,90 +104,106 @@ let LEGENDARY = ['whisper_of_the_abyss', 'coral_lance', 'divider']
 let ABYSS_ARMOR = ['heaume', 'brigantine', 'leggings', 'boots']
 let EL_TOOLS = ['sword', 'shovel', 'pickaxe', 'axe', 'scythe']
 
-/**
- * 
- * @param {*} event 
- * @param {string} itemID 
- * @param {string} displayNameString 
- * @param {string} texturePath 
- */
-function shapeItemGeneration(event, itemID, displayNameString, texturePath) {
-    event.create(`kubejs:${itemID}`).displayName(`${displayNameString}`).texture(`kubejs:item/shapes/${texturePath}`).maxStackSize(64).fireResistant(true)
-}
-
-/**
- * 
- * @param {*} event 
- * @param {string} color 
- * @param {string} displayNameString 
- */
-function RGBWCMYK_OBJECTS(event, color, displayNameString) {
-    event.create(`kubejs:color_${color}`).displayName(`${displayNameString}`).texture(`kubejs:item/colors/${color}`).maxStackSize(64).fireResistant(true)
-}
-
-
-
-/**
- * 
- * @param {*} event 
- * @param {string} itemID 
- */
-function STANDARD_NO_DISPLAY(event, itemID) {
-    event.create(`kubejs:${itemID}`).texture(`kubejs:item/${itemID}`).maxStackSize(64)
-}
-
-/**
- * 
- * @param {*} event 
- * @param {string} itemID 
- * @param {string} displayName 
- */
-function STANDARD_WITH_DISPLAY(event, itemID, displayName) {
-    event.create(`kubejs:${itemID}`).displayName(displayName).texture(`kubejs:item/${itemID}`).maxStackSize(64)
-}
-
-/**
- * 
- * @param {*} event 
- * @param {string} itemID 
- * @param {string} displayName 
- * @param {string} texturePath 
- */
-function FireResistantItem(event, itemID, displayName, texturePath) {
-    event.create(`kubejs:${itemID}`).displayName(displayName).texture(`kubejs:item/${texturePath}`).maxStackSize(64).fireResistant(true)
-}
-
-/**
- * 
- * @param {*} event 
- * @param {string} itemID 
- * @param {string} displayName 
- * @param {string} texturePath 
- * @param {number} stackSize 
- * @param {boolean} fireResistantBoolean 
- */
-function FULL_CUSTOM(event, itemID, displayName, texturePath, stackSize, fireResistantBoolean) {
-    event.create(`kubejs:${itemID}`).displayName(displayName).texture(`kubejs:item/${texturePath}`).maxStackSize(stackSize).fireResistant(fireResistantBoolean)
-}
-
 StartupEvents.registry('item', event => { // Register new items here event.create('example_item').displayName('Example Item')
-    STANDARD_NO_DISPLAY(event, 'deepslate_shard')
-    STANDARD_NO_DISPLAY(event, 'trident_pole')
-    STANDARD_NO_DISPLAY(event, 'trident_prong')
-    FULL_CUSTOM(event, 'construction_core_diamond', '§bActivated Construction Diamond Crystal', 'construction_diamond', 16, true)
-    FULL_CUSTOM(event, 'dormant_singularity_core', '§d<shake>Dormant Singularity Core</shake>', 'dormant_singularity_core', 16, true)
-    FULL_CUSTOM(event, 'awakened_singularity_core', '<shake><rainb>Awakened Singularity Core</rainb></shake>', 'awakened_singularity_core', 8, true)
-    FULL_CUSTOM(event, 'denied_result', '§d<shake>Denied Result</shake>', 'denied', 1, true)
-    FULL_CUSTOM(event, 'removed_item', '§4<shake>Removed Item</shake>', 'removed', 1, true)
+    /**
+     * 
+     * @param {string} itemId 
+     * @param {string} displayName 
+     */
+    let standardNoDisplay = (itemId, displayName) => {
+        event.create(`kubejs:${itemId}`).displayName(displayName).texture(`kubejs:item/${itemId}`).maxStackSize(64)
+    }
+    /**
+     * 
+     * @param {string} itemId 
+     * @param {string} displayName 
+     * @param {string} texturePath 
+     */
+    let fireResistantItem = (itemId, displayName, texturePath) => {
+        event.create(`kubejs:${itemId}`).displayName(displayName).texture(`kubejs:item/${texturePath}`).maxStackSize(64).fireResistant(true)
+    }
+    /**
+     * 
+     * @param {string} itemId 
+     * @param {string} displayName 
+     * @param {string} texturePath 
+     * @param {number} stackSize 
+     * @param {boolean} fireResistantBoolean 
+     */
+    let fireResistantCustom = (itemId, displayName, texturePath, stackSize, fireResistantBoolean) => {
+        event.create(`kubejs:${itemId}`).displayName(displayName).texture(`kubejs:item/${texturePath}`).maxStackSize(stackSize).fireResistant(fireResistantBoolean)
+    }
+    /**
+     * 
+     * @param {string} itemId 
+     * @param {string} displayNameString 
+     * @param {string} texturePath 
+     */
+    let shapeItemGeneration = (itemId, displayNameString, texturePath) => {
+        event.create(`kubejs:${itemId}`).displayName(`${displayNameString}`).texture(`kubejs:item/shapes/${texturePath}`).maxStackSize(64).fireResistant(true)
+    }
+    /**
+     * 
+     * @param {string} color 
+     * @param {string} displayNameString 
+     */
+    let RGBWCMYK_OBJECTS = (color, displayNameString) => {
+        event.create(`kubejs:color_${color}`).displayName(`${displayNameString}`).texture(`kubejs:item/colors/${color}`).maxStackSize(64).fireResistant(true)
+    }
+    standardNoDisplay('deepslate_shard')
+    standardNoDisplay('trident_pole')
+    standardNoDisplay('trident_prong')
+    if (Platform.isLoaded('constructionwand')) {
+        fireResistantCustom('construction_core_diamond', '§bActivated Construction Diamond Crystal', 'construction_diamond', 16, true)
+    }
+    fireResistantCustom('dormant_singularity_core', '§d<shake>Dormant Singularity Core</shake>', 'dormant_singularity_core', 16, true)
+    fireResistantCustom('awakened_singularity_core', '<shake><rainb>Awakened Singularity Core</rainb></shake>', 'awakened_singularity_core', 8, true)
+    fireResistantCustom('denied_result', '§d<shake>Denied Result</shake>', 'denied', 1, true)
+    fireResistantCustom('errored_result', '§4<shake>Errored Result</shake>', 'errored', 1, true)
+    fireResistantCustom('removed_item', '§4<shake>Removed Item</shake>', 'removed', 1, true)
+    event.create('kubejs:qubit')
+        .displayName('<rainb>Qubit</rainb>')
+        .texture('kubejs:item/qubit')
+        .maxStackSize(1)
+        .fireResistant(true)
+    event.create('kubejs:unstable_entropy_particles')
+        .displayName('<rainb>Unstable Entropy Particles</rainb>')
+        .texture('kubejs:item/unstable_entropy')
+        .maxStackSize(64)
+        .fireResistant(true)
+        .rarity('epic')
+    event.create('kubejs:stable_entropy_particles')
+        .displayName('<rainb>Stable Entropy Particles</rainb>')
+        .texture('kubejs:item/stable_entropy')
+        .maxStackSize(64)
+        .fireResistant(true)
+        .rarity('epic')
     event.create('kubejs:high_entropy_alloy')
         .displayName('<rainb>High Entropy Alloy</rainb>')
         .texture('kubejs:item/final_ingot')
         .maxStackSize(64)
         .fireResistant(true)
+        .rarity('epic')
         .group('miscellaneous')
-
+    event.create('kubejs:high_entropy_alloy_nugget')
+        .displayName('<rainb>High Entropy Alloy Nugget</rainb>')
+        .texture('kubejs:item/final_nugget')
+        .maxStackSize(64)
+        .fireResistant(true)
+        .rarity('epic')
+    event.create('kubejs:high_entropy_alloy_sheet')
+        .displayName('<rainb>High Entropy Alloy Sheet')
+        .texture('kubejs:item/final_sheet')
+        .maxStackSize(64)
+        .fireResistant(true)
+        .rarity('epic')
+    event.create('kubejs:high_entropy_alloy_rod')
+        .displayName('<rainb>High Entropy Alloy Rod</rainb>')
+        .texture('kubejs:item/final_rod')
+        .maxStackSize(64)
+        .fireResistant(true)
+        .rarity('epic')
     // tools
-    // deprecate .displayName() in 1.20.1+
     event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_tool')
         .displayName('<rainb>Particula Eversorem</rainb>')
         .rarity('epic')
@@ -366,53 +382,53 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
      * }
      */
     for (let [shape, name] of Object.entries(global.SHAPES)) {
-        shapeItemGeneration(event, `uncolored_${shape}`, `§7Uncolored ${name}`, `uncolored_${shape}`)
-        shapeItemGeneration(event, `uncolored_left_half_${shape}`, `§7Uncolored Left Half ${name}`, `halves/uncolored_left_half_${shape}`)
-        shapeItemGeneration(event, `uncolored_right_half_${shape}`, `§7Uncolored Right Half ${name}`, `halves/uncolored_right_half_${shape}`)
-        shapeItemGeneration(event, `uncolored_${shape}_corner`, `§7Uncolored ${name} Corner`, `corners/uncolored_${shape}_corner`)
+        shapeItemGeneration(`uncolored_${shape}`, `§7Uncolored ${name}`, `uncolored_${shape}`)
+        shapeItemGeneration(`uncolored_left_half_${shape}`, `§7Uncolored Left Half ${name}`, `halves/uncolored_left_half_${shape}`)
+        shapeItemGeneration(`uncolored_right_half_${shape}`, `§7Uncolored Right Half ${name}`, `halves/uncolored_right_half_${shape}`)
+        shapeItemGeneration(`uncolored_${shape}_corner`, `§7Uncolored ${name} Corner`, `corners/uncolored_${shape}_corner`)
         // red
-        shapeItemGeneration(event, `red_${shape}`, `§l§cRed ${name}`, `red_${shape}`)
-        shapeItemGeneration(event, `red_left_half_${shape}`, `§cRed Left Half ${name}`, `halves/red_left_half_${shape}`)
-        shapeItemGeneration(event, `red_right_half_${shape}`, `§cRed Right Half ${name}`, `halves/red_right_half_${shape}`)
-        shapeItemGeneration(event, `red_${shape}_corner`, `§cRed ${name} Corner`, `corners/red_${shape}_corner`)
+        shapeItemGeneration(`red_${shape}`, `§l§cRed ${name}`, `red_${shape}`)
+        shapeItemGeneration(`red_left_half_${shape}`, `§cRed Left Half ${name}`, `halves/red_left_half_${shape}`)
+        shapeItemGeneration(`red_right_half_${shape}`, `§cRed Right Half ${name}`, `halves/red_right_half_${shape}`)
+        shapeItemGeneration(`red_${shape}_corner`, `§cRed ${name} Corner`, `corners/red_${shape}_corner`)
         // green
-        shapeItemGeneration(event, `green_${shape}`, `§aGreen ${name}`, `green_${shape}`)
-        shapeItemGeneration(event, `green_left_half_${shape}`, `§aGreen Left Half ${name}`, `halves/green_left_half_${shape}`)
-        shapeItemGeneration(event, `green_right_half_${shape}`, `§aGreen Right Half ${name}`, `halves/green_right_half_${shape}`)
-        shapeItemGeneration(event, `green_${shape}_corner`, `§aGreen ${name} Corner`, `corners/green_${shape}_corner`)
+        shapeItemGeneration(`green_${shape}`, `§aGreen ${name}`, `green_${shape}`)
+        shapeItemGeneration(`green_left_half_${shape}`, `§aGreen Left Half ${name}`, `halves/green_left_half_${shape}`)
+        shapeItemGeneration(`green_right_half_${shape}`, `§aGreen Right Half ${name}`, `halves/green_right_half_${shape}`)
+        shapeItemGeneration(`green_${shape}_corner`, `§aGreen ${name} Corner`, `corners/green_${shape}_corner`)
         // blue
-        shapeItemGeneration(event, `blue_${shape}`, `§9Blue ${name}`, `blue_${shape}`)
-        shapeItemGeneration(event, `blue_left_half_${shape}`, `§9Blue Left Half ${name}`, `halves/blue_left_half_${shape}`)
-        shapeItemGeneration(event, `blue_right_half_${shape}`, `§9Blue Right Half ${name}`, `halves/blue_right_half_${shape}`)
-        shapeItemGeneration(event, `blue_${shape}_corner`, `§9Blue ${name} Corner`, `corners/blue_${shape}_corner`)
+        shapeItemGeneration(`blue_${shape}`, `§9Blue ${name}`, `blue_${shape}`)
+        shapeItemGeneration(`blue_left_half_${shape}`, `§9Blue Left Half ${name}`, `halves/blue_left_half_${shape}`)
+        shapeItemGeneration(`blue_right_half_${shape}`, `§9Blue Right Half ${name}`, `halves/blue_right_half_${shape}`)
+        shapeItemGeneration(`blue_${shape}_corner`, `§9Blue ${name} Corner`, `corners/blue_${shape}_corner`)
         // cyan
-        shapeItemGeneration(event, `cyan_${shape}`, `§bCyan ${name}`, `cyan_${shape}`)
-        shapeItemGeneration(event, `cyan_left_half_${shape}`, `§bCyan Left Half ${name}`, `halves/cyan_left_half_${shape}`)
-        shapeItemGeneration(event, `cyan_right_half_${shape}`, `§bCyan Right Half ${name}`, `halves/cyan_right_half_${shape}`)
-        shapeItemGeneration(event, `cyan_${shape}_corner`, `§bCyan ${name} Corner`, `corners/cyan_${shape}_corner`)
+        shapeItemGeneration(`cyan_${shape}`, `§bCyan ${name}`, `cyan_${shape}`)
+        shapeItemGeneration(`cyan_left_half_${shape}`, `§bCyan Left Half ${name}`, `halves/cyan_left_half_${shape}`)
+        shapeItemGeneration(`cyan_right_half_${shape}`, `§bCyan Right Half ${name}`, `halves/cyan_right_half_${shape}`)
+        shapeItemGeneration(`cyan_${shape}_corner`, `§bCyan ${name} Corner`, `corners/cyan_${shape}_corner`)
         // magenta
-        shapeItemGeneration(event, `magenta_${shape}`, `§dMagenta ${name}`, `magenta_${shape}`)
-        shapeItemGeneration(event, `magenta_left_half_${shape}`, `§dMagenta Left Half ${name}`, `halves/magenta_left_half_${shape}`)
-        shapeItemGeneration(event, `magenta_right_half_${shape}`, `§dMagenta Right Half ${name}`, `halves/magenta_right_half_${shape}`)
-        shapeItemGeneration(event, `magenta_${shape}_corner`, `§dMagenta ${name} Corner`, `corners/magenta_${shape}_corner`)
+        shapeItemGeneration(`magenta_${shape}`, `§dMagenta ${name}`, `magenta_${shape}`)
+        shapeItemGeneration(`magenta_left_half_${shape}`, `§dMagenta Left Half ${name}`, `halves/magenta_left_half_${shape}`)
+        shapeItemGeneration(`magenta_right_half_${shape}`, `§dMagenta Right Half ${name}`, `halves/magenta_right_half_${shape}`)
+        shapeItemGeneration(`magenta_${shape}_corner`, `§dMagenta ${name} Corner`, `corners/magenta_${shape}_corner`)
         // yellow
-        shapeItemGeneration(event, `yellow_${shape}`, `§eYellow ${name}`, `yellow_${shape}`)
-        shapeItemGeneration(event, `yellow_left_half_${shape}`, `§eYellow Left Half ${name}`, `halves/yellow_left_half_${shape}`)
-        shapeItemGeneration(event, `yellow_right_half_${shape}`, `§eYellow Right Half ${name}`, `halves/yellow_right_half_${shape}`)
-        shapeItemGeneration(event, `yellow_${shape}_corner`, `§eYellow ${name} Corner`, `corners/yellow_${shape}_corner`)
+        shapeItemGeneration(`yellow_${shape}`, `§eYellow ${name}`, `yellow_${shape}`)
+        shapeItemGeneration(`yellow_left_half_${shape}`, `§eYellow Left Half ${name}`, `halves/yellow_left_half_${shape}`)
+        shapeItemGeneration(`yellow_right_half_${shape}`, `§eYellow Right Half ${name}`, `halves/yellow_right_half_${shape}`)
+        shapeItemGeneration(`yellow_${shape}_corner`, `§eYellow ${name} Corner`, `corners/yellow_${shape}_corner`)
         // white
-        shapeItemGeneration(event, `white_${shape}`, `§lWhite ${name}`, `white_${shape}`)
-        shapeItemGeneration(event, `white_left_half_${shape}`, `§lWhite Left Half ${name}`, `halves/white_left_half_${shape}`)
-        shapeItemGeneration(event, `white_right_half_${shape}`, `§lWhite Right Half ${name}`, `halves/white_right_half_${shape}`)
-        shapeItemGeneration(event, `white_${shape}_corner`, `§lWhite ${name} Corner`, `corners/white_${shape}_corner`)
+        shapeItemGeneration(`white_${shape}`, `§lWhite ${name}`, `white_${shape}`)
+        shapeItemGeneration(`white_left_half_${shape}`, `§lWhite Left Half ${name}`, `halves/white_left_half_${shape}`)
+        shapeItemGeneration(`white_right_half_${shape}`, `§lWhite Right Half ${name}`, `halves/white_right_half_${shape}`)
+        shapeItemGeneration(`white_${shape}_corner`, `§lWhite ${name} Corner`, `corners/white_${shape}_corner`)
     }
-    FireResistantItem(event, 'blueprint_shape_base', '§9Blueprint Shape Base', 'shapes/blueprint_shape_base')
-    FireResistantItem(event, 'blueprint_shape', '§9Blueprint Shape', 'shapes/blueprint_shape')
-    FireResistantItem(event, 'cpu_foundation', '§aCPU Shape Foundation', 'shapes/cpu_foundation')
-    FireResistantItem(event, 'cpu_substrate_shape', '§aCPU Substrate Shape', 'shapes/cpu_substrate_shape')
-    FireResistantItem(event, 'cpu_shape', '§aCPU Shape', 'shapes/cpu_shape')
-    FireResistantItem(event, 'emitter_shape_base', '§dEmitter Shape Base', 'shapes/emitter_shape_base')
-    FireResistantItem(event, 'emitter_shape', '§dEmitter Shape', 'shapes/emitter_shape')
+    fireResistantItem('blueprint_shape_base', '§9Blueprint Shape Base', 'shapes/blueprint_shape_base')
+    fireResistantItem('blueprint_shape', '§9Blueprint Shape', 'shapes/blueprint_shape')
+    fireResistantItem('cpu_foundation', '§aCPU Shape Foundation', 'shapes/cpu_foundation')
+    fireResistantItem('cpu_substrate_shape', '§aCPU Substrate Shape', 'shapes/cpu_substrate_shape')
+    fireResistantItem('cpu_shape', '§aCPU Shape', 'shapes/cpu_shape')
+    fireResistantItem('emitter_shape_base', '§dEmitter Shape Base', 'shapes/emitter_shape_base')
+    fireResistantItem('emitter_shape', '§dEmitter Shape', 'shapes/emitter_shape')
     for (let [character, name] of Object.entries(LETTERS)) {
         event.create(`kubejs:letter_${character}`)
             .displayName(`<rainb>Letter ${name}</rainb>`)
@@ -448,8 +464,10 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .fireResistant(true)
         .glow(true)
     for (let [item, name] of Object.entries(global.RGBWCMY)) {
-        RGBWCMYK_OBJECTS(event, item, name)
+        RGBWCMYK_OBJECTS(item, name)
     }
+    event.create('kubejs:potion_base_singularity')
+    event.create('kubejs:blaze_cake_singularity')
     if (Platform.isLoaded('delightful')) {
         event.create('kubejs:dried_matcha_leaves')
             .displayName('Dried Matcha Leaves')
@@ -666,17 +684,6 @@ StartupEvents.registry('block', event => {
     }
 })
 
-/**
- * 
- * @param {*} event 
- * @param {string} fluidID 
- * @param {string} displayName 
- * @param {HEX} color 
- */
-function MOLTEN_METAL(event, fluidID, displayName, color) {
-    event.create(`kubejs:${fluidID}`).displayName(displayName).thickTexture(color).bucketColor(color).luminosity(15)
-}
-
 StartupEvents.registry('fluid', event => {
     // work in progress .stillTexture('finality:block/still_entropy').flowingTexture('finality:block/flowing_entropy')
     event.create('kubejs:condensed_universal_entropy')
@@ -684,12 +691,27 @@ StartupEvents.registry('fluid', event => {
         .thickTexture(0x7800FF)
         .bucketColor(0x7800FF)
         .luminosity(15)
-    MOLTEN_METAL(event, 'molten_iron', '§cMolten Iron', 0xFF8423)
-    MOLTEN_METAL(event, 'molten_gold', '§eMolten Gold', 0xFDF55F)
-    MOLTEN_METAL(event, 'molten_copper', '§6Molten Copper', 0xFDD686)
-    MOLTEN_METAL(event, 'molten_zinc', '§3Molten Zinc', 0xD3E8D6)
-    MOLTEN_METAL(event, 'molten_brass', '§eMolten Brass', 0xFBAA68)
-    MOLTEN_METAL(event, 'molten_netherite', '§8Molten Netherite', 0x7E6059)
+    event.create('kubejs:condensed_universal_order')
+        .displayName('<rainb>Condensed Universal Order</rainb>')
+        .thickTexture(0x77D8FF)
+        .bucketColor(0x77D8FF)
+        .luminosity(15)
+    /**
+     * 
+     * @param {*} event 
+     * @param {string} fluidId 
+     * @param {string} displayName 
+     * @param {HEX} color 
+     */
+    let MOLTEN_METAL = (fluidId, displayName, color) => {
+        event.create(`kubejs:${fluidId}`).displayName(displayName).thickTexture(color).bucketColor(color).luminosity(15)
+    }
+    MOLTEN_METAL('molten_iron', '§cMolten Iron', 0xFF8423)
+    MOLTEN_METAL('molten_gold', '§eMolten Gold', 0xFDF55F)
+    MOLTEN_METAL('molten_copper', '§6Molten Copper', 0xFDD686)
+    MOLTEN_METAL('molten_zinc', '§3Molten Zinc', 0xD3E8D6)
+    MOLTEN_METAL('molten_brass', '§eMolten Brass', 0xFBAA68)
+    MOLTEN_METAL('molten_netherite', '§8Molten Netherite', 0x7E6059)
     event.create('kubejs:inferior_infusion_essence')
         .displayName('§eInferior Infusion Essence§r')
         .thickTexture(0xACCF00)
@@ -1074,7 +1096,7 @@ let blacklist = {
 }
 
 StartupEvents.postInit(event => {
-    for (let [mod, reason] of Object.entries(blacklist)) {
+    for (let [mod, reason] of Object.keys(blacklist)) {
         Platform.isLoaded(mod) && console.error(`This mod is not supported: ${mod} - Reason: ${reason}`)
     }
     if (!Platform.isLoaded('embeddium') && Platform.isLoaded('rubidium')) {

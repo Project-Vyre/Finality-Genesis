@@ -141,6 +141,8 @@ ServerEvents.recipes(event => {
         { id: 'mysticalagriculture:essence/common/steel_ingot' },
         { id: 'mysticalagriculture:essence/minecraft/diamond' },
         { id: 'mysticalagriculture:essence/minecraft/netherite_ingot' },
+        { id: 'mysticalagriculture:essence/minecraft/glowstone_dust' },
+        { id: 'mysticalagriculture:essence/minecraft/netherrack' },
         { id: 'mysticalagriculture:supremium_ingot' },
         { id: 'mysticalagriculture:supremium_gemstone' }
     ])
@@ -594,6 +596,15 @@ ServerEvents.recipes(event => {
         'mysticalagriculture:wither_skeleton_essence'
     ]).id('finality:item_application/mysticalagriculture/witherproof_glass')
 
+    event.shaped('minecraft:netherrack', [
+        'NNN',
+        'NBN',
+        'NNN'
+    ], {
+        N: 'mysticalagriculture:nether_essence',
+        B: Item.of('minecraft:potion', '{Potion:"minecraft:strong_healing"}').weakNBT()
+    }).id('finality:mysticalagriculture/crafting/netherrack')
+
     // and just to keep patchouli silent
     event.shaped('kubejs:denied_result', [
         ' W ',
@@ -835,4 +846,9 @@ ServerEvents.recipes(event => {
         '9x mysticalagriculture:netherite_essence',
         Fluid.of('kubejs:infusion_energy', 1000)
     ], 'netherite_ingot')
+    event.recipes.create.mixing('minecraft:glowstone_dust', [
+        'mysticalagriculture:glowstone_essence',
+        'create:cinder_flour',
+        Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:night_vision"}')
+    ]).heated().id('finality:mysticalagriculture/mixing/glowstone_dust')
 })

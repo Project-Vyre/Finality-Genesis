@@ -88,6 +88,16 @@ StartupEvents.registry('item', event => {
     for (let [color, name] of Object.entries(seqDYE)) {
         event.create(`kubejs:incomplete_concrete_${color}_singularity`, 'create:sequenced_assembly').displayName(`§7Incomplete ${name} Concrete Singularity`).texture(`kubejs:item/incomplete_singularities/concrete/incomplete_concrete_${color}`).maxStackSize(1)
     }
+    event.create('kubejs:incomplete_salt_singularity', 'create:sequenced_assembly')
+        .texture('kubejs:item/incomplete_singularities/incomplete_salt')
+    event.create('kubejs:incomplete_potion_base_singularity', 'create:sequenced_assembly')
+        .texture('kubejs:item/incomplete_singularities/incomplete_potion_base')
+    event.create('kubejs:incomplete_blaze_cake_singularity', 'create:sequenced_assembly')
+        .texture('kubejs:item/incomplete_singularities/incomplete_blaze_cake')
+    event.create('kubejs:stabilizing_qubit', 'create:sequenced_assembly')
+        .texture('kubejs:item/stabilizing_qubit')
+    event.create('kubejs:stabilizing_entropy_particles', 'create:sequenced_assembly')
+        .texture('kubejs:item/stabilizing_entropy')
     for (let [mechanism, name] of Object.entries(PRIMORDIAL_MECHANISMS)) {
         event.create(`kubejs:${mechanism}`).displayName(`<rainb>${name}</rainb>`).texture(`kubejs:item/${mechanism}`).maxStackSize(64).fireResistant(true)
         event.create(`kubejs:incomplete_${mechanism}`, 'create:sequenced_assembly').displayName(`<rainb>Incomplete ${name}</rainb>`).texture(`kubejs:item/incomplete_${mechanism}`)

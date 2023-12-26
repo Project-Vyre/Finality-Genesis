@@ -248,17 +248,30 @@ ServerEvents.recipes(event => {
     ], {
         D: 'minecraft:diamond'
     }).id('finality:diamond_horse_armor')
-    event.recipes.create.mixing('kubejs:high_entropy_alloy', [
-        'extendedcrafting:the_ultimate_ingot',
-        'extendedcrafting:crystaltine_ingot',
-        'minecraft:netherite_ingot',
-        'create:polished_rose_quartz',
-        'create:brass_ingot',
-        'create:andesite_alloy',
-        'minecraft:diamond',
+    event.recipes.create.mixing([
+        Item.of('kubejs:unstable_entropy_particles').withChance(0.10),
+        Item.of('kubejs:errored_result').withChance(0.75),
+        Item.of('create:experience_nugget').withChance(0.25)
+    ], [
+        'create:chromatic_compound',
+        'create:railway_casing',
+        'minecraft:netherite_block',
+        'create:brass_block',
+        'create:andesite_alloy_block',
+        'minecraft:diamond_block',
         'minecraft:amethyst_shard',
-        Fluid.of('kubejs:condensed_universal_entropy', 500)
+        Fluid.of('kubejs:condensed_universal_entropy', 1000)
     ]).superheated().id('finality:mixing/high_entropy_alloy')
+    event.recipes.create.sequenced_assembly([
+        Item.of('kubejs:stable_entropy_particles').withChance(0.75),
+        Item.of('kubejs:unstable_entropy_particles').withChance(0.25)
+    ], 'kubejs:unstable_entropy_particles', [
+        event.recipes.create.filling('kubejs:stabilizing_entropy_particles', ['kubejs:stabilizing_entropy_particles', Fluid.of('kubejs:condensed_universal_order', 250)]),
+        event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles'),
+        event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles'),
+        event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles'),
+        event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles')
+    ]).transitionalItem('kubejs:stabilizing_entropy_particles').loops(256).id('finality:sequenced_assembly/stable_entropy_particles')
     event.shaped('kubejs:high_entropy_alloy_block', [
         'EEE',
         'EEE',
@@ -269,6 +282,24 @@ ServerEvents.recipes(event => {
     event.shapeless('9x kubejs:high_entropy_alloy', [
         'kubejs:high_entropy_alloy_block'
     ]).id('finality:high_entropy_alloy_block_decompression')
+    event.shaped('kubejs:high_entropy_alloy', [
+        'EEE',
+        'EEE',
+        'EEE'
+    ], {
+        E: 'kubejs:high_entropy_alloy_nugget'
+    }).id('finality:high_entropy_alloy_nugget_compression')
+    event.shapeless('9x kubejs:high_entropy_alloy_nugget', [
+        'kubejs:high_entropy_alloy'
+    ]).id('finality:high_entropy_alloy_decompression')
+    event.recipes.create.cutting(
+        '2x kubejs:high_entropy_alloy_rod',
+        'kubejs:high_entropy_alloy'
+    ).processingTime(200).id('finality:cutting/high_entropy_alloy_rod')
+    event.recipes.create.pressing(
+        'kubejs:high_entropy_alloy_sheet',
+        'kubejs:high_entropy_alloy'
+    ).id('finality:pressing/high_entropy_alloy_sheet')
     event.shaped('kubejs:final_helmet', [
         'EEE',
         'E E'
@@ -301,19 +332,19 @@ ServerEvents.recipes(event => {
         'S'
     ], {
         E: 'kubejs:high_entropy_alloy',
-        S: 'extendedcrafting:black_iron_ingot'
+        S: 'kubejs:high_entropy_alloy_rod'
     }).id('finality:crafting/final_sword')
     event.recipes.create.mechanical_crafting('kubejs:crystal_lance', [
         ' A ',
         ' A ',
-        'BNB',
+        'NNN',
         ' B ',
         ' B ',
         ' B ',
         ' B '
     ], {
         A: 'minecraft:amethyst_shard',
-        B: 'extendedcrafting:black_iron_ingot',
+        B: 'kubejs:echo_shard',
         N: 'minecraft:netherite_ingot'
     }).id('finality:crystal_lance')
     event.recipes.create.mechanical_crafting('kubejs:final_katana', [
@@ -325,7 +356,7 @@ ServerEvents.recipes(event => {
     ], {
         E: 'kubejs:high_entropy_alloy',
         G: 'minecraft:amethyst_shard',
-        I: 'extendedcrafting:black_iron_ingot'
+        I: 'kubejs:high_entropy_alloy_rod'
     }).id('finality:mechanical_crafting/final_katana')
     event.recipes.create.mechanical_crafting('kubejs:final_lance', [
         '  E  ',
@@ -337,7 +368,7 @@ ServerEvents.recipes(event => {
         '  I  '
     ], {
         E: 'kubejs:high_entropy_alloy',
-        I: 'extendedcrafting:black_iron_ingot'
+        I: 'kubejs:high_entropy_alloy_rod'
     }).id('finality:mechanical_crafting/final_lance')
     event.smithing('kubejs:final_lance', 'kubejs:crystal_lance', 'kubejs:high_entropy_alloy')
     event.shaped('kubejs:final_pickaxe', [
@@ -346,7 +377,7 @@ ServerEvents.recipes(event => {
         ' S '
     ], {
         E: 'kubejs:high_entropy_alloy',
-        S: 'extendedcrafting:black_iron_ingot'
+        S: 'kubejs:high_entropy_alloy_rod'
     }).id('finality:crafting/final_pickaxe')
     event.shaped('kubejs:final_axe', [
         'EE',
@@ -354,7 +385,7 @@ ServerEvents.recipes(event => {
         ' S'
     ], {
         E: 'kubejs:high_entropy_alloy',
-        S: 'extendedcrafting:black_iron_ingot'
+        S: 'kubejs:high_entropy_alloy_rod'
     }).id('finality:crafting/final_axe')
     event.shaped('kubejs:final_shovel', [
         'E',
@@ -362,7 +393,7 @@ ServerEvents.recipes(event => {
         'S'
     ], {
         E: 'kubejs:high_entropy_alloy',
-        S: 'extendedcrafting:black_iron_ingot'
+        S: 'kubejs:high_entropy_alloy_rod'
     }).id('finality:crafting/final_shovel')
     if (Platform.isLoaded('paxeljs')) {
         event.shaped('kubejs:final_paxel', [
@@ -373,7 +404,7 @@ ServerEvents.recipes(event => {
             A: 'kubejs:final_axe',
             B: 'kubejs:final_shovel',
             C: 'kubejs:final_pickaxe',
-            S: 'extendedcrafting:black_iron_ingot'
+            S: 'kubejs:high_entropy_alloy_rod'
         }).id('finality:crafting/final_paxel')
     }
     event.shaped('kubejs:final_hoe', [
@@ -382,7 +413,7 @@ ServerEvents.recipes(event => {
         ' S'
     ], {
         E: 'kubejs:high_entropy_alloy',
-        S: 'extendedcrafting:black_iron_ingot'
+        S: 'kubejs:high_entropy_alloy_rod'
     }).id('finality:crafting/final_hoe')
     event.shaped('kubejs:final_scythe', [
         'EEE',
@@ -390,7 +421,7 @@ ServerEvents.recipes(event => {
         ' S '
     ], {
         E: 'kubejs:high_entropy_alloy',
-        S: 'extendedcrafting:black_iron_ingot'
+        S: 'kubejs:high_entropy_alloy_rod'
     }).id('finality:crafting/final_scythe')
     event.recipes.create.mixing(Fluid.of('kubejs:mushroom_stew', 250), [
         'minecraft:brown_mushroom',
@@ -931,6 +962,38 @@ ServerEvents.recipes(event => {
         V: 'minecraft:structure_void',
         S: 'minecraft:soul_campfire'
     }).id('finality:spawner')
+    event.recipes.create.sequenced_assembly([
+        Item.of('kubejs:potion_base_singularity').withChance(0.25),
+        Item.of('kubejs:errored_result').withChance(0.25),
+        Item.of('minecraft:potion', '{Potion:"minecraft:mundane"}').withChance(0.25),
+        Item.of('minecraft:potion', '{Potion:"minecraft:thick"}').withChance(0.25),
+        Item.of('minecraft:potion', '{Potion:"minecraft:awkward"}').withChance(0.25)
+    ], 'kubejs:awakened_singularity_core', [
+        event.recipes.create.filling('kubejs:incomplete_potion_base_singularity', [
+            'kubejs:incomplete_potion_base_singularity',
+            Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:mundane"}')
+        ]),
+        event.recipes.create.filling('kubejs:incomplete_potion_base_singularity', [
+            'kubejs:incomplete_potion_base_singularity',
+            Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:thick"}')
+        ]),
+        event.recipes.create.filling('kubejs:incomplete_potion_base_singularity', [
+            'kubejs:incomplete_potion_base_singularity',
+            Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:awkward"}')
+        ])
+    ]).transitionalItem('kubejs:incomplete_potion_base_singularity').loops(12).id('finality:sequenced_assembly/potion_base_singularity')
+    event.recipes.create.sequenced_assembly([
+        Item.of('kubejs:blaze_cake_singularity').withChance(0.25),
+        Item.of('kubejs:errored_result').withChance(0.75),
+        'create:cinder_flour',
+        'minecraft:egg'
+    ], 'kubejs:awakened_singularity_core', [
+        event.recipes.create.deploying('kubejs:incomplete_blaze_cake_singularity', ['kubejs:incomplete_blaze_cake_singularity', 'create:blaze_cake']),
+        event.recipes.create.deploying('kubejs:incomplete_blaze_cake_singularity', ['kubejs:incomplete_blaze_cake_singularity', 'create:blaze_cake']),
+        event.recipes.create.deploying('kubejs:incomplete_blaze_cake_singularity', ['kubejs:incomplete_blaze_cake_singularity', 'create:blaze_cake']),
+        event.recipes.create.deploying('kubejs:incomplete_blaze_cake_singularity', ['kubejs:incomplete_blaze_cake_singularity', 'create:blaze_cake']),
+        event.recipes.create.pressing('kubejs:incomplete_blaze_cake_singularity', 'kubejs:incomplete_blaze_cake_singularity')
+    ]).transitionalItem('kubejs:incomplete_blaze_cake_singularity').loops(32).id('finality:sequenced_assembly/blaze_cake_singularity')
     for (let i = 0; i < CMD.length; i++) {
         let insert = CMD[i];
         event.recipes.create.deploying([
@@ -1033,11 +1096,9 @@ ServerEvents.recipes(event => {
     ]).id('finality:mixing/color_white')
     // shimmer usage
     event.recipes.create.mixing(Fluid.of('kubejs:shimmer', 250), [
+        'create:refined_radiance',
         Fluid.of('kubejs:condensed_universal_entropy', 500),
-        Fluid.of('minecraft:water', 500),
-        'minecraft:glowstone_dust',
-        'minecraft:redstone',
-        'create:polished_rose_quartz'
+        Fluid.of('minecraft:water', 500)
     ]).superheated().id('finality:mixing/shimmer_fluid_creation')
     event.recipes.create.compacting([
         'create:cinder_flour',
@@ -1093,6 +1154,36 @@ ServerEvents.recipes(event => {
         T: 'minecraft:tinted_glass',
         B: 'minecraft:barrel'
     }).id('finality:crafting/null_storage_block')
+    event.recipes.create.mixing('kubejs:qubit', [
+        'kubejs:zero',
+        'kubejs:one'
+    ]).superheated().id('finality:mixing/qubit')
+    event.recipes.create.sequenced_assembly([
+        Item.of('kubejs:zero').withChance(0.10),
+        Item.of('kubejs:one').withChance(0.10),
+        Item.of('kubejs:two').withChance(0.10),
+        Item.of('kubejs:three').withChance(0.10),
+        Item.of('kubejs:four').withChance(0.10),
+        Item.of('kubejs:five').withChance(0.10),
+        Item.of('kubejs:six').withChance(0.10),
+        Item.of('kubejs:seven').withChance(0.10),
+        Item.of('kubejs:eight').withChance(0.10),
+        Item.of('kubejs:nine').withChance(0.10)
+    ], 'kubejs:qubit', [
+        event.recipes.create.deploying('kubejs:stabilizing_qubit', ['kubejs:stabilizing_qubit', 'minecraft:blue_ice']),
+        event.recipes.create.deploying('kubejs:stabilizing_qubit', ['kubejs:stabilizing_qubit', 'minecraft:blue_ice']),
+        event.recipes.create.deploying('kubejs:stabilizing_qubit', ['kubejs:stabilizing_qubit', 'minecraft:blue_ice']),
+        event.recipes.create.deploying('kubejs:stabilizing_qubit', ['kubejs:stabilizing_qubit', 'minecraft:blue_ice'])
+    ]).transitionalItem('kubejs:stabilizing_qubit').loops(4).id('finality:sequenced_assembly/qubit_stabilization')
+    event.recipes.create.mechanical_crafting('kubejs:qubit', [
+        '/FIX Q'
+    ], {
+        '/': 'kubejs:slash',
+        'F': 'kubejs:letter_f',
+        'I': 'kubejs:letter_i',
+        'X': 'kubejs:letter_x',
+        'Q': ['kubejs:denied_result', 'kubejs:removed_item', 'kubejs:errored_result']
+    }).id('finality:mechanical_crafting/qubit')
     // give
     event.recipes.create.mechanical_crafting('64x minecraft:netherite_block', [
         '/GIVE @S ',
@@ -1118,6 +1209,54 @@ ServerEvents.recipes(event => {
         '6': 'kubejs:six',
         '4': 'kubejs:four'
     }).id('finality:command/netherite_block_stack')
+    event.recipes.create.mechanical_crafting('64x minecraft:diamond_block', [
+        '/GIVE @S ',
+        'DIAMOND  ',
+        'BLOCK 64 '
+    ], {
+        '/': 'kubejs:slash',
+        '@': 'kubejs:at_sign',
+        'G': 'kubejs:letter_g',
+        'I': 'kubejs:letter_i',
+        'V': 'kubejs:letter_v',
+        'E': 'kubejs:letter_e',
+        'S': 'kubejs:letter_s',
+        'D': 'kubejs:letter_d',
+        'A': 'kubejs:letter_a',
+        'M': 'kubejs:letter_m',
+        'O': 'kubejs:letter_o',
+        'N': 'kubejs:letter_n',
+        'B': 'kubejs:letter_b',
+        'L': 'kubejs:letter_l',
+        'C': 'kubejs:letter_c',
+        'K': 'kubejs:letter_k',
+        '6': 'kubejs:six',
+        '4': 'kubejs:four'
+    }).id('finality:command/diamond_block_stack')
+    event.recipes.create.mechanical_crafting('64x create:blaze_cake', [
+        '/GIVE @S ',
+        'CREATE   ',
+        'BLAZE    ',
+        'CAKE 64  '
+    ], {
+        '/': 'kubejs:slash',
+        '@': 'kubejs:at_sign',
+        'G': 'kubejs:letter_g',
+        'I': 'kubejs:letter_i',
+        'V': 'kubejs:letter_v',
+        'E': 'kubejs:letter_e',
+        'S': 'kubejs:letter_s',
+        'C': 'kubejs:letter_c',
+        'R': 'kubejs:letter_r',
+        'A': 'kubejs:letter_a',
+        'T': 'kubejs:letter_t',
+        'B': 'kubejs:letter_b',
+        'L': 'kubejs:letter_l',
+        'Z': 'kubejs:letter_z',
+        'K': 'kubejs:letter_k',
+        '6': 'kubejs:six',
+        '4': 'kubejs:four'
+    }).id('finality:command/blaze_cake_stack')
 })
 
 ServerEvents.tags('item', event => {
@@ -1681,7 +1820,7 @@ let modBlacklist = {
     createunlimited: 'Create: Unlimited'
 }
 
-for (let [id, name] of Object.entries(modBlacklist)) {
+for (let [id, name] of Object.keys(modBlacklist)) {
     if (Platform.isLoaded(`${id}`)) {
         ServerEvents.recipes(event => {
             event.remove({})
