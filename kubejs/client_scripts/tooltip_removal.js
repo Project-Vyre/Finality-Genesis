@@ -6,6 +6,29 @@
  */
 
 ItemEvents.tooltip(event => {
+    let music_discs = [
+        '13',
+        'cat',
+        'blocks',
+        'chirp',
+        'far',
+        'mall',
+        'mellohi',
+        'stal',
+        'strad',
+        'ward',
+        '11',
+        'wait',
+        'pigstep',
+        'otherside',
+        '5'
+    ]
+    for (let i = 0; i < music_discs.length; i++) {
+        let disc = music_discs[i];
+        event.addAdvanced(`minecraft:music_disc_${disc}`, (item, advanced, text) => {
+            text.remove(1)
+        })
+    }
     if (Platform.isLoaded('cataclysm')) {
         event.addAdvanced('cataclysm:bulwark_of_the_flame', (item, advanced, text) => {
             text.remove(1)

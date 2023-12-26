@@ -271,6 +271,20 @@ ClientEvents.highPriorityAssets(event => {
             "layer0": "kubejs:item/shimmer_bucket"
         }
     })
+    event.add('kubejs:models/item/potion_base_singularity', {
+        "parent": "item/generated",
+        "textures": {
+            "layer0": "kubejs:item/potion_base_singularity",
+            "layer1": "kubejs:item/potion_base_singularity_overlay"
+        }
+    })
+    event.add('kubejs:models/item/blaze_cake_singularity', {
+        "parent": "item/generated",
+        "textures": {
+            "layer0": "kubejs:item/blaze_cake_singularity",
+            "layer1": "kubejs:item/blaze_cake_singularity_overlay"
+        }
+    })
     if (!Platform.isLoaded('kubejs_create')) {
         let transitionalSeqItems = {
             entropy_mechanism: '<rainb>Entropy Mechanism</rainb>'

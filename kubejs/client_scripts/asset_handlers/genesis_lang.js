@@ -9,23 +9,6 @@
  */
 
 ClientEvents.lang('en_us', event => {
-    event.addAll('minecraft', {
-        "item.minecraft.music_disc_13.desc": "Cjbeards - Mirror Mirror (Instrumental)",
-        "item.minecraft.music_disc_cat.desc": "C418 - cat",
-        "item.minecraft.music_disc_blocks.desc": "C418 - blocks",
-        "item.minecraft.music_disc_chirp.desc": "Farabi Hasan Music - Arlecchino Battle Theme Phase 1 & 2 (Fan-Made) | Genshin Impact",
-        "item.minecraft.music_disc_far.desc": "C418 - far",
-        "item.minecraft.music_disc_mall.desc": "C418 - mall",
-        "item.minecraft.music_disc_mellohi.desc": "C418 - mellohi",
-        "item.minecraft.music_disc_stal.desc": "Cjbeards - Bad Deeds (Instrumental)",
-        "item.minecraft.music_disc_strad.desc": "C418 - strad",
-        "item.minecraft.music_disc_ward.desc": "C418 - ward",
-        "item.minecraft.music_disc_11.desc": "Cjbeards - From the Shadows",
-        "item.minecraft.music_disc_wait.desc": "C418 - wait",
-        "item.minecraft.music_disc_pigstep.desc": "Lena Raine - Pigstep",
-        "item.minecraft.music_disc_otherside.desc": "Lena Raine - otherside",
-        "item.minecraft.music_disc_5.desc": "Cjbeards - Heart of the Wicked",
-    })
     if (Platform.isLoaded('jeed')) {
         event.addAll('minecraft', {
             "effect.minecraft.absorption.desc": "Adds temporary hearts to absorb damage.",
@@ -310,6 +293,13 @@ ClientEvents.lang('en_us', event => {
             .setPalette($Palette.PURPLE)
             .build()
     )
+    event.addAll(
+        'kubejs',
+        createTooltip('kubejs:errored_result')
+            .addSummary('It somehow still exists, maybe it is being _suppressed_ and it can be _resolved_ through other means?')
+            .setPalette($Palette.RED)
+            .build()
+    )
     //event.add('block.kubejs.la_lettre_a_focalors', 'La Lettre a Focalors')
     //event.addAll(
     //    'kubejs',
@@ -402,6 +392,14 @@ ClientEvents.lang('en_us', event => {
             "eccentrictome.convert": "Shift + Right-click",
             "eccentrictome.name": "Eccentric Tome (%s)",
             "item.eccentrictome.tome": "Eccentric Tome"
+        })
+    }
+    if (Platform.isLoaded('createaddition')) {
+        event.addAll('createaddition', {
+            "createaddition.ponder.liquid_blaze_burner.header": "DISABLED - Liquid Fuel Burning",
+            "createaddition.ponder.liquid_blaze_burner.text_1": "DISABLED - Giving the Blaze Burner a Straw",
+            "createaddition.ponder.liquid_blaze_burner.text_2": "This feature is disabled.",
+            "createaddition.ponder.liquid_blaze_burner.text_3": "This feature is disabled."
         })
     }
     if (Platform.isLoaded('farmersdelight')) {
