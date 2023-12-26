@@ -21,6 +21,9 @@ ClientEvents.lang('en_us', event => {
             .setPalette($Palette.PURPLE)
             .build()
     )
+})
+
+/*
     event.addAll(
         'endertanks',
         createTooltip('endertanks:ender_bucket')
@@ -32,4 +35,4 @@ ClientEvents.lang('en_us', event => {
             .setPalette($Palette.PURPLE)
             .build()
     )
-})
+*/
