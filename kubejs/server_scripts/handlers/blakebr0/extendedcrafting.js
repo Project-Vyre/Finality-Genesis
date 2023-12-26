@@ -604,7 +604,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.emptying([
         Fluid.of('kubejs:condensed_universal_order', 250),
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:blue_ice"}').withChance(0.25)
-    ], Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:blue_ice"}')).id('finality:emptying/condensed_universal_order')
+    ], Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:blue_ice"}').strongNBT()).id('finality:emptying/condensed_universal_order')
 
     event.recipes.create.mixing('kubejs:high_entropy_alloy_nugget', [
         '9x kubejs:stable_entropy_particles',
