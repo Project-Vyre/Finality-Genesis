@@ -37,7 +37,7 @@ ServerEvents.recipes(event => {
         ], {
             A: 'extendedcrafting:advanced_component',
             W: '#minecraft:wool',
-            O: 'kubejs:high_entropy_alloy_sheet',
+            O: 'create:sturdy_sheet',
             C: 'minecraft:ender_chest',
             E: 'extendedcrafting:enhanced_ender_catalyst'
         }).id('finality:shetiphian/ender_chest')
