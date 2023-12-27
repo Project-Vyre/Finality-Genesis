@@ -270,6 +270,22 @@
 					item: "cataclysm:wither_assault_shoulder_weapon"
 					type: "item"
 				}
+				{
+					id: "5802E08C25DC1212"
+					item: {
+						Count: 1b
+						id: "cataclysm:laser_gatling"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "68EF0EB18B6E4DDE"
+					item: "cataclysm:meat_shredder"
+					type: "item"
+				}
 			]
 			title: "Locate the Ancient Factory."
 			x: 0.0d

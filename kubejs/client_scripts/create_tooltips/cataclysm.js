@@ -126,4 +126,58 @@ ClientEvents.lang('en_us', event => {
         "item.cataclysm.monstrous_eye.tooltip.condition1": "On R-click",
         "item.cataclysm.monstrous_eye.tooltip.behaviour1": "Throws the _Monstrous Eye_ into the air. _Follow_ it."
     })
+    event.addAll(
+        'cataclysm',
+        createTooltip('cataclysm:meat_shredder')
+            .addSummary('It does what it says it does, it _shreds_ your enemies.')
+            .addBehaviour([
+                'On R-Click',
+                'Damages entities in front of you while _ignoring invulnerability frames_.'
+            ])
+            .setPalette($Palette.RED)
+            .build()
+    )
+    event.addAll(
+        'cataclysm',
+        createTooltip('cataclysm:laser_gatling')
+            .addSummary('A _rapid fire_ laser gatling weapon. Also sets things _on fire_!')
+            .addBehaviour([
+                'To reload',
+                'Use _redstone_ in your inventory.'
+            ])
+            .setPalette($Palette.RED)
+            .build()
+    )
+    event.addAll(
+        'cataclysm',
+        createTooltip('cataclysm:sandstorm_in_a_bottle')
+            .addSummary('When worn in the _belt slot_, press _V_ to turn into a _sandstorm_.')
+            .setPalette($Palette.YELLOW)
+            .build()
+    )
+    event.addAll(
+        'cataclysm',
+        createTooltip('cataclysm:remnant_skull')
+            .addSummary('_Summons_ the Modern Remnant. Can be tamed through using the _Brush_ on it.')
+            .setPalette($Palette.YELLOW)
+            .build()
+    )
+    event.addAll(
+        'cataclysm',
+        createTooltip('cataclysm:necklace_of_the_desert')
+            .addSummary('It looks like you can _wake something up_...')
+            .setPalette($Palette.YELLOW)
+            .build()
+    )
+    event.addAll(
+        'cataclysm',
+        createTooltip('cataclysm:desert_eye')
+            .addSummary('_Guides_ you to the _closest_ Cursed Pyramid where the _Ancient Remnant_ resides. Only usable in the _Overworld_. Unusable in other dimensions.')
+            .addBehaviour([
+                'On R-Click',
+                'Throws the _Desert Eye_ into the air. _Follow_ it.'
+            ])
+            .setPalette($Palette.YELLOW)
+            .build()
+    )
 })

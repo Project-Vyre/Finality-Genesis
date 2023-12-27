@@ -333,10 +333,10 @@
 ["Modern Remnant"]
 	#Modern Remnant's Health Multiplier
 	#Range: 0.0 ~ 1000000.0
-	ModernRemnantHealthMultiplier = 1.0
+	ModernRemnantHealthMultiplier = 5.0
 	#Modern Remnant's Damage Multiplier
 	#Range: 0.0 ~ 1000000.0
-	ModernRemnantDamageMultiplier = 1.0
+	ModernRemnantDamageMultiplier = 250.0
 
 ["Ancient Remnant"]
 	#Ancient Remnant's Health Multiplier

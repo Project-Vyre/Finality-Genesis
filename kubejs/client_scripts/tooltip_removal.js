@@ -84,6 +84,21 @@ ItemEvents.tooltip(event => {
         event.addAdvanced('cataclysm:blessed_amethyst_crab_meat', (item, advanced, text) => {
             text.remove(1)
         })
+        event.addAdvanced('cataclysm:meat_shredder', (item, advanced, text) => {
+            text.remove(1)
+        })
+        event.addAdvanced('cataclysm:laser_gatling', (item, advanced, text) => {
+            text.remove(1)
+        })
+        event.addAdvanced('cataclysm:sandstorm_in_a_bottle', (item, advanced, text) => {
+            text.remove(1)
+        })
+        event.addAdvanced('cataclysm:remnant_skull', (item, advanced, text) => {
+            text.remove(1)
+        })
+        event.addAdvanced('cataclysm:necklace_of_the_desert', (item, advanced, text) => {
+            text.remove(1)
+        })
     }
     if (Platform.isLoaded('etched')) {
         event.addAdvanced('etched:boombox', (item, advanced, text) => {
