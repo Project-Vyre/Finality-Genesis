@@ -108,10 +108,9 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     /**
      * 
      * @param {string} itemId 
-     * @param {string} displayName 
      */
-    let standardNoDisplay = (itemId, displayName) => {
-        event.create(`kubejs:${itemId}`).displayName(displayName).texture(`kubejs:item/${itemId}`).maxStackSize(64)
+    let standardNoDisplay = (itemId) => {
+        event.create(`kubejs:${itemId}`).texture(`kubejs:item/${itemId}`).maxStackSize(64)
     }
     /**
      * 
