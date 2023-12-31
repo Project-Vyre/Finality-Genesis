@@ -78,3 +78,6 @@ net.minecraft.client.gui.screens.PauseScreen {
 me.jellysquid.mods.sodium.client.gui.SodiumOptionsGUI {
 }
 
+me.flashyreese.mods.reeses_sodium_options.client.gui.SodiumVideoOptionsScreen {
+}
+
