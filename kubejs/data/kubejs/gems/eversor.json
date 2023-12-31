@@ -1,0 +1,162 @@
+{
+  "variant": "eversor",
+  "weight": 0,
+  "quality": 0,
+  "dimensions": [],
+  "bonuses": [
+    {
+      "type": "apotheosis:multi_attribute",
+      "desc": "bonus.apotheosis:multi_attr.desc.and",
+      "gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      "modifiers": [
+        {
+          "attribute": "apotheosis:armor_pierce",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.5,
+            "uncommon": 1,
+            "rare": 25.0,
+            "epic": 50.0,
+            "mythic": 75.0,
+            "ancient": 900000.0
+          }
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.5,
+            "uncommon": 1,
+            "rare": 25.0,
+            "epic": 50.0,
+            "mythic": 75.0,
+            "ancient": 900000.0
+          }
+        }
+      ]
+    },
+    {
+      "type": "apotheosis:multi_attribute",
+      "desc": "bonus.apotheosis:multi_attr.desc.and",
+      "gem_class": {
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      },
+      "modifiers": [
+        {
+          "attribute": "apotheosis:armor_shred",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.05,
+            "uncommon": 0.10,
+            "rare": 0.125,
+            "epic": 0.15,
+            "mythic": 0.175,
+            "ancient": 900000.0
+          }
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.5,
+            "uncommon": 1,
+            "rare": 25.0,
+            "epic": 50.0,
+            "mythic": 75.0,
+            "ancient": 900000.0
+          }
+        }
+      ]
+    },
+    {
+      "type": "apotheosis:attribute",
+      "gem_class": {
+        "key": "breaker",
+        "types": [
+          "shovel",
+          "pickaxe"
+        ]
+      },
+      "attribute": "forge:reach_distance",
+      "operation": "MULTIPLY_BASE",
+      "values": {
+        "common": 0.5,
+        "uncommon": 1,
+        "rare": 5,
+        "epic": 10,
+        "mythic": 25,
+        "ancient": 50
+      }
+    },
+    {
+      "type": "apotheosis:multi_attribute",
+      "desc": "bonus.apotheosis:multi_attr.desc.and",
+      "gem_class": {
+        "key": "ranged_weapon",
+        "types": [
+          "bow",
+          "crossbow"
+        ]
+      },
+      "modifiers": [
+        {
+          "attribute": "apotheosis:prot_pierce",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.5,
+            "uncommon": 1,
+            "rare": 25.0,
+            "epic": 50.0,
+            "mythic": 75.0,
+            "ancient": 900000.0
+          }
+        },
+        {
+          "attribute": "apotheosis:arrow_velocity",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.5,
+            "uncommon": 1,
+            "rare": 25.0,
+            "epic": 50.0,
+            "mythic": 75.0,
+            "ancient": 900000.0
+          }
+        },
+        {
+          "attribute": "apotheosis:arrow_damage",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.5,
+            "uncommon": 1,
+            "rare": 25.0,
+            "epic": 50.0,
+            "mythic": 75.0,
+            "ancient": 900000.0
+          }
+        },
+        {
+          "attribute": "apotheosis:crit_damage",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.5,
+            "uncommon": 1,
+            "rare": 25.0,
+            "epic": 50.0,
+            "mythic": 75.0,
+            "ancient": 900000.0
+          }
+        }
+      ]
+    }
+  ]
+}
