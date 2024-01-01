@@ -375,7 +375,8 @@ ClientEvents.lang('en_us', event => {
             "kubejs.boss_gate_large": "Large Apothic Boss Gate",
             "kubejs.ultimatum_boss_gate": "Ultimatum Boss Gate",
             "kubejs.mutant_boss_gate_large": "Large Mutant Boss Gate",
-            "kubejs.mass_destruction_boss_gate_large": "Bosses of Mass Destruction Gate"
+            "kubejs.mass_destruction_boss_gate_large": "Bosses of Mass Destruction Gate",
+            "item.apotheosis.gem.kubejs:eversor": "Eversor Gem"
         })
     }
     if (Platform.isLoaded('atmospheric')) {
