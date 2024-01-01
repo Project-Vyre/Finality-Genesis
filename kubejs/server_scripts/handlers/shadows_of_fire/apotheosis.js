@@ -163,6 +163,17 @@ ServerEvents.recipes(event => {
             'kubejs:command_block'
         ]).keepHeldItem().id(`finality:ancient_${gem}_upgrade`)
     }
+    event.recipes.create.crushing([
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"common"}').withChance(0.90),
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"uncommon"}').withChance(0.50),
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"rare"}').withChance(0.25),
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"epic"}').withChance(0.10),
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"mythic"}').withChance(0.05)
+    ], 'kubejs:stable_entropy_particles').processingTime(500).id('finality:crushing/eversor_gem')
+    event.recipes.create.deploying(Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"ancient"}').weakNBT(), [
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"mythic"}'),
+        'kubejs:command_block'
+    ]).keepHeldItem().id('finality:ancient_eversor_upgrade')
     event.shaped('6x minecraft:arrow', [
         'F',
         'S',
