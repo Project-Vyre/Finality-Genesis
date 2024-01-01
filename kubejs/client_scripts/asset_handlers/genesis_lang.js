@@ -16,6 +16,7 @@ ClientEvents.lang('en_us', event => {
             "effect.minecraft.resistance.desc": "Decreases amount of incoming damage.",
             "effect.minecraft.glowing.desc": "Become visible to everyone around you.",
             "effect.minecraft.levitation.desc": "You'll float too!",
+            "effect.minecraft.slow_falling.desc": "Your descent speed is slowed.",
             "effect.minecraft.wither.desc": "It's poison, but actually kills!"
         })
     }
@@ -94,7 +95,6 @@ ClientEvents.lang('en_us', event => {
         "block.minecraft.pointed_dripstone.tooltip.summary": "Now has _additional uses_ in recipes.",
         "block.minecraft.pointed_dripstone.tooltip.condition1": "Usage",
         "block.minecraft.pointed_dripstone.tooltip.behaviour1": "Can now be used in making _Tridents_.",
-
         "block.minecraft.cobbled_deepslate.tooltip": "COBBLED DEEPSLATE",
         "block.minecraft.cobbled_deepslate.tooltip.summary": "Now has _additional uses_ in recipes.",
         "block.minecraft.cobbled_deepslate.tooltip.condition1": "When crushed",

@@ -11,7 +11,6 @@ ItemEvents.tooltip(event => {
         'functionalstorage:framed_simple_compacting_drawer'
     ], (item, advanced, text) => {
         text.remove(1)
-        text.remove(1)
     })
 })
 

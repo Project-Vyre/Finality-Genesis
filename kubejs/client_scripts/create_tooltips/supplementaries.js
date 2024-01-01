@@ -40,4 +40,14 @@ ClientEvents.lang('en_us', event => {
         "block.supplementaries.enderman_head.tooltip.condition1": "When stared at",
         "block.supplementaries.enderman_head.tooltip.behaviour1": "_Provides_ redstone power."
     })
+    event.addAll(
+        'supplementaries',
+        createTooltip('supplementaries:antique_ink')
+            .addSummary('A rare item which is often found in _urns_, _fishing loot_, or _sold_ by _master cartographers_.')
+            .addBehaviour([
+                'When used on sign',
+                'Changes the sign font to be _fancy_.'
+            ])
+            .build()
+    )
 })
