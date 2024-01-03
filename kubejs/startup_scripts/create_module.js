@@ -92,6 +92,18 @@ StartupEvents.registry('item', event => {
         .texture('kubejs:item/incomplete_singularities/incomplete_salt')
     event.create('kubejs:incomplete_potion_base_singularity', 'create:sequenced_assembly')
         .texture('kubejs:item/incomplete_singularities/incomplete_potion_base')
+    if (Platform.isLoaded('create_bic_bit')) {
+        event.create('kubejs:incomplete_speculaas_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder')
+        event.create('kubejs:incomplete_stroopwafel_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder')
+        event.create('kubejs:incomplete_oliebollen_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder')
+        event.create('kubejs:incomplete_kroket_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder')
+        event.create('kubejs:incomplete_bitterballen_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder')
+        event.create('kubejs:incomplete_frikandel_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder')
+        event.create('kubejs:incomplete_fries_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder')
+        event.create('kubejs:incomplete_churros_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder')
+        event.create('kubejs:incomplete_stamppot_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder')
+        event.create('kubejs:incomplete_bic_bit_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder')
+    }
     event.create('kubejs:incomplete_blaze_cake_singularity', 'create:sequenced_assembly')
         .texture('kubejs:item/incomplete_singularities/incomplete_blaze_cake')
     event.create('kubejs:stabilizing_qubit', 'create:sequenced_assembly')

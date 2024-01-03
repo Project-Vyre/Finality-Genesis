@@ -465,8 +465,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     for (let [item, name] of Object.entries(global.RGBWCMY)) {
         RGBWCMYK_OBJECTS(item, name)
     }
-    event.create('kubejs:potion_base_singularity')
-    event.create('kubejs:blaze_cake_singularity')
     if (Platform.isLoaded('delightful')) {
         event.create('kubejs:dried_matcha_leaves')
             .displayName('Dried Matcha Leaves')
@@ -695,53 +693,23 @@ StartupEvents.registry('fluid', event => {
         .thickTexture(0x77D8FF)
         .bucketColor(0x77D8FF)
         .luminosity(15)
-    /**
-     * 
-     * @param {*} event 
-     * @param {string} fluidId 
-     * @param {string} displayName 
-     * @param {HEX} color 
-     */
-    let MOLTEN_METAL = (fluidId, displayName, color) => {
-        event.create(`kubejs:${fluidId}`).displayName(displayName).thickTexture(color).bucketColor(color).luminosity(15)
-    }
-    MOLTEN_METAL('molten_iron', '§cMolten Iron', 0xFF8423)
-    MOLTEN_METAL('molten_gold', '§eMolten Gold', 0xFDF55F)
-    MOLTEN_METAL('molten_copper', '§6Molten Copper', 0xFDD686)
-    MOLTEN_METAL('molten_zinc', '§3Molten Zinc', 0xD3E8D6)
-    MOLTEN_METAL('molten_brass', '§eMolten Brass', 0xFBAA68)
-    MOLTEN_METAL('molten_netherite', '§8Molten Netherite', 0x7E6059)
-    event.create('kubejs:inferior_infusion_essence')
-        .displayName('§eInferior Infusion Essence§r')
-        .thickTexture(0xACCF00)
-        .bucketColor(0xACCF00)
-        .luminosity(7)
-    event.create('kubejs:supreme_infusion_essence')
-        .displayName('§eSupreme Infusion Essence§r')
-        .thickTexture(0xFC0000)
-        .bucketColor(0xFC0000)
-        .luminosity(15)
-
-    event.create('kubejs:mushroom_stew')
-        .thinTexture(0xCA9777)
-        .bucketColor(0xCA9777)
-
     let shimmer = event.create('kubejs:shimmer')
         .flowingTexture('kubejs:block/shimmer_flow')
         .stillTexture('kubejs:block/shimmer_still')
     shimmer.bucketItem.texture('kubejs:item/shimmer_bucket')
     shimmer.bucketItem.glow(true);
-
-    event.create('kubejs:walnut_oil')
-        .thinTexture(0x98630B)
-        .bucketColor(0x98630B)
-    event.create('kubejs:fig_vinegar')
-        .thinTexture(0x2F0700)
-        .bucketColor(0x2F0700)
-    event.create('kubejs:nether_wart_jam')
-        .thinTexture(0x5C151A)
-        .bucketColor(0x5C151A)
+    
     if (Platform.isLoaded('mysticalagriculture')) {
+        event.create('kubejs:inferior_infusion_essence')
+            .displayName('§eInferior Infusion Essence§r')
+            .thickTexture(0xACCF00)
+            .bucketColor(0xACCF00)
+            .luminosity(7)
+        event.create('kubejs:supreme_infusion_essence')
+            .displayName('§eSupreme Infusion Essence§r')
+            .thickTexture(0xFC0000)
+            .bucketColor(0xFC0000)
+            .luminosity(15)
         event.create('kubejs:infusion_energy')
             .thinTexture(0x99FFF9)
             .bucketColor(0x99FFF9)
