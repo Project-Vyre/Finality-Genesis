@@ -374,4 +374,18 @@ ClientEvents.lang('en_us', event => {
     GRAY_WHITE_PALETTE('create:chromatic_compound')
     GRAY_GOLD_PALETTE('create:refined_radiance')
     GRAY_PALETTE('create:shadow_steel')
+    event.addAll(
+        'kubejs',
+        createTooltip('kubejs:unstable_entropy_particles')
+            .addSummary('It appears that it needs to be _stabilized_ first by something that is _very_ cold.')
+            .setPalette($Palette.PURPLE)
+            .build()
+    )
+    event.addAll(
+        'kubejs',
+        createTooltip('kubejs:stable_entropy_particles')
+            .addSummary('Can now be molded into other forms that may be more useful.')
+            .setPalette($Palette.PURPLE)
+            .build()
+    )
 })

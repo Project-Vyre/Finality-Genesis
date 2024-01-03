@@ -30,4 +30,21 @@ ClientEvents.lang('en_us', event => {
         "block.cloudstorage.static_cloud_chest.tooltip.condition2": "How to Switch Channels",
         "block.cloudstorage.static_cloud_chest.tooltip.behaviour2": "The process is similar to the regular cloud chest, just use balloons with a _static charge_."
     })
+    event.addAll(
+        'cloudstorage',
+        createTooltip('cloudstorage:static_cloud')
+            .addSummary('Used for giving balloons a _static charge_ to send up chests to the _static cloud_.')
+            .setPalette($Palette.BLUE)
+            .build()
+    )
+    event.addAll(
+        'cloudstorage',
+        createTooltip('cloudstorage:balloon')
+            .addSummary('Can be used to add _additional storage_. Pops easily!')
+            .addBehaviour([
+                'On R-Click on regular chests',
+                'Used for adding additional storage to a _Cloud Chest_ or a _Static Cloud Chest_. Ensure that the balloon _type_ AND _color_ match with the chest you are trying to add storage to!'
+            ])
+            .build()
+    )
 })
