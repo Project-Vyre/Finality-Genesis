@@ -50,4 +50,77 @@ ClientEvents.lang('en_us', event => {
             ])
             .build()
     )
+    event.addAll(
+        'supplementaries',
+        createTooltip('supplementaries:slingshot')
+            .addSummary('A tool that can _shoot_ blocks! Not intended to be used as a weapon.')
+            .addBehaviour([
+                'On R-Click then releasing',
+                'Shoots out blocks. Blocks will _place themselves_ wherever they land if the position is suitable.'
+            ])
+            .addBehaviour([
+                'When enchanted with Stasis',
+                'Is able to shoot out blocks in a _straight_ line without being affected by gravity. It will also show a _white outline_ where the block will land. _Stasis_ can only be acquired from _End Cities_!'
+            ])
+            .addBehaviour([
+                'Other eligible enchantments',
+                'Can also be enchanted with _Quick Charge_ and _Multi Shot_ which should both be self-explanatory.'
+            ])
+            .build()
+    )
+    event.addAll(
+        'supplementaries',
+        createTooltip('supplementaries:wrench')
+            .addSummary('It\'s only purpose is to _rotate_ blocks and entities. Rotation point is based on the _block face_ you click on, similar to Create\'s Wrench.')
+            .addBehaviour([
+                'On Sneak + R-Click',
+                'Rotates in the _reverse_ direction.'
+            ])
+            .addBehaviour([
+                'On L-Click on entities',
+                'Rotates.'
+            ])
+            .addBehaviour([
+                'Other info',
+                'Works on blocks such as _signs_, _way signs_, _double skulls_, _double chests_, _beds_, etc.'
+            ])
+            .addBehaviour([
+                'Is it a weapon?',
+                'Yes, it can be used as a _weak_ weapon.'
+            ])
+            .build()
+    )
+    event.addAll(
+        'supplementaries',
+        createTooltip('supplementaries:soap')
+            .addSummary('Need to _clean_? Soap is all you need! Can be _combined_ with many dyed items to revert them to their _default_ or _white_ state.')
+            .addBehaviour([
+                'On R-Click on dyed block',
+                '_Washes_ the dye off.'
+            ])
+            .addBehaviour([
+                'On R-Click on slimed pistons',
+                '_Removes_ the slime from the sticky piston face.'
+            ])
+            .addBehaviour([
+                'On R-Click on other blocks that are applicable',
+                'Is able to clean _blackboards_, _antique globes and maps_, _tipped spikes_, etc.'
+            ])
+            .build()
+    )
+    event.addAll(
+        'supplementaries',
+        createTooltip('supplementaries:bomb_blue')
+            .addSummary('The more _powerful_ version of the bomb. Also does _not explode on impact_ and has a delayed explosion time to give ample time to _RUN_.')
+            .addBehaviour([
+                'Explosion Info',
+                'The explosion from a _blue bomb_ deals significant AoE damage to entities, _set them on fire_ and also afflict them with a _weakness_ debuff.'
+            ])
+            .addBehaviour([
+                'Other info',
+                'Explosions cause Creepers to _explode_.'
+            ])
+            .setPalette($Palette.BLUE)
+            .build()
+    )
 })

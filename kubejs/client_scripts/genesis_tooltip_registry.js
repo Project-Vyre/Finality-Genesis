@@ -376,6 +376,25 @@ ClientEvents.lang('en_us', event => {
     GRAY_PALETTE('create:shadow_steel')
     event.addAll(
         'kubejs',
+        createTooltip('minecraft:obsidian')
+            .addSummary('_Infinitely_ renewable but takes forever to break automatically.')
+            .addBehaviour([
+                'Method 1 - Drills',
+                'You can have a _deployer_ place a _lava bucket_ next to a waterlogged block or drill. This does take a while, however.'
+            ])
+            .addBehaviour([
+                'Method 2 - Contraption Parking',
+                'You can have a _Mechanical Bearing_ or _Mechanical Piston_ park blocks into place to break the obsidian instantly.'
+            ])
+            .addBehaviour([
+                'Method 3 - Cursed Recipes',
+                'You can _compact_ Water and Lava in a Basin because of Create\'s cursed recipe magic or other methods shown by the recipe viewer.'
+            ])
+            .setPalette($Palette.PURPLE)
+            .build()
+    )
+    event.addAll(
+        'kubejs',
         createTooltip('kubejs:unstable_entropy_particles')
             .addSummary('It appears that it needs to be _stabilized_ first by something that is _very_ cold.')
             .setPalette($Palette.PURPLE)
