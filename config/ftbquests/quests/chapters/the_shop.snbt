@@ -302,6 +302,148 @@
 			x: 2.5d
 			y: -4.5d
 		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "3C3B0C4783CCC42E"
+			rewards: [{
+				id: "39781B690E27142A"
+				item: "kubejs:high_entropy_alloy"
+				type: "item"
+			}]
+			subtitle: "Got any Entropy Coins to convert?"
+			tasks: [{
+				consume_items: true
+				disable_toast: true
+				id: "21015316199D78BE"
+				item: "kubejs:entropy_coin"
+				type: "item"
+			}]
+			title: "Entropy Coin to H.E.A Conversion"
+			x: 0.0d
+			y: 8.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "3CD97106597161FB"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "59AD31885676C073"
+				table_id: 7080486431739256636L
+				type: "random"
+			}]
+			subtitle: "Want to try your luck?"
+			tasks: [{
+				consume_items: true
+				disable_toast: true
+				id: "0BAD049D221AFA72"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:copper"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			title: "Copper Singularity Grab Machine"
+			x: -4.5d
+			y: -2.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "79707400E036B51E"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "383D4E2BFAFF89F4"
+				table_id: 860113756744595796L
+				type: "random"
+			}]
+			subtitle: "Want to try your luck?"
+			tasks: [{
+				consume_items: true
+				disable_toast: true
+				id: "68758FBEA9417C23"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:iron"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			title: "Iron Singularity Grab Machine"
+			x: 4.5d
+			y: -2.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "0F40B913DB55176F"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "57D74757A2CE1BD7"
+				table_id: 1404298105814737688L
+				type: "random"
+			}]
+			subtitle: "Want to try your luck?"
+			tasks: [{
+				consume_items: true
+				disable_toast: true
+				id: "1FA8AEA6202C057B"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:netherite"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			title: "Netherite Singularity Grab Machine"
+			x: -4.5d
+			y: 2.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "66C295822C53109E"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "55029DC529D0708F"
+				table_id: 4003590059278366596L
+				type: "random"
+			}]
+			subtitle: "Want to try your luck?"
+			tasks: [{
+				consume_items: true
+				disable_toast: true
+				id: "2AEA6A6828F0728A"
+				item: {
+					Count: 1b
+					id: "extendedcrafting:singularity"
+					tag: {
+						Id: "extendedcrafting:gold"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			title: "Gold Singularity Grab Machine"
+			x: 4.5d
+			y: 2.5d
+		}
 	]
 	subtitle: ["Currency exchange for coins."]
 	title: "The Shop"

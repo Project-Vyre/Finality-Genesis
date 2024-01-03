@@ -12,11 +12,15 @@
 	quests: [
 		{
 			dependencies: ["4A691BB889286C89"]
-			description: ["You are free to utilize whatever storage methods you feel best suit your needs."]
+			description: [
+				"You are free to utilize whatever storage methods you feel best suit your needs."
+				""
+				"&eCreate&r can also be utilized to become your storage management system if you put in the effort of setting up something impressive."
+			]
 			hide: true
 			id: "1229F8883A381F07"
 			size: 1.5d
-			subtitle: "There are many options for storage. Sophisticated Storage, Backpacks, Iron Chests, etc."
+			subtitle: "There are many options for storage."
 			tasks: [{
 				id: "6F00A5E440FE9504"
 				title: "Everything Storage checkmark"
@@ -311,6 +315,76 @@
 			title: "Shareable Cloud Storage - Static Cloud Chest"
 			x: 0.0d
 			y: 8.0d
+		}
+		{
+			dependencies: ["1229F8883A381F07"]
+			id: "301D20710476E211"
+			subtitle: "Blastproof and *secure!"
+			tasks: [{
+				id: "078A5AE4E756FD21"
+				item: {
+					Count: 1b
+					id: "monobank:monobank"
+					tag: { }
+				}
+				type: "item"
+			}]
+			title: "Big Bank"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["301D20710476E211"]
+			id: "058EC694FF4FE1C9"
+			subtitle: "Drawers are pretty hefty."
+			tasks: [{
+				id: "12A35040DB282694"
+				item: "functionalstorage:oak_1"
+				type: "item"
+			}]
+			title: "Drawers!"
+			x: -3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["301D20710476E211"]
+			id: "5140FC24786708B5"
+			tasks: [
+				{
+					id: "526CAF2E9C2C5C33"
+					item: "functionalstorage:copper_upgrade"
+					type: "item"
+				}
+				{
+					id: "054EE76284B88D15"
+					item: "functionalstorage:gold_upgrade"
+					type: "item"
+				}
+				{
+					id: "3CEA5BCD8FD7EE69"
+					item: "functionalstorage:diamond_upgrade"
+					type: "item"
+				}
+				{
+					id: "2AC7DF9B86EE181D"
+					item: "functionalstorage:netherite_upgrade"
+					type: "item"
+				}
+			]
+			title: "Storage Upgrades"
+			x: -2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["058EC694FF4FE1C9"]
+			id: "0D79A9F2AA71B6E9"
+			tasks: [{
+				id: "2B610225571C90A4"
+				item: "functionalstorage:ender_drawer"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 1.5d
 		}
 	]
 	subtitle: ["Organization is your best friend."]

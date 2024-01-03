@@ -1,0 +1,18 @@
+{
+	icon: {
+		Count: 1b
+		id: "extendedcrafting:singularity"
+		tag: {
+			Id: "extendedcrafting:netherite"
+		}
+	}
+	id: "137D11AFDBD76318"
+	loot_size: 1
+	order_index: 23
+	rewards: [
+		{ item: "kubejs:gold_coin", weight: 10.0f }
+		{ item: "kubejs:iron_coin" }
+		{ item: "kubejs:netherite_coin", weight: 0.01f }
+	]
+	title: "Netherite Singularity Pool"
+}

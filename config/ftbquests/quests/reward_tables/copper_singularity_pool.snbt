@@ -1,0 +1,19 @@
+{
+	icon: {
+		Count: 1b
+		id: "extendedcrafting:singularity"
+		tag: {
+			Id: "extendedcrafting:copper"
+		}
+	}
+	id: "6242F0E548CA9F3C"
+	loot_size: 1
+	order_index: 20
+	rewards: [
+		{ item: "kubejs:copper_coin", weight: 7.0f }
+		{ count: 8, item: "kubejs:copper_coin", weight: 5.0f }
+		{ count: 64, item: "kubejs:copper_coin", weight: 0.1f }
+		{ count: 16, item: "kubejs:copper_coin" }
+	]
+	title: "Copper Singularity Pool"
+}
