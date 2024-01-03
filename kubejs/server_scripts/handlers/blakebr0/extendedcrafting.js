@@ -715,7 +715,8 @@ ServerEvents.recipes(event => {
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:gold"}').strongNBT(),
         Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:salt"}').strongNBT(),
         'kubejs:potion_base_singularity',
-        'kubejs:blaze_cake_singularity'
+        'kubejs:blaze_cake_singularity',
+        'kubejs:bic_bit_singularity'
     ]).merge({ tier: 4 }).id('kubejs:cucumber_library_failure')
 })
 
