@@ -1,6 +1,7 @@
 // priority: 100
 // requires: kubejs_create
 // requires: supplementaries
+// requires: salt
 
 /**
  * @file Handler for core recipes.
@@ -248,9 +249,19 @@ ServerEvents.recipes(event => {
     ], {
         D: 'minecraft:diamond'
     }).id('finality:diamond_horse_armor')
+    event.shaped('create:brown_toolbox', [
+        ' W ',
+        'SBS',
+        ' L '
+    ], {
+        W: 'create:cogwheel',
+        S: 'create:golden_sheet',
+        B: 'minecraft:barrel',
+        L: '#forge:leather'
+    }).id('finality:crafting/toolbox_from_barrel')
     event.recipes.create.mixing([
-        Item.of('kubejs:unstable_entropy_particles').withChance(0.10),
-        Item.of('kubejs:errored_result').withChance(0.75),
+        Item.of('kubejs:unstable_entropy_particles').withChance(0.25),
+        Item.of('kubejs:errored_result').withChance(0.50),
         Item.of('create:experience_nugget').withChance(0.25)
     ], [
         'create:chromatic_compound',
@@ -262,6 +273,10 @@ ServerEvents.recipes(event => {
         'minecraft:amethyst_shard',
         Fluid.of('kubejs:condensed_universal_entropy', 1000)
     ]).superheated().id('finality:mixing/high_entropy_alloy')
+    event.recipes.create.mixing('kubejs:unstable_entropy_particles', [
+        'kubejs:errored_result',
+        Fluid.of('kubejs:condensed_universal_entropy', 250)
+    ]).id('finality:mixing/errored_result_recycling')
     event.recipes.create.sequenced_assembly([
         Item.of('kubejs:stable_entropy_particles').withChance(0.75),
         Item.of('kubejs:unstable_entropy_particles').withChance(0.25)
@@ -271,7 +286,7 @@ ServerEvents.recipes(event => {
         event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles'),
         event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles'),
         event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles')
-    ]).transitionalItem('kubejs:stabilizing_entropy_particles').loops(256).id('finality:sequenced_assembly/stable_entropy_particles')
+    ]).transitionalItem('kubejs:stabilizing_entropy_particles').loops(4).id('finality:sequenced_assembly/stable_entropy_particles')
     event.shaped('kubejs:high_entropy_alloy_block', [
         'EEE',
         'EEE',
@@ -560,9 +575,29 @@ ServerEvents.recipes(event => {
     event.recipes.create.compacting('minecraft:ice', '9x minecraft:snow_block').id('finality:snow_compacting')
     event.recipes.create.compacting('minecraft:coal', [
         'minecraft:charcoal',
-        'minecraft:moss_block',
-        Fluid.of('create:potion', '{Bottle:"REGULAR",Potion:"minecraft:thick"}') // Item.of('minecraft:potion', '{Potion:"minecraft:thick"}') {Bottle:"REGULAR",Potion:"mutantmonsters:chemical_x"}
+        ['#minecraft:leaves', 'minecraft:moss_block'],
+        Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:thick"}') // Item.of('minecraft:potion', '{Potion:"minecraft:thick"}') {Bottle:"REGULAR",Potion:"mutantmonsters:chemical_x"}
     ]).heated().id('finality:compacting/charcoal_to_coal_conversion')
+    /*
+    Watch me question myself later after writing this recipe 
+    for making Lapis Lazuli automatable with just Create...
+    */
+    event.recipes.create.compacting([
+        'minecraft:lapis_lazuli',
+        Item.of('minecraft:lapis_ore').withChance(0.12),
+        Item.of('minecraft:deepslate_lapis_ore').withChance(0.06),
+    ], [
+        Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:awkward"}'),
+        Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:mundane"}'),
+        Fluid.of('kubejs:condensed_universal_entropy', 50),
+        ['minecraft:stone', 'minecraft:cobblestone', 'minecraft:deepslate', 'minecraft:cobbled_deepslate'],
+        ['minecraft:poisonous_potato', 'minecraft:gunpowder'],
+        'salt:salt',
+    ]).heated().id('finality:compacting/artificial_lapis_lazuli')
+    event.recipes.create.compacting('minecraft:obsidian', [
+        Fluid.water(1000),
+        Fluid.lava(1000)
+    ]).id('finality:compacting/cursed_obsidian')
     /**
      * Milling
      */
@@ -622,6 +657,10 @@ ServerEvents.recipes(event => {
         'minecraft:cobblestone',
         Fluid.of('create:potion', 250, '{Bottle: "REGULAR", Potion: "minecraft:strong_healing"}'),
     ]).id('finality:filling/living_flesh_stone')
+    event.recipes.create.filling('minecraft:prismarine', [
+        'minecraft:cobblestone',
+        Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:water_breathing"}')
+    ]).id('finality:filling/prismarine_from_cobblestone')
     event.recipes.create.filling('minecraft:netherite_ingot', [
         'minecraft:netherite_scrap',
         Fluid.of('kubejs:molten_gold', 90)
@@ -668,6 +707,14 @@ ServerEvents.recipes(event => {
      * 
      * Notice: Shapeless recipes are automatically added by Create, unless if .damageIngredient or .keepIngredient() are used.
      */
+    event.recipes.create.mixing('2x create:brass_nugget', [
+        'create:copper_nugget',
+        'create:zinc_nugget'
+    ]).heated().id('finality:mixing/brass_nugget_from_copper_and_zinc_nuggets')
+    event.recipes.create.mixing('2x create:brass_block', [
+        'minecraft:copper_block',
+        'create:zinc_block'
+    ]).heated().id('finality:mixing/brass_blocks_from_copper_and_zinc_blocks')
     event.recipes.create.mixing('minecraft:dirt', [
         'minecraft:gravel',
         '3x minecraft:bone_meal'
@@ -676,6 +723,14 @@ ServerEvents.recipes(event => {
         'minecraft:dirt',
         'minecraft:gravel'
     ]).id('finality:mixing/coarse_dirt')
+    event.recipes.create.mixing('8x minecraft:netherrack', [
+        '8x minecraft:cobblestone',
+        Fluid.of('create:potion', 1000, '{Bottle:"REGULAR",Potion:"minecraft:strong_healing"}')
+    ]).id('finality:mixing/bulk_netherrack_from_cobblestone')
+    event.recipes.create.mixing('8x minecraft:prismarine', [
+        '8x minecraft:cobblestone',
+        Fluid.of('create:potion', 250, '{Potion:"REGULAR",Potion:"minecraft:water_breathing"}')
+    ]).id('finality:mixing/bulk_prismarine_from_cobblestone')
     /**
      * @summary Heated 1x ingot melting
      * @param {Internal.OutputFluid} outputFluid 
@@ -1106,7 +1161,7 @@ ServerEvents.recipes(event => {
         Fluid.of('kubejs:shimmer', 250)
     ]).id('finality:mixing/color_white')
     // shimmer usage
-    event.recipes.create.mixing(Fluid.of('kubejs:shimmer', 250), [
+    event.recipes.create.mixing(Fluid.of('kubejs:shimmer', 1000), [
         'create:refined_radiance',
         Fluid.of('kubejs:condensed_universal_entropy', 500),
         Fluid.of('minecraft:water', 500)
@@ -1115,7 +1170,7 @@ ServerEvents.recipes(event => {
         'create:cinder_flour',
         Item.of('create:cinder_flour').withChance(0.50),
         Item.of('create:experience_nugget').withChance(0.25),
-        Item.of('minecraft:netherite_scrap').withChance(0.02)
+        Item.of('minecraft:netherite_scrap').withChance(0.25)
     ], [
         Fluid.of('kubejs:shimmer', 750),
         'minecraft:netherrack',
@@ -1271,6 +1326,15 @@ ServerEvents.recipes(event => {
 })
 
 ServerEvents.tags('item', event => {
+    // these should be accepted in the crushing wheel recipe...
+    event.add('forge:stone', [
+        'minecraft:dripstone_block',
+        'minecraft:blackstone',
+        'minecraft:polished_blackstone',
+        'minecraft:basalt',
+        'minecraft:smooth_basalt',
+        'minecraft:polished_basalt'
+    ])
     if (Platform.isLoaded('aether')) {
         event.add('aether:slider_damaging_items', 'kubejs:final_pickaxe')
     }
@@ -1529,81 +1593,6 @@ function findMeMsg(event) {
         })
     }
 }
-
-EntityEvents.hurt(event => {
-    if (!event.player) return
-    if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
-        event.player.getChestArmorItem() === 'kubejs:final_chestplate' &&
-        event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
-        event.player.getFeetArmorItem() === 'kubejs:final_boots'
-    ) { event.cancel() }
-})
-
-const set = {
-    "name": "kubejs:final",
-    "effects": [
-        {
-            "effect": "saturation",
-            "duration": 400,
-            "amplifier": 255
-        },
-        {
-            "effect": "haste",
-            "duration": 400,
-            "amplifier": 2
-        },
-        {
-            "effect": "strength",
-            "duration": 400,
-            "amplifier": 3
-        },
-        {
-            "effect": "speed",
-            "duration": 400,
-            "amplifier": 3
-        },
-        {
-            "effect": "fire_resistance",
-            "duration": 400,
-            "amplifier": 3
-        },
-        {
-            "effect": "jump_boost",
-            "duration": 400,
-            "amplifier": 3
-        },
-        {
-            "effect": "luck",
-            "duration": 400,
-            "amplifier": 5
-        }
-    ]
-}
-
-const sets = [set];
-
-PlayerEvents.tick(check => {
-    const { headArmorItem, chestArmorItem, legsArmorItem, feetArmorItem } = check.player;
-    if (check.player.level.time % 100 === 0) {
-        for (let armorSet in sets) {
-            if (headArmorItem.id === sets[armorSet].name + '_helmet' &&
-                chestArmorItem.id === sets[armorSet].name + '_chestplate' &&
-                legsArmorItem.id === sets[armorSet].name + '_leggings' &&
-                feetArmorItem.id === sets[armorSet].name + '_boots'
-            ) {
-                for (let x in sets[armorSet].effects) {
-                    check.player.potionEffects.add(
-                        sets[armorSet].effects[x].effect,
-                        sets[armorSet].effects[x].duration,
-                        sets[armorSet].effects[x].amplifier,
-                        false,
-                        false
-                    );
-                }
-            }
-        }
-    }
-});
 
 LootJS.modifiers((event) => {
     for (let i = 0; i < FOUNDATION_METALS.length; i++) {
