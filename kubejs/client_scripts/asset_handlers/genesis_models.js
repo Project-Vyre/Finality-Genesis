@@ -285,6 +285,28 @@ ClientEvents.highPriorityAssets(event => {
             "layer1": "kubejs:item/blaze_cake_singularity_overlay"
         }
     })
+    let newSingularities = [
+        'speculaas_singularity',
+        'stroopwafel_singularity',
+        'oliebollen_singularity',
+        'kroket_singularity',
+        'bitterballen_singularity',
+        'frikandel_singularity',
+        'fries_singularity',
+        'churros_singularity',
+        'stamppot_singularity',
+        'bic_bit_singularity'
+    ]
+    for (let i = 0; i < newSingularities.length; i++) {
+        let l0 = newSingularities[i];
+        event.add(`kubejs:models/item/${l0}`, {
+            "parent": "item/generated",
+            "textures": {
+                "layer0": `kubejs:item/${l0}`,
+                "layer1": `kubejs:item/${l0}_overlay`
+            }
+        })
+    }
     if (!Platform.isLoaded('kubejs_create')) {
         let transitionalSeqItems = {
             entropy_mechanism: '<rainb>Entropy Mechanism</rainb>'
