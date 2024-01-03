@@ -23,6 +23,10 @@ ServerEvents.recipes(event => {
         G: '#forge:glass',
         P: 'create:mechanical_press'
     }).id('create_mechanical_extruder:mechanical_extruder')
+    event.recipes.create_mechanical_extruder.extruding('minecraft:obsidian', [
+        Fluid.of('minecraft:water'),
+        Fluid.of('minecraft:lava')
+    ]).requiredBonks(1).withCatalyst('minecraft:blue_ice').id('finality:mechanical_extruding/obsidian')
     for (let [material, raw] of Object.entries(orestones)) {
         event.recipes.create_mechanical_extruder.extruding(Item.of(`create:${material}`, 64), [
             Item.of(raw),

@@ -5,9 +5,9 @@
 ServerEvents.recipes(event => {
     event.remove([
         { id: 'mysticalagriculture:essence/minecraft/crimson_nylium' },
-        { id: 'mysticalagriculture:essence/minecraft/warped_nylium' }
+        { id: 'mysticalagriculture:essence/minecraft/warped_nylium' },
     ])
-    event.shaped('24x minecraft:blackstone', [
+    event.shaped('8x minecraft:blackstone', [
         'NNN',
         'NSN',
         'NNN'
@@ -15,11 +15,20 @@ ServerEvents.recipes(event => {
         N: 'mysticalagriculture:nether_essence',
         S: 'mysticalagriculture:stone_essence'
     }).id('mysticalagriculture:essence/minecraft/blackstone')
-    event.recipes.create.compacting('24x minecraft:blackstone', [
+    event.recipes.create.compacting('8x minecraft:blackstone', [
         '8x mysticalagriculture:nether_essence',
         'mysticalagriculture:stone_essence'
     ]).id('finality:mysticalagriculture/compacting/blackstone')
-    event.recipes.create.compacting('20x minecraft:basalt', [
+
+    event.shaped('8x minecraft:basalt', [
+        'NNN',
+        'NIN',
+        'NNN'
+    ], {
+        N: 'mysticalagriculture:nether_essence',
+        I: 'mysticalagriculture:ice_essence'
+    }).id('mysticalagriculture:essence/minecraft/basalt')
+    event.recipes.create.compacting('8x minecraft:basalt', [
         '8x mysticalagriculture:nether_essence',
         'mysticalagriculture:ice_essence'
     ]).id('finality:mysticalagriculture/compacting/basalt')
@@ -58,19 +67,27 @@ ServerEvents.recipes(event => {
         B: Item.of('minecraft:potion', '{Potion:"minecraft:strong_healing"}').weakNBT()
     }).id('finality:mysticalagriculture/crafting/netherrack')
     event.shaped('6x minecraft:crimson_nylium', [
-        'ENE',
-        'ENE',
-        'ENE'
+        'NAN',
+        'NAN',
+        'NAN'
     ], {
-        E: 'mysticalagriculture:nether_essence',
-        N: 'mysticalagriculture:nature_essence'
+        N: 'mysticalagriculture:nether_essence',
+        A: 'mysticalagriculture:nature_essence'
     }).id('finality:mysticalagriculture/crafting/crimson_nylium')
     event.shaped('6x minecraft:warped_nylium', [
-        'EEE',
         'NNN',
-        'EEE'
+        'AAA',
+        'NNN'
     ], {
-        E: 'mysticalagriculture:nether_essence',
-        N: 'mysticalagriculture:nature_essence'
+        N: 'mysticalagriculture:nether_essence',
+        A: 'mysticalagriculture:nature_essence'
     }).id('finality:mysticalagriculture/crafting/warped_nylium')
+    event.recipes.kubejs.shaped('2x minecraft:nether_wart', [
+        'NAN',
+        '   ',
+        '   '
+    ], {
+        N: 'mysticalagriculture:nether_essence',
+        A: 'mysticalagriculture:nature_essence'
+    }).noMirror().noShrink().id('mysticalagriculture:essence/minecraft/nether_wart')
 })

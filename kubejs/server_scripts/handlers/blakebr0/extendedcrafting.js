@@ -608,8 +608,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.create.mixing('kubejs:high_entropy_alloy_nugget', [
         '9x kubejs:stable_entropy_particles',
-        '4x extendedcrafting:the_ultimate_catalyst',
-        '4x extendedcrafting:crystaltine_catalyst'
+        '4x extendedcrafting:the_ultimate_catalyst'
     ]).superheated().id('finality:extendedcrafting/mixing/high_entropy_nugget')
     /*
     let RNG1 = 0

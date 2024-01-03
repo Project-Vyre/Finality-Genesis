@@ -34,7 +34,8 @@ ServerEvents.recipes(event => {
     ]).heated().id('finality:createaddition/mixing/biomass_from_wheat')
     event.recipes.create.mixing(Fluid.of('createaddition:bioethanol', 100), [
         '3x minecraft:sugar',
-        '9x createaddition:biomass'
+        '9x createaddition:biomass',
+        '3x create:cinder_flour'
     ]).id('finality:createaddition/mixing/bioethanol')
     event.recipes.create.crushing([
         'kubejs:removed_item'
