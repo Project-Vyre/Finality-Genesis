@@ -419,9 +419,15 @@
 					type: "random"
 				}
 				{
-					id: "6E4FAA173CD79F88"
+					count: 16
+					id: "2ED12C1FF4593067"
+					item: "labels:label"
+					type: "item"
+				}
+				{
+					id: "7F6F973D2C757169"
 					type: "xp_levels"
-					xp_levels: 3
+					xp_levels: 5
 				}
 			]
 			shape: "rsquare"
@@ -729,6 +735,17 @@
 					id: "37614DAB7EBD19E6"
 					table_id: 4925255154089711758L
 					type: "random"
+				}
+				{
+					id: "3679FDE7CC174DAE"
+					item: {
+						Count: 1b
+						id: "supplementaries:rope_arrow"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "rsquare"
