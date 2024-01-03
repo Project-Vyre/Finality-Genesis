@@ -32,18 +32,18 @@ command(handler: (event: Internal.CommandEventJS) => void):void,
      * @at *server*
     */
 blockLootTables(handler: (event: Internal.BlockLootEventJS) => void):void,
-tags(type: "worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
-tags(type: "minecraft:worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
-tags(type: "dimension_type", handler: (event: TagEvent.DimensionType) => void): void
-tags(type: "minecraft:dimension_type", handler: (event: TagEvent.DimensionType) => void): void
 tags(type: "worldgen/world_preset", handler: (event: TagEvent.WorldPreset) => void): void
 tags(type: "minecraft:worldgen/world_preset", handler: (event: TagEvent.WorldPreset) => void): void
 tags(type: "worldgen/structure", handler: (event: TagEvent.Structure) => void): void
 tags(type: "minecraft:worldgen/structure", handler: (event: TagEvent.Structure) => void): void
-tags(type: "worldgen/biome", handler: (event: TagEvent.Biome) => void): void
-tags(type: "minecraft:worldgen/biome", handler: (event: TagEvent.Biome) => void): void
 tags(type: "worldgen/flat_level_generator_preset", handler: (event: TagEvent.FlatLevelGeneratorPreset) => void): void
 tags(type: "minecraft:worldgen/flat_level_generator_preset", handler: (event: TagEvent.FlatLevelGeneratorPreset) => void): void
+tags(type: "dimension_type", handler: (event: TagEvent.DimensionType) => void): void
+tags(type: "minecraft:dimension_type", handler: (event: TagEvent.DimensionType) => void): void
+tags(type: "worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
+tags(type: "minecraft:worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
+tags(type: "worldgen/biome", handler: (event: TagEvent.Biome) => void): void
+tags(type: "minecraft:worldgen/biome", handler: (event: TagEvent.Biome) => void): void
 tags(type: "game_event", handler: (event: TagEvent.GameEvent) => void): void
 tags(type: "minecraft:game_event", handler: (event: TagEvent.GameEvent) => void): void
 tags(type: "sound_event", handler: (event: TagEvent.SoundEvent) => void): void
@@ -83,7 +83,7 @@ loaded(handler: (event: Internal.ServerEventJS) => void):void,
      * 
      * @cancellable
     */
-customCommand(extra: string, handler: (event: Internal.CustomCommandEventJS) => void):void,
+customCommand(extra: Special.EntityType, handler: (event: Internal.CustomCommandEventJS) => void):void,
 customCommand(handler: (event: Internal.CustomCommandEventJS) => void):void,
     /**
      * @at *server*
@@ -288,7 +288,7 @@ decorateChat(handler: (event: Internal.PlayerChatDecorateEventJS) => void):void,
      * 
      * @at *server, client*
     */
-chestOpened(extra: string, handler: (event: Internal.ChestEventJS) => void):void,
+chestOpened(extra: Special.EntityType, handler: (event: Internal.ChestEventJS) => void):void,
 chestOpened(handler: (event: Internal.ChestEventJS) => void):void,
     /**
      * Invoked when a player gets an advancement.
@@ -297,7 +297,7 @@ chestOpened(handler: (event: Internal.ChestEventJS) => void):void,
      * 
      * @cancellable
     */
-advancement(extra: string, handler: (event: Internal.PlayerAdvancementEventJS) => void):void,
+advancement(extra: ResourceLocation, handler: (event: Internal.PlayerAdvancementEventJS) => void):void,
 advancement(handler: (event: Internal.PlayerAdvancementEventJS) => void):void,
     /**
      * Invoked when a player sends a chat message.
@@ -316,7 +316,7 @@ chat(handler: (event: Internal.PlayerChatDecorateEventJS) => void):void,
      * 
      * @at *server, client*
     */
-chestClosed(extra: string, handler: (event: Internal.ChestEventJS) => void):void,
+chestClosed(extra: Special.EntityType, handler: (event: Internal.ChestEventJS) => void):void,
 chestClosed(handler: (event: Internal.ChestEventJS) => void):void,
     /**
      * @at *server*
@@ -331,21 +331,21 @@ loggedOut(handler: (event: Internal.SimplePlayerEventJS) => void):void,
      * 
      * @at *server, client*
     */
-inventoryClosed(extra: string, handler: (event: Internal.InventoryEventJS) => void):void,
+inventoryClosed(extra: Special.EntityType, handler: (event: Internal.InventoryEventJS) => void):void,
 inventoryClosed(handler: (event: Internal.InventoryEventJS) => void):void,
     /**
      * Invoked when a player's inventory changes.
      * 
      * @at *server, client*
     */
-inventoryChanged(extra: string, handler: (event: Internal.InventoryChangedEventJS) => void):void,
+inventoryChanged(extra: Special.Item, handler: (event: Internal.InventoryChangedEventJS) => void):void,
 inventoryChanged(handler: (event: Internal.InventoryChangedEventJS) => void):void,
     /**
      * Invoked when a player opens or closes a container.
      * 
      * @at *server, client*
     */
-inventoryOpened(extra: string, handler: (event: Internal.InventoryEventJS) => void):void,
+inventoryOpened(extra: Special.EntityType, handler: (event: Internal.InventoryEventJS) => void):void,
 inventoryOpened(handler: (event: Internal.InventoryEventJS) => void):void,
     /**
      * @at *server, client*
@@ -392,14 +392,14 @@ declare const ItemEvents: {
      * 
      * @cancellable
     */
-rightClicked(extra: string, handler: (event: Internal.ItemClickedEventJS) => void):void,
+rightClicked(extra: Special.Item, handler: (event: Internal.ItemClickedEventJS) => void):void,
 rightClicked(handler: (event: Internal.ItemClickedEventJS) => void):void,
     /**
      * Invoked when a player crafts an item.
      * 
      * @at *server, client*
     */
-crafted(extra: string, handler: (event: Internal.ItemCraftedEventJS) => void):void,
+crafted(extra: Special.Item, handler: (event: Internal.ItemCraftedEventJS) => void):void,
 crafted(handler: (event: Internal.ItemCraftedEventJS) => void):void,
     /**
      * Invoked when a player drops an item.
@@ -408,7 +408,7 @@ crafted(handler: (event: Internal.ItemCraftedEventJS) => void):void,
      * 
      * @cancellable
     */
-dropped(extra: string, handler: (event: Internal.ItemDroppedEventJS) => void):void,
+dropped(extra: Special.Item, handler: (event: Internal.ItemDroppedEventJS) => void):void,
 dropped(handler: (event: Internal.ItemDroppedEventJS) => void):void,
     /**
      * Invoked when registering handlers for item tooltips.
@@ -429,7 +429,7 @@ modelProperties(handler: (event: Internal.ItemModelPropertiesEventJS) => void):v
      * 
      * @at *server, client*
     */
-firstRightClicked(extra: string, handler: (event: Internal.ItemClickedEventJS) => void):void,
+firstRightClicked(extra: Special.Item, handler: (event: Internal.ItemClickedEventJS) => void):void,
 firstRightClicked(handler: (event: Internal.ItemClickedEventJS) => void):void,
     /**
      * Invoked after all items are registered to modify them.
@@ -442,12 +442,12 @@ modification(handler: (event: Internal.ItemModificationEventJS) => void):void,
      * 
      * @at *server, client*
     */
-pickedUp(extra: string, handler: (event: Internal.ItemPickedUpEventJS) => void):void,
+pickedUp(extra: Special.Item, handler: (event: Internal.ItemPickedUpEventJS) => void):void,
 pickedUp(handler: (event: Internal.ItemPickedUpEventJS) => void):void,
     /**
      * @at *server, client*
     */
-destroyed(extra: string, handler: (event: Internal.ItemDestroyedEventJS) => void):void,
+destroyed(extra: Special.EntityType, handler: (event: Internal.ItemDestroyedEventJS) => void):void,
 destroyed(handler: (event: Internal.ItemDestroyedEventJS) => void):void,
     /**
      * Invoked when a player right clicks on an entity.
@@ -456,7 +456,7 @@ destroyed(handler: (event: Internal.ItemDestroyedEventJS) => void):void,
      * 
      * @cancellable
     */
-entityInteracted(extra: string, handler: (event: Internal.ItemEntityInteractedEventJS) => void):void,
+entityInteracted(extra: Special.Item, handler: (event: Internal.ItemEntityInteractedEventJS) => void):void,
 entityInteracted(handler: (event: Internal.ItemEntityInteractedEventJS) => void):void,
     /**
      * Invoked when the game is starting up and the item tool tiers are being registered.
@@ -471,7 +471,7 @@ toolTierRegistry(handler: (event: Internal.ItemToolTierRegistryEventJS) => void)
      * 
      * @cancellable
     */
-foodEaten(extra: string, handler: (event: Internal.FoodEatenEventJS) => void):void,
+foodEaten(extra: Special.Item, handler: (event: Internal.FoodEatenEventJS) => void):void,
 foodEaten(handler: (event: Internal.FoodEatenEventJS) => void):void,
     /**
      * Invoked when a player right clicks with an item **without targeting anything**.
@@ -480,7 +480,7 @@ foodEaten(handler: (event: Internal.FoodEatenEventJS) => void):void,
      * 
      * @at *server, client*
     */
-firstLeftClicked(extra: string, handler: (event: Internal.ItemClickedEventJS) => void):void,
+firstLeftClicked(extra: Special.Item, handler: (event: Internal.ItemClickedEventJS) => void):void,
 firstLeftClicked(handler: (event: Internal.ItemClickedEventJS) => void):void,
     /**
      * Invoked when the game is starting up and the armor tier registry is being built.
@@ -495,26 +495,26 @@ armorTierRegistry(handler: (event: Internal.ItemArmorTierRegistryEventJS) => voi
      * 
      * @cancellable
     */
-canPickUp(extra: string, handler: (event: Internal.ItemPickedUpEventJS) => void):void,
+canPickUp(extra: Special.Item, handler: (event: Internal.ItemPickedUpEventJS) => void):void,
 canPickUp(handler: (event: Internal.ItemPickedUpEventJS) => void):void,
     /**
      * Invoked when an item is smelted by a player.
      * 
      * @at *server, client*
     */
-smelted(extra: string, handler: (event: Internal.ItemSmeltedEventJS) => void):void,
+smelted(extra: Special.Item, handler: (event: Internal.ItemSmeltedEventJS) => void):void,
 smelted(handler: (event: Internal.ItemSmeltedEventJS) => void):void,
 };
 declare const LevelEvents: {
     /**
      * @at *server*
     */
-loaded(extra: string, handler: (event: Internal.SimpleLevelEventJS) => void):void,
+loaded(extra: ResourceLocation, handler: (event: Internal.SimpleLevelEventJS) => void):void,
 loaded(handler: (event: Internal.SimpleLevelEventJS) => void):void,
     /**
      * @at *server*
     */
-unloaded(extra: string, handler: (event: Internal.SimpleLevelEventJS) => void):void,
+unloaded(extra: ResourceLocation, handler: (event: Internal.SimpleLevelEventJS) => void):void,
 unloaded(handler: (event: Internal.SimpleLevelEventJS) => void):void,
     /**
      * Invoked right before an explosion happens.
@@ -527,7 +527,7 @@ beforeExplosion(handler: (event: Internal.ExplosionEventJS$Before) => void):void
     /**
      * @at *server, client*
     */
-tick(extra: string, handler: (event: Internal.SimpleLevelEventJS) => void):void,
+tick(extra: ResourceLocation, handler: (event: Internal.SimpleLevelEventJS) => void):void,
 tick(handler: (event: Internal.SimpleLevelEventJS) => void):void,
     /**
      * Invoked right after an explosion happens.
@@ -546,14 +546,14 @@ declare const EntityEvents: {
      * 
      * @cancellable
     */
-spawned(extra: string, handler: (event: Internal.EntitySpawnedEventJS) => void):void,
+spawned(extra: Special.EntityType, handler: (event: Internal.EntitySpawnedEventJS) => void):void,
 spawned(handler: (event: Internal.EntitySpawnedEventJS) => void):void,
     /**
      * @at *server, client*
      * 
      * @cancellable
     */
-drops(extra: string, handler: (event: Internal.LivingEntityDropsEventJS) => void):void,
+drops(extra: Special.EntityType, handler: (event: Internal.LivingEntityDropsEventJS) => void):void,
 drops(handler: (event: Internal.LivingEntityDropsEventJS) => void):void,
     /**
      * Invoked before an entity is spawned into the world.
@@ -564,7 +564,7 @@ drops(handler: (event: Internal.LivingEntityDropsEventJS) => void):void,
      * 
      * @cancellable
     */
-checkSpawn(extra: string, handler: (event: Internal.CheckLivingEntitySpawnEventJS) => void):void,
+checkSpawn(extra: Special.EntityType, handler: (event: Internal.CheckLivingEntitySpawnEventJS) => void):void,
 checkSpawn(handler: (event: Internal.CheckLivingEntitySpawnEventJS) => void):void,
     /**
      * Invoked before a living entity dies.
@@ -575,7 +575,7 @@ checkSpawn(handler: (event: Internal.CheckLivingEntitySpawnEventJS) => void):voi
      * 
      * @cancellable
     */
-death(extra: string, handler: (event: Internal.LivingEntityDeathEventJS) => void):void,
+death(extra: Special.EntityType, handler: (event: Internal.LivingEntityDeathEventJS) => void):void,
 death(handler: (event: Internal.LivingEntityDeathEventJS) => void):void,
     /**
      * Invoked before an entity is hurt by a damage source.
@@ -584,7 +584,7 @@ death(handler: (event: Internal.LivingEntityDeathEventJS) => void):void,
      * 
      * @cancellable
     */
-hurt(extra: string, handler: (event: Internal.LivingEntityHurtEventJS) => void):void,
+hurt(extra: Special.EntityType, handler: (event: Internal.LivingEntityHurtEventJS) => void):void,
 hurt(handler: (event: Internal.LivingEntityHurtEventJS) => void):void,
 };
 declare const ClientEvents: {
@@ -854,7 +854,7 @@ declare const BlockEvents: {
      * 
      * @cancellable
     */
-broken(extra: string, handler: (event: Internal.BlockBrokenEventJS) => void):void,
+broken(extra: Special.Block, handler: (event: Internal.BlockBrokenEventJS) => void):void,
 broken(handler: (event: Internal.BlockBrokenEventJS) => void):void,
     /**
      * Invoked when a detector block registered in KubeJS receives a block update.
@@ -863,7 +863,7 @@ broken(handler: (event: Internal.BlockBrokenEventJS) => void):void,
      * 
      * @at *server, client*
     */
-detectorPowered(extra: string, handler: (event: Internal.DetectorBlockEventJS) => void):void,
+detectorPowered(extra: Special.Block, handler: (event: Internal.DetectorBlockEventJS) => void):void,
 detectorPowered(handler: (event: Internal.DetectorBlockEventJS) => void):void,
     /**
      * Invoked when an entity attempts to trample farmland.
@@ -872,7 +872,7 @@ detectorPowered(handler: (event: Internal.DetectorBlockEventJS) => void):void,
      * 
      * @cancellable
     */
-farmlandTrampled(extra: string, handler: (event: Internal.FarmlandTrampledEventJS) => void):void,
+farmlandTrampled(extra: Special.Block, handler: (event: Internal.FarmlandTrampledEventJS) => void):void,
 farmlandTrampled(handler: (event: Internal.FarmlandTrampledEventJS) => void):void,
     /**
      * Invoked when a block is placed.
@@ -881,7 +881,7 @@ farmlandTrampled(handler: (event: Internal.FarmlandTrampledEventJS) => void):voi
      * 
      * @cancellable
     */
-placed(extra: string, handler: (event: Internal.BlockPlacedEventJS) => void):void,
+placed(extra: Special.Block, handler: (event: Internal.BlockPlacedEventJS) => void):void,
 placed(handler: (event: Internal.BlockPlacedEventJS) => void):void,
     /**
      * Invoked when a detector block registered in KubeJS receives a block update.
@@ -890,7 +890,7 @@ placed(handler: (event: Internal.BlockPlacedEventJS) => void):void,
      * 
      * @at *server, client*
     */
-detectorUnpowered(extra: string, handler: (event: Internal.DetectorBlockEventJS) => void):void,
+detectorUnpowered(extra: Special.Block, handler: (event: Internal.DetectorBlockEventJS) => void):void,
 detectorUnpowered(handler: (event: Internal.DetectorBlockEventJS) => void):void,
     /**
      * Invoked when a player left clicks on a block.
@@ -899,7 +899,7 @@ detectorUnpowered(handler: (event: Internal.DetectorBlockEventJS) => void):void,
      * 
      * @cancellable
     */
-leftClicked(extra: string, handler: (event: Internal.BlockLeftClickedEventJS) => void):void,
+leftClicked(extra: Special.Block, handler: (event: Internal.BlockLeftClickedEventJS) => void):void,
 leftClicked(handler: (event: Internal.BlockLeftClickedEventJS) => void):void,
     /**
      * Invoked when a player right clicks on a block.
@@ -908,7 +908,7 @@ leftClicked(handler: (event: Internal.BlockLeftClickedEventJS) => void):void,
      * 
      * @cancellable
     */
-rightClicked(extra: string, handler: (event: Internal.BlockRightClickedEventJS) => void):void,
+rightClicked(extra: Special.Block, handler: (event: Internal.BlockRightClickedEventJS) => void):void,
 rightClicked(handler: (event: Internal.BlockRightClickedEventJS) => void):void,
     /**
      * Invoked when a detector block registered in KubeJS receives a block update.
@@ -917,7 +917,7 @@ rightClicked(handler: (event: Internal.BlockRightClickedEventJS) => void):void,
      * 
      * @at *server, client*
     */
-detectorChanged(extra: string, handler: (event: Internal.DetectorBlockEventJS) => void):void,
+detectorChanged(extra: Special.Block, handler: (event: Internal.DetectorBlockEventJS) => void):void,
 detectorChanged(handler: (event: Internal.DetectorBlockEventJS) => void):void,
     /**
      * @at *startup*
@@ -930,7 +930,7 @@ declare const FTBQuestsEvents: {
      * 
      * @cancellable
     */
-customReward(extra: string, handler: (event: Internal.CustomRewardEventJS) => void):void,
+customReward(extra: Special.EntityType, handler: (event: Internal.CustomRewardEventJS) => void):void,
 customReward(handler: (event: Internal.CustomRewardEventJS) => void):void,
     /**
      * @at *server*
