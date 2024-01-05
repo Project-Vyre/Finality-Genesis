@@ -1,6 +1,6 @@
 {
   "general": {
-    "enabled": true,
+    "enabled": false,
     "classic": false,
     "clipToSpace": true,
     "dynamicCrosshair": true,
