@@ -219,6 +219,27 @@ JEIEvents.hideItems(event => {
     if (Platform.isLoaded('malum') && Platform.isLoaded('create')) {
         event.hide('malum:copper_nugget')
     }
+
+    if (Platform.isLoaded('headhunter_mod') && Platform.isLoaded('apotheosis')) {
+        event.hide([
+            'headhunter_mod:vertical_beam_spawn_egg',
+            Item.of('minecraft:potion', '{Potion:"headhunter_mod:screenshakepotion"}'),
+            Item.of('minecraft:potion', '{Potion:"headhunter_mod:screencolourpotion"}'),
+            Item.of('minecraft:potion', '{Potion:"headhunter_mod:fly_potion"}'),
+            Item.of('minecraft:splash_potion', '{Potion:"headhunter_mod:screenshakepotion"}'),
+            Item.of('minecraft:splash_potion', '{Potion:"headhunter_mod:screencolourpotion"}'),
+            Item.of('minecraft:splash_potion', '{Potion:"headhunter_mod:fly_potion"}'),
+            Item.of('minecraft:lingering_potion', '{Potion:"headhunter_mod:screenshakepotion"}'),
+            Item.of('minecraft:lingering_potion', '{Potion:"headhunter_mod:screencolourpotion"}'),
+            Item.of('minecraft:lingering_potion', '{Potion:"headhunter_mod:fly_potion"}'),
+            Item.of('minecraft:tipped_arrow', '{Potion:"headhunter_mod:screenshakepotion"}'),
+            Item.of('minecraft:tipped_arrow', '{Potion:"headhunter_mod:screencolourpotion"}'),
+            Item.of('minecraft:tipped_arrow', '{Potion:"headhunter_mod:fly_potion"}'),
+            Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"headhunter_mod:screenshakepotion"}'),
+            Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"headhunter_mod:screencolourpotion"}'),
+            Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"headhunter_mod:fly_potion"}')
+        ])
+    }
 })
 
 JEIEvents.hideFluids(event => {
