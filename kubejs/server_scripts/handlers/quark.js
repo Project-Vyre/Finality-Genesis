@@ -47,6 +47,8 @@ ServerEvents.tags('block', event => {
         'quark:gold_bars'
     ])
     event.add('create:wrench_pickup', [
-        'quark:gold_bars'
+        'quark:gold_bars',
+        'quark:deepslate_furnace',
+        'quark:blackstone_furnace'
     ])
 })

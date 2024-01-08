@@ -36,7 +36,7 @@ ServerEvents.recipes(event => {
             ingredients
         ).heated().id(`createcafe:mixing/syrups/${outputSyrup}_mixing`)
     }
-    if (Ingredient.of('#forge:fruits/banana').stacks.length > 0) {
+    if (Ingredient.of('#forge:fruits/banana').stacks.size() > 0) {
         syrupMixing('banana_syrup', [
             '#forge:fruits/banana',
             Fluid.of('minecraft:water', 250),
@@ -47,7 +47,15 @@ ServerEvents.recipes(event => {
         Fluid.of('minecraft:milk', 250),
         Fluid.of('createcafe:melted_sugar', 750)
     ]).heated().id('createcafe:mixing/syrups/caramel_syrup_mixing')
-    if (Ingredient.of('#forge:crops/coconut').stacks.length > 0) {
+    /**
+     * WHY DOES THIS NEED A BASIN IN THE FIRST PLACE??
+     * Like... do you need a bowl or baking tray to flatten something?
+     */
+    event.recipes.create.pressing(
+        'createcafe:oreo_half_raw',
+        'createcafe:oreo_dough'
+    ).id('finality:createcafe/pressed_oreo')
+    if (Ingredient.of('#forge:crops/coconut').stacks.size() > 0) {
         syrupMixing('coconut_syrup', [
             '#forge:crops/coconut',
             Fluid.of('minecraft:water', 250),
@@ -63,24 +71,24 @@ ServerEvents.recipes(event => {
         event.recipes.create.mixing(Fluid.of('createcafe:vanilla_syrup', 1000), [
             'neapolitan:dried_vanilla_pods',
             Fluid.of('minecraft:water', 250),
-            Fluid.of('createcafe:melted_sugar')
+            Fluid.of('createcafe:melted_sugar', 750)
         ]).heated().id('createcafe:mixing/syrups/vanilla_syrup_mixing2')
     }
-    if (Ingredient.of('#forge:fruits/raspberry').stacks.length > 0) {
+    if (Ingredient.of('#forge:fruits/raspberry').stacks.size() > 0) {
         syrupMixing('raspberry_syrup', [
             '#forge:fruits/raspberry',
             Fluid.of('minecraft:water', 250),
             Fluid.of('createcafe:melted_sugar', 750)
         ])
     }
-    if (Ingredient.of('#forge:fruits/strawberry').stacks.length > 0) {
+    if (Ingredient.of('#forge:fruits/strawberry').stacks.size() > 0) {
         syrupMixing('strawberry_syrup', [
             '#forge:fruits/strawberry',
             Fluid.of('minecraft:water', 250),
             Fluid.of('createcafe:melted_sugar', 750)
         ])
     }
-    if (Ingredient.of('#forge:fruits/vanillabean').stacks.length > 0) {
+    if (Ingredient.of('#forge:fruits/vanillabean').stacks.size() > 0) {
         syrupMixing('vanilla_syrup', [
             '#forge:fruits/vanillabean',
             Fluid.of('minecraft:water', 250),

@@ -1,17 +1,51 @@
 // requires: create
 
+/**
+ * @file Final Armor server handler.
+ * 
+ * @author pietro-lopes <https://github.com/pietro-lopes> AKA Uncandango in the KubeJS Discord. Fixed issues related to damage cancel script
+ * @author puu7693 <https://github.com/puu7693> for writing the script that grants potion effects when wearing a specific set of armor
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ */
+
 EntityEvents.hurt(event => {
     if (!event.player) return
     if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
         event.player.getChestArmorItem() === 'kubejs:final_chestplate' &&
         event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
         event.player.getFeetArmorItem() === 'kubejs:final_boots'
-    ) { event.cancel() }
+    ) {
+        event.player.setHealth(100)
+        event.cancel()
+    }
     if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
         event.player.getChestArmorItem() === 'create:netherite_backtank' &&
         event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
         event.player.getFeetArmorItem() === 'kubejs:final_boots'
-    ) { event.cancel() }
+    ) {
+        event.player.setHealth(100)
+        event.cancel()
+    }
+})
+
+EntityEvents.death(event => {
+    if (!event.player) return
+    if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
+        event.player.getChestArmorItem() === 'kubejs:final_chestplate' &&
+        event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
+        event.player.getFeetArmorItem() === 'kubejs:final_boots'
+    ) {
+        event.player.setHealth(10)
+        event.cancel()
+    }
+    if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
+        event.player.getChestArmorItem() === 'create:netherite_backtank' &&
+        event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
+        event.player.getFeetArmorItem() === 'kubejs:final_boots'
+    ) {
+        event.player.setHealth(10)
+        event.cancel()
+    }
 })
 
 const set = {
@@ -73,9 +107,9 @@ PlayerEvents.tick(check => {
                         sets[armorSet].effects[x].amplifier,
                         false,
                         false
-                    );
+                    )
                 }
             }
         }
     }
-});
+})

@@ -46,6 +46,10 @@ ServerEvents.recipes(event => {
             'repairTime': 250
         }).id('finality:enigmaticlegacy/aether/forbidden_axe_repairing')
     }
+    event.recipes.create.deploying('8x create:tree_fertilizer', [
+        'minecraft:bone_meal',
+        'enigmaticlegacy:infinimeal'
+    ]).keepHeldItem().id('finality:enigmaticlegacy/deploying/tree_fertilizer')
     event.recipes.minecraft.crafting_shapeless(Ingredient.of('enigmaticlegacy:forbidden_axe'), [
         Ingredient.of('enigmaticlegacy:forbidden_axe'),
         'minecraft:netherite_ingot'

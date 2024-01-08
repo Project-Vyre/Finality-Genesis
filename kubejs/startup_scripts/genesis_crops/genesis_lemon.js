@@ -8,13 +8,16 @@
  */
 
 StartupEvents.registry('item', event => {
-    event.create('kubejs:lemon').food(food => {
-        food
-            .hunger(3)
-            .saturation(2)
-            .effect('speed', 20, 255, 1)
-            .alwaysEdible()
-    }).texture('kubejs:item/lemon')
+    event.create('kubejs:lemon')
+        .food(food => {
+            food
+                .hunger(3)
+                .saturation(2)
+                .effect('speed', 20, 255, 1)
+                .alwaysEdible()
+        })
+        .texture('kubejs:item/lemon')
+        .tag('forge:fruits/lemon')
     event.create('kubejs:lemon_slice').food(food => {
         food
             .hunger(2)

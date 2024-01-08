@@ -800,3 +800,20 @@ ServerEvents.recipes(event => {
         Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:night_vision"}')
     ]).heated().id('finality:mysticalagriculture/mixing/glowstone_dust')
 })
+
+ServerEvents.tags('block', event => {
+    event.add('create:wrench_pickup', [
+        'mysticalagriculture:infusion_pedestal',
+        'mysticalagriculture:infusion_altar',
+        'mysticalagriculture:awakening_pedestal',
+        'mysticalagriculture:awakening_altar',
+        'mysticalagriculture:essence_vessel',
+        'mysticalagriculture:tinkering_table',
+        'mysticalagriculture:machine_frame',
+        'mysticalagriculture:soul_extractor'
+    ])
+    for (let i = 0; i < iumTiers.length; i++) {
+        let furnaces = iumTiers[i];
+        event.add('create:wrench_pickup', `mysticalagriculture:${furnaces}_furnace`)
+    }
+})

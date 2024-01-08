@@ -575,9 +575,13 @@ ServerEvents.recipes(event => {
     event.recipes.create.compacting('minecraft:ice', '9x minecraft:snow_block').id('finality:snow_compacting')
     event.recipes.create.compacting('minecraft:coal', [
         'minecraft:charcoal',
-        ['#minecraft:leaves', 'minecraft:moss_block'],
+        '#minecraft:leaves'
+    ]).heated().id('finality:compacting/charcoal_with_leaves_to_coal_conversion')
+    event.recipes.create.compacting('minecraft:coal', [
+        'minecraft:charcoal',
+        'minecraft:moss_block',
         Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:thick"}') // Item.of('minecraft:potion', '{Potion:"minecraft:thick"}') {Bottle:"REGULAR",Potion:"mutantmonsters:chemical_x"}
-    ]).heated().id('finality:compacting/charcoal_to_coal_conversion')
+    ]).heated().id('finality:compacting/charcoal_with_moss_to_coal_conversion')
     /*
     Watch me question myself later after writing this recipe 
     for making Lapis Lazuli automatable with just Create...
@@ -1329,6 +1333,10 @@ ServerEvents.recipes(event => {
         '6': 'kubejs:six',
         '4': 'kubejs:four'
     }).id('finality:command/blaze_cake_stack')
+    event.recipes.create.sandpaper_polishing(
+        'minecraft:nether_wart',
+        'finalitycore:living_netherwart' // correct later to 'finalitycore:living_nether_wart'
+    ).id('finality:sandpaper_polising/nether_wart')
 })
 
 ServerEvents.tags('item', event => {
@@ -1383,6 +1391,8 @@ ServerEvents.tags('block', event => {
         '#forge:chests',
         '#minecraft:shulker_boxes',
         '#minecraft:planks',
+        '#minecraft:wooden_slabs',
+        '#minecraft:wooden_stairs',
         '#minecraft:wool_carpets',
         '#minecraft:signs',
         '#minecraft:beds',
@@ -1392,6 +1402,7 @@ ServerEvents.tags('block', event => {
         'minecraft:beehive',
         'minecraft:chain',
         'minecraft:cartography_table',
+        'minecraft:ladder'
     ])
 })
 

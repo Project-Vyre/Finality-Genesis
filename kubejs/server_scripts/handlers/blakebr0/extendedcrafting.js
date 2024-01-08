@@ -148,7 +148,7 @@ ServerEvents.recipes(event => {
         'ICI',
         'III'
     ], {
-        E: 'ender_eye',
+        E: 'minecraft:ender_eye',
         I: 'extendedcrafting:ender_ingot',
         C: 'extendedcrafting:crafting_core'
     }).id('extendedcrafting:ender_crafter')
@@ -602,8 +602,8 @@ ServerEvents.recipes(event => {
     ]).transitionalItem('kubejs:incomplete_ascendant_mechanism').loops(5).id('finality:sequenced_assembly/ascendant_mechanism_creation')
 
     event.recipes.create.emptying([
-        Fluid.of('kubejs:condensed_universal_order', 250),
-        Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:blue_ice"}').withChance(0.25)
+        Fluid.of('kubejs:condensed_universal_order', 500),
+        'kubejs:errored_result'
     ], Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:blue_ice"}').strongNBT()).id('finality:emptying/condensed_universal_order')
 
     event.recipes.create.mixing('kubejs:high_entropy_alloy_nugget', [
@@ -718,6 +718,33 @@ ServerEvents.recipes(event => {
         'kubejs:blaze_cake_singularity',
         'kubejs:bic_bit_singularity'
     ]).merge({ tier: 4 }).id('kubejs:cucumber_library_failure')
+})
+
+ServerEvents.tags('block', event => {
+    let ext_tiers = [
+        'basic',
+        'advanced',
+        'elite',
+        'ultimate'
+    ]
+    for (let i = 0; i < ext_tiers.length; i++) {
+        let tables = ext_tiers[i];
+        event.add('create:wrench_pickup', [
+            `extendedcrafting:${tables}_table`,
+            `extendedcrafting:${tables}_auto_table`
+        ])
+    }
+    event.add('create:wrench_pickup', [
+        'extendedcrafting:frame',
+        'extendedcrafting:pedestal',
+        'extendedcrafting:compressor',
+        'extendedcrafting:ender_alternator',
+        'extendedcrafting:ender_crafter',
+        'extendedcrafting:auto_ender_crafter',
+        'extendedcrafting:flux_alternator',
+        'extendedcrafting:flux_crafter',
+        'extendedcrafting:auto_flux_crafter'
+    ])
 })
 
 ServerEvents.loaded(event => {

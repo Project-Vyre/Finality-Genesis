@@ -18,3 +18,7 @@ ServerEvents.recipes(event => {
         R: 'minecraft:redstone'
     }).id('goldenhopper:golden_hopper')
 })
+
+ServerEvents.tags('block', event => {
+    event.add('create:wrench_pickup', 'goldenhopper:golden_hopper')
+})
