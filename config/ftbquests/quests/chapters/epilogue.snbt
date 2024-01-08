@@ -82,6 +82,7 @@
 						Id: "extendedcrafting:coal"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 0.0d
@@ -124,6 +125,7 @@
 						Id: "extendedcrafting:copper"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -1.5d
@@ -143,6 +145,7 @@
 						Id: "extendedcrafting:cobblestone"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 1.5d
@@ -161,6 +164,7 @@
 						Id: "extendedcrafting:iron"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -2.0d
@@ -229,6 +233,7 @@
 						Id: "extendedcrafting:coarse_dirt"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 2.0d
@@ -247,6 +252,7 @@
 						Id: "extendedcrafting:sand"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 16.0d
@@ -265,6 +271,7 @@
 						Id: "extendedcrafting:framed_glass"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 16.5d
@@ -290,6 +297,7 @@
 						Id: "extendedcrafting:gold"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -16.0d
@@ -319,6 +327,7 @@
 						Id: "extendedcrafting:diamond"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -16.5d
@@ -341,6 +350,7 @@
 						Id: "extendedcrafting:netherite"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -18.0d
@@ -359,6 +369,7 @@
 						Id: "extendedcrafting:emerald"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -16.5d
@@ -377,6 +388,7 @@
 						Id: "extendedcrafting:amethyst"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -19.5d
@@ -394,6 +406,7 @@
 						Id: "extendedcrafting:quartz"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -20.0d
@@ -411,6 +424,7 @@
 						Id: "extendedcrafting:redstone"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -19.5d
@@ -429,6 +443,7 @@
 						Id: "extendedcrafting:blue_ice"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 18.0d
@@ -447,6 +462,7 @@
 						Id: "extendedcrafting:glowstone"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 18.0d
@@ -469,6 +485,7 @@
 						Id: "extendedcrafting:precision_mechanism"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -18.0d
@@ -486,6 +503,7 @@
 						Id: "extendedcrafting:sturdy_sheet"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -16.5d
@@ -503,6 +521,7 @@
 						Id: "extendedcrafting:rose_quartz"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -19.5d
@@ -520,6 +539,7 @@
 						Id: "extendedcrafting:electron_tube"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -20.0d
@@ -537,6 +557,7 @@
 						Id: "extendedcrafting:train_track"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -19.5d
@@ -556,6 +577,7 @@
 						Id: "extendedcrafting:honey"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 20.0d
@@ -573,6 +595,7 @@
 						Id: "extendedcrafting:sea_lantern"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 19.5d
@@ -590,6 +613,7 @@
 						Id: "extendedcrafting:andesite_alloy"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -18.0d
@@ -607,6 +631,7 @@
 						Id: "extendedcrafting:brass"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -16.0d
@@ -625,6 +650,7 @@
 						Id: "extendedcrafting:red_sand"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 16.5d
@@ -660,6 +686,7 @@
 						Id: "extendedcrafting:end_crystal"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -9.0d
@@ -701,6 +728,7 @@
 						Id: "extendedcrafting:chocolate"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -18.0d
@@ -720,6 +748,7 @@
 						Id: "extendedcrafting:builders_tea"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -18.0d
@@ -738,6 +767,7 @@
 						Id: "extendedcrafting:ender_pearl"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 18.0d
@@ -760,6 +790,7 @@
 						Id: "extendedcrafting:tinted_glass"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 18.0d
@@ -866,6 +897,7 @@
 							Id: "extendedcrafting:concrete_black"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -877,6 +909,7 @@
 							Id: "extendedcrafting:concrete_white"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -888,6 +921,7 @@
 							Id: "extendedcrafting:concrete_pink"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -899,6 +933,7 @@
 							Id: "extendedcrafting:concrete_orange"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -910,6 +945,7 @@
 							Id: "extendedcrafting:concrete_red"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -921,6 +957,7 @@
 							Id: "extendedcrafting:concrete_gray"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -932,6 +969,7 @@
 							Id: "extendedcrafting:concrete_yellow"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -943,6 +981,7 @@
 							Id: "extendedcrafting:concrete_brown"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -954,6 +993,7 @@
 							Id: "extendedcrafting:concrete_cyan"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -965,6 +1005,7 @@
 							Id: "extendedcrafting:concrete_green"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -976,6 +1017,7 @@
 							Id: "extendedcrafting:concrete_light_gray"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -987,6 +1029,7 @@
 							Id: "extendedcrafting:concrete_light_blue"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -998,6 +1041,7 @@
 							Id: "extendedcrafting:concrete_lime"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -1009,6 +1053,7 @@
 							Id: "extendedcrafting:concrete_blue"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -1020,6 +1065,7 @@
 							Id: "extendedcrafting:concrete_magenta"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 				{
@@ -1031,6 +1077,7 @@
 							Id: "extendedcrafting:concrete_purple"
 						}
 					}
+					match_nbt: true
 					type: "item"
 				}
 			]
@@ -1052,6 +1099,7 @@
 						Id: "extendedcrafting:soul_sand"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 18.0d
@@ -1070,6 +1118,7 @@
 						Id: "extendedcrafting:soul_soil"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 18.0d
@@ -1089,6 +1138,7 @@
 						Id: "extendedcrafting:gunpowder"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: 19.5d
@@ -1108,6 +1158,7 @@
 						Id: "extendedcrafting:lapis_lazuli"
 					}
 				}
+				match_nbt: true
 				type: "item"
 			}]
 			x: -18.0d
