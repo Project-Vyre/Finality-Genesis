@@ -32,12 +32,12 @@ command(handler: (event: Internal.CommandEventJS) => void):void,
      * @at *server*
     */
 blockLootTables(handler: (event: Internal.BlockLootEventJS) => void):void,
+tags(type: "worldgen/structure", handler: (event: TagEvent.Structure) => void): void
+tags(type: "minecraft:worldgen/structure", handler: (event: TagEvent.Structure) => void): void
 tags(type: "worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
 tags(type: "minecraft:worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
 tags(type: "worldgen/flat_level_generator_preset", handler: (event: TagEvent.FlatLevelGeneratorPreset) => void): void
 tags(type: "minecraft:worldgen/flat_level_generator_preset", handler: (event: TagEvent.FlatLevelGeneratorPreset) => void): void
-tags(type: "worldgen/structure", handler: (event: TagEvent.Structure) => void): void
-tags(type: "minecraft:worldgen/structure", handler: (event: TagEvent.Structure) => void): void
 tags(type: "dimension_type", handler: (event: TagEvent.DimensionType) => void): void
 tags(type: "minecraft:dimension_type", handler: (event: TagEvent.DimensionType) => void): void
 tags(type: "worldgen/world_preset", handler: (event: TagEvent.WorldPreset) => void): void
