@@ -2,7 +2,6 @@
 // requires: functionalstorage
 
 ItemEvents.tooltip(event => {
-    let WOOD_TYPES = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'crimson', 'warped']
     event.addAdvanced([
         'functionalstorage:framed_1',
         'functionalstorage:framed_2',

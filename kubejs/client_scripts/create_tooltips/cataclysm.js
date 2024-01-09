@@ -64,7 +64,7 @@ ClientEvents.lang('en_us', event => {
         "item.cataclysm.ignitium_chestplate.tooltip": "IGNITIUM CHESTPLATE",
         "item.cataclysm.ignitium_chestplate.tooltip.summary": "You can combine an Elytra with this in the Smithing Table.",
         "item.cataclysm.ignitium_leggings.tooltip": "IGNITIUM LEGGINGS",
-        "item.cataclysm.ignitium_leggings.tooltip.summary": "The developer, _L_Ender_ says 'Flame Reflex' ...but the item fails to give any form of Fire Resistance.",
+        "item.cataclysm.ignitium_leggings.tooltip.summary": "The developer, _L_Ender_ says 'Flame Reflex' which implies Fire Resistance. If the armor set _fails_ to provide Fire Resistance then it is not my fault.",
         "item.cataclysm.ignitium_boots.tooltip": "IGNITIUM BOOTS",
         "item.cataclysm.ignitium_boots.tooltip.summary": "Lava Walker, allows you to walk on lava. DOES NOT provide Fire Resistance, even with the full set!",
         "item.cataclysm.wither_assault_shoulder_weapon.tooltip": "WITHER ASSAULT SHOULDER WEAPON",
