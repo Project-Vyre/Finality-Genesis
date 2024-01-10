@@ -27,4 +27,13 @@ ServerEvents.recipes(event => {
         '9x minecraft:coal_block',
         Fluid.of('minecraft:lava', 250)
     ]).superheated().id('finality:compacting/renew_diamond_bulk')
+    event.recipes.create.compacting('minecraft:coal', [
+        'minecraft:charcoal',
+        '#minecraft:leaves'
+    ]).heated().id('finality:compacting/charcoal_with_leaves_to_coal_conversion')
+    event.recipes.create.compacting('minecraft:coal', [
+        'minecraft:charcoal',
+        'minecraft:moss_block',
+        Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:thick"}') // Item.of('minecraft:potion', '{Potion:"minecraft:thick"}') {Bottle:"REGULAR",Potion:"mutantmonsters:chemical_x"}
+    ]).heated().id('finality:compacting/charcoal_with_moss_to_coal_conversion')
 })

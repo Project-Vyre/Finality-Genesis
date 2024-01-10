@@ -33,9 +33,15 @@ ServerEvents.recipes(event => {
         H: 'minecraft:water_bucket',
         W: 'minecraft:wooden_shovel'
     }).id('farmersdelight:cooking_pot')
+    event.recipes.kubejs.shaped('farmersdelight:cutting_board', [
+        'TC'
+    ], {
+        T: 'minecraft:stick',
+        C: '#minecraft:slabs'
+    }).id('finality:farmersdelight/crafting/smol_cutting_board')
     event.recipes.create.cutting('2x farmersdelight:cutting_board', '#minecraft:wooden_slabs')
         .processingTime(100)
-        .id('farmersdelight:cutting_board')
+        .id('finality:farmersdelight/cutting/cutting_board')
     event.recipes.minecraft.smelting('farmersdelight:fried_egg', 'minecraft:egg')
         .cookingTime(200)
         .id('farmersdelight:fried_egg')
@@ -82,46 +88,6 @@ ServerEvents.recipes(event => {
             'minecraft:dragon_egg',
             Fluid.of('kubejs:shimmer')
         ]).id('finality:ends_delight/filling/non_hatchable_dragon_egg')
-    }
-    if (Platform.isLoaded('culturaldelights')) {
-        // test 1: Crabber's Delight and Nether's Delight don't cause the issue...
-        // test 2: Cultural Delights returns the error.
-        console.log("Please ignore com.google.gson.JsonParseException: java.io.EOFException as it is being caused by Cultural Delights.")
-        console.log("This was determined after doing a binary search to narrow down the cause.")
-        event.remove([
-            { id: 'minecraft:beetroot_soup' },
-            { id: 'minecraft:mushroom_stew' },
-            { id: 'minecraft:rabbit_stew_from_brown_mushroom' },
-            { id: 'minecraft:rabbit_stew_from_red_mushroom' }
-        ])
-        event.shapeless('minecraft:beetroot_soup', [
-            '6x minecraft:beetroot',
-            'minecraft:bowl'
-        ]).id('minecraft:beetroot_soup')
-        event.shapeless('minecraft:mushroom_stew', [
-            'minecraft:red_mushroom',
-            'minecraft:brown_mushroom',
-            'minecraft:bowl'
-        ]).id('minecraft:mushroom_stew')
-        event.shapeless('minecraft:rabbit_stew', [
-            'minecraft:baked_potato',
-            ['minecraft:brown_mushroom', 'minecraft:red_mushroom'],
-            'minecraft:rabbit',
-            'minecraft:bowl',
-            'minecraft:carrot',
-        ]).id('minecraft:rabbit_stew')
-    }
-})
-
-ServerEvents.tags('item', event => {
-    if (Platform.isLoaded('culturaldelights')) {
-        event.add('minecraft:saplings', 'culturaldelights:avocado_sapling')
-    }
-})
-
-ServerEvents.tags('block', event => {
-    if (Platform.isLoaded('culturaldelights')) {
-        event.add('minecraft:saplings', 'culturaldelights:avocado_sapling')
     }
 })
 
