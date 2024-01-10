@@ -501,60 +501,10 @@ ServerEvents.recipes(event => {
     /**
      * Compacting
      */
-    /**
-     * 
-     * @param {string} nugget 
-     * @param {string} metal 
-     */
-    let NUGGET_SOLIDIFY = (nugget, metal) => {
-        event.recipes.create.compacting(nugget, Fluid.of(`kubejs:molten_${metal}`, 10)).id(`finality:molten_${metal}_to_${metal}_nugget`)
-    }
-    /**
-     * 
-     * @param {string} ingot 
-     * @param {string} metal 
-     */
-    let INGOT_SOLIDIFY = (ingot, metal) => {
-        event.recipes.create.compacting(ingot, Fluid.of(`kubejs:molten_${metal}`, 90)).id(`finality:molten_${metal}_to_${metal}_ingot`)
-    }
-    NUGGET_SOLIDIFY('minecraft:iron_nugget', 'iron')
-    NUGGET_SOLIDIFY('minecraft:gold_nugget', 'gold')
-    NUGGET_SOLIDIFY('create:copper_nugget', 'copper')
-    NUGGET_SOLIDIFY('create:zinc_nugget', 'zinc')
-    NUGGET_SOLIDIFY('create:brass_nugget', 'brass')
-    NUGGET_SOLIDIFY('kubejs:netherite_nugget', 'netherite')
-    INGOT_SOLIDIFY('minecraft:iron_ingot', 'iron')
-    INGOT_SOLIDIFY('minecraft:gold_ingot', 'gold')
-    INGOT_SOLIDIFY('minecraft:copper_ingot', 'copper')
-    INGOT_SOLIDIFY('create:zinc_ingot', 'zinc')
-    INGOT_SOLIDIFY('create:brass_ingot', 'brass')
-    INGOT_SOLIDIFY('minecraft:netherite_ingot', 'netherite')
     event.recipes.create.compacting([
         'minecraft:sponge',
         Fluid.of('minecraft:water', 1000)
     ], 'minecraft:wet_sponge').id('finality:compacting/sponge_squeezing')
-    event.recipes.create.compacting([
-        'minecraft:diamond',
-        Item.of('create:experience_nugget').withChance(0.25)
-    ], [
-        'minecraft:coal_block',
-        Fluid.of('minecraft:lava', 250)
-    ]).superheated().id('finality:compacting/renew_diamond')
-    event.recipes.create.compacting([
-        'minecraft:diamond_block',
-        Item.of('create:experience_nugget').withChance(0.25)
-    ], [
-        '9x minecraft:coal_block',
-        Fluid.of('minecraft:lava', 250)
-    ]).superheated().id('finality:compacting/renew_diamond_bulk')
-    event.recipes.create.compacting([
-        'minecraft:coal',
-        Item.of('create:experience_nugget').withChance(0.25)
-    ], 'minecraft:dried_kelp_block').heated().id('finality:compacting/renew_coal')
-    event.recipes.create.compacting([
-        'minecraft:coal_block',
-        Item.of('create:experience_nugget').withChance(0.25)
-    ], '9x minecraft:dried_kelp_block').heated().id('finality:compacting/renew_coal_bulk')
     event.recipes.create.compacting('minecraft:basalt', [
         'minecraft:blue_ice',
         Fluid.of('minecraft:lava', 500)
@@ -735,56 +685,6 @@ ServerEvents.recipes(event => {
         '8x minecraft:cobblestone',
         Fluid.of('create:potion', 250, '{Potion:"REGULAR",Potion:"minecraft:water_breathing"}')
     ]).id('finality:mixing/bulk_prismarine_from_cobblestone')
-    /**
-     * @summary Heated 1x ingot melting
-     * @param {Internal.OutputFluid} outputFluid 
-     * @param {Internal.InputItem} inputIngot 
-     */
-    let ingotMeltingHeated = (outputFluid, inputIngot) => {
-        event.recipes.create.mixing(
-            Fluid.of(`kubejs:molten_${outputFluid}`, 90),
-            inputIngot
-        ).heated().id(`finality:basin/${outputFluid}_sheet_melting`)
-    }
-    /**
-     * 
-     * @param {Internal.OutputFluid} outputFluid 
-     * @param {Internal.InputItem} inputBlock 
-     */
-    let blockMeltingHeated = (outputFluid, inputBlock) => {
-        event.recipes.create.mixing(
-            Fluid.of(`kubejs:molten_${outputFluid}`, 810),
-            inputBlock
-        ).heated().id(`finality:basin/${outputFluid}_block_melting`)
-    }
-    let ingot_melting_eligible = {
-        copper: 'create:copper_sheet',
-        iron: 'create:iron_sheet',
-        gold: 'create:golden_sheet',
-        zinc: 'kubejs:zinc_sheet',
-        brass: 'create:brass_sheet'
-    }
-    let block_melting_eligible = {
-        copper: 'minecraft:copper_block',
-        iron: 'minecraft:iron_block',
-        gold: 'minecraft:gold_block',
-        zinc: 'create:zinc_block',
-        brass: 'create:brass_block'
-    }
-    for (let [type, sheet] of Object.entries(ingot_melting_eligible)) {
-        ingotMeltingHeated(type, sheet)
-    }
-    for (let [type, block] of Object.entries(block_melting_eligible)) {
-        blockMeltingHeated(type, block)
-    }
-    event.recipes.create.mixing(
-        Fluid.of('kubejs:molten_netherite', 90),
-        'kubejs:netherite_sheet'
-    ).superheated().id('finality:mixing/netherite_sheet_melting')
-    event.recipes.create.mixing(
-        Fluid.of('kubejs:molten_netherite', 810),
-        'minecraft:netherite_block'
-    ).superheated().id('finality:mixing/netherite_block_melting')
     event.recipes.create.mixing('4x minecraft:netherite_ingot', [
         '4x minecraft:netherite_scrap',
         Fluid.of('kubejs:molten_gold', 360)
@@ -797,6 +697,10 @@ ServerEvents.recipes(event => {
         '18x minecraft:gold_nugget',
         Fluid.of('minecraft:lava', 180)
     ]).id('finality:nether_gold_ore_deco') // Thank you to FunnyMan4579 on the official Create Discord for giving me this idea :3
+    event.recipes.create.mixing('minecraft:cobblestone', [
+        Fluid.water(1000),
+        Fluid.lava(1000)
+    ]).id('finality:mixing/cobblestone')
     /**
      * >-----<
      */
@@ -820,14 +724,6 @@ ServerEvents.recipes(event => {
         I: 'minecraft:ink_sac',
         N: 'minecraft:nautilus_shell'
     }).id('finality:heart_of_the_sea')
-    event.shapeless(
-        '4x minecraft:quartz',
-        '#forge:storage_blocks/quartz'
-    ).id('finality:quartz_block_revert')
-    event.shapeless(
-        '4x minecraft:pointed_dripstone',
-        'minecraft:dripstone_block'
-    ).id('finality:pointed_dripstone_from_block')
     event.recipes.create.sequenced_assembly('minecraft:dripstone_block', 'minecraft:stone', [
         event.recipes.create.filling('kubejs:dripstone_transitional_stone', ['kubejs:dripstone_transitional_stone', Fluid.of('minecraft:water', 25)])
     ]).transitionalItem('kubejs:dripstone_transitional_stone').loops(7).id('finality:sequenced_assembly/dripstone_block')
@@ -846,41 +742,6 @@ ServerEvents.recipes(event => {
         ]).transitionalItem(transitional).loops(9).id(`finality:sequenced_assembly/${recipeId}`)
     }
     */
-    if (Platform.isLoaded('farmersdelight')) {
-        console.log("Farmer's Delight detected, correcting to recipes to 1:1 ratio.")
-        event.shapeless('create:dough', [
-            'minecraft:water_bucket',
-            'create:wheat_flour'
-        ]).id('create:crafting/appliances/dough')
-        event.recipes.create.mixing('create:dough', [
-            'create:wheat_flour',
-            Fluid.of('minecraft:water', 1000)
-        ]).id('create:mixing/dough_by_mixing')
-        event.remove({ id: 'farmersdelight:wheat_dough_from_water' })
-    }
-    // repairing item recipes module
-    if (!Platform.isLoaded('pickletweaks')) {
-        event.recipes.minecraft.crafting_shapeless(Ingredient.of('minecraft:bow'), [
-            Ingredient.of('minecraft:bow'),
-            'minecraft:string'
-        ]).modifyResult((grid, result) => {
-            let repairable = grid.find(Ingredient.of('minecraft:bow'))
-            if (repairable.damaged) {
-                repairable.damageValue = 0
-                return repairable
-            }
-        }).id('finality:bow_repair')
-        event.recipes.minecraft.crafting_shapeless(Ingredient.of('minecraft:crossbow'), [
-            Ingredient.of('minecraft:crossbow'),
-            'minecraft:string'
-        ]).modifyResult((grid, result) => {
-            let repairable = grid.find(Ingredient.of('minecraft:crossbow'))
-            if (repairable.damaged) {
-                repairable.damageValue = 0
-                return repairable
-            }
-        }).id('finality:crossbow_repair')
-    }
     // supplementaries related
     event.shaped('supplementaries:quiver', [
         'RRL',
@@ -898,35 +759,6 @@ ServerEvents.recipes(event => {
         '4x supplementaries:bomb',
         Fluid.of('kubejs:condensed_universal_entropy', 100)
     ]).id('finality:supplementaries/mixing/bulk_bomb_blue')
-    // nether wart
-    if (!Platform.isLoaded('quark')) {
-        event.shapeless('9x minecraft:nether_wart', [
-            'minecraft:nether_wart_block'
-        ]).id('finality:nether_wart_block_decompression')
-    }
-    if (Platform.isLoaded('quark')) {
-        event.shapeless('4x minecraft:nether_wart', [
-            'minecraft:nether_wart_block'
-        ]).id('finality:quark_compat_nether_wart_block_decompression')
-    }
-    // lemons
-    event.recipes.create.cutting('4x kubejs:lemon_slice', 'kubejs:lemon').processingTime(25).id('finality:lemon_slicing_with_saw')
-    event.recipes.create.compacting([
-        Fluid.of('kubejs:lemon_juice', 100),
-        'kubejs:lemon_seed'
-    ], 'kubejs:lemon').id('finality:whole_lemon_squeezing')
-    event.recipes.create.compacting([
-        Fluid.of('kubejs:lemon_juice', 25),
-        'kubejs:lemon_seed'
-    ], 'kubejs:lemon_slice').id('finality:lemon_slice_squeezing')
-    if (Platform.isLoaded('farmersdelight')) {
-        event.custom({
-            type: 'farmersdelight:cutting',
-            ingredients: [Ingredient.of('kubejs:lemon').toJson()],
-            result: [Item.of('kubejs:lemon_slice', 4).toJson()],
-            tool: Ingredient.of('#forge:tools/knives').toJson()
-        }).id('finality:lemon_cutting')
-    }
     // denied
     event.shapeless('kubejs:denied_result', [
         '4x minecraft:netherite_scrap',
@@ -1251,92 +1083,6 @@ ServerEvents.recipes(event => {
         event.recipes.create.deploying('kubejs:stabilizing_qubit', ['kubejs:stabilizing_qubit', 'minecraft:blue_ice']),
         event.recipes.create.deploying('kubejs:stabilizing_qubit', ['kubejs:stabilizing_qubit', 'minecraft:blue_ice'])
     ]).transitionalItem('kubejs:stabilizing_qubit').loops(4).id('finality:sequenced_assembly/qubit_stabilization')
-    event.recipes.create.mechanical_crafting('kubejs:qubit', [
-        '/FIX Q'
-    ], {
-        '/': 'kubejs:slash',
-        'F': 'kubejs:letter_f',
-        'I': 'kubejs:letter_i',
-        'X': 'kubejs:letter_x',
-        'Q': ['kubejs:denied_result', 'kubejs:removed_item', 'kubejs:errored_result']
-    }).id('finality:mechanical_crafting/qubit')
-    // give
-    event.recipes.create.mechanical_crafting('64x minecraft:netherite_block', [
-        '/GIVE @S ',
-        'NETHERITE',
-        'BLOCK 64 '
-    ], {
-        '/': 'kubejs:slash',
-        '@': 'kubejs:at_sign',
-        'G': 'kubejs:letter_g',
-        'I': 'kubejs:letter_i',
-        'V': 'kubejs:letter_v',
-        'E': 'kubejs:letter_e',
-        'S': 'kubejs:letter_s',
-        'N': 'kubejs:letter_n',
-        'T': 'kubejs:letter_t',
-        'H': 'kubejs:letter_h',
-        'R': 'kubejs:letter_r',
-        'B': 'kubejs:letter_b',
-        'L': 'kubejs:letter_l',
-        'O': 'kubejs:letter_o',
-        'C': 'kubejs:letter_c',
-        'K': 'kubejs:letter_k',
-        '6': 'kubejs:six',
-        '4': 'kubejs:four'
-    }).id('finality:command/netherite_block_stack')
-    event.recipes.create.mechanical_crafting('64x minecraft:diamond_block', [
-        '/GIVE @S ',
-        'DIAMOND  ',
-        'BLOCK 64 '
-    ], {
-        '/': 'kubejs:slash',
-        '@': 'kubejs:at_sign',
-        'G': 'kubejs:letter_g',
-        'I': 'kubejs:letter_i',
-        'V': 'kubejs:letter_v',
-        'E': 'kubejs:letter_e',
-        'S': 'kubejs:letter_s',
-        'D': 'kubejs:letter_d',
-        'A': 'kubejs:letter_a',
-        'M': 'kubejs:letter_m',
-        'O': 'kubejs:letter_o',
-        'N': 'kubejs:letter_n',
-        'B': 'kubejs:letter_b',
-        'L': 'kubejs:letter_l',
-        'C': 'kubejs:letter_c',
-        'K': 'kubejs:letter_k',
-        '6': 'kubejs:six',
-        '4': 'kubejs:four'
-    }).id('finality:command/diamond_block_stack')
-    event.recipes.create.mechanical_crafting('64x create:blaze_cake', [
-        '/GIVE @S ',
-        'CREATE   ',
-        'BLAZE    ',
-        'CAKE 64  '
-    ], {
-        '/': 'kubejs:slash',
-        '@': 'kubejs:at_sign',
-        'G': 'kubejs:letter_g',
-        'I': 'kubejs:letter_i',
-        'V': 'kubejs:letter_v',
-        'E': 'kubejs:letter_e',
-        'S': 'kubejs:letter_s',
-        'C': 'kubejs:letter_c',
-        'R': 'kubejs:letter_r',
-        'A': 'kubejs:letter_a',
-        'T': 'kubejs:letter_t',
-        'B': 'kubejs:letter_b',
-        'L': 'kubejs:letter_l',
-        'Z': 'kubejs:letter_z',
-        'K': 'kubejs:letter_k',
-        '6': 'kubejs:six',
-        '4': 'kubejs:four'
-    }).id('finality:command/blaze_cake_stack')
-    event.recipes.create.sandpaper_polishing(
-        'minecraft:nether_wart',
-        'finalitycore:living_netherwart' // correct later to 'finalitycore:living_nether_wart'
-    ).id('finality:sandpaper_polising/nether_wart')
 })
 
 ServerEvents.tags('item', event => {
@@ -1837,7 +1583,7 @@ let modBlacklist = {
     createunlimited: 'Create: Unlimited'
 }
 
-for (let [id, name] of Object.keys(modBlacklist)) {
+for (let [id, name] of Object.entries(modBlacklist)) {
     if (Platform.isLoaded(`${id}`)) {
         ServerEvents.recipes(event => {
             event.remove({})
