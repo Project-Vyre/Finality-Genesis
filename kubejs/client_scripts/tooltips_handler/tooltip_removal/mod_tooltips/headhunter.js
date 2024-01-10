@@ -1,4 +1,5 @@
 // requires: headhunter_mod
+// requires: create
 
 ItemEvents.tooltip(event => {
     event.addAdvanced([

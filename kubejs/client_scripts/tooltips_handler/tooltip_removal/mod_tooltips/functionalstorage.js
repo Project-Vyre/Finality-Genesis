@@ -1,5 +1,6 @@
 // priority: 20
 // requires: functionalstorage
+// requires: create
 
 ItemEvents.tooltip(event => {
     event.addAdvanced([
