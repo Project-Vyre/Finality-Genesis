@@ -603,7 +603,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.create.emptying([
         Fluid.of('kubejs:condensed_universal_order', 500),
-        'kubejs:errored_result'
+        'kubejs:awakened_singularity_core'
     ], Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:blue_ice"}').strongNBT()).id('finality:emptying/condensed_universal_order')
 
     event.recipes.create.mixing('kubejs:high_entropy_alloy_nugget', [

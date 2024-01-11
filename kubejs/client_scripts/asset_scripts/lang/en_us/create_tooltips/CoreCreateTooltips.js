@@ -333,6 +333,7 @@ ClientEvents.lang('en_us', event => {
         "item.kubejs.removed_item.tooltip.summary": "_WARNING:_ This item has been _removed_.",
         "item.kubejs.removed_item.tooltip.condition1": "Purpose",
         "item.kubejs.removed_item.tooltip.behaviour1": "Output item _removed_.",
+        // Entropy Related
         "block.kubejs.command_block.tooltip": "COMMAND BLOCK",
         "block.kubejs.command_block.tooltip.summary": "Not actually a true command block, but it can still do _certain_ things.",
         "block.kubejs.chain_command_block.tooltip": "CHAIN COMMAND BLOCK",
@@ -340,7 +341,9 @@ ClientEvents.lang('en_us', event => {
         "block.kubejs.repeating_command_block.tooltip": "REPEATING COMMAND BLOCK",
         "block.kubejs.repeating_command_block.tooltip.summary": "Not actually a true command block, but it can still do _certain_ things.",
         "item.kubejs.high_entropy_alloy.tooltip": "HIGH ENTROPY ALLOY",
-        "item.kubejs.high_entropy_alloy.tooltip.summary": "Used in making _powerful_ items.",
+        "item.kubejs.high_entropy_alloy.tooltip.summary": "Highly sought after... You also notice that the lighting seems to be rather odd on this material.",
+        "item.kubejs.high_entropy_alloy.tooltip.condition1": "Usage",
+        "item.kubejs.high_entropy_alloy.tooltip.behaviour1": "Used in blocks and items that _break reality_.",
         "item.kubejs.final_pickaxe.tooltip": "FINAL PICKAXE",
         "item.kubejs.final_pickaxe.tooltip.summary": "Tear through mountains without a care in the world.",
         "item.kubejs.final_pickaxe.tooltip.condition1": "Caution!",
@@ -485,6 +488,14 @@ ClientEvents.lang('en_us', event => {
             "block.farmersdelight.skillet.tooltip.behaviour2": "Cooks ingredients over an open flame or a stove.",
             "block.farmersdelight.skillet.tooltip.condition3": "On left click",
             "block.farmersdelight.skillet.tooltip.behaviour3": "Can be utilized as a weapon."
+        })
+    }
+    if (Platform.isLoaded('better_beacons')) {
+        event.addAll('kubejs', {
+            "block.minecraft.beacon.tooltip.condition1": "Better Beacons - Amplification",
+            "block.minecraft.beacon.tooltip.behaviour1": "The block used to make the beacon pyramid _base_ now affects the _amplifier_ of the effects provided.",
+            "block.minecraft.beacon.tooltip.condition2": "Better Beacons - Range",
+            "block.minecraft.beacon.tooltip.behaviour2": "The _payment item_ used now affects the _range_ of the beacon."
         })
     }
 })

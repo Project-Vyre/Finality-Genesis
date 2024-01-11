@@ -33,7 +33,7 @@ let debug_messages = false
 let DICE = 0
 
 function allMessages(event) {
-    DICE = Utils.random.nextInt(0, 20)
+    DICE = Utils.random.nextInt(0, 21)
     switch (DICE) {
         case 0:
             /**
@@ -545,6 +545,34 @@ function allMessages(event) {
                     Component.of('\n<shake>-----------------------------------------------------</shake>').darkRed()
                 ])
             }
+            break;
+        case 20:
+            /**
+             * Create Tip
+             * 
+             * You can merge two separate belts into each other by right clicking with a
+             * Mechanical Belt in your hand to extend one into the other. It even
+             * returns the extra belt back into your inventory!
+             */
+            event.server.tell([
+                Component.of(startRainbowLine),
+                Component.of('Create Tip\n').bold().color(CreateHighlighted),
+                Component.of('You can ').color(CreateStandard),
+                Component.of('merge ').bold().color(CreateHighlighted),
+                Component.of('two ').color(CreateStandard),
+                Component.of('separate belts ').color(CreateHighlighted),
+                Component.of('into each other by ').color(CreateStandard),
+                Component.of('right-clicking').aqua(),
+                Component.of('with a ').color(CreateStandard),
+                Component.of('Mechanical Belt ').color(CreateHighlighted),
+                Component.of('in your hand to ').color(CreateStandard),
+                Component.of('extend ').color(CreateHighlighted),
+                Component.of('one into the other. ').color(CreateStandard),
+                Component.of('It even ').color(CreateStandard),
+                Component.of('returns ').color(CreateHighlighted),
+                Component.of('the extra belt back into your inventory!').color(CreateStandard),
+                Component.of(endRainbowLine)
+            ])
             break;
         default:
             event.server.tell([
