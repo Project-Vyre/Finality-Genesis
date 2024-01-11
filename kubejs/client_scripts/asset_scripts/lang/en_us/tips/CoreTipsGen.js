@@ -19,6 +19,11 @@ console.log("Since Tips mod conditions don't work properly still...")
 console.log("Loading tips conditionally.")
 
 let compon = []
+/**
+ * 
+ * @param {string} tipId - Translation key.
+ * @param {string} tipText - Translation text.
+ */
 function finTip(tipId, tipText) {
     compon.push({
         id: tipId,
@@ -26,6 +31,11 @@ function finTip(tipId, tipText) {
     })
 }
 let jokeCompon = []
+/**
+ * 
+ * @param {string} tipId - Translation key.
+ * @param {string} tipText - Translation text.
+ */
 function finJokeTip(tipId, tipText) {
     jokeCompon.push({
         id: tipId,
@@ -33,6 +43,11 @@ function finJokeTip(tipId, tipText) {
     })
 }
 let createCompon = []
+/**
+ * 
+ * @param {string} tipId - Translation key.
+ * @param {string} tipText - Translation text.
+ */
 function createTip(tipId, tipText) {
     createCompon.push({
         id: tipId,
@@ -40,6 +55,11 @@ function createTip(tipId, tipText) {
     })
 }
 let specCreateCompon = []
+/**
+ * 
+ * @param {string} tipId - Translation key.
+ * @param {string} tipText - Translation text.
+ */
 function specialCreateTip(tipId, tipText) {
     specCreateCompon.push({
         id: tipId,
@@ -47,6 +67,11 @@ function specialCreateTip(tipId, tipText) {
     })
 }
 let jeiCompon = []
+/**
+ * 
+ * @param {string} tipId - Translation key.
+ * @param {string} tipText - Translation text.
+ */
 function jeiTip(tipId, tipText) {
     jeiCompon.push({
         id: tipId,
@@ -54,6 +79,11 @@ function jeiTip(tipId, tipText) {
     })
 }
 let reiCompon = []
+/**
+ * 
+ * @param {string} tipId - Translation key.
+ * @param {string} tipText - Translation text.
+ */
 function reiTip(tipId, tipText) {
     reiCompon.push({
         id: tipId,
@@ -155,6 +185,12 @@ ClientEvents.highPriorityAssets(event => {
     })
 })
 
+/**
+ * Translation Help
+ * 
+ * Every tip below follows this format:
+ * Translation key AND tip.json file name | The text that will be translated
+ */
 finTip("coal_renewal", "Coal can be renewed from compacting kelp blocks when given sufficient heat.")
 finTip("diamond_renewal", "Diamonds can be renewed from compacting coal when given sufficient heat.")
 finTip("difficulty", "If you did not heed my warning, expect to die many times over if you are not careful.")
