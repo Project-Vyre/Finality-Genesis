@@ -289,7 +289,7 @@ customization {
   actionid = 6933b74a-1382-4bf0-9292-fd7ae16d24201679852528355
   action = addsplash
   y = 165
-  text = It's here!
+  text = Lives in a pineapple under the sea!
 }
 
 customization {
