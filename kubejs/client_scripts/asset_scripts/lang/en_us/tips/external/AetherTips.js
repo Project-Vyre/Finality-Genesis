@@ -2,6 +2,7 @@
 // requires: aether
 
 ClientEvents.lang('en_us', event => {
+    // Changed from Pro Tip to Aether Tip.
     event.add("aether", "gui.aether.pro_tip", "Aether Tip")
 })
 

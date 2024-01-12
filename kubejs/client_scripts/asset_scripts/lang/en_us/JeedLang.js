@@ -1,3 +1,4 @@
+// priority: 0
 // requires: jeed
 
 /**
@@ -22,5 +23,8 @@ ClientEvents.lang('en_us', event => {
     }
     if (Platform.isLoaded('autumnity')) {
         event.add("effect.autumnity.extension.desc", "Any effects gained while the user has this effect gain an additional 30 seconds. Does not stack!")
+    }
+    if (Platform.isLoaded('irons_spellbooks')) {
+        event.add('irons_spellbooks', "effect.irons_spellbooks.instant_mana.desc", "Instantly gain mana!")
     }
 })
