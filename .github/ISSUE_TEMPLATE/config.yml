@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: GitHub Discussions
+    url: https://github.com/Project-Vyre/Finality-Genesis/discussions
+    about: Discuss or ask questions here instead.
+  - name: Project Vyre Discord
+    url: https://discord.gg/UF8yMZEmmc
+    about: Our Discord server if you don't want to use GitHub Discussions. Please do not ask a question and leave after not getting a response for a few minutes, that gets annoying.
