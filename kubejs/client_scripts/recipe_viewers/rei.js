@@ -330,21 +330,21 @@ REIEvents.hide('item', event => {
     if (Platform.isLoaded('headhunter_mod') && Platform.isLoaded('apotheosis')) {
         event.hide([
             'headhunter_mod:vertical_beam_spawn_egg',
-            Item.of('minecraft:potion', '{Potion:"headhunter_mod:screenshakepotion"}'),
-            Item.of('minecraft:potion', '{Potion:"headhunter_mod:screencolourpotion"}'),
-            Item.of('minecraft:potion', '{Potion:"headhunter_mod:fly_potion"}'),
-            Item.of('minecraft:splash_potion', '{Potion:"headhunter_mod:screenshakepotion"}'),
-            Item.of('minecraft:splash_potion', '{Potion:"headhunter_mod:screencolourpotion"}'),
-            Item.of('minecraft:splash_potion', '{Potion:"headhunter_mod:fly_potion"}'),
-            Item.of('minecraft:lingering_potion', '{Potion:"headhunter_mod:screenshakepotion"}'),
-            Item.of('minecraft:lingering_potion', '{Potion:"headhunter_mod:screencolourpotion"}'),
-            Item.of('minecraft:lingering_potion', '{Potion:"headhunter_mod:fly_potion"}'),
-            Item.of('minecraft:tipped_arrow', '{Potion:"headhunter_mod:screenshakepotion"}'),
-            Item.of('minecraft:tipped_arrow', '{Potion:"headhunter_mod:screencolourpotion"}'),
-            Item.of('minecraft:tipped_arrow', '{Potion:"headhunter_mod:fly_potion"}'),
-            Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"headhunter_mod:screenshakepotion"}'),
-            Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"headhunter_mod:screencolourpotion"}'),
-            Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"headhunter_mod:fly_potion"}')
+            Item.of('minecraft:potion', '{Potion:"headhunter_mod:screenshakepotion"}').strongNBT(),
+            Item.of('minecraft:potion', '{Potion:"headhunter_mod:screencolourpotion"}').strongNBT(),
+            Item.of('minecraft:potion', '{Potion:"headhunter_mod:fly_potion"}').strongNBT(),
+            Item.of('minecraft:splash_potion', '{Potion:"headhunter_mod:screenshakepotion"}').strongNBT(),
+            Item.of('minecraft:splash_potion', '{Potion:"headhunter_mod:screencolourpotion"}').strongNBT(),
+            Item.of('minecraft:splash_potion', '{Potion:"headhunter_mod:fly_potion"}').strongNBT(),
+            Item.of('minecraft:lingering_potion', '{Potion:"headhunter_mod:screenshakepotion"}').strongNBT(),
+            Item.of('minecraft:lingering_potion', '{Potion:"headhunter_mod:screencolourpotion"}').strongNBT(),
+            Item.of('minecraft:lingering_potion', '{Potion:"headhunter_mod:fly_potion"}').strongNBT(),
+            Item.of('minecraft:tipped_arrow', '{Potion:"headhunter_mod:screenshakepotion"}').strongNBT(),
+            Item.of('minecraft:tipped_arrow', '{Potion:"headhunter_mod:screencolourpotion"}').strongNBT(),
+            Item.of('minecraft:tipped_arrow', '{Potion:"headhunter_mod:fly_potion"}').strongNBT(),
+            Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"headhunter_mod:screenshakepotion"}').strongNBT(),
+            Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"headhunter_mod:screencolourpotion"}').strongNBT(),
+            Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"headhunter_mod:fly_potion"}').strongNBT()
         ])
     }
 
