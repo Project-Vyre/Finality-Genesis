@@ -20,7 +20,6 @@ const WOOD_TYPES = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'm
 const STANDARD_ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
 const STANDARD_TOOLS_ALL = ['pickaxe', 'axe', 'hoe', 'shovel', 'sword']
 let STONEPLATES = ['stone', 'polished_blackstone']
-let FOUNDATION_METALS = ['iron', 'gold']
 let FOUNDATION_NONMETAL = [
     'coal',
     'redstone',

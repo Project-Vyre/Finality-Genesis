@@ -1,6 +1,8 @@
 // requires: lootjs
 // requires: create
 
+let FOUNDATION_METALS = ['iron', 'gold']
+
 LootJS.modifiers(event => {
     for (let i = 0; i < FOUNDATION_METALS.length; i++) {
         let metal = FOUNDATION_METALS[i];
