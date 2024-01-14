@@ -9,4 +9,18 @@ ClientEvents.lang('en_us', event => {
             .setPalette($Palette.GREEN)
             .build()
     )
+    event.addAll(
+        'mutantmonsters',
+        createTooltip('mutantmonsters:endersoul_hand')
+            .addSummary('Obtained from a defeated Mutant Enderman. Used for making _Chemical X_ or as a _weapon_.')
+            .setPalette($Palette.PURPLE)
+            .build()
+    )
+    event.addAll(
+        'mutantmonsters',
+        createTooltip('mutantmonsters:mutant_skeleton_skull')
+            .addSummary('Obtained from a defeated Mutant Skeleton. Used for making _Chemical X_ or as a _weapon_.')
+            .setPalette($Palette.GRAY)
+            .build()
+    )
 })

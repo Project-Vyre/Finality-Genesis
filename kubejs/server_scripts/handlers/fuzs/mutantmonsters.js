@@ -5,7 +5,7 @@
 
 ServerEvents.recipes(event => {
     event.recipes.create.mixing([
-        Fluid.of('minecraft:potion', 250, '{Bottle:"REGULAR",Potion:"mutantmonsters:chemical_x"}'),
+        Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"mutantmonsters:chemical_x"}'),
         Item.of('create:experience_nugget').withChance(0.25)
     ], [
         'minecraft:rotten_flesh',
@@ -17,7 +17,7 @@ ServerEvents.recipes(event => {
         Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:thick"}')
     ]).heated().id('finality:mixing/potion_x_regular')
     event.recipes.create.mixing([
-        Fluid.of('minecraft:potion', 250, '{Bottle:"REGULAR",Potion:"mutantmonsters:chemical_x"}'),
+        Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"mutantmonsters:chemical_x"}'),
         Item.of('create:experience_nugget').withChance(0.50)
     ], [
         'minecraft:zombie_head',
