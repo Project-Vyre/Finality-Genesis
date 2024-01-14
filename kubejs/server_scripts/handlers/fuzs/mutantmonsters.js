@@ -1,7 +1,7 @@
 // requires: mutantmonsters
 // requires: mutantmore
 // requires: kubejs_create
-// ignored: true
+// ignored: false
 
 ServerEvents.recipes(event => {
     event.recipes.create.mixing([
