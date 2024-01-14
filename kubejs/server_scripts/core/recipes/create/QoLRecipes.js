@@ -7,6 +7,18 @@
 
 ServerEvents.recipes(event => {
     /**
+     * BLASTING
+     * 
+     * Notice: Blasting recipes are automatically added by Create!
+     */
+    event.recipes.minecraft.blasting('create:zinc_block', 'create:raw_zinc_block').id('finality:blasting/raw_zinc_block')
+    event.recipes.minecraft.blasting('minecraft:skeleton_skull', 'minecraft:zombie_head').id('finality:blasting/zombie_head_flesh_burning')
+    /**
+     * CAMPFIRE COOKING / SMOKING
+     * 
+     * Notice: Smoking recipes are automatically added by Create!
+     */
+    /**
      * COMPACTING
      */
     event.recipes.create.compacting([
@@ -61,28 +73,34 @@ ServerEvents.recipes(event => {
         Item.of('minecraft:iron_nugget').withChance(0.12),
         Item.of('create:experience_nugget').withChance(0.25)
     ], 'minecraft:dripstone_block').processingTime(250).id('finality:crushing/dripstone')
+
     event.recipes.create.crushing([
         Item.of('create:copper_nugget').withChance(0.05),
         Item.of('minecraft:gunpowder').withChance(0.10)
     ], 'minecraft:basalt').processingTime(250).id('finality:crushing/basalt')
+
     event.remove({ id: 'create:crushing/netherrack' })
     event.recipes.create.crushing([
         'create:cinder_flour',
         Item.of('create:cinder_flour').withChance(0.50),
         Item.of('minecraft:netherite_scrap').withChance(0.0002)
     ], 'minecraft:netherrack').processingTime(250).id('finality:crushing/netherrack')
+
     event.recipes.create.crushing([
         Item.of('minecraft:gold_nugget', 5).withChance(0.25),
         Item.of('create:experience_nugget', 2).withChance(0.12)
     ], 'minecraft:gilded_blackstone').processingTime(250).id('finality:crushing/gilded_blackstone')
+
     event.recipes.create.crushing([
         Item.of('kubejs:deepslate_shard', 9).withChance(0.75),
         Item.of('minecraft:gravel').withChance(0.12)
     ], 'minecraft:deepslate').processingTime(250).id('finality:crushing/deepslate_shard_from_deepslate')
+
     event.recipes.create.crushing([
         Item.of('kubejs:deepslate_shard', 9).withChance(0.25),
         Item.of('minecraft:gravel').withChance(0.24)
     ], 'minecraft:cobbled_deepslate').processingTime(250).id('finality:crushing/deepslate_shard_from_cobbled_deepslate')
+
     if (Platform.isLoaded('createaddition')) {
         console.log('Create Crafts & Additions detected! Restoring Tuff crushing recipes.')
         event.recipes.create.crushing([
@@ -92,6 +110,7 @@ ServerEvents.recipes(event => {
             Item.of('create:zinc_nugget').withChance(0.10),
             Item.of('minecraft:iron_nugget').withChance(0.10)
         ], 'minecraft:tuff').processingTime(350).id('create:crushing/tuff')
+
         event.recipes.create.crushing([
             Item.of('minecraft:flint').withChance(0.25),
             Item.of('minecraft:gold_nugget').withChance(0.10),
@@ -158,12 +177,8 @@ ServerEvents.recipes(event => {
         'create:sticky_mechanical_piston'
     ).id('finality:splashing/sticky_mechanical_piston')
     /**
-     * BLASTING
-     * 
-     * Notice: Blasting recipes are automatically added by Create!
+     * MILLING
      */
-    event.recipes.minecraft.blasting('create:zinc_block', 'create:raw_zinc_block').id('finality:blasting/raw_zinc_block')
-    event.recipes.minecraft.blasting('minecraft:skeleton_skull', 'minecraft:zombie_head').id('finality:blasting/zombie_head_flesh_burning')
     /**
      * MIXING
      * 
@@ -218,4 +233,22 @@ ServerEvents.recipes(event => {
         Fluid.water(1000),
         Fluid.lava(1000)
     ]).id('finality:mixing/cobblestone')
+    /**
+     * PRESSING
+     */
+    event.recipes.create.pressing('kubejs:zinc_sheet', 'create:zinc_ingot').id('finality:pressing/zinc_ingot')
+    event.recipes.create.pressing('kubejs:netherite_sheet', 'minecraft:netherite_ingot').id('finality:pressing/netherite_ingot')
+    /**
+     * >-----<
+     */
+    // Mushroom Stew
+    event.recipes.create.filling('minecraft:mushroom_stew', [
+        'minecraft:bowl',
+        Fluid.of('kubejs:mushroom_stew', 250)
+    ]).id('finality:filling/mushroom_stew')
+    event.recipes.create.mixing(Fluid.of('kubejs:mushroom_stew', 250), [
+        'minecraft:brown_mushroom',
+        'minecraft:red_mushroom',
+        Fluid.of('minecraft:water', 250)
+    ]).heated().id('finality:mixing/mushroom_stew')
 })

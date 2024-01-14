@@ -164,91 +164,6 @@ ServerEvents.recipes(event => {
     event.shapeless(Item.of('patchouli:guide_book', '{"patchouli:book":"patchouli:tome_of_finality"}'), [
         '#forge:rods/wooden', '#forge:rods/wooden'
     ]).id('finality:documentation_book')
-    event.shaped('minecraft:bucket', [
-        'I I',
-        ' I '
-    ], {
-        I: 'create:iron_sheet'
-    }).id('finality:bucket')
-    event.shaped('minecraft:clock', [
-        ' G ',
-        'GMG',
-        ' G '
-    ], {
-        G: 'create:golden_sheet',
-        M: 'create:precision_mechanism'
-    }).id('finality:clock')
-    event.shaped('minecraft:compass', [
-        ' I ',
-        'IRI',
-        ' I '
-    ], {
-        I: 'create:iron_sheet',
-        R: 'minecraft:redstone'
-    }).id('finality:compass')
-    event.shaped('minecraft:piston', [
-        'WWW',
-        'CEC',
-        'CRC'
-    ], {
-        W: '#minecraft:planks',
-        C: 'minecraft:cobblestone',
-        E: 'create:piston_extension_pole',
-        R: 'minecraft:redstone'
-    }).id('finality:piston')
-    event.shaped('minecraft:hopper', [
-        'H',
-        'C'
-    ], {
-        H: 'create:chute',
-        C: '#forge:chests/wooden'
-    }).id('finality:hopper')
-    event.shaped('minecraft:trident', [
-        'PPP',
-        ' A ',
-        ' A '
-    ], {
-        P: 'kubejs:trident_prong',
-        A: 'kubejs:trident_pole'
-    }).id('finality:trident')
-    event.shaped('kubejs:trident_pole', [
-        'S',
-        'S'
-    ], {
-        S: 'minecraft:prismarine_shard'
-    }).id('finality:trident_pole')
-    event.shapeless('kubejs:trident_prong', [
-        'minecraft:pointed_dripstone',
-        'minecraft:prismarine_crystals'
-    ]).id('finality:trident_prong')
-    event.shaped('minecraft:saddle', [
-        'LLL',
-        'LSL'
-    ], {
-        L: 'minecraft:leather',
-        S: 'minecraft:string'
-    }).id('finality:saddle')
-    event.shaped('minecraft:iron_horse_armor', [
-        'I I',
-        'III',
-        'I I'
-    ], {
-        I: 'minecraft:iron_ingot'
-    }).id('finality:iron_horse_armor')
-    event.shaped('minecraft:golden_horse_armor', [
-        'G G',
-        'GGG',
-        'G G'
-    ], {
-        G: 'minecraft:gold_ingot'
-    }).id('finality:golden_horse_armor')
-    event.shaped('minecraft:diamond_horse_armor', [
-        'D D',
-        'DDD',
-        'D D'
-    ], {
-        D: 'minecraft:diamond'
-    }).id('finality:diamond_horse_armor')
     event.shaped('create:brown_toolbox', [
         ' W ',
         'SBS',
@@ -270,15 +185,6 @@ ServerEvents.recipes(event => {
         O: 'kubejs:high_entropy_alloy_sheet',
         I: 'kubejs:high_entropy_alloy'
     }).id('finality:mechanical_crafting/create_worldshaper')
-    event.recipes.create.mixing(Fluid.of('kubejs:mushroom_stew', 250), [
-        'minecraft:brown_mushroom',
-        'minecraft:red_mushroom',
-        Fluid.of('minecraft:water', 250)
-    ]).heated().id('finality:mushroom_stew_mixing')
-    event.recipes.create.filling('minecraft:mushroom_stew', [
-        'minecraft:bowl',
-        Fluid.of('kubejs:mushroom_stew', 250)
-    ]).id('finality:mushroom_stew_pouring')
     for (let i = 0; i < STONEPLATES.length; i++) {
         let stone = STONEPLATES[i];
         event.recipes.create.cutting([
@@ -310,14 +216,6 @@ ServerEvents.recipes(event => {
     event.shapeless('create:mechanical_piston', [
         'supplementaries:soap', 'create:sticky_mechanical_piston'
     ]).id('finality:mechanical_piston_soap_washing')
-    /**
-     * Milling
-     */
-    /**
-     * >-----<
-     */
-    event.recipes.create.pressing('kubejs:zinc_sheet', 'create:zinc_ingot').id('finality:pressing/zinc_ingot')
-    event.recipes.create.pressing('kubejs:netherite_sheet', 'minecraft:netherite_ingot').id('finality:pressing/netherite_ingot')
     event.shaped('minecraft:nautilus_shell', [
         'PFP',
         'FPF',
@@ -354,87 +252,6 @@ ServerEvents.recipes(event => {
         ]).transitionalItem(transitional).loops(9).id(`finality:sequenced_assembly/${recipeId}`)
     }
     */
-    // supplementaries related
-    event.shaped('supplementaries:quiver', [
-        'RRL',
-        'RLL',
-        'LL '
-    ], {
-        R: '#forge:rope',
-        L: '#forge:leather'
-    }).id('finality:supplementaries_quiver')
-    event.recipes.create.filling('supplementaries:bomb_blue', [
-        'supplementaries:bomb',
-        Fluid.of('kubejs:condensed_universal_entropy', 25)
-    ]).id('finality:supplementaries/filling/bomb_blue')
-    event.recipes.create.mixing('4x supplementaries:bomb_blue', [
-        '4x supplementaries:bomb',
-        Fluid.of('kubejs:condensed_universal_entropy', 100)
-    ]).id('finality:supplementaries/mixing/bulk_bomb_blue')
-    // denied
-    event.shapeless('kubejs:denied_result', [
-        '4x minecraft:netherite_scrap',
-        '4x minecraft:gold_ingot'
-    ]).id('minecraft:netherite_ingot')
-    event.shaped('kubejs:denied_result', [
-        ' G ',
-        'GMG',
-        ' G '
-    ], {
-        G: 'minecraft:gold_ingot',
-        M: 'minecraft:redstone'
-    }).id('minecraft:clock')
-    event.shaped('kubejs:denied_result', [
-        ' I ',
-        'IRI',
-        ' I '
-    ], {
-        I: 'minecraft:iron_ingot',
-        R: 'minecraft:redstone'
-    }).id('minecraft:compass')
-    event.shaped('kubejs:denied_result', [
-        'WWW',
-        'CEC',
-        'CRC'
-    ], {
-        W: '#minecraft:planks',
-        C: 'minecraft:cobblestone',
-        E: 'minecraft:iron_ingot',
-        R: 'minecraft:redstone'
-    }).id('minecraft:piston')
-    event.shaped('kubejs:denied_result', [
-        'F F',
-        'FCF',
-        ' F '
-    ], {
-        F: 'minecraft:iron_ingot',
-        C: '#forge:chests/wooden'
-    }).id('minecraft:hopper')
-    event.shaped('kubejs:denied_result', [
-        'GGG',
-        'GNG',
-        'OOO'
-    ], {
-        G: 'minecraft:glass',
-        N: 'minecraft:nether_star',
-        O: 'minecraft:obsidian'
-    }).id('minecraft:beacon')
-    /**
-     * Removed Create Materials
-     */
-    event.recipes.create.mixing('create:chromatic_compound', [
-        '3x minecraft:glowstone_dust',
-        '3x create:powdered_obsidian',
-        'create:polished_rose_quartz'
-    ]).superheated().id('create:mixing/chromatic_compound')
-    event.recipes.create.item_application('create:refined_radiance_casing', [
-        '#forge:stripped_logs',
-        'create:refined_radiance'
-    ]).id('create:refined_radiance_casing')
-    event.recipes.create.item_application('create:shadow_steel_casing', [
-        '#forge:stripped_logs',
-        'create:shadow_steel'
-    ]).id('create:shadow_steel_casing')
     for (let i = 0; i < STORAGE_INCEPTION.length; i++) {
         let insert = STORAGE_INCEPTION[i];
         event.shaped(`kubejs:compressed_${insert}`, [
@@ -1084,7 +901,6 @@ let modBlacklist = {
     createcasing: 'Create Encased',
     createdieselgenerators: 'Create: Diesel Generators',
     create_confectionery: 'Create Confectionery',
-    create_jetpack: 'Create Jetpack',
     create_sa: 'Create Stuff and Additions',
     creategoggles: 'Create Goggles',
     createsifter: 'Create Sifting',

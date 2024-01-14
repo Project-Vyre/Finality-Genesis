@@ -45,6 +45,35 @@ function aetherRepairing(event, input, repairtime, id) {
     }).id(`finality:aether/${id}_repairing`)
 }
 
+/*
+If skyroot planks and skyroot sticks are tagged, then the Skyroot tool recipes will conflict with
+Minecraft's regular wooden tools, though Aether's recipes do take priority when Polymorph is 
+active.
+
+let aetherRecipeIds = [
+    'aether:aether_saddle',
+    'aether:skyroot_grindstone', // duplicate of the vanilla grindstone recipe
+    'aether:skyroot_grindstone_holystone_slab', // duplicate of the vanilla grindstone recipe
+    'aether:skyroot_jukebox', // duplicate of the vanilla jukebox recipe which uses the minecraft:planks tag.
+    'aether:skyroot_tripwire_hook', // duplicate of the vanilla tripwire hook recipe.
+    'aether:skyroot_iron_vanilla_shield', // duplicate of the vanilla shield recipe.
+    'aether:skyroot_zenite_vanilla_shield', // duplicate of the tagged recipe that already uses zanite.
+    'aether:skyroot_fletching_table', // duplicate of the vanilla fletching table recipe.
+    'aether:skyroot_barrel', // duplicate of the vanilla barrel recipe.
+    'aether:skyroot_piston', // duplicate of the vanilla piston recipe.
+    'aether:skyroot_loom', // duplicate of the vanilla loom recipe.
+    'aether:skyroot_beehive', // duplicate of the vanilla beehive recipe.
+    'aether:skyroot_cartography_table', // duplicate of the vanilla cartography table recipe.
+    'aether:skyroot_chest', // duplicate of the vanilla chest recipe.
+]
+    for (let i = 0; i < aetherRecipeIds.length; i++) {
+        let element = aetherRecipeIds[i];
+        event.remove([
+            { id: element }
+        ])
+    }
+*/
+
 ServerEvents.recipes(event => {
     event.remove({ id: 'aether:aether_saddle' })
     aetherEnchantingBlocks(event,
@@ -126,6 +155,28 @@ ServerEvents.recipes(event => {
         600,
         'obsidian_gloves'
     )
+    //event.shaped('aether:')
+})
+
+ServerEvents.tags('item', event => {
+    event.add('forge:slimeballs', [
+        'aether:swet_ball'
+    ])
+    if (Platform.isLoaded('bookshelf')) {
+        event.add('bookshelf:slime_balls', [
+            'aether:swet_ball'
+        ])
+    }
+    if (Platform.isLoaded('cataclysm')) {
+        event.add('cataclysm:sticky_item', [
+            'aether:swet_ball'
+        ])
+    }
+    if (Platform.isLoaded('gag')) {
+        event.add('gag:labeling_tool_charges', [
+            'aether:swet_ball'
+        ])
+    }
 })
 
 ServerEvents.tags('block', event => {

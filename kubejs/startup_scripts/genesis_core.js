@@ -851,7 +851,6 @@ let blacklist = {
     createcasing: 'Not supported.',
     createdieselgenerators: 'Not supported.',
     create_confectionery: 'MCreator mod.',
-    create_jetpack: 'Not supported.',
     create_sa: 'MCreator mod. NOT to be confused with Create CRAFTS & Additions which is an actual mod.',
     creategoggles: 'Replaced by Curios API.',
     createsifter: 'Not supported.',

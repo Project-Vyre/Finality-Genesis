@@ -612,7 +612,23 @@ ServerEvents.recipes(event => {
         '2x minecraft:honeycomb',
         Fluid.of('create:honey', 500)
     ]).id('finality:mysticalagriculture/mixing/honey_agglomeratio')
-
+    // growth accelerator upgrading
+    event.recipes.create.item_application('mysticalagriculture:prudentium_growth_accelerator', [
+        'mysticalagriculture:inferium_growth_accelerator',
+        'mysticalagriculture:prudentium_upgrade'
+    ]).id('finality:mysticalagriculture/item_application/inferium_to_prudentium_growth_accelerator')
+    event.recipes.create.item_application('mysticalagriculture:tertium_growth_accelerator', [
+        'mysticalagriculture:prudentium_growth_accelerator',
+        'mysticalagriculture:tertium_upgrade'
+    ]).id('finality:mysticalagriculture/item_application/prudentium_to_tertium_growth_accelerator')
+    event.recipes.create.item_application('mysticalagriculture:imperium_growth_accelerator', [
+        'mysticalagriculture:tertium_growth_accelerator',
+        'mysticalagriculture:imperium_upgrade'
+    ]).id('finality:mysticalagriculture/item_application/tertium_to_imperium_growth_accelerator')
+    event.recipes.create.item_application('mysticalagriculture:supremium_growth_accelerator', [
+        'mysticalagriculture:imperium_growth_accelerator',
+        'mysticalagriculture:supremium_upgrade'
+    ]).id('finality:mysticalagriculture/item_application/imperium_to_supremium_growth_accelerator')
     // seed reprocessing via millstone
     for (let i = 0; i < SEED_PROCESSING_ELIGIBLE.length; i++) {
         let element = SEED_PROCESSING_ELIGIBLE[i];
