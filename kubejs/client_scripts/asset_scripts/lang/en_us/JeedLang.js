@@ -27,4 +27,7 @@ ClientEvents.lang('en_us', event => {
     if (Platform.isLoaded('irons_spellbooks')) {
         event.add('irons_spellbooks', "effect.irons_spellbooks.instant_mana.desc", "Instantly gain mana!")
     }
+    if (Platform.isLoaded('mutantmonsters')) {
+        event.add('mutantmonsters', 'effect.mutantmonsters.chemical_x.desc', 'Nothing bad should happen if you happen to spill this on an entity... right?')
+    }
 })
