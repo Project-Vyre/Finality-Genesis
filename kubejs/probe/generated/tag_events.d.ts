@@ -1,5 +1,19 @@
 /// <reference path="./globals.d.ts" />
 declare namespace TagEvent {
+    class DimensionType extends Internal.TagEventJS {
+    get(id: Special.DimensionTypeTag): Internal.TagWrapper
+    add(tag: Special.DimensionTypeTag, ...id: Special.DimensionType[]): Internal.TagWrapper
+    remove(tag: Special.DimensionTypeTag, ...id: Special.DimensionType[]): Internal.TagWrapper
+    removeAll(tag: Special.DimensionTypeTag): Internal.TagWrapper
+    removeAllTagsFrom(...id: Special.DimensionType[]): Internal.TagWrapper
+    }
+    class BiomeModifier extends Internal.TagEventJS {
+    get(id: Special.BiomeModifierTag): Internal.TagWrapper
+    add(tag: Special.BiomeModifierTag, ...id: Special.BiomeModifier[]): Internal.TagWrapper
+    remove(tag: Special.BiomeModifierTag, ...id: Special.BiomeModifier[]): Internal.TagWrapper
+    removeAll(tag: Special.BiomeModifierTag): Internal.TagWrapper
+    removeAllTagsFrom(...id: Special.BiomeModifier[]): Internal.TagWrapper
+    }
     class TemplatePool extends Internal.TagEventJS {
     get(id: Special.TemplatePoolTag): Internal.TagWrapper
     add(tag: Special.TemplatePoolTag, ...id: Special.TemplatePool[]): Internal.TagWrapper
@@ -7,12 +21,19 @@ declare namespace TagEvent {
     removeAll(tag: Special.TemplatePoolTag): Internal.TagWrapper
     removeAllTagsFrom(...id: Special.TemplatePool[]): Internal.TagWrapper
     }
-    class Noise extends Internal.TagEventJS {
-    get(id: Special.NoiseTag): Internal.TagWrapper
-    add(tag: Special.NoiseTag, ...id: Special.Noise[]): Internal.TagWrapper
-    remove(tag: Special.NoiseTag, ...id: Special.Noise[]): Internal.TagWrapper
-    removeAll(tag: Special.NoiseTag): Internal.TagWrapper
-    removeAllTagsFrom(...id: Special.Noise[]): Internal.TagWrapper
+    class PlacedFeature extends Internal.TagEventJS {
+    get(id: Special.PlacedFeatureTag): Internal.TagWrapper
+    add(tag: Special.PlacedFeatureTag, ...id: Special.PlacedFeature[]): Internal.TagWrapper
+    remove(tag: Special.PlacedFeatureTag, ...id: Special.PlacedFeature[]): Internal.TagWrapper
+    removeAll(tag: Special.PlacedFeatureTag): Internal.TagWrapper
+    removeAllTagsFrom(...id: Special.PlacedFeature[]): Internal.TagWrapper
+    }
+    class NoiseSettings extends Internal.TagEventJS {
+    get(id: Special.NoiseSettingsTag): Internal.TagWrapper
+    add(tag: Special.NoiseSettingsTag, ...id: Special.NoiseSettings[]): Internal.TagWrapper
+    remove(tag: Special.NoiseSettingsTag, ...id: Special.NoiseSettings[]): Internal.TagWrapper
+    removeAll(tag: Special.NoiseSettingsTag): Internal.TagWrapper
+    removeAllTagsFrom(...id: Special.NoiseSettings[]): Internal.TagWrapper
     }
     class Structure extends Internal.TagEventJS {
     get(id: Special.StructureTag): Internal.TagWrapper
@@ -21,12 +42,54 @@ declare namespace TagEvent {
     removeAll(tag: Special.StructureTag): Internal.TagWrapper
     removeAllTagsFrom(...id: Special.Structure[]): Internal.TagWrapper
     }
+    class DimensionSettings extends Internal.TagEventJS {
+    get(id: Special.DimensionSettingsTag): Internal.TagWrapper
+    add(tag: Special.DimensionSettingsTag, ...id: Special.DimensionSettings[]): Internal.TagWrapper
+    remove(tag: Special.DimensionSettingsTag, ...id: Special.DimensionSettings[]): Internal.TagWrapper
+    removeAll(tag: Special.DimensionSettingsTag): Internal.TagWrapper
+    removeAllTagsFrom(...id: Special.DimensionSettings[]): Internal.TagWrapper
+    }
+    class MapMarkers extends Internal.TagEventJS {
+    get(id: Special.MapMarkersTag): Internal.TagWrapper
+    add(tag: Special.MapMarkersTag, ...id: Special.MapMarkers[]): Internal.TagWrapper
+    remove(tag: Special.MapMarkersTag, ...id: Special.MapMarkers[]): Internal.TagWrapper
+    removeAll(tag: Special.MapMarkersTag): Internal.TagWrapper
+    removeAllTagsFrom(...id: Special.MapMarkers[]): Internal.TagWrapper
+    }
+    class Biome extends Internal.TagEventJS {
+    get(id: Special.BiomeTag): Internal.TagWrapper
+    add(tag: Special.BiomeTag, ...id: Special.Biome[]): Internal.TagWrapper
+    remove(tag: Special.BiomeTag, ...id: Special.Biome[]): Internal.TagWrapper
+    removeAll(tag: Special.BiomeTag): Internal.TagWrapper
+    removeAllTagsFrom(...id: Special.Biome[]): Internal.TagWrapper
+    }
     class StructureSet extends Internal.TagEventJS {
     get(id: Special.StructureSetTag): Internal.TagWrapper
     add(tag: Special.StructureSetTag, ...id: Special.StructureSet[]): Internal.TagWrapper
     remove(tag: Special.StructureSetTag, ...id: Special.StructureSet[]): Internal.TagWrapper
     removeAll(tag: Special.StructureSetTag): Internal.TagWrapper
     removeAllTagsFrom(...id: Special.StructureSet[]): Internal.TagWrapper
+    }
+    class DensityFunction extends Internal.TagEventJS {
+    get(id: Special.DensityFunctionTag): Internal.TagWrapper
+    add(tag: Special.DensityFunctionTag, ...id: Special.DensityFunction[]): Internal.TagWrapper
+    remove(tag: Special.DensityFunctionTag, ...id: Special.DensityFunction[]): Internal.TagWrapper
+    removeAll(tag: Special.DensityFunctionTag): Internal.TagWrapper
+    removeAllTagsFrom(...id: Special.DensityFunction[]): Internal.TagWrapper
+    }
+    class WorldPreset extends Internal.TagEventJS {
+    get(id: Special.WorldPresetTag): Internal.TagWrapper
+    add(tag: Special.WorldPresetTag, ...id: Special.WorldPreset[]): Internal.TagWrapper
+    remove(tag: Special.WorldPresetTag, ...id: Special.WorldPreset[]): Internal.TagWrapper
+    removeAll(tag: Special.WorldPresetTag): Internal.TagWrapper
+    removeAllTagsFrom(...id: Special.WorldPreset[]): Internal.TagWrapper
+    }
+    class SoftFluids extends Internal.TagEventJS {
+    get(id: Special.SoftFluidsTag): Internal.TagWrapper
+    add(tag: Special.SoftFluidsTag, ...id: Special.SoftFluids[]): Internal.TagWrapper
+    remove(tag: Special.SoftFluidsTag, ...id: Special.SoftFluids[]): Internal.TagWrapper
+    removeAll(tag: Special.SoftFluidsTag): Internal.TagWrapper
+    removeAllTagsFrom(...id: Special.SoftFluids[]): Internal.TagWrapper
     }
     class FlatLevelGeneratorPreset extends Internal.TagEventJS {
     get(id: Special.FlatLevelGeneratorPresetTag): Internal.TagWrapper
@@ -42,54 +105,12 @@ declare namespace TagEvent {
     removeAll(tag: Special.ConfiguredCarverTag): Internal.TagWrapper
     removeAllTagsFrom(...id: Special.ConfiguredCarver[]): Internal.TagWrapper
     }
-    class DimensionType extends Internal.TagEventJS {
-    get(id: Special.DimensionTypeTag): Internal.TagWrapper
-    add(tag: Special.DimensionTypeTag, ...id: Special.DimensionType[]): Internal.TagWrapper
-    remove(tag: Special.DimensionTypeTag, ...id: Special.DimensionType[]): Internal.TagWrapper
-    removeAll(tag: Special.DimensionTypeTag): Internal.TagWrapper
-    removeAllTagsFrom(...id: Special.DimensionType[]): Internal.TagWrapper
-    }
-    class ChatType extends Internal.TagEventJS {
-    get(id: Special.ChatTypeTag): Internal.TagWrapper
-    add(tag: Special.ChatTypeTag, ...id: Special.ChatType[]): Internal.TagWrapper
-    remove(tag: Special.ChatTypeTag, ...id: Special.ChatType[]): Internal.TagWrapper
-    removeAll(tag: Special.ChatTypeTag): Internal.TagWrapper
-    removeAllTagsFrom(...id: Special.ChatType[]): Internal.TagWrapper
-    }
-    class WorldPreset extends Internal.TagEventJS {
-    get(id: Special.WorldPresetTag): Internal.TagWrapper
-    add(tag: Special.WorldPresetTag, ...id: Special.WorldPreset[]): Internal.TagWrapper
-    remove(tag: Special.WorldPresetTag, ...id: Special.WorldPreset[]): Internal.TagWrapper
-    removeAll(tag: Special.WorldPresetTag): Internal.TagWrapper
-    removeAllTagsFrom(...id: Special.WorldPreset[]): Internal.TagWrapper
-    }
-    class NoiseSettings extends Internal.TagEventJS {
-    get(id: Special.NoiseSettingsTag): Internal.TagWrapper
-    add(tag: Special.NoiseSettingsTag, ...id: Special.NoiseSettings[]): Internal.TagWrapper
-    remove(tag: Special.NoiseSettingsTag, ...id: Special.NoiseSettings[]): Internal.TagWrapper
-    removeAll(tag: Special.NoiseSettingsTag): Internal.TagWrapper
-    removeAllTagsFrom(...id: Special.NoiseSettings[]): Internal.TagWrapper
-    }
-    class Biome extends Internal.TagEventJS {
-    get(id: Special.BiomeTag): Internal.TagWrapper
-    add(tag: Special.BiomeTag, ...id: Special.Biome[]): Internal.TagWrapper
-    remove(tag: Special.BiomeTag, ...id: Special.Biome[]): Internal.TagWrapper
-    removeAll(tag: Special.BiomeTag): Internal.TagWrapper
-    removeAllTagsFrom(...id: Special.Biome[]): Internal.TagWrapper
-    }
-    class DimensionSettings extends Internal.TagEventJS {
-    get(id: Special.DimensionSettingsTag): Internal.TagWrapper
-    add(tag: Special.DimensionSettingsTag, ...id: Special.DimensionSettings[]): Internal.TagWrapper
-    remove(tag: Special.DimensionSettingsTag, ...id: Special.DimensionSettings[]): Internal.TagWrapper
-    removeAll(tag: Special.DimensionSettingsTag): Internal.TagWrapper
-    removeAllTagsFrom(...id: Special.DimensionSettings[]): Internal.TagWrapper
-    }
-    class BiomeModifier extends Internal.TagEventJS {
-    get(id: Special.BiomeModifierTag): Internal.TagWrapper
-    add(tag: Special.BiomeModifierTag, ...id: Special.BiomeModifier[]): Internal.TagWrapper
-    remove(tag: Special.BiomeModifierTag, ...id: Special.BiomeModifier[]): Internal.TagWrapper
-    removeAll(tag: Special.BiomeModifierTag): Internal.TagWrapper
-    removeAllTagsFrom(...id: Special.BiomeModifier[]): Internal.TagWrapper
+    class ConfiguredFeature extends Internal.TagEventJS {
+    get(id: Special.ConfiguredFeatureTag): Internal.TagWrapper
+    add(tag: Special.ConfiguredFeatureTag, ...id: Special.ConfiguredFeature[]): Internal.TagWrapper
+    remove(tag: Special.ConfiguredFeatureTag, ...id: Special.ConfiguredFeature[]): Internal.TagWrapper
+    removeAll(tag: Special.ConfiguredFeatureTag): Internal.TagWrapper
+    removeAllTagsFrom(...id: Special.ConfiguredFeature[]): Internal.TagWrapper
     }
     class ProcessorList extends Internal.TagEventJS {
     get(id: Special.ProcessorListTag): Internal.TagWrapper
@@ -98,19 +119,12 @@ declare namespace TagEvent {
     removeAll(tag: Special.ProcessorListTag): Internal.TagWrapper
     removeAllTagsFrom(...id: Special.ProcessorList[]): Internal.TagWrapper
     }
-    class SoftFluids extends Internal.TagEventJS {
-    get(id: Special.SoftFluidsTag): Internal.TagWrapper
-    add(tag: Special.SoftFluidsTag, ...id: Special.SoftFluids[]): Internal.TagWrapper
-    remove(tag: Special.SoftFluidsTag, ...id: Special.SoftFluids[]): Internal.TagWrapper
-    removeAll(tag: Special.SoftFluidsTag): Internal.TagWrapper
-    removeAllTagsFrom(...id: Special.SoftFluids[]): Internal.TagWrapper
-    }
-    class DensityFunction extends Internal.TagEventJS {
-    get(id: Special.DensityFunctionTag): Internal.TagWrapper
-    add(tag: Special.DensityFunctionTag, ...id: Special.DensityFunction[]): Internal.TagWrapper
-    remove(tag: Special.DensityFunctionTag, ...id: Special.DensityFunction[]): Internal.TagWrapper
-    removeAll(tag: Special.DensityFunctionTag): Internal.TagWrapper
-    removeAllTagsFrom(...id: Special.DensityFunction[]): Internal.TagWrapper
+    class ChatType extends Internal.TagEventJS {
+    get(id: Special.ChatTypeTag): Internal.TagWrapper
+    add(tag: Special.ChatTypeTag, ...id: Special.ChatType[]): Internal.TagWrapper
+    remove(tag: Special.ChatTypeTag, ...id: Special.ChatType[]): Internal.TagWrapper
+    removeAll(tag: Special.ChatTypeTag): Internal.TagWrapper
+    removeAllTagsFrom(...id: Special.ChatType[]): Internal.TagWrapper
     }
     class StructureModifier extends Internal.TagEventJS {
     get(id: Special.StructureModifierTag): Internal.TagWrapper
@@ -119,26 +133,12 @@ declare namespace TagEvent {
     removeAll(tag: Special.StructureModifierTag): Internal.TagWrapper
     removeAllTagsFrom(...id: Special.StructureModifier[]): Internal.TagWrapper
     }
-    class MapMarkers extends Internal.TagEventJS {
-    get(id: Special.MapMarkersTag): Internal.TagWrapper
-    add(tag: Special.MapMarkersTag, ...id: Special.MapMarkers[]): Internal.TagWrapper
-    remove(tag: Special.MapMarkersTag, ...id: Special.MapMarkers[]): Internal.TagWrapper
-    removeAll(tag: Special.MapMarkersTag): Internal.TagWrapper
-    removeAllTagsFrom(...id: Special.MapMarkers[]): Internal.TagWrapper
-    }
-    class ConfiguredFeature extends Internal.TagEventJS {
-    get(id: Special.ConfiguredFeatureTag): Internal.TagWrapper
-    add(tag: Special.ConfiguredFeatureTag, ...id: Special.ConfiguredFeature[]): Internal.TagWrapper
-    remove(tag: Special.ConfiguredFeatureTag, ...id: Special.ConfiguredFeature[]): Internal.TagWrapper
-    removeAll(tag: Special.ConfiguredFeatureTag): Internal.TagWrapper
-    removeAllTagsFrom(...id: Special.ConfiguredFeature[]): Internal.TagWrapper
-    }
-    class PlacedFeature extends Internal.TagEventJS {
-    get(id: Special.PlacedFeatureTag): Internal.TagWrapper
-    add(tag: Special.PlacedFeatureTag, ...id: Special.PlacedFeature[]): Internal.TagWrapper
-    remove(tag: Special.PlacedFeatureTag, ...id: Special.PlacedFeature[]): Internal.TagWrapper
-    removeAll(tag: Special.PlacedFeatureTag): Internal.TagWrapper
-    removeAllTagsFrom(...id: Special.PlacedFeature[]): Internal.TagWrapper
+    class Noise extends Internal.TagEventJS {
+    get(id: Special.NoiseTag): Internal.TagWrapper
+    add(tag: Special.NoiseTag, ...id: Special.Noise[]): Internal.TagWrapper
+    remove(tag: Special.NoiseTag, ...id: Special.Noise[]): Internal.TagWrapper
+    removeAll(tag: Special.NoiseTag): Internal.TagWrapper
+    removeAllTagsFrom(...id: Special.Noise[]): Internal.TagWrapper
     }
     class Event extends Internal.TagEventJS {
     get(id: Special.EventTag): Internal.TagWrapper

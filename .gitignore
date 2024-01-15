@@ -8,6 +8,35 @@ _site/
 # Don't ignore
 !config/defaultoptions/servers.dat
 
+# Ignore files
+*.log
+*.zip
+*.tar.gz
+*.exe
+.curseclient
+.qmenu_opened.marker
+essential/*.jar
+essential/*.json
+imgui.ini
+knownkeys.txt
+minecraftinstance.json
+patchouli_data.json
+rhino.local.properties
+config/spark/activity.json
+usercache.json
+usernamecache.json
+bookmark.ini
+config/roughlyenoughitems/hints.json
+config/jei/world/server/*
+enigmatic_persistence.dat
+servers.dat
+servers.dat_old
+servers.essential.dat
+o_prof
+config/voicechat/username-cache.json
+blacksmith.jar
+config/aether/aether_customizations.txt
+
 # Ignore folders 
 backups/
 crash-reports/
@@ -37,31 +66,3 @@ modernfix/
 jei/world/local/
 debug/
 exposures/*
-
-# Ignore files
-.curseclient
-.qmenu_opened.marker
-*.log
-*.zip
-*.tar.gz
-essential/*.jar
-essential/*.json
-imgui.ini
-knownkeys.txt
-minecraftinstance.json
-patchouli_data.json
-rhino.local.properties
-config/spark/activity.json
-usercache.json
-usernamecache.json
-bookmark.ini
-config/roughlyenoughitems/hints.json
-config/jei/world/server/*
-enigmatic_persistence.dat
-servers.dat
-servers.dat_old
-servers.essential.dat
-o_prof
-config/voicechat/username-cache.json
-blacksmith.jar
-config/aether/aether_customizations.txt

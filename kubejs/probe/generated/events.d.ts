@@ -32,18 +32,18 @@ command(handler: (event: Internal.CommandEventJS) => void):void,
      * @at *server*
     */
 blockLootTables(handler: (event: Internal.BlockLootEventJS) => void):void,
-tags(type: "worldgen/structure", handler: (event: TagEvent.Structure) => void): void
-tags(type: "minecraft:worldgen/structure", handler: (event: TagEvent.Structure) => void): void
-tags(type: "worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
-tags(type: "minecraft:worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
-tags(type: "worldgen/flat_level_generator_preset", handler: (event: TagEvent.FlatLevelGeneratorPreset) => void): void
-tags(type: "minecraft:worldgen/flat_level_generator_preset", handler: (event: TagEvent.FlatLevelGeneratorPreset) => void): void
 tags(type: "dimension_type", handler: (event: TagEvent.DimensionType) => void): void
 tags(type: "minecraft:dimension_type", handler: (event: TagEvent.DimensionType) => void): void
-tags(type: "worldgen/world_preset", handler: (event: TagEvent.WorldPreset) => void): void
-tags(type: "minecraft:worldgen/world_preset", handler: (event: TagEvent.WorldPreset) => void): void
+tags(type: "worldgen/structure", handler: (event: TagEvent.Structure) => void): void
+tags(type: "minecraft:worldgen/structure", handler: (event: TagEvent.Structure) => void): void
 tags(type: "worldgen/biome", handler: (event: TagEvent.Biome) => void): void
 tags(type: "minecraft:worldgen/biome", handler: (event: TagEvent.Biome) => void): void
+tags(type: "worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
+tags(type: "minecraft:worldgen/structure_set", handler: (event: TagEvent.StructureSet) => void): void
+tags(type: "worldgen/world_preset", handler: (event: TagEvent.WorldPreset) => void): void
+tags(type: "minecraft:worldgen/world_preset", handler: (event: TagEvent.WorldPreset) => void): void
+tags(type: "worldgen/flat_level_generator_preset", handler: (event: TagEvent.FlatLevelGeneratorPreset) => void): void
+tags(type: "minecraft:worldgen/flat_level_generator_preset", handler: (event: TagEvent.FlatLevelGeneratorPreset) => void): void
 tags(type: "game_event", handler: (event: TagEvent.GameEvent) => void): void
 tags(type: "minecraft:game_event", handler: (event: TagEvent.GameEvent) => void): void
 tags(type: "sound_event", handler: (event: TagEvent.SoundEvent) => void): void
@@ -233,6 +233,29 @@ declare const NetworkEvents: {
      * @cancellable
     */
 dataReceived(extra: string, handler: (event: Internal.NetworkEventJS) => void):void,
+};
+declare const LycheeEvents: {
+    /**
+     * @at *startup*
+     * 
+     * @cancellable
+    */
+customAction(extra: string, handler: (event: Internal.CustomActionEventJS) => void):void,
+customAction(handler: (event: Internal.CustomActionEventJS) => void):void,
+    /**
+     * @at *startup*
+     * 
+     * @cancellable
+    */
+customCondition(extra: string, handler: (event: Internal.CustomConditionEventJS) => void):void,
+customCondition(handler: (event: Internal.CustomConditionEventJS) => void):void,
+    /**
+     * @at *client*
+     * 
+     * @cancellable
+    */
+clickedInfoBadge(extra: Special.EntityType, handler: (event: Internal.ClickedInfoBadgeEventJS) => void):void,
+clickedInfoBadge(handler: (event: Internal.ClickedInfoBadgeEventJS) => void):void,
 };
 declare const JEIEvents: {
     /**
@@ -536,6 +559,18 @@ tick(handler: (event: Internal.SimpleLevelEventJS) => void):void,
     */
 afterExplosion(handler: (event: Internal.ExplosionEventJS$After) => void):void,
 };
+declare const SummoningRituals: {
+    /**
+     * @at *server*
+     * 
+     * @cancellable
+    */
+start(handler: (event: Internal.SummoningEventJS) => void):void,
+    /**
+     * @at *server*
+    */
+complete(handler: (event: Internal.SummoningEventJS) => void):void,
+};
 declare const EntityEvents: {
     /**
      * Invoked when an entity is about to be added to the world.
@@ -835,6 +870,8 @@ registry(type: "hourglass:time_effect", handler: (event: Registry.TimeEffect) =>
 registry(type: "integrated_api:json_conditions", handler: (event: Registry.JsonConditions) => void):void,
 registry(type: "irons_spellbooks:schools", handler: (event: Registry.Schools) => void):void,
 registry(type: "irons_spellbooks:spells", handler: (event: Registry.Spells) => void):void,
+registry(type: "lychee:contextual", handler: (event: Registry.Contextual) => void):void,
+registry(type: "lychee:post_action", handler: (event: Registry.PostAction) => void):void,
 registry(type: "moonlight:map_markers", handler: (event: Registry.MapMarkers) => void):void,
 registry(type: "moonlight:soft_fluids", handler: (event: Registry.SoftFluids) => void):void,
     /**
