@@ -1,0 +1,520 @@
+{
+	default_hide_dependency_lines: true
+	default_quest_shape: "rsquare"
+	disable_toast: true
+	filename: "the_shop"
+	group: ""
+	hide_quest_until_deps_visible: true
+	icon: "kubejs:command_block"
+	id: "15C85C831AC7FA1A"
+	images: [
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 64.0d
+			hover: [ ]
+			image: "minecraft:textures/gui/presets/end_bg.png"
+			rotation: 0.0d
+			width: 64.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 1
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: ["{ftbquests.chapter.the_shop.quests0.description}"]
+			id: "464C6D59436C1B33"
+			rewards: [
+				{
+					id: "1336EE5513B7D6FB"
+					item: "create:experience_block"
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.the_shop.quests0.subtitle}"
+			tasks: [
+				{
+					id: "4AD313EA8898920D"
+					title: "{ftbquests.chapter.the_shop.quests0.tasks0.title}"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "6125CD812662B22A"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0443826F9DFE5134"
+					table_id: 6978865987231553331L
+					type: "choice"
+				}
+			]
+			subtitle: "{ftbquests.chapter.the_shop.quests1.subtitle}"
+			tasks: [
+				{
+					consume_items: true
+					count: 8L
+					disable_toast: true
+					id: "34DAE683DC73C80E"
+					item: "kubejs:copper_coin"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests1.title}"
+			x: -3.5d
+			y: -2.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "4C1F4A695F9BBFF8"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2AE85BA86E044D57"
+					table_id: 5839215924496777821L
+					type: "choice"
+				}
+			]
+			subtitle: "{ftbquests.chapter.the_shop.quests2.subtitle}"
+			tasks: [
+				{
+					consume_items: true
+					count: 8L
+					disable_toast: true
+					id: "2771EF97E438D16B"
+					item: "kubejs:copper_coin"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests2.title}"
+			x: -2.5d
+			y: -3.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "287A537B379E1C44"
+			rewards: [
+				{
+					id: "00213BD34B33C2A7"
+					item: "kubejs:iron_coin"
+					type: "item"
+				}
+			]
+			size: 2.0d
+			subtitle: "{ftbquests.chapter.the_shop.quests3.subtitle}"
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					disable_toast: true
+					id: "0BA1540FA5867EDE"
+					item: "kubejs:copper_coin"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests3.title}"
+			x: -4.0d
+			y: -4.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "35437AB80C8CA1B5"
+			rewards: [
+				{
+					id: "408E5C817B512DF9"
+					item: "kubejs:gold_coin"
+					type: "item"
+				}
+			]
+			size: 2.0d
+			subtitle: "{ftbquests.chapter.the_shop.quests4.subtitle}"
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					disable_toast: true
+					id: "08200AB6353A46BA"
+					item: "kubejs:iron_coin"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests4.title}"
+			x: 4.0d
+			y: -4.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "5126E7214D6F789F"
+			rewards: [
+				{
+					id: "7FB30ACCAB51D320"
+					item: "kubejs:netherite_coin"
+					type: "item"
+				}
+			]
+			size: 2.0d
+			subtitle: "{ftbquests.chapter.the_shop.quests5.subtitle}"
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					disable_toast: true
+					id: "628D5E97E477FE62"
+					item: "kubejs:gold_coin"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests5.title}"
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "24074206F8BB13F4"
+			rewards: [
+				{
+					id: "4B19176415503320"
+					item: "kubejs:entropy_coin"
+					type: "item"
+				}
+			]
+			size: 2.0d
+			subtitle: "{ftbquests.chapter.the_shop.quests6.subtitle}"
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					disable_toast: true
+					id: "0D5188385C225B86"
+					item: "kubejs:netherite_coin"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests6.title}"
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			hide: true
+			id: "46E204F9603B8D2D"
+			rewards: [
+				{
+					count: 64
+					id: "7B7EAC3BEB18FA07"
+					item: "kubejs:netherite_coin"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					disable_toast: true
+					id: "46B59CAB9D70E7B2"
+					item: "kubejs:entropy_coin"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests7.title}"
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "69217C9CACF88D91"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "14F59F858E23037F"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.the_shop.quests8.subtitle}"
+			tasks: [
+				{
+					consume_items: true
+					count: 16L
+					disable_toast: true
+					id: "2FDDFBA8C5FDDA5E"
+					item: "kubejs:copper_coin"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests8.title}"
+			x: -2.5d
+			y: -4.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "7AB0BBEC1FF068D1"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0A945AA01B2E1F49"
+					table_id: 4746718853429427293L
+					type: "choice"
+				}
+			]
+			subtitle: "{ftbquests.chapter.the_shop.quests9.subtitle}"
+			tasks: [
+				{
+					consume_items: true
+					disable_toast: true
+					id: "10F4CF6386CBCF38"
+					item: "kubejs:iron_coin"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests9.title}"
+			x: 2.5d
+			y: -3.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "7668713ED74C351F"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4E4C92F04BDBA50A"
+					table_id: 8698495603632491656L
+					type: "choice"
+				}
+			]
+			subtitle: "{ftbquests.chapter.the_shop.quests10.subtitle}"
+			tasks: [
+				{
+					consume_items: true
+					count: 2L
+					disable_toast: true
+					id: "19CD4FE61DCB5999"
+					item: "kubejs:iron_coin"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests10.title}"
+			x: 3.5d
+			y: -2.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "7223C624C7DE9C7D"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4A072AFEE6F42563"
+					table_id: 2071744225430230389L
+					type: "choice"
+				}
+			]
+			subtitle: "{ftbquests.chapter.the_shop.quests11.subtitle}"
+			tasks: [
+				{
+					consume_items: true
+					disable_toast: true
+					id: "3DB4DA23B6CC3AB1"
+					item: "kubejs:iron_coin"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests11.title}"
+			x: 2.5d
+			y: -4.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "3C3B0C4783CCC42E"
+			rewards: [
+				{
+					id: "39781B690E27142A"
+					item: "kubejs:high_entropy_alloy"
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.the_shop.quests12.subtitle}"
+			tasks: [
+				{
+					consume_items: true
+					disable_toast: true
+					id: "21015316199D78BE"
+					item: "kubejs:entropy_coin"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests12.title}"
+			x: 0.0d
+			y: 8.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "3CD97106597161FB"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "59AD31885676C073"
+					table_id: 7080486431739256636L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.the_shop.quests13.subtitle}"
+			tasks: [
+				{
+					consume_items: true
+					disable_toast: true
+					id: "0BAD049D221AFA72"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:copper"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests13.title}"
+			x: -4.5d
+			y: -2.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "79707400E036B51E"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "383D4E2BFAFF89F4"
+					table_id: 860113756744595796L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.the_shop.quests14.subtitle}"
+			tasks: [
+				{
+					consume_items: true
+					disable_toast: true
+					id: "68758FBEA9417C23"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:iron"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests14.title}"
+			x: 4.5d
+			y: -2.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "0F40B913DB55176F"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "57D74757A2CE1BD7"
+					table_id: 1404298105814737688L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.the_shop.quests15.subtitle}"
+			tasks: [
+				{
+					consume_items: true
+					disable_toast: true
+					id: "1FA8AEA6202C057B"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:netherite"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests15.title}"
+			x: -4.5d
+			y: 2.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			disable_toast: true
+			id: "66C295822C53109E"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "55029DC529D0708F"
+					table_id: 4003590059278366596L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.the_shop.quests16.subtitle}"
+			tasks: [
+				{
+					consume_items: true
+					disable_toast: true
+					id: "2AEA6A6828F0728A"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:gold"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.the_shop.quests16.title}"
+			x: 4.5d
+			y: 2.5d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.the_shop.subtitle}"]
+	title: "{ftbquests.chapter.the_shop.title}"
+}

@@ -1,0 +1,88 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "salt"
+	group: "2B2D0B6DE31DE8D3"
+	icon: "salt:salt"
+	id: "4591AE12FA394A76"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["0AE06EB85B6E1CB6"]
+			description: ["{ftbquests.chapter.salt.quests0.description}"]
+			id: "3F6CCC653350CC37"
+			rewards: [
+				{
+					id: "3D88285F8CF1BCA5"
+					type: "xp"
+					xp: 50
+				}
+			]
+			subtitle: "{ftbquests.chapter.salt.quests0.subtitle}"
+			tasks: [
+				{
+					id: "5A70549A597A5CAC"
+					item: "salt:salt"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.salt.quests0.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7CA2ABB6BE87F061"]
+			id: "3FC94277FB9155BE"
+			rewards: [
+				{
+					id: "657594245D4B92C3"
+					type: "xp"
+					xp: 50
+				}
+			]
+			subtitle: "{ftbquests.chapter.salt.quests1.subtitle}"
+			tasks: [
+				{
+					id: "5F89AADEE62272EA"
+					item: "salt:salt_lamp"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.salt.quests1.title}"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3F6CCC653350CC37"]
+			description: [
+				"{ftbquests.chapter.salt.quests2.description0}"
+				""
+				"{ftbquests.chapter.salt.quests2.description2}"
+				""
+				"{ftbquests.chapter.salt.quests2.description4}"
+			]
+			id: "7CA2ABB6BE87F061"
+			rewards: [
+				{
+					id: "70A79AB243B3BF46"
+					type: "xp"
+					xp: 50
+				}
+			]
+			subtitle: "{ftbquests.chapter.salt.quests2.subtitle}"
+			tasks: [
+				{
+					id: "1D10F6728A757F7E"
+					item: "salt:raw_rock_salt"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.salt.quests2.title}"
+			x: 0.0d
+			y: 1.5d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.salt.subtitle}"]
+	title: "{ftbquests.chapter.salt.title}"
+}

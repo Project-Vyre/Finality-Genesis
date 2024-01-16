@@ -1,0 +1,896 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "square"
+	filename: "cataclysm"
+	group: ""
+	icon: "cataclysm:altar_of_fire"
+	id: "44955FEF08EBF071"
+	images: [
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 64.0d
+			hover: [ ]
+			image: "minecraft:textures/gui/presets/end_bg.png"
+			rotation: 0.0d
+			width: 64.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["60980DE71E4A4AE5"]
+			description: ["{ftbquests.chapter.cataclysm.quests0.description}"]
+			icon: {
+				Count: 1b
+				id: "cataclysm:infernal_forge"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "64BA40D2E7AEA557"
+			rewards: [
+				{
+					id: "591A609546DBC7F2"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7CA0FF4A7B48D520"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			shape: "square"
+			subtitle: "{ftbquests.chapter.cataclysm.quests0.subtitle}"
+			tasks: [
+				{
+					icon: "minecraft:map"
+					id: "5A7FC957A3598262"
+					structure: "cataclysm:soul_black_smith"
+					type: "structure"
+				}
+				{
+					entity: "cataclysm:netherite_monstrosity"
+					icon: {
+						Count: 1b
+						id: "cataclysm:infernal_forge"
+						tag: {
+							Damage: 0
+						}
+					}
+					id: "374265EEE77EF98A"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "45F7555579B698BE"
+					item: {
+						Count: 1b
+						id: "cataclysm:infernal_forge"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests0.title}"
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["54378BE3AEDD91A3"]
+			hide: true
+			icon: "minecraft:netherrack"
+			id: "60980DE71E4A4AE5"
+			shape: "square"
+			tasks: [
+				{
+					dimension: "minecraft:the_nether"
+					id: "45F025CD8082443F"
+					type: "dimension"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests1.title}"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["64BA40D2E7AEA557"]
+			description: ["{ftbquests.chapter.cataclysm.quests2.description}"]
+			icon: "cataclysm:the_incinerator"
+			id: "133B009011D05C41"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					icon: "cataclysm:ignitium_ingot"
+					id: "2E2B7831ECF3B1F0"
+					table_id: 8134379311085213745L
+					type: "choice"
+				}
+				{
+					id: "7826BB4E23DCF1D7"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1149AE0FB529D617"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			shape: "square"
+			subtitle: "{ftbquests.chapter.cataclysm.quests2.subtitle}"
+			tasks: [
+				{
+					id: "1F4211FE4CACED2F"
+					structure: "cataclysm:burning_arena"
+					type: "structure"
+				}
+				{
+					entity: "cataclysm:ignis"
+					icon: "cataclysm:the_incinerator"
+					id: "1D0CC36DB1778C3E"
+					type: "kill"
+					value: 1L
+				}
+				{
+					count: 3L
+					id: "6AF86BF264049062"
+					item: "cataclysm:ignitium_ingot"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests2.title}"
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["54378BE3AEDD91A3"]
+			description: ["{ftbquests.chapter.cataclysm.quests3.description}"]
+			hide: true
+			icon: "minecraft:end_portal_frame"
+			id: "1A028F6237ABDEAC"
+			shape: "square"
+			subtitle: "{ftbquests.chapter.cataclysm.quests3.subtitle}"
+			tasks: [
+				{
+					dimension: "minecraft:the_end"
+					id: "2F2F53C75FF1DEC2"
+					type: "dimension"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests3.title}"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3CAA949A0C1A688A"]
+			icon: "cataclysm:gauntlet_of_guard"
+			id: "718AC83467E9FB0F"
+			rewards: [
+				{
+					id: "5FDC545FEBD9849F"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0698C1E35880312F"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			shape: "square"
+			subtitle: "{ftbquests.chapter.cataclysm.quests4.subtitle}"
+			tasks: [
+				{
+					icon: "minecraft:map"
+					id: "50367CB432DA8705"
+					structure: "cataclysm:ruined_citadel"
+					type: "structure"
+				}
+				{
+					id: "2F4E862B622B316B"
+					item: "cataclysm:gauntlet_of_guard"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests4.title}"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["54378BE3AEDD91A3"]
+			hide: true
+			icon: "minecraft:nether_star"
+			id: "0747981239EC0227"
+			rewards: [
+				{
+					id: "0A32768587146B03"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "77B67D2229B09CB6"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			shape: "square"
+			subtitle: "{ftbquests.chapter.cataclysm.quests5.subtitle}"
+			tasks: [
+				{
+					id: "21ECB42B533B1FD7"
+					item: "minecraft:nether_star"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests5.title}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0747981239EC0227"]
+			icon: "minecraft:deepslate_bricks"
+			id: "656C306BB7FF0758"
+			rewards: [
+				{
+					id: "266EA4CE72308985"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "43ACF3E4F3AA9654"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			shape: "square"
+			subtitle: "{ftbquests.chapter.cataclysm.quests6.subtitle}"
+			tasks: [
+				{
+					icon: "cataclysm:emp"
+					id: "71997328F6DFED11"
+					structure: "cataclysm:ancient_factory"
+					type: "structure"
+				}
+				{
+					icon: "extendedcrafting:flux_star"
+					id: "4878248FE14BB992"
+					observe_type: 5
+					timer: 0L
+					title: "{ftbquests.chapter.cataclysm.quests6.tasks1.title}"
+					to_observe: "cataclysm:the_harbinger"
+					type: "observation"
+				}
+				{
+					id: "4F974AC0C8A4B0CD"
+					item: "cataclysm:wither_assault_shoulder_weapon"
+					type: "item"
+				}
+				{
+					id: "5802E08C25DC1212"
+					item: {
+						Count: 1b
+						id: "cataclysm:laser_gatling"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "68EF0EB18B6E4DDE"
+					item: "cataclysm:meat_shredder"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests6.title}"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1A028F6237ABDEAC"]
+			icon: "cataclysm:void_core"
+			id: "3CAA949A0C1A688A"
+			shape: "square"
+			subtitle: "{ftbquests.chapter.cataclysm.quests7.subtitle}"
+			tasks: [
+				{
+					icon: "minecraft:map"
+					id: "21C33F64C6E59917"
+					structure: "cataclysm:ruined_citadel"
+					type: "structure"
+				}
+				{
+					id: "1762BC34A7A087F4"
+					item: "cataclysm:void_core"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests7.title}"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["656C306BB7FF0758"]
+			id: "6F799476F9E6E69A"
+			shape: "square"
+			subtitle: "{ftbquests.chapter.cataclysm.quests8.subtitle}"
+			tasks: [
+				{
+					id: "37DAC70D45F38E35"
+					item: "cataclysm:mechanical_fusion_anvil"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests8.title}"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6F799476F9E6E69A"]
+			id: "458D846250812A82"
+			shape: "square"
+			subtitle: "{ftbquests.chapter.cataclysm.quests9.subtitle}"
+			tasks: [
+				{
+					id: "4EC290963C93788D"
+					item: {
+						Count: 1b
+						id: "cataclysm:void_forge"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6F799476F9E6E69A"]
+			id: "2DA38B93D5B1B658"
+			shape: "square"
+			subtitle: "{ftbquests.chapter.cataclysm.quests10.subtitle}"
+			tasks: [
+				{
+					id: "220340EF1CB9034E"
+					item: "cataclysm:gauntlet_of_bulwark"
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6F799476F9E6E69A"]
+			id: "5860DCD8D31E9DEA"
+			shape: "square"
+			subtitle: "{ftbquests.chapter.cataclysm.quests11.subtitle}"
+			tasks: [
+				{
+					id: "67FF31CFCA37B51D"
+					item: "cataclysm:void_assault_shoulder_weapon"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"4A691BB889286C89"
+				"5335BF00DB2A8CCE"
+			]
+			description: ["{ftbquests.chapter.cataclysm.quests12.description}"]
+			hide: true
+			id: "4179D9074E74A11B"
+			shape: "square"
+			subtitle: "{ftbquests.chapter.cataclysm.quests12.subtitle}"
+			tasks: [
+				{
+					icon: "cataclysm:chiseled_stone_brick_pillar"
+					id: "39FD9536C33D32DA"
+					structure: "cataclysm:sunken_city"
+					title: "{ftbquests.chapter.cataclysm.quests12.tasks0.title}"
+					type: "structure"
+				}
+			]
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["54378BE3AEDD91A3"]
+			description: [
+				"{ftbquests.chapter.cataclysm.quests13.description0}"
+				""
+				"{ftbquests.chapter.cataclysm.quests13.description2}"
+			]
+			hide: true
+			icon: "cataclysm:abyssal_sacrifice"
+			id: "5335BF00DB2A8CCE"
+			shape: "square"
+			subtitle: "{ftbquests.chapter.cataclysm.quests13.subtitle}"
+			tasks: [
+				{
+					id: "674414D33A9EEC90"
+					item: "cataclysm:abyssal_sacrifice"
+					type: "item"
+				}
+				{
+					id: "110167CE51EBE339"
+					item: {
+						Count: 1b
+						id: "minecraft:trident"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests13.title}"
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4179D9074E74A11B"]
+			description: ["{ftbquests.chapter.cataclysm.quests14.description}"]
+			id: "2FB0CBAD2F6C47FC"
+			shape: "square"
+			subtitle: "{ftbquests.chapter.cataclysm.quests14.subtitle}"
+			tasks: [
+				{
+					icon: "cataclysm:altar_of_abyss"
+					id: "3A27F9EDD9160283"
+					observe_type: 0
+					timer: 0L
+					title: "{ftbquests.chapter.cataclysm.quests14.tasks0.title}"
+					to_observe: "cataclysm:altar_of_abyss"
+					type: "observation"
+				}
+			]
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["2FB0CBAD2F6C47FC"]
+			description: [
+				"{ftbquests.chapter.cataclysm.quests15.description0}"
+				""
+				"{ftbquests.chapter.cataclysm.quests15.description2}"
+			]
+			icon: "cataclysm:tidal_claws"
+			id: "7B41C8C1C7837774"
+			rewards: [
+				{
+					id: "1FAAC94F44D6CA5C"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3B88C2238B30881F"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			shape: "square"
+			subtitle: "{ftbquests.chapter.cataclysm.quests15.subtitle}"
+			tasks: [
+				{
+					id: "77FAD21A4E3989F4"
+					item: "cataclysm:tidal_claws"
+					type: "item"
+				}
+				{
+					id: "72EB65397C97EBE9"
+					item: "cataclysm:abyssal_egg"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests15.title}"
+			x: 0.0d
+			y: -9.0d
+		}
+		{
+			dependencies: ["54378BE3AEDD91A3"]
+			description: [
+				"{ftbquests.chapter.cataclysm.quests16.description0}"
+				""
+				"{ftbquests.chapter.cataclysm.quests16.description2}"
+				""
+				"{ftbquests.chapter.cataclysm.quests16.description4}"
+				""
+				"{ftbquests.chapter.cataclysm.quests16.description6}"
+				""
+				"{ftbquests.chapter.cataclysm.quests16.description8}"
+				""
+				"{ftbquests.chapter.cataclysm.quests16.description10}"
+			]
+			hide: true
+			icon: "aquamirae:ship_graveyard_echo"
+			id: "1F272782D97392B4"
+			rewards: [
+				{
+					id: "59567CD98ADB6578"
+					type: "xp"
+					xp: 250
+				}
+			]
+			subtitle: "{ftbquests.chapter.cataclysm.quests16.subtitle}"
+			tasks: [
+				{
+					biome: "minecraft:deep_frozen_ocean"
+					icon: "minecraft:packed_ice"
+					id: "6D3CFB6CF95E34F5"
+					title: "{ftbquests.chapter.cataclysm.quests16.tasks0.title}"
+					type: "biome"
+				}
+				{
+					id: "08D0172D35F5E70C"
+					item: {
+						Count: 1b
+						id: "aquamirae:three_bolt_suit"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "68756957F7156AE7"
+					item: "aquamirae:three_bolt_leggings"
+					type: "item"
+				}
+				{
+					id: "0A7F54DC1D3C3BFD"
+					item: "aquamirae:three_bolt_boots"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests16.title}"
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["54378BE3AEDD91A3"]
+			description: [
+				"{ftbquests.chapter.cataclysm.quests17.description0}"
+				""
+				"{ftbquests.chapter.cataclysm.quests17.description2}"
+				""
+				"{ftbquests.chapter.cataclysm.quests17.description4}"
+			]
+			hide: true
+			icon: {
+				Count: 1b
+				id: "graveyard:bone_dagger"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "6F037916B715DB4A"
+			rewards: [
+				{
+					id: "63291ECF19B1AABA"
+					type: "xp"
+					xp: 250
+				}
+			]
+			subtitle: "{ftbquests.chapter.cataclysm.quests17.subtitle}"
+			tasks: [
+				{
+					id: "711F57784616066C"
+					item: {
+						Count: 1b
+						id: "graveyard:bone_dagger"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "68549626B02A5A9A"
+					item: "minecraft:glass_bottle"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests17.title}"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["13186E7B0D6B6115"]
+			hide: true
+			id: "54378BE3AEDD91A3"
+			min_required_dependencies: 1
+			subtitle: "{ftbquests.chapter.cataclysm.quests18.subtitle}"
+			tasks: [
+				{
+					id: "622A03DC3FD49769"
+					title: "{ftbquests.chapter.cataclysm.quests18.tasks0.title}"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1F272782D97392B4"]
+			id: "1827BFE975828E04"
+			rewards: [
+				{
+					id: "76FC74919D2F9F73"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					id: "3567308D0C0BE40F"
+					item: "aquamirae:abyssal_amethyst"
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.cataclysm.quests19.subtitle}"
+			tasks: [
+				{
+					entity: "aquamirae:maze_mother"
+					icon: "aquamirae:abyssal_amethyst"
+					id: "6C581B3A0CC0D3CF"
+					title: "{ftbquests.chapter.cataclysm.quests19.tasks0.title}"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests19.title}"
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1827BFE975828E04"]
+			description: [
+				"{ftbquests.chapter.cataclysm.quests20.description0}"
+				""
+				"{ftbquests.chapter.cataclysm.quests20.description2}"
+			]
+			id: "2585B4FAFCED0F46"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1EB68B843F06D9CE"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.cataclysm.quests20.subtitle}"
+			tasks: [
+				{
+					id: "7019C49A5665F93A"
+					item: {
+						Count: 1b
+						id: "aquamirae:terrible_sword"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests20.title}"
+			x: -1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["2585B4FAFCED0F46"]
+			description: ["{ftbquests.chapter.cataclysm.quests21.description}"]
+			icon: "aquamirae:shell_horn"
+			id: "5A2CC1979870B934"
+			rewards: [
+				{
+					id: "2C54546C1D065D2B"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "{ftbquests.chapter.cataclysm.quests21.subtitle}"
+			tasks: [
+				{
+					id: "599B259962BE460E"
+					item: "aquamirae:shell_horn"
+					type: "item"
+				}
+				{
+					id: "4016D11AFF962CCF"
+					item: "aquamirae:three_bolt_helmet"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests21.title}"
+			x: -1.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["6F037916B715DB4A"]
+			description: [
+				"{ftbquests.chapter.cataclysm.quests22.description0}"
+				""
+				"{ftbquests.chapter.cataclysm.quests22.description2}"
+			]
+			id: "50A418AC861A047A"
+			rewards: [
+				{
+					id: "1F1F76685C8D7C7D"
+					type: "xp"
+					xp: 250
+				}
+			]
+			subtitle: "{ftbquests.chapter.cataclysm.quests22.subtitle}"
+			tasks: [
+				{
+					id: "6EDB30B985968A28"
+					item: "graveyard:vial_of_blood"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests22.title}"
+			x: 1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"50A418AC861A047A"
+				"6F037916B715DB4A"
+			]
+			description: [
+				"{ftbquests.chapter.cataclysm.quests23.description0}"
+				""
+				"{ftbquests.chapter.cataclysm.quests23.description2}"
+			]
+			id: "5AE1F898C6178F11"
+			rewards: [
+				{
+					id: "2941D5400793FC04"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5995D46434CDD790"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.cataclysm.quests23.subtitle}"
+			tasks: [
+				{
+					id: "4F1F5ADC79DFD998"
+					item: "graveyard:upper_bone_staff"
+					type: "item"
+				}
+				{
+					id: "56A9FB3A2DBD88E2"
+					item: "graveyard:middle_bone_staff"
+					type: "item"
+				}
+				{
+					id: "1B04D93B8E788FB3"
+					item: "graveyard:lower_bone_staff"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests23.title}"
+			x: 1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["5AE1F898C6178F11"]
+			description: [
+				"{ftbquests.chapter.cataclysm.quests24.description0}"
+				""
+				"{ftbquests.chapter.cataclysm.quests24.description2}"
+				""
+				"{ftbquests.chapter.cataclysm.quests24.description4}"
+			]
+			id: "658C5775199D9B27"
+			subtitle: "{ftbquests.chapter.cataclysm.quests24.subtitle}"
+			tasks: [
+				{
+					icon: "graveyard:altar"
+					id: "701870952F2664C9"
+					observe_type: 0
+					timer: 0L
+					to_observe: "graveyard:altar"
+					type: "observation"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests24.title}"
+			x: 1.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["658C5775199D9B27"]
+			id: "3C13DBF4676EC6A7"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "290ADDC4BCCF82CD"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.cataclysm.quests25.subtitle}"
+			tasks: [
+				{
+					icon: "graveyard:skeleton_hand"
+					id: "39E76B1BE77A926D"
+					observe_type: 5
+					timer: 0L
+					to_observe: "graveyard:lich"
+					type: "observation"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests25.title}"
+			x: 1.5d
+			y: -7.5d
+		}
+		{
+			dependencies: ["5A2CC1979870B934"]
+			description: ["{ftbquests.chapter.cataclysm.quests26.description}"]
+			icon: "aquamirae:frozen_key"
+			id: "6EE87D9FBE754FED"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "63918631BB8D7B04"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "009B4A99C7A80895"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "{ftbquests.chapter.cataclysm.quests26.subtitle}"
+			tasks: [
+				{
+					id: "7F260BFFEC214A47"
+					item: "aquamirae:frozen_key"
+					type: "item"
+				}
+				{
+					icon: "aquamirae:frozen_chest"
+					id: "1B9C9351DF331EBC"
+					observe_type: 0
+					timer: 0L
+					title: "{ftbquests.chapter.cataclysm.quests26.tasks1.title}"
+					to_observe: "aquamirae:frozen_chest"
+					type: "observation"
+				}
+				{
+					id: "5838C8C88094A4AF"
+					item: "obscure_api:astral_dust"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.cataclysm.quests26.title}"
+			x: -1.5d
+			y: -7.5d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.cataclysm.subtitle}"]
+	title: "{ftbquests.chapter.cataclysm.title}"
+}

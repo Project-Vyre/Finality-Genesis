@@ -1,0 +1,123 @@
+{
+	default_hide_dependency_lines: true
+	default_quest_shape: ""
+	filename: "miscellaneous_utilities"
+	group: "668E3EA3A7A91B79"
+	icon: "minecraft:experience_bottle"
+	id: "39AB89A7001538E5"
+	order_index: 7
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			id: "4B814A1F3CA7CA1A"
+			subtitle: "{ftbquests.chapter.miscellaneous_utilities.quests0.subtitle}"
+			tasks: [
+				{
+					id: "68D012B91C555D81"
+					item: "goldenhopper:golden_hopper"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.miscellaneous_utilities.quests0.title}"
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			id: "4A80913A15F6CA82"
+			subtitle: "{ftbquests.chapter.miscellaneous_utilities.quests1.subtitle}"
+			tasks: [
+				{
+					id: "3019AB42121C2E64"
+					item: "echochest:echo_chest"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.miscellaneous_utilities.quests1.title}"
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["2EF808209CCECE6A"]
+			id: "35DE8799CDD5E313"
+			tasks: [
+				{
+					id: "6F50C61194779F98"
+					title: "{ftbquests.chapter.miscellaneous_utilities.quests2.tasks0.title}"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			id: "7F2A0B88D493FCC2"
+			subtitle: "{ftbquests.chapter.miscellaneous_utilities.quests3.subtitle}"
+			tasks: [
+				{
+					id: "6F6DDF0492C2944D"
+					item: "portablehole:portable_hole"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.miscellaneous_utilities.quests3.title}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			id: "0CF1E1640EB623A0"
+			subtitle: "{ftbquests.chapter.miscellaneous_utilities.quests4.subtitle}"
+			tasks: [
+				{
+					id: "75E40E6B48C6EAAD"
+					item: "bobberdetector:bobber_detector"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.miscellaneous_utilities.quests4.title}"
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			id: "185EDDB4B4741310"
+			subtitle: "{ftbquests.chapter.miscellaneous_utilities.quests5.subtitle}"
+			tasks: [
+				{
+					id: "77DCD61D7A530148"
+					item: "craftingautomat:autocrafter"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.miscellaneous_utilities.quests5.title}"
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			description: [
+				"{ftbquests.chapter.miscellaneous_utilities.quests6.description0}"
+				""
+				"{ftbquests.chapter.miscellaneous_utilities.quests6.description2}"
+			]
+			id: "61BBA4857719B2A4"
+			subtitle: "{ftbquests.chapter.miscellaneous_utilities.quests6.subtitle}"
+			tasks: [
+				{
+					id: "75739AB63EF09B14"
+					item: "skillslots:unlock_slot"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.miscellaneous_utilities.quests6.title}"
+			x: 0.0d
+			y: -1.5d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.miscellaneous_utilities.subtitle}"]
+	title: "{ftbquests.chapter.miscellaneous_utilities.title}"
+}

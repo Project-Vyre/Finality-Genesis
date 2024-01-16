@@ -1,0 +1,21 @@
+{
+	icon: "minecraft:baked_potato"
+	id: "60D9E9A3C7FE1733"
+	loot_size: 1
+	order_index: 17
+	rewards: [
+		{
+			item: "minecraft:baked_potato"
+		}
+		{
+			item: "minecraft:mushroom_stew"
+		}
+		{
+			item: "minecraft:beetroot_soup"
+		}
+		{
+			item: "minecraft:bread"
+		}
+	]
+	title: "{ftbquests.reward_tables.food_shop_t1.title}"
+}

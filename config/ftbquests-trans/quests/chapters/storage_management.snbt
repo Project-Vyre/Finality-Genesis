@@ -1,0 +1,420 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "storage_management"
+	group: "668E3EA3A7A91B79"
+	hide_quest_details_until_startable: true
+	icon: "minecraft:chest"
+	id: "32CC85BACCD9E454"
+	order_index: 2
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"{ftbquests.chapter.storage_management.quests0.description0}"
+				""
+				"{ftbquests.chapter.storage_management.quests0.description2}"
+			]
+			hide: true
+			id: "1229F8883A381F07"
+			size: 1.5d
+			subtitle: "{ftbquests.chapter.storage_management.quests0.subtitle}"
+			tasks: [
+				{
+					id: "6F00A5E440FE9504"
+					title: "{ftbquests.chapter.storage_management.quests0.tasks0.title}"
+					type: "checkmark"
+				}
+			]
+			title: "{ftbquests.chapter.storage_management.quests0.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1229F8883A381F07"]
+			description: [
+				"{ftbquests.chapter.storage_management.quests1.description0}"
+				""
+				"{ftbquests.chapter.storage_management.quests1.description2}"
+				""
+				"{ftbquests.chapter.storage_management.quests1.description4}"
+			]
+			id: "537EBAE5E0065751"
+			rewards: [
+				{
+					id: "2F7CD886CAA71A8D"
+					type: "xp"
+					xp: 200
+				}
+			]
+			subtitle: "{ftbquests.chapter.storage_management.quests1.subtitle}"
+			tasks: [
+				{
+					id: "01F2D5DD6B7417BA"
+					item: "minecraft:ender_chest"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.storage_management.quests1.title}"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["537EBAE5E0065751"]
+			description: [
+				"{ftbquests.chapter.storage_management.quests2.description0}"
+				""
+				"{ftbquests.chapter.storage_management.quests2.description2}"
+				""
+				"{ftbquests.chapter.storage_management.quests2.description4}"
+			]
+			id: "124DCED733F1F423"
+			subtitle: "{ftbquests.chapter.storage_management.quests2.subtitle}"
+			tasks: [
+				{
+					id: "34EA586AB3034F06"
+					item: {
+						Count: 1b
+						id: "enderchests:ender_chest"
+						tag: {
+							code: "000"
+							owner: "all"
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["537EBAE5E0065751"]
+			id: "42D2219C7161A185"
+			subtitle: "{ftbquests.chapter.storage_management.quests3.subtitle}"
+			tasks: [
+				{
+					id: "2DDDFDA5D66FF258"
+					item: {
+						Count: 1b
+						id: "endertanks:ender_tank"
+						tag: {
+							code: "000"
+							owner: "all"
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["42D2219C7161A185"]
+			id: "2328A84037C87D9F"
+			subtitle: "{ftbquests.chapter.storage_management.quests4.subtitle}"
+			tasks: [
+				{
+					id: "4EEF4A44A98F2C6B"
+					item: {
+						Count: 1b
+						id: "endertanks:ender_bucket"
+						tag: {
+							code: "000"
+							mode: "normal"
+							owner: "all"
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["7B6F4E63BE0885B6"]
+			id: "72664E72295EA82F"
+			subtitle: "{ftbquests.chapter.storage_management.quests5.subtitle}"
+			tasks: [
+				{
+					id: "24DAC654429C17A4"
+					item: {
+						Count: 1b
+						id: "enderchests:ender_bag"
+						tag: {
+							code: "000"
+							open: 0b
+							owner: "all"
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["537EBAE5E0065751"]
+			id: "7B6F4E63BE0885B6"
+			subtitle: "{ftbquests.chapter.storage_management.quests6.subtitle}"
+			tasks: [
+				{
+					id: "1E2F4E2E6FFA5FD7"
+					item: {
+						Count: 1b
+						id: "enderchests:ender_pouch"
+						tag: {
+							open: 0b
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1229F8883A381F07"]
+			id: "0621698FB6DA317F"
+			rewards: [
+				{
+					id: "696CDBAE6D8F38EF"
+					type: "xp"
+					xp: 200
+				}
+			]
+			subtitle: "{ftbquests.chapter.storage_management.quests7.subtitle}"
+			tasks: [
+				{
+					id: "230EA0E4CF27ED33"
+					item: "cloudstorage:guide_book"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.storage_management.quests7.title}"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0621698FB6DA317F"]
+			description: [
+				"{ftbquests.chapter.storage_management.quests8.description0}"
+				""
+				"{ftbquests.chapter.storage_management.quests8.description2}"
+				""
+				"{ftbquests.chapter.storage_management.quests8.description4}"
+			]
+			icon: "cloudstorage:cloud_chest"
+			id: "54AB904AF8AB6C07"
+			rewards: [
+				{
+					id: "601AB9ED4130CE99"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "28CD5E54E326B019"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3B6C2AE67D9E7F23"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.storage_management.quests8.subtitle}"
+			tasks: [
+				{
+					id: "4CD5D739D901167C"
+					item: "cloudstorage:cloud_chest"
+					type: "item"
+				}
+				{
+					id: "6DC19FE1FB765C6D"
+					item: "cloudstorage:balloon"
+					type: "item"
+				}
+				{
+					id: "75453FF887585A52"
+					item: "cloudstorage:balloon_stand"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.storage_management.quests8.title}"
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["54AB904AF8AB6C07"]
+			description: [
+				"{ftbquests.chapter.storage_management.quests9.description0}"
+				""
+				"{ftbquests.chapter.storage_management.quests9.description2}"
+			]
+			icon: "cloudstorage:static_cloud"
+			id: "37A9592B69D284BF"
+			rewards: [
+				{
+					id: "3D33CDB5FC37231D"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "03443B328E824184"
+					table_id: 7771384237349930739L
+					type: "choice"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "49BF1F933A6320FD"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.storage_management.quests9.subtitle}"
+			tasks: [
+				{
+					id: "6C11DEF871FD420E"
+					item: "cloudstorage:static_cloud"
+					type: "item"
+				}
+				{
+					id: "08D8D35A84F8A99E"
+					item: {
+						Count: 1b
+						id: "cloudstorage:balloon"
+						tag: {
+							static: 1b
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.storage_management.quests9.title}"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["37A9592B69D284BF"]
+			description: [
+				"{ftbquests.chapter.storage_management.quests10.description0}"
+				""
+				"{ftbquests.chapter.storage_management.quests10.description2}"
+			]
+			id: "6C5EACFBFB1E42C1"
+			rewards: [
+				{
+					id: "797697CA6435D9F3"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "634CB9E908D22D91"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7F8A36EABA762090"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.storage_management.quests10.subtitle}"
+			tasks: [
+				{
+					id: "788ABBD07C80B6CE"
+					item: "cloudstorage:static_cloud_chest"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.storage_management.quests10.title}"
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1229F8883A381F07"]
+			id: "301D20710476E211"
+			subtitle: "{ftbquests.chapter.storage_management.quests11.subtitle}"
+			tasks: [
+				{
+					id: "078A5AE4E756FD21"
+					item: {
+						Count: 1b
+						id: "monobank:monobank"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.storage_management.quests11.title}"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["301D20710476E211"]
+			id: "058EC694FF4FE1C9"
+			subtitle: "{ftbquests.chapter.storage_management.quests12.subtitle}"
+			tasks: [
+				{
+					id: "12A35040DB282694"
+					item: "functionalstorage:oak_1"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.storage_management.quests12.title}"
+			x: -3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["301D20710476E211"]
+			id: "5140FC24786708B5"
+			tasks: [
+				{
+					id: "526CAF2E9C2C5C33"
+					item: "functionalstorage:copper_upgrade"
+					type: "item"
+				}
+				{
+					id: "054EE76284B88D15"
+					item: "functionalstorage:gold_upgrade"
+					type: "item"
+				}
+				{
+					id: "3CEA5BCD8FD7EE69"
+					item: "functionalstorage:diamond_upgrade"
+					type: "item"
+				}
+				{
+					id: "2AC7DF9B86EE181D"
+					item: "functionalstorage:netherite_upgrade"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.storage_management.quests13.title}"
+			x: -2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["058EC694FF4FE1C9"]
+			id: "0D79A9F2AA71B6E9"
+			tasks: [
+				{
+					id: "2B610225571C90A4"
+					item: "functionalstorage:ender_drawer"
+					type: "item"
+				}
+			]
+			x: -3.5d
+			y: 1.5d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.storage_management.subtitle}"]
+	title: "{ftbquests.chapter.storage_management.title}"
+}

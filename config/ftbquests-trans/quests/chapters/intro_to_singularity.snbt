@@ -1,0 +1,1125 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "intro_to_singularity"
+	group: ""
+	icon: "minecraft:crying_obsidian"
+	id: "063BF37EE3F476D4"
+	images: [
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 2.8106701366297986d
+			hover: [ ]
+			image: "minecraft:textures/gui/presets/packtitle.png"
+			rotation: 0.0d
+			width: 8.0d
+			x: 0.0d
+			y: -4.0d
+		}
+	]
+	order_index: 0
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"{ftbquests.chapter.intro_to_singularity.quests0.description0}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description2}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description4}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description6}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description8}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description10}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description12}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description14}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description16}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description18}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description20}"
+				"{@pagebreak}"
+				"{ftbquests.chapter.intro_to_singularity.quests0.description22}"
+				"{ftbquests.chapter.intro_to_singularity.quests0.description23}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description25}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description27}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description29}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description31}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description33}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description35}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description37}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description39}"
+				"{@pagebreak}"
+				"{ftbquests.chapter.intro_to_singularity.quests0.description41}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description43}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description45}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description47}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description49}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description51}"
+				"{@pagebreak}"
+				"{ftbquests.chapter.intro_to_singularity.quests0.description53}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description55}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description57}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description59}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description61}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description63}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description65}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description67}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description69}"
+				"{@pagebreak}"
+				"{ftbquests.chapter.intro_to_singularity.quests0.description71}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description73}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description75}"
+				"{@pagebreak}"
+				"{ftbquests.chapter.intro_to_singularity.quests0.description77}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description79}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description81}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests0.description83}"
+			]
+			icon: {
+				Count: 1b
+				id: "extendedcrafting:singularity"
+				tag: {
+					Id: "extendedcrafting:coal"
+				}
+			}
+			id: "4A691BB889286C89"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1F326401E791AF1B"
+					table_id: 6652661467762805826L
+					type: "random"
+				}
+			]
+			shape: "rsquare"
+			size: 1.5d
+			subtitle: "{ftbquests.chapter.intro_to_singularity.quests0.subtitle}"
+			tasks: [
+				{
+					id: "10D0DC144CD6061E"
+					title: "{ftbquests.chapter.intro_to_singularity.quests0.tasks0.title}"
+					type: "checkmark"
+				}
+				{
+					id: "69C9A8653C2DA100"
+					item: {
+						Count: 1b
+						id: "minecraft:wooden_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "173D685495C0B44E"
+					item: "ftbquests:book"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.intro_to_singularity.quests0.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"{ftbquests.chapter.intro_to_singularity.quests1.description0}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests1.description2}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests1.description4}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests1.description6}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests1.description8}"
+			]
+			hide: true
+			icon: {
+				Count: 1b
+				id: "enigmaticlegacy:enigmatic_amulet"
+				tag: {
+					AssignedColor: 0.1f
+				}
+			}
+			id: "6EEDB74144BCAD6C"
+			rewards: [
+				{
+					id: "63B4F8ECA1B5F39F"
+					table_id: 3533172865185366803L
+					type: "random"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.intro_to_singularity.quests1.subtitle}"
+			tasks: [
+				{
+					id: "488C52212FD6799D"
+					title: "{ftbquests.chapter.intro_to_singularity.quests1.tasks0.title}"
+					type: "checkmark"
+				}
+			]
+			title: "{ftbquests.chapter.intro_to_singularity.quests1.title}"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"{ftbquests.chapter.intro_to_singularity.quests2.description0}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests2.description2}"
+			]
+			hide: true
+			icon: {
+				Count: 1b
+				id: "enigmaticlegacy:etherium_sword"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "4913D65B3D761C6F"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "19ECA5AD05CE2E28"
+					table_id: 946488619696883447L
+					type: "random"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.intro_to_singularity.quests2.subtitle}"
+			tasks: [
+				{
+					entity: "minecraft:zombie"
+					icon: "minecraft:rotten_flesh"
+					id: "78DB3180CA1FD879"
+					type: "kill"
+					value: 64L
+				}
+				{
+					entity: "minecraft:skeleton"
+					icon: "minecraft:bone"
+					id: "2F4CA9AFAB3CC7A8"
+					type: "kill"
+					value: 32L
+				}
+				{
+					entity: "minecraft:creeper"
+					icon: "minecraft:gunpowder"
+					id: "10DA198E3B5A7642"
+					type: "kill"
+					value: 8L
+				}
+				{
+					entity: "minecraft:spider"
+					icon: "minecraft:string"
+					id: "3A5644DA06E25C5F"
+					type: "kill"
+					value: 32L
+				}
+				{
+					entity: "minecraft:enderman"
+					icon: "minecraft:ender_pearl"
+					id: "65B6FE5E8BFB67C4"
+					type: "kill"
+					value: 16L
+				}
+			]
+			title: "{ftbquests.chapter.intro_to_singularity.quests2.title}"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"{ftbquests.chapter.intro_to_singularity.quests3.description0}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests3.description2}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests3.description4}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests3.description6}"
+			]
+			hide: true
+			id: "5693356D2578CF5E"
+			rewards: [
+				{
+					id: "04DB34818E781059"
+					item: "farmersdelight:sweet_berry_cheesecake"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "693CA5AE8141BD2D"
+					table_id: 946488619696883447L
+					type: "choice"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.intro_to_singularity.quests3.subtitle}"
+			tasks: [
+				{
+					count: 64L
+					id: "1F80310E2B4B5CA8"
+					item: "minecraft:sugar_cane"
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "2B4116DC02EF2E64"
+					item: "minecraft:bamboo"
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "5DEF2DD3DDFA3A5F"
+					item: "minecraft:cactus"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.intro_to_singularity.quests3.title}"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"{ftbquests.chapter.intro_to_singularity.quests4.description0}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests4.description2}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests4.description4}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests4.description6}"
+			]
+			hide: true
+			icon: "extendedcrafting:handheld_table"
+			id: "0AE06EB85B6E1CB6"
+			rewards: [
+				{
+					id: "6AECAF1DB1A11A84"
+					item: "minecraft:raw_iron_block"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "376E44019CCE136C"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "3407EBD71CDAC867"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					id: "139BB63F1B9DEB8C"
+					item: "supplementaries:flax"
+					type: "item"
+				}
+				{
+					id: "0B0A46007FC704BC"
+					item: "supplementaries:flax_seeds"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.intro_to_singularity.quests4.subtitle}"
+			tasks: [
+				{
+					id: "6907F27EE9B9826D"
+					item: "extendedcrafting:handheld_table"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "23A2283ADCF520ED"
+					item: "minecraft:campfire"
+					type: "item"
+				}
+				{
+					id: "6102D3B71CF616FF"
+					item: {
+						Count: 1b
+						id: "minecraft:stone_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6D0C51FCA5C0A1D2"
+					title: "{ftbquests.chapter.intro_to_singularity.quests4.tasks3.title}"
+					type: "checkmark"
+				}
+				{
+					id: "7C483B82D80A8F75"
+					item: "minecraft:bone_meal"
+					match_nbt: false
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.intro_to_singularity.quests4.title}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0AE06EB85B6E1CB6"]
+			description: [
+				"{ftbquests.chapter.intro_to_singularity.quests5.description0}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests5.description2}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests5.description4}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests5.description6}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests5.description8}"
+			]
+			icon: {
+				Count: 1b
+				id: "eccentrictome:tome"
+				tag: {
+					"eccentrictome:mods": { }
+				}
+			}
+			id: "2EF808209CCECE6A"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "30A53C3FE3D2ED84"
+					table_id: 7159138545964995551L
+					type: "random"
+				}
+				{
+					count: 16
+					id: "2ED12C1FF4593067"
+					item: "labels:label"
+					type: "item"
+				}
+				{
+					id: "7F6F973D2C757169"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.intro_to_singularity.quests5.subtitle}"
+			tasks: [
+				{
+					id: "781047FC0FE342C3"
+					item: {
+						Count: 1b
+						id: "eccentrictome:tome"
+						tag: {
+							"eccentrictome:mods": { }
+						}
+					}
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "045F99F148F9E24C"
+					item: "farmersdelight:cutting_board"
+					type: "item"
+				}
+				{
+					id: "446D17BA62CD3F0B"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "farmersdelight:tools/knives"
+						}
+					}
+					title: "{ftbquests.chapter.intro_to_singularity.quests5.tasks2.title}"
+					type: "item"
+				}
+				{
+					id: "1277B528ADC1D6F8"
+					item: {
+						Count: 1b
+						id: "farmersdelight:skillet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "7C06B649A52E60C0"
+					item: "farmersdelight:cooking_pot"
+					type: "item"
+				}
+				{
+					id: "0C4AF3D94C5361F1"
+					item: "farmersdelight:stove"
+					type: "item"
+				}
+				{
+					id: "2EFF728C6194E967"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "chalk:chalks"
+						}
+					}
+					title: "{ftbquests.chapter.intro_to_singularity.quests5.tasks6.title}"
+					type: "item"
+				}
+				{
+					id: "27107A7D7AA97393"
+					item: {
+						Count: 1b
+						id: "chalk:chalk_box"
+						tag: {
+							Items: [
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4896EF8D0C434B5E"
+					item: "minecraft:fletching_table"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.intro_to_singularity.quests5.title}"
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2EF808209CCECE6A"]
+			description: [
+				"{ftbquests.chapter.intro_to_singularity.quests6.description0}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests6.description2}"
+				"{@pagebreak}"
+				"{ftbquests.chapter.intro_to_singularity.quests6.description4}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests6.description6}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests6.description8}"
+				"{@pagebreak}"
+				"{ftbquests.chapter.intro_to_singularity.quests6.description10}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests6.description12}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests6.description14}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests6.description16}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests6.description18}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests6.description20}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests6.description22}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests6.description24}"
+				"{@pagebreak}"
+				"{ftbquests.chapter.intro_to_singularity.quests6.description26}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests6.description28}"
+				"{@pagebreak}"
+				"{ftbquests.chapter.intro_to_singularity.quests6.description30}"
+				"{@pagebreak}"
+				"{ftbquests.chapter.intro_to_singularity.quests6.description32}"
+			]
+			icon: "tempad:tempad"
+			id: "5E5E9241EB84A4E9"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5B59718FEA832387"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "53C57E5487C6BEF8"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.intro_to_singularity.quests6.subtitle}"
+			tasks: [
+				{
+					id: "265931DE467928C8"
+					item: "tempad:tempad"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "555201282747EC85"
+					item: "travelanchors:travel_anchor"
+					title: "{ftbquests.chapter.intro_to_singularity.quests6.tasks1.title}"
+					type: "item"
+				}
+				{
+					id: "447EE71ED57A4615"
+					item: "travelanchors:travel_staff"
+					title: "{ftbquests.chapter.intro_to_singularity.quests6.tasks2.title}"
+					type: "item"
+				}
+				{
+					id: "1BDA8E7D4D6D138E"
+					item: "torchmaster:megatorch"
+					type: "item"
+				}
+				{
+					id: "1BDF17D753DA6548"
+					item: "create_mechanical_extruder:mechanical_extruder"
+					type: "item"
+				}
+				{
+					id: "6FECCB0334CF7626"
+					item: {
+						Count: 1b
+						id: "monobank:monobank"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "7F1707757DF45D46"
+					item: "create_power_loader:andesite_chunk_loader"
+					type: "item"
+				}
+				{
+					id: "65A741FBD62349C1"
+					item: "create_power_loader:brass_chunk_loader"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.intro_to_singularity.quests6.title}"
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"5E5E9241EB84A4E9"
+				"5098C9DA205BDE8A"
+			]
+			description: ["{ftbquests.chapter.intro_to_singularity.quests7.description}"]
+			hide: true
+			icon: "tempad:he_who_remains_tempad"
+			id: "38EC0E607FAE4543"
+			rewards: [
+				{
+					id: "5F652AE318FE64A7"
+					type: "xp_levels"
+					xp_levels: 50
+				}
+				{
+					count: 64
+					id: "214EB1AB55507226"
+					item: "minecraft:netherite_block"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.intro_to_singularity.quests7.subtitle}"
+			tasks: [
+				{
+					id: "07E460614DD4774D"
+					item: "tempad:he_who_remains_tempad"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.intro_to_singularity.quests7.title}"
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0AE06EB85B6E1CB6"]
+			description: [
+				"{ftbquests.chapter.intro_to_singularity.quests8.description0}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests8.description2}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests8.description4}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests8.description6}"
+			]
+			icon: {
+				Count: 1b
+				id: "minecraft:iron_pickaxe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "03F919758AA7E318"
+			rewards: [
+				{
+					count: 3
+					id: "358E2A2CFE70CDBE"
+					item: "minecraft:raw_gold_block"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "622143AAC4E8F062"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "74F16A4C8B3FAB4F"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "37614DAB7EBD19E6"
+					table_id: 4925255154089711758L
+					type: "random"
+				}
+				{
+					id: "3679FDE7CC174DAE"
+					item: {
+						Count: 1b
+						id: "supplementaries:rope_arrow"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.intro_to_singularity.quests8.subtitle}"
+			tasks: [
+				{
+					id: "142AB5886E71101E"
+					item: {
+						Count: 1b
+						id: "minecraft:iron_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "5418A907AB1B1E49"
+					item: "backpacked:backpack"
+					type: "item"
+				}
+				{
+					id: "71A8BBB9C2D9D525"
+					item: {
+						Count: 1b
+						id: "minecraft:shield"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "39BA304983F7DA1C"
+					item: {
+						Count: 1b
+						id: "minecraft:bow"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1C93B0D8F5C66FF2"
+					item: {
+						Count: 1b
+						ForgeCaps: {
+							Parent: {
+								Items: [ ]
+								SelectedSlot: 0
+								Size: 6
+							}
+						}
+						id: "supplementaries:quiver"
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.intro_to_singularity.quests8.title}"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0AE06EB85B6E1CB6"]
+			description: [
+				"{ftbquests.chapter.intro_to_singularity.quests9.description0}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests9.description2}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests9.description4}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests9.description6}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests9.description8}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests9.description10}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests9.description12}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests9.description14}"
+			]
+			icon: "create:andesite_alloy"
+			id: "65FC712C5D7E312D"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5F48B0E541D258E1"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.intro_to_singularity.quests9.subtitle}"
+			tasks: [
+				{
+					id: "580921EB09A555A0"
+					title: "{ftbquests.chapter.intro_to_singularity.quests9.tasks0.title}"
+					type: "checkmark"
+				}
+			]
+			title: "{ftbquests.chapter.intro_to_singularity.quests9.title}"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["03F919758AA7E318"]
+			description: [
+				"{ftbquests.chapter.intro_to_singularity.quests10.description0}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests10.description2}"
+			]
+			icon: {
+				Count: 1b
+				id: "minecraft:diamond_pickaxe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "13186E7B0D6B6115"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0FBF701F50C3B651"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "25170DED232E55A3"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "2AD714DD20BB5FB1"
+					table_id: 3832275843975625545L
+					type: "random"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.intro_to_singularity.quests10.subtitle}"
+			tasks: [
+				{
+					id: "080DD5B7DA2CF335"
+					item: {
+						Count: 1b
+						id: "minecraft:diamond_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.intro_to_singularity.quests10.title}"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["13186E7B0D6B6115"]
+			description: [
+				"{ftbquests.chapter.intro_to_singularity.quests11.description0}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests11.description2}"
+			]
+			icon: "minecraft:compass"
+			id: "650B5FD6B6CAD69C"
+			rewards: [
+				{
+					id: "5550D0D6DDAF20F5"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					id: "0D1D658A5E8614B7"
+					item: "artifacts:mimic_spawn_egg"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.intro_to_singularity.quests11.subtitle}"
+			tasks: [
+				{
+					id: "3BF5145CA2BFA938"
+					item: {
+						Count: 1b
+						id: "naturescompass:naturescompass"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "0305240C1F21BE52"
+					item: {
+						Count: 1b
+						id: "explorerscompass:explorerscompass"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.intro_to_singularity.quests11.title}"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"{ftbquests.chapter.intro_to_singularity.quests12.description0}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests12.description2}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests12.description4}"
+			]
+			hide: true
+			hide_dependency_lines: true
+			id: "6CF276144FAF7265"
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.intro_to_singularity.quests12.subtitle}"
+			tasks: [
+				{
+					id: "08294138E415A8CD"
+					item: "waystones:waystone"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.intro_to_singularity.quests12.title}"
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"{ftbquests.chapter.intro_to_singularity.quests13.description0}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests13.description2}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests13.description4}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests13.description6}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests13.description8}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests13.description10}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests13.description12}"
+				""
+				"{ftbquests.chapter.intro_to_singularity.quests13.description14}"
+			]
+			hide: true
+			hide_dependency_lines: true
+			icon: "minecraft:coal_block"
+			id: "0B185A46D4C2A558"
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.intro_to_singularity.quests13.subtitle}"
+			tasks: [
+				{
+					id: "50344CAB6CFC2ADA"
+					item: "minecraft:coal"
+					type: "item"
+				}
+				{
+					id: "7636931033E3AEE3"
+					item: "minecraft:coal_block"
+					type: "item"
+				}
+				{
+					id: "6CB9E98C2793DF71"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "5615AE22BD72CECF"
+					item: "minecraft:diamond_block"
+					type: "item"
+				}
+				{
+					id: "3EC1D4E2D48C55FD"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+				{
+					id: "3ADE27B161EAF455"
+					item: "minecraft:deepslate"
+					type: "item"
+				}
+				{
+					id: "2FC324B035EC0BBC"
+					item: "minecraft:tuff"
+					type: "item"
+				}
+				{
+					id: "3EA870622004D7BE"
+					item: "minecraft:netherrack"
+					type: "item"
+				}
+				{
+					id: "5712112A95EF8468"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "33CDB492E3D94E84"
+					item: "minecraft:phantom_membrane"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.intro_to_singularity.quests13.title}"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			hide_dependency_lines: true
+			id: "4843FF760BED67F6"
+			rewards: [
+				{
+					id: "02616E76E4F48105"
+					item: "pickletweaks:diamond_apple"
+					type: "item"
+				}
+				{
+					id: "0BB63C7B5DE0F779"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.intro_to_singularity.quests14.subtitle}"
+			tasks: [
+				{
+					id: "4732ED31EBC116AD"
+					item: "minecraft:music_disc_chirp"
+					type: "item"
+				}
+				{
+					id: "530BC0BAFD50D8EA"
+					item: "minecraft:music_disc_5"
+					type: "item"
+				}
+				{
+					id: "680DBF9C531E0997"
+					item: "minecraft:music_disc_11"
+					type: "item"
+				}
+				{
+					id: "6E40E0580F9E273D"
+					item: "minecraft:music_disc_13"
+					type: "item"
+				}
+				{
+					id: "1407CBB9A3115985"
+					item: "minecraft:music_disc_stal"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.intro_to_singularity.quests14.title}"
+			x: 0.0d
+			y: 4.5d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.intro_to_singularity.subtitle}"]
+	title: "{ftbquests.chapter.intro_to_singularity.title}"
+}

@@ -1,0 +1,668 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "apotheosis"
+	group: "6855847200ADBE3A"
+	icon: "apotheosis:gem_dust"
+	id: "6354312DFE41C7F0"
+	images: [
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 64.0d
+			hover: [ ]
+			image: "minecraft:textures/gui/presets/end_bg.png"
+			rotation: 0.0d
+			width: 64.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 0
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["7D3FA3191B051D55"]
+			description: ["{ftbquests.chapter.apotheosis.quests0.description}"]
+			icon: "apotheosis:gem_dust"
+			id: "0EB2D84D0683C5C5"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4D918A3FE3530EC1"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.apotheosis.quests0.subtitle}"
+			tasks: [
+				{
+					id: "65F2DD9E96FBF7C6"
+					item: "apotheosis:gem_dust"
+					type: "item"
+				}
+				{
+					id: "2B76C1E44297757B"
+					item: "minecraft:smithing_table"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.apotheosis.quests0.title}"
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["5D79BD5D3D87DA08"]
+			description: [
+				"{ftbquests.chapter.apotheosis.quests1.description0}"
+				""
+				"{ftbquests.chapter.apotheosis.quests1.description2}"
+			]
+			icon: "minecraft:anvil"
+			id: "7D3FA3191B051D55"
+			rewards: [
+				{
+					count: 8
+					id: "21ED54E41EA2A770"
+					item: "apotheosis:gem_dust"
+					type: "item"
+				}
+				{
+					id: "4FD1049217D0AD30"
+					type: "xp"
+					xp: 250
+				}
+			]
+			subtitle: "{ftbquests.chapter.apotheosis.quests1.subtitle}"
+			tasks: [
+				{
+					id: "5ACF7B37EC1AE02D"
+					item: "apotheosis:gem_dust"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.apotheosis.quests1.title}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["74B2239E6D835FD5"]
+			description: ["{ftbquests.chapter.apotheosis.quests2.description}"]
+			id: "0CC888B34808370F"
+			rewards: [
+				{
+					id: "44EC69D3E2F8D3B6"
+					type: "xp"
+					xp: 500
+				}
+			]
+			subtitle: "{ftbquests.chapter.apotheosis.quests2.subtitle}"
+			tasks: [
+				{
+					id: "27739486D76BF9B6"
+					item: "apotheosis:salvaging_table"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.apotheosis.quests2.title}"
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0CC888B34808370F"]
+			description: ["{ftbquests.chapter.apotheosis.quests3.description}"]
+			id: "376556B76A4D12A5"
+			rewards: [
+				{
+					id: "78AFCFFFD85999A9"
+					type: "xp"
+					xp: 250
+				}
+			]
+			subtitle: "{ftbquests.chapter.apotheosis.quests3.subtitle}"
+			tasks: [
+				{
+					id: "54A4CAE1B702579F"
+					item: "apotheosis:common_material"
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0CC888B34808370F"]
+			description: ["{ftbquests.chapter.apotheosis.quests4.description}"]
+			id: "4E3FAA48FA11E177"
+			rewards: [
+				{
+					id: "338520B5DD2066D0"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3BCFC4C9BC8BA3AA"
+					table_id: 946488619696883447L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.apotheosis.quests4.subtitle}"
+			tasks: [
+				{
+					id: "1A8CF8C68C5CEA21"
+					item: "apotheosis:uncommon_material"
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 8.5d
+		}
+		{
+			dependencies: ["0CC888B34808370F"]
+			description: ["{ftbquests.chapter.apotheosis.quests5.description}"]
+			id: "72AD6FF2F61C7FD8"
+			rewards: [
+				{
+					id: "77FCC62C3679D53B"
+					type: "xp"
+					xp: 500
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0FEA652DC12BE667"
+					table_id: 4925255154089711758L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.apotheosis.quests5.subtitle}"
+			tasks: [
+				{
+					id: "5CEAD17407372A2D"
+					item: "apotheosis:rare_material"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 9.5d
+		}
+		{
+			dependencies: ["0CC888B34808370F"]
+			description: ["{ftbquests.chapter.apotheosis.quests6.description}"]
+			id: "20FEAD12447CB2E2"
+			rewards: [
+				{
+					id: "7E478C18FFDC93CB"
+					type: "xp"
+					xp: 750
+				}
+				{
+					exclude_from_claim_all: true
+					id: "718A5D7E40D49BA2"
+					table_id: 3832275843975625545L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.apotheosis.quests6.subtitle}"
+			tasks: [
+				{
+					id: "427A80F86A86FF10"
+					item: "apotheosis:epic_material"
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: 8.5d
+		}
+		{
+			dependencies: ["0CC888B34808370F"]
+			id: "7A6003AA26F89F01"
+			rewards: [
+				{
+					id: "313A8B2BBEEFEB79"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "19B53CEC8338BCB1"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.apotheosis.quests7.subtitle}"
+			tasks: [
+				{
+					id: "0F13BC80426AE023"
+					item: "apotheosis:mythic_material"
+					type: "item"
+				}
+			]
+			x: 2.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0EB2D84D0683C5C5"]
+			description: [
+				"{ftbquests.chapter.apotheosis.quests8.description0}"
+				""
+				"{ftbquests.chapter.apotheosis.quests8.description2}"
+			]
+			id: "292255F2891C4C7F"
+			subtitle: "{ftbquests.chapter.apotheosis.quests8.subtitle}"
+			tasks: [
+				{
+					id: "0D863DF077349F1F"
+					item: "apotheosis:vial_of_extraction"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["0EB2D84D0683C5C5"]
+			description: [
+				"{ftbquests.chapter.apotheosis.quests9.description0}"
+				""
+				"{ftbquests.chapter.apotheosis.quests9.description2}"
+			]
+			id: "7C48CEAB862B2C27"
+			subtitle: "{ftbquests.chapter.apotheosis.quests9.subtitle}"
+			tasks: [
+				{
+					id: "7093EDBEAC46001D"
+					item: "apotheosis:vial_of_expulsion"
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"{ftbquests.chapter.apotheosis.quests10.description0}"
+				""
+				"{ftbquests.chapter.apotheosis.quests10.description2}"
+			]
+			hide: true
+			id: "5D79BD5D3D87DA08"
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.apotheosis.quests10.subtitle}"
+			tasks: [
+				{
+					id: "00C04831E4FA7E9B"
+					item: {
+						Count: 1b
+						id: "patchouli:guide_book"
+						tag: {
+							"patchouli:book": "apotheosis:apoth_chronicle"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.apotheosis.quests10.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"00C04831E4FA7E9B"
+				"4A691BB889286C89"
+			]
+			description: [
+				"{ftbquests.chapter.apotheosis.quests11.description0}"
+				""
+				"{ftbquests.chapter.apotheosis.quests11.description2}"
+			]
+			hide: true
+			id: "411F865E038E7A2E"
+			rewards: [
+				{
+					id: "13B86D86BF91CE46"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "{ftbquests.chapter.apotheosis.quests11.subtitle}"
+			tasks: [
+				{
+					id: "412F89A109102D9D"
+					item: "minecraft:enchanting_table"
+					title: "{ftbquests.chapter.apotheosis.quests11.tasks0.title}"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.apotheosis.quests11.title}"
+			x: 0.01496598639452884d
+			y: 11.16768707482997d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "3280E79F2CD74B0F"
+			subtitle: "{ftbquests.chapter.apotheosis.quests12.subtitle}"
+			tasks: [
+				{
+					id: "5C4DCC02B451CBDC"
+					item: "apotheosis:helmet_tome"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.apotheosis.quests12.title}"
+			x: -3.5d
+			y: 13.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "2095D6224E18FB5E"
+			subtitle: "{ftbquests.chapter.apotheosis.quests13.subtitle}"
+			tasks: [
+				{
+					id: "431CA9DABFADA285"
+					item: "apotheosis:chestplate_tome"
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: 13.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "03A8F69CDB1B4D04"
+			subtitle: "{ftbquests.chapter.apotheosis.quests14.subtitle}"
+			tasks: [
+				{
+					id: "006835D5484ABAAC"
+					item: "apotheosis:boots_tome"
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: 14.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "2DD02CF38762C5DF"
+			subtitle: "{ftbquests.chapter.apotheosis.quests15.subtitle}"
+			tasks: [
+				{
+					id: "3C60DAF45F05032B"
+					item: "apotheosis:leggings_tome"
+					type: "item"
+				}
+			]
+			x: -3.5d
+			y: 14.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "16310D4341177DBD"
+			subtitle: "{ftbquests.chapter.apotheosis.quests16.subtitle}"
+			tasks: [
+				{
+					id: "7081D86E3D085F86"
+					item: "apotheosis:weapon_tome"
+					type: "item"
+				}
+			]
+			x: 2.5d
+			y: 13.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "5986BE189515A09D"
+			subtitle: "{ftbquests.chapter.apotheosis.quests17.subtitle}"
+			tasks: [
+				{
+					id: "36E31F9DDE90BA5F"
+					item: "apotheosis:pickaxe_tome"
+					type: "item"
+				}
+			]
+			x: 2.5d
+			y: 14.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "099E7DE85728EF7B"
+			subtitle: "{ftbquests.chapter.apotheosis.quests18.subtitle}"
+			tasks: [
+				{
+					id: "560839E3AE9CC993"
+					item: "apotheosis:fishing_tome"
+					type: "item"
+				}
+			]
+			x: 3.5d
+			y: 14.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "08DE4E031180931E"
+			subtitle: "{ftbquests.chapter.apotheosis.quests19.subtitle}"
+			tasks: [
+				{
+					id: "2FD0B15CA52C1042"
+					item: "apotheosis:bow_tome"
+					type: "item"
+				}
+			]
+			x: 3.5d
+			y: 13.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "5B78B34045FCF7C5"
+			subtitle: "{ftbquests.chapter.apotheosis.quests20.subtitle}"
+			tasks: [
+				{
+					id: "4F5280D1C12F9C38"
+					item: "apotheosis:scrap_tome"
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: 15.0d
+		}
+		{
+			dependencies: ["412F89A109102D9D"]
+			hide: true
+			id: "437A1B22B98D1CB4"
+			subtitle: "{ftbquests.chapter.apotheosis.quests21.subtitle}"
+			tasks: [
+				{
+					id: "454AAD0DEDC24BA6"
+					item: "apotheosis:other_tome"
+					type: "item"
+				}
+			]
+			x: 2.5d
+			y: 15.0d
+		}
+		{
+			dependencies: ["1189AFE0B71158E6"]
+			description: ["{ftbquests.chapter.apotheosis.quests22.description}"]
+			id: "3718E49C5B96FBFA"
+			rewards: [
+				{
+					id: "2996F22AA3FA1626"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "05ADE9AE81C39F18"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "765E80417A1B76E3"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "apotheosis:capturing"
+									lvl: 5s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.apotheosis.quests22.subtitle}"
+			tasks: [
+				{
+					id: "46BECAA580019513"
+					item: "apotheosis:reforging_table"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.apotheosis.quests22.title}"
+			x: 0.0d
+			y: 18.5d
+		}
+		{
+			dependencies: ["0EB2D84D0683C5C5"]
+			description: ["{ftbquests.chapter.apotheosis.quests23.description}"]
+			id: "74B2239E6D835FD5"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "617ABB07F7D39FDE"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "5AC27C7B8638EA99"
+					type: "xp"
+					xp: 500
+				}
+			]
+			subtitle: "{ftbquests.chapter.apotheosis.quests23.subtitle}"
+			tasks: [
+				{
+					id: "4A4205C21346E6CE"
+					item: "apotheosis:gem_cutting_table"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.apotheosis.quests23.title}"
+			x: 0.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["411F865E038E7A2E"]
+			description: [
+				"{ftbquests.chapter.apotheosis.quests24.description0}"
+				""
+				"{ftbquests.chapter.apotheosis.quests24.description2}"
+				""
+				"{ftbquests.chapter.apotheosis.quests24.description4}"
+				""
+				"{ftbquests.chapter.apotheosis.quests24.description6}"
+			]
+			id: "1189AFE0B71158E6"
+			rewards: [
+				{
+					id: "6BAF2DDB432FD4E9"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+				{
+					id: "17ACA18DFF0AA6EC"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "apotheosis:capturing"
+									lvl: 1s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.apotheosis.quests24.subtitle}"
+			tasks: [
+				{
+					id: "3B604826BCC1040B"
+					item: "apotheosis:simple_reforging_table"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.apotheosis.quests24.title}"
+			x: 0.0d
+			y: 16.5d
+		}
+		{
+			dependencies: ["5D79BD5D3D87DA08"]
+			id: "24E25CD6A011D02C"
+			rewards: [
+				{
+					id: "0F5A65712FD0A055"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1803550DB59A987B"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.apotheosis.quests25.subtitle}"
+			tasks: [
+				{
+					id: "5DED14F19545B5D9"
+					item: "apotheosis:obsidian_arrow"
+					type: "item"
+				}
+				{
+					id: "3CA69C7A0DDED58E"
+					item: "apotheosis:iron_mining_arrow"
+					type: "item"
+				}
+				{
+					id: "1437A2A295D108FD"
+					item: "apotheosis:diamond_mining_arrow"
+					type: "item"
+				}
+				{
+					id: "306207E986A95EBD"
+					item: "apotheosis:broadhead_arrow"
+					type: "item"
+				}
+				{
+					id: "7A927AD471F0AF35"
+					item: "apotheosis:explosive_arrow"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.apotheosis.quests25.title}"
+			x: 0.0d
+			y: -1.5d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.apotheosis.subtitle}"]
+	title: "{ftbquests.chapter.apotheosis.title}"
+}

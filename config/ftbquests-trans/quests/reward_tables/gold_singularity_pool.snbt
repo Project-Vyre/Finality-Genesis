@@ -1,0 +1,27 @@
+{
+	icon: {
+		Count: 1b
+		id: "extendedcrafting:singularity"
+		tag: {
+			Id: "extendedcrafting:gold"
+		}
+	}
+	id: "378F9BF26D927784"
+	loot_size: 1
+	order_index: 22
+	rewards: [
+		{
+			item: "kubejs:gold_coin"
+			weight: 0.02f
+		}
+		{
+			item: "kubejs:copper_coin"
+			weight: 3.5f
+		}
+		{
+			item: "kubejs:iron_coin"
+			weight: 4.0f
+		}
+	]
+	title: "{ftbquests.reward_tables.gold_singularity_pool.title}"
+}

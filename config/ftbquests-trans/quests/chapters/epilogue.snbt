@@ -1,0 +1,1288 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "epilogue"
+	group: ""
+	icon: "kubejs:awakened_singularity_core"
+	id: "3D91EE1209DFA21C"
+	images: [
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 64.0d
+			hover: [ ]
+			image: "minecraft:textures/gui/presets/end_bg.png"
+			rotation: 0.0d
+			width: 64.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 6
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"4EBF56E85BA4465B"
+				"38E2EE3F3F2C2E6C"
+				"2FF7795C03DDC67B"
+			]
+			description: [
+				"{ftbquests.chapter.epilogue.quests0.description0}"
+				""
+				"{ftbquests.chapter.epilogue.quests0.description2}"
+				""
+				"{ftbquests.chapter.epilogue.quests0.description4}"
+			]
+			id: "7BFEF80899790FC7"
+			rewards: [
+				{
+					id: "7A79C8AF962BF78D"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "{ftbquests.chapter.epilogue.quests0.subtitle}"
+			tasks: [
+				{
+					id: "4C847275ABA5869F"
+					item: "kubejs:dormant_singularity_core"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.epilogue.quests0.title}"
+			x: 0.0d
+			y: -20.0d
+		}
+		{
+			dependencies: ["7BFEF80899790FC7"]
+			id: "441B6755C6E69725"
+			rewards: [
+				{
+					id: "0D557B70340E0E40"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.epilogue.quests1.subtitle}"
+			tasks: [
+				{
+					id: "09EF7D15277FEB92"
+					item: "kubejs:awakened_singularity_core"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.epilogue.quests1.title}"
+			x: 0.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["441B6755C6E69725"]
+			id: "1F8515F209C98116"
+			subtitle: "{ftbquests.chapter.epilogue.quests2.subtitle}"
+			tasks: [
+				{
+					id: "781C616780708BED"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:coal"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -16.0d
+		}
+		{
+			dependencies: ["53850BE8EF49D0AF"]
+			description: [
+				"{ftbquests.chapter.epilogue.quests3.description0}"
+				""
+				"{ftbquests.chapter.epilogue.quests3.description2}"
+				""
+				"{ftbquests.chapter.epilogue.quests3.description4}"
+			]
+			id: "01A8004472B9F446"
+			rewards: [
+				{
+					id: "6D9E168B6AECD296"
+					type: "xp_levels"
+					xp_levels: 999999999
+				}
+			]
+			subtitle: "{ftbquests.chapter.epilogue.quests3.subtitle}"
+			tasks: [
+				{
+					id: "716C4AAB2675A2FC"
+					item: "create:handheld_worldshaper"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1F8515F209C98116"]
+			id: "634CF0AB7722167E"
+			subtitle: "{ftbquests.chapter.epilogue.quests4.subtitle}"
+			tasks: [
+				{
+					id: "749BB0B63485E853"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:copper"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: -16.5d
+		}
+		{
+			dependencies: ["1F8515F209C98116"]
+			description: ["{ftbquests.chapter.epilogue.quests5.description}"]
+			id: "6441CF7A7EB2A425"
+			subtitle: "{ftbquests.chapter.epilogue.quests5.subtitle}"
+			tasks: [
+				{
+					id: "50A3755D5BC3CA49"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:cobblestone"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: -16.5d
+		}
+		{
+			dependencies: ["634CF0AB7722167E"]
+			id: "002A7969EC03C1EC"
+			subtitle: "{ftbquests.chapter.epilogue.quests6.subtitle}"
+			tasks: [
+				{
+					id: "08E5007CF006F958"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:iron"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: -18.0d
+		}
+		{
+			dependencies: [
+				"48F7AA720F364C68"
+				"16EFBAF2CDCCCA8C"
+			]
+			icon: "extendedcrafting:ultimate_singularity"
+			id: "123D0E0F69B73A88"
+			tasks: [
+				{
+					id: "2F6C1657E021958E"
+					item: "extendedcrafting:ultimate_singularity"
+					type: "item"
+				}
+				{
+					id: "28E0184043487A64"
+					item: "extendedcrafting:the_ultimate_nugget"
+					type: "item"
+				}
+				{
+					id: "0B716CF61348159F"
+					item: "extendedcrafting:the_ultimate_ingot"
+					type: "item"
+				}
+				{
+					id: "48CC203D69FA905F"
+					item: "extendedcrafting:crystaltine_catalyst"
+					type: "item"
+				}
+				{
+					id: "1E37BD8F6B386BB1"
+					item: "kubejs:high_entropy_alloy"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -7.0d
+		}
+		{
+			dependencies: ["123D0E0F69B73A88"]
+			id: "53850BE8EF49D0AF"
+			subtitle: "{ftbquests.chapter.epilogue.quests8.subtitle}"
+			tasks: [
+				{
+					id: "24F82896C2181594"
+					item: "kubejs:entropy_mechanism"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.epilogue.quests8.title}"
+			x: 0.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["6441CF7A7EB2A425"]
+			id: "17243E628EAA6146"
+			subtitle: "{ftbquests.chapter.epilogue.quests9.subtitle}"
+			tasks: [
+				{
+					id: "15FFA94B3269F3B7"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:coarse_dirt"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["17243E628EAA6146"]
+			id: "2B203810B76A8C0A"
+			subtitle: "{ftbquests.chapter.epilogue.quests10.subtitle}"
+			tasks: [
+				{
+					id: "026FE6916D4B44CC"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:sand"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 16.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["2B203810B76A8C0A"]
+			id: "5587D80342F8CAEE"
+			subtitle: "{ftbquests.chapter.epilogue.quests11.subtitle}"
+			tasks: [
+				{
+					id: "700A495536DAB32A"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:framed_glass"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 16.5d
+			y: -16.5d
+		}
+		{
+			dependencies: ["002A7969EC03C1EC"]
+			description: [
+				"{ftbquests.chapter.epilogue.quests12.description0}"
+				""
+				"{ftbquests.chapter.epilogue.quests12.description2}"
+				""
+				"{ftbquests.chapter.epilogue.quests12.description4}"
+			]
+			id: "7ACC286C8696BEF7"
+			subtitle: "{ftbquests.chapter.epilogue.quests12.subtitle}"
+			tasks: [
+				{
+					id: "17F66931EDF0C439"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:gold"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -16.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["7ACC286C8696BEF7"]
+			description: [
+				"{ftbquests.chapter.epilogue.quests13.description0}"
+				""
+				"{ftbquests.chapter.epilogue.quests13.description2}"
+				""
+				"{ftbquests.chapter.epilogue.quests13.description4}"
+				""
+				"{ftbquests.chapter.epilogue.quests13.description6}"
+				""
+				"{ftbquests.chapter.epilogue.quests13.description8}"
+			]
+			id: "7281437657B6287F"
+			subtitle: "{ftbquests.chapter.epilogue.quests13.subtitle}"
+			tasks: [
+				{
+					id: "63944A2B242EE21A"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:diamond"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -16.5d
+			y: -19.5d
+		}
+		{
+			dependencies: [
+				"7281437657B6287F"
+				"5C757553EC9D4B75"
+				"01AA908CE3006E6A"
+			]
+			id: "6762D7F87F3F59F3"
+			subtitle: "{ftbquests.chapter.epilogue.quests14.subtitle}"
+			tasks: [
+				{
+					id: "3CA9C04FD6FAE1DF"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:netherite"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -18.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["7ACC286C8696BEF7"]
+			id: "01AA908CE3006E6A"
+			subtitle: "{ftbquests.chapter.epilogue.quests15.subtitle}"
+			tasks: [
+				{
+					id: "7AB152441C107019"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:emerald"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -16.5d
+			y: -16.5d
+		}
+		{
+			dependencies: ["43D0F0BE8749A33C"]
+			id: "30652DFC68BE93B2"
+			subtitle: "{ftbquests.chapter.epilogue.quests16.subtitle}"
+			tasks: [
+				{
+					id: "2E53EEA390CE1FEE"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:amethyst"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -19.5d
+			y: -19.5d
+		}
+		{
+			dependencies: ["30652DFC68BE93B2"]
+			id: "1644EB18E1A28B48"
+			tasks: [
+				{
+					id: "4E4F85E651395AD6"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:quartz"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -20.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["1644EB18E1A28B48"]
+			id: "5C757553EC9D4B75"
+			tasks: [
+				{
+					id: "6CDFDD7C8343BFEF"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:redstone"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -19.5d
+			y: -16.5d
+		}
+		{
+			dependencies: ["7665244BC5744A0A"]
+			id: "2F9E165A7643EC15"
+			subtitle: "{ftbquests.chapter.epilogue.quests19.subtitle}"
+			tasks: [
+				{
+					id: "1116E43D9206E410"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:blue_ice"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 18.0d
+			y: -20.0d
+		}
+		{
+			dependencies: ["3CCEB1500AFFD218"]
+			id: "1C30A2D6BD191C6A"
+			subtitle: "{ftbquests.chapter.epilogue.quests20.subtitle}"
+			tasks: [
+				{
+					id: "2C7CB2064CECB691"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:glowstone"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 18.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"59AC01EE88361B2A"
+				"58EF68AEA9983F39"
+			]
+			description: ["{ftbquests.chapter.epilogue.quests21.description}"]
+			id: "5A411EC4C3F730AF"
+			subtitle: "{ftbquests.chapter.epilogue.quests21.subtitle}"
+			tasks: [
+				{
+					id: "2F417E2FA840DF1F"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:precision_mechanism"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -18.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0999064FC6C4C5FE"]
+			id: "58EF68AEA9983F39"
+			tasks: [
+				{
+					id: "0C5CF94494F73E05"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:sturdy_sheet"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -16.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4AF48E980CCBCE3B"]
+			id: "1B5288FD0602ECDC"
+			tasks: [
+				{
+					id: "138F32B5080A595A"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:rose_quartz"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -19.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1B5288FD0602ECDC"]
+			id: "7B35DC5287E45E32"
+			tasks: [
+				{
+					id: "31B221A191BE5EDE"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:electron_tube"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -20.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7B35DC5287E45E32"]
+			id: "59AC01EE88361B2A"
+			tasks: [
+				{
+					id: "1C34029F3E82006B"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:train_track"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -19.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1AF61723122CD57F"]
+			description: ["{ftbquests.chapter.epilogue.quests26.description}"]
+			id: "4AA110E53E446F07"
+			subtitle: "{ftbquests.chapter.epilogue.quests26.subtitle}"
+			tasks: [
+				{
+					id: "5095457D8E4B9A4A"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:honey"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 20.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4AA110E53E446F07"]
+			id: "3CCEB1500AFFD218"
+			tasks: [
+				{
+					id: "232E71752926B165"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:sea_lantern"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 19.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6762D7F87F3F59F3"]
+			id: "4AF48E980CCBCE3B"
+			tasks: [
+				{
+					id: "145CBB1E966FC57C"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:andesite_alloy"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -18.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7D825E2854279E2C"]
+			id: "0999064FC6C4C5FE"
+			tasks: [
+				{
+					id: "2B055B4AC444B04D"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:brass"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2B203810B76A8C0A"]
+			id: "7665244BC5744A0A"
+			subtitle: "{ftbquests.chapter.epilogue.quests30.subtitle}"
+			tasks: [
+				{
+					id: "4E449E0F397979F5"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:red_sand"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 16.5d
+			y: -19.5d
+		}
+		{
+			dependencies: ["4AF48E980CCBCE3B"]
+			id: "7D825E2854279E2C"
+			tasks: [
+				{
+					id: "6893B960970E8F8D"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:zinc"
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -16.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6669529B330258FB"]
+			id: "7076B3EE15B33C23"
+			subtitle: "{ftbquests.chapter.epilogue.quests32.subtitle}"
+			tasks: [
+				{
+					id: "749E4B52142E3EAF"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:end_crystal"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["5A411EC4C3F730AF"]
+			description: [
+				"{ftbquests.chapter.epilogue.quests33.description0}"
+				""
+				"{ftbquests.chapter.epilogue.quests33.description2}"
+				""
+				"{ftbquests.chapter.epilogue.quests33.description4}"
+				""
+				"{ftbquests.chapter.epilogue.quests33.description6}"
+				""
+				"{ftbquests.chapter.epilogue.quests33.description8}"
+				""
+				"{ftbquests.chapter.epilogue.quests33.description10}"
+				""
+				"{ftbquests.chapter.epilogue.quests33.description12}"
+				""
+				"{ftbquests.chapter.epilogue.quests33.description14}"
+			]
+			id: "2E964E3859C482A9"
+			rewards: [
+				{
+					count: 1024
+					id: "58741798889AF961"
+					item: "minecraft:netherite_block"
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.epilogue.quests33.subtitle}"
+			tasks: [
+				{
+					id: "33FCC4E63EFB1237"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:chocolate"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -18.0d
+			y: 16.5d
+		}
+		{
+			dependencies: ["2E964E3859C482A9"]
+			description: ["{ftbquests.chapter.epilogue.quests34.description}"]
+			id: "6669529B330258FB"
+			subtitle: "{ftbquests.chapter.epilogue.quests34.subtitle}"
+			tasks: [
+				{
+					id: "5CE15E7D6ED67BF3"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:builders_tea"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -18.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["63BBAEF6C31F1C1D"]
+			id: "0BCC4658B1525915"
+			subtitle: "{ftbquests.chapter.epilogue.quests35.subtitle}"
+			tasks: [
+				{
+					id: "2B2527CBAAB5A888"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:ender_pearl"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 18.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"5587D80342F8CAEE"
+				"2F9E165A7643EC15"
+			]
+			description: ["{ftbquests.chapter.epilogue.quests36.description}"]
+			id: "63BBAEF6C31F1C1D"
+			subtitle: "{ftbquests.chapter.epilogue.quests36.subtitle}"
+			tasks: [
+				{
+					id: "495BF0CFC9BA5E73"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:tinted_glass"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 18.0d
+			y: -16.0d
+		}
+		{
+			dependencies: ["123D0E0F69B73A88"]
+			id: "0E7069A0CF461FAF"
+			subtitle: "{ftbquests.chapter.epilogue.quests37.subtitle}"
+			tasks: [
+				{
+					id: "4F8370680B7192C9"
+					item: "kubejs:final_sword"
+					type: "item"
+				}
+				{
+					id: "4FE5862CECE32A8A"
+					item: "kubejs:final_pickaxe"
+					type: "item"
+				}
+				{
+					id: "2700AE63E1262479"
+					item: "kubejs:final_axe"
+					type: "item"
+				}
+				{
+					id: "7AB11B0CE29F8EA8"
+					item: "kubejs:final_shovel"
+					type: "item"
+				}
+				{
+					id: "7DF5B623D8502F9F"
+					item: "kubejs:final_hoe"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.epilogue.quests37.title}"
+			x: -4.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["123D0E0F69B73A88"]
+			description: [""]
+			id: "6EA37B17D3E8D6DC"
+			subtitle: "{ftbquests.chapter.epilogue.quests38.subtitle}"
+			tasks: [
+				{
+					id: "620DD50BF1826F19"
+					item: "kubejs:final_helmet"
+					type: "item"
+				}
+				{
+					id: "6CE7690C2492FA1D"
+					item: "kubejs:final_chestplate"
+					type: "item"
+				}
+				{
+					id: "16B1EB4D64821F4C"
+					item: "kubejs:final_leggings"
+					type: "item"
+				}
+				{
+					id: "741E93B7515E1A4A"
+					item: "kubejs:final_boots"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.epilogue.quests38.title}"
+			x: 4.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["123D0E0F69B73A88"]
+			description: ["{ftbquests.chapter.epilogue.quests39.description}"]
+			id: "2E104733BBA290DB"
+			subtitle: "{ftbquests.chapter.epilogue.quests39.subtitle}"
+			tasks: [
+				{
+					id: "65B3667242BB3F88"
+					item: "upgradednetherite_ultimate:ultimate_upgraded_netherite_ingot"
+					type: "item"
+				}
+				{
+					id: "3D93A01AC0D7C1C6"
+					item: "upgradednetherite_creative:creative_upgraded_netherite_ingot"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.epilogue.quests39.title}"
+			x: 0.0d
+			y: -9.0d
+		}
+		{
+			dependencies: ["1544915BBE4467E4"]
+			id: "4F8E459413F29159"
+			subtitle: "{ftbquests.chapter.epilogue.quests40.subtitle}"
+			tasks: [
+				{
+					id: "5B27C6D23E410D06"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_black"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "19A95F31F5CB4706"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_white"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "47815AB5F1AA1752"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_pink"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "28C5A25B97C19758"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_orange"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "1C7B3DD61250CA13"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_red"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "7D261CA53FD9122B"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_gray"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "289804B6869D2FAA"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_yellow"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "6DBD52CA265FFCEF"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_brown"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "0A89AFDE8C14CC3D"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_cyan"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "550C7408B785105F"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_green"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "5747E5F187A8FAD5"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_light_gray"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "42878BA1F3E120BD"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_light_blue"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "25A4A1F32B62B15F"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_lime"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "096292091963949D"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_blue"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "40BF2F4EC2AE4675"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_magenta"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "40AB007036CB0AD1"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:concrete_purple"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.epilogue.quests40.title}"
+			x: 9.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["1C30A2D6BD191C6A"]
+			description: ["{ftbquests.chapter.epilogue.quests41.description}"]
+			id: "41220EA822DD6B9F"
+			subtitle: "{ftbquests.chapter.epilogue.quests41.subtitle}"
+			tasks: [
+				{
+					id: "1BA4A0456CC76355"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:soul_sand"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 18.0d
+			y: 16.5d
+		}
+		{
+			dependencies: ["41220EA822DD6B9F"]
+			id: "1544915BBE4467E4"
+			subtitle: "{ftbquests.chapter.epilogue.quests42.subtitle}"
+			tasks: [
+				{
+					id: "04BA94F6C3CD6E88"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:soul_soil"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 18.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["0BCC4658B1525915"]
+			description: ["{ftbquests.chapter.epilogue.quests43.description}"]
+			id: "1AF61723122CD57F"
+			subtitle: "{ftbquests.chapter.epilogue.quests43.subtitle}"
+			tasks: [
+				{
+					id: "2E24AB8C13DA10E2"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:gunpowder"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 19.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7281437657B6287F"]
+			description: ["{ftbquests.chapter.epilogue.quests44.description}"]
+			id: "43D0F0BE8749A33C"
+			subtitle: "{ftbquests.chapter.epilogue.quests44.subtitle}"
+			tasks: [
+				{
+					id: "32C29D313FDAB36C"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:lapis_lazuli"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -18.0d
+			y: -20.0d
+		}
+		{
+			dependencies: ["7076B3EE15B33C23"]
+			id: "48F7AA720F364C68"
+			subtitle: "{ftbquests.chapter.epilogue.quests45.subtitle}"
+			tasks: [
+				{
+					id: "6B3E71A642D817B7"
+					item: "kubejs:potion_base_singularity"
+					type: "item"
+				}
+			]
+			x: -4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4F8E459413F29159"]
+			id: "16EFBAF2CDCCCA8C"
+			subtitle: "{ftbquests.chapter.epilogue.quests46.subtitle}"
+			tasks: [
+				{
+					id: "74929691DDBBDC17"
+					item: "kubejs:blaze_cake_singularity"
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: 4.5d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.epilogue.subtitle}"]
+	title: "{ftbquests.chapter.epilogue.title}"
+}

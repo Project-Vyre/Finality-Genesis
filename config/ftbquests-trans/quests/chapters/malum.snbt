@@ -1,0 +1,158 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "malum"
+	group: "6855847200ADBE3A"
+	icon: {
+		Count: 1b
+		id: "malum:tyrving"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "483F9D15A7662A70"
+	order_index: 5
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: ["{ftbquests.chapter.malum.quests0.description}"]
+			hide: true
+			icon: "malum:encyclopedia_arcana"
+			id: "664F0A4CD1F442F9"
+			progression_mode: "linear"
+			rewards: [
+				{
+					count: 9
+					id: "532DBCAE0F13EFD8"
+					item: "create:experience_nugget"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1A9EA4A625F030C7"
+					table_id: 7159138545964995551L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "4608A913A52063B1"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.malum.quests0.subtitle}"
+			tasks: [
+				{
+					id: "0FBE2DA967A39E51"
+					item: "malum:encyclopedia_arcana"
+					type: "item"
+				}
+				{
+					id: "10261CC39D834E39"
+					item: {
+						Count: 1b
+						id: "malum:crude_scythe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.malum.quests0.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["09BC57F448E77F7A"]
+			id: "010F65DAC98B3D33"
+			subtitle: "{ftbquests.chapter.malum.quests1.subtitle}"
+			tasks: [
+				{
+					id: "7E76B9C729ED5130"
+					item: "malum:spirit_pouch"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.malum.quests1.title}"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["664F0A4CD1F442F9"]
+			description: [
+				"{ftbquests.chapter.malum.quests2.description0}"
+				""
+				"{ftbquests.chapter.malum.quests2.description2}"
+			]
+			icon: "malum:spirit_altar"
+			id: "09BC57F448E77F7A"
+			subtitle: "{ftbquests.chapter.malum.quests2.subtitle}"
+			tasks: [
+				{
+					id: "03690DCDA1A9CB3E"
+					item: "malum:processed_soulstone"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "780564B2E09879DF"
+					item: "malum:runewood_planks"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "51290C3B536361CD"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					id: "3F4BFFFAC5E17DD2"
+					item: "malum:spirit_altar"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.malum.quests2.title}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4D7E41AD90C70979"]
+			id: "3F0A1A756E147C0F"
+			subtitle: "{ftbquests.chapter.malum.quests3.subtitle}"
+			tasks: [
+				{
+					id: "3B006EEDB4547588"
+					item: {
+						Count: 1b
+						id: "malum:tyrving"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.malum.quests3.title}"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["010F65DAC98B3D33"]
+			id: "4D7E41AD90C70979"
+			tasks: [
+				{
+					id: "4AE32255865B4512"
+					item: "malum:soul_stained_steel_ingot"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.5d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.malum.subtitle}"]
+	title: "{ftbquests.chapter.malum.title}"
+}

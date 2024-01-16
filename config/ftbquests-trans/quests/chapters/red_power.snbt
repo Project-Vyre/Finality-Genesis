@@ -1,0 +1,420 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "red_power"
+	group: "668E3EA3A7A91B79"
+	icon: {
+		Count: 1b
+		id: "red_power:wrench"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "5FAB2BFC967313BB"
+	images: [
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 64.0d
+			hover: [ ]
+			image: "minecraft:textures/gui/presets/end_bg.png"
+			rotation: 0.0d
+			width: 64.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 5
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["65FC712C5D7E312D"]
+			description: [
+				"{ftbquests.chapter.red_power.quests0.description0}"
+				""
+				"{ftbquests.chapter.red_power.quests0.description2}"
+				""
+				"{ftbquests.chapter.red_power.quests0.description4}"
+				""
+				"{ftbquests.chapter.red_power.quests0.description6}"
+			]
+			icon: {
+				Count: 1b
+				id: "red_power:wrench"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "6DDE87592B21E322"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "038E3BAFE0BF8953"
+					table_id: 9193491821639565519L
+					type: "random"
+				}
+				{
+					id: "0F3BE613F43BFADB"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+			subtitle: "{ftbquests.chapter.red_power.quests0.subtitle}"
+			tasks: [
+				{
+					id: "34E1901C03C88DC6"
+					item: {
+						Count: 1b
+						id: "red_power:wrench"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "5D9B07860DDA0017"
+					item: {
+						Count: 1b
+						id: "red_power:cutters"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "35763E4339ECB43D"
+					item: {
+						Count: 1b
+						id: "red_power:safety_glasses"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.red_power.quests0.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6DDE87592B21E322"]
+			id: "5F24D7AF78526BBE"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0700818FB086FC2B"
+					table_id: 9193491821639565519L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1EAD28EE7ACF5D76"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.red_power.quests1.subtitle}"
+			tasks: [
+				{
+					id: "3CF605D0CB48FB40"
+					item: "red_power:reader_node"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.red_power.quests1.title}"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2FB1B406A702111C"]
+			id: "462922C052690E0D"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "56C166D70DE9145C"
+					table_id: 9193491821639565519L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "2E04F8BBD2A2D5E8"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.red_power.quests2.subtitle}"
+			tasks: [
+				{
+					id: "2478BBA76ADE606D"
+					item: "red_power:recorder_node"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.red_power.quests2.title}"
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["5F24D7AF78526BBE"]
+			id: "2FB1B406A702111C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5525DEDBADE5DDFA"
+					table_id: 9193491821639565519L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "335081CE8A751675"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.red_power.quests3.subtitle}"
+			tasks: [
+				{
+					id: "5E9F78086BC6024E"
+					item: "red_power:node"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.red_power.quests3.title}"
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["6DDE87592B21E322"]
+			id: "37F6A5853B983CFB"
+			subtitle: "{ftbquests.chapter.red_power.quests4.subtitle}"
+			tasks: [
+				{
+					id: "45BD60E734E10A82"
+					item: "red_power:wires"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.red_power.quests4.title}"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["37F6A5853B983CFB"]
+			description: ["{ftbquests.chapter.red_power.quests5.description}"]
+			id: "37B949C33CA89529"
+			subtitle: "{ftbquests.chapter.red_power.quests5.subtitle}"
+			tasks: [
+				{
+					id: "22BA56A485D8C1B1"
+					item: "red_power:amethyst_wires"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.red_power.quests5.title}"
+			x: 0.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["37B949C33CA89529"]
+			id: "63F1A995AF215AFA"
+			subtitle: "{ftbquests.chapter.red_power.quests6.subtitle}"
+			tasks: [
+				{
+					id: "784B49658CD93C81"
+					item: "red_power:ender_wires"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["63F1A995AF215AFA"]
+			id: "6895635F5A0E5904"
+			subtitle: "{ftbquests.chapter.red_power.quests7.subtitle}"
+			tasks: [
+				{
+					id: "68DB51F7FA648B58"
+					item: "red_power:echo_wires"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["6895635F5A0E5904"]
+			id: "704A94D5F3928D93"
+			subtitle: "{ftbquests.chapter.red_power.quests8.subtitle}"
+			tasks: [
+				{
+					id: "54031B5D2CD6CACC"
+					item: "red_power:power_wires"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["462922C052690E0D"]
+			id: "20B9763AF8E4DC5B"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3CD00BC9D56D16C7"
+					table_id: 9193491821639565519L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "6B32E82B2B4DAA55"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.red_power.quests9.subtitle}"
+			tasks: [
+				{
+					id: "4DCCCB5258F401E9"
+					item: "red_power:amplifier_node"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.red_power.quests9.title}"
+			x: 0.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["6DDE87592B21E322"]
+			id: "4516E8DFC9E7A4AE"
+			subtitle: "{ftbquests.chapter.red_power.quests10.subtitle}"
+			tasks: [
+				{
+					id: "32FB25D45CCBA92D"
+					item: "red_power:lever"
+					type: "item"
+				}
+				{
+					id: "70D2BBFAF36E6DBF"
+					item: "red_power:fusebox"
+					type: "item"
+				}
+				{
+					id: "58AF2BD2A31C2771"
+					item: "red_power:transformer"
+					type: "item"
+				}
+				{
+					id: "679420D7FC63D42C"
+					item: "red_power:light_switch"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.red_power.quests10.title}"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2FB1B406A702111C"]
+			id: "18C36983EFF4D5E5"
+			subtitle: "{ftbquests.chapter.red_power.quests11.subtitle}"
+			tasks: [
+				{
+					id: "43D47C8083ACB4F7"
+					item: "red_power:core"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.red_power.quests11.title}"
+			x: 1.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["6DDE87592B21E322"]
+			description: ["{ftbquests.chapter.red_power.quests12.description}"]
+			id: "2BCFD0BA96DEF5CE"
+			subtitle: "{ftbquests.chapter.red_power.quests12.subtitle}"
+			tasks: [
+				{
+					id: "2F62D101D383B85A"
+					item: "red_power:timer"
+					type: "item"
+				}
+				{
+					id: "32230F5A5031A6C4"
+					item: "red_power:autonomous_timer"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.red_power.quests12.title}"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2FB1B406A702111C"]
+			id: "233E913BECDA4CAD"
+			subtitle: "{ftbquests.chapter.red_power.quests13.subtitle}"
+			tasks: [
+				{
+					id: "056EF07FDA5E85DB"
+					item: "red_power:insulator"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.red_power.quests13.title}"
+			x: -1.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["462922C052690E0D"]
+			id: "482C246D994B39E8"
+			subtitle: "{ftbquests.chapter.red_power.quests14.subtitle}"
+			tasks: [
+				{
+					id: "105FC4C3AC2829F1"
+					item: "red_power:receiver"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.red_power.quests14.title}"
+			x: -1.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["5F24D7AF78526BBE"]
+			id: "62AD9A648D4B0944"
+			rewards: [
+				{
+					id: "32ADBBA7CD297055"
+					item: {
+						Count: 1b
+						id: "extendedcrafting:singularity"
+						tag: {
+							Id: "extendedcrafting:redstone"
+						}
+					}
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.red_power.quests15.subtitle}"
+			tasks: [
+				{
+					id: "3B00C99EEC1CBB35"
+					item: "red_power:transmitter"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.red_power.quests15.title}"
+			x: -1.5d
+			y: 2.0d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.red_power.subtitle}"]
+	title: "{ftbquests.chapter.red_power.title}"
+}

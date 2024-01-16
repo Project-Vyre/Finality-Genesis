@@ -1,0 +1,392 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "caupona"
+	group: "6855847200ADBE3A"
+	icon: "caupona:clay_cistern"
+	id: "20BAC72CDA50240E"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["03F919758AA7E318"]
+			description: [
+				"{ftbquests.chapter.caupona.quests0.description0}"
+				""
+				"{ftbquests.chapter.caupona.quests0.description2}"
+				""
+				"{ftbquests.chapter.caupona.quests0.description4}"
+			]
+			hide: true
+			icon: {
+				Count: 1b
+				id: "patchouli:guide_book"
+				tag: {
+					"patchouli:book": "caupona:book"
+				}
+			}
+			id: "0A9BA7131745E23B"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "30F774FF86F9B1BC"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.caupona.quests0.subtitle}"
+			tasks: [
+				{
+					id: "0C80D796A56B28C5"
+					item: {
+						Count: 1b
+						id: "patchouli:guide_book"
+						tag: {
+							"patchouli:book": "caupona:book"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1BB48B03D7917DB8"
+					title: "{ftbquests.chapter.caupona.quests0.tasks1.title}"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0A9BA7131745E23B"]
+			icon: "caupona:portable_brazier"
+			id: "1A361DEF3CEBB1E0"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2D60DF9C3DE8FB90"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "42F87102266B7359"
+					type: "xp"
+					xp: 250
+				}
+			]
+			subtitle: "{ftbquests.chapter.caupona.quests1.subtitle}"
+			tasks: [
+				{
+					id: "3905C3A037489A76"
+					item: "caupona:clay_portable_brazier"
+					type: "item"
+				}
+				{
+					id: "005280F7C802C394"
+					item: "caupona:portable_brazier"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.caupona.quests1.title}"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0A9BA7131745E23B"]
+			description: [
+				"{ftbquests.chapter.caupona.quests2.description0}"
+				""
+				"{ftbquests.chapter.caupona.quests2.description2}"
+				""
+				"{ftbquests.chapter.caupona.quests2.description4}"
+				"{@pagebreak}"
+				"{ftbquests.chapter.caupona.quests2.description6}"
+				""
+				"{ftbquests.chapter.caupona.quests2.description8}"
+				"{ftbquests.chapter.caupona.quests2.description9}"
+				""
+				"{ftbquests.chapter.caupona.quests2.description11}"
+			]
+			icon: "caupona:stew_pot"
+			id: "6C36D237085C8503"
+			rewards: [
+				{
+					id: "47B6370C2142FBA4"
+					type: "xp"
+					xp: 250
+				}
+				{
+					id: "368F5FB64BE3D963"
+					item: "caupona:walnut_sapling"
+					type: "item"
+				}
+				{
+					id: "48D524422C23B03E"
+					item: "caupona:fig_sapling"
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.caupona.quests2.subtitle}"
+			tasks: [
+				{
+					id: "7D855A209DD35F19"
+					item: "caupona:clay_cistern"
+					type: "item"
+				}
+				{
+					id: "30C247F590C87CDF"
+					item: "caupona:stew_pot"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.caupona.quests2.title}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"6C36D237085C8503"
+				"4A6B4230AA91FA05"
+			]
+			description: [
+				"{ftbquests.chapter.caupona.quests3.description0}"
+				""
+				"{ftbquests.chapter.caupona.quests3.description2}"
+				""
+				"{ftbquests.chapter.caupona.quests3.description4}"
+				""
+				"{ftbquests.chapter.caupona.quests3.description6}"
+				""
+				"{ftbquests.chapter.caupona.quests3.description8}"
+			]
+			id: "5B5E7384E4E458C1"
+			rewards: [
+				{
+					id: "2B5781C507A5B8BA"
+					type: "xp"
+					xp: 500
+				}
+				{
+					id: "3D38FF1AC9EE12D4"
+					item: "caupona:wolfberry_sapling"
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.caupona.quests3.subtitle}"
+			tasks: [
+				{
+					id: "76B30065335688AA"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "caupona:stoves"
+						}
+					}
+					title: "{ftbquests.chapter.caupona.quests3.tasks0.title}"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.caupona.quests3.title}"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6C36D237085C8503"]
+			description: [
+				"{ftbquests.chapter.caupona.quests4.description0}"
+				""
+				"{ftbquests.chapter.caupona.quests4.description2}"
+				""
+				"{ftbquests.chapter.caupona.quests4.description4}"
+			]
+			id: "0F86CC83218D8B9B"
+			rewards: [
+				{
+					id: "7A69CC21F929A639"
+					type: "xp"
+					xp: 500
+				}
+			]
+			subtitle: "{ftbquests.chapter.caupona.quests4.subtitle}"
+			tasks: [
+				{
+					id: "506273568993CF4B"
+					item: "caupona:brick_counter_with_dolium"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.caupona.quests4.title}"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0A9BA7131745E23B"]
+			description: [
+				"{ftbquests.chapter.caupona.quests5.description0}"
+				""
+				"{ftbquests.chapter.caupona.quests5.description2}"
+			]
+			id: "4A6B4230AA91FA05"
+			rewards: [
+				{
+					id: "3B32C65A3CB1DA73"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3AD03715D0C5E6C9"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.caupona.quests5.subtitle}"
+			tasks: [
+				{
+					id: "33668B8B89A74DCF"
+					item: "caupona:stone_griddle"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.caupona.quests5.title}"
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4A6B4230AA91FA05"]
+			id: "10D8A77F765401E6"
+			rewards: [
+				{
+					id: "4AC940803486860A"
+					type: "xp"
+					xp: 500
+				}
+				{
+					exclude_from_claim_all: true
+					id: "14882CC14BFAD930"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.caupona.quests6.subtitle}"
+			tasks: [
+				{
+					id: "7EF3BDBD522B133A"
+					item: "caupona:copper_frying_pan"
+					type: "item"
+				}
+				{
+					id: "1A89AEEF1AF3B78C"
+					item: "caupona:iron_frying_pan"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.caupona.quests6.title}"
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0F86CC83218D8B9B"]
+			description: [
+				"{ftbquests.chapter.caupona.quests7.description0}"
+				""
+				"{ftbquests.chapter.caupona.quests7.description2}"
+				""
+				"{ftbquests.chapter.caupona.quests7.description4}"
+			]
+			id: "5959628CE2B56607"
+			rewards: [
+				{
+					id: "633FF02204B52123"
+					type: "xp"
+					xp: 250
+				}
+			]
+			subtitle: "{ftbquests.chapter.caupona.quests7.subtitle}"
+			tasks: [
+				{
+					id: "01BEA6429836012F"
+					item: {
+						Count: 1b
+						id: "caupona:gravy_boat"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.caupona.quests7.title}"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5B5E7384E4E458C1"]
+			description: [
+				"{ftbquests.chapter.caupona.quests8.description0}"
+				""
+				"{ftbquests.chapter.caupona.quests8.description2}"
+			]
+			id: "74BBBB57E59C59A0"
+			rewards: [
+				{
+					id: "2ADA4D1195BC5748"
+					type: "xp"
+					xp: 250
+				}
+			]
+			subtitle: "{ftbquests.chapter.caupona.quests8.subtitle}"
+			tasks: [
+				{
+					id: "49874673B4FF21C4"
+					item: "caupona:brick_chimney_flue"
+					type: "item"
+				}
+				{
+					id: "7338457164AC24D6"
+					item: "caupona:brick_chimney_pot"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.caupona.quests8.title}"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5B5E7384E4E458C1"]
+			description: ["{ftbquests.chapter.caupona.quests9.description}"]
+			id: "420AFFB85BEEBACA"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "653AFD7D75CB379F"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "459E493D9C8E4FF4"
+					type: "xp"
+					xp: 500
+				}
+			]
+			subtitle: "{ftbquests.chapter.caupona.quests9.subtitle}"
+			tasks: [
+				{
+					id: "5BC2426ECBA3B271"
+					item: "caupona:brick_hypocaust_firebox"
+					type: "item"
+				}
+				{
+					id: "0840602FDDE5251E"
+					item: "caupona:brick_caliduct"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.caupona.quests9.title}"
+			x: -1.5d
+			y: 4.5d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.caupona.subtitle}"]
+	title: "{ftbquests.chapter.caupona.title}"
+}

@@ -1,0 +1,25 @@
+{
+	icon: "create:builders_tea"
+	id: "51090FF2226F425D"
+	loot_size: 1
+	order_index: 16
+	rewards: [
+		{
+			item: "create:builders_tea"
+		}
+		{
+			item: "delightful:matcha_latte"
+		}
+		{
+			item: "delightful:berry_matcha_latte"
+		}
+		{
+			item: "createcafe:lemon_milk_tea"
+		}
+		{
+			item: "fruittrees:honey_pomelo_tea"
+		}
+	]
+	title: "{ftbquests.reward_tables.drinks_shop_t1.title}"
+	use_title: true
+}

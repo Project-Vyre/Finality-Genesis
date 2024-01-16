@@ -1,0 +1,34 @@
+{
+	icon: {
+		Count: 1b
+		id: "extendedcrafting:singularity"
+		tag: {
+			Id: "extendedcrafting:iron"
+		}
+	}
+	id: "0BEFBCE799303954"
+	loot_size: 1
+	order_index: 21
+	rewards: [
+		{
+			count: 16
+			item: "kubejs:copper_coin"
+		}
+		{
+			count: 32
+			item: "kubejs:copper_coin"
+			weight: 2.0f
+		}
+		{
+			count: 4
+			item: "kubejs:iron_coin"
+			weight: 0.4f
+		}
+		{
+			count: 16
+			item: "kubejs:iron_coin"
+			weight: 0.3f
+		}
+	]
+	title: "{ftbquests.reward_tables.iron_singularity_pool.title}"
+}

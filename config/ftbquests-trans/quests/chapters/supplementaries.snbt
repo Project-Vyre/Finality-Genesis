@@ -1,0 +1,491 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "supplementaries"
+	group: "4B44486C4CFAE9FB"
+	icon: "supplementaries:globe"
+	id: "381F32629FB523CD"
+	images: [
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 64.0d
+			hover: [ ]
+			image: "minecraft:textures/gui/presets/end_bg.png"
+			rotation: 0.0d
+			width: 64.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"{ftbquests.chapter.supplementaries.quests0.description0}"
+				""
+				"{ftbquests.chapter.supplementaries.quests0.description2}"
+				""
+				"{ftbquests.chapter.supplementaries.quests0.description4}"
+				"{ftbquests.chapter.supplementaries.quests0.description5}"
+				"{ftbquests.chapter.supplementaries.quests0.description6}"
+				"{ftbquests.chapter.supplementaries.quests0.description7}"
+			]
+			hide: true
+			id: "4A2CFDD09FF7A975"
+			rewards: [
+				{
+					count: 16
+					id: "6894CAF8AC0FA0DE"
+					item: "supplementaries:sconce_soul"
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.supplementaries.quests0.subtitle}"
+			tasks: [
+				{
+					count: 16L
+					id: "374445A1897F9DC2"
+					item: "supplementaries:sconce"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.supplementaries.quests0.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			id: "2DC6790BD0A55A6E"
+			rewards: [
+				{
+					count: 64
+					id: "6348AB39274C26B0"
+					item: "quark:gold_bars"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "199C70FC86868DF7"
+					item: "minecraft:iron_bars"
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.supplementaries.quests1.subtitle}"
+			tasks: [
+				{
+					id: "0C86F593220A6BD6"
+					item: "supplementaries:gold_gate"
+					type: "item"
+				}
+				{
+					id: "771E07F876E9D84A"
+					item: "supplementaries:iron_gate"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.supplementaries.quests1.title}"
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			description: [
+				"{ftbquests.chapter.supplementaries.quests2.description0}"
+				""
+				"{ftbquests.chapter.supplementaries.quests2.description2}"
+				""
+				"{ftbquests.chapter.supplementaries.quests2.description4}"
+				""
+				"{ftbquests.chapter.supplementaries.quests2.description6}"
+			]
+			id: "79560D87C0BCD280"
+			subtitle: "{ftbquests.chapter.supplementaries.quests2.subtitle}"
+			tasks: [
+				{
+					id: "2D4E2B9AE870E115"
+					item: "supplementaries:netherite_door"
+					type: "item"
+				}
+				{
+					id: "2BA7AC969BB99939"
+					item: "supplementaries:gold_door"
+					type: "item"
+				}
+				{
+					id: "27031331138D5973"
+					item: "supplementaries:silver_door"
+					type: "item"
+				}
+				{
+					id: "0D1F7DF4EEA1B425"
+					item: "supplementaries:lead_door"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.supplementaries.quests2.title}"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			description: ["{ftbquests.chapter.supplementaries.quests3.description}"]
+			id: "4D7D29F3E7D7AC0D"
+			subtitle: "{ftbquests.chapter.supplementaries.quests3.subtitle}"
+			tasks: [
+				{
+					id: "2739559FD5F3E922"
+					item: "supplementaries:sconce_lever"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.supplementaries.quests3.title}"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			id: "1FC391DB2B32DCA3"
+			subtitle: "{ftbquests.chapter.supplementaries.quests4.subtitle}"
+			tasks: [
+				{
+					id: "4CD7945E95E0E618"
+					item: "supplementaries:checker_block"
+					type: "item"
+				}
+				{
+					id: "1829059B434F2E93"
+					item: "supplementaries:stone_tile"
+					type: "item"
+				}
+				{
+					id: "39EC06C14BA182FD"
+					item: "supplementaries:blackstone_tile"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.supplementaries.quests4.title}"
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			id: "13B519BF572FDE45"
+			subtitle: "{ftbquests.chapter.supplementaries.quests5.subtitle}"
+			tasks: [
+				{
+					id: "677A7F9D4EAF0219"
+					item: "supplementaries:stone_lamp"
+					type: "item"
+				}
+				{
+					id: "60C2AC1F3D70DDE7"
+					item: "supplementaries:blackstone_lamp"
+					type: "item"
+				}
+				{
+					id: "213BF27B7580699D"
+					item: "supplementaries:deepslate_lamp"
+					type: "item"
+				}
+				{
+					id: "5DA8B52557889EE0"
+					item: "supplementaries:end_stone_lamp"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.supplementaries.quests5.title}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["79560D87C0BCD280"]
+			description: ["{ftbquests.chapter.supplementaries.quests6.description}"]
+			id: "0090CBE54F86A72F"
+			subtitle: "{ftbquests.chapter.supplementaries.quests6.subtitle}"
+			tasks: [
+				{
+					id: "2AC877DDE919D839"
+					item: "supplementaries:netherite_trapdoor"
+					type: "item"
+				}
+				{
+					id: "222D611B74E5FB73"
+					item: "supplementaries:gold_trapdoor"
+					type: "item"
+				}
+				{
+					id: "37AB041C931401AB"
+					item: "supplementaries:silver_trapdoor"
+					type: "item"
+				}
+				{
+					id: "69A122A0D0C5B87A"
+					item: "supplementaries:lead_trapdoor"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.supplementaries.quests6.title}"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			id: "6015E8BC02BDF285"
+			subtitle: "{ftbquests.chapter.supplementaries.quests7.subtitle}"
+			tasks: [
+				{
+					id: "3781EA2EAD053AEF"
+					item: "supplementaries:copper_lantern"
+					type: "item"
+				}
+				{
+					id: "5D70E8C49B3752A0"
+					item: "supplementaries:brass_lantern"
+					type: "item"
+				}
+				{
+					id: "6BB4E9732B371B47"
+					item: "supplementaries:crimson_lantern"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.supplementaries.quests7.title}"
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			description: ["{ftbquests.chapter.supplementaries.quests8.description}"]
+			id: "2E14DBAD40BFF1AD"
+			subtitle: "{ftbquests.chapter.supplementaries.quests8.subtitle}"
+			tasks: [
+				{
+					count: 9L
+					id: "4296B2F5A65FBDDE"
+					item: "create:framed_glass"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "4D2D6430A37DCD80"
+					item: "create:ornate_iron_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "4F18CE6450A6A4C0"
+					item: "create:oak_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "21E7BC2289774195"
+					item: "create:spruce_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "17DDF28D0238D604"
+					item: "create:birch_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "697D67091EC55331"
+					item: "create:jungle_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "2CC1BE7C6E405E60"
+					item: "create:acacia_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "2FC5F9B09D3E6D84"
+					item: "create:dark_oak_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "677E9E56686C3F4D"
+					item: "create:crimson_window"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "014AB88B75889CF8"
+					item: "create:warped_window"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.supplementaries.quests8.title}"
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4A2CFDD09FF7A975"]
+			id: "37E684B79EB69A62"
+			subtitle: "{ftbquests.chapter.supplementaries.quests9.subtitle}"
+			tasks: [
+				{
+					id: "4DB29FB044FF9824"
+					item: "supplementaries:clock_block"
+					type: "item"
+				}
+				{
+					id: "50BD208F85A3F4BE"
+					item: "supplementaries:hourglass"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.supplementaries.quests9.title}"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4D7D29F3E7D7AC0D"]
+			description: ["{ftbquests.chapter.supplementaries.quests10.description}"]
+			id: "51E52655B6A6B78A"
+			rewards: [
+				{
+					count: 9
+					id: "31349043EF7D0A7C"
+					item: "graveyard:dark_iron_block"
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.supplementaries.quests10.subtitle}"
+			tasks: [
+				{
+					id: "2BF1C78F5E339158"
+					item: "graveyard:corruption"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.supplementaries.quests10.title}"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "281A6A3463BB1060"
+			subtitle: "{ftbquests.chapter.supplementaries.quests11.subtitle}"
+			tasks: [
+				{
+					id: "4431D92442B6DAB5"
+					item: {
+						Count: 1b
+						id: "constructionwand:stone_wand"
+						tag: {
+							Damage: 0
+							wand_options: { }
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.supplementaries.quests11.title}"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["281A6A3463BB1060"]
+			id: "4E8C17251DC39728"
+			subtitle: "{ftbquests.chapter.supplementaries.quests12.subtitle}"
+			tasks: [
+				{
+					id: "35F3A473BBCABA8A"
+					item: {
+						Count: 1b
+						id: "constructionwand:iron_wand"
+						tag: {
+							Damage: 0
+							wand_options: { }
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4E8C17251DC39728"]
+			id: "6186017EA08BDE81"
+			subtitle: "{ftbquests.chapter.supplementaries.quests13.subtitle}"
+			tasks: [
+				{
+					id: "2C37999AAA82597D"
+					item: {
+						Count: 1b
+						id: "constructionwand:diamond_wand"
+						tag: {
+							Damage: 0
+							wand_options: { }
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6186017EA08BDE81"]
+			id: "5FF70921F5C85A3B"
+			subtitle: "{ftbquests.chapter.supplementaries.quests14.subtitle}"
+			tasks: [
+				{
+					id: "45681528ACBA6F9D"
+					item: {
+						Count: 1b
+						id: "constructionwand:infinity_wand"
+						tag: {
+							wand_options: { }
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["6186017EA08BDE81"]
+			id: "0D1D0BAC7C9E9EF0"
+			subtitle: "{ftbquests.chapter.supplementaries.quests15.subtitle}"
+			tasks: [
+				{
+					id: "7B7BCED43B30CF0E"
+					item: "constructionwand:core_destruction"
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6186017EA08BDE81"]
+			id: "796E0FC8ADCFE942"
+			subtitle: "{ftbquests.chapter.supplementaries.quests16.subtitle}"
+			tasks: [
+				{
+					id: "4B90F09B366E7706"
+					item: "constructionwand:core_angel"
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 6.0d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.supplementaries.subtitle}"]
+	title: "{ftbquests.chapter.supplementaries.title}"
+}

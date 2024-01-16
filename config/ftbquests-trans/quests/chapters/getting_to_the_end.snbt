@@ -1,0 +1,416 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "getting_to_the_end"
+	group: ""
+	icon: "minecraft:end_portal_frame"
+	id: "316C9BB1844BE86C"
+	images: [
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 144.0d
+			hover: [ ]
+			image: "minecraft:textures/gui/presets/end_bg.png"
+			rotation: 0.0d
+			width: 144.0d
+			x: 0.0d
+			y: 3.0d
+		}
+	]
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"4A691BB889286C89"
+				"4E9DB5E5DA145FB7"
+			]
+			hide: true
+			icon: "minecraft:end_portal_frame"
+			id: "34BBD9B70AE0AAB1"
+			shape: "octagon"
+			size: 2.5d
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests0.subtitle}"
+			tasks: [
+				{
+					dimension: "minecraft:the_end"
+					icon: "minecraft:end_stone"
+					id: "5098C9DA205BDE8A"
+					type: "dimension"
+				}
+			]
+			title: "{ftbquests.chapter.getting_to_the_end.quests0.title}"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "168D0120F150BC28"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests1.subtitle}"
+			tasks: [
+				{
+					id: "1D30C9F6ACAE3CF3"
+					item: {
+						Count: 1b
+						id: "endrem:black_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.getting_to_the_end.quests1.title}"
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "5AF53749F917D429"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests2.subtitle}"
+			tasks: [
+				{
+					id: "0540213F44030BB9"
+					item: {
+						Count: 1b
+						id: "endrem:cold_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "2E2C02E5BD9E21F7"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests3.subtitle}"
+			tasks: [
+				{
+					id: "0109D61CAE58079B"
+					item: {
+						Count: 1b
+						id: "endrem:corrupted_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "6C0BCC3A430B9FEB"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests4.subtitle}"
+			tasks: [
+				{
+					id: "15891D2C744D8AC0"
+					item: {
+						Count: 1b
+						id: "endrem:lost_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "58C3EE597C33E90D"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests5.subtitle}"
+			tasks: [
+				{
+					id: "19761F1D28E842C1"
+					item: {
+						Count: 1b
+						id: "endrem:nether_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "68BDA11046E98486"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests6.subtitle}"
+			tasks: [
+				{
+					id: "60F672CEB7CF7B50"
+					item: {
+						Count: 1b
+						id: "endrem:old_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "685B2504CF4E9E26"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests7.subtitle}"
+			tasks: [
+				{
+					id: "5EEC9A6676F1B84B"
+					item: {
+						Count: 1b
+						id: "endrem:rogue_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 2.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "65816DD85625C60E"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests8.subtitle}"
+			tasks: [
+				{
+					id: "0906B32D7A49EE41"
+					item: {
+						Count: 1b
+						id: "endrem:cursed_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "3262C302262A1AAC"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests9.subtitle}"
+			tasks: [
+				{
+					id: "6233B553452828BE"
+					item: {
+						Count: 1b
+						id: "endrem:evil_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: ["{ftbquests.chapter.getting_to_the_end.quests10.description}"]
+			hide: true
+			id: "1013541B6EC52CEF"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests10.subtitle}"
+			tasks: [
+				{
+					id: "76E62C364A2792E9"
+					item: {
+						Count: 1b
+						id: "endrem:guardian_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "66725960700B2323"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests11.subtitle}"
+			tasks: [
+				{
+					id: "153F6A1E52466B39"
+					item: {
+						Count: 1b
+						id: "endrem:magical_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.getting_to_the_end.quests11.title}"
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "3FFB8D0ADC19BCA1"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests12.subtitle}"
+			tasks: [
+				{
+					id: "7E3DB1DAC40B0F03"
+					item: {
+						Count: 1b
+						id: "endrem:wither_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.getting_to_the_end.quests12.title}"
+			x: -2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "021DAFFB5B6C41D7"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests13.subtitle}"
+			tasks: [
+				{
+					id: "7E1F35FAC6DF89A7"
+					item: {
+						Count: 1b
+						id: "endrem:witch_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					only_from_crafting: true
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: ["{ftbquests.chapter.getting_to_the_end.quests14.description}"]
+			hide: true
+			id: "3F991D3B86EFF9EE"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests14.subtitle}"
+			tasks: [
+				{
+					id: "3289A7711479BCE1"
+					item: {
+						Count: 1b
+						id: "endrem:undead_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "3939C50171FAD48A"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests15.subtitle}"
+			tasks: [
+				{
+					id: "1C7BB2EBEF9AC5A0"
+					item: {
+						Count: 1b
+						id: "endrem:exotic_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					only_from_crafting: true
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"{ftbquests.chapter.getting_to_the_end.quests16.description0}"
+				""
+				"{ftbquests.chapter.getting_to_the_end.quests16.description2}"
+			]
+			hide: true
+			id: "7E7D888C64FD0E69"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests16.subtitle}"
+			tasks: [
+				{
+					id: "2D593506152BC546"
+					item: {
+						Count: 1b
+						id: "endrem:cryptic_eye"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "4E9DB5E5DA145FB7"
+			subtitle: "{ftbquests.chapter.getting_to_the_end.quests17.subtitle}"
+			tasks: [
+				{
+					advancement: "minecraft:story/follow_ender_eye"
+					criterion: ""
+					id: "41ADDCD19E1253FF"
+					type: "advancement"
+				}
+			]
+			title: "{ftbquests.chapter.getting_to_the_end.quests17.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.getting_to_the_end.subtitle}"]
+	title: "{ftbquests.chapter.getting_to_the_end.title}"
+}

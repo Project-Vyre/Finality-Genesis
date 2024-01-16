@@ -1,0 +1,406 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "artifacts"
+	group: "668E3EA3A7A91B79"
+	icon: "artifacts:mimic_spawn_egg"
+	id: "2AD3074639A9CD1F"
+	images: [
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 64.0d
+			hover: [ ]
+			image: "minecraft:textures/gui/presets/end_bg.png"
+			rotation: 0.0d
+			width: 64.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "134132D08F2351B9"
+			subtitle: "{ftbquests.chapter.artifacts.quests0.subtitle}"
+			tasks: [
+				{
+					id: "4FC6F95E7BE76F57"
+					item: "artifacts:crystal_heart"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests0.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "29714FA7C6C24B0C"
+			subtitle: "{ftbquests.chapter.artifacts.quests1.subtitle}"
+			tasks: [
+				{
+					id: "1E5C0474933AC573"
+					item: "artifacts:superstitious_hat"
+					type: "item"
+				}
+				{
+					id: "3CCACCE194F9A2D2"
+					item: "artifacts:lucky_scarf"
+					type: "item"
+				}
+				{
+					id: "3B7A0CF35F9C5B1A"
+					item: "artifacts:golden_hook"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests1.title}"
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "639EBE770F335AD5"
+			subtitle: "{ftbquests.chapter.artifacts.quests2.subtitle}"
+			tasks: [
+				{
+					id: "6081B413C800CA36"
+					item: "artifacts:kitty_slippers"
+					type: "item"
+				}
+				{
+					id: "09252EED2C0F7B1E"
+					item: "artifacts:bunny_hoppers"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests2.title}"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "3A56F181BF960F00"
+			subtitle: "{ftbquests.chapter.artifacts.quests3.subtitle}"
+			tasks: [
+				{
+					id: "60D256BF979A6F23"
+					item: "artifacts:everlasting_beef"
+					type: "item"
+				}
+				{
+					id: "122C3125BD8C4196"
+					item: "artifacts:eternal_steak"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests3.title}"
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "3D38DD7900BDC0CD"
+			subtitle: "{ftbquests.chapter.artifacts.quests4.subtitle}"
+			tasks: [
+				{
+					id: "56DA9B01685196FE"
+					item: "artifacts:plastic_drinking_hat"
+					type: "item"
+				}
+				{
+					id: "3ECF6D98F8494AB9"
+					item: "artifacts:novelty_drinking_hat"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests4.title}"
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "57B8D2900DEAABD3"
+			subtitle: "{ftbquests.chapter.artifacts.quests5.subtitle}"
+			tasks: [
+				{
+					id: "500F43C87D637DBD"
+					item: "artifacts:night_vision_goggles"
+					type: "item"
+				}
+				{
+					id: "29C7A43A2984048A"
+					item: "artifacts:scarf_of_invisibility"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests5.title}"
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: ["{ftbquests.chapter.artifacts.quests6.description}"]
+			hide: true
+			id: "708C10840E44F31C"
+			subtitle: "{ftbquests.chapter.artifacts.quests6.subtitle}"
+			tasks: [
+				{
+					id: "548A0B2F5D55F56C"
+					item: "artifacts:umbrella"
+					type: "item"
+				}
+				{
+					id: "2120AFBDC9444214"
+					item: "artifacts:flippers"
+					type: "item"
+				}
+				{
+					id: "20FA0911E4C0CCB1"
+					item: "artifacts:snorkel"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests6.title}"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "30A29CE3FB50D11A"
+			subtitle: "{ftbquests.chapter.artifacts.quests7.subtitle}"
+			tasks: [
+				{
+					id: "0133712D1ACB7883"
+					item: "artifacts:panic_necklace"
+					type: "item"
+				}
+				{
+					id: "6CBCF13BD76F45F2"
+					item: "artifacts:shock_pendant"
+					type: "item"
+				}
+				{
+					id: "6CC38EBE23D086FE"
+					item: "artifacts:flame_pendant"
+					type: "item"
+				}
+				{
+					id: "18B035FD30CE61ED"
+					item: "artifacts:thorn_pendant"
+					type: "item"
+				}
+				{
+					id: "1E44058B5B517DF7"
+					item: "artifacts:charm_of_sinking"
+					type: "item"
+				}
+				{
+					id: "1A6AB0C3935268B2"
+					item: "artifacts:cross_necklace"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests7.title}"
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "16843D4A0FAE2266"
+			subtitle: "{ftbquests.chapter.artifacts.quests8.subtitle}"
+			tasks: [
+				{
+					id: "4979281DD064A210"
+					item: "artifacts:power_glove"
+					type: "item"
+				}
+				{
+					id: "130B63768CEC40DD"
+					item: "artifacts:fire_gauntlet"
+					type: "item"
+				}
+				{
+					id: "21322A48DE7F2850"
+					item: "artifacts:pocket_piston"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests8.title}"
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "2B46A38DAD1371DD"
+			subtitle: "{ftbquests.chapter.artifacts.quests9.subtitle}"
+			tasks: [
+				{
+					id: "5D7FEB7AF23346BD"
+					item: "artifacts:digging_claws"
+					type: "item"
+				}
+				{
+					id: "706CE1F72E904773"
+					item: "artifacts:feral_claws"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests9.title}"
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "6464EA8843BF445D"
+			subtitle: "{ftbquests.chapter.artifacts.quests10.subtitle}"
+			tasks: [
+				{
+					id: "055DADFD0D4B7D79"
+					item: "artifacts:steadfast_spikes"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests10.title}"
+			x: -1.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"{ftbquests.chapter.artifacts.quests11.description0}"
+				""
+				"{ftbquests.chapter.artifacts.quests11.description2}"
+				""
+				"{ftbquests.chapter.artifacts.quests11.description4}"
+				""
+				"{ftbquests.chapter.artifacts.quests11.description6}"
+			]
+			hide: true
+			id: "43079D44FC265E21"
+			subtitle: "{ftbquests.chapter.artifacts.quests11.subtitle}"
+			tasks: [
+				{
+					id: "2EA33B3D2BCE2A95"
+					item: "artifacts:vampiric_glove"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests11.title}"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "54A59D6E7B886CDB"
+			subtitle: "{ftbquests.chapter.artifacts.quests12.subtitle}"
+			tasks: [
+				{
+					id: "154FB4220ED13BE5"
+					item: "artifacts:whoopee_cushion"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests12.title}"
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "6AEDE569DFBB9B2B"
+			subtitle: "{ftbquests.chapter.artifacts.quests13.subtitle}"
+			tasks: [
+				{
+					id: "13046FE14D6D391D"
+					item: "artifacts:villager_hat"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests13.title}"
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "27437880F4284297"
+			subtitle: "{ftbquests.chapter.artifacts.quests14.subtitle}"
+			tasks: [
+				{
+					id: "3CFB647214B670EF"
+					item: "artifacts:running_shoes"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests14.title}"
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "2ECA162542EF1647"
+			subtitle: "{ftbquests.chapter.artifacts.quests15.subtitle}"
+			tasks: [
+				{
+					id: "6123A921A8A1E1F5"
+					item: "artifacts:aqua_dashers"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests15.title}"
+			x: 1.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "1C29BDB0E6AE43E2"
+			subtitle: "{ftbquests.chapter.artifacts.quests16.subtitle}"
+			tasks: [
+				{
+					icon: "artifacts:cloud_in_a_bottle"
+					id: "2B23C8E272FC04C6"
+					item: "artifacts:helium_flamingo"
+					type: "item"
+				}
+				{
+					id: "65DA73BF2CA44B99"
+					item: "artifacts:antidote_vessel"
+					type: "item"
+				}
+				{
+					id: "05FEE0D300DC8C1F"
+					item: "artifacts:obsidian_skull"
+					type: "item"
+				}
+				{
+					id: "56D435617D019040"
+					item: "artifacts:universal_attractor"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.artifacts.quests16.title}"
+			x: 1.0d
+			y: 1.0d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.artifacts.subtitle}"]
+	title: "{ftbquests.chapter.artifacts.title}"
+}

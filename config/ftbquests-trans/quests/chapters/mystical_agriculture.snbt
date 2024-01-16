@@ -1,0 +1,680 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "mystical_agriculture"
+	group: "6855847200ADBE3A"
+	icon: "mysticalagriculture:infusion_altar"
+	id: "2C5FF9AF6ACD1D02"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"{ftbquests.chapter.mystical_agriculture.quests0.description0}"
+				""
+				"{ftbquests.chapter.mystical_agriculture.quests0.description2}"
+				""
+				"{ftbquests.chapter.mystical_agriculture.quests0.description4}"
+				""
+				"{ftbquests.chapter.mystical_agriculture.quests0.description6}"
+				""
+				"{ftbquests.chapter.mystical_agriculture.quests0.description8}"
+			]
+			hide: true
+			icon: "mysticalagriculture:infusion_altar"
+			id: "3ED54EFC2FC65E99"
+			rewards: [
+				{
+					id: "635E215C63C954CE"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "2134A33E0FB0BD09"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.mystical_agriculture.quests0.subtitle}"
+			tasks: [
+				{
+					id: "1CB1D118DB89DA8C"
+					item: "mysticalagriculture:infusion_altar"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6C05977CFD430CC7"
+					item: "mysticalagriculture:infusion_pedestal"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests0.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3CCEE62A9B6D8F1E"]
+			icon: "mysticalagriculture:prudentium_essence"
+			id: "013A53FA6B5EA594"
+			rewards: [
+				{
+					id: "2173A205521B0BC7"
+					type: "xp"
+					xp: 25
+				}
+			]
+			subtitle: "{ftbquests.chapter.mystical_agriculture.quests1.subtitle}"
+			tasks: [
+				{
+					id: "56B96EC3B1857503"
+					item: "mysticalagriculture:prudentium_essence"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests1.title}"
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["3ED54EFC2FC65E99"]
+			description: [
+				"{ftbquests.chapter.mystical_agriculture.quests2.description0}"
+				""
+				"{ftbquests.chapter.mystical_agriculture.quests2.description2}"
+				""
+				"{ftbquests.chapter.mystical_agriculture.quests2.description4}"
+				""
+				"{ftbquests.chapter.mystical_agriculture.quests2.description6}"
+				""
+				"{ftbquests.chapter.mystical_agriculture.quests2.description8}"
+				""
+				"{ftbquests.chapter.mystical_agriculture.quests2.description10}"
+			]
+			icon: "mysticalagriculture:inferium_essence"
+			id: "6E3E85ECD7204B4D"
+			rewards: [
+				{
+					id: "42E3D9FD9C715D81"
+					item: {
+						Count: 1b
+						id: "patchouli:guide_book"
+						tag: {
+							"patchouli:book": "mysticalagriculture:guide"
+						}
+					}
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.mystical_agriculture.quests2.subtitle}"
+			tasks: [
+				{
+					count: 4L
+					id: "432A834B17F1F711"
+					item: "mysticalagriculture:inferium_essence"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "4B1F5A472B7174E7"
+					item: "mysticalagriculture:prosperity_shard"
+					type: "item"
+				}
+				{
+					id: "445F0203F76952E7"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests2.title}"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["013A53FA6B5EA594"]
+			description: [
+				"{ftbquests.chapter.mystical_agriculture.quests3.description0}"
+				""
+				"{ftbquests.chapter.mystical_agriculture.quests3.description2}"
+			]
+			icon: "mysticalagriculture:tertium_essence"
+			id: "3E607B69558203C0"
+			rewards: [
+				{
+					id: "6FB519933D3354E6"
+					type: "xp"
+					xp: 50
+				}
+			]
+			subtitle: "{ftbquests.chapter.mystical_agriculture.quests3.subtitle}"
+			tasks: [
+				{
+					id: "5051D0D23964A3EC"
+					item: "mysticalagriculture:tertium_essence"
+					type: "item"
+				}
+				{
+					id: "4253283FB204F676"
+					item: {
+						Count: 1b
+						id: "mysticalagriculture:soulium_dagger"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "342ABDFC2FE8812C"
+					item: "mysticalagriculture:soul_jar"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests3.title}"
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["3E607B69558203C0"]
+			id: "58621F2AF6BAED27"
+			rewards: [
+				{
+					id: "2F0ADB0FBB7AAC35"
+					type: "xp"
+					xp: 75
+				}
+			]
+			tasks: [
+				{
+					id: "4C1ADDAF2F6DCA13"
+					item: "mysticalagriculture:imperium_essence"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests4.title}"
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["58621F2AF6BAED27"]
+			icon: "mysticalagriculture:supremium_essence"
+			id: "6366BD8019526248"
+			rewards: [
+				{
+					id: "66BBF2FF3FD17C42"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "41989A0CAA146393"
+					item: "mysticalagriculture:supremium_essence"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "201692B1A824B58E"
+					item: "mysticalagriculture:prosperity_shard"
+					type: "item"
+				}
+				{
+					id: "643B7F8CF140D67F"
+					item: "mysticalagriculture:supremium_gemstone"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests5.title}"
+			x: 0.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["3ED54EFC2FC65E99"]
+			description: ["{ftbquests.chapter.mystical_agriculture.quests6.description}"]
+			id: "1BAF5C307DD38F12"
+			subtitle: "{ftbquests.chapter.mystical_agriculture.quests6.subtitle}"
+			tasks: [
+				{
+					id: "5C4E0CE5FF14CD14"
+					item: {
+						Count: 1b
+						id: "mysticalagriculture:watering_can"
+						tag: {
+							Water: 0b
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests6.title}"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"1BAF5C307DD38F12"
+				"6E3E85ECD7204B4D"
+			]
+			description: ["{ftbquests.chapter.mystical_agriculture.quests7.description}"]
+			id: "02949EFDAF8BFE6F"
+			subtitle: "{ftbquests.chapter.mystical_agriculture.quests7.subtitle}"
+			tasks: [
+				{
+					id: "13221CEC2CD35A5E"
+					item: {
+						Count: 1b
+						id: "mysticalagriculture:inferium_watering_can"
+						tag: {
+							Active: 0b
+							Water: 0b
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests7.title}"
+			x: 1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6E3E85ECD7204B4D"]
+			id: "1142F1650CBDF461"
+			tasks: [
+				{
+					id: "30BDA0A7128D885B"
+					item: "mysticalagriculture:inferium_growth_accelerator"
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["013A53FA6B5EA594"]
+			id: "70790BD37B0BDE2D"
+			optional: true
+			subtitle: "{ftbquests.chapter.mystical_agriculture.quests9.subtitle}"
+			tasks: [
+				{
+					id: "5AAC6A33655D91CA"
+					item: {
+						Count: 1b
+						id: "mysticalagriculture:prudentium_watering_can"
+						tag: {
+							Active: 0b
+							Water: 0b
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests9.title}"
+			x: 1.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["3E607B69558203C0"]
+			id: "36D6E28D0D048B25"
+			optional: true
+			subtitle: "{ftbquests.chapter.mystical_agriculture.quests10.subtitle}"
+			tasks: [
+				{
+					id: "6425FEFC1C4BF9A4"
+					item: {
+						Count: 1b
+						id: "mysticalagriculture:tertium_watering_can"
+						tag: {
+							Active: 0b
+							Water: 0b
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests10.title}"
+			x: 1.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["58621F2AF6BAED27"]
+			id: "776DCB20322DC7CA"
+			optional: true
+			tasks: [
+				{
+					id: "6D3EB9183E605EF8"
+					item: {
+						Count: 1b
+						id: "mysticalagriculture:imperium_watering_can"
+						tag: {
+							Active: 0b
+							Water: 0b
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["6366BD8019526248"]
+			id: "3A2D13B49A74A4E5"
+			optional: true
+			tasks: [
+				{
+					id: "5ED76EABC6C8ACF0"
+					item: {
+						Count: 1b
+						id: "mysticalagriculture:supremium_watering_can"
+						tag: {
+							Active: 0b
+							Water: 0b
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: 11.0d
+		}
+		{
+			dependencies: ["013A53FA6B5EA594"]
+			id: "2379E9C25EF61BB8"
+			tasks: [
+				{
+					id: "63C7AC42016D88A8"
+					item: "mysticalagriculture:prudentium_growth_accelerator"
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["3E607B69558203C0"]
+			id: "793C2CA9EE9A28A1"
+			tasks: [
+				{
+					id: "598367EF8EB024F0"
+					item: "mysticalagriculture:tertium_growth_accelerator"
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["6366BD8019526248"]
+			id: "1E94C7BF285762B9"
+			tasks: [
+				{
+					id: "328C3E579E38B01C"
+					item: "mysticalagriculture:supremium_growth_accelerator"
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 11.0d
+		}
+		{
+			dependencies: ["58621F2AF6BAED27"]
+			id: "733E538EB19C6210"
+			tasks: [
+				{
+					id: "1FD918E0714CB9B2"
+					item: "mysticalagriculture:imperium_growth_accelerator"
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"6E3E85ECD7204B4D"
+				"16B642E5E7DBE75D"
+				"527A4B10DDE51E37"
+			]
+			description: [
+				"{ftbquests.chapter.mystical_agriculture.quests17.description0}"
+				""
+				"{ftbquests.chapter.mystical_agriculture.quests17.description2}"
+				""
+				"{ftbquests.chapter.mystical_agriculture.quests17.description4}"
+				""
+				"{ftbquests.chapter.mystical_agriculture.quests17.description6}"
+				"{ftbquests.chapter.mystical_agriculture.quests17.description7}"
+				"{ftbquests.chapter.mystical_agriculture.quests17.description8}"
+				"{ftbquests.chapter.mystical_agriculture.quests17.description9}"
+				"{ftbquests.chapter.mystical_agriculture.quests17.description10}"
+				"{ftbquests.chapter.mystical_agriculture.quests17.description11}"
+				""
+				"{ftbquests.chapter.mystical_agriculture.quests17.description13}"
+			]
+			id: "3CCEE62A9B6D8F1E"
+			rewards: [
+				{
+					id: "27B9B0774644CE3B"
+					item: "mysticalagriculture:mystical_fertilizer"
+					type: "item"
+				}
+				{
+					id: "009706A64D739485"
+					item: "mysticalagriculture:fertilized_essence"
+					type: "item"
+				}
+				{
+					id: "3D6F503706BBC181"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "{ftbquests.chapter.mystical_agriculture.quests17.subtitle}"
+			tasks: [
+				{
+					id: "4D0908889BD441B1"
+					item: {
+						Count: 1b
+						id: "mysticalagriculture:infusion_crystal"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests17.title}"
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["6366BD8019526248"]
+			icon: "mysticalagriculture:master_infusion_crystal"
+			id: "7FCED8481DFD9F1A"
+			rewards: [
+				{
+					id: "07F5C305D2334534"
+					type: "xp_levels"
+					xp_levels: 60
+				}
+			]
+			tasks: [
+				{
+					id: "582F7F1F135F79C2"
+					item: "mysticalagriculture:master_infusion_crystal"
+					type: "item"
+				}
+				{
+					id: "66F6303566237975"
+					item: "mysticalagradditions:insanium_essence"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests18.title}"
+			x: 0.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["58CA3D354248FD48"]
+			id: "56CAF75A6D448B6B"
+			subtitle: "{ftbquests.chapter.mystical_agriculture.quests19.subtitle}"
+			tasks: [
+				{
+					id: "1A30855437DABFB2"
+					item: "mysticalagriculture:awakening_altar"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests19.title}"
+			x: 0.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["7FCED8481DFD9F1A"]
+			id: "58CA3D354248FD48"
+			subtitle: "{ftbquests.chapter.mystical_agriculture.quests20.subtitle}"
+			tasks: [
+				{
+					id: "5FE3741B5E790D81"
+					item: "mysticalagriculture:cognizant_dust"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests20.title}"
+			x: 0.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["56CAF75A6D448B6B"]
+			id: "1EA2DBDBC4162FF7"
+			subtitle: "{ftbquests.chapter.mystical_agriculture.quests21.subtitle}"
+			tasks: [
+				{
+					count: 4L
+					id: "2DA999E631F1247D"
+					item: "mysticalagriculture:awakening_pedestal"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests21.title}"
+			x: -2.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["56CAF75A6D448B6B"]
+			id: "07AE6D26E63D8748"
+			subtitle: "{ftbquests.chapter.mystical_agriculture.quests22.subtitle}"
+			tasks: [
+				{
+					count: 4L
+					id: "51A655FC70FA573F"
+					item: "mysticalagriculture:essence_vessel"
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"1EA2DBDBC4162FF7"
+				"56CAF75A6D448B6B"
+				"07AE6D26E63D8748"
+			]
+			id: "4EFA3A0E86295629"
+			tasks: [
+				{
+					id: "1E2BE6E7335A92F0"
+					item: "mysticalagriculture:awakened_supremium_essence"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests23.title}"
+			x: 0.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["7FCED8481DFD9F1A"]
+			id: "2A4E2F7427EFA853"
+			shape: "octagon"
+			subtitle: "{ftbquests.chapter.mystical_agriculture.quests24.subtitle}"
+			tasks: [
+				{
+					id: "58FB74EF5A1A5790"
+					item: "mysticalagradditions:nether_star_crux"
+					type: "item"
+				}
+				{
+					id: "3143DC58A6BD8789"
+					item: "mysticalagriculture:nether_star_seeds"
+					type: "item"
+				}
+				{
+					count: 27L
+					id: "194A3BBE89608BFD"
+					item: "mysticalagriculture:nether_star_essence"
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "5E050CF52EC27A14"
+					item: "mysticalagradditions:nether_star_shard"
+					type: "item"
+				}
+				{
+					id: "050654E0648C9ED0"
+					item: "minecraft:nether_star"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests24.title}"
+			x: 1.5d
+			y: 12.5d
+		}
+		{
+			dependencies: ["7FCED8481DFD9F1A"]
+			id: "3FFC8FB1D24BBBE9"
+			subtitle: "{ftbquests.chapter.mystical_agriculture.quests25.subtitle}"
+			tasks: [
+				{
+					id: "535B666D149AD6BC"
+					item: "mysticalagradditions:dragon_egg_crux"
+					type: "item"
+				}
+				{
+					id: "1782185008AE14AF"
+					item: "mysticalagriculture:dragon_egg_seeds"
+					type: "item"
+				}
+				{
+					count: 27L
+					id: "09510C3B9C39A908"
+					item: "mysticalagriculture:dragon_egg_essence"
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "0AB0113FBDE5C346"
+					item: "mysticalagradditions:dragon_egg_chunk"
+					type: "item"
+				}
+				{
+					id: "1B79AA32F9A7830A"
+					item: "minecraft:dragon_egg"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.mystical_agriculture.quests25.title}"
+			x: -1.5d
+			y: 12.5d
+		}
+	]
+	subtitle: [
+		"{ftbquests.chapter.mystical_agriculture.subtitle0}"
+		"{ftbquests.chapter.mystical_agriculture.subtitle1}"
+	]
+	title: "{ftbquests.chapter.mystical_agriculture.title}"
+}

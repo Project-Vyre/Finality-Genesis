@@ -1,0 +1,606 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "lil_wings"
+	group: "6855847200ADBE3A"
+	icon: "lilwings:crystal_puff_wings"
+	id: "4917473A99009E96"
+	images: [
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 64.0d
+			hover: [ ]
+			image: "minecraft:textures/gui/presets/end_bg.png"
+			rotation: 0.0d
+			width: 64.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"{ftbquests.chapter.lil_wings.quests0.description0}"
+				""
+				"{ftbquests.chapter.lil_wings.quests0.description2}"
+			]
+			hide: true
+			icon: {
+				Count: 1b
+				id: "lilwings:butterfly_net"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "268A7C0D765BB120"
+			rewards: [
+				{
+					id: "635EBA4EE8DF222E"
+					type: "xp"
+					xp: 50
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests0.subtitle}"
+			tasks: [
+				{
+					id: "3D9E06CF839EC890"
+					item: {
+						Count: 1b
+						id: "patchouli:guide_book"
+						tag: {
+							"patchouli:book": "lilwings:great_butter_book"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3C46A74B014ACF67"
+					item: {
+						Count: 1b
+						id: "lilwings:butterfly_net"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests0.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"32EEC8E211111160"
+				"28B02EE3C3EA5323"
+			]
+			description: [
+				"{ftbquests.chapter.lil_wings.quests1.description0}"
+				""
+				"{ftbquests.chapter.lil_wings.quests1.description2}"
+				""
+				"{ftbquests.chapter.lil_wings.quests1.description4}"
+			]
+			icon: "lilwings:butter_gold_wings"
+			id: "745DEC9F317266A5"
+			rewards: [
+				{
+					id: "455692353EC257AE"
+					type: "xp"
+					xp: 500
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests1.subtitle}"
+			tasks: [
+				{
+					id: "252EADB9D61C7B52"
+					item: "lilwings:butter"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests1.title}"
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"32EEC8E211111160"
+				"28B02EE3C3EA5323"
+			]
+			description: ["{ftbquests.chapter.lil_wings.quests2.description}"]
+			icon: "lilwings:swamp_hopper_wings"
+			id: "118ACB0B3C5F9D65"
+			rewards: [
+				{
+					id: "3038CDF5FB9A7855"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests2.subtitle}"
+			tasks: [
+				{
+					id: "2BC151001E86BB5B"
+					item: "lilwings:swamp_meal"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests2.title}"
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"32EEC8E211111160"
+				"28B02EE3C3EA5323"
+			]
+			description: [
+				"{ftbquests.chapter.lil_wings.quests3.description0}"
+				""
+				"{ftbquests.chapter.lil_wings.quests3.description2}"
+				""
+				"{ftbquests.chapter.lil_wings.quests3.description4}"
+			]
+			icon: "lilwings:painted_panther_wings"
+			id: "7AB06782EA8B7BEF"
+			rewards: [
+				{
+					id: "5AADC3047E703EBD"
+					type: "xp"
+					xp: 500
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests3.subtitle}"
+			tasks: [
+				{
+					id: "47CD73944AF1A060"
+					item: "lilwings:crimson_cocoa_beans"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests3.title}"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"28B02EE3C3EA5323"
+				"32EEC8E211111160"
+			]
+			description: [
+				"{ftbquests.chapter.lil_wings.quests4.description0}"
+				""
+				"{ftbquests.chapter.lil_wings.quests4.description2}"
+				""
+				"{ftbquests.chapter.lil_wings.quests4.description4}"
+				""
+				"{ftbquests.chapter.lil_wings.quests4.description6}"
+				""
+				"{ftbquests.chapter.lil_wings.quests4.description8}"
+			]
+			icon: "lilwings:cloudy_puff_wings"
+			id: "3B7E54CCF66B5CD3"
+			rewards: [
+				{
+					id: "11B2395255FB742E"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5E29BE95433F06DB"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests4.subtitle}"
+			tasks: [
+				{
+					id: "2F9395D1DED9AB45"
+					item: "lilwings:jelly_bucket"
+					type: "item"
+				}
+				{
+					id: "4FB5DB691D3E6619"
+					item: "lilwings:cloudy_puff_wings"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests4.title}"
+			x: 3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["268A7C0D765BB120"]
+			hide_dependent_lines: true
+			id: "32EEC8E211111160"
+			rewards: [
+				{
+					id: "691ADC2371EBF6FC"
+					type: "xp"
+					xp: 75
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests5.subtitle}"
+			tasks: [
+				{
+					id: "64AD581B763844AA"
+					item: "lilwings:paper_wings"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests5.title}"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["268A7C0D765BB120"]
+			hide_dependent_lines: true
+			id: "28B02EE3C3EA5323"
+			rewards: [
+				{
+					id: "4F2C437C05D53794"
+					type: "xp"
+					xp: 75
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests6.subtitle}"
+			tasks: [
+				{
+					id: "5EE1AFD578589185"
+					item: "lilwings:cotton_ball"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests6.title}"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["268A7C0D765BB120"]
+			id: "39D5C6D2ADCE3977"
+			subtitle: "{ftbquests.chapter.lil_wings.quests7.subtitle}"
+			tasks: [
+				{
+					id: "0B5C27472F4DADBC"
+					item: "lilwings:lantern_on_a_stick"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests7.title}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"28B02EE3C3EA5323"
+				"32EEC8E211111160"
+			]
+			description: [
+				"{ftbquests.chapter.lil_wings.quests8.description0}"
+				""
+				"{ftbquests.chapter.lil_wings.quests8.description2}"
+				""
+				"{ftbquests.chapter.lil_wings.quests8.description4}"
+				""
+				"{ftbquests.chapter.lil_wings.quests8.description6}"
+			]
+			icon: "lilwings:crystal_puff_wings"
+			id: "44B1157B796CA875"
+			rewards: [
+				{
+					id: "02D47B0F17D7580D"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests8.subtitle}"
+			tasks: [
+				{
+					id: "192BE3CCEBA95EDF"
+					item: "lilwings:butternite"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests8.title}"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["45A52C65052B8D2C"]
+			description: ["{ftbquests.chapter.lil_wings.quests9.description}"]
+			id: "09CCEDC570C8B4BC"
+			rewards: [
+				{
+					id: "1B61F07D45E171A7"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests9.subtitle}"
+			tasks: [
+				{
+					id: "715847900CD995CF"
+					item: "lilwings:golden_cake"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests9.title}"
+			x: -4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"745DEC9F317266A5"
+				"7AB06782EA8B7BEF"
+			]
+			description: [
+				"{ftbquests.chapter.lil_wings.quests10.description0}"
+				""
+				"{ftbquests.chapter.lil_wings.quests10.description2}"
+			]
+			id: "45A52C65052B8D2C"
+			rewards: [
+				{
+					id: "7A7D805FBBEFE3BF"
+					type: "xp"
+					xp: 500
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests10.subtitle}"
+			tasks: [
+				{
+					id: "017E40CEBF3E9261"
+					item: "lilwings:crimson_cake"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests10.title}"
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["268A7C0D765BB120"]
+			description: [
+				"{ftbquests.chapter.lil_wings.quests11.description0}"
+				""
+				"{ftbquests.chapter.lil_wings.quests11.description2}"
+				""
+				"{ftbquests.chapter.lil_wings.quests11.description4}"
+				""
+				"{ftbquests.chapter.lil_wings.quests11.description6}"
+			]
+			id: "0A014F473FD9803C"
+			subtitle: "{ftbquests.chapter.lil_wings.quests11.subtitle}"
+			tasks: [
+				{
+					id: "24DC0A99BEECCB8F"
+					item: "minecraft:glass_bottle"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["44B1157B796CA875"]
+			id: "0E3C44733C0F12D3"
+			rewards: [
+				{
+					id: "41E6484EF3EA8EBF"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "2419CC55E4C7D691"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests12.subtitle}"
+			tasks: [
+				{
+					id: "1E8CA983BBCB2FA2"
+					item: {
+						Count: 1b
+						id: "lilwings:enderfly_net"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests12.title}"
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"28B02EE3C3EA5323"
+				"32EEC8E211111160"
+			]
+			description: [
+				"{ftbquests.chapter.lil_wings.quests13.description0}"
+				""
+				"{ftbquests.chapter.lil_wings.quests13.description2}"
+				""
+				"{ftbquests.chapter.lil_wings.quests13.description4}"
+				""
+				"{ftbquests.chapter.lil_wings.quests13.description6}"
+			]
+			id: "39267D838EBA466E"
+			rewards: [
+				{
+					id: "0184E62A2C6C941B"
+					type: "xp"
+					xp: 250
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests13.subtitle}"
+			tasks: [
+				{
+					id: "29B5D0245B143CB1"
+					item: "lilwings:red_applefly_wings"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests13.title}"
+			x: 3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["39267D838EBA466E"]
+			description: [
+				"{ftbquests.chapter.lil_wings.quests14.description0}"
+				""
+				"{ftbquests.chapter.lil_wings.quests14.description2}"
+			]
+			id: "5038080D730C3C95"
+			rewards: [
+				{
+					id: "7B0C34E4456D4F1E"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1186590E0DA138EC"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests14.subtitle}"
+			tasks: [
+				{
+					id: "36763654AB9ED251"
+					item: "lilwings:gold_applefly_wings"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests14.title}"
+			x: 3.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"28B02EE3C3EA5323"
+				"32EEC8E211111160"
+			]
+			description: [
+				"{ftbquests.chapter.lil_wings.quests15.description0}"
+				""
+				"{ftbquests.chapter.lil_wings.quests15.description2}"
+			]
+			id: "1EAFD78AC41226ED"
+			rewards: [
+				{
+					id: "4110A155D6B40D5B"
+					type: "xp"
+					xp: 500
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests15.subtitle}"
+			tasks: [
+				{
+					id: "2C89AC21013E488A"
+					item: "lilwings:swallow_tail_wings"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests15.title}"
+			x: -3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"28B02EE3C3EA5323"
+				"32EEC8E211111160"
+			]
+			description: [
+				"{ftbquests.chapter.lil_wings.quests16.description0}"
+				""
+				"{ftbquests.chapter.lil_wings.quests16.description2}"
+			]
+			id: "0484B1619CAC4135"
+			rewards: [
+				{
+					id: "44B714C883C2DFCD"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests16.subtitle}"
+			tasks: [
+				{
+					id: "344F855C0DABDA3E"
+					item: "lilwings:aponi_wings"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests16.title}"
+			x: 1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"32EEC8E211111160"
+				"28B02EE3C3EA5323"
+			]
+			description: [
+				"{ftbquests.chapter.lil_wings.quests17.description0}"
+				""
+				"{ftbquests.chapter.lil_wings.quests17.description2}"
+			]
+			id: "234A9A4E65ABA1CF"
+			rewards: [
+				{
+					id: "01FE83D094BCB67C"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "{ftbquests.chapter.lil_wings.quests17.subtitle}"
+			tasks: [
+				{
+					id: "443EC9FB1E35C0EA"
+					item: "lilwings:shroom_skipper_wings"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.lil_wings.quests17.title}"
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"28B02EE3C3EA5323"
+				"32EEC8E211111160"
+			]
+			description: [
+				"{ftbquests.chapter.lil_wings.quests18.description0}"
+				""
+				"{ftbquests.chapter.lil_wings.quests18.description2}"
+				""
+				"{ftbquests.chapter.lil_wings.quests18.description4}"
+			]
+			id: "7C2C5813BC6D7EE7"
+			subtitle: "{ftbquests.chapter.lil_wings.quests18.subtitle}"
+			tasks: [
+				{
+					id: "38B157A966253DE3"
+					item: "lilwings:white_fox_wings"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -4.5d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.lil_wings.subtitle}"]
+	title: "{ftbquests.chapter.lil_wings.title}"
+}

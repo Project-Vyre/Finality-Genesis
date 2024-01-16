@@ -1,0 +1,102 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "some_assembly_required"
+	group: "2B2D0B6DE31DE8D3"
+	icon: "some_assembly_required:bread_slice"
+	id: "40B7C0560B900F0C"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["0AE06EB85B6E1CB6"]
+			hide: true
+			icon: "some_assembly_required:sandwiching_station"
+			id: "06CE3A2E506D1686"
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.some_assembly_required.quests0.subtitle}"
+			tasks: [
+				{
+					id: "2D4623EBD462A5FC"
+					item: "some_assembly_required:sandwiching_station"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.some_assembly_required.quests0.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["06CE3A2E506D1686"]
+			description: [
+				"{ftbquests.chapter.some_assembly_required.quests1.description0}"
+				""
+				"{ftbquests.chapter.some_assembly_required.quests1.description2}"
+			]
+			id: "23DDDAE5F4B72958"
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.some_assembly_required.quests1.subtitle}"
+			tasks: [
+				{
+					count: 4L
+					id: "4519AFBD916E8EE1"
+					item: "some_assembly_required:bread_slice"
+					title: "{ftbquests.chapter.some_assembly_required.quests1.tasks0.title}"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.some_assembly_required.quests1.title}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["23DDDAE5F4B72958"]
+			description: ["{ftbquests.chapter.some_assembly_required.quests2.description}"]
+			id: "5912B531B310ED4F"
+			shape: "rsquare"
+			subtitle: "{ftbquests.chapter.some_assembly_required.quests2.subtitle}"
+			tasks: [
+				{
+					id: "513836C1CEC92BD8"
+					item: {
+						Count: 1b
+						id: "some_assembly_required:sandwich"
+						tag: {
+							BlockEntityTag: {
+								Sandwich: [
+									{
+										Count: 1b
+										id: "some_assembly_required:bread_slice"
+									}
+									{
+										Count: 1b
+										id: "some_assembly_required:tomato_slices"
+									}
+									{
+										Count: 1b
+										id: "farmersdelight:cabbage_leaf"
+									}
+									{
+										Count: 1b
+										id: "farmersdelight:cooked_bacon"
+									}
+									{
+										Count: 1b
+										id: "some_assembly_required:bread_slice"
+									}
+								]
+							}
+							IsJEIExample: 1b
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.some_assembly_required.quests2.title}"
+			x: 0.0d
+			y: 3.0d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.some_assembly_required.subtitle}"]
+	title: "{ftbquests.chapter.some_assembly_required.title}"
+}

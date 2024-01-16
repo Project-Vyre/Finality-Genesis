@@ -1,0 +1,30 @@
+{
+	icon: "artifacts:mimic_spawn_egg"
+	id: "0D229A6288FB86F7"
+	loot_size: 1
+	order_index: 3
+	rewards: [
+		{
+			item: "artifacts:whoopee_cushion"
+		}
+		{
+			item: "artifacts:kitty_slippers"
+		}
+		{
+			item: "artifacts:bunny_hoppers"
+		}
+		{
+			item: "artifacts:aqua_dashers"
+		}
+		{
+			item: "artifacts:cloud_in_a_bottle"
+		}
+		{
+			item: "artifacts:universal_attractor"
+		}
+		{
+			item: "artifacts:umbrella"
+		}
+	]
+	title: "{ftbquests.reward_tables.artifacts_tier_1.title}"
+}

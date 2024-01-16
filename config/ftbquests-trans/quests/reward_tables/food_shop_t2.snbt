@@ -1,0 +1,24 @@
+{
+	icon: "farmersdelight:mixed_salad"
+	id: "78B743AA36CFCC88"
+	loot_size: 1
+	order_index: 19
+	rewards: [
+		{
+			item: "farmersdelight:egg_sandwich"
+		}
+		{
+			item: "farmersdelight:fruit_salad"
+		}
+		{
+			item: "farmersdelight:mixed_salad"
+		}
+		{
+			item: "farmersdelight:nether_salad"
+		}
+		{
+			item: "farmersdelight:stuffed_potato"
+		}
+	]
+	title: "{ftbquests.reward_tables.food_shop_t2.title}"
+}

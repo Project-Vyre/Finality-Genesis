@@ -1,0 +1,142 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "architect_age"
+	group: "4B44486C4CFAE9FB"
+	icon: "create:polished_cut_ochrum"
+	id: "478E1A54F8FF90FA"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["0823CEAA341364B2"]
+			description: ["{ftbquests.chapter.architect_age.quests0.description}"]
+			id: "56FBABA56EE62D70"
+			subtitle: "{ftbquests.chapter.architect_age.quests0.subtitle}"
+			tasks: [
+				{
+					count: 16L
+					id: "14D7CE6EF3BC1EDE"
+					item: "minecraft:granite"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "1AF5F3E831EF1E10"
+					item: "minecraft:diorite"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "5FEEB9ED71A32E1E"
+					item: "minecraft:andesite"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "7908C28073C6AAD6"
+					item: "minecraft:deepslate"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "51A183CBF465BD00"
+					item: "minecraft:dripstone_block"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "08986BA7D1CB433E"
+					item: "minecraft:tuff"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "632BF358D98CE08D"
+					item: "minecraft:calcite"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.architect_age.quests0.title}"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "0823CEAA341364B2"
+			subtitle: "{ftbquests.chapter.architect_age.quests1.subtitle}"
+			tasks: [
+				{
+					id: "34B6FC50695C4DE6"
+					item: "minecraft:stonecutter"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.architect_age.quests1.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0823CEAA341364B2"]
+			description: [
+				"{ftbquests.chapter.architect_age.quests2.description0}"
+				""
+				"{ftbquests.chapter.architect_age.quests2.description2}"
+				""
+				"{ftbquests.chapter.architect_age.quests2.description4}"
+			]
+			id: "257DBCB0BE981895"
+			subtitle: "{ftbquests.chapter.architect_age.quests2.subtitle}"
+			tasks: [
+				{
+					count: 16L
+					id: "4F22F542B07F0480"
+					item: "create:crimsite"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "34B5F65742FD89FA"
+					item: "create:veridium"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "254FD726D4A1E151"
+					item: "create:asurine"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "4003D3C2318A1198"
+					item: "create:ochrum"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "333F680C2A414A37"
+					item: "create:limestone"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "7B84394A85A07A37"
+					item: "create:scoria"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "66871302D69AEA93"
+					item: "create:scorchia"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.architect_age.quests2.title}"
+			x: 1.5d
+			y: 0.0d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.architect_age.subtitle}"]
+	title: "{ftbquests.chapter.architect_age.title}"
+}

@@ -1,0 +1,245 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "baubley_heart_canisters"
+	group: "668E3EA3A7A91B79"
+	icon: "bhc:red_heart_canister"
+	id: "698AD267A8F9AB1B"
+	images: [
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 64.0d
+			hover: [ ]
+			image: "minecraft:textures/gui/presets/end_bg.png"
+			rotation: 0.0d
+			width: 64.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["0EDA3F726D445492"]
+			id: "5B3FE69985D5895E"
+			subtitle: "{ftbquests.chapter.baubley_heart_canisters.quests0.subtitle}"
+			tasks: [
+				{
+					id: "71C8A76279FFD01A"
+					item: "bhc:canister"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.baubley_heart_canisters.quests0.title}"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5F0954BDC6CBA6F5"]
+			hide: false
+			id: "0EDA3F726D445492"
+			rewards: [
+				{
+					id: "64ABCA5A96EFFEF3"
+					item: "quark:apple_crate"
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.baubley_heart_canisters.quests1.subtitle}"
+			tasks: [
+				{
+					id: "3ED74372F602BC88"
+					item: "bhc:red_heart"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.baubley_heart_canisters.quests1.title}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"5B3FE69985D5895E"
+				"749E99B2BD61D8E2"
+				"5B715E5E04EE7D46"
+			]
+			id: "2C2052B05312D003"
+			subtitle: "{ftbquests.chapter.baubley_heart_canisters.quests2.subtitle}"
+			tasks: [
+				{
+					id: "1542CE37A5417578"
+					item: "bhc:red_heart_canister"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.baubley_heart_canisters.quests2.title}"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0EDA3F726D445492"]
+			id: "5B715E5E04EE7D46"
+			subtitle: "{ftbquests.chapter.baubley_heart_canisters.quests3.subtitle}"
+			tasks: [
+				{
+					id: "19E141AA958282A0"
+					item: "bhc:relic_apple"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.baubley_heart_canisters.quests3.title}"
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0EDA3F726D445492"]
+			description: ["{ftbquests.chapter.baubley_heart_canisters.quests4.description}"]
+			id: "749E99B2BD61D8E2"
+			subtitle: "{ftbquests.chapter.baubley_heart_canisters.quests4.subtitle}"
+			tasks: [
+				{
+					id: "20B6FDD837EEE777"
+					item: "bhc:wither_bone"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.baubley_heart_canisters.quests4.title}"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2C2052B05312D003"]
+			id: "56C41A8465F5F407"
+			rewards: [
+				{
+					id: "1E1FA3985B49A5A0"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "{ftbquests.chapter.baubley_heart_canisters.quests5.subtitle}"
+			tasks: [
+				{
+					count: 9L
+					id: "6F2F2C0BC53D9EBB"
+					item: "bhc:red_heart_canister"
+					type: "item"
+				}
+				{
+					count: 10L
+					id: "203CAFC2E16EE623"
+					item: "bhc:yellow_heart_canister"
+					type: "item"
+				}
+				{
+					count: 10L
+					id: "7610D268D6C28512"
+					item: "bhc:green_heart_canister"
+					type: "item"
+				}
+				{
+					count: 10L
+					id: "0D449ECE1BFFF503"
+					item: "bhc:blue_heart_canister"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.baubley_heart_canisters.quests5.title}"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"{ftbquests.chapter.baubley_heart_canisters.quests6.description0}"
+				""
+				"{ftbquests.chapter.baubley_heart_canisters.quests6.description2}"
+				"{@pagebreak}"
+				"{ftbquests.chapter.baubley_heart_canisters.quests6.description4}"
+				""
+				"{ftbquests.chapter.baubley_heart_canisters.quests6.description6}"
+				""
+				"{ftbquests.chapter.baubley_heart_canisters.quests6.description8}"
+				""
+				"{ftbquests.chapter.baubley_heart_canisters.quests6.description10}"
+				""
+				"{ftbquests.chapter.baubley_heart_canisters.quests6.description12}"
+				""
+				"{ftbquests.chapter.baubley_heart_canisters.quests6.description14}"
+			]
+			hide: true
+			id: "5F0954BDC6CBA6F5"
+			rewards: [
+				{
+					id: "6A855529202974C7"
+					type: "xp"
+					xp: 250
+				}
+			]
+			subtitle: "{ftbquests.chapter.baubley_heart_canisters.quests6.subtitle}"
+			tasks: [
+				{
+					id: "43474A762DF0A989"
+					item: "bhc:heart_amulet"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.baubley_heart_canisters.quests6.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["56C41A8465F5F407"]
+			id: "6553C33C339FEFFD"
+			rewards: [
+				{
+					id: "4619102FDA9ABCC9"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "{ftbquests.chapter.baubley_heart_canisters.quests7.subtitle}"
+			tasks: [
+				{
+					id: "04ADD001A71D755F"
+					item: "bhc:blade_of_vitality"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.baubley_heart_canisters.quests7.title}"
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["6553C33C339FEFFD"]
+			description: [
+				"{ftbquests.chapter.baubley_heart_canisters.quests8.description0}"
+				""
+				"{ftbquests.chapter.baubley_heart_canisters.quests8.description2}"
+			]
+			icon: "bhc:soul_heart_amulet"
+			id: "6CC58FAF18F3E476"
+			subtitle: "{ftbquests.chapter.baubley_heart_canisters.quests8.subtitle}"
+			tasks: [
+				{
+					id: "6E80A1F469BBF2A5"
+					item: "bhc:soul_heart_amulet"
+					type: "item"
+				}
+				{
+					id: "41B2C3CCF946B115"
+					item: "bhc:soul_heart_canister"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.baubley_heart_canisters.quests8.title}"
+			x: 0.0d
+			y: 9.0d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.baubley_heart_canisters.subtitle}"]
+	title: "{ftbquests.chapter.baubley_heart_canisters.title}"
+}

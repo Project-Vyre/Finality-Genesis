@@ -1,0 +1,182 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "age_of_enchanting"
+	group: ""
+	icon: "create_enchantment_industry:disenchanter"
+	id: "322C04DA7021D462"
+	images: [
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 64.0d
+			hover: [ ]
+			image: "minecraft:textures/gui/presets/end_bg.png"
+			rotation: 0.0d
+			width: 64.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"405F80F5E78FF024"
+				"0CD722C2B48DF862"
+				"4196F75FB2342B67"
+			]
+			description: [
+				"{ftbquests.chapter.age_of_enchanting.quests0.description0}"
+				""
+				"{ftbquests.chapter.age_of_enchanting.quests0.description2}"
+			]
+			id: "3A0ED0D927D456A8"
+			rewards: [
+				{
+					count: 18
+					id: "14AE78429B7E2856"
+					item: "create:experience_block"
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.age_of_enchanting.quests0.subtitle}"
+			tasks: [
+				{
+					id: "52A3367D23F79891"
+					item: "create_enchantment_industry:disenchanter"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.age_of_enchanting.quests0.title}"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["187E2B3FDE19DD4D"]
+			description: [
+				"{ftbquests.chapter.age_of_enchanting.quests1.description0}"
+				""
+				"{ftbquests.chapter.age_of_enchanting.quests1.description2}"
+				""
+				"{ftbquests.chapter.age_of_enchanting.quests1.description4}"
+				"{ftbquests.chapter.age_of_enchanting.quests1.description5}"
+				"{ftbquests.chapter.age_of_enchanting.quests1.description6}"
+				""
+				"{ftbquests.chapter.age_of_enchanting.quests1.description8}"
+			]
+			id: "405F80F5E78FF024"
+			subtitle: "{ftbquests.chapter.age_of_enchanting.quests1.subtitle}"
+			tasks: [
+				{
+					id: "0BDB98F1DD6AC60A"
+					title: "{ftbquests.chapter.age_of_enchanting.quests1.tasks0.title}"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"405F80F5E78FF024"
+				"78AB1F02F29D15E3"
+				"0CD722C2B48DF862"
+			]
+			dependency_requirement: "all_started"
+			description: [
+				"{ftbquests.chapter.age_of_enchanting.quests2.description0}"
+				""
+				"{ftbquests.chapter.age_of_enchanting.quests2.description2}"
+			]
+			hide: true
+			id: "27AB9AEF6FC1F0AA"
+			rewards: [
+				{
+					count: 18
+					id: "1EE0109FA6F09266"
+					item: "create:experience_block"
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.age_of_enchanting.quests2.subtitle}"
+			tasks: [
+				{
+					id: "71D886524CB61576"
+					item: "create_enchantment_industry:printer"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.age_of_enchanting.quests2.title}"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"405F80F5E78FF024"
+				"16FA2F3F79C9F5B3"
+			]
+			id: "2B228A91B4DA2F9E"
+			rewards: [
+				{
+					id: "047202FCDB3652A5"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "{ftbquests.chapter.age_of_enchanting.quests3.subtitle}"
+			tasks: [
+				{
+					id: "7238D68E4F04E453"
+					item: "create_enchantment_industry:enchanting_guide"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.age_of_enchanting.quests3.title}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["405F80F5E78FF024"]
+			description: [
+				"{ftbquests.chapter.age_of_enchanting.quests4.description0}"
+				""
+				"{ftbquests.chapter.age_of_enchanting.quests4.description2}"
+			]
+			icon: "create_enchantment_industry:hyper_experience_bottle"
+			id: "4AC144AE5EFA463E"
+			rewards: [
+				{
+					id: "38B9BA8EAA053FF1"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "{ftbquests.chapter.age_of_enchanting.quests4.subtitle}"
+			tasks: [
+				{
+					id: "3195CC28ECB57071"
+					item: "minecraft:lapis_lazuli"
+					type: "item"
+				}
+				{
+					id: "4E30A91221F4FF0B"
+					item: "minecraft:glow_ink_sac"
+					type: "item"
+				}
+				{
+					id: "0C4E26C0C91B3FB2"
+					item: "create_enchantment_industry:hyper_experience_bottle"
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.age_of_enchanting.quests4.title}"
+			x: 0.0d
+			y: -1.5d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.age_of_enchanting.subtitle}"]
+	title: "{ftbquests.chapter.age_of_enchanting.title}"
+}

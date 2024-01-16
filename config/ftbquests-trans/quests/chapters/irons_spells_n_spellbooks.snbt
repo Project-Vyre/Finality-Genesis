@@ -1,0 +1,222 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "irons_spells_n_spellbooks"
+	group: "6855847200ADBE3A"
+	icon: {
+		Count: 1b
+		id: "irons_spellbooks:archevoker_chestplate"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "251F07C724E52052"
+	images: [
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 64.0d
+			hover: [ ]
+			image: "minecraft:textures/gui/presets/end_bg.png"
+			rotation: 0.0d
+			width: 64.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"{ftbquests.chapter.irons_spells_n_spellbooks.quests0.description0}"
+				""
+				"{ftbquests.chapter.irons_spells_n_spellbooks.quests0.description2}"
+				""
+				"{ftbquests.chapter.irons_spells_n_spellbooks.quests0.description4}"
+				""
+				"{ftbquests.chapter.irons_spells_n_spellbooks.quests0.description6}"
+			]
+			hide: true
+			id: "00F0CF7B2B22C2FA"
+			subtitle: "{ftbquests.chapter.irons_spells_n_spellbooks.quests0.subtitle}"
+			tasks: [
+				{
+					id: "3576E88074C8D715"
+					item: {
+						Count: 1b
+						id: "patchouli:guide_book"
+						tag: {
+							"patchouli:book": "irons_spellbooks:iss_guide_book"
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.irons_spells_n_spellbooks.quests0.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00F0CF7B2B22C2FA"]
+			description: ["{ftbquests.chapter.irons_spells_n_spellbooks.quests1.description}"]
+			icon: "irons_spellbooks:inscription_table"
+			id: "368F73BCAD1CE8B1"
+			subtitle: "{ftbquests.chapter.irons_spells_n_spellbooks.quests1.subtitle}"
+			tasks: [
+				{
+					id: "0FEC4B492DEE3960"
+					item: "irons_spellbooks:inscription_table"
+					type: "item"
+				}
+				{
+					id: "469F5A6821D49D8F"
+					item: {
+						Count: 1b
+						id: "irons_spellbooks:copper_spell_book"
+						tag: {
+							ISB_spellbook: {
+								activeSpellIndex: -1
+								spellSlots: 4
+								spells: [ ]
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0CF9DE6BF044C116"
+					item: {
+						Count: 1b
+						id: "irons_spellbooks:iron_spell_book"
+						tag: {
+							ISB_spellbook: {
+								activeSpellIndex: -1
+								spellSlots: 5
+								spells: [ ]
+							}
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.irons_spells_n_spellbooks.quests1.title}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["368F73BCAD1CE8B1"]
+			description: [
+				"{ftbquests.chapter.irons_spells_n_spellbooks.quests2.description0}"
+				""
+				"{ftbquests.chapter.irons_spells_n_spellbooks.quests2.description2}"
+			]
+			icon: "irons_spellbooks:scroll_forge"
+			id: "65FC75EC2229D62F"
+			subtitle: "{ftbquests.chapter.irons_spells_n_spellbooks.quests2.subtitle}"
+			tasks: [
+				{
+					id: "4028CCE91B440844"
+					item: "irons_spellbooks:scroll_forge"
+					type: "item"
+				}
+				{
+					id: "74DB4FD146FC93C0"
+					item: {
+						Count: 1b
+						id: "irons_spellbooks:gold_spell_book"
+						tag: {
+							ISB_spellbook: {
+								activeSpellIndex: -1
+								spellSlots: 6
+								spells: [ ]
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "01F9EE3CE5CC2419"
+					item: {
+						Count: 1b
+						id: "irons_spellbooks:diamond_spell_book"
+						tag: {
+							ISB_spellbook: {
+								activeSpellIndex: -1
+								spellSlots: 8
+								spells: [ ]
+							}
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.irons_spells_n_spellbooks.quests2.title}"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["65FC75EC2229D62F"]
+			description: [
+				"{ftbquests.chapter.irons_spells_n_spellbooks.quests3.description0}"
+				""
+				"{ftbquests.chapter.irons_spells_n_spellbooks.quests3.description2}"
+			]
+			icon: "irons_spellbooks:arcane_anvil"
+			id: "6FE2662391274D47"
+			subtitle: "{ftbquests.chapter.irons_spells_n_spellbooks.quests3.subtitle}"
+			tasks: [
+				{
+					id: "7ADC89702FE858ED"
+					item: "irons_spellbooks:arcane_anvil"
+					type: "item"
+				}
+				{
+					id: "3EBE8EFBBFAF2CEF"
+					item: {
+						Count: 1b
+						id: "irons_spellbooks:netherite_spell_book"
+						tag: {
+							ISB_spellbook: {
+								activeSpellIndex: -1
+								spellSlots: 10
+								spells: [ ]
+							}
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{ftbquests.chapter.irons_spells_n_spellbooks.quests3.title}"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6FE2662391274D47"]
+			id: "0C9ADF4455034B25"
+			tasks: [
+				{
+					id: "75D3BE374F8863ED"
+					item: {
+						Count: 1b
+						id: "irons_spellbooks:dragonskin_spell_book"
+						tag: {
+							ISB_spellbook: {
+								activeSpellIndex: -1
+								spellSlots: 10
+								spells: [ ]
+							}
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.irons_spells_n_spellbooks.subtitle}"]
+	title: "{ftbquests.chapter.irons_spells_n_spellbooks.title}"
+}

@@ -1,0 +1,574 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "gateways_to_eternity"
+	group: "6855847200ADBE3A"
+	icon: {
+		Count: 1b
+		id: "gateways:gate_pearl"
+		tag: {
+			gateway: "gateways:enderman_gate_large"
+		}
+	}
+	id: "5882F56349208E20"
+	images: [
+		{
+			click: ""
+			corner: false
+			dev: false
+			height: 64.0d
+			hover: [ ]
+			image: "minecraft:textures/gui/presets/end_bg.png"
+			rotation: 0.0d
+			width: 64.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["13186E7B0D6B6115"]
+			description: [
+				"{ftbquests.chapter.gateways_to_eternity.quests0.description0}"
+				""
+				"{ftbquests.chapter.gateways_to_eternity.quests0.description2}"
+				""
+				"{ftbquests.chapter.gateways_to_eternity.quests0.description4}"
+				""
+				"{ftbquests.chapter.gateways_to_eternity.quests0.description6}"
+				""
+				"{ftbquests.chapter.gateways_to_eternity.quests0.description8}"
+			]
+			hide_dependent_lines: true
+			id: "61165E1354B3FC40"
+			rewards: [
+				{
+					id: "37113E6A32F94873"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:enderman_gate_small"
+						}
+					}
+					type: "item"
+				}
+			]
+			subtitle: "{ftbquests.chapter.gateways_to_eternity.quests0.subtitle}"
+			tasks: [
+				{
+					id: "1918ADF257E18F3D"
+					title: "{ftbquests.chapter.gateways_to_eternity.quests0.tasks0.title}"
+					type: "checkmark"
+				}
+			]
+			title: "{ftbquests.chapter.gateways_to_eternity.quests0.title}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["61165E1354B3FC40"]
+			id: "17D234C6DC2AEAC7"
+			tasks: [
+				{
+					id: "326F6574E9DF6E95"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "kubejs:drowned_gate_small"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["17D234C6DC2AEAC7"]
+			id: "1604FB88E05B0441"
+			tasks: [
+				{
+					id: "474AB8F08DC62BEF"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "kubejs:drowned_gate"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1604FB88E05B0441"]
+			id: "6D2433D3784274DA"
+			tasks: [
+				{
+					id: "2CA64E46157D70F5"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "kubejs:drowned_gate_large"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["61165E1354B3FC40"]
+			id: "30917EE77BBEE538"
+			tasks: [
+				{
+					id: "7B946499823EF568"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "kubejs:hoglin_gate_small"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["30917EE77BBEE538"]
+			id: "0560745BDD85C048"
+			tasks: [
+				{
+					id: "505D6D2EFFE6C775"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "kubejs:hoglin_gate"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0560745BDD85C048"]
+			id: "65ADEEB43EE979B6"
+			tasks: [
+				{
+					id: "6AA37B7F2EE34F2D"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "kubejs:hoglin_gate_large"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["44F6654CEAB6537E"]
+			id: "4092C0107CA068BA"
+			tasks: [
+				{
+					id: "4466C7E6062AFFC8"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "apotheosis:boss_gate_small"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["61165E1354B3FC40"]
+			id: "4E29BE72C8FBA6C2"
+			tasks: [
+				{
+					id: "39AC0CF50E0161BF"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "kubejs:husk_gate_small"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4E29BE72C8FBA6C2"]
+			id: "0A8E724CF441FA16"
+			tasks: [
+				{
+					id: "0A1A113A22EF2031"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "kubejs:husk_gate"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0A8E724CF441FA16"]
+			id: "42409708B766F94C"
+			tasks: [
+				{
+					id: "0A2758C2FE2F4ED1"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "kubejs:husk_gate_large"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["61165E1354B3FC40"]
+			id: "20FF00789D0ADD48"
+			tasks: [
+				{
+					id: "3FC678874C013BEE"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:zombie_gate_small"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["20FF00789D0ADD48"]
+			id: "1F51C6F3D6C4CDF0"
+			tasks: [
+				{
+					id: "1AF137542860C40B"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:zombie_gate"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1F51C6F3D6C4CDF0"]
+			id: "2DE9D314ED0AD49C"
+			tasks: [
+				{
+					id: "48402D0218348755"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:zombie_gate_large"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["61165E1354B3FC40"]
+			id: "1A7614D2517AB280"
+			tasks: [
+				{
+					id: "2057714E1A7E054B"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:witch_gate_small"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1A7614D2517AB280"]
+			id: "63EB9837EBD48510"
+			tasks: [
+				{
+					id: "4B2E2386A39FB8D7"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:witch_gate"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["63EB9837EBD48510"]
+			id: "44F6654CEAB6537E"
+			tasks: [
+				{
+					id: "6855CA5FDAA0BAE7"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:witch_gate_large"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["61165E1354B3FC40"]
+			id: "38EBCCB198F2F7FB"
+			tasks: [
+				{
+					id: "22C495261A4F0DE7"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:ghast_gate_small"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["38EBCCB198F2F7FB"]
+			id: "2EBEDCFAF5B1924E"
+			tasks: [
+				{
+					id: "041950ED02646556"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:ghast_gate"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2EBEDCFAF5B1924E"]
+			id: "5C32C61A65AAEBA1"
+			tasks: [
+				{
+					id: "4EFFE654C693FDC2"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:ghast_gate_large"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["61165E1354B3FC40"]
+			id: "51A8AB5828148B82"
+			tasks: [
+				{
+					id: "096FDC325BB794A2"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:magma_cube_gate_small"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["51A8AB5828148B82"]
+			id: "3BD9201AFF5B3284"
+			tasks: [
+				{
+					id: "72821F90B3CC769E"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:magma_cube_gate"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3BD9201AFF5B3284"]
+			id: "7512A058C1EC1878"
+			tasks: [
+				{
+					id: "6C427B2EF6537BBE"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:magma_cube_gate_large"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: -4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["61165E1354B3FC40"]
+			id: "71E994294ECA17C2"
+			tasks: [
+				{
+					id: "5E29AFCBAE5E04AE"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:creeper_gate_small"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["71E994294ECA17C2"]
+			id: "6CD1C00D96FFE328"
+			tasks: [
+				{
+					id: "5E8692838D531C72"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:creeper_gate"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6CD1C00D96FFE328"]
+			id: "345B7EA5239C5194"
+			tasks: [
+				{
+					id: "099571B6BCFCF9C9"
+					item: {
+						Count: 1b
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:creeper_gate_large"
+						}
+					}
+					match_nbt: true
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.5d
+		}
+	]
+	subtitle: ["{ftbquests.chapter.gateways_to_eternity.subtitle}"]
+	title: "{ftbquests.chapter.gateways_to_eternity.title}"
+}
