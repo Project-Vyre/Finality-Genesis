@@ -15,19 +15,19 @@ ServerEvents.recipes(event => {
     event.shapeless('minecraft:beetroot_soup', [
         '6x minecraft:beetroot',
         'minecraft:bowl'
-    ]).id('minecraft:beetroot_soup')
+    ]).id('finality:beetroot_soup')
     event.shapeless('minecraft:mushroom_stew', [
         'minecraft:red_mushroom',
         'minecraft:brown_mushroom',
         'minecraft:bowl'
-    ]).id('minecraft:mushroom_stew')
+    ]).id('finality:mushroom_stew')
     event.shapeless('minecraft:rabbit_stew', [
         'minecraft:baked_potato',
         ['minecraft:brown_mushroom', 'minecraft:red_mushroom'],
         'minecraft:rabbit',
         'minecraft:bowl',
         'minecraft:carrot',
-    ]).id('minecraft:rabbit_stew')
+    ]).id('finality:rabbit_stew_from_mushroom')
 })
 
 /**
