@@ -346,20 +346,12 @@ ClientEvents.lang('en_us', event => {
         "item.kubejs.high_entropy_alloy.tooltip.behaviour1": "Used in blocks and items that _break reality_.",
         "item.kubejs.final_pickaxe.tooltip": "FINAL PICKAXE",
         "item.kubejs.final_pickaxe.tooltip.summary": "Tear through mountains without a care in the world.",
-        "item.kubejs.final_pickaxe.tooltip.condition1": "Caution!",
-        "item.kubejs.final_pickaxe.tooltip.behaviour1": "_Apotheosis_ can make this tool _destroy a chunk at a time_. _It does not matter what block type it is!_ Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_.",
         "item.kubejs.final_axe.tooltip": "FINAL AXE",
         "item.kubejs.final_axe.tooltip.summary": "Nature's bane. Deforestation manifested.",
-        "item.kubejs.final_axe.tooltip.condition1": "Caution!",
-        "item.kubejs.final_axe.tooltip.behaviour1": "_Apotheosis_ can make this tool _destroy a chunk at a time_. _It does not matter what block type it is!_ Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_.",
         "item.kubejs.final_shovel.tooltip": "FINAL SHOVEL",
         "item.kubejs.final_shovel.tooltip.summary": "Terraform with ease.",
-        "item.kubejs.final_shovel.tooltip.condition1": "Caution!",
-        "item.kubejs.final_shovel.tooltip.behaviour1": "_Apotheosis_ can make this tool _destroy a chunk at a time_. _It does not matter what block type it is!_ Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_.",
         "item.kubejs.final_hoe.tooltip": "FINAL HOE",
         "item.kubejs.final_hoe.tooltip.summary": "_Life_ and _death_ in one. Farm for _eternity_.",
-        "item.kubejs.final_hoe.tooltip.condition1": "Caution!",
-        "item.kubejs.final_hoe.tooltip.behaviour1": "_Apotheosis_ can make this tool _destroy a chunk at a time_. _It does not matter what block type it is!_ Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_.",
         "item.kubejs.final_sword.tooltip": "FINAL SWORD",
         "item.kubejs.final_sword.tooltip.summary": "Wield the _power_ of the event horizon in your hands.",
         "item.kubejs.final_sword.tooltip.condition1": "Caution!",
@@ -393,6 +385,47 @@ ClientEvents.lang('en_us', event => {
         "item.kubejs.final_boots.tooltip.condition1": "On wearing the full set",
         "item.kubejs.final_boots.tooltip.behaviour1": "_Cancels death_. You are also _invulnerable_ to _most, if not all_ forms of damage, including falling out of the world."
     })
+    event.addAll(
+        'kubejs',
+        createTooltip('minecraft:glowstone_dust')
+            .addSummary('The dust form of Glowstone. An essential ingredient in crafting blocks that emit light as well as _potion brewing_.')
+            .addBehaviour([
+                'Renewal',
+                'Can be obtained from defeating _witches_ or applying a _Night Vision Potion_ to some _Cinder Flour_.'
+            ])
+            .addBehaviour([
+                'Uses in Potion Brewing',
+                'Increases the _intensity_ of a potion. Also used in brewing a _Thick Potion_.'
+            ])
+            .setPalette($Palette.YELLOW)
+            .build()
+    )
+    event.addAll(
+        'kubejs',
+        createTooltip('minecraft:gunpowder')
+            .addSummary('An essential ingredient in both the creation of _explosives_ and _splash potions_.')
+            .addBehaviour([
+                'Renewal',
+                'Can be obtained from defeating _Creepers_ or washing _Crushed Raw Zinc_.'
+            ])
+            .setPalette($Palette.GRAY)
+            .build()
+    )
+    event.addAll(
+        'kubejs',
+        createTooltip('minecraft:redstone')
+            .addSummary('An embodiment of _game logic_ and can be used in many logic related components.')
+            .addBehaviour([
+                'Renewal',
+                'Can be obtained from defeating _witches_ or applying a _Strength Potion_ to some _Cinder Flour_.'
+            ])
+            .addBehaviour([
+                'Uses in Potion Brewing',
+                'Increases the _duration_ of a potion. Also used in brewing a _Mundane Potion_.'
+            ])
+            .setPalette($Palette.RED)
+            .build()
+    )
     event.addAll(
         'kubejs',
         createTooltip('kubejs:copper_coin')
@@ -450,6 +483,49 @@ ClientEvents.lang('en_us', event => {
             .build()
     )
     */
+    if (Platform.isLoaded('apotheosis')) {
+        event.addAll(
+            'kubejs',
+            createTooltip('minecraft:spawner')
+                .addSummary('A block that spawns entities. However, it\'s _properties_ and _traits_ can be edited with the use of _certain_ items.')
+                .addBehaviour([
+                    'On R-Click with Nether Star',
+                    '_No longer requires_ a player to be present.'
+                ])
+                .addBehaviour([
+                    'On R-Click with Soul Lantern',
+                    '_Ignores_ light level.'
+                ])
+                .addBehaviour([
+                    'On R-Click with Ghast Tear',
+                    'Adds _two_ maximum allowed entities until a limit is reached. This _cannot_ exceed 32.'
+                ])
+                .addBehaviour([
+                    'On R-Click with Spider Eye',
+                    'Adds _one_ to the maximum amount of entities spawned at once.'
+                ])
+                .addBehaviour([
+                    'On R-Click with Wool',
+                    'Makes all spawned entities _silent_.'
+                ])
+                .addBehaviour([
+                    'On R-Click with Chorus Fruit',
+                    'Disables mob AI.'
+                ])
+                .setPalette($Palette.PURPLE)
+                .build()
+        )
+        event.addAll('kubejs', {
+            "item.kubejs.final_pickaxe.tooltip.condition1": "Caution!",
+            "item.kubejs.final_pickaxe.tooltip.behaviour1": "_Apotheosis_ can make this tool _destroy a chunk at a time_. _It does not matter what block type it is!_ Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_.",
+            "item.kubejs.final_axe.tooltip.condition1": "Caution!",
+            "item.kubejs.final_axe.tooltip.behaviour1": "_Apotheosis_ can make this tool _destroy a chunk at a time_. _It does not matter what block type it is!_ Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_.",
+            "item.kubejs.final_shovel.tooltip.condition1": "Caution!",
+            "item.kubejs.final_shovel.tooltip.behaviour1": "_Apotheosis_ can make this tool _destroy a chunk at a time_. _It does not matter what block type it is!_ Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_.",
+            "item.kubejs.final_hoe.tooltip.condition1": "Caution!",
+            "item.kubejs.final_hoe.tooltip.behaviour1": "_Apotheosis_ can make this tool _destroy a chunk at a time_. _It does not matter what block type it is!_ Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_."
+        })
+    }
     if (Platform.isLoaded('malum')) {
         event.addAll('kubejs', {
             'item.kubejs.final_scythe.tooltip.condition2': 'Soul Piercing',
@@ -459,6 +535,10 @@ ClientEvents.lang('en_us', event => {
         })
     }
     event.addAll('create', {
+        "item.create.wrench.tooltip.condition3": "On R-Click on Mechanical Belt end",
+        "item.create.wrench.tooltip.behaviour3": "Safely _shortens_ a Mechanical Belt _without breaking_ its entire length. _DO NOT_ sneak while doing this unless if you intend on picking up the full belt.",
+        "item.create.wrench.tooltip.condition4": "On R-Click on extra Shafts inside Mechanical Belts",
+        "item.create.wrench.tooltip.behaviour4": "Safely _removes_ the extra shaft _without breaking_ the entire belt.",
         "block.create.seat.tooltip": "SEAT",
         "block.create.seat.tooltip.summary": "Sit yourself down and enjoy the ride! Will anchor a player onto a _moving contraption_. Great for static furniture too! Comes in a variety of colours.",
         "block.create.seat.tooltip.condition1": "R-Click on Seat",
