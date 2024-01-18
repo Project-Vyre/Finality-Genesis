@@ -1,7 +1,7 @@
 // priority: 10
 
 /**
- * @file Handler for core recipes.
+ * @file Core server handler. Formerly had core recipes.
  * 
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  * @author squoshi <https://github.com/squoshi> Helped a lot early on in development. Thank you. Also helped translate my ideas into scripts!

@@ -562,7 +562,7 @@ function allMessages(event) {
                 Component.of('two ').color(CreateStandard),
                 Component.of('separate belts ').color(CreateHighlighted),
                 Component.of('into each other by ').color(CreateStandard),
-                Component.of('right-clicking').aqua(),
+                Component.of('right-clicking ').aqua(),
                 Component.of('with a ').color(CreateStandard),
                 Component.of('Mechanical Belt ').color(CreateHighlighted),
                 Component.of('in your hand to ').color(CreateStandard),
