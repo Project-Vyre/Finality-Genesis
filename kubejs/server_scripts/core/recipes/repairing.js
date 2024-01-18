@@ -1,5 +1,3 @@
-// requires: kubejs_create
-
 /**
  * @file Repairing item recipes module
  * @author CelestialAbyss <https://github.com/CelestialAbyss>

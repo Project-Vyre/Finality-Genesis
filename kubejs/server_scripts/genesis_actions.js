@@ -1,4 +1,6 @@
 // priority: 6
+// requires: supplementaries
+// requires: graveyard
 
 /**
  * @file Server handler for certain player actions...

@@ -1,5 +1,9 @@
 // priority: 10
 
+/**
+ * @file Item tagging for use with recipes.
+ */
+
 ServerEvents.tags('item', event => {
     // these should be accepted in the crushing wheel recipe...
     event.add('forge:stone', [

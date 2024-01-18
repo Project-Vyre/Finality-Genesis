@@ -10,7 +10,7 @@
  * @author ladylexxie <https://github.com/ladylexxie> Helped a lot very early on. Thank you.
  */
 
-Platform.mods.kubejs.name = 'Finality'
+Platform.mods.kubejs.name = 'FinalityJS'
 
 console.info('Loading Finality startup scripts...')
 
