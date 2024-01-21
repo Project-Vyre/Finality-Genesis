@@ -27,5 +27,6 @@
   "advancements.tempad.tempad.description": "Obtain a Tempad",
   "advancements.tempad.he_who_remains": "The Citadel at the End of Time",
   "advancements.tempad.he_who_remains.description": "Obtain 'He Who Remains'' Tempad",
-  "subtitles.tempad.entity.timedoor.open": "Timedoor opens"
+  "subtitles.tempad.entity.timedoor.open": "Timedoor opens",
+  "entity.tempad.timedoor": "Timedoor"
 }
