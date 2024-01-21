@@ -70,6 +70,25 @@ ItemEvents.foodEaten(event => {
     }
 })
 
+BlockEvents.rightClicked(event => {
+    const { block, level, player } = event
+    const { x, y, z } = player
+    if (block.id == 'minecraft:sculk_shrieker' && player.mainHandItem == 'minecraft:echo_shard') {
+        player.inventory.clear('minecraft:echo_shard')
+        block.up.createEntity('minecraft:warden').mergeNbt({
+            PersistenceRequired: 1,
+            Brain: {
+                memories: {
+                    "minecraft:dig_cooldown": {
+                        value: {},
+                        ttl: 1200
+                    }
+                }
+            }
+        }).spawn()
+    }
+})
+
 /*
 if (Platform.isLoaded('some_assembly_required') &&
     Platform.isLoaded('artifacts')

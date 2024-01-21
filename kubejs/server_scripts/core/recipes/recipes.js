@@ -249,9 +249,11 @@ ServerEvents.recipes(event => {
         P: '#minecraft:planks'
     }).id('minecraft:grindstone')
     event.shapeless('2x minecraft:diorite', [
-        '2x minecraft:cobblestone',
-        '2x #forge:gems/quartz'
-    ]).id('minecraft:diorite')
+        'minecraft:cobblestone',
+        '#forge:gems/quartz',
+        '#forge:gems/quartz',
+        'minecraft:cobblestone'
+    ]).id('finality:crafting/shapeless_diorite')
     event.shapeless(
         '4x minecraft:quartz',
         '#forge:storage_blocks/quartz'
@@ -419,6 +421,10 @@ ServerEvents.recipes(event => {
     event.recipes.create.item_application('minecraft:chest_minecart', [
         '#forge:chests/wooden', 'minecraft:minecart'
     ]).id('finality:item_application/chest_minecart')
+    event.recipes.create.item_application('minecraft:sculk_sensor', [
+        'minecraft:warped_roots',
+        'minecraft:echo_shard'
+    ]).id('finality:item_application/sculk_sensor_conversion')
     /**
      * SPLASHING
      */
@@ -430,6 +436,10 @@ ServerEvents.recipes(event => {
         'create:mechanical_piston',
         'create:sticky_mechanical_piston'
     ).id('finality:splashing/sticky_mechanical_piston')
+    event.recipes.create.splashing([
+        Item.of('minecraft:glowstone').withChance(0.25),
+        Item.of('minecraft:bone').withChance(0.12)
+    ], 'minecraft:soul_soil').id('finality:splashing/soul_soil')
     /**
      * MILLING
      */
@@ -464,7 +474,7 @@ ServerEvents.recipes(event => {
     ]).id('finality:mixing/bulk_netherrack_from_cobblestone')
     event.recipes.create.mixing('8x minecraft:prismarine', [
         '8x minecraft:cobblestone',
-        Fluid.of('create:potion', 250, '{Potion:"REGULAR",Potion:"minecraft:water_breathing"}')
+        Fluid.of('create:potion', 1000, '{Bottle:"REGULAR",Potion:"minecraft:water_breathing"}')
     ]).id('finality:mixing/bulk_prismarine_from_cobblestone')
     event.recipes.create.mixing('4x minecraft:netherite_ingot', [
         '4x minecraft:netherite_scrap',
@@ -484,6 +494,10 @@ ServerEvents.recipes(event => {
         Fluid.water(1000),
         Fluid.lava(1000)
     ]).id('finality:mixing/cobblestone')
+    event.recipes.create.mixing('8x minecraft:glowstone_dust', [
+        '8x create:cinder_flour',
+        Fluid.of('create:potion', 200, '{Bottle:"REGULAR",Potion:"minecraft:night_vision"}')
+    ]).id('finality:mixing/bulk_glowstone_from_cinder_flour')
     /**
      * PRESSING
      */
@@ -492,20 +506,21 @@ ServerEvents.recipes(event => {
     /**
      * >-----<
      */
-    // Chromatic Compound recipe restoration
-    event.recipes.create.mixing('create:chromatic_compound', [
-        '3x minecraft:glowstone_dust',
-        '3x create:powdered_obsidian',
-        'create:polished_rose_quartz'
-    ]).superheated().id('create:mixing/chromatic_compound')
-    event.recipes.create.item_application('create:refined_radiance_casing', [
-        '#forge:stripped_logs',
-        'create:refined_radiance'
-    ]).id('create:refined_radiance_casing')
-    event.recipes.create.item_application('create:shadow_steel_casing', [
-        '#forge:stripped_logs',
-        'create:shadow_steel'
-    ]).id('create:shadow_steel_casing')
+    // Shimmer Recipes
+    event.recipes.create.mixing(Fluid.of('kubejs:shimmer', 1000), [
+        'create:refined_radiance',
+        Fluid.of('kubejs:condensed_universal_entropy', 500),
+        Fluid.of('minecraft:water', 500)
+    ]).superheated().id('finality:mixing/shimmer_fluid_creation')
+    event.recipes.create.compacting([
+        'create:cinder_flour',
+        Item.of('create:cinder_flour').withChance(0.50),
+        Item.of('minecraft:netherite_scrap').withChance(0.50),
+        Item.of('kubejs:netherite_nugget').withChance(0.12)
+    ], [
+        Fluid.of('kubejs:shimmer', 750),
+        'minecraft:netherrack',
+    ]).id('finality:compacting/netherite_scrap_renewal')
     // Mushroom Stew
     event.recipes.create.filling('minecraft:mushroom_stew', [
         'minecraft:bowl',

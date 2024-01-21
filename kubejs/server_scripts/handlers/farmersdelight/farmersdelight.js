@@ -51,6 +51,10 @@ ServerEvents.recipes(event => {
     event.recipes.minecraft.smoking('farmersdelight:fried_egg', 'minecraft:egg')
         .cookingTime(100)
         .id('farmersdelight:fried_egg_from_smoking')
+    event.recipes.create.item_application('farmersdelight:rich_soil', [
+        'farmersdelight:organic_compost',
+        'minecraft:clock'
+    ]).keepHeldItem().id('finality:farmersdelight/item_application/clock_accelerated_rich_soil')
     if (!Platform.isLoaded('farmersrespite')) {
         event.remove([
             'create_central_kitchen:mixing/lime_green_tea',

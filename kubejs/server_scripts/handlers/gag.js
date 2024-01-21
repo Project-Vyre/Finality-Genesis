@@ -28,4 +28,10 @@ ServerEvents.recipes(event => {
         D: 'minecraft:polished_deepslate',
         A: 'minecraft:amethyst_block'
     }).id('gag:hearthstone')
+    if (Platform.isLoaded('farmersdelight')) {
+        event.recipes.create.item_application('farmersdelight:rich_soil', [
+            'farmersdelight:organic_compost',
+            'gag:time_sand_pouch'
+        ]).keepHeldItem().id('finality:farmersdelight/item_application/pouch_accelerated_rich_soil')
+    }
 })
