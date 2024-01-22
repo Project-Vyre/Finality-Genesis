@@ -437,6 +437,7 @@ REIEvents.information(event => {
         event.addItem(['farmersdelight:wild_cabbages',
             'farmersdelight:cabbage_seeds'
         ], 'Acquisition', [
+            '[Finality Tip]',
             'Can be found on beaches.',
             'It looks like a large bush with small yellow flowers on top.'
         ])
@@ -444,6 +445,7 @@ REIEvents.information(event => {
             'farmersdelight:wild_beetroots',
             'minecraft:beetroot_seeds'
         ], 'Acquisition', [
+            '[Finality Tip]',
             'Can be found on beaches.',
             'It is a type of beet with larger leaves.'
         ])
@@ -451,6 +453,7 @@ REIEvents.information(event => {
             'farmersdelight:wild_potatoes',
             'minecraft:potato'
         ], 'Acquisition', [
+            '[Finality Tip]',
             'Can be found in biomes with cold climates. This means that the biome must have a temperature between 0.0 and 0.3.',
             'Similar in appearance to normal Potato patches, but has large flowers.'
         ])
@@ -458,6 +461,7 @@ REIEvents.information(event => {
             'farmersdelight:wild_onions',
             'farmersdelight:onion'
         ], 'Acquisition', [
+            '[Finality Tip]',
             'Can be found in biomes with temperate climates. This means that the biome must have a temperature of 0.3 and 1.0.',
             'It looks like a thick cluster of Allium flowers with an onion bulb under them.'
         ])
@@ -465,6 +469,7 @@ REIEvents.information(event => {
             'farmersdelight:wild_carrots',
             'minecraft:carrot'
         ], 'Acquisition', [
+            '[Finality Tip]',
             'Can be found in biomes with temperate climates. This means that the biome must have a temperature of 0.3 and 1.0.',
             'Looks like a flowering weed with white flowers and has an orange base poking out slightly from the dirt.'
         ])
@@ -472,6 +477,7 @@ REIEvents.information(event => {
             'farmersdelight:wild_tomatoes',
             'farmersdelight:tomato_seeds'
         ], 'Acquisition', [
+            '[Finality Tip]',
             'Can be found in biomes with arid climates. This means that the biome must have a temperature above 1.0.',
             'Looks like a cluster of vines covered in tiny tomatoes.'
         ])
@@ -479,6 +485,7 @@ REIEvents.information(event => {
             'farmersdelight:wild_rice',
             'farmersdelight:rice_panicle'
         ], 'Acquisition', [
+            '[Finality Tip]',
             'Can be found in swamps and jungles in shallow areas of water.',
             'It has yellow grains on the ends of its stalks and is usually two blocks tall.'
         ])
