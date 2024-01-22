@@ -272,6 +272,19 @@ ServerEvents.recipes(event => {
         B: 'minecraft:barrel',
         L: '#forge:leather'
     }).id('finality:crafting/toolbox_from_barrel')
+    event.shaped('minecraft:bell', [
+        'B',
+        'T'
+    ], {
+        B: '#forge:storage_blocks/gold',
+        T: '#forge:plates/gold'
+    }).id('minecraft:bell')
+    event.shaped('kubejs:deconstructor', [
+        'DSS'
+    ], {
+        D: 'minecraft:diamond',
+        S: '#forge:rods/wooden'
+    }).id('finality:deconstructor')
     /**
      * BLASTING
      * 
@@ -531,6 +544,11 @@ ServerEvents.recipes(event => {
         'minecraft:red_mushroom',
         Fluid.of('minecraft:water', 250)
     ]).heated().id('finality:mixing/mushroom_stew')
+    // Golden Apple
+    event.recipes.create.filling('minecraft:golden_apple', [
+        'minecraft:apple',
+        Fluid.of('kubejs:molten_gold', 720)
+    ]).id('finality:filling/golden_apple')
     // netherite nugget related
     event.shaped('minecraft:netherite_ingot', [
         'NNN',

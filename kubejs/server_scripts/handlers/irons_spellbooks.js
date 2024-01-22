@@ -1,5 +1,6 @@
 // requires: irons_spellbooks
 // requires: apotheosis
+// requires: create_enchantment_industry
 // requires: kubejs_create
 
 /**
@@ -71,14 +72,98 @@ ServerEvents.recipes(event => {
             'kubejs:command_block'
         ]).keepHeldItem().id(`finality:irons_spellbooks_ancient_${IRONS_SPELLGEMS[i]}_upgrade`)
     }
-    event.recipes.create.mixing([
-        'irons_spellbooks:arcane_salvage',
-        Item.of('irons_spellbooks:arcane_essence').withChance(0.75),
-        Item.of('irons_spellbooks:cinder_essence').withChance(0.25)
-    ], [
+    // Material Renewal Recipes
+    event.recipes.create.mixing('irons_spellbooks:arcane_essence', [
+        'minecraft:glowstone_dust',
+        'create:cinder_flour',
+        Fluid.of('kubejs:shimmer', 250)
+    ]).id('finality:irons_spellbooks/mixing/arcane_essence')
+    event.recipes.create.mixing('irons_spellbooks:arcane_salvage', [
         'minecraft:netherite_scrap',
         Fluid.of('kubejs:shimmer', 250)
-    ]).id('finality:irons_spellbooks/arcane_salvage_renewal_with_shimmer')
+    ]).id('finality:irons_spellbooks/mixing/arcane_salvage')
+    event.recipes.create.mixing('irons_spellbooks:cinder_essence', [
+        '4x irons_spellbooks:arcane_essence',
+        '2x minecraft:netherite_scrap'
+    ]).superheated().id('finality:irons_spellbooks/mixing/cinder_essence')
+    /**
+     * Arcane Ink Gen
+     */
+    // Arcane Inks mixed from scratch
+    event.recipes.create.mixing(Fluid.of('kubejs:common_arcane_ink'), [
+        'irons_spellbooks:arcane_essence',
+        Fluid.of('create_enchantment_industry:ink')
+    ]).id('finality:irons_spellbooks/mixing/common_arcane_ink')
+    event.recipes.create.mixing(Fluid.of('kubejs:uncommon_arcane_ink'), [
+        '2x irons_spellbooks:arcane_essence',
+        '#minecraft:leaves',
+        Fluid.of('create_enchantment_industry:ink')
+    ]).id('finality:irons_spellbooks/mixing/uncommon_arcane_ink')
+    event.recipes.create.mixing(Fluid.of('kubejs:rare_arcane_ink'), [
+        '6x irons_spellbooks:arcane_essence',
+        '2x minecraft:glow_ink_sac',
+        'minecraft:echo_shard',
+        Fluid.of('create_enchantment_industry:ink')
+    ]).id('finality:irons_spellbooks/mixing/rare_arcane_ink')
+    event.recipes.create.mixing(Fluid.of('kubejs:epic_arcane_ink'), [
+        '8x irons_spellbooks:arcane_essence',
+        '4x minecraft:amethyst_shard',
+        '2x minecraft:echo_shard',
+        Fluid.of('create_enchantment_industry:ink')
+    ]).heated().id('finality:irons_spellbooks/mixing/epic_arcane_ink')
+    event.recipes.create.mixing(Fluid.of('kubejs:legendary_arcane_ink'), [
+        '16x irons_spellbooks:arcane_essence',
+        '8x minecraft:magma_cream',
+        '8x minecraft:glowstone_dust',
+        '4x minecraft:echo_shard',
+        '4x minecraft:amethyst_shard',
+        Fluid.of('create_enchantment_industry:ink')
+    ]).superheated().id('finality:irons_spellbooks/mixing/legendary_arcane_ink')
+    // Arcane Ink upgrading
+    event.recipes.create.mixing(Fluid.of('kubejs:uncommon_arcane_ink'), [
+        '2x irons_spellbooks:arcane_essence',
+        '#minecraft:leaves',
+        Fluid.of('kubejs:common_arcane_ink')
+    ]).id('finality:irons_spellbooks/mixing/common_uncommon_ink_upgrading')
+    event.recipes.create.mixing(Fluid.of('kubejs:rare_arcane_ink'), [
+        '6x irons_spellbooks:arcane_essence',
+        '2x minecraft:glow_ink_sac',
+        'minecraft:echo_shard',
+        Fluid.of('kubejs:uncommon_arcane_ink')
+    ]).id('finality:irons_spellbooks/mixing/uncommon_to_rare_ink_upgrading')
+    event.recipes.create.mixing(Fluid.of('kubejs:epic_arcane_ink'), [
+        '8x irons_spellbooks:arcane_essence',
+        '4x minecraft:amethyst_shard',
+        '2x minecraft:echo_shard',
+        Fluid.of('kubejs:rare_arcane_ink')
+    ]).id('finality:irons_spellbooks/mixing/rare_to_epic_ink_upgrading')
+    /**
+     * 
+     * @param {(Internal.OutputFluid_ | OutputItem_) []} output 
+     * @param {Internal.ItemStack[]} input 
+     * @param {string} inkId 
+     */
+    function arcaneInkSpout(output, input, inkId) {
+        event.recipes.create.filling(output, input).id(`finality:irons_spellbooks/filling/${inkId}_arcane_ink`)
+    }
+    let arcaneInks = [
+        'common',
+        'uncommon',
+        'rare',
+        'epic',
+        'legendary'
+    ]
+    for (let i = 0; i < arcaneInks.length; i++) {
+        let tier = arcaneInks[i];
+        arcaneInkSpout(`irons_spellbooks:${tier}_ink`, [
+            'minecraft:glass_bottle',
+            Fluid.of(`kubejs:${tier}_arcane_ink`)
+        ], tier)
+    }
+    /*
+        Item.of('irons_spellbooks:arcane_essence').withChance(0.75),
+        Item.of('irons_spellbooks:cinder_essence').withChance(0.25)
+    */
 })
 
 LootJS.modifiers(event => {
