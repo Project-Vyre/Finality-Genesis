@@ -1,5 +1,6 @@
 // priority: 100
 // requires: create
+// requires: textanimator
 // ignored: false
 
 /**
@@ -26,7 +27,9 @@ ClientEvents.lang('en_us', event => {
         "block.kubejs.command_block": "<rainb>Command Block</rainb>",
         "block.kubejs.chain_command_block": "<rainb>Chain Command Block",
         "block.kubejs.repeating_command_block": "<rainb>Repeating Command Block",
-        "block.kubejs.null_storage_block": "<rainb>Null Storage Block</rainb>"
+        "block.kubejs.null_storage_block": "<rainb>Null Storage Block</rainb>",
+        "item.kubejs.potion_base_singularity": "Potion Base Singularity",
+        "item.kubejs.blaze_cake_singularity": "Blaze Cake Singularity"
     })
     /* Not yet implemented.
     event.add('block.kubejs.la_lettre_a_focalors', 'La Lettre a Focalors')
@@ -80,6 +83,20 @@ ClientEvents.lang('en_us', event => {
             "kubejs.mutant_boss_gate_large": "Large Mutant Boss Gate",
             "kubejs.mass_destruction_boss_gate_large": "Bosses of Mass Destruction Gate",
             "item.apotheosis.gem.kubejs:eversor": "Eversor Gem"
+        })
+    }
+    if (Platform.isLoaded('create_bic_bit')) {
+        event.addAll('kubejs', {
+            "item.kubejs.speculaas_singularity": "Speculaas Singularity",
+            "item.kubejs.stroopwafel_singularity": "Stroopwafel Singularity",
+            "item.kubejs.oliebollen_singularity": "Oliebollen Singularity",
+            "item.kubejs.kroket_singularity": "Kroket Singularity",
+            "item.kubejs.bitterballen_singularity": "Bitterballen Singularity",
+            "item.kubejs.frikandel_singularity": "Frikandel Singularity",
+            "item.kubejs.fries_singularity": "Fries Singularity",
+            "item.kubejs.churros_singularity": "Churros Singularity",
+            "item.kubejs.stamppot_singularity": "Stamppot Singularity",
+            "item.kubejs.bic_bit_singularity": "Create: Bitterballen Singularity"
         })
     }
     if (Platform.isLoaded('eccentrictome')) {

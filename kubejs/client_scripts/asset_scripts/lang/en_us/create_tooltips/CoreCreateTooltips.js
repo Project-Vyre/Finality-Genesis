@@ -428,6 +428,21 @@ ClientEvents.lang('en_us', event => {
     )
     event.addAll(
         'kubejs',
+        createTooltip('minecraft:echo_shard')
+            .addSummary('Now has additional uses.')
+            .addBehaviour([
+                'On R-Click on Warped Roots',
+                'Converts the roots into a _Sculk Sensor_.'
+            ])
+            .addBehaviour([
+                'On R-Click on Sculk Shrieker',
+                'Summons a Warden and _consumes_ the Echo Shard in the process.'
+            ])
+            .setPalette($Palette.BLUE)
+            .build()
+    )
+    event.addAll(
+        'kubejs',
         createTooltip('kubejs:copper_coin')
             .addSummary('The currency of _this world_.')
             .setPalette($Palette.GRAY)
@@ -468,6 +483,17 @@ ClientEvents.lang('en_us', event => {
             .setPalette($Palette.RED)
             .build()
     )
+    event.addAll(
+        'kubejs',
+        createTooltip('kubejs:deconstructor')
+            .addSummary('Please don\'t ask _why_ this exists.')
+            .addBehaviour([
+                'When given to a Deployer',
+                'With precision it is now able to _deconstruct_ items and blocks.'
+            ])
+            .setPalette($Palette.PURPLE)
+            .build()
+    )
     /*
     event.addAll(
         'kubejs',
@@ -483,6 +509,28 @@ ClientEvents.lang('en_us', event => {
             .build()
     )
     */
+    event.addAll(
+        'minecraft',
+        createTooltip('minecraft:nether_wart')
+            .addSummary('A _red_ fungus used in _potion brewing_. Primarily used for brewing _Awkward Potions_.')
+            .addBehaviour([
+                'When haunted',
+                'Absorbs soul energy to _re-awaken_.'
+            ])
+            .setPalette($Palette.RED)
+            .build()
+    )
+    event.addAll(
+        'finality',
+        createTooltip('finality:living_nether_wart')
+            .addSummary('The living variant of _Nether Wart_.')
+            .addBehaviour([
+                'When "polished"',
+                'Converts back into dormant _Nether Wart_.'
+            ])
+            .setPalette($Palette.GREEN)
+            .build()
+    )
     if (Platform.isLoaded('apotheosis')) {
         event.addAll(
             'kubejs',

@@ -271,41 +271,43 @@ ClientEvents.highPriorityAssets(event => {
             "layer0": "kubejs:item/shimmer_bucket"
         }
     })
-    event.add('kubejs:models/item/potion_base_singularity', {
-        "parent": "item/generated",
-        "textures": {
-            "layer0": "kubejs:item/potion_base_singularity",
-            "layer1": "kubejs:item/potion_base_singularity_overlay"
-        }
-    })
-    event.add('kubejs:models/item/blaze_cake_singularity', {
-        "parent": "item/generated",
-        "textures": {
-            "layer0": "kubejs:item/blaze_cake_singularity",
-            "layer1": "kubejs:item/blaze_cake_singularity_overlay"
-        }
-    })
-    let newSingularities = [
-        'speculaas_singularity',
-        'stroopwafel_singularity',
-        'oliebollen_singularity',
-        'kroket_singularity',
-        'bitterballen_singularity',
-        'frikandel_singularity',
-        'fries_singularity',
-        'churros_singularity',
-        'stamppot_singularity',
-        'bic_bit_singularity'
+    let coreSingularities = [
+        'blaze_cake',
+        'potion_base'
     ]
-    for (let i = 0; i < newSingularities.length; i++) {
-        let l0 = newSingularities[i];
-        event.add(`kubejs:models/item/${l0}`, {
+    for (let i = 0; i < coreSingularities.length; i++) {
+        let element = coreSingularities[i];
+        event.add(`kubejs:models/item/${element}_singularity`, {
             "parent": "item/generated",
             "textures": {
-                "layer0": `kubejs:item/${l0}`,
-                "layer1": `kubejs:item/${l0}_overlay`
+                "layer0": `kubejs:item/${element}_singularity`,
+                "layer1": `kubejs:item/${element}_singularity_overlay`
             }
         })
+    }
+    if (Platform.isLoaded('create_bic_bit')) {
+        let bicBitSingularities = [
+            'speculaas_singularity',
+            'stroopwafel_singularity',
+            'oliebollen_singularity',
+            'kroket_singularity',
+            'bitterballen_singularity',
+            'frikandel_singularity',
+            'fries_singularity',
+            'churros_singularity',
+            'stamppot_singularity',
+            'bic_bit_singularity'
+        ]
+        for (let i = 0; i < bicBitSingularities.length; i++) {
+            let l0 = bicBitSingularities[i];
+            event.add(`kubejs:models/item/${l0}`, {
+                "parent": "item/generated",
+                "textures": {
+                    "layer0": `kubejs:item/${l0}`,
+                    "layer1": `kubejs:item/${l0}_overlay`
+                }
+            })
+        }
     }
     if (!Platform.isLoaded('kubejs_create')) {
         let transitionalSeqItems = {
