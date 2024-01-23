@@ -1,9 +1,10 @@
 // ignored: false
+
 // work in progress
 
 /**
  * @file Responsible for making the lemon crop.
- * @CelestialAbyss
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  * @author Sven H. <svenstihl2> for providing the initial basis https://discord.com/channels/303440391124942858/1101483030280933396
  */
 

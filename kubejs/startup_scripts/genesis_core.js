@@ -3,6 +3,7 @@
 
 /**
  * @file The core registry, responsible for items, blocks, fluids, etc.
+ * @version 1.19.2
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  * @author squoshi <https://github.com/squoshi> Helped me a lot very early on. Thank you. Also artist of the gold block texture.
  * @author ChiefArug <https://github.com/ChiefArug> Helped me a lot very early on. Thank you.
@@ -14,11 +15,6 @@ Platform.mods.kubejs.name = 'FinalityJS'
 
 console.info('Loading Finality startup scripts...')
 
-let CMD = {
-    command_block: 'Command Block',
-    chain_command_block: 'Chain Command Block',
-    repeating_command_block: 'Repeating Command Block'
-}
 let INTEGERS = {
     zero: 'Zero',
     one: 'One',
@@ -363,119 +359,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .glow(true)
 })
 
-StartupEvents.registry('block', event => {
-    event.create('kubejs:high_entropy_alloy_block')
-        .displayName('<rainb>Block of High Entropy Alloy</rainb>')
-        .textureAll('kubejs:block/high_entropy_alloy_block')
-        .soundType('netherite_block')
-        .hardness(500)
-        .resistance(1000)
-        .lightLevel(1.0)
-        .requiresTool(true)
-        .tagBlock('minecraft:wither_immune')
-        .tagBlock('minecraft:dragon_immune')
-        .tagBlock('minecraft:mineable/pickaxe')
-        .tagBlock('forge:needs_netherite_tool')
-        .tagBlock('create:wrench_pickup')
-    for (let [insert, name] of Object.entries(CMD)) {
-        event.create(`kubejs:${insert}`)
-            .displayName(`<rainb>${name}</rainb>`)
-            .textureAll(`kubejs:block/${insert}`)
-            .soundType('netherite_block')
-            .hardness(500)
-            .resistance(1000)
-            .lightLevel(1.0)
-            .requiresTool(true)
-            .tagBlock('minecraft:wither_immune')
-            .tagBlock('minecraft:dragon_immune')
-            .tagBlock('minecraft:mineable/pickaxe')
-            .tagBlock('forge:needs_netherite_tool')
-            .tagBlock('create:wrench_pickup')
-            .tagItem('kubejs:command_blocks')
-            .blockEntity(entityInfo => {
-                entityInfo.inventory(9, 1)
-                entityInfo.rightClickOpensInventory()
-                entityInfo.serverTick(20, 0, entity => {
-                    entity.inventory.insertItem('minecraft:netherite_block', false)
-                })
-            })
-    }
-    event.create('kubejs:null_storage_block')
-        .textureAll('kubejs:block/null_storage')
-        .defaultCutout()
-        .defaultTranslucent()
-        .transparent(true)
-        .soundType('netherite_block')
-        .blockEntity(entityInfo => {
-            entityInfo.inventory(9, 9)
-            entityInfo.rightClickOpensInventory()
-        })
-    event.create('kubejs:dripstone_transitional_stone')
-        .textureAll('kubejs:block/dripstone_stone')
-        .requiresTool(true)
-        .soundType('stone')
-        .tagBlock('minecraft:mineable/pickaxe')
-    if (Platform.isLoaded('mob_grinding_utils')) {
-        event.create('kubejs:incomplete_spikes')
-            .textureAll('kubejs:block/incomplete_placeholder_block')
-            .defaultCutout()
-            .transparent(true)
-            .soundType('metal')
-            .hardness(30)
-            .resistance(1000)
-            .requiresTool(true)
-            .tagBlock('minecraft:mineable/pickaxe')
-        event.create('kubejs:incomplete_jumbo_tank')
-            .textureAll('kubejs:block/incomplete_placeholder_block')
-            .defaultCutout()
-            .transparent(true)
-            .soundType('netherite_block')
-            .hardness(30)
-            .resistance(1000)
-            .requiresTool(true)
-            .tagBlock('minecraft:mineable/pickaxe')
-    }
-})
-
-StartupEvents.registry('fluid', event => {
-    // work in progress .stillTexture('finality:block/still_entropy').flowingTexture('finality:block/flowing_entropy')
-    event.create('kubejs:condensed_universal_entropy')
-        .displayName('<rainb>Condensed Universal Entropy</rainb>')
-        .thickTexture(0x7800FF)
-        .bucketColor(0x7800FF)
-        .luminosity(15)
-    event.create('kubejs:condensed_universal_order')
-        .displayName('<rainb>Condensed Universal Order</rainb>')
-        .thickTexture(0x77D8FF)
-        .bucketColor(0x77D8FF)
-        .luminosity(15)
-    let shimmer = event.create('kubejs:shimmer')
-        .flowingTexture('kubejs:block/shimmer_flow')
-        .stillTexture('kubejs:block/shimmer_still')
-    shimmer.bucketItem.texture('kubejs:item/shimmer_bucket')
-    shimmer.bucketItem.glow(true);
-
-    if (Platform.isLoaded('mysticalagriculture')) {
-        event.create('kubejs:inferior_infusion_essence')
-            .displayName('§eInferior Infusion Essence§r')
-            .thickTexture(0xACCF00)
-            .bucketColor(0xACCF00)
-            .luminosity(7)
-        event.create('kubejs:supreme_infusion_essence')
-            .displayName('§eSupreme Infusion Essence§r')
-            .thickTexture(0xFC0000)
-            .bucketColor(0xFC0000)
-            .luminosity(15)
-        event.create('kubejs:infusion_energy')
-            .thinTexture(0x99FFF9)
-            .bucketColor(0x99FFF9)
-    }
-})
-/*
-    event.create('kubejs:shimmer')
-        .thinTexture(0xD6CCFF)
-        .bucketColor(0xD6CCFF)
-*/
 // tiers
 ItemEvents.toolTierRegistry(event => {
     event.add('final_tool', tier => {
