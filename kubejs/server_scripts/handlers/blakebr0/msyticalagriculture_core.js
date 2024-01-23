@@ -135,6 +135,7 @@ ServerEvents.recipes(event => {
     event.remove([
         { type: 'mysticalagriculture:reprocessor' },
         { id: 'mysticalagriculture:essence/minecraft/iron_ingot' },
+        { id: 'mysticalagriculture:essence/minecraft/gold_ingot' },
         { id: 'mysticalagriculture:essence/minecraft/copper_ingot' },
         { id: 'mysticalagriculture:essence/common/zinc_ingot' },
         { id: 'mysticalagriculture:essence/common/brass_ingot' },
@@ -767,6 +768,12 @@ ServerEvents.recipes(event => {
     ], 'iron_ingot')
 
     heatedEssenceCompacting([
+        'minecraft:gold_ingot'
+    ], [
+        '9x mysticalagriculture:gold_essence'
+    ], 'gold_ingot')
+
+    heatedEssenceCompacting([
         'minecraft:copper_ingot'
     ], [
         '9x mysticalagriculture:copper_essence'
@@ -803,9 +810,7 @@ ServerEvents.recipes(event => {
     ], 'diamond')
 
     superheatedEssenceCompacting([
-        'minecraft:netherite_ingot',
-        Item.of('minecraft:netherite_scrap').withChance(0.10),
-        Item.of('create:experience_nugget').withChance(0.05)
+        'minecraft:netherite_ingot'
     ], [
         '9x mysticalagriculture:netherite_essence',
         Fluid.of('kubejs:infusion_energy', 1000)
