@@ -1,6 +1,7 @@
 // priority: 3
 // requires: roughlyenoughitems
 // requires: roughlyenoughresources
+// requires: roughlyenoughprofessions
 // requires: create
 
 /**
