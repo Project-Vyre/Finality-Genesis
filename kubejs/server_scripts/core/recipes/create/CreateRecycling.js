@@ -25,7 +25,7 @@ ServerEvents.recipes(event => {
     ]).keepHeldItem().id('finality:item_application/anvil_deconstruction')
     event.recipes.create.cutting([
         'minecraft:gold_block',
-        'create:gold_sheet'
+        'create:golden_sheet'
     ], 'minecraft:bell').processingTime(300).id('finality:cutting/bell_recycling')
     event.recipes.create.crushing([
         'minecraft:furnace',
