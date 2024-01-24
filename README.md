@@ -15,8 +15,10 @@ First things first...
 * [I have moved my Create custom recipes into the Create-Customized repository, click me if you are looking for those.](https://github.com/CelestialAbyss/Create-Customized)
   
 ### License clarifications
-Finality is released on CurseForge only as **All Rights Reserved.**
-However, there are exceptions such as:
+Finality is released on CurseForge only as **All Rights Reserved.** However, there are exceptions such as:
+
+- KubeJS code written by outside contributors and KubeJS helpers / contributors.
+- Scripts with an explicit license attached to them.
 - Artwork from other mod authors and their respective teams. For example:
   - Create's Precision Mechanism and casing textures.
   - The original Tempad texture.
