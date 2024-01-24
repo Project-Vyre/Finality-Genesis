@@ -523,12 +523,23 @@ ClientEvents.lang('en_us', event => {
     event.addAll(
         'finality',
         createTooltip('finality:living_nether_wart')
-            .addSummary('The living variant of _Nether Wart_.')
+            .addSummary('The living variant of _Nether Wart_. Don\'t worry about the fact that it looks like a soul!')
             .addBehaviour([
                 'When "polished"',
                 'Converts back into dormant _Nether Wart_.'
             ])
             .setPalette($Palette.GREEN)
+            .build()
+    )
+    event.addAll(
+        'finality',
+        createTooltip('finality:pocket_singularity')
+            .addSummary('Work in progress! Don\'t worry about it!')
+            .addBehaviour([
+                'On R-Click',
+                'Ejects all stored items mined by the alternate form of the respective tool.'
+            ])
+            .setPalette($Palette.PURPLE)
             .build()
     )
     if (Platform.isLoaded('apotheosis')) {
