@@ -50,7 +50,7 @@
 	   If `true`, the Zoom keybind will act as a toggle. If `false`, Zoom will only be active while the keybind is held.
 	   DEFAULT: `false`
 	*/
-	"toggleMode": true,
+	"toggleMode": false,
 	/* 
 	   Maximum zoom FOV.
 	   DEFAULT: `60.0`
