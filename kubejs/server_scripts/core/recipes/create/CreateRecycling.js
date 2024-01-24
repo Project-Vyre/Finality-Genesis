@@ -97,10 +97,10 @@ ServerEvents.recipes(event => {
         'minecraft:iron_door',
         'kubejs:deconstructor'
     ]).keepHeldItem().id('finality:item_application/iron_door_deconstruction')
-    event.recipes.create.item_application(
-        'minecraft:obsidian',
-        'minecraft:crying_obsidian'
-        ).keepHeldItem().id('finality:item_application/undo_crying_obsidian')
+    event.recipes.create.item_application('minecraft:obsidian', [
+        'minecraft:crying_obsidian',
+        'kubejs:deconstructor'
+    ]).keepHeldItem().id('finality:item_application/undo_crying_obsidian')
     if (Platform.isLoaded('quark')) {
         event.recipes.create.item_application([
             '2x minecraft:gold_ingot',
