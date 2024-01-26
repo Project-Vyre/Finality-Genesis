@@ -1,3 +1,5 @@
+// requires: kubejs_create
+
 /**
  * @file Handles all recipes for custom made compression blocks.
  */
@@ -44,15 +46,15 @@ ServerEvents.recipes(event => {
         event.recipes.create.crushing([
             '9x create:cinder_flour',
             Item.of('create:cinder_flour', 9).withChance(0.50),
-            Item.of('minecraft:netherite_scrap', 9).withChance(0.02)
+            Item.of('minecraft:netherite_scrap', 9).withChance(0.002)
         ], 'kubejs:compressed_netherrack').processingTime(500).id('finality:crushing/compressed_netherrack')
         event.recipes.create.crushing([
             '64x create:cinder_flour',
             '17x create:cinder_flour',
             Item.of('create:cinder_flour', 64).withChance(0.50),
             Item.of('create:cinder_flour', 17).withChance(0.50),
-            Item.of('minecraft:netherite_scrap', 64).withChance(0.02),
-            Item.of('minecraft:netherite_scrap', 17).withChance(0.02)
+            Item.of('minecraft:netherite_scrap', 64).withChance(0.002),
+            Item.of('minecraft:netherite_scrap', 17).withChance(0.002)
         ], 'kubejs:double_compressed_netherrack').processingTime(500).id('finality:crushing/double_compressed_netherrack')
     }
 })
