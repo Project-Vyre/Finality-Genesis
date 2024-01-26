@@ -13,6 +13,7 @@ _site/
 *.zip
 *.tar.gz
 *.exe
+*.apng
 .curseclient
 .qmenu_opened.marker
 essential/*.jar

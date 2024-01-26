@@ -1,40 +1,59 @@
-type = menu
+type = fancymenu_layout
 
-customization-meta {
+layout-meta {
   identifier = %fancymenu:universal_layout%
-  randomgroup = 1
-  renderorder = foreground
+  render_custom_elements_behind_vanilla = true
+  last_edited_time = 1706226961729
+  is_enabled = true
   randommode = false
-  requiredmods = kubejs, kubejs_create, create
+  randomgroup = 1
   randomonlyfirsttime = false
+  layout_index = 0
+  [loading_requirement_container_meta:c2181bbd-0f0c-4555-8ee6-f88fb8b13cc2-1706226913969] = [groups:][instances:]
 }
 
 customization {
-  keepaspectratio = false
   action = backgroundoptions
+  keepaspectratio = false
 }
 
-customization {
-  orientation = mid-centered
-  audio_source:4942cf00-2d9b-45d6-967e-546ee9b58dfa1695726272672 = kubejs/assets/minecraft/sounds/music/menu/menu4.ogg;EXTERNAL_LOCAL;100;0
-  audio_source:cf7ee897-3670-4249-be79-184a3c918b3e1695726237946 = kubejs/assets/minecraft/sounds/music/menu/menu1.ogg;EXTERNAL_LOCAL;100;0
-  [loading_requirement:fancymenu_loading_requirement_is_world_loaded][requirement_mode:if_not][req_id:ac8ea68e-9b00-41c4-8719-d80121251b501691181789776] = 
-  channel = music
-  audio_source:2a3bf5b2-bc1f-402f-bd38-aa7f595686db1695726433517 = config/fancymenu/assets/menu_music/hide_and_seek_r3_music_box.ogg;EXTERNAL_LOCAL;100;0
-  audio_source:807700b1-6ac5-4909-9c09-ba539f109c221702962288781 = config/fancymenu/assets/menu_music/cjbeards_get_away_instrumental.ogg;EXTERNAL_LOCAL;100;0
-  audio_source:ed50fe2e-50ef-4a37-a521-b2308b7e99ec1695726266683 = kubejs/assets/minecraft/sounds/music/menu/menu3.ogg;EXTERNAL_LOCAL;100;0
-  audio_source:20e16131-73b5-41ae-bb64-be910539d11e1703458836713 = config/fancymenu/assets/menu_music/cjbeards_silent_night.ogg;EXTERNAL_LOCAL;100;0
-  audio_source:1e693ff8-7c42-4836-aed6-3999857d9bcc1695726412048 = config/fancymenu/assets/menu_music/cjbeards_bad_deeds_inst.ogg;EXTERNAL_LOCAL;100;0
-  loop = true
-  audio_source:568d5cc8-e304-4a48-aae4-f8d5431ca1ea1702962336230 = config/fancymenu/assets/menu_music/cjbeards_worst_nightmare_instrumental.ogg;EXTERNAL_LOCAL;100;0
-  x = -25
-  width = 50
-  action = custom_layout_element:fancymenu_extension:audio_item
-  actionid = b3036c15-7a45-4558-a042-16a0b6821d751682981884968
-  y = -25
-  audio_source:b8f0d531-76bb-4c82-b0a6-f3e7b69869721702962330001 = config/fancymenu/assets/menu_music/cjbeards_open_up_instrumental.ogg;EXTERNAL_LOCAL;100;0
-  audio_source:00432011-1e55-4eb2-93c9-8583a274ca771695726258686 = kubejs/assets/minecraft/sounds/music/menu/menu2.ogg;EXTERNAL_LOCAL;100;0
-  once_per_session = false
-  height = 50
+scroll_list_customization {
+  preserve_scroll_list_header_footer_aspect_ratio = true
+  render_scroll_list_header_shadow = true
+  render_scroll_list_footer_shadow = true
+  show_scroll_list_header_footer_preview_in_editor = false
+}
+
+element {
+  audio_instance_0 = [source:local]/config/fancymenu/assets/menu_music/cjbeards_bad_deeds_inst.ogg
+  audio_instance_1 = [source:local]/config/fancymenu/assets/menu_music/cjbeards_from_the_shadows.ogg
+  audio_instance_2 = [source:local]/config/fancymenu/assets/menu_music/cjbeards_get_away_instrumental.ogg
+  audio_instance_3 = [source:local]/config/fancymenu/assets/menu_music/cjbeards_heart_of_the_wicked.ogg
+  audio_instance_4 = [source:local]/config/fancymenu/assets/menu_music/cjbeards_open_up_instrumental.ogg
+  audio_instance_5 = [source:local]/config/fancymenu/assets/menu_music/cjbeards_silent_night.ogg
+  audio_instance_6 = [source:local]/config/fancymenu/assets/menu_music/cjbeards_worst_nightmare_instrumental.ogg
+  audio_instance_7 = [source:local]/config/fancymenu/assets/menu_music/farabi_hasan_music_arlecchino.ogg
+  audio_instance_8 = [source:local]/config/fancymenu/assets/menu_music/hide_and_seek_r3_music_box.ogg
+  play_mode = shuffle
+  looping = true
+  volume = 1.0
+  sound_source = music
+  element_type = audio_v2
+  instance_identifier = 93ae9858-a4bb-403a-bbff-67b3bac3ee33-1706223167829
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in = false
+  fade_in_speed = 1.0
+  anchor_point = mid-centered
+  x = -50
+  y = -50
+  width = 100
+  height = 100
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = 75bc916e-3a6d-438c-a822-1790894b0f6e-1706223167829
+  [loading_requirement_container_meta:75bc916e-3a6d-438c-a822-1790894b0f6e-1706223167829] = [groups:][instances:9f7dcd2a-b486-4abc-9b5f-f6a4557351e2-1706226928049;]
+  [loading_requirement:fancymenu_loading_requirement_is_world_loaded][requirement_mode:if_not][req_id:9f7dcd2a-b486-4abc-9b5f-f6a4557351e2-1706226928049] = 
 }
 
