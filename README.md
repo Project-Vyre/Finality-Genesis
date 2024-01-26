@@ -20,7 +20,7 @@ Finality is released on CurseForge only as **All Rights Reserved.** However, the
 - KubeJS code written by outside contributors and KubeJS helpers / contributors.
 - Scripts with an explicit license attached to them.
 - Artwork from other mod authors and their respective teams. For example:
-  - Create's Precision Mechanism and casing textures.
+  - Create's Precision Mechanism, chocolate fluid and casing textures.
   - The original Tempad texture.
   - Music made by [Cjbeards](https://www.youtube.com/@cjbeardsofficial), [Farabi Hasan Music](https://www.youtube.com/@FarabiHasanMusic) and [R3 Music Box](https://www.youtube.com/@r3musicbox_en)
 
