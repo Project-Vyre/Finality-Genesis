@@ -1,4 +1,5 @@
 // requires: create_jetpack
+// ignored: true
 
 ClientEvents.lang('en_us', event => {
     event.addAll('create_jetpack', {
