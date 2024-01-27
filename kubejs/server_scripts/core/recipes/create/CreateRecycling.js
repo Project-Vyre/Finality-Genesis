@@ -50,7 +50,7 @@ ServerEvents.recipes(event => {
     ], [
         'minecraft:bow',
         'kubejs:deconstructor'
-    ]).keepHeldItem().id('finality:deploying/crossbow_deconstruction')
+    ]).keepHeldItem().id('finality:deploying/bow_deconstruction')
     event.recipes.create.deploying([
         'minecraft:iron_ingot',
         'minecraft:tripwire_hook',
