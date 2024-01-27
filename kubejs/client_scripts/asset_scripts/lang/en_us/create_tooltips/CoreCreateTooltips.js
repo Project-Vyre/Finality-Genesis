@@ -553,7 +553,7 @@ ClientEvents.lang('en_us', event => {
                 .addSummary('An altar that _summons_ either _mobs_, _items_ or even in-world events.')
                 .addBehaviour([
                     'Usage Instructions',
-                    'The _ritual catalyst_ has to be placed _last_ in order for the ritual to start. _Prepare_ the _ritual ingredients_ first. In the recipe viewer, the _ritual_catalyst_ is located in the center. Press _[U]_ _WHILE HOVERING_ over the _summoning altar_ item in your inventory _with your cursor_ to see all summoning rituals.'
+                    'The _ritual catalyst_ has to be placed _last_ in order for the ritual to start. _Prepare_ the _ritual ingredients_ first. In the recipe viewer, the _ritual catalyst_ is located in the center. Press _[U]_ _WHILE HOVERING_ over the _summoning altar_ item in your inventory _with your cursor_ to see _all_ summoning rituals.'
                 ])
                 .addBehaviour([
                     'On R-Click with item',
@@ -572,7 +572,7 @@ ClientEvents.lang('en_us', event => {
                 .addSummary('This is the _indestructible_ version of the altar, normally found in custom structures and not planned to be craftable. Currently this is _unobtainable_ as no structures generate with it present.')
                 .addBehaviour([
                     'Usage Instructions',
-                    'The _ritual catalyst_ has to be placed _last_ in order for the ritual to start. _Prepare_ the _ritual ingredients_ first. In the recipe viewer, the _ritual_catalyst_ is located in the center. Press _[U]_ _WHILE HOVERING_ over the _summoning altar_ item in your inventory _with your cursor_ to see all summoning rituals.'
+                    'The _ritual catalyst_ has to be placed _last_ in order for the ritual to start. _Prepare_ the _ritual ingredients_ first. In the recipe viewer, the _ritual catalyst_ is located in the center. Press _[U]_ _WHILE HOVERING_ over the _summoning altar_ item in your inventory _with your cursor_ to see _all_ summoning rituals.'
                 ])
                 .addBehaviour([
                     'On R-Click with item',
