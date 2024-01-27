@@ -45,6 +45,13 @@ ServerEvents.recipes(event => {
         '2x minecraft:iron_nugget'
     ], 'minecraft:chain').id('finality:crushing/chain_recycling')
     event.recipes.create.deploying([
+        '3x minecraft:string',
+        '3x minecraft:stick'
+    ], [
+        'minecraft:bow',
+        'kubejs:deconstructor'
+    ]).keepHeldItem().id('finality:deploying/crossbow_deconstruction')
+    event.recipes.create.deploying([
         'minecraft:iron_ingot',
         'minecraft:tripwire_hook',
         '3x minecraft:stick',
@@ -109,6 +116,42 @@ ServerEvents.recipes(event => {
         'minecraft:soul_soil',
         'kubejs:deconstructor'
     ]).keepHeldItem().id('finality:item_application/undo_soul_soil')
+    event.recipes.create.item_application('minecraft:coarse_dirt', [
+        'minecraft:dirt',
+        'kubejs:deconstructor'
+    ]).keepHeldItem().id('finality:item_application/undo_coarse_dirt')
+    event.recipes.create.item_application('minecraft:gravel', [
+        'minecraft:coarse_dirt',
+        'kubejs:deconstructor'
+    ]).keepHeldItem().id('finality:item_application/undo_gravel')
+    event.recipes.create.item_application([
+        'minecraft:stripped_spruce_log',
+        'create:andesite_alloy'
+    ], [
+        'create:andesite_casing',
+        'kubejs:deconstructor'
+    ]).keepHeldItem().id('finality:item_application/undo_andesite_casing')
+    event.recipes.create.item_application([
+        'minecraft:stripped_spruce_log',
+        'minecraft:copper_ingot'
+    ], [
+        'create:copper_casing',
+        'kubejs:deconstructor'
+    ]).keepHeldItem().id('finality:item_application/undo_copper_casing')
+    event.recipes.create.item_application([
+        'minecraft:stripped_dark_oak_log',
+        'create:brass_ingot'
+    ], [
+        'create:brass_casing',
+        'kubejs:deconstructor'
+    ]).keepHeldItem().id('finality:item_application/undo_brass_casing')
+    event.recipes.create.item_application([
+        'create:brass_casing',
+        'create:sturdy_sheet'
+    ], [
+        'create:railway_casing',
+        'kubejs:deconstructor'
+    ]).keepHeldItem().id('finality:item_application/undo_railway_casing')
     if (Platform.isLoaded('quark')) {
         event.recipes.create.item_application([
             '2x minecraft:gold_ingot',

@@ -410,10 +410,6 @@ ServerEvents.recipes(event => {
         'minecraft:blackstone',
         Fluid.of('kubejs:molten_gold', 50)
     ]).id('finality:filling/gilded_blackstone')
-    event.recipes.create.filling('minecraft:chorus_fruit', [
-        'minecraft:beetroot',
-        Fluid.of('kubejs:condensed_universal_entropy')
-    ]).id('finality:filling/beetroot_to_chorus_fruit')
     /**
      * HAUNTING
      */
@@ -503,8 +499,16 @@ ServerEvents.recipes(event => {
     ]).heated().id('finality:mixing/netherite_ingot_from_mixing')
     // Be3Al2(SiO3)6
     event.recipes.create.mixing('minecraft:emerald', [
-        'minecraft:quartz', 'minecraft:glass', '3x minecraft:iron_nugget'
+        'minecraft:quartz',
+        'minecraft:glass',
+        '3x minecraft:iron_nugget'
     ]).superheated().id('finality:renew_emerald')
+    event.recipes.create.mixing('minecraft:amethyst_shard', [
+        'minecraft:quartz',
+        'minecraft:glass',
+        'minecraft:smooth_basalt',
+        'minecraft:iron',
+    ]).superheated().id('finality:renew_amethyst')
     // Thank you to FunnyMan4579 on the official Create Discord for giving me this idea :3
     event.recipes.create.mixing('minecraft:nether_gold_ore', [
         'create:cinder_flour',
@@ -572,6 +576,15 @@ ServerEvents.recipes(event => {
         N: 'kubejs:netherite_nugget'
     }).id('finality:netherite_ingot_from_nuggets')
     event.shapeless('9x kubejs:netherite_nugget', 'minecraft:netherite_ingot').id('finality:netherite_nugget')
+    // chorus fruit in overworld
+    event.recipes.create.filling('minecraft:chorus_fruit', [
+        'minecraft:beetroot',
+        Fluid.of('kubejs:condensed_universal_entropy', 250)
+    ]).id('finality:filling/beetroot_to_chorus_fruit')
+    event.recipes.create.mixing('4x minecraft:chorus_fruit', [
+        '4x minecraft:beetroot',
+        Fluid.of('kubejs:condensed_universal_entropy')
+    ]).id('finality:mixing/bulk_beetroot_to_chorus_fruit')
     event.recipes.create.mechanical_crafting('minecraft:spawner', [
         'VVV',
         'VSV',

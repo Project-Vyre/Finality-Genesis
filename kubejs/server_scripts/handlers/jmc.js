@@ -131,7 +131,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.create.mixing(Fluid.of('kubejs:beetroot_icing'), [
         'minecraft:sugar',
-        'minecraft:slime_ball',
+        'minecraft:beetroot',
         Fluid.of('minecraft:milk')
     ]).heated().id('finality:jmc/mixing/beetroot_icing')
     icing('jmc:beetroot_cake', 'kubejs:beetroot_icing', 'beetroot')
@@ -159,10 +159,10 @@ ServerEvents.recipes(event => {
 
     event.recipes.create.mixing(Fluid.of('kubejs:honey_icing'), [
         'minecraft:sugar',
-        Fluid.of('create:honey'),
-        Fluid.of('minecraft:milk')
+        Fluid.of('create:honey', 250),
+        Fluid.of('minecraft:milk', 750)
     ]).heated().id('finality:jmc/mixing/honey_icing')
-    icing('jmc:honey_cake', 'create:honey', 'honey')
+    icing('jmc:honey_cake', 'kubejs:honey_icing', 'honey')
 
     event.recipes.create.mixing(Fluid.of('kubejs:glowstone_icing'), [
         'minecraft:sugar',
