@@ -282,8 +282,8 @@ ServerEvents.recipes(event => {
     event.shaped('kubejs:deconstructor', [
         'DSS'
     ], {
-        D: 'minecraft:diamond',
-        S: '#forge:rods/wooden'
+        D: 'minecraft:crying_obsidian',
+        S: 'create:shaft'
     }).id('finality:deconstructor')
     /**
      * BLASTING
@@ -524,7 +524,7 @@ ServerEvents.recipes(event => {
         'create:refined_radiance',
         Fluid.of('kubejs:condensed_universal_entropy', 500),
         Fluid.of('minecraft:water', 500)
-    ]).superheated().id('finality:mixing/shimmer_fluid_creation')
+    ]).id('finality:mixing/shimmer_fluid_creation')
     event.recipes.create.compacting([
         'create:cinder_flour',
         Item.of('create:cinder_flour').withChance(0.50),
