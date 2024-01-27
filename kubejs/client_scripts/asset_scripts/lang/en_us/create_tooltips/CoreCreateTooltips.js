@@ -486,7 +486,11 @@ ClientEvents.lang('en_us', event => {
     event.addAll(
         'kubejs',
         createTooltip('kubejs:deconstructor')
-            .addSummary('Please don\'t ask _why_ this exists.')
+            .addSummary('Think of it as an _Undo Button_. Please don\'t ask _why_ this exists.')
+            .addBehaviour([
+                'On R-Click on a block',
+                'Depending on the block, it will essentially _[Ctrl] + [Z]_ if applicable.'
+            ])
             .addBehaviour([
                 'When given to a Deployer',
                 'With precision it is now able to _deconstruct_ items and blocks.'
@@ -542,6 +546,46 @@ ClientEvents.lang('en_us', event => {
             .setPalette($Palette.PURPLE)
             .build()
     )
+    if (Platform.isLoaded('summoningrituals')) {
+        event.addAll(
+            'summoningrituals',
+            createTooltip('summoningrituals:altar')
+                .addSummary('An altar that _summons_ either _mobs_, _items_ or even in-world events.')
+                .addBehaviour([
+                    'Usage Instructions',
+                    'The _ritual catalyst_ has to be placed _last_ in order for the ritual to start. _Prepare_ the _ritual ingredients_ first. In the recipe viewer, the _ritual_catalyst_ is located in the center. Press _[U]_ _WHILE HOVERING_ over the _summoning altar_ item in your inventory _with your cursor_ to see all summoning rituals.'
+                ])
+                .addBehaviour([
+                    'On R-Click with item',
+                    'The altar _takes_ the item from you for ritual usage. However, the order of the ritual ingredients _does not_ matter other than the _ritual catalyst_ which must be inserted last.'
+                ])
+                .addBehaviour([
+                    'On Sneak + R-Click with empty hand',
+                    'The altar _returns_ items in the order you gave it.'
+                ])
+                .setPalette($Palette.RED)
+                .build()
+        )
+        event.addAll(
+            'summoningrituals',
+            createTooltip('summoningrituals:indestructible_altar')
+                .addSummary('This is the _indestructible_ version of the altar, normally found in custom structures and not planned to be craftable. Currently this is _unobtainable_ as no structures generate with it present.')
+                .addBehaviour([
+                    'Usage Instructions',
+                    'The _ritual catalyst_ has to be placed _last_ in order for the ritual to start. _Prepare_ the _ritual ingredients_ first. In the recipe viewer, the _ritual_catalyst_ is located in the center. Press _[U]_ _WHILE HOVERING_ over the _summoning altar_ item in your inventory _with your cursor_ to see all summoning rituals.'
+                ])
+                .addBehaviour([
+                    'On R-Click with item',
+                    'The altar _takes_ the item from you for ritual usage. However, the order of the ritual ingredients _does not_ matter other than the _ritual catalyst_ which must be inserted last..'
+                ])
+                .addBehaviour([
+                    'On Sneak + R-Click with empty hand',
+                    'The altar _returns_ items in the order you gave it.'
+                ])
+                .setPalette($Palette.RED)
+                .build()
+        )
+    }
     if (Platform.isLoaded('apotheosis')) {
         event.addAll(
             'kubejs',

@@ -7,20 +7,17 @@
  */
 
 ServerEvents.recipes(event => {
-    event.recipes.create.mechanical_crafting('summoningrituals:altar', [
-        'CSC',
-        'AAA',
-        'LLL',
-        ' O ',
-        'PPP'
-    ], {
-        A: '#minecraft:wool_carpets',
-        C: '#minecraft:candles',
-        S: 'minecraft:wither_skeleton_skull',
-        L: '#minecraft:wooden_slabs',
-        O: '#minecraft:logs',
-        P: '#minecraft:planks'
-    }).id('finality:mechanical_crafting/summoning_altar')
+    event.recipes.kubejs.shapeless('summoningrituals:altar', [
+        'minecraft:wither_skeleton_skull',
+        '#minecraft:wool_carpets',
+        '#minecraft:candles',
+        '#minecraft:candle',
+        '#forge:plates/gold',
+        '#minecraft:candle',
+        '#minecraft:wooden_slabs',
+        '#minecraft:logs',
+        '#minecraft:wooden_slabs'
+    ]).id('finality:summoning_altar_i_tried_fitting')
     event.recipes.summoningrituals.altar('minecraft:echo_shard')
         .input([
             'minecraft:soul_sand',
@@ -44,6 +41,110 @@ ServerEvents.recipes(event => {
         )
         .recipeTime(10)
         .id('finality:summoning/warden')
+
+    event.recipes.summoningrituals.altar('minecraft:emerald')
+        .input([
+            'minecraft:glass_bottle',
+            'minecraft:redstone',
+            'minecraft:glowstone_dust',
+            'minecraft:nether_wart'
+        ])
+        .mobOutput(
+            SummoningOutput.mob('minecraft:witch')
+                .count(12)
+                .offset(0, 2, 0)
+                .spread(3, 0, 3)
+        )
+        .recipeTime(25)
+        .id('finality:summoning/witch')
+
+    event.recipes.summoningrituals.altar('minecraft:bow')
+        .input([
+            'minecraft:snowball',
+            'minecraft:bone'
+        ])
+        .mobOutput(
+            SummoningOutput.mob('minecraft:stray')
+                .count(12)
+                .offset(0, 2, 0)
+                .spread(3, 0, 3)
+        )
+        .recipeTime(25)
+        .id('finality:summoning/stray')
+
+    event.recipes.summoningrituals.altar('minecraft:rotten_flesh')
+        .input([
+            'minecraft:kelp',
+            'minecraft:prismarine_shard'
+        ])
+        .mobOutput(
+            SummoningOutput.mob('minecraft:drowned')
+                .count(12)
+                .offset(0, 2, 0)
+                .spread(3, 0, 3)
+        )
+        .recipeTime(25)
+        .id('finality:summoning/drowned')
+
+    event.recipes.summoningrituals.altar('minecraft:rotten_flesh')
+        .input([
+            'minecraft:sand',
+            'minecraft:cactus'
+        ])
+        .mobOutput(
+            SummoningOutput.mob('minecraft:husk')
+                .count(12)
+                .offset(0, 2, 0)
+                .spread(3, 0, 3)
+        )
+        .recipeTime(25)
+        .id('finality:summoning/husk')
+
+    event.recipes.summoningrituals.altar('minecraft:black_dye')
+        .input([
+            'minecraft:water_bucket',
+            'minecraft:kelp'
+        ])
+        .mobOutput(
+            SummoningOutput.mob('minecraft:squid')
+                .count(12)
+                .offset(0, 2, 0)
+                .spread(3, 0, 3)
+        )
+        .recipeTime(25)
+        .id('finality:summoning/squid')
+
+    event.recipes.summoningrituals.altar('minecraft:black_dye')
+        .input([
+            'minecraft:water_bucket',
+            'minecraft:kelp',
+            'minecraft:deepslate'
+        ])
+        .mobOutput(
+            SummoningOutput.mob('minecraft:glow_squid')
+                .count(12)
+                .offset(0, 2, 0)
+                .spread(3, 0, 3)
+        )
+        .recipeTime(25)
+        .id('finality:summoning/glow_squid')
+
+    event.recipes.summoningrituals.altar('create:dough')
+        .input([
+            '#minecraft:saplings',
+            'minecraft:phantom_membrane',
+            'minecraft:rotten_flesh',
+            'minecraft:spider_eye'
+        ])
+        .mobOutput(
+            SummoningOutput.mob('minecraft:slime')
+                .count(12)
+                .offset(0, 3, 0)
+                .spread(3, 0, 3)
+                .data({ Size: 3 })
+        )
+        .recipeTime(25)
+        .id('finality:summoning/slime')
 
     if (Platform.isLoaded('lilwings')) {
 
@@ -208,6 +309,23 @@ ServerEvents.recipes(event => {
 })
 
 /*
+    // original recipe
+    event.recipes.create.mechanical_crafting('summoningrituals:altar', [
+        'CSC',
+        'GAG',
+        'LLL',
+        ' O ',
+        'PPP'
+    ], {
+        A: '#minecraft:wool_carpets',
+        C: '#minecraft:candles',
+        S: 'minecraft:wither_skeleton_skull',
+        L: '#minecraft:wooden_slabs',
+        O: '#minecraft:logs',
+        P: '#minecraft:planks',
+        G: '#forge:plates/gold'
+    }).id('finality:mechanical_crafting/summoning_altar')
+
     Example below.
 
     event.recipes.summoningrituals.altar('minecraft:stick') // replace stick catalyst with something later.
