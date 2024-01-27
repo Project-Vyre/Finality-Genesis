@@ -25,10 +25,9 @@ ServerEvents.tags('item', event => {
         'minecraft:granite_slab',
         'minecraft:polished_granite_slab'
     ])
-    if (Platform.isLoaded('aether')) {
-        event.add('kubejs:slabs/stone', [
-            'aether:holystone_slab',
-            'aether:icestone_slab'
-        ])
-    }
+    event.add('kubejs:compost_eligible', [
+        'minecraft:poisonous_potato',
+        'minecraft:rotten_flesh',
+        'minecraft:egg'
+    ])
 })

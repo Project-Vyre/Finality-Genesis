@@ -101,6 +101,14 @@ ServerEvents.recipes(event => {
         'minecraft:crying_obsidian',
         'kubejs:deconstructor'
     ]).keepHeldItem().id('finality:item_application/undo_crying_obsidian')
+    event.recipes.create.item_application('minecraft:sand', [
+        'minecraft:soul_sand',
+        'kubejs:deconstructor'
+    ]).keepHeldItem().id('finality:item_application/undo_soul_sand')
+    event.recipes.create.item_application('minecraft:dirt', [
+        'minecraft:soul_soil',
+        'kubejs:deconstructor'
+    ]).keepHeldItem().id('finality:item_application/undo_soul_soil')
     if (Platform.isLoaded('quark')) {
         event.recipes.create.item_application([
             '2x minecraft:gold_ingot',

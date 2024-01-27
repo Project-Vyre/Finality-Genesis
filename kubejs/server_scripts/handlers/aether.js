@@ -162,6 +162,10 @@ ServerEvents.tags('item', event => {
     event.add('forge:slimeballs', [
         'aether:swet_ball'
     ])
+    event.add('kubejs:slabs/stone', [
+        'aether:holystone_slab',
+        'aether:icestone_slab'
+    ])
     if (Platform.isLoaded('bookshelf')) {
         event.add('bookshelf:slime_balls', [
             'aether:swet_ball'

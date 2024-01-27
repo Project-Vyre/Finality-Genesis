@@ -95,6 +95,14 @@ ServerEvents.recipes(event => {
     }
 })
 
+ServerEvents.tags('item', event => {
+    event.add('kubejs:compost_eligible', [
+        'farmersdelight:rotten_tomato',
+        'farmersdelight:tree_bark',
+        'farmersdelight:straw'
+    ])
+})
+
 MoreJSEvents.wandererTrades(event => {
     event.addTrade(1, [
         '3x minecraft:emerald'

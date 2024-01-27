@@ -481,6 +481,10 @@ ServerEvents.recipes(event => {
         'minecraft:gravel',
         '3x minecraft:bone_meal'
     ]).id('finality:dirt_from_gravel')
+    event.recipes.create.mixing('minecraft:dirt', [
+        'minecraft:gravel',
+        '3x #kubejs:compost_eligible'
+    ]).id('finality:mixing/dirt_compost')
     event.recipes.create.mixing('2x minecraft:coarse_dirt', [
         'minecraft:dirt',
         'minecraft:gravel'

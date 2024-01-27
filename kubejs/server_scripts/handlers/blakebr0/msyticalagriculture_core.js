@@ -144,6 +144,7 @@ ServerEvents.recipes(event => {
         { id: 'mysticalagriculture:essence/minecraft/netherite_ingot' },
         { id: 'mysticalagriculture:essence/minecraft/glowstone_dust' },
         { id: 'mysticalagriculture:essence/minecraft/netherrack' },
+        { id: 'mysticalagriculture:essence/minecraft/chorus_fruit' },
         { id: 'mysticalagriculture:supremium_ingot' },
         { id: 'mysticalagriculture:supremium_gemstone' }
     ])

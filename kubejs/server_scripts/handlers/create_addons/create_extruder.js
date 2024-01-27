@@ -63,4 +63,10 @@ ServerEvents.recipes(event => {
             Fluid.of('kubejs:condensed_universal_entropy')
         ]).requiredBonks(6).withCatalyst('malum:twisted_rock').id('finality:malum/extruder_cthonic_gold')
     }
+    if (Platform.isLoaded('quark')) {
+        event.recipes.create_mechanical_extruder.extruding(Item.of('quark:shale'), [
+            Item.of('minecraft:blue_ice'),
+            Fluid.of('minecraft:lava')
+        ]).requiredBonks(1).withCatalyst('quark:shale').id('finality:quark/extruder_shale')
+    }
 })
