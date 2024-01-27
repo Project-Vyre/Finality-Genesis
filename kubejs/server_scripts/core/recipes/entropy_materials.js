@@ -3,8 +3,8 @@
 
 ServerEvents.recipes(event => {
     event.recipes.create.mixing([
-        Item.of('kubejs:unstable_entropy_particles').withChance(0.25),
-        Item.of('kubejs:errored_result').withChance(0.50),
+        Item.of('kubejs:unstable_entropy_particles').withChance(0.50),
+        Item.of('kubejs:errored_result').withChance(0.25),
         Item.of('create:experience_nugget').withChance(0.25)
     ], [
         'create:chromatic_compound',
@@ -14,6 +14,7 @@ ServerEvents.recipes(event => {
         'create:andesite_alloy_block',
         'minecraft:diamond_block',
         'minecraft:amethyst_shard',
+        '2x minecraft:chorus_fruit',
         Fluid.of('kubejs:condensed_universal_entropy', 1000)
     ]).superheated().id('finality:mixing/high_entropy_alloy')
     event.recipes.create.mixing('kubejs:unstable_entropy_particles', [

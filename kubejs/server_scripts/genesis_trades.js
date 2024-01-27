@@ -48,6 +48,10 @@ MoreJSEvents.wandererTrades(event => {
         '32x minecraft:emerald',
         '3x minecraft:obsidian'
     ], 'minecraft:beacon')
+    event.addTrade(1, [
+        '32x minecraft:emerald',
+        '1x minecraft:respawn_anchor'
+    ], '8x minecraft:chorus_fruit')
     if (Platform.isLoaded('apotheosis')) {
         event.addTrade(1, [
             'minecraft:sculk',

@@ -410,6 +410,10 @@ ServerEvents.recipes(event => {
         'minecraft:blackstone',
         Fluid.of('kubejs:molten_gold', 50)
     ]).id('finality:filling/gilded_blackstone')
+    event.recipes.create.filling('minecraft:chorus_fruit', [
+        'minecraft:beetroot',
+        Fluid.of('kubejs:condensed_universal_entropy')
+    ]).id('finality:filling/beetroot_to_chorus_fruit')
     /**
      * HAUNTING
      */
@@ -511,6 +515,12 @@ ServerEvents.recipes(event => {
         '8x create:cinder_flour',
         Fluid.of('create:potion', 200, '{Bottle:"REGULAR",Potion:"minecraft:night_vision"}')
     ]).id('finality:mixing/bulk_glowstone_from_cinder_flour')
+    event.recipes.create.mixing('minecraft:end_stone', [
+        'minecraft:echo_shard',
+        'minecraft:ender_pearl',
+        'minecraft:cobblestone',
+        Fluid.of('kubejs:condensed_universal_entropy')
+    ]).id('finality:mixing/end_stone')
     /**
      * PRESSING
      */
