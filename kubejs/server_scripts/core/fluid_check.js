@@ -50,11 +50,11 @@ PlayerEvents.tick(event => {
         event.player.setSecondsOnFire(10)
     }
     if (isInFluid(event.player, Fluid.getType('kubejs:condensed_universal_entropy'))) {
-        event.player.potionEffects.add('minecraft:jump_boost', 20, 255, true, false)
-        event.player.potionEffects.add('minecraft:speed', 20, 255, true, false)
+        event.player.potionEffects.add('minecraft:jump_boost', 100, 255, true, false)
+        event.player.potionEffects.add('minecraft:speed', 100, 255, true, false)
     }
     if (isInFluid(event.player, Fluid.getType('kubejs:condensed_universal_order'))) {
-        event.player.potionEffects.add('minecraft:resistance', 20, 5, true, false)
+        event.player.potionEffects.add('minecraft:resistance', 100, 5, true, false)
     }
 })
 

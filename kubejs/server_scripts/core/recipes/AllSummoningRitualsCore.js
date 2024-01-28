@@ -11,9 +11,9 @@ ServerEvents.recipes(event => {
         'minecraft:wither_skeleton_skull',
         '#minecraft:wool_carpets',
         '#minecraft:candles',
-        '#minecraft:candle',
+        '#minecraft:candles',
         '#forge:plates/gold',
-        '#minecraft:candle',
+        '#minecraft:candles',
         '#minecraft:wooden_slabs',
         '#minecraft:logs',
         '#minecraft:wooden_slabs'
