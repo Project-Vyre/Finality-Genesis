@@ -507,7 +507,7 @@ ServerEvents.recipes(event => {
         'minecraft:quartz',
         'minecraft:glass',
         'minecraft:smooth_basalt',
-        'minecraft:iron',
+        'minecraft:iron_nugget',
     ]).superheated().id('finality:renew_amethyst')
     // Thank you to FunnyMan4579 on the official Create Discord for giving me this idea :3
     event.recipes.create.mixing('minecraft:nether_gold_ore', [
