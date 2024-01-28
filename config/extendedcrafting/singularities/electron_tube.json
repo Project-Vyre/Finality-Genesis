@@ -8,6 +8,6 @@
     "item": "create:electron_tube"
   },
   "materialCount": 4096,
-  "inUltimateSingularity": true,
-  "enabled": true
+  "inUltimateSingularity": false,
+  "enabled": false
 }

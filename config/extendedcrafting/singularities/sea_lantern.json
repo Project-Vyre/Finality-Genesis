@@ -8,6 +8,6 @@
     "item": "minecraft:sea_lantern"
   },
   "materialCount": 2048,
-  "inUltimateSingularity": true,
-  "enabled": true
+  "inUltimateSingularity": false,
+  "enabled": false
 }

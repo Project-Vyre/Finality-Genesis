@@ -85,38 +85,6 @@ ServerEvents.recipes(event => {
         O: 'kubejs:high_entropy_alloy_sheet',
         I: 'kubejs:high_entropy_alloy'
     }).id('finality:mechanical_crafting/create_worldshaper')
-    event.recipes.create.sequenced_assembly([
-        Item.of('kubejs:potion_base_singularity').withChance(0.25),
-        Item.of('kubejs:errored_result').withChance(0.25),
-        Item.of('minecraft:potion', '{Potion:"minecraft:mundane"}').withChance(0.25),
-        Item.of('minecraft:potion', '{Potion:"minecraft:thick"}').withChance(0.25),
-        Item.of('minecraft:potion', '{Potion:"minecraft:awkward"}').withChance(0.25)
-    ], 'kubejs:awakened_singularity_core', [
-        event.recipes.create.filling('kubejs:incomplete_potion_base_singularity', [
-            'kubejs:incomplete_potion_base_singularity',
-            Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:mundane"}')
-        ]),
-        event.recipes.create.filling('kubejs:incomplete_potion_base_singularity', [
-            'kubejs:incomplete_potion_base_singularity',
-            Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:thick"}')
-        ]),
-        event.recipes.create.filling('kubejs:incomplete_potion_base_singularity', [
-            'kubejs:incomplete_potion_base_singularity',
-            Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:awkward"}')
-        ])
-    ]).transitionalItem('kubejs:incomplete_potion_base_singularity').loops(12).id('finality:sequenced_assembly/potion_base_singularity')
-    event.recipes.create.sequenced_assembly([
-        Item.of('kubejs:blaze_cake_singularity').withChance(0.25),
-        Item.of('kubejs:errored_result').withChance(0.75),
-        'create:cinder_flour',
-        'minecraft:egg'
-    ], 'kubejs:awakened_singularity_core', [
-        event.recipes.create.deploying('kubejs:incomplete_blaze_cake_singularity', ['kubejs:incomplete_blaze_cake_singularity', 'create:blaze_cake']),
-        event.recipes.create.deploying('kubejs:incomplete_blaze_cake_singularity', ['kubejs:incomplete_blaze_cake_singularity', 'create:blaze_cake']),
-        event.recipes.create.deploying('kubejs:incomplete_blaze_cake_singularity', ['kubejs:incomplete_blaze_cake_singularity', 'create:blaze_cake']),
-        event.recipes.create.deploying('kubejs:incomplete_blaze_cake_singularity', ['kubejs:incomplete_blaze_cake_singularity', 'create:blaze_cake']),
-        event.recipes.create.pressing('kubejs:incomplete_blaze_cake_singularity', 'kubejs:incomplete_blaze_cake_singularity')
-    ]).transitionalItem('kubejs:incomplete_blaze_cake_singularity').loops(32).id('finality:sequenced_assembly/blaze_cake_singularity')
     for (let i = 0; i < CMD.length; i++) {
         let insert = CMD[i];
         event.recipes.create.deploying([

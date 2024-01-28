@@ -8,6 +8,6 @@
     "item": "minecraft:emerald_block"
   },
   "materialCount": 4096,
-  "inUltimateSingularity": true,
-  "enabled": true
+  "inUltimateSingularity": false,
+  "enabled": false
 }

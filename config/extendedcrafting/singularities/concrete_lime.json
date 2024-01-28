@@ -8,6 +8,6 @@
     "item": "minecraft:lime_concrete"
   },
   "materialCount": 16384,
-  "inUltimateSingularity": true,
-  "enabled": true
+  "inUltimateSingularity": false,
+  "enabled": false
 }

@@ -8,6 +8,6 @@
     "item": "minecraft:coarse_dirt"
   },
   "materialCount": 32768,
-  "inUltimateSingularity": true,
-  "enabled": true
+  "inUltimateSingularity": false,
+  "enabled": false
 }

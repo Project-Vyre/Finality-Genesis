@@ -8,6 +8,6 @@
     "item": "create:framed_glass"
   },
   "materialCount": 16384,
-  "inUltimateSingularity": true,
-  "enabled": true
+  "inUltimateSingularity": false,
+  "enabled": false
 }

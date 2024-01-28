@@ -1,10 +1,10 @@
 // priority: 0
-// requires: create
-// ignored: false
 
 /**
- * @file Singularity generation for future usage.
- * @version 2
+ * @file KubeJS singularity registration.
+ * @version 2.1
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> 
+ * Currently, .mcmeta files are written manually.
  */
 
 const vanillaSingularityProperties = {
@@ -34,7 +34,6 @@ const vanillaSingularityProperties = {
     soul_soil: { top: 0x352922, bottom: 0x46EFF4, name: 'Soul Soil' },
     tinted_glass: { top: 0x35283B, bottom: 0x272528, name: 'Tinted Glass' }
 }
-
 let vanillaSingularities = [
     'amethyst',
     'blue_ice',
@@ -81,7 +80,6 @@ const concreteSingularityProperties = {
     concrete_white: { top: 0xE4E5E5, bottom: 0xC2C7C8, name: 'White' },
     concrete_yellow: { top: 0xE2DAA9, bottom: 0xE1A414, name: 'Yellow' }
 }
-
 let concreteSingularities = [
     'concrete_black',
     'concrete_blue',
@@ -114,7 +112,6 @@ const createSingularityProperties = {
     track: { top: 0x606060, bottom: 0x85573E, name: 'Track' },
     zinc: { top: 0xB5D1BA, bottom: 0x7E806C, name: 'Zinc' },
 }
-
 let createSingularities = [
     'andesite_alloy',
     'brass',
@@ -130,7 +127,6 @@ let createSingularities = [
 ]
 
 StartupEvents.registry('item', event => {
-    // Concrete singularity generation
     for (const element of vanillaSingularities) {
         event.create('kubejs:' + element + '_singularity')
             .texture('layer0', 'kubejs:item/singularity')
@@ -143,18 +139,7 @@ StartupEvents.registry('item', event => {
             )
             .rarity('epic')
     }
-    for (const element of concreteSingularities) {
-        event.create('kubejs:' + element + '_singularity')
-            .texture('layer0', 'kubejs:item/singularity')
-            .texture('layer1', 'kubejs:item/singularity_overlay')
-            .color(0, concreteSingularityProperties[element].bottom)
-            .color(1, concreteSingularityProperties[element].top)
-            .formattedDisplayName(
-                Component.string(concreteSingularityProperties[element].name + ' ' + 'Concrete Singularity')
-                    .color(concreteSingularityProperties[element].top)
-            )
-            .rarity('epic')
-    }
+    event.create('kubejs:potion_base_singularity')
     for (const element of createSingularities) {
         event.create('kubejs:' + element + '_singularity')
             .texture('layer0', 'kubejs:item/singularity')
@@ -164,6 +149,42 @@ StartupEvents.registry('item', event => {
             .formattedDisplayName(
                 Component.string(createSingularityProperties[element].name + ' ' + 'Singularity')
                     .color(createSingularityProperties[element].top)
+            )
+            .rarity('epic')
+    }
+    event.create('kubejs:blaze_cake_singularity')
+    if (Platform.isLoaded('salt')) {
+        event.create('kubejs:salt_singularity')
+            .texture('layer0', 'kubejs:item/singularity')
+            .texture('layer1', 'kubejs:item/singularity_overlay')
+            .color(0, 0x685353)
+            .color(1, 0xA89A9A)
+            .formattedDisplayName(
+                Component.string('Salt Singularity')
+                    .color(0xA89A9A)
+            )
+    }
+    if (Platform.isLoaded('create_bic_bit')) {
+        event.create('kubejs:speculaas_singularity')
+        event.create('kubejs:stroopwafel_singularity')
+        event.create('kubejs:oliebollen_singularity')
+        event.create('kubejs:kroket_singularity')
+        event.create('kubejs:bitterballen_singularity')
+        event.create('kubejs:frikandel_singularity')
+        event.create('kubejs:fries_singularity')
+        event.create('kubejs:churros_singularity')
+        event.create('kubejs:stamppot_singularity')
+        event.create('kubejs:bic_bit_singularity').displayName('Create: Bitterballen Singularity')
+    }
+    for (const element of concreteSingularities) {
+        event.create('kubejs:' + element + '_singularity')
+            .texture('layer0', 'kubejs:item/singularity')
+            .texture('layer1', 'kubejs:item/singularity_overlay')
+            .color(0, concreteSingularityProperties[element].bottom)
+            .color(1, concreteSingularityProperties[element].top)
+            .formattedDisplayName(
+                Component.string(concreteSingularityProperties[element].name + ' ' + 'Concrete Singularity')
+                    .color(concreteSingularityProperties[element].top)
             )
             .rarity('epic')
     }

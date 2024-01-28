@@ -8,6 +8,6 @@
     "item": "create:sturdy_sheet"
   },
   "materialCount": 8192,
-  "inUltimateSingularity": true,
-  "enabled": true
+  "inUltimateSingularity": false,
+  "enabled": false
 }

@@ -8,6 +8,6 @@
     "item": "create:zinc_block"
   },
   "materialCount": 8192,
-  "inUltimateSingularity": true,
-  "enabled": true
+  "inUltimateSingularity": false,
+  "enabled": false
 }

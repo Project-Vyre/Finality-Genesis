@@ -8,6 +8,6 @@
     "item": "minecraft:redstone_block"
   },
   "materialCount": 16384,
-  "inUltimateSingularity": true,
-  "enabled": true
+  "inUltimateSingularity": false,
+  "enabled": false
 }

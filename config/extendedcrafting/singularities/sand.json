@@ -8,6 +8,6 @@
     "item": "minecraft:sand"
   },
   "materialCount": 16777216,
-  "inUltimateSingularity": true,
-  "enabled": true
+  "inUltimateSingularity": false,
+  "enabled": false
 }
