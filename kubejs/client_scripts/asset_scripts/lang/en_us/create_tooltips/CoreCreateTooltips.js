@@ -387,62 +387,6 @@ ClientEvents.lang('en_us', event => {
     })
     event.addAll(
         'kubejs',
-        createTooltip('minecraft:glowstone_dust')
-            .addSummary('The dust form of Glowstone. An essential ingredient in crafting blocks that emit light as well as _potion brewing_.')
-            .addBehaviour([
-                'Renewal',
-                'Can be obtained from defeating _witches_ or applying a _Night Vision Potion_ to some _Cinder Flour_.'
-            ])
-            .addBehaviour([
-                'Uses in Potion Brewing',
-                'Increases the _intensity_ of a potion. Also used in brewing a _Thick Potion_.'
-            ])
-            .setPalette($Palette.YELLOW)
-            .build()
-    )
-    event.addAll(
-        'kubejs',
-        createTooltip('minecraft:gunpowder')
-            .addSummary('An essential ingredient in both the creation of _explosives_ and _splash potions_.')
-            .addBehaviour([
-                'Renewal',
-                'Can be obtained from defeating _Creepers_ or washing _Crushed Raw Zinc_.'
-            ])
-            .setPalette($Palette.GRAY)
-            .build()
-    )
-    event.addAll(
-        'kubejs',
-        createTooltip('minecraft:redstone')
-            .addSummary('An embodiment of _game logic_ and can be used in many logic related components.')
-            .addBehaviour([
-                'Renewal',
-                'Can be obtained from defeating _witches_ or applying a _Strength Potion_ to some _Cinder Flour_.'
-            ])
-            .addBehaviour([
-                'Uses in Potion Brewing',
-                'Increases the _duration_ of a potion. Also used in brewing a _Mundane Potion_.'
-            ])
-            .setPalette($Palette.RED)
-            .build()
-    )
-    event.addAll(
-        'kubejs',
-        createTooltip('minecraft:echo_shard')
-            .addSummary('Now has additional uses.')
-            .addBehaviour([
-                'On R-Click on Warped Roots',
-                'Converts the roots into a _Sculk Sensor_.'
-            ])
-            .addBehaviour([
-                'On R-Click on Sculk Shrieker',
-                'Summons a Warden and _consumes_ the Echo Shard in the process.'
-            ])
-            .setPalette($Palette.BLUE)
-            .build()
-    )
-    event.addAll(
-        'kubejs',
         createTooltip('kubejs:copper_coin')
             .addSummary('The currency of _this world_.')
             .setPalette($Palette.GRAY)
