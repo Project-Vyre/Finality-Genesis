@@ -20,6 +20,10 @@ let UPNETHERITE_UPGRADES = [
     'phantom',
     'feather',
 ]
+let T2UPNETHERITE_UPGRADES = [
+    'corrupt',
+    'echo'
+]
 
 function netheriteUpgradedRepair(event, item, repairmaterial, recipeid) {
     event.recipes.minecraft.crafting_shapeless(Ingredient.of(item), [
@@ -128,4 +132,38 @@ ServerEvents.recipes(event => {
     event.smithing('upgradednetherite_items:creative_upgraded_netherite_totem', 'upgradednetherite_items:ultimate_upgraded_netherite_totem', 'upgradednetherite_creative:creative_upgraded_netherite_ingot').id('finality:creativerite_totem')
     event.smithing('upgradednetherite_creative:creative_upgraded_netherite_horse_armor', 'upgradednetherite_ultimate:ultimate_upgraded_netherite_horse_armor', 'upgradednetherite_creative:creative_upgraded_netherite_ingot').id('finality:creativerite_horse_armor')
     event.smithing('upgradednetherite_creative:creative_upgraded_netherite_shield', 'upgradednetherite_ultimate:ultimate_upgraded_netherite_shield', 'upgradednetherite_creative:creative_upgraded_netherite_ingot').id('finality:creativerite_shield')
+    for (let i = 0; i < UPNETHERITE_UPGRADES.length; i++) {
+        let upgrade = UPNETHERITE_UPGRADES[i];
+        event.forEachRecipe({
+            type: 'minecraft:crafting_shapeless',
+            output: 'upgradednetherite:' + upgrade + '_essence'
+        }, recipe => {
+            let result = recipe.originalRecipeResult
+            let ingredients = recipe.originalRecipeIngredients
+            event.recipes.kubejs.shapeless(
+                result,
+                ingredients
+            ).id(recipe.getId() + '_alternate').replaceInput('minecraft:dragon_breath', 'minecraft:crying_obsidian')
+        })
+    }
+    for (let i = 0; i < T2UPNETHERITE_UPGRADES.length; i++) {
+        let upgrade = T2UPNETHERITE_UPGRADES[i];
+        event.forEachRecipe({
+            type: 'minecraft:crafting_shapeless',
+            output: 'upgradednetherite:' + upgrade + '_essence'
+        }, recipe => {
+            let result = recipe.originalRecipeResult
+            let ingredients = recipe.originalRecipeIngredients
+            event.recipes.kubejs.shapeless(
+                result,
+                ingredients
+            ).id(recipe.getId() + '_alternate').replaceInput('minecraft:dragon_breath', 'minecraft:crying_obsidian')
+        })
+    }
+    /*
+        event.replaceInput({
+            type: 'minecraft:crafting_shapeless',
+            output: 'upgradednetherite:' + upgrade + '_essence'
+        }, 'minecraft:dragon_breath', 'minecraft:echo_shard')
+    */
 })
