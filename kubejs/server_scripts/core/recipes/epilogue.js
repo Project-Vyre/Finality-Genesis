@@ -367,7 +367,7 @@ ServerEvents.recipes(event => {
 
     // mechanism crafting
     event.recipes.create.sequenced_assembly([
-        Item.of('kubejs:terra_mechanism')
+        'kubejs:terra_mechanism'
     ], 'create:precision_mechanism', [
         event.recipes.create.deploying('kubejs:incomplete_terra_mechanism', ['kubejs:incomplete_terra_mechanism', '#minecraft:leaves']),
         event.recipes.create.deploying('kubejs:incomplete_terra_mechanism', ['kubejs:incomplete_terra_mechanism', 'kubejs:cobblestone_singularity']),
@@ -377,7 +377,7 @@ ServerEvents.recipes(event => {
     ]).transitionalItem('kubejs:incomplete_terra_mechanism').loops(1).id('finality:sequenced_assembly/terra_mechanism_creation')
 
     event.recipes.create.sequenced_assembly([
-        Item.of('kubejs:gluttony_mechanism')
+        'kubejs:gluttony_mechanism'
     ], 'kubejs:terra_mechanism', [
         event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'artifacts:eternal_steak']).keepHeldItem(),
         event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'kubejs:honey_singularity']),
@@ -386,7 +386,7 @@ ServerEvents.recipes(event => {
     ]).transitionalItem('kubejs:incomplete_gluttony_mechanism').loops(1).id('finality:sequenced_assembly/gluttony_mechanism_creation')
 
     event.recipes.create.sequenced_assembly([
-        Item.of('kubejs:metallurgy_mechanism'),
+        'kubejs:metallurgy_mechanism'
     ], 'kubejs:gluttony_mechanism', [
         event.recipes.create.deploying('kubejs:incomplete_metallurgy_mechanism', ['kubejs:incomplete_metallurgy_mechanism', 'kubejs:iron_singularity']),
         event.recipes.create.deploying('kubejs:incomplete_metallurgy_mechanism', ['kubejs:incomplete_metallurgy_mechanism', 'kubejs:andesite_alloy_singularity']),
@@ -398,7 +398,7 @@ ServerEvents.recipes(event => {
     ]).transitionalItem('kubejs:incomplete_metallurgy_mechanism').loops(1).id('finality:sequenced_assembly/metallurgy_mechanism_creation')
 
     event.recipes.create.sequenced_assembly([
-        Item.of('kubejs:lattice_mechanism')
+        'kubejs:lattice_mechanism'
     ], 'kubejs:metallurgy_mechanism', [
         event.recipes.create.deploying('kubejs:incomplete_lattice_mechanism', ['kubejs:incomplete_lattice_mechanism', 'kubejs:amethyst_singularity']),
         event.recipes.create.deploying('kubejs:incomplete_lattice_mechanism', ['kubejs:incomplete_lattice_mechanism', 'kubejs:quartz_singularity']),
@@ -408,7 +408,7 @@ ServerEvents.recipes(event => {
     ]).transitionalItem('kubejs:incomplete_lattice_mechanism').loops(1).id('finality:sequenced_assembly/lattice_mechanism_creation')
 
     event.recipes.create.sequenced_assembly([
-        Item.of('kubejs:umbral_mechanism')
+        'kubejs:umbral_mechanism'
     ], 'kubejs:lattice_mechanism', [
         event.recipes.create.deploying('kubejs:incomplete_umbral_mechanism', ['kubejs:incomplete_umbral_mechanism', 'aquamirae:abyssal_amethyst']),
         event.recipes.create.deploying('kubejs:incomplete_umbral_mechanism', ['kubejs:incomplete_umbral_mechanism', 'cataclysm:abyssal_sacrifice']),
@@ -418,18 +418,18 @@ ServerEvents.recipes(event => {
     ]).transitionalItem('kubejs:incomplete_umbral_mechanism').loops(1).id('finality:sequenced_assembly/umbral_mechanism_creation')
 
     event.recipes.create.sequenced_assembly([
-        Item.of('kubejs:genesis_mechanism')
+        'kubejs:genesis_mechanism'
     ], 'kubejs:umbral_mechanism', [
         event.recipes.create.deploying('kubejs:incomplete_genesis_mechanism', ['kubejs:incomplete_genesis_mechanism', 'create:steam_engine']),
         event.recipes.create.deploying('kubejs:incomplete_genesis_mechanism', ['kubejs:incomplete_genesis_mechanism', 'create:shaft']),
         event.recipes.create.deploying('kubejs:incomplete_genesis_mechanism', ['kubejs:incomplete_genesis_mechanism', 'create:rotation_speed_controller']),
         event.recipes.create.deploying('kubejs:incomplete_genesis_mechanism', ['kubejs:incomplete_genesis_mechanism', 'create:large_cogwheel']),
-        event.recipes.create.deploying('kubejs:incomplete_genesis_mechanism', ['kubejs:incomplete_genesis_mechanism', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:precision_mechanism"}').weakNBT()]),
-        event.recipes.create.deploying('kubejs:incomplete_genesis_mechanism', ['kubejs:incomplete_genesis_mechanism', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:electron_tube"}').weakNBT()])
+        event.recipes.create.deploying('kubejs:incomplete_genesis_mechanism', ['kubejs:incomplete_genesis_mechanism', 'kubejs:precision_mechanism_singularity']),
+        event.recipes.create.deploying('kubejs:incomplete_genesis_mechanism', ['kubejs:incomplete_genesis_mechanism', 'kubejs:electron_tube_singularity'])
     ]).transitionalItem('kubejs:incomplete_genesis_mechanism').loops(1).id('finality:sequenced_assembly/genesis_mechanism_creation')
 
     event.recipes.create.sequenced_assembly([
-        Item.of('kubejs:ascendant_mechanism'),
+        'kubejs:ascendant_mechanism'
     ], 'kubejs:genesis_mechanism', [
         event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),
         event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),

@@ -450,7 +450,7 @@ ServerEvents.recipes(event => {
         'create:sticky_mechanical_piston'
     ).id('finality:splashing/sticky_mechanical_piston')
     event.recipes.create.splashing([
-        Item.of('minecraft:glowstone').withChance(0.25),
+        Item.of('minecraft:glowstone_dust').withChance(0.25),
         Item.of('minecraft:bone').withChance(0.12)
     ], 'minecraft:soul_soil').id('finality:splashing/soul_soil')
     /**
