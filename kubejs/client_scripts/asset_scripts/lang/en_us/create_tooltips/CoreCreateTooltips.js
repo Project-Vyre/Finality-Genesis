@@ -439,6 +439,10 @@ ClientEvents.lang('en_us', event => {
                 'When given to a Deployer',
                 'With precision it is now able to _deconstruct_ items and blocks.'
             ])
+            .addBehaviour([
+                'Additional Info',
+                'You may need to _re-place_ doors once they have been _Ctrl + Z\'d_ by the _Deconstructor_.'
+            ])
             .setPalette($Palette.PURPLE)
             .build()
     )

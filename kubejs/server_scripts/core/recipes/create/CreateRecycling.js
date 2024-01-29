@@ -170,7 +170,21 @@ ServerEvents.recipes(event => {
         event.recipes.create.item_application('4x minecraft:gold_ingot', [
             'supplementaries:gold_trapdoor',
             'kubejs:deconstructor'
-        ]).keepHeldItem().id('finality:item_application/supplementaries/gold_trapdoor')
+        ]).keepHeldItem().id('finality:item_application/supplementaries/gold_trapdoor_deconstruction')
+        event.recipes.create.item_application([
+            'supplementaries:gold_door',
+            'minecraft:netherite_scrap'
+        ], [
+            'supplementaries:netherite_door',
+            'kubejs:deconstructor'
+        ]).keepHeldItem().id('finality:item_application/supplementaries/netherite_door_deconstruction')
+        event.recipes.create.item_application([
+            'supplementaries:gold_trapdoor',
+            'minecraft:netherite_scrap'
+        ], [
+            'supplementaries:netherite_trapdoor',
+            'kubejs:deconstructor'
+        ]).keepHeldItem().id('finality:item_application/supplementaries/netherite_trapdoor_deconstruction')
     }
     event.recipes.create.deploying('2x minecraft:iron_ingot', [
         'minecraft:shears',
