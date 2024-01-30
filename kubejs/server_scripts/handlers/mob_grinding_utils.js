@@ -203,7 +203,7 @@ ServerEvents.recipes(event => {
     ], {
         I: 'create:industrial_iron_block',
         G: 'create:framed_glass',
-        S: Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:framed_glass"}').weakNBT()
+        S: 'kubejs:framed_glass_singularity'
     }).id('finality:mechanical_crafting/mobgrindingutils_tank')
 
     event.recipes.create.sequenced_assembly([

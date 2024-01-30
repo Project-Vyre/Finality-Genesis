@@ -1,11 +1,5 @@
 {
-	icon: {
-		Count: 1b
-		id: "extendedcrafting:singularity"
-		tag: {
-			Id: "extendedcrafting:copper"
-		}
-	}
+	icon: "kubejs:copper_singularity"
 	id: "6242F0E548CA9F3C"
 	loot_size: 1
 	order_index: 20

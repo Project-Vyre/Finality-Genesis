@@ -1,11 +1,5 @@
 {
-	icon: {
-		Count: 1b
-		id: "extendedcrafting:singularity"
-		tag: {
-			Id: "extendedcrafting:netherite"
-		}
-	}
+	icon: "kubejs:netherite_singularity"
 	id: "137D11AFDBD76318"
 	loot_size: 1
 	order_index: 23

@@ -340,13 +340,7 @@
 				consume_items: true
 				disable_toast: true
 				id: "0BAD049D221AFA72"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:copper"
-					}
-				}
+				item: "kubejs:copper_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -370,13 +364,7 @@
 				consume_items: true
 				disable_toast: true
 				id: "68758FBEA9417C23"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:iron"
-					}
-				}
+				item: "kubejs:iron_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -400,13 +388,7 @@
 				consume_items: true
 				disable_toast: true
 				id: "1FA8AEA6202C057B"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:netherite"
-					}
-				}
+				item: "kubejs:netherite_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -430,13 +412,7 @@
 				consume_items: true
 				disable_toast: true
 				id: "2AEA6A6828F0728A"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:gold"
-					}
-				}
+				item: "kubejs:gold_singularity"
 				match_nbt: true
 				type: "item"
 			}]

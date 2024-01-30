@@ -108,13 +108,7 @@
 				""
 				"However, the book is not finished and won't be for a while. There is some info that isn't present in FTB Quests, however."
 			]
-			icon: {
-				Count: 1b
-				id: "extendedcrafting:singularity"
-				tag: {
-					Id: "extendedcrafting:coal"
-				}
-			}
+			icon: "kubejs:brass_singularity"
 			id: "4A691BB889286C89"
 			rewards: [{
 				exclude_from_claim_all: true

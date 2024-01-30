@@ -42,3 +42,137 @@ ServerEvents.tags('item', event => {
 ServerEvents.tags('block', event => {
     event.add('minecraft:saplings', 'culturaldelights:avocado_sapling')
 })
+
+ServerEvents.highPriorityData(event => {
+    event.addJson('culturaldelights:loot_tables/blocks/exotic_roll_medley_block', {
+        "type": "minecraft:block",
+        "pools": [
+            {
+                "name": "pool1",
+                "rolls": 1,
+                "entries": [
+                    {
+                        "type": "minecraft:item",
+                        "name": "culturaldelights:exotic_roll_medley"
+                    }
+                ],
+                "conditions": [
+                    {
+                        "condition": "minecraft:block_state_property",
+                        "block": "culturaldelights:exotic_roll_medley",
+                        "properties": {
+                            "servings": "8"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "pool2",
+                "rolls": 1,
+                "entries": [
+                    {
+                        "type": "minecraft:item",
+                        "name": "minecraft:bowl"
+                    }
+                ],
+                "conditions": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:block_state_property",
+                            "block": "culturaldelights:exotic_roll_medley",
+                            "properties": {
+                                "servings": "8"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    })
+    event.addJson('culturaldelights:loot_tables/blocks/avocado_bundle', {
+        "type": "minecraft:block",
+        "pools": [
+            {
+                "rolls": 1,
+                "entries": [
+                    {
+                        "type": "minecraft:alternatives",
+                        "children": [
+                            {
+                                "type": "minecraft:item",
+                                "conditions": [
+                                    {
+                                        "condition": "minecraft:match_tool",
+                                        "predicate": {
+                                            "enchantments": [
+                                                {
+                                                    "enchantment": "minecraft:silk_touch",
+                                                    "levels": {
+                                                        "min": 1
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "name": "culturaldelights:avocado_crate"
+                            },
+                            {
+                                "type": "minecraft:item",
+                                "functions": [
+                                    {
+                                        "function": "minecraft:set_count",
+                                        "count": {
+                                            "min": 2.0,
+                                            "max": 4.0,
+                                            "type": "minecraft:uniform"
+                                        }
+                                    },
+                                    {
+                                        "function": "minecraft:apply_bonus",
+                                        "enchantment": "minecraft:fortune",
+                                        "formula": "minecraft:uniform_bonus_count",
+                                        "parameters": {
+                                            "bonusMultiplier": 1
+                                        }
+                                    },
+                                    {
+                                        "function": "minecraft:limit_count",
+                                        "limit": {
+                                            "max": 8
+                                        }
+                                    },
+                                    {
+                                        "function": "minecraft:explosion_decay"
+                                    }
+                                ],
+                                "name": "culturaldelights:avocado"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    })
+    event.addJson('culturaldelights:loot_tables/blocks/avocado_leaf_carpet',
+        {
+            "type": "minecraft:block",
+            "pools": [
+                {
+                    "rolls": 1,
+                    "entries": [
+                        {
+                            "type": "minecraft:item",
+                            "name": "culturaldelights:avocado_leaves"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:survives_explosion"
+                        }
+                    ]
+                }
+            ]
+        })
+})

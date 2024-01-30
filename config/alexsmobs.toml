@@ -94,7 +94,7 @@
 	#Whether seagulls should steal food out of players' hotbar slots.
 	seagullStealing = true
 	#List of items that seagulls cannot take from players.
-	seagullStealingBlacklist = []
+	seagullStealingBlacklist = ["solapplepie:lunchbag", "solapplepie:golden_lunchbox", "solapplepie:lunchbox"]
 	#Whether the Clinging Potion effect should flip the screen. Warning: may cause nausea.
 	clingingFlipEffect = false
 	#Percent chance of getting Pigshoes from Piglin Bartering. Set to zero to disable.

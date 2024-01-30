@@ -225,6 +225,14 @@ ServerEvents.recipes(event => {
         ]).transitionalItem(`kubejs:incomplete_concrete_${color}_singularity`).loops(128).id(`finality:sequenced_assembly/${color}_concrete_singularity`)
     }
 
+    event.recipes.create.mixing('kubejs:chromatic_concrete_singularity', [
+        'kubejs:red_concrete_singularity',
+        'kubejs:green_concrete_singularity',
+        'kubejs:blue_concrete_singularity',
+        'kubejs:cyan_concrete_singularity',
+        'kubejs:yellow_concrete_singularity',
+        'kubejs:magenta_concrete_singularity'
+    ]).id('finality:mixing/chromatic_concrete_singularity')
     // mechanical crafting singularities
     event.recipes.create.mechanical_crafting('kubejs:coal_singularity', [
         ' CCCCCCC ',

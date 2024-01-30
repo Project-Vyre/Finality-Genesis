@@ -189,7 +189,7 @@ StartupEvents.registry('item', event => {
             .rarity('epic')
     }
     event.create('kubejs:chromatic_concrete_singularity')
-        .texture('layer0', 'kubejs:item/chromatic_concrete_singularity')
+        .texture('layer0', 'kubejs:item/singularity')
         .texture('layer1', 'kubejs:item/chromatic_concrete_singularity_overlay')
         .rarity('legendary')
 })

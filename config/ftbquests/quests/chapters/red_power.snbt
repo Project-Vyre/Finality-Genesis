@@ -48,7 +48,6 @@
 			id: "6DDE87592B21E322"
 			rewards: [
 				{
-					exclude_from_claim_all: true
 					id: "038E3BAFE0BF8953"
 					table_id: 9193491821639565519L
 					type: "random"
@@ -363,17 +362,6 @@
 		{
 			dependencies: ["5F24D7AF78526BBE"]
 			id: "62AD9A648D4B0944"
-			rewards: [{
-				id: "32ADBBA7CD297055"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:redstone"
-					}
-				}
-				type: "item"
-			}]
 			subtitle: "A reinforced Reader Node."
 			tasks: [{
 				id: "3B00C99EEC1CBB35"

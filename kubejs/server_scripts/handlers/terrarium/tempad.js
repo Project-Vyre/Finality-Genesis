@@ -1,5 +1,5 @@
 // requires: tempad
-// requires: create
+// requires: kubejs_create
 
 /**
  * @file Server handler for Tempad.
@@ -18,4 +18,17 @@ ServerEvents.recipes(event => {
         T: 'minecraft:tinted_glass',
         B: 'minecraft:beacon'
     }).id('finality:tempad')
+    event.recipes.create.mechanical_crafting('tempad:he_who_remains_tempad', [
+        ' UUU ',
+        'UTPTU',
+        'UEBEU',
+        'UTPTU',
+        ' UUU '
+    ], {
+        U: 'create:sturdy_sheet',
+        T: 'create:railway_casing',
+        E: 'kubejs:electron_tube_singularity',
+        P: 'kubejs:precision_mechanism_singularity',
+        B: 'minecraft:beacon'
+    }).id('finality:mechanical_crafting/overseers_tempad')
 })

@@ -15,6 +15,32 @@ ServerEvents.recipes(event => {
         'endertanks:bucket',
         'endertanks:tank'
     ])
+    if (!Platform.isLoaded('extendedcrafting')) {
+        // ender bucket
+        event.shaped('endertanks:ender_bucket', [
+            'AWA',
+            'OBO',
+            'AEA'
+        ], {
+            A: 'create:golden_sheet',
+            W: '#minecraft:wool',
+            O: 'create:sturdy_sheet',
+            B: 'minecraft:bucket',
+            E: 'minecraft:beacon'
+        }).id('finality:shetiphian/ender_bucket')
+        // ender tank
+        event.shaped('endertanks:ender_tank', [
+            'AWA',
+            'OCO',
+            'AEA'
+        ], {
+            A: 'create:golden_sheet',
+            W: '#minecraft:wool',
+            O: 'create:sturdy_sheet',
+            C: 'create:fluid_tank',
+            E: 'minecraft:beacon'
+        }).id('finality:shetiphian/ender_tank')        
+    }
     if (Platform.isLoaded('extendedcrafting')) {
         // ender bucket
         event.shaped('endertanks:ender_bucket', [

@@ -48,6 +48,8 @@
 	"Layout y-coordinate in pause menu" = 0
 	#The y-coordinate of the Ascending to the Aether and Descending from the Aether text in loading screens
 	"Portal text y-coordinate in loading screens" = 50
+	#Enables the overlay at the top of the screen for the Hammer of Kingbdogz' cooldown
+	"Enables Hammer of Kingbdogz' cooldown overlay" = true
 
 [Audio]
 	#Sets the minimum delay for the Aether's music manager to use if needing to reset the song delay outside the Aether

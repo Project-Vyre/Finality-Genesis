@@ -2,7 +2,6 @@
 // requires: monobank
 // requires: create
 // requires: kubejs_create
-// requires: extendedcrafting
 // ignored: false
 
 /**
@@ -167,7 +166,7 @@ ServerEvents.recipes(event => {
     ], {
         S: 'create:sturdy_sheet',
         D: '#functionalstorage:drawer',
-        E: Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:ender_pearl"}').strongNBT()
+        E: 'kubejs:ender_pearl_singularity'
     }).id('finality:functionalstorage/mechanical_crafting/ender_drawer')
     //event.forEachRecipe({ type: 'minecraft:crafting_shaped', output: 'functionalstorage:oak_1' }, replace => {
     //    event.shaped(Item.of(replace.originalRecipeResult.id), [
@@ -192,7 +191,7 @@ ServerEvents.recipes(event => {
         'CMC',
         'CCC'
     ], {
-        C: Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:copper"}').strongNBT(),
+        C: 'kubejs:copper_singularity',
         M: 'monobank:monobank'
     }).id('finality:functionalstorage/crafting/copper_upgrade')
     event.shaped('functionalstorage:gold_upgrade', [
@@ -200,7 +199,7 @@ ServerEvents.recipes(event => {
         'GUG',
         'GGG'
     ], {
-        G: Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:gold"}').strongNBT(),
+        G: 'kubejs:gold_singularity',
         U: 'functionalstorage:copper_upgrade'
     }).id('finality:functionalstorage/crafting/gold_upgrade')
     event.shaped('functionalstorage:diamond_upgrade', [
@@ -208,7 +207,7 @@ ServerEvents.recipes(event => {
         'DUD',
         'DDD'
     ], {
-        D: Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:diamond"}').strongNBT(),
+        D: 'kubejs:diamond_singularity',
         U: 'functionalstorage:gold_upgrade'
     }).id('finality:functionalstorage/crafting/diamond_upgrade')
     event.shaped('functionalstorage:netherite_upgrade', [
@@ -216,7 +215,7 @@ ServerEvents.recipes(event => {
         'NUN',
         'NNN'
     ], {
-        N: Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:netherite"}').strongNBT(),
+        N: 'kubejs:netherite_singularity',
         U: 'functionalstorage:diamond_upgrade'
     }).id('finality:functionalstorage/crafting/netherite_upgrade')
 })

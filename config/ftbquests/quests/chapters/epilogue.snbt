@@ -75,13 +75,7 @@
 			subtitle: "Let's start with the easiest one, shall we?"
 			tasks: [{
 				id: "781C616780708BED"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:coal"
-					}
-				}
+				item: "kubejs:coal_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -117,15 +111,8 @@
 			id: "634CF0AB7722167E"
 			subtitle: "Copper copper copper."
 			tasks: [{
-				id: "749BB0B63485E853"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:copper"
-					}
-				}
-				match_nbt: true
+				id: "5481523B52689BA6"
+				item: "kubejs:copper_singularity"
 				type: "item"
 			}]
 			x: -1.5d
@@ -138,13 +125,7 @@
 			subtitle: "*in turkey speak* COBBLE COBBLE COBBLE"
 			tasks: [{
 				id: "50A3755D5BC3CA49"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:cobblestone"
-					}
-				}
+				item: "kubejs:cobblestone_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -157,13 +138,7 @@
 			subtitle: "I'm sorry, how much iron?"
 			tasks: [{
 				id: "08E5007CF006F958"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:iron"
-					}
-				}
+				item: "kubejs:iron_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -175,8 +150,14 @@
 				"48F7AA720F364C68"
 				"16EFBAF2CDCCCA8C"
 			]
+			description: [
+				"All singularities have to be automated in sufficient quantities to fully automate the Ultimate Singularity."
+				""
+				"Good luck!"
+			]
 			icon: "extendedcrafting:ultimate_singularity"
 			id: "123D0E0F69B73A88"
+			subtitle: "Congratulations are in order!"
 			tasks: [
 				{
 					id: "2F6C1657E021958E"
@@ -204,6 +185,7 @@
 					type: "item"
 				}
 			]
+			title: "The Ultimate Singularity"
 			x: 0.0d
 			y: -7.0d
 		}
@@ -226,13 +208,7 @@
 			subtitle: "Uhhhm...?"
 			tasks: [{
 				id: "15FFA94B3269F3B7"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:coarse_dirt"
-					}
-				}
+				item: "kubejs:coarse_dirt_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -245,13 +221,7 @@
 			subtitle: "Inaros, the Pocket Sand Warframe."
 			tasks: [{
 				id: "026FE6916D4B44CC"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:sand"
-					}
-				}
+				item: "kubejs:sand_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -264,13 +234,7 @@
 			subtitle: "Somehow the power of glass defeated the Eidolons..."
 			tasks: [{
 				id: "700A495536DAB32A"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:framed_glass"
-					}
-				}
+				item: "kubejs:framed_glass_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -290,13 +254,7 @@
 			subtitle: "We're rich!"
 			tasks: [{
 				id: "17F66931EDF0C439"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:gold"
-					}
-				}
+				item: "kubejs:gold_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -320,13 +278,7 @@
 			subtitle: "It's raining diamonds!"
 			tasks: [{
 				id: "63944A2B242EE21A"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:diamond"
-					}
-				}
+				item: "kubejs:diamond_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -343,13 +295,7 @@
 			subtitle: "Those were the times..."
 			tasks: [{
 				id: "3CA9C04FD6FAE1DF"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:netherite"
-					}
-				}
+				item: "kubejs:netherite_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -362,13 +308,7 @@
 			subtitle: "I'm out of ideas for quotes LOL"
 			tasks: [{
 				id: "7AB152441C107019"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:emerald"
-					}
-				}
+				item: "kubejs:emerald_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -381,13 +321,7 @@
 			subtitle: "Oh look, it's my favorite color."
 			tasks: [{
 				id: "2E53EEA390CE1FEE"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:amethyst"
-					}
-				}
+				item: "kubejs:amethyst_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -396,16 +330,12 @@
 		}
 		{
 			dependencies: ["30652DFC68BE93B2"]
+			description: ["Did you know Amethyst is just a purple variety of Quartz?"]
 			id: "1644EB18E1A28B48"
+			subtitle: "Precise resonance."
 			tasks: [{
 				id: "4E4F85E651395AD6"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:quartz"
-					}
-				}
+				item: "kubejs:quartz_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -415,15 +345,10 @@
 		{
 			dependencies: ["1644EB18E1A28B48"]
 			id: "5C757553EC9D4B75"
+			subtitle: "It's logic dust, don't question it."
 			tasks: [{
 				id: "6CDFDD7C8343BFEF"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:redstone"
-					}
-				}
+				item: "kubejs:redstone_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -432,17 +357,20 @@
 		}
 		{
 			dependencies: ["7665244BC5744A0A"]
+			description: [
+				"You can use Mechanical Ploughs to harvest snowballs."
+				""
+				"From snowballs, you can compact them into snow blocks."
+				""
+				"From snow blocks you can compact them into ice blocks."
+				""
+				"From ice to packed ice to blue ice."
+			]
 			id: "2F9E165A7643EC15"
 			subtitle: "Ice ice baby"
 			tasks: [{
 				id: "1116E43D9206E410"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:blue_ice"
-					}
-				}
+				item: "kubejs:blue_ice_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -455,13 +383,7 @@
 			subtitle: "MY EYES!"
 			tasks: [{
 				id: "2C7CB2064CECB691"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:glowstone"
-					}
-				}
+				item: "kubejs:glowstone_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -478,13 +400,7 @@
 			subtitle: "Tick tock, team...! We're not getting any younger here!"
 			tasks: [{
 				id: "2F417E2FA840DF1F"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:precision_mechanism"
-					}
-				}
+				item: "kubejs:precision_mechanism_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -496,13 +412,7 @@
 			id: "58EF68AEA9983F39"
 			tasks: [{
 				id: "0C5CF94494F73E05"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:sturdy_sheet"
-					}
-				}
+				item: "kubejs:sturdy_sheet_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -512,15 +422,10 @@
 		{
 			dependencies: ["4AF48E980CCBCE3B"]
 			id: "1B5288FD0602ECDC"
+			subtitle: "Logic infused quartz, yay"
 			tasks: [{
 				id: "138F32B5080A595A"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:rose_quartz"
-					}
-				}
+				item: "kubejs:rose_quartz_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -530,15 +435,10 @@
 		{
 			dependencies: ["1B5288FD0602ECDC"]
 			id: "7B35DC5287E45E32"
+			subtitle: "Logic upgraded!"
 			tasks: [{
 				id: "31B221A191BE5EDE"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:electron_tube"
-					}
-				}
+				item: "kubejs:electron_tube_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -550,13 +450,7 @@
 			id: "59AC01EE88361B2A"
 			tasks: [{
 				id: "1C34029F3E82006B"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:train_track"
-					}
-				}
+				item: "kubejs:track_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -570,13 +464,7 @@
 			subtitle: "It's great with tea!"
 			tasks: [{
 				id: "5095457D8E4B9A4A"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:honey"
-					}
-				}
+				item: "kubejs:honey_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -586,15 +474,10 @@
 		{
 			dependencies: ["4AA110E53E446F07"]
 			id: "3CCEB1500AFFD218"
+			subtitle: "Who lives in a pineapple under the sea?"
 			tasks: [{
 				id: "232E71752926B165"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:sea_lantern"
-					}
-				}
+				item: "kubejs:sea_lantern_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -604,15 +487,10 @@
 		{
 			dependencies: ["6762D7F87F3F59F3"]
 			id: "4AF48E980CCBCE3B"
+			subtitle: "Create's foundational material."
 			tasks: [{
 				id: "145CBB1E966FC57C"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:andesite_alloy"
-					}
-				}
+				item: "kubejs:andesite_alloy_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -622,15 +500,10 @@
 		{
 			dependencies: ["7D825E2854279E2C"]
 			id: "0999064FC6C4C5FE"
+			subtitle: "Very shiny"
 			tasks: [{
 				id: "2B055B4AC444B04D"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:brass"
-					}
-				}
+				item: "kubejs:brass_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -643,13 +516,7 @@
 			subtitle: "Look! It's Martian sand!"
 			tasks: [{
 				id: "4E449E0F397979F5"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:red_sand"
-					}
-				}
+				item: "kubejs:red_sand_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -658,16 +525,11 @@
 		}
 		{
 			dependencies: ["4AF48E980CCBCE3B"]
+			description: ["Zinc ore actually emits some toxic fumes when smelted, so this is a bit awkward..."]
 			id: "7D825E2854279E2C"
 			tasks: [{
 				id: "6893B960970E8F8D"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:zinc"
-					}
-				}
+				item: "kubejs:zinc_singularity"
 				type: "item"
 			}]
 			x: -16.5d
@@ -679,13 +541,7 @@
 			subtitle: "This might be very difficult to automate."
 			tasks: [{
 				id: "749E4B52142E3EAF"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:end_crystal"
-					}
-				}
+				item: "kubejs:end_crystal_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -721,13 +577,7 @@
 			subtitle: "CHOCOLATE? CHOCOLATE? CHOCOLATE!!!!!"
 			tasks: [{
 				id: "33FCC4E63EFB1237"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:chocolate"
-					}
-				}
+				item: "kubejs:chocolate_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -741,13 +591,7 @@
 			subtitle: "Best enjoyed with a cup of tea."
 			tasks: [{
 				id: "5CE15E7D6ED67BF3"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:builders_tea"
-					}
-				}
+				item: "kubejs:builders_tea_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -760,13 +604,7 @@
 			subtitle: "/tpa"
 			tasks: [{
 				id: "2B2527CBAAB5A888"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:ender_pearl"
-					}
-				}
+				item: "kubejs:ender_pearl_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -783,13 +621,7 @@
 			subtitle: "*light mode*"
 			tasks: [{
 				id: "495BF0CFC9BA5E73"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:tinted_glass"
-					}
-				}
+				item: "kubejs:tinted_glass_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -890,193 +722,97 @@
 			tasks: [
 				{
 					id: "5B27C6D23E410D06"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_black"
-						}
-					}
+					item: "kubejs:concrete_black_singularity"
 					match_nbt: true
 					type: "item"
 				}
 				{
 					id: "19A95F31F5CB4706"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_white"
-						}
-					}
+					item: "kubejs:concrete_white_singularity"
 					match_nbt: true
 					type: "item"
 				}
 				{
 					id: "47815AB5F1AA1752"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_pink"
-						}
-					}
+					item: "kubejs:concrete_pink_singularity"
 					match_nbt: true
 					type: "item"
 				}
 				{
 					id: "28C5A25B97C19758"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_orange"
-						}
-					}
+					item: "kubejs:concrete_orange_singularity"
 					match_nbt: true
 					type: "item"
 				}
 				{
 					id: "1C7B3DD61250CA13"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_red"
-						}
-					}
+					item: "kubejs:concrete_red_singularity"
 					match_nbt: true
 					type: "item"
 				}
 				{
 					id: "7D261CA53FD9122B"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_gray"
-						}
-					}
+					item: "kubejs:concrete_gray_singularity"
 					match_nbt: true
 					type: "item"
 				}
 				{
 					id: "289804B6869D2FAA"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_yellow"
-						}
-					}
+					item: "kubejs:concrete_yellow_singularity"
 					match_nbt: true
 					type: "item"
 				}
 				{
 					id: "6DBD52CA265FFCEF"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_brown"
-						}
-					}
+					item: "kubejs:concrete_brown_singularity"
 					match_nbt: true
 					type: "item"
 				}
 				{
 					id: "0A89AFDE8C14CC3D"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_cyan"
-						}
-					}
+					item: "kubejs:concrete_cyan_singularity"
 					match_nbt: true
 					type: "item"
 				}
 				{
 					id: "550C7408B785105F"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_green"
-						}
-					}
+					item: "kubejs:concrete_green_singularity"
 					match_nbt: true
 					type: "item"
 				}
 				{
 					id: "5747E5F187A8FAD5"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_light_gray"
-						}
-					}
+					item: "kubejs:concrete_light_gray_singularity"
 					match_nbt: true
 					type: "item"
 				}
 				{
 					id: "42878BA1F3E120BD"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_light_blue"
-						}
-					}
+					item: "kubejs:concrete_light_blue_singularity"
 					match_nbt: true
 					type: "item"
 				}
 				{
 					id: "25A4A1F32B62B15F"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_lime"
-						}
-					}
+					item: "kubejs:concrete_lime_singularity"
 					match_nbt: true
 					type: "item"
 				}
 				{
 					id: "096292091963949D"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_blue"
-						}
-					}
+					item: "kubejs:concrete_blue_singularity"
 					match_nbt: true
 					type: "item"
 				}
 				{
 					id: "40BF2F4EC2AE4675"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_magenta"
-						}
-					}
+					item: "kubejs:concrete_magenta_singularity"
 					match_nbt: true
 					type: "item"
 				}
 				{
 					id: "40AB007036CB0AD1"
-					item: {
-						Count: 1b
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:concrete_purple"
-						}
-					}
+					item: "kubejs:concrete_purple_singularity"
 					match_nbt: true
 					type: "item"
 				}
@@ -1092,13 +828,7 @@
 			subtitle: "Don't think about it."
 			tasks: [{
 				id: "1BA4A0456CC76355"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:soul_sand"
-					}
-				}
+				item: "kubejs:soul_sand_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -1111,13 +841,7 @@
 			subtitle: "Don't question it."
 			tasks: [{
 				id: "04BA94F6C3CD6E88"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:soul_soil"
-					}
-				}
+				item: "kubejs:soul_soil_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -1131,13 +855,7 @@
 			subtitle: "SSSssssssss..."
 			tasks: [{
 				id: "2E24AB8C13DA10E2"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:gunpowder"
-					}
-				}
+				item: "kubejs:gunpowder_singularity"
 				match_nbt: true
 				type: "item"
 			}]
@@ -1151,13 +869,7 @@
 			subtitle: "Feeling blue?"
 			tasks: [{
 				id: "32C29D313FDAB36C"
-				item: {
-					Count: 1b
-					id: "extendedcrafting:singularity"
-					tag: {
-						Id: "extendedcrafting:lapis_lazuli"
-					}
-				}
+				item: "kubejs:lapis_lazuli_singularity"
 				match_nbt: true
 				type: "item"
 			}]

@@ -1,11 +1,5 @@
 {
-	icon: {
-		Count: 1b
-		id: "extendedcrafting:singularity"
-		tag: {
-			Id: "extendedcrafting:redstone"
-		}
-	}
+	icon: "kubejs:redstone_singularity"
 	id: "7F95D81A424900CF"
 	loot_size: 1
 	order_index: 7

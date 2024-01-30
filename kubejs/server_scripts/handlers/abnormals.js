@@ -45,6 +45,14 @@ ServerEvents.recipes(event => {
             'create:bar_of_chocolate',
             Fluid.of('create:chocolate', 250)
         ).id('create:compacting/chocolate')
+        console.log('Also adding compatibility recipes...')
+        event.shaped('neapolitan:chocolate_block', [
+            'CCC',
+            'CCC',
+            'CCC'
+        ], {
+            C: '#forge:bars/chocolate'
+        }).id('neapolitan:chocolate/chocolate_block')
     }
 })
 
