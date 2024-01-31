@@ -1,4 +1,4 @@
-// ignored: false
+// ignored: true
 
 /**
  * @file Applies emotional damage when an entity is hit with any of the items below.
@@ -10,6 +10,7 @@
 
 let dmgScriptDebug = false
 // NOTE TO SLEEPY SELF FIX MATH
+
 EntityEvents.hurt(event => {
     const {
         entity,
@@ -20,8 +21,8 @@ EntityEvents.hurt(event => {
     }
 
     function finPercentScaling(percentage) {
-        entity.health -= entity.getHealth() * percentage
-        console.log(entity.health -= entity.getHealth() * percentage)
+        entity.attack(entity.getHealth() * percentage)
+        console.log(entity.attack(entity.getHealth() * percentage))
     }
     //let final_atk_scaling = entity.health -= Math.max((entity.getHealth() * 0.25).toFixed(0))
     switch (player.getMainHandItem()) {
@@ -55,18 +56,18 @@ EntityEvents.hurt(event => {
             break;
         // Cataclysm weapon checks
         case 'cataclysm:infernal_forge':
-            entity.health - 24
+            event.damage - 24
             break;
         case 'cataclysm:the_incinerator':
             entity.secondsOnFire = 10
-            entity.health - 32
+            event.damage - 32
         case 'cataclysm:meat_shredder':
             // subtract one percent per tick from an entity's max health
             // Warden HP (500) - 100 (1/100) * 100
             // So it would be subtracting 1% per tick from the Warden's health
-            let percent1 = Number.parseFloat(entity.health).toFixed(2) - Number.parseFloat(entity.getMaxHealth() * 0.08).toFixed(2)
-            percent1
-            if (dmgScriptDebug) { console.log('Meat Shredder:' + percent1) }
+            let shredderDmg = Number.parseFloat(event.damage).toFixed(2) = Number.parseFloat(entity.getMaxHealth() * 0.1).toFixed(2)
+            shredderDmg
+            if (dmgScriptDebug) { console.log('Meat Shredder:' + shredderDmg) }
             break;
         default:
             //if (dmgScriptDebug) { console.log("hurt DEFAULT") }
