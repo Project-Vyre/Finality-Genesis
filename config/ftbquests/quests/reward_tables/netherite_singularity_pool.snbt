@@ -4,9 +4,10 @@
 	loot_size: 1
 	order_index: 23
 	rewards: [
-		{ item: "kubejs:gold_coin", weight: 10.0f }
-		{ item: "kubejs:iron_coin" }
-		{ item: "kubejs:netherite_coin", weight: 0.01f }
+		{ item: "kubejs:gold_coin", weight: 25.0f }
+		{ item: "kubejs:iron_coin", weight: 75.0f }
+		{ item: "kubejs:netherite_coin" }
+		{ item: "kubejs:copper_coin", weight: 50.0f }
 	]
 	title: "Netherite Singularity Pool"
 }

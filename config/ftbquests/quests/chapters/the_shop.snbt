@@ -50,6 +50,7 @@
 				exclude_from_claim_all: true
 				id: "0443826F9DFE5134"
 				table_id: 6978865987231553331L
+				team_reward: false
 				type: "choice"
 			}]
 			subtitle: "Need food?"
@@ -74,6 +75,7 @@
 				exclude_from_claim_all: true
 				id: "2AE85BA86E044D57"
 				table_id: 5839215924496777821L
+				team_reward: false
 				type: "choice"
 			}]
 			subtitle: "Need drinks in exchange for copper coins?"
@@ -95,6 +97,7 @@
 			disable_toast: true
 			id: "287A537B379E1C44"
 			rewards: [{
+				auto: "invisible"
 				id: "00213BD34B33C2A7"
 				item: "kubejs:iron_coin"
 				type: "item"
@@ -197,6 +200,7 @@
 				item: "kubejs:netherite_coin"
 				type: "item"
 			}]
+			subtitle: "If you would like to convert it downwards."
 			tasks: [{
 				consume_items: true
 				disable_toast: true
@@ -214,9 +218,9 @@
 			disable_toast: true
 			id: "69217C9CACF88D91"
 			rewards: [{
-				exclude_from_claim_all: true
 				id: "14F59F858E23037F"
 				table_id: 7477086534417165542L
+				team_reward: false
 				type: "random"
 			}]
 			subtitle: "The starter lootbox..."
@@ -241,6 +245,7 @@
 				exclude_from_claim_all: true
 				id: "0A945AA01B2E1F49"
 				table_id: 4746718853429427293L
+				team_reward: false
 				type: "choice"
 			}]
 			subtitle: "Need drinks in exchange for iron coins?"
@@ -264,6 +269,7 @@
 				exclude_from_claim_all: true
 				id: "4E4C92F04BDBA50A"
 				table_id: 8698495603632491656L
+				team_reward: false
 				type: "choice"
 			}]
 			subtitle: "Need food in exchange for iron coins?"
@@ -285,9 +291,11 @@
 			disable_toast: true
 			id: "7223C624C7DE9C7D"
 			rewards: [{
+				auto: "disabled"
 				exclude_from_claim_all: true
 				id: "4A072AFEE6F42563"
 				table_id: 2071744225430230389L
+				team_reward: false
 				type: "choice"
 			}]
 			subtitle: "Need a toolbox?"
@@ -330,9 +338,10 @@
 			disable_toast: true
 			id: "3CD97106597161FB"
 			rewards: [{
-				exclude_from_claim_all: true
-				id: "59AD31885676C073"
+				auto: "invisible"
+				id: "7771965535BAC7B7"
 				table_id: 7080486431739256636L
+				team_reward: false
 				type: "random"
 			}]
 			subtitle: "Want to try your luck?"
@@ -354,9 +363,10 @@
 			disable_toast: true
 			id: "79707400E036B51E"
 			rewards: [{
-				exclude_from_claim_all: true
+				auto: "invisible"
 				id: "383D4E2BFAFF89F4"
 				table_id: 860113756744595796L
+				team_reward: false
 				type: "random"
 			}]
 			subtitle: "Want to try your luck?"
@@ -378,9 +388,10 @@
 			disable_toast: true
 			id: "0F40B913DB55176F"
 			rewards: [{
-				exclude_from_claim_all: true
+				auto: "invisible"
 				id: "57D74757A2CE1BD7"
 				table_id: 1404298105814737688L
+				team_reward: false
 				type: "random"
 			}]
 			subtitle: "Want to try your luck?"
@@ -402,9 +413,10 @@
 			disable_toast: true
 			id: "66C295822C53109E"
 			rewards: [{
-				exclude_from_claim_all: true
+				auto: "invisible"
 				id: "55029DC529D0708F"
 				table_id: 4003590059278366596L
+				team_reward: false
 				type: "random"
 			}]
 			subtitle: "Want to try your luck?"
