@@ -134,6 +134,9 @@ ServerEvents.recipes(event => {
     }
     event.remove([
         { type: 'mysticalagriculture:reprocessor' },
+        { id: 'mysticalagriculture:essence/minecraft/dirt' },
+        { id: 'mysticalagriculture:essence/minecraft/amethyst' },
+        { id: 'mysticalagriculture:essence/minecraft/quartz' },
         { id: 'mysticalagriculture:essence/minecraft/iron_ingot' },
         { id: 'mysticalagriculture:essence/minecraft/gold_ingot' },
         { id: 'mysticalagriculture:essence/minecraft/copper_ingot' },
@@ -141,9 +144,13 @@ ServerEvents.recipes(event => {
         { id: 'mysticalagriculture:essence/common/brass_ingot' },
         { id: 'mysticalagriculture:essence/common/steel_ingot' },
         { id: 'mysticalagriculture:essence/minecraft/diamond' },
+        { id: 'mysticalagriculture:essence/minecraft/obsidian' },
         { id: 'mysticalagriculture:essence/minecraft/netherite_ingot' },
         { id: 'mysticalagriculture:essence/minecraft/glowstone_dust' },
         { id: 'mysticalagriculture:essence/minecraft/netherrack' },
+        { id: 'mysticalagriculture:essence/minecraft/crimson_nylium' },
+        { id: 'mysticalagriculture:essence/minecraft/warped_nylium' },
+        { id: 'mysticalagriculture:essence/minecraft/ghast_tear' },
         { id: 'mysticalagriculture:essence/minecraft/chorus_fruit' },
         { id: 'mysticalagriculture:supremium_ingot' },
         { id: 'mysticalagriculture:supremium_gemstone' }
@@ -216,8 +223,11 @@ ServerEvents.recipes(event => {
         '8x create:cinder_flour',
         Fluid.of('create:potion', 250, '{Bottle: "REGULAR", Potion: "minecraft:strength"}')
     ]).id('finality:mysticalagriculture/mixing/redstone')
-    // fire essences
-    event.shaped('16x minecraft:red_sand', [
+    /**
+     * Fire Essence
+     */
+    // Sand
+    event.shaped('minecraft:red_sand', [
         'DF',
         'FG'
     ], {
@@ -225,26 +235,40 @@ ServerEvents.recipes(event => {
         F: 'mysticalagriculture:fire_essence',
         G: 'minecraft:gold_nugget'
     }).id('mysticalagriculture:essence/minecraft/red_sand')
-    event.recipes.create.mixing('16x minecraft:red_sand', [
+    event.recipes.create.mixing('minecraft:red_sand', [
         '2x mysticalagriculture:dirt_essence',
         '2x mysticalagriculture:fire_essence',
         'minecraft:gold_nugget'
     ]).id('finality:mysticalagriculture/mixing/red_sand')
-    event.shaped('4x minecraft:sand', [
+    event.shaped('minecraft:sand', [
         'DF',
         'FD'
     ], {
         D: 'mysticalagriculture:dirt_essence',
         F: 'mysticalagriculture:fire_essence'
     }).id('mysticalagriculture:essence/minecraft/sand')
-    event.recipes.create.mixing('16x minecraft:sand', [
+    event.recipes.create.mixing('minecraft:sand', [
         '2x mysticalagriculture:dirt_essence',
         '2x mysticalagriculture:fire_essence'
     ]).id('finality:mysticalagriculture/mixing/sand')
+    event.shaped('8x minecraft:soul_sand', [
+        'NNN',
+        'NFN',
+        'NNN'
+    ], {
+        N: 'mysticalagriculture:nether_essence',
+        F: 'mysticalagriculture:fire_essence'
+    }).id('mysticalagriculture:essence/minecraft/soul_sand')
+    event.recipes.create.mixing('8x minecraft:soul_sand', [
+        '8x mysticalagriculture:nether_essence',
+        'mysticalagriculture:fire_essence'
+    ]).id('finality:mysticalagriculture/mixing/soul_sand')
+
     event.recipes.create.compacting([Fluid.of('minecraft:lava', 1000)], [
         '9x mysticalagriculture:fire_essence'
     ]).id('finality:mysticalagriculture/compacting/lava')
-    event.shaped('12x minecraft:tuff', [
+
+    event.shaped('minecraft:tuff', [
         ' S ',
         'SFS',
         ' S '
@@ -252,24 +276,28 @@ ServerEvents.recipes(event => {
         S: 'mysticalagriculture:stone_essence',
         F: 'mysticalagriculture:fire_essence'
     }).id('mysticalagriculture:essence/minecraft/tuff')
-    event.recipes.create.compacting('12x minecraft:tuff', [
-        '5x mysticalagriculture:stone_essence',
+    event.recipes.create.compacting('4x minecraft:tuff', [
+        '4x mysticalagriculture:stone_essence',
         'mysticalagriculture:fire_essence'
     ]).id('finality:mysticalagriculture/compacting/tuff')
-    event.shaped('8x minecraft:flint', [
+    event.shaped('2x minecraft:flint', [
         'SF',
         'FS'
     ], {
         S: 'mysticalagriculture:stone_essence',
         F: 'mysticalagriculture:fire_essence'
     }).id('mysticalagriculture:essence/minecraft/flint')
-    event.recipes.create.mixing('8x minecraft:flint', [
+    event.recipes.create.mixing('2x minecraft:flint', [
         '2x mysticalagriculture:stone_essence',
         '2x mysticalagriculture:fire_essence'
     ]).id('finality:mysticalagriculture/mixing/flint')
-    // earth essence related
-    // water essence related
-    event.recipes.create.mixing('12x minecraft:mud', [
+    /**
+     * Earth Essence
+     */
+    /**
+     * Water Essence
+     */
+    event.recipes.create.mixing('4x minecraft:mud', [
         '4x mysticalagriculture:dirt_essence',
         'mysticalagriculture:water_essence'
     ]).id('finality:mysticalagriculture/mixing/mud')
@@ -322,7 +350,7 @@ ServerEvents.recipes(event => {
         S: 'mysticalagriculture:stone_essence',
         Q: 'mysticalagriculture:nether_quartz_essence'
     }).id('mysticalagriculture:essence/minecraft/andesite')
-    event.recipes.create.compacting('16x minecraft:andesite', [
+    event.recipes.create.compacting('4x minecraft:andesite', [
         '4x mysticalagriculture:stone_essence',
         'mysticalagriculture:nether_quartz_essence'
     ]).id('finality:mysticalagriculture/compacting/andesite')
@@ -350,9 +378,13 @@ ServerEvents.recipes(event => {
         '4x mysticalagriculture:stone_essence',
         '2x mysticalagriculture:nether_quartz_essence'
     ]).id('finality:mysticalagriculture/compacting/granite')
-    event.recipes.create.compacting('8x minecraft:obsidian', [
-        '8x mysticalagriculture:obsidian_essence'
-    ]).id('finality:mysticalagriculture/compacting/obsidian')
+    event.shaped('minecraft:obsidian', [
+        'OOO',
+        'OOO',
+        'OOO'
+    ], {
+        O: 'mysticalagriculture:obsidian_essence'
+    }).id('finality:mysticalagriculture/crafting/obsidian')
     event.shaped('4x minecraft:dripstone_block', [
         ' S ',
         'SWS',
@@ -365,9 +397,22 @@ ServerEvents.recipes(event => {
         '4x mysticalagriculture:stone_essence',
         'mysticalagriculture:water_essence'
     ]).id('finality:mysticalagriculture/compacting/dripstone')
-    event.recipes.create.compacting('8x minecraft:amethyst_shard', [
-        '8x mysticalagriculture:amethyst_essence'
-    ]).id('finality:mysticalagriculture/compacting/amethyst_shards')
+    // Quartz
+    event.shaped('minecraft:quartz', [
+        'QQQ',
+        'QQQ',
+        'QQQ'
+    ], {
+        Q: 'mysticalagriculture:nether_quartz_essence'
+    }).id('finality:mysticalagriculture/crafting/quartz')
+    // Amethyst
+    event.shaped('minecraft:amethyst_shard', [
+        'AAA',
+        'AAA',
+        'AAA'
+    ], {
+        A: 'mysticalagriculture:amethyst_essence'
+    }).id('finality:mysticalagriculture/crafting/amethyst')
     event.shaped('8x minecraft:calcite', [
         'SSS',
         'SAS',
@@ -381,18 +426,30 @@ ServerEvents.recipes(event => {
         'mysticalagriculture:amethyst_essence'
     ]).id('finality:mysticalagriculture/compacting/calcite')
 
-    event.shaped('4x minecraft:gravel', [
+    event.shaped('2x minecraft:gravel', [
         'DS',
         'SD'
     ], {
         D: 'mysticalagriculture:dirt_essence',
         S: 'mysticalagriculture:stone_essence'
     }).id('mysticalagriculture:essence/minecraft/gravel')
-    event.recipes.create.mixing('4x minecraft:gravel', [
+    event.recipes.create.mixing('2x minecraft:gravel', [
         '2x mysticalagriculture:dirt_essence',
         '2x mysticalagriculture:stone_essence'
     ]).id('finality:mysticalagriculture/mixing/gravel')
-    // create orestone essence recipes
+
+    event.recipes.create.mixing(
+        '4x minecraft:snow_block',
+        '4x mysticalagriculture:ice_essence'
+    ).id('finality:mysticalagriculture/mixing/snow_block')
+    event.recipes.create.compacting(
+        '8x minecraft:ice',
+        '8x mysticalagriculture:ice_essence'
+    ).id('finality:mysticalagriculture/compacting/ice')
+    /**
+     * Create Orestones
+     */
+    // Asurine
     event.shaped('8x create:asurine', [
         'SSS',
         'SZS',
@@ -405,6 +462,7 @@ ServerEvents.recipes(event => {
         '8x mysticalagriculture:stone_essence',
         'mysticalagriculture:zinc_essence'
     ]).id('finality:mysticalagriculture/compacting/asurine')
+    // Crimsite
     event.shaped('8x create:crimsite', [
         'SSS',
         'SIS',
@@ -417,6 +475,7 @@ ServerEvents.recipes(event => {
         '8x mysticalagriculture:stone_essence',
         'mysticalagriculture:iron_essence'
     ]).id('finality:mysticalagriculture/compacting/crimsite')
+    // Ochrum
     event.shaped('8x create:ochrum', [
         'SSS',
         'SGS',
@@ -429,6 +488,7 @@ ServerEvents.recipes(event => {
         '8x mysticalagriculture:stone_essence',
         'mysticalagriculture:gold_essence'
     ]).id('finality:mysticalagriculture/compacting/ochrum')
+    // Veridium
     event.shaped('8x create:veridium', [
         'SSS',
         'SCS',
@@ -441,6 +501,7 @@ ServerEvents.recipes(event => {
         '8x mysticalagriculture:stone_essence',
         'mysticalagriculture:copper_essence'
     ]).id('finality:mysticalagriculture/compacting/veridium')
+    // Limestone
     event.shaped('8x create:limestone', [
         'LLL',
         'LLL',
@@ -495,7 +556,90 @@ ServerEvents.recipes(event => {
     ], {
         H: 'mysticalagriculture:honey_essence'
     }).id('mysticalagriculture:essence/minecraft/honeycomb')
+    event.shaped('8x minecraft:blackstone', [
+        'NNN',
+        'NSN',
+        'NNN'
+    ], {
+        N: 'mysticalagriculture:nether_essence',
+        S: 'mysticalagriculture:stone_essence'
+    }).id('mysticalagriculture:essence/minecraft/blackstone')
+    event.recipes.create.compacting('8x minecraft:blackstone', [
+        '8x mysticalagriculture:nether_essence',
+        'mysticalagriculture:stone_essence'
+    ]).id('finality:mysticalagriculture/compacting/blackstone')
 
+    event.shaped('8x minecraft:basalt', [
+        'NNN',
+        'NIN',
+        'NNN'
+    ], {
+        N: 'mysticalagriculture:nether_essence',
+        I: 'mysticalagriculture:ice_essence'
+    }).id('mysticalagriculture:essence/minecraft/basalt')
+    event.recipes.create.compacting('8x minecraft:basalt', [
+        '8x mysticalagriculture:nether_essence',
+        'mysticalagriculture:ice_essence'
+    ]).id('finality:mysticalagriculture/compacting/basalt')
+    event.shaped('minecraft:dirt', [
+        'DDD',
+        'DDD',
+        'DDD'
+    ], {
+        D: 'mysticalagriculture:dirt_essence'
+    }).id('finality:mysticalagriculture/essence/dirt')
+    event.shaped('8x minecraft:soul_soil', [
+        'NNN',
+        'NEN',
+        'NNN'
+    ], {
+        N: 'mysticalagriculture:nether_essence',
+        E: 'mysticalagriculture:earth_essence'
+    }).id('mysticalagriculture:essence/minecraft/soul_soil')
+    event.recipes.create.mixing('8x minecraft:soul_soil', [
+        '4x mysticalagriculture:nether_essence',
+        'mysticalagriculture:earth_essence'
+    ]).id('finality:mysticalagriculture/mixing/soul_soil')
+    // NETHERRACK
+    event.shaped('8x minecraft:netherrack', [
+        'NNN',
+        'NBN',
+        'NNN'
+    ], {
+        N: 'mysticalagriculture:nether_essence',
+        B: Item.of('minecraft:potion', '{Potion:"minecraft:strong_healing"}').weakNBT()
+    }).id('finality:mysticalagriculture/crafting/netherrack')
+    event.shaped('6x minecraft:crimson_nylium', [
+        'NAN',
+        'NAN',
+        'NAN'
+    ], {
+        N: 'mysticalagriculture:nether_essence',
+        A: 'mysticalagriculture:nature_essence'
+    }).id('finality:mysticalagriculture/crafting/crimson_nylium')
+    event.shaped('6x minecraft:warped_nylium', [
+        'NNN',
+        'AAA',
+        'NNN'
+    ], {
+        N: 'mysticalagriculture:nether_essence',
+        A: 'mysticalagriculture:nature_essence'
+    }).id('finality:mysticalagriculture/crafting/warped_nylium')
+    event.recipes.kubejs.shaped('2x minecraft:nether_wart', [
+        'NAN',
+        '   ',
+        '   '
+    ], {
+        N: 'mysticalagriculture:nether_essence',
+        A: 'mysticalagriculture:nature_essence'
+    }).noMirror().noShrink().id('mysticalagriculture:essence/minecraft/nether_wart')
+    event.recipes.kubejs.shaped('minecraft:ghast_tear', [
+        'TTT',
+        'TTT',
+        'TTT'
+    ], {
+        T: 'mysticalagriculture:ghast_essence'
+    }).id('finality:mysticalagriculture/crafting/ghast_tear')
     // machine frame related
     event.shaped('mysticalagriculture:machine_frame', [
         'IRI',

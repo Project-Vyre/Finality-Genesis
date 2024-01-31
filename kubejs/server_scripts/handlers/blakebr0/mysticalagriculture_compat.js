@@ -4,7 +4,7 @@
 
 ServerEvents.recipes(event => {
     if (Platform.isLoaded('delightful')) {
-        event.shaped('8x delightful:mini_melon', [
+        event.shaped('1x delightful:mini_melon', [
             'NN',
             'NN'
         ], {
