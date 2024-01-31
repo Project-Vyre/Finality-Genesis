@@ -15,6 +15,9 @@ ClientEvents.lang('en_us', event => {
         "effect.minecraft.slow_falling.desc": "Your descent speed is slowed.",
         "effect.minecraft.wither.desc": "It's poison, but actually kills!"
     })
+    if (Platform.isLoaded('aether')) {
+        event.add('aether', 'effect.aether.inebriation.desc', 'Movement controls invert while spontaneous movement occurs at the same time.')
+    }
     if (Platform.isLoaded('atmospheric')) {
         event.addAll('atmospheric', {
             "effect.atmospheric.relief.desc": "If incoming damage is greater than or equal to the effect level you are healed, healing received is equal to that effect level.",
