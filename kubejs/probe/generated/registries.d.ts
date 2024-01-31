@@ -253,10 +253,6 @@ declare namespace Registry {
     }
     class Spells extends Internal.RegistryEventJS {
     }
-    class Contextual extends Internal.RegistryEventJS {
-    }
-    class PostAction extends Internal.RegistryEventJS {
-    }
     class MapMarkers extends Internal.RegistryEventJS {
     }
     class SoftFluids extends Internal.RegistryEventJS {
