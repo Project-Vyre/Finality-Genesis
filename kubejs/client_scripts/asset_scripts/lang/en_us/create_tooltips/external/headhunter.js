@@ -33,6 +33,10 @@ ClientEvents.lang('en_us', event => {
         'headhunter_mod',
         createTooltip('headhunter_mod:hh_true_difficulty')
             .addSummary('This Head Hunter has been tasked to _attempt_ to _ensure_ your swift death.')
+            .addBehaviour([
+                'On successful defeat',
+                'Drops _Unstable Entropy Particles_ as a reward.'
+            ])
             .setPalette($Palette.PURPLE)
             .build()
     )

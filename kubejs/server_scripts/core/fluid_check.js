@@ -36,9 +36,10 @@ function isInFluid(player, fluid) {
 }
 
 PlayerEvents.tick(event => {
+    if (event.player.level.time % 100 === 0)
     if (isInFluid(event.player, Fluid.getType('create:honey'))) {
-        event.player.potionEffects.add('minecraft:regeneration', 100, 2, true, false)
-        event.player.potionEffects.add('minecraft:absorption', 100, 5, true, false)
+        event.player.potionEffects.add('minecraft:regeneration', 200, 2, true, false)
+        event.player.potionEffects.add('minecraft:absorption', 200, 5, true, false)
     }
     if (isInFluid(event.player, Fluid.getType('kubejs:molten_copper'))
         || isInFluid(event.player, Fluid.getType('kubejs:molten_iron'))
@@ -50,11 +51,11 @@ PlayerEvents.tick(event => {
         event.player.setSecondsOnFire(10)
     }
     if (isInFluid(event.player, Fluid.getType('kubejs:condensed_universal_entropy'))) {
-        event.player.potionEffects.add('minecraft:jump_boost', 100, 255, true, false)
-        event.player.potionEffects.add('minecraft:speed', 100, 255, true, false)
+        event.player.potionEffects.add('minecraft:jump_boost', 200, 255, true, false)
+        event.player.potionEffects.add('minecraft:speed', 200, 255, true, false)
     }
     if (isInFluid(event.player, Fluid.getType('kubejs:condensed_universal_order'))) {
-        event.player.potionEffects.add('minecraft:resistance', 100, 5, true, false)
+        event.player.potionEffects.add('minecraft:resistance', 200, 5, true, false)
     }
 })
 
