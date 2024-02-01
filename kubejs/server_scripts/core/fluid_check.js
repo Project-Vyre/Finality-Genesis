@@ -51,7 +51,7 @@ PlayerEvents.tick(event => {
         event.player.setSecondsOnFire(10)
     }
     if (isInFluid(event.player, Fluid.getType('kubejs:condensed_universal_entropy'))) {
-        event.player.potionEffects.add('minecraft:jump_boost', 200, 255, true, false)
+        event.player.potionEffects.add('minecraft:jump_boost', 200, 120, true, false)
         event.player.potionEffects.add('minecraft:speed', 200, 255, true, false)
     }
     if (isInFluid(event.player, Fluid.getType('kubejs:condensed_universal_order'))) {
