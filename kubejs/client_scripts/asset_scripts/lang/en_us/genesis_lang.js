@@ -82,7 +82,8 @@ ClientEvents.lang('en_us', event => {
             "kubejs.ultimatum_boss_gate": "Ultimatum Boss Gate",
             "kubejs.mutant_boss_gate_large": "Large Mutant Boss Gate",
             "kubejs.mass_destruction_boss_gate_large": "Bosses of Mass Destruction Gate",
-            "item.apotheosis.gem.kubejs:eversor": "Eversor Gem"
+            "item.apotheosis.gem.kubejs:eversor": "Eversor Gem",
+            "item.apotheosis.gem.kubejs:acuti_ora": "Acuti Ora Gem"
         })
     }
     if (Platform.isLoaded('create_bic_bit')) {

@@ -285,6 +285,20 @@ ClientEvents.highPriorityAssets(event => {
             }
         })
     }
+    if (Platform.isLoaded('apotheosis') && Platform.isLoaded('gateways')) {
+        event.add('apotheosis:models/item/gems/eversor', {
+            "parent": "item/generated",
+            "textures": {
+                "layer0": "kubejs:item/gems/eversor"
+            }
+        })
+        event.add('apotheosis:models/item/gems/acuti_ora', {
+            "parent": "item/generated",
+            "textures": {
+                "layer0": "kubejs:item/gems/acuti_ora"
+            }
+        })
+    }
     if (Platform.isLoaded('create_bic_bit')) {
         let bicBitSingularities = [
             'speculaas_singularity',
