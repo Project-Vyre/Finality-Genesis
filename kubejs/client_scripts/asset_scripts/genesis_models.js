@@ -286,6 +286,12 @@ ClientEvents.highPriorityAssets(event => {
         })
     }
     if (Platform.isLoaded('apotheosis') && Platform.isLoaded('gateways')) {
+        event.add('apotheosis:models/item/ancient_material', {
+            "parent": "item/generated",
+            "textures": {
+                "layer0": "apotheosis:item/ancient_material"
+            }
+        })
         event.add('apotheosis:models/item/gems/eversor', {
             "parent": "item/generated",
             "textures": {
