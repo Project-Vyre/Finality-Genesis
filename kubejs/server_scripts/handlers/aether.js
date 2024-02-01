@@ -155,7 +155,14 @@ ServerEvents.recipes(event => {
         600,
         'obsidian_gloves'
     )
-    //event.shaped('aether:')
+    event.recipes.create.compacting([
+        Item.of('aether:ambrosium_ore').withChance(0.25),
+        Item.of('aether:zanite_ore').withChance(0.25),
+        Item.of('aether:gravitite_ore').withChance(0.25)
+    ], [
+        '9x aether:holystone',
+        Fluid.of('kubejs:condensed_universal_entropy', 500)
+    ]).id('finality:aether/holystone_ore_renewal')
 })
 
 ServerEvents.tags('item', event => {

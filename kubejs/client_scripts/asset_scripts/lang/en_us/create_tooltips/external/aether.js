@@ -5,27 +5,57 @@ ClientEvents.lang('en_us', event => {
     GRAY_PALETTE('aether:book_of_lore')
     event.addAll('aether', {
         "item.aether.book_of_lore.tooltip": "BOOK OF LORE",
-        "item.aether.book_of_lore.tooltip.summary": "Place an item from _The Aether_ mod in the slot to learn more about it."
+        "item.aether.book_of_lore.tooltip.summary": "Place an item from _The Aether_ mod in the slot to _learn more_ about it."
     })
     event.addAll(
         'aether',
         createTooltip('aether:icestone')
-            .addSummary('It\'s so cold that it turns lava into obsidian and water into ice from a distance.')
+            .addSummary('It\'s so _cold_ that it turns lava into obsidian and water into ice from a distance.')
+            .addBehaviour([
+                'Renewal',
+                'Enchanting _Blue Ice_ in an _Altar_ converts it into Icestone.'
+            ])
+            .setPalette($Palette.GRAY_AND_WHITE)
             .build()
     )
     event.addAll(
         'aether',
         createTooltip('aether:altar')
-            .addSummary('Used to _enchant_ certain items and repair armor. _Ambrosium Shards_ are its required fuel source.')
+            .addSummary('Used to _enchant_ certain items and _repair_ damaged armor and tools. Uses _Ambrosium Shards_ as its fuel source.')
             .build()
     )
     event.addAll(
         'aether',
         createTooltip('aether:incubator')
-            .addSummary('Hatches moa eggs that you may find in the Aether.')
+            .addSummary('Hatches _Moa Eggs_ that you may find in the Aether.')
             .addBehaviour([
                 'Fuel source',
                 'Uses _Ambrosium torches_ as fuel.'
+            ])
+            .build()
+    )
+    event.addAll(
+        'aether',
+        createTooltip('aether:holystone')
+            .addSummary('A stone only found in the Aether.')
+            .addBehaviour([
+                'Renewal',
+                'Any _stone_ can be _enchanted_ in the _Altar_ to convert it into Holystone.'
+            ])
+            .setPalette($Palette.GRAY)
+            .build()
+    )
+    event.addAll(
+        'aether',
+        createTooltip('aether:ambrosium_shard')
+            .addSummary('The coal equivalent of the Aether, with an additional uses.')
+            .addBehaviour([
+                'When eaten',
+                'Restores a small amount of health, but does not restore saturation.'
+            ])
+            .addBehaviour([
+                'Renewal',
+                'Tools made of _Holystone_ have a chance of dropping _Ambrosium Shards_ while they are being used.'
             ])
             .build()
     )
@@ -107,6 +137,24 @@ ClientEvents.lang('en_us', event => {
                 'Effortlessly and _automatically_ fires darts in succession.'
             ])
             .setPalette($Palette.BLUE)
+            .build()
+    )
+    event.addAll(
+        'aether',
+        createTooltip('aether:white_apple')
+            .addSummary('One of the _only_ known cures for the Aechor Plant poison. Found on _Crystal Trees_ which have _blueish_ leaves.')
+            .setPalette($Palette.GRAY_AND_WHITE)
+            .build()
+    )
+    event.addAll(
+        'aether',
+        createTooltip('aether:candy_cane_sword')
+            .addSummary('A sword made from _brittle_ candy cane.')
+            .addBehaviour([
+                'Acquisition',
+                'Dropped by _presents_ under _Holiday Trees_ around the Aether.'
+            ])
+            .setPalette($Palette.GREEN)
             .build()
     )
     /**
@@ -305,7 +353,7 @@ ClientEvents.lang('en_us', event => {
     event.addAll(
         'aether',
         createTooltip('aether:zanite_helmet')
-            .addSummary('A helmet made from _Zanite_, the iron equivalent of the Aether.')
+            .addSummary('An armor piece made from _Zanite_, the iron equivalent of the Aether.')
             .addBehaviour([
                 'Special Trait - Zanite',
                 'Protection _increases_ as the durability lowers. This unfortunately means that it will do less damage reduction once fully repaired.'
@@ -316,7 +364,7 @@ ClientEvents.lang('en_us', event => {
     event.addAll(
         'aether',
         createTooltip('aether:zanite_chestplate')
-            .addSummary('A chestplate made from _Zanite_, the iron equivalent of the Aether.')
+            .addSummary('An armor piece made _Zanite_, the iron equivalent of the Aether.')
             .addBehaviour([
                 'Special Trait - Zanite',
                 'Protection _increases_ as the durability lowers. This unfortunately means that it will do less damage reduction once fully repaired.'
@@ -327,7 +375,7 @@ ClientEvents.lang('en_us', event => {
     event.addAll(
         'aether',
         createTooltip('aether:zanite_leggings')
-            .addSummary('A chestplate made from _Zanite_, the iron equivalent of the Aether.')
+            .addSummary('An armor piece made _Zanite_, the iron equivalent of the Aether.')
             .addBehaviour([
                 'Special Trait - Zanite',
                 'Protection _increases_ as the durability lowers. This unfortunately means that it will do less damage reduction once fully repaired.'
@@ -338,7 +386,7 @@ ClientEvents.lang('en_us', event => {
     event.addAll(
         'aether',
         createTooltip('aether:zanite_boots')
-            .addSummary('Boots made from _Zanite_, the iron equivalent of the Aether.')
+            .addSummary('An armor piece made _Zanite_, the iron equivalent of the Aether.')
             .addBehaviour([
                 'Special Trait - Zanite',
                 'Protection _increases_ as the durability lowers. This unfortunately means that it will do less damage reduction once fully repaired.'
@@ -393,10 +441,14 @@ ClientEvents.lang('en_us', event => {
     event.addAll(
         'aether',
         createTooltip('aether:gravitite_axe')
-            .addSummary('An axe made from _Gravitite_, the diamond equivalent of the Aether. Before stripping any blocks, _ensure_ that there is a _ceiling_ to prevent the loss of those blocks as they will float up before you are able to do anything.')
+            .addSummary('An axe made from _Gravitite_, the diamond equivalent of the Aether.')
+            .addBehaviour([
+                'Inconvenient Trait - Gravitite',
+                'Before stripping any logs, _ensure_ that there is a _ceiling_ to prevent the loss of those blocks as they will float up before you are able to do anything.'
+            ])
             .addBehaviour([
                 'Additional Inconvenience - Golden Oak Log',
-                'Here is a _second_ warning. Before stripping any blocks, _ensure_ that there is a _ceiling_ to prevent the loss of those blocks as they will float up before you are able to do anything. When _stripping_ or _breaking_ a _Golden Oak Log_ it will result in some _Golden Amber_ being dropped.'
+                'Here is a _second_ warning. Before stripping any logs, _ensure_ that there is a _ceiling_ to prevent the loss of those blocks. When _stripping_ or _breaking_ a _Golden Oak Log_ it will result in some _Golden Amber_ being dropped.'
             ])
             .setPalette($Palette.PURPLE)
             .build()
@@ -415,7 +467,7 @@ ClientEvents.lang('en_us', event => {
     event.addAll(
         'aether',
         createTooltip('aether:gravitite_hoe')
-            .addSummary('A shovel made from _Gravitite_, the diamond equivalent of the Aether. _Does not_ send seeds or dirt blocks into the sky.')
+            .addSummary('A hoe made from _Gravitite_, the diamond equivalent of the Aether. _Does not_ send seeds or dirt blocks into the sky.')
             .addBehaviour([
                 'Inconvenient Trait - Gravitite',
                 'Before right clicking, _ensure_ that there is a _ceiling_ to prevent the loss of those blocks as they will float up before you are able to do anything.'
@@ -441,7 +493,44 @@ ClientEvents.lang('en_us', event => {
     event.addAll(
         'aether',
         createTooltip('aether:gravitite_helmet')
-            .addSummary('A helmet made from _Gravitite_, the diamond equivalent of the Aether. Wearing a full set allows the wearer to experience _less gravity_ temporarily.')
+            .addSummary('A helmet made from _Gravitite_, the diamond equivalent of the Aether.')
+            .addBehaviour([
+                'Upon wearing the full set',
+                'Gravity reverses temporarily to make your own jumps _higher_ than normal.'
+            ])
+            .setPalette($Palette.PURPLE)
+            .build()
+    )
+    event.addAll(
+        'aether',
+        createTooltip('aether:gravitite_chestplate')
+            .addSummary('A chestplate made from _Gravitite_, the diamond equivalent of the Aether.')
+            .addBehaviour([
+                'Upon wearing the full set',
+                'Gravity reverses temporarily to make your own jumps _higher_ than normal.'
+            ])
+            .setPalette($Palette.PURPLE)
+            .build()
+    )
+    event.addAll(
+        'aether',
+        createTooltip('aether:gravitite_leggings')
+            .addSummary('Leggings made from _Gravitite_, the diamond equivalent of the Aether.')
+            .addBehaviour([
+                'Upon wearing the full set',
+                'Gravity reverses temporarily to make your own jumps _higher_ than normal.'
+            ])
+            .setPalette($Palette.PURPLE)
+            .build()
+    )
+    event.addAll(
+        'aether',
+        createTooltip('aether:gravitite_boots')
+            .addSummary('Boots made from _Gravitite_, the diamond equivalent of the Aether.')
+            .addBehaviour([
+                'Upon wearing the full set',
+                'Gravity reverses temporarily to make your own jumps _higher_ than normal.'
+            ])
             .setPalette($Palette.PURPLE)
             .build()
     )
@@ -678,7 +767,7 @@ ClientEvents.lang('en_us', event => {
             .addSummary('A gemstone that can only be found in _Silver Dungeons_.')
             .addBehaviour([
                 'When equipped',
-                'Regenerates the wearer. The effect can _stack_ with other Regeneration Stones.'
+                'Regenerates the health of the wearer. The effect can _stack_ with other Regeneration Stones.'
             ])
             .setPalette($Palette.RED)
             .build()

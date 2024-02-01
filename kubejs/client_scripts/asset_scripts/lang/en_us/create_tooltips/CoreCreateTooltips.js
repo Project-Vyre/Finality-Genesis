@@ -586,9 +586,9 @@ ClientEvents.lang('en_us', event => {
         })
     }
     event.addAll('create', {
-        "item.create.wrench.tooltip.condition3": "On R-Click on Mechanical Belt end",
+        "item.create.wrench.tooltip.condition3": "On R-Click on belt end",
         "item.create.wrench.tooltip.behaviour3": "Safely _shortens_ a Mechanical Belt _without breaking_ its entire length. _DO NOT_ sneak while doing this unless if you intend on picking up the full belt.",
-        "item.create.wrench.tooltip.condition4": "On R-Click on extra Shafts inside Mechanical Belts",
+        "item.create.wrench.tooltip.condition4": "On R-Click on extra shafts inside belts",
         "item.create.wrench.tooltip.behaviour4": "Safely _removes_ the extra shaft _without breaking_ the entire belt.",
         "block.create.seat.tooltip": "SEAT",
         "block.create.seat.tooltip.summary": "Sit yourself down and enjoy the ride! Will anchor a player onto a _moving contraption_. Great for static furniture too! Comes in a variety of colours.",

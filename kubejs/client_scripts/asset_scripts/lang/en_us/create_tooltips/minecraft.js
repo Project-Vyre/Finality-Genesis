@@ -143,6 +143,12 @@ ClientEvents.lang('en_us', event => {
             .setPalette($Palette.GRAY)
             .build()
     )
+    if (Platform.isLoaded('salt')) {
+        event.addAll('kubejs', {
+            "item.minecraft.gunpowder.tooltip.condition2": "Renewal with Salt",
+            "item.minecraft.gunpowder.tooltip.behaviour2": "Can be mixed with _Salt_ and _Coal_ or _Charcoal_."
+        })
+    }
     event.addAll(
         'kubejs',
         createTooltip('minecraft:redstone')
