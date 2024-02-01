@@ -618,6 +618,9 @@ ServerEvents.recipes(event => {
         I: 'minecraft:ink_sac',
         N: 'minecraft:nautilus_shell'
     }).id('finality:heart_of_the_sea')
+    event.recipes.create.sequenced_assembly('minecraft:enchanted_golden_apple', 'minecraft:golden_apple', [
+        event.recipes.create.deploying('kubejs:incomplete_enchanted_golden_apple', ['kubejs:incomplete_enchanted_golden_apple', 'create:experience_block'])
+    ]).transitionalItem('kubejs:incomplete_enchanted_golden_apple').loops(5).id('finality:sequenced_assembly/enchanted_golden_apple')
     /**
      * Supplementaries 
      */

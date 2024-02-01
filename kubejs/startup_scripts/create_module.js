@@ -128,4 +128,6 @@ StartupEvents.registry('item', event => {
     event.create('kubejs:incomplete_entropy_coin', 'create:sequenced_assembly')
         .texture('kubejs:item/entropy_coin')
         .fireResistant(true)
+    event.create('kubejs:incomplete_enchanted_golden_apple')
+        .texture('minecraft:item/golden_apple')
 })

@@ -15,6 +15,14 @@ ServerEvents.recipes(event => {
         'finality:living_nether_wart_spores', // correct later to 'finality:living_nether_wart_spores'
         'minecraft:nether_wart'
     ).id('finality:haunting/living_nether_wart')
+    if (Platform.isLoaded('bhc')) {
+        event.recipes.kubejs.shapeless('bhc:red_heart_canister', [
+            'bhc:red_heart',
+            'finality:living_nether_wart',
+            'minecraft:echo_shard',
+            'bhc:canister'
+        ]).id('finality:bhc/crafting/red_heart_canister')
+    }
 })
 
 LootJS.modifiers(event => {

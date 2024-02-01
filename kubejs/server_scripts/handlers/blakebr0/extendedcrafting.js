@@ -206,8 +206,8 @@ ServerEvents.recipes(event => {
     }).id('finality:mechanical_crafting/repeating_command_block')
 
     event.recipes.create.mixing('kubejs:high_entropy_alloy_nugget', [
-        '9x kubejs:stable_entropy_particles',
-        '4x extendedcrafting:the_ultimate_catalyst'
+        'kubejs:stable_entropy_particles',
+        'extendedcrafting:the_ultimate_catalyst'
     ]).superheated().id('finality:extendedcrafting/mixing/high_entropy_nugget')
 
     console.log('Forcibly applying Ultimate Singularity recipe. If it is missing again, please report this to the GitHub Issue tracker, thank you.')

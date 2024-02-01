@@ -775,7 +775,7 @@ ClientEvents.lang('en_us', event => {
     event.addAll(
         'aether',
         createTooltip('aether:life_shard')
-            .addSummary('A _rare_ item only found in _Gold Dungeons_.')
+            .addSummary('A _rare_ item that is usually only found in _Gold Dungeons_.')
             .addBehaviour([
                 'When used',
                 'Gives an additional heart that is _permanent_. However, the feeling while using one is difficult to describe.'
@@ -783,6 +783,12 @@ ClientEvents.lang('en_us', event => {
             .setPalette($Palette.RED)
             .build()
     )
+    if (Platform.isLoaded('bhc')) {
+        event.addAll('aether', {
+            "item.aether.life_shard.tooltip.condition2": "Renewal",
+            "item.aether.life_shard.tooltip.behaviour2": "Can be made with _Red Hearts_ and _Amethyst Shards_."
+        })
+    }
     event.addAll(
         'aether',
         createTooltip('aether:vampire_blade')

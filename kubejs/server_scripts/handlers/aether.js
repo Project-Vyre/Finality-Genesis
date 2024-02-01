@@ -163,6 +163,12 @@ ServerEvents.recipes(event => {
         '9x aether:holystone',
         Fluid.of('kubejs:condensed_universal_entropy', 500)
     ]).id('finality:aether/holystone_ore_renewal')
+    if (Platform.isLoaded('bhc')) {
+        event.shapeless('aether:life_shard', [
+            'bhc:red_heart',
+            'minecraft:amethyst_shard'
+        ]).id('finality:aether/life_shard')
+    }
 })
 
 ServerEvents.tags('item', event => {
