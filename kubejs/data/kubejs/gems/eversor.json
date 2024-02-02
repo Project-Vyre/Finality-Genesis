@@ -28,6 +28,18 @@
           }
         },
         {
+          "attribute": "apotheosis:crit_chance",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.005,
+            "uncommon": 0.01,
+            "rare": 0.0125,
+            "epic": 0.625,
+            "mythic": 0.75,
+            "ancient": 900000.0
+          }
+        },
+        {
           "attribute": "apotheosis:crit_damage",
           "operation": "MULTIPLY_BASE",
           "values": {
@@ -53,6 +65,18 @@
       "modifiers": [
         {
           "attribute": "minecraft:generic.attack_damage",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.005,
+            "uncommon": 0.01,
+            "rare": 0.0125,
+            "epic": 0.625,
+            "mythic": 0.75,
+            "ancient": 900000.0
+          }
+        },
+        {
+          "attribute": "apotheosis:crit_chance",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.005,
@@ -99,7 +123,7 @@
     },
     {
       "type": "apotheosis:multi_attribute",
-      "desc": "bonus.apotheosis:multi_attr.desc.and_and",
+      "desc": "bonus.apotheosis:multi_attr.desc.and",
       "gem_class": {
         "key": "ranged_weapon",
         "types": [
@@ -122,6 +146,18 @@
         },
         {
           "attribute": "apotheosis:arrow_damage",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.005,
+            "uncommon": 0.01,
+            "rare": 0.0125,
+            "epic": 0.625,
+            "mythic": 0.75,
+            "ancient": 900000.0
+          }
+        },
+        {
+          "attribute": "apotheosis:crit_chance",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.005,
