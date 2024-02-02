@@ -524,6 +524,31 @@ REIEvents.information(event => {
             'Can only be acquired by chance using a Knife on leaf blocks.'
         ])
     }
+    if (Platform.isLoaded('functionalstorage')) {
+        event.addItem('functionalstorage:ender_drawer', 'Usage', [
+            Component.join([
+                Component.of('Ender Drawers are a '),
+                Component.of('special ').darkRed().italic(),
+                Component.of('case of not explaining things well enough in-game. As a result, this Info page had to be created.\n'),
+                Component.of('\n[Linking Process]\n').darkGreen(),
+                Component.of('To '),
+                Component.of('link ').darkAqua(),
+                Component.of('Ender Drawers together, first L-Click an Ender Drawer with the '),
+                Component.of('Linking Tool').darkAqua(),
+                Component.of('. After you have stored a frequency, '),
+                Component.of('Sneak + R-Click ').darkGreen(),
+                Component.of('on the other Ender Drawers you want to link it to.\n')
+            ]),
+            Component.join([
+                Component.of('[Unlinking Process]\n').red(),
+                Component.of('To change the frequency of an Ender Drawer, '),
+                Component.of('all ').darkRed(),
+                Component.of('upgrades and items will have to be emptied first. After this is done, break it. '),
+                Component.of('Void Upgrades ').darkPurple(),
+                Component.of('apply to the Ender Drawer network and are intended to be permanent as per the developer\'s response.')
+            ])
+        ])
+    }
     if (Platform.isLoaded('mysticalagriculture')) {
         event.addItem('mysticalagriculture:fertilized_essence', 'Acquisition', [
             'Can only be acquired from Mystical Agriculture crops upon harvest.',
@@ -706,56 +731,54 @@ REIEvents.groupEntries(event => {
     event.groupItemsByTag('minecraft:rei_groups/banners', 'Minecraft Banners', 'minecraft:banners')
     event.groupItems('minecraft:rei_groups/infested_blocks', 'Minecraft Infested Blocks', /^$minecraft.*[_:\/]infested(?![a-zA-Z0-9]).*/)
     event.groupItemsByTag('kubejs:rei_groups/all_normal_signs', 'All Normal Signs', 'minecraft:signs')
-    if (Platform.isLoaded('extendedcrafting')) {
-        event.groupItemsIf('kubejs:rei_groups/concrete_singularities', 'Concrete Singularities', Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id.includes('concrete_')))
-        event.groupItemsIf('kubejs:rei_groups/minecraft_valued_singularities', 'Minecraft Valued Singularities', [
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:lapis_lazuli')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:redstone')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:diamond')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:iron')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:gold')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:emerald')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:copper')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:amethyst')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:coal')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:quartz')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:netherite'))
-        ])
-        event.groupItemsIf('kubejs:rei_groups/minecraft_dimensional_singularities', 'Minecraft Dimensional Singularities', [
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:soul_sand')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:soul_soil')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:end_crystal'))
-        ])
-        event.groupItemsIf('kubejs:rei_groups/minecraft_natural_singularities', 'Minecraft Natural Singularities', [
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:coarse_dirt')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:cobblestone')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sand')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:red_sand')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:honey')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:blue_ice')),
-        ])
-        event.groupItemsIf('kubejs:rei_groups/minecraft_miscellaneous_singularities', 'Minecraft Miscellaneous Singularities', [
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:gunpowder')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:ender_pearl')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sea_lantern')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:tinted_glass')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:glowstone')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sea_lantern'))
-        ])
-        event.groupItemsIf('kubejs:rei_groups/create_singularities', 'Create Singularities', [
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:precision_mechanism')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:framed_glass')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:electron_tube')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:rose_quartz')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:chocolate')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:andesite_alloy')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:zinc')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:brass')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:sturdy_sheet')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:train_track')),
-            Ingredient.customNBT('extendedcrafting:singularity', nbt => nbt?.Id == ('extendedcrafting:builders_tea'))
-        ])
-    }
+    event.groupItems('kubejs:rei_groups/concrete_singularities', 'Concrete Singularities', /^kubejs:(concrete_+).*?(_singularity+)$/)
+    event.groupItems('kubejs:rei_groups/minecraft_valued_singularities', 'Minecraft Valued Singularities', [
+        'kubejs:lapis_lazuli_singularity',
+        'kubejs:redstone_singularity',
+        'kubejs:diamond_singularity',
+        'kubejs:iron_singularity',
+        'kubejs:gold_singularity',
+        'kubejs:emerald_singularity',
+        'kubejs:copper_singularity',
+        'kubejs:amethyst_singularity',
+        'kubejs:coal_singularity',
+        'kubejs:quartz_singularity',
+        'kubejs:netherite_singularity'
+    ])
+    event.groupItems('kubejs:rei_groups/minecraft_dimensional_singularities', 'Minecraft Dimensional Singularities', [
+        'kubejs:soul_sand_singularity',
+        'kubejs:soul_soil_singularity',
+        'kubejs:end_crystal_singularity'
+    ])
+    event.groupItems('kubejs:rei_groups/minecraft_natural_singularities', 'Minecraft Natural Singularities', [
+        'kubejs:coarse_dirt_singularity',
+        'kubejs:cobblestone_singularity',
+        'kubejs:sand_singularity',
+        'kubejs:red_sand_singularity',
+        'kubejs:honey_singularity',
+        'kubejs:blue_ice_singularity'
+    ])
+    event.groupItems('kubejs:rei_groups/minecraft_miscellaneous_singularities', 'Minecraft Miscellaneous Singularities', [
+        'kubejs:gunpowder_singularity',
+        'kubejs:ender_pearl_singularity',
+        'kubejs:sea_lantern_singularity',
+        'kubejs:tinted_glass_singularity',
+        'kubejs:glowstone_singularity',
+        'kubejs:sea_lantern_singularity'
+    ])
+    event.groupItems('kubejs:rei_groups/create_singularities', 'Create Singularities', [
+        'kubejs:precision_mechanism_singularity',
+        'kubejs:framed_glass_singularity',
+        'kubejs:electron_tube_singularity',
+        'kubejs:rose_quartz_singularity',
+        'kubejs:chocolate_singularity',
+        'kubejs:andesite_alloy_singularity',
+        'kubejs:zinc_singularity',
+        'kubejs:brass_singularity',
+        'kubejs:sturdy_sheet_singularity',
+        'kubejs:track_singularity',
+        'kubejs:builders_tea_singularity'
+    ])
     event.groupItems('create:rei_groups/colored_valve_handles', 'Colored Valve Handles', [
         'create:black_valve_handle',
         'create:blue_valve_handle',

@@ -597,6 +597,18 @@ ClientEvents.lang('en_us', event => {
         "item.create.blaze_cake.tooltip": "BLAZE CAKE",
         "item.create.blaze_cake.tooltip.summary": "A delicious treat for your hard-working _Blaze Burners_. Gets them all fired up!"
     })
+    if (Platform.isLoaded('jei') && Platform.isLoaded('jeresources') && Platform.isLoaded('justenoughprofessions')) {
+        event.addAll('create', {
+            "item.create.filter.tooltip.condition2": "Additional Information",
+            "item.create.filter.tooltip.behaviour2": "With JEI, you can _click and drag_ items into the filter list."
+        })
+    }
+    if (Platform.isLoaded('roughlyenoughitems') && Platform.isLoaded('roughlyenoughresources') && Platform.isLoaded('roughlyenoughprofessions')) {
+        event.addAll('create', {
+            "item.create.filter.tooltip.condition2": "Additional Information",
+            "item.create.filter.tooltip.behaviour2": "With REI, you can _click and drag_ items into the filter list."
+        })
+    }
     if (!Platform.isLoaded('universalbonemeal')) {
         event.addAll({
             "item.minecraft.bone_meal.tooltip": "BONE MEAL",

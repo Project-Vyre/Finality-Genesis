@@ -396,6 +396,31 @@ JEIEvents.information(event => {
             'Can only be acquired by chance using a Knife on leaf blocks.'
         ])
     }
+    if (Platform.isLoaded('functionalstorage')) {
+        event.addItem('functionalstorage:ender_drawer', [
+            Component.join([
+                Component.of('Ender Drawers are a '),
+                Component.of('special ').darkRed().italic(),
+                Component.of('case of not explaining things well enough in-game. As a result, this Info page had to be created.\n'),
+                Component.of('\n[Linking Process]\n').darkGreen(),
+                Component.of('To '),
+                Component.of('link ').darkAqua(),
+                Component.of('Ender Drawers together, first L-Click an Ender Drawer with the '),
+                Component.of('Linking Tool').darkAqua(),
+                Component.of('. After you have stored a frequency, '),
+                Component.of('Sneak + R-Click ').darkGreen(),
+                Component.of('on the other Ender Drawers you want to link it to.\n')
+            ]),
+            Component.join([
+                Component.of('[Unlinking Process]\n').red(),
+                Component.of('To change the frequency of an Ender Drawer, '),
+                Component.of('all ').darkRed(),
+                Component.of('upgrades and items will have to be emptied first. After this is done, break it. '),
+                Component.of('Void Upgrades ').darkPurple(),
+                Component.of('apply to the Ender Drawer network and are intended to be permanent as per the developer\'s response.')
+            ])
+        ])
+    }
     if (Platform.isLoaded('mysticalagriculture')) {
         event.addItem('mysticalagriculture:fertilized_essence', [
             'Can only be acquired from Mystical Agriculture crops upon harvesting.',

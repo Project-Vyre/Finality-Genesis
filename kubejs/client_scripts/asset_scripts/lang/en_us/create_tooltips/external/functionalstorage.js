@@ -1,21 +1,15 @@
 // requires: functionalstorage
 // requires: create
 
+let drawers = [
+    'functionalstorage:framed_1',
+    'functionalstorage:framed_2',
+    'functionalstorage:framed_4',
+    'functionalstorage:compacting_framed_drawer',
+    'functionalstorage:framed_simple_compacting_drawer'
+]
+
 ClientEvents.lang('en_us', event => {
-    /*
-            'functionalstorage:framed_1',
-        'functionalstorage:framed_2',
-        'functionalstorage:framed_4',
-        'functionalstorage:framed_compacting_drawer',
-        'functionalstorage:framed_simple_compacting_drawer'
-    */
-    let drawers = [
-        'functionalstorage:framed_1',
-        'functionalstorage:framed_2',
-        'functionalstorage:framed_4',
-        'functionalstorage:compacting_framed_drawer',
-        'functionalstorage:framed_simple_compacting_drawer'
-    ]
     for (let iterator of drawers) {
         event.addAll(
             'functionalstorage',
@@ -36,4 +30,19 @@ ClientEvents.lang('en_us', event => {
                 .build()
         )
     }
+    event.addAll(
+        'kubejs',
+        createTooltip('kubejs:ender_drawer_linking_guide')
+            .addSummary('It is quite the _magical_ drawer. Just remember to make _two_ Ender Drawers and a _Linking Tool_.')
+            .addBehaviour([
+                'Linking Process',
+                'To _link_ Ender Drawers together, first L-Click one drawer with the _Linking Tool_. After you have stored a frequency, _Sneak_ + R-Click on the other Ender Drawers you want to link it to.'
+            ])
+            .addBehaviour([
+                'Unlinking Process',
+                'To change the frequency of an Ender Drawer, _all_ upgrades and items will have to be emptied first. After this is done, break it. _Void Upgrades_ apply to the Ender Drawer network and are intended to be permanent as per the developer\'s response.'
+            ])
+            .setPalette($Palette.PURPLE)
+            .build()
+    )
 })
