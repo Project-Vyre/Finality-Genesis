@@ -40,9 +40,9 @@ StartupEvents.registry('block', event => {
             .blockEntity(entityInfo => {
                 entityInfo.inventory(9, 1)
                 entityInfo.rightClickOpensInventory()
-                entityInfo.serverTick(20, 0, entity => {
-                    entity.inventory.insertItem('minecraft:netherite_block', false)
-                })
+                entityInfo.serverTick(1200, 0, entity => {
+                    entity.inventory.insertItem('kubejs:high_entropy_alloy_block', false)
+                }) // reminder to self: add inventory capabilities
             })
     }
     event.create('kubejs:null_storage_block')
@@ -54,6 +54,7 @@ StartupEvents.registry('block', event => {
         .blockEntity(entityInfo => {
             entityInfo.inventory(9, 9)
             entityInfo.rightClickOpensInventory()
+            // reminder to self: add inventory capabilities
         })
     event.create('kubejs:dripstone_transitional_stone')
         .textureAll('kubejs:block/dripstone_stone')

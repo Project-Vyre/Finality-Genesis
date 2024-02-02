@@ -50,6 +50,50 @@ let END_GEMS = [
 ]
 
 ServerEvents.recipes(event => {
+    event.custom({
+        "type": "apotheosis:spawner_modifier",
+        "conditions": [
+            {
+                "type": "apotheosis:module",
+                "module": "spawner"
+            }
+        ],
+        "mainhand": {
+            "item": "kubejs:stable_entropy_particles"
+        },
+        "stat_changes": [
+            {
+                "id": "ignore_conditions",
+                "value": true
+            }
+        ]
+    }).id('finality:spawner/ignore_conditions')
+    event.custom({
+        "type": "apotheosis:spawner_modifier",
+        "conditions": [
+            {
+                "type": "apotheosis:module",
+                "module": "spawner"
+            }
+        ],
+        "mainhand": {
+            "item": "kubejs:stable_entropy_particles"
+        },
+        "offhand": {
+            "item": "minecraft:quartz"
+        },
+        "consumes_offhand": false,
+        "stat_changes": [
+            {
+                "id": "ignore_conditions",
+                "value": false
+            }
+        ]
+    }).id('finality:spawner/ignore_conditions_inverted')
+    event.recipes.create.deploying('apotheosis:ancient_material', [
+        'apotheosis:mythic_material',
+        'kubejs:stable_entropy_particles'
+    ]).id('finality:apotheosis/deploying/ancient_material')
     for (let i = 0; i < COREGEMS.length; i++) {
         let gem = COREGEMS[i];
         event.recipes.create.milling([
@@ -170,10 +214,64 @@ ServerEvents.recipes(event => {
         Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"epic"}').withChance(0.10),
         Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"mythic"}').withChance(0.05)
     ], 'kubejs:stable_entropy_particles').processingTime(500).id('finality:crushing/eversor_gem')
+    event.recipes.create.mixing([
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"uncommon"}').withChance(0.50),
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"rare"}').withChance(0.30),
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"epic"}').withChance(0.10),
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"mythic"}').withChance(0.05)
+    ], [
+        'kubejs:stable_entropy_particles',
+        '16x apotheosis:gem_dust'
+    ]).id('finality:mixing/eversor_gem_from_dust')
+    event.recipes.create.milling(
+        'kubejs:unstable_entropy_particles',
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"common"}').weakNBT()
+    ).processingTime(250).id('finality:milling/common_eversor_gem_recycling')
+    event.recipes.create.milling(
+        'kubejs:unstable_entropy_particles',
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"uncommon"}').weakNBT()
+    ).processingTime(250).id('finality:milling/uncommon_eversor_gem_recycling')
+    event.recipes.create.milling(
+        'kubejs:unstable_entropy_particles',
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"rare"}').weakNBT()
+    ).processingTime(250).id('finality:milling/rare_eversor_gem_recycling')
+    event.recipes.create.milling(
+        'kubejs:unstable_entropy_particles',
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"epic"}').weakNBT()
+    ).processingTime(250).id('finality:milling/epic_eversor_gem_recycling')
+    event.recipes.create.milling(
+        'kubejs:unstable_entropy_particles',
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"mythic"}').weakNBT()
+    ).processingTime(250).id('finality:milling/mythic_eversor_gem_recycling')
     event.recipes.create.deploying(Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"ancient"}').weakNBT(), [
-        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"mythic"}'),
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"mythic"}').weakNBT(),
         'kubejs:command_block'
     ]).keepHeldItem().id('finality:ancient_eversor_upgrade')
+    // Acuti Ora
+    event.recipes.create.cutting(
+        Item.of('apotheosis:gem', '{gem:"kubejs:acuti_ora",rarity:"common"}'),
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"common"}').weakNBT()
+    ).processingTime(250).id('finality:cutting/acuti_ora_common')
+    event.recipes.create.cutting(
+        Item.of('apotheosis:gem', '{gem:"kubejs:acuti_ora",rarity:"uncommon"}'),
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"uncommon"}').weakNBT()
+    ).processingTime(250).id('finality:cutting/acuti_ora_uncommon')
+    event.recipes.create.cutting(
+        Item.of('apotheosis:gem', '{gem:"kubejs:acuti_ora",rarity:"rare"}'),
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"rare"}').weakNBT()
+    ).processingTime(250).id('finality:cutting/acuti_ora_rare')
+    event.recipes.create.cutting(
+        Item.of('apotheosis:gem', '{gem:"kubejs:acuti_ora",rarity:"epic"}'),
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"epic"}').weakNBT()
+    ).processingTime(250).id('finality:cutting/acuti_ora_epic')
+    event.recipes.create.cutting(
+        Item.of('apotheosis:gem', '{gem:"kubejs:acuti_ora",rarity:"mythic"}'),
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"mythic"}').weakNBT()
+    ).processingTime(250).id('finality:cutting/acuti_ora_mythic')
+    event.recipes.create.cutting(
+        Item.of('apotheosis:gem', '{gem:"kubejs:acuti_ora",rarity:"ancient"}'),
+        Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"ancient"}').weakNBT()
+    ).processingTime(250).id('finality:cutting/acuti_ora_ancient')
     event.shaped('6x minecraft:arrow', [
         'F',
         'S',

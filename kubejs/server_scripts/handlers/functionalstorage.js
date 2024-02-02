@@ -22,6 +22,10 @@ ServerEvents.recipes(event => {
         { id: 'functionalstorage:netherite_upgrade' },
         { id: 'functionalstorage:ender_drawer' }
     ])
+    event.shapeless('kubejs:ender_drawer_linking_guide', [
+        'minecraft:ender_pearl',
+        'minecraft:paper'
+    ]).id('finality:ender_drawer_linking_guide')
     event.shaped('kubejs:denied_result', [
         'W'
     ], {

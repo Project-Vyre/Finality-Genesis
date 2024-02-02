@@ -30,7 +30,6 @@ let IRONS_SPELLGEMS = [
     'holy',
     'intelligent',
     'lightning',
-    'poison',
     'spell_resist',
     'summoning'
 ]
