@@ -5,12 +5,10 @@
 StartupEvents.registry('fluid', event => {
     // work in progress .stillTexture('finality:block/still_entropy').flowingTexture('finality:block/flowing_entropy')
     event.create('kubejs:condensed_universal_entropy')
-        .displayName('<rainb>Condensed Universal Entropy</rainb>')
         .thickTexture(0x7800FF)
         .bucketColor(0x7800FF)
         .luminosity(15)
     event.create('kubejs:condensed_universal_order')
-        .displayName('<rainb>Condensed Universal Order</rainb>')
         .thickTexture(0x77D8FF)
         .bucketColor(0x77D8FF)
         .luminosity(15)

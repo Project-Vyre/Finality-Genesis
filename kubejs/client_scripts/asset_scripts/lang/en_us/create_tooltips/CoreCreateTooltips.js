@@ -172,7 +172,7 @@ ClientEvents.lang('en_us', event => {
     )
     event.addAll('kubejs', {
         "block.kubejs.null_storage_block.tooltip": "NULL STORAGE BLOCK",
-        "block.kubejs.null_storage_block.tooltip.summary": "Kinda invisible storage! It shouldn't exist.",
+        "block.kubejs.null_storage_block.tooltip.summary": "Kinda _invisible_ storage! It shouldn't exist.",
         "item.minecraft.clock.tooltip": "CLOCK",
         "item.minecraft.clock.tooltip.summary": "You feel that this clock has the ability to control _time_ to some degree... how curious.",
         "block.minecraft.andesite.tooltip": "ANDESITE",

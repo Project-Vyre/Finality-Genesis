@@ -1,6 +1,4 @@
 // requires: kubejs_create
-// requires: aquamirae
-// requires: cataclysm
 
 let SAND = ['sand', 'red_sand']
 let VANILLAMATS = ['amethyst', 'copper', 'iron', 'redstone', 'gold', 'diamond', 'emerald', 'quartz', 'netherite', 'honey']
@@ -490,8 +488,6 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         'kubejs:umbral_mechanism'
     ], 'kubejs:lattice_mechanism', [
-        event.recipes.create.deploying('kubejs:incomplete_umbral_mechanism', ['kubejs:incomplete_umbral_mechanism', 'aquamirae:abyssal_amethyst']),
-        event.recipes.create.deploying('kubejs:incomplete_umbral_mechanism', ['kubejs:incomplete_umbral_mechanism', 'cataclysm:abyssal_sacrifice']),
         event.recipes.create.deploying('kubejs:incomplete_umbral_mechanism', ['kubejs:incomplete_umbral_mechanism', 'kubejs:soul_sand_singularity']),
         event.recipes.create.deploying('kubejs:incomplete_umbral_mechanism', ['kubejs:incomplete_umbral_mechanism', 'kubejs:soul_soil_singularity']),
         event.recipes.create.deploying('kubejs:incomplete_umbral_mechanism', ['kubejs:incomplete_umbral_mechanism', 'kubejs:end_crystal_singularity'])

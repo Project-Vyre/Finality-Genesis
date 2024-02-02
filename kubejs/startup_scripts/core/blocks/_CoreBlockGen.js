@@ -1,16 +1,17 @@
 /**
  * @file Block registration.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ * @author LLytho <https://github.com/LLytho> Prevented the head bashing
  */
 
-let CMD = {
-    command_block: 'Command Block',
-    chain_command_block: 'Chain Command Block',
-    repeating_command_block: 'Repeating Command Block'
-}
+let CMD = [
+    'command_block',
+    'chain_command_block',
+    'repeating_command_block'
+]
 
 StartupEvents.registry('block', event => {
     event.create('kubejs:high_entropy_alloy_block')
-        .displayName('<rainb>Block of High Entropy Alloy</rainb>')
         .textureAll('kubejs:block/high_entropy_alloy_block')
         .soundType('netherite_block')
         .hardness(500)
@@ -22,9 +23,8 @@ StartupEvents.registry('block', event => {
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('forge:needs_netherite_tool')
         .tagBlock('create:wrench_pickup')
-    for (let [insert, name] of Object.entries(CMD)) {
+    for (let insert of CMD) {
         event.create(`kubejs:${insert}`)
-            .displayName(`<rainb>${name}</rainb>`)
             .textureAll(`kubejs:block/${insert}`)
             .soundType('netherite_block')
             .hardness(500)
