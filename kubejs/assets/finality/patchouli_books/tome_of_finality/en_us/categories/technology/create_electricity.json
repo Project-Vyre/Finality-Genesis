@@ -1,0 +1,7 @@
+{
+    "name": "Energy from Create",
+    "description": "All things related to energy generation with the help of Create Crafts & Additions.",
+    "icon": "createaddition:alternator",
+    "parent": "finality:technology/technology",
+    "sortnum": 1
+}

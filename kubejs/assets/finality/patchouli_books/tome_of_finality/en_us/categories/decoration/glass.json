@@ -1,0 +1,6 @@
+{
+    "name": "Glass for Days",
+    "description": "For all things glass related.",
+    "icon": "create:ornate_iron_window",
+    "parent": "finality:decoration/decoration"
+}

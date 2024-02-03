@@ -34,7 +34,7 @@ ClientEvents.highPriorityAssets(event => {
         sortNumber,
         flags
     ) {
-        event.add(`patchouli:patchouli_books/tome_of_finality/en_us/categories/${categoryResourceName}/${categoryResourceName}`, {
+        event.add(`finality:patchouli_books/tome_of_finality/en_us/categories/${categoryResourceName}/${categoryResourceName}`, {
             "name": categoryName,
             "description": categoryDescription,
             "icon": categoryIcon,
@@ -58,7 +58,7 @@ ClientEvents.highPriorityAssets(event => {
      * "mod:MOD_ID": Is true when the mod mod_id is loaded in the game
      */
     function subCategory(categoryFolder, fileName, categoryName, categoryDescription, categoryIcon, parent) {
-        event.add(`patchouli:patchouli_books/tome_of_finality/en_us/categories/${categoryFolder}/${fileName}`, {
+        event.add(`finality:patchouli_books/tome_of_finality/en_us/categories/${categoryFolder}/${fileName}`, {
             "name": categoryName,
             "icon": categoryIcon,
             "description": categoryDescription,

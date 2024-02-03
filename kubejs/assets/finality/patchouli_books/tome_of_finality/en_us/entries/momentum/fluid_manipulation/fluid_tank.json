@@ -1,0 +1,16 @@
+{
+    "name": "Fluid Tank",
+    "icon": "create:fluid_tank",
+    "category": "finality:momentum/fluid_manipulation",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:fluid_tank",
+            "text": "Hold [w] to Ponder. $(br2)This is the main method of storing fluids in bulk."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(li)Fluid inside Fluid Tanks can only be pumped in or extracted by Mechanical Pumps. $(li)The Wrench can toggle the side windows on Fluid Tanks."
+        }
+    ]
+}

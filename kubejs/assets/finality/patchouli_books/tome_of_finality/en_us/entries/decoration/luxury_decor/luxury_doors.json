@@ -1,0 +1,27 @@
+{
+    "name": "Luxury Doors",
+    "icon": "supplementaries:gold_door",
+    "category": "finality:decoration/luxury",
+    "pages": [
+        {
+            "type": "patchouli:crafting",
+            "recipe": "supplementaries:doormat",
+            "text": "This entry contains the crafting recipes for the luxury doors from Supplementaries. $(br2)May I also suggest using a doormat and a key?"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "supplementaries:gold_door",
+            "text": "You may have to make this to see what it actually looks like."
+        },
+        {
+            "type": "patchouli:smithing",
+            "recipe": "supplementaries:netherite_door",
+            "text": "You may have to make this to see what it actually looks like. $(br2)Did I mention you can lock the Netherite Door?"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "supplementaries:key",
+            "text": "Supplementaries lets you lock and unlock stuff with this key."
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "name": "Farmer's Delight",
+    "icon": "farmersdelight:skillet",
+    "category": "finality:sustenance/delightful_cooking",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "To get into Farmer's Delight, you will need a few things... $(li)1x Cutting Board $(li)1x Knife of any type below $(li2)Flint Knife $(li2)Iron Knife $(li2)Diamond Knife $(li2)Netherite Knife $(li2)Golden Knife"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Obviously the Golden Knife is NOT recommended as gold is a very soft and malleable metal. As for the Netherite Knife, it's only for those who are truly committed. :3 $(br2)Turn to the next page to learn how to make a Cutting Board."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:mechanical_saw",
+            "title": "Cutting the Board",
+            "text": "To make a Cutting Board, you have to take any vanilla wood type slab, then send it through Create's Mechanical Saw. $(br2)This is very simpe and was done to better integrate progression with Farmer's Delight."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Once you have done that, place the cutting board in a desirable location. Items you place on the cutting board will lay flat and you can use a knife to chop up whatever can be cut. $(br2)Yes, this means you can cut chicken into individual chicken cuts. You can mince raw beef into minced beef to cook into a beef patty using the Skillet. There are A LOT of possibilities."
+        }
+    ]
+}

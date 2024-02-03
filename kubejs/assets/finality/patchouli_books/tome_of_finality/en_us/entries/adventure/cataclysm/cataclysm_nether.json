@@ -1,0 +1,35 @@
+{
+    "name": "Nether",
+    "icon": "minecraft:netherrack",
+    "category": "finality:adventure/cataclysm",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Contains information on the following:$(li)Netherite Monstrosity $(li)Ignis"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Go to the next page. I am trying to keep the formatting consistent here..."
+        },
+        {
+            "type": "patchouli:entity",
+            "entity": "cataclysm:netherite_monstrosity",
+            "scale": 0.75,
+            "text": "Most likely the first boss you will encounter in Cataclysm."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Highly recommended to bring Fire Resistance potions as the Netherite Monstrosity spits out lava from its mouth during the boss fight."
+        },
+        {
+            "type": "patchouli:entity",
+            "entity": "cataclysm:ignis",
+            "scale": 0.75,
+            "text": "The second boss you will encounter. Has two phases."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Highly recommended to bring Fire Resistance and Health Regeneration potions. High armor will not save you from the armor strip of a certain impaling attack."
+        }
+    ]
+}

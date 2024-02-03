@@ -1,0 +1,42 @@
+{
+    "name": "Chunk Loaders 101",
+    "icon": "chunkloaders:ultimate_chunk_loader",
+    "category": "finality:genesis/tips",
+    "flag": "mod:chunkloaders",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This is a tutorial on how to force load chunks without using $(l:genesis/chunk_claiming)Open Parties & Claims by xaero96$(). $(br2)I highly recommend crafting the chunk loaders first before following the instructions in this entry."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Notice: This mod does not grant chunk ownership for individual players or teams. That's for $(l:genesis/chunk_claiming)Open Parties & Claims$() to take care of. $(br2)The recipes for each Chunk Loader can be found over the next few pages."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "If you have already placed down your Chunk Loader, you can right click it to access the interface. $(br2)To open the interface for chunk loaders if you are NOT directly in front of your Chunk Loader, you have to press the $(5)backwards slash$() key. $(br2)This will open up a small window where you can click on individual chunks to force load."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "chunkloaders:basic_chunk_loader",
+            "title": "Basic Tier",
+            "text": "This is the recipe for the Basic Chunk Loader. It can load an area of 3x3 chunks."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "chunkloaders:advanced_chunk_loader",
+            "title": "Advanced Tier",
+            "text": "This is the recipe for the Advanced Chunk Loader. It can load an area of 5x5 chunks."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "chunkloaders:ultimate_chunk_loader",
+            "title": "Ultimate Tier",
+            "text": "This is the recipe for the Ultimate Chunk Loader. It can load an area of 7x7 chunks."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Again, this is a friendly reminder on how to open the Chunk Loader interface. $(br2)Simply press the $(5)backwards slash$() key on your keyboard."
+        }
+    ]
+}

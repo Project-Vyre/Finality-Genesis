@@ -1,0 +1,6 @@
+{
+    "name": "Fluid Manipulation",
+    "description": "Everything related to manipulating fluids with Create.",
+    "icon": "create:fluid_pipe",
+	"parent": "finality:momentum/momentum"
+}

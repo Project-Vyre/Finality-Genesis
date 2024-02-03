@@ -1,0 +1,12 @@
+{
+    "name": "Shaft",
+    "icon": "create:shaft",
+    "category": "finality:momentum/kinetic_blocks",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:shaft",
+            "text": "The most basic way of relaying kinetic rotation and serves as the main connection point for many of Create's blocks. $(br2)It does so in a straight line and can be rotated horizontally in two directions and one direction vertically."
+        }
+    ]
+}

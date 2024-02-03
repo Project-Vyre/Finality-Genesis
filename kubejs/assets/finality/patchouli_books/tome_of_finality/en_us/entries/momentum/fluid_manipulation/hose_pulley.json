@@ -1,0 +1,16 @@
+{
+    "name": "Hose Pulley",
+    "icon": "create:hose_pulley",
+    "category": "finality:momentum/fluid_manipulation",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:hose_pulley",
+            "text": "Hold [w] to Ponder. $(br2)The Hose Pulley is what you would use to extract a large body of fluid like water from a lake or lava from the lava oceans of the Nether. Just make sure it goes all the way to the bottom."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(li)It is recommended to use an array of Mechanical Pumps in order to rapidly extract fluid from a body of water or lava. $(li)Any body of fluid that has a volume of 10,000 blocks is considered infinite."
+        }
+    ]
+}

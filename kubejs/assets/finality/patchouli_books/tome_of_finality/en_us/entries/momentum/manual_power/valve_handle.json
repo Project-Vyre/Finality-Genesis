@@ -1,0 +1,12 @@
+{
+    "name": "Valve Handle",
+    "icon": "create:copper_valve_handle",
+    "category": "finality:momentum/manual_power",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:copper_valve_handle",
+            "text": "The Copper Valve Handle is more suited for fluid related use like opening valves and aesthetics. $(br2)How to use:$(br)Hold right click while standing to rotate counter-clockwise.$(br2)Hold right click while sneaking to rotate clockwise."
+        }
+    ]
+}

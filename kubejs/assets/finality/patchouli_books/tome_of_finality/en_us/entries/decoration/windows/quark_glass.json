@@ -1,0 +1,27 @@
+{
+    "name": "Glass from Quark",
+    "icon": "quark:framed_glass",
+    "category": "finality:decoration/glass",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This entry contains a sample of glass blocks from Quark that might better suit your desire for better windows."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "quark:framed_glass",
+            "text": "If you like iron framed glass, here's the colorless variant from Quark's side of glass."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "quark:glass_item_frame",
+            "text": "If you wanted invisible item frames, this item is for you! $(br2)Yes, it does have the same functionality of a regular Item Frame aside from being invisible."
+        },
+        {
+            "type": "patchouli:crafting",
+            "title": "Recipe",
+            "recipe": "quark:building/crafting/glass_item_frame",
+            "text": "This is the recipe for the Glass Item Frame."
+        }
+    ]
+}

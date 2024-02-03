@@ -1,0 +1,6 @@
+{
+    "name": "Aquamirae",
+    "description": "This entry contains information on the mini-bosses and bosses of Aquamirae and is not spoiler free! Entities displayed here have been set to a scale of 0.75 and do not reflect their actual size in-game. $(br2)Notice: The Harbinger and Leviathan are 1.19+ exclusive along with their tools.",
+    "icon": "aquamirae:rune_of_the_storm",
+    "parent": "finality:adventure/adventure"
+}

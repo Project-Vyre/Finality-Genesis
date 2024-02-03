@@ -1,0 +1,12 @@
+{
+    "name": "Copper Diving Helmet",
+    "icon": "create:copper_diving_helmet",
+    "category": "finality:momentum/curiosities",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:copper_diving_helmet",
+            "text": "$(1)Prevents drowning if Copper Backtank is filled with pressurized air. Also lets you see through water clearly.$()"
+        }
+    ]
+}

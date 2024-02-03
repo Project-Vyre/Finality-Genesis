@@ -1,0 +1,35 @@
+{
+    "name": "Sources Archive",
+    "icon": "create:stressometer",
+    "category": "finality:momentum/kinetic_sources",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Everything in Create utilizes a different unit of power called $(3)su$(), which is short for $(3)stress units$(). Also, some general advice: higher RPM requires more $(3)stress$() to rotate, just like gear ratios IRL. That is why a Large Cogwheel connected to a Cogwheel rotates faster, but requires more $(3)su$() to function when connected to an appliance."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:water_wheel",
+            "text": "This is what is considered Tier 1 in terms of stress generation. $(br2)Maximum stress output is $(3)256su$() as of Create 0.5.1 and no longer requires water to be flowing in a specific direction."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:large_water_wheel",
+            "text": "Can be considered Tier 1.5 in terms of stress generation. $(br2)Maximum stress output is $(3)512su$()."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:windmill_bearing",
+            "text": "This is what is considered Tier 2 in terms of stress generation. $(br2)It is recommended to craft a large amount of Sails and Sail Frames for functional use. $(br2)Maximum stress output is $(3)8,192su$()."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:steam_engine",
+            "text": "This is what is considered Tier 3 in terms of stress generation. $(br2)A single Steam Engine can output a maximum of $(3)16,384su$(). However, you can have a maximum of 9 Steam Engines together on a Level 9 boiler and output $(3)147,456su$() if connected altogether."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Ensure that your Mechanical Pump is rotating at a fast enough RPM and uses a separate source of stress as making a self-sufficient boiler will only cause additional complexity. $(br2)I recommend using a Windmill Bearing as the source of stress for your Mechanical Pump."
+        }
+    ]
+}

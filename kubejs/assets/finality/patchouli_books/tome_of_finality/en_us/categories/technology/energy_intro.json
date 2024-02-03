@@ -1,0 +1,7 @@
+{
+    "name": "Introduction to Energy",
+    "description": "All things related to energy generation with the help of Create Crafts & Additions.",
+    "icon": "minecraft:structure_block",
+    "parent": "finality:technology/technology",
+    "sortnum": 0
+}

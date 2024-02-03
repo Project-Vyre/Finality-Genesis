@@ -1,0 +1,21 @@
+{
+    "name": "The Captain's Ghost",
+    "icon": "aquamirae:ship_graveyard_echo",
+    "category": "finality:adventure/aquamirae",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This entry does not contain spoiler free advice."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "aquamirae:shell_horn",
+            "text": "You can acquire the Shell Horn by killing a Captain. $(br2)Captains can be found on Ships within the biome."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "aquamirae:terrible_sword",
+            "text": "So you acquired the Horn, but you may find out that Captain Cornelia is unkillable by normal means. $(br2)You have to use the Terrible Sword if you have nothing else to end the fight. $(br2)Make sure your critical hits count!"
+        }
+    ]
+}

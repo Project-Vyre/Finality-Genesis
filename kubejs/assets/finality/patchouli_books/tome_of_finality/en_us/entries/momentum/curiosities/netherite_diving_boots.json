@@ -1,0 +1,12 @@
+{
+    "name": "Netherite Diving Boots",
+    "icon": "create:netherite_diving_boots",
+    "category": "finality:momentum/curiosities",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:netherite_diving_boots",
+            "text": "$(4)Permits you to walk on the floor of lava oceans as well. Also prevents you from being tossed aside by Mechanical Belts.$() $(br2)$(4)Does not allow you to swim upwards, so you must have a way to walk up!$()"
+        }
+    ]
+}

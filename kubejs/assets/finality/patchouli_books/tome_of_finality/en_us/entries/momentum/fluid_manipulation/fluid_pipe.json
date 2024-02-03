@@ -1,0 +1,16 @@
+{
+    "name": "Fluid Pipe",
+    "icon": "create:fluid_pipe",
+    "category": "finality:momentum/fluid_manipulation",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:fluid_pipe",
+            "text": "Hold [w] to Ponder. $(br2)This is the main method of transporting fluids."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(li)Encasing Fluid Pipes can make them stay in shape if you are attempting a corner connection. $(li)The Wrench can open a window inside the Fluid Pipe which causes them not to connect with any adjacent Fluid Pipes."
+        }
+    ]
+}

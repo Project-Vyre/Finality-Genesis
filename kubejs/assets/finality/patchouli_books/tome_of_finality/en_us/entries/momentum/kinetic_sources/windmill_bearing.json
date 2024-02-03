@@ -1,0 +1,27 @@
+{
+    "name": "Windmill Bearing",
+    "icon": "create:windmill_bearing",
+    "category": "finality:momentum/kinetic_sources",
+    "sortnum": 2,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:windmill_bearing",
+            "text": "This is what is considered $(b)Tier 2$() in terms of stress generation. $(br2)Maximum stress output is $(3)8,192su$()."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "It is recommended to craft a large amount of Windmill Sails and / or Windmill Sail Frames for both functional and aesthetic purposes. $(br2)On the next page is the recipe for the Windmill Sail block which can be used to increase the amount of su provided by the Windmill Bearing. Wool blocks can also be used, but you can get TWO Windmill Sails for the price of ONE wool block."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:white_sail",
+            "text": "These are the recipes for Windmill Sail blocks. $(li)Windmill Sail blocks can be infinitely dyed with a single dye item. $(li)You can convert a Windmill Sail to a Windmill Sail Frame and vice versa."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "create:crafting/kinetics/white_sail",
+            "recipe2": "create:crafting/kinetics/sail_framefrom_conversion"
+        }
+    ]
+}

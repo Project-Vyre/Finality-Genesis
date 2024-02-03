@@ -1,0 +1,6 @@
+{
+    "name": "Delightful Cooking",
+    "description": "Everything food related from Create.",
+    "icon": "create:honeyed_apple",
+    "parent": "finality:sustenance/sustenance"
+}

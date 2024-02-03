@@ -1,0 +1,12 @@
+{
+    "name": "Copper Diving Boots",
+    "icon": "create:copper_diving_boots",
+    "category": "finality:momentum/curiosities",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:copper_diving_boots",
+            "text": "$(1)Permits you to walk on the sea floor. Also prevents you from being tossed aside by Mechanical Belts.$() $(br2)$(4)Does not allow you to swim upwards, so you must have a way to walk up from the sea floor!$()"
+        }
+    ]
+}

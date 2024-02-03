@@ -1,0 +1,6 @@
+{
+    "name": "Materials 101",
+    "description": "Everything related to Create's materials.",
+    "icon": "create:andesite_alloy",
+	"parent": "finality:momentum/momentum"
+}

@@ -1,0 +1,6 @@
+{
+    "name": "Manual Power",
+    "description": "Sources of manual power.",
+    "icon": "create:hand_crank",
+	"parent": "finality:momentum/momentum"
+}

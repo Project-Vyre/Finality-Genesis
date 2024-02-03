@@ -1,0 +1,6 @@
+{
+    "name": "Tips",
+    "description": "All entries here are for your guidance.",
+    "icon": "minecraft:gold_block",
+    "parent": "finality:genesis/genesis"
+}

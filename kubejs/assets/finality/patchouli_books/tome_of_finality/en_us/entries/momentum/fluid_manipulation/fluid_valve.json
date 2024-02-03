@@ -1,0 +1,16 @@
+{
+    "name": "Fluid Valve",
+    "icon": "create:fluid_valve",
+    "category": "finality:momentum/fluid_manipulation",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:fluid_valve",
+            "text": "Hold [w] to Ponder. $(br2)This is how you toggle fluids from coming in or out in your fluid pipe network."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(li)It is recommended to just use Copper Valve Handles as they can turn 90 degrees innately."
+        }
+    ]
+}

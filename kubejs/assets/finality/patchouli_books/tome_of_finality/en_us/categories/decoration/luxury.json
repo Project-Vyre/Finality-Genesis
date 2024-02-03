@@ -1,0 +1,6 @@
+{
+    "name": "Luxury Decor",
+    "description": "Decorations in this category are a bit expensive.",
+    "icon": "supplementaries:globe",
+    "parent": "finality:decoration/decoration"
+}

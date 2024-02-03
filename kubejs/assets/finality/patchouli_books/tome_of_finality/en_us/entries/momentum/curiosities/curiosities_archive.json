@@ -1,0 +1,53 @@
+{
+    "name": "Curiosities Archive",
+    "icon": "create:extendo_grip",
+    "category": "finality:momentum/curiosities",
+    "priority": true,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Create has many useful tools that can assist you. It also has a very powerful weapon called the... Potato Cannon.$(br2)More info can be found on its respective page."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:wrench",
+            "text": "An engineer's primary tool, secondary for architects. It allows instant collection of most of Create's blocks with Shift + Right Click and transports them to your inventory. It also adjusts many of Create's blocks by scrolling and right clicking to rotate and shortens Mechanical Belts."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:wand_of_symmetry",
+            "text": "An architect's best friend. It perfectly mirrors blocks placed and broken, but respects differentiating blocks.$(br2)Shift + Right Click to adjust its settings!"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:brown_toolbox",
+            "text": "Eight wireless inventory slots with a max range of 10 blocks. Highly ideal for storing your tools! Each slot is capable of storing a stack of 256 of the same item.$(br2)Access with the left Alt key on your keyboard."
+
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:copper_backtank",
+            "text": "Provides pressurized air durability for the Potato Cannon and Extendo Grip and provides breating air when used with the Diving Helmet. To replenish air, provide stress to the shaft on the top when it is placed.$(br2)Can be enchanted with Capacity to increase air capacity."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:extendo_grip",
+            "text": "This handy gadget increases your interaction range when placed in your off-hand slot!$(br2)Please use with the Copper Backtank for renewable durability so you won't lose it."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:potato_cannon",
+            "text": "Actually one of the strongest weapons in the modpack if Golden Carrots are used as ammunition while the cannon is enchanted with Power V. Please use with the Copper Backtank!"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:copper_diving_helmet",
+            "text": "When used with the Copper Backtank, it can let you breathe underwater and provides better visibility in water. Clear as day!"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:copper_diving_boots",
+            "text": "Lets you walk on the sea floor. You can also move faster in water."
+        }
+    ]
+}

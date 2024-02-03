@@ -1,0 +1,6 @@
+{
+    "name": "Create's Delicacies",
+    "description": "Everything food related from Create and its addons.",
+    "icon": "create:honeyed_apple",
+    "parent": "finality:sustenance/sustenance"
+}

@@ -1,0 +1,35 @@
+{
+    "name": "The End",
+    "icon": "minecraft:end_stone",
+    "category": "finality:adventure/cataclysm",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Contains information on the following:$(li)Ender Golem $(li)Ender Guardian"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Go to the next page. I am trying to keep the formatting consistent here..."
+        },
+        {
+            "type": "patchouli:entity",
+            "entity": "cataclysm:ender_golem",
+            "scale": 0.75,
+            "text": "A mini-boss before the actual boss."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Attacks are mostly melee based with occasional void spikes erupting from the ground."
+        },
+        {
+            "type": "patchouli:entity",
+            "entity": "cataclysm:ender_guardian",
+            "scale": 0.75,
+            "text": "Has two phases. Beware the pulling force."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Attacks do heavy damage."
+        }
+    ]
+}

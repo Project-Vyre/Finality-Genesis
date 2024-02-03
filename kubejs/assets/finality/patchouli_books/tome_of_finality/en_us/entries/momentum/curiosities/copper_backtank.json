@@ -1,0 +1,16 @@
+{
+    "name": "Copper Backtank",
+    "icon": "create:copper_backtank",
+    "category": "finality:momentum/curiosities",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:copper_backtank",
+            "text": "Provides pressurized air durability for the Potato Cannon and Extendo Grip. $(br2)$(1)Also provides breathing air when used with the Diving Helmet.$()"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "To replenish air, provide stress to the shaft on the top when it is placed.$(br2)Can be enchanted with Capacity to increase air capacity."
+        }
+    ]
+}

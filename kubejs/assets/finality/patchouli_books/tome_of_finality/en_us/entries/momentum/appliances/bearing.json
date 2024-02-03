@@ -1,0 +1,16 @@
+{
+    "name": "Mechanical Bearing",
+    "icon": "create:mechanical_bearing",
+    "category": "finality:momentum/appliances",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:mechanical_bearing",
+            "text": "Work in progress"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Work in progress"
+        }
+    ]
+}

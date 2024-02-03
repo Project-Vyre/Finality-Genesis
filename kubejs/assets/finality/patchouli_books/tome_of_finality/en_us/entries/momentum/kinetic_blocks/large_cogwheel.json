@@ -1,0 +1,12 @@
+{
+    "name": "Large Cogwheel",
+    "icon": "create:large_cogwheel",
+    "category": "finality:momentum/kinetic_blocks",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:large_cogwheel",
+            "text": "The larger sibling to the regular cogwheel. $(br2)Please see the Ponder scene for this particular entry. Only so much can be explained through words."
+        }
+    ]
+}

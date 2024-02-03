@@ -1,0 +1,45 @@
+{
+    "name": "Connectivity Archive",
+    "icon": "create:cogwheel",
+    "category": "finality:momentum/kinetic_blocks",
+    "priority": true,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This entry contains information as well as advice on the many methods of connectivity to Create's appliances and more. $(br2)As a general rule of thumb when it comes to using cogwheels you take into account what direction they are rotating to avoid future building headaches."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "As always, please refer to the Ponder viewer by hovering your cursor on the items on the page for a more thorough explanation and more complete index. $(br2)The tooltip should appear and have the $(3)Hold [W] to Ponder$() prompt."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:shaft",
+            "text": "The most basic way of relaying kinetic rotation and serves as the main connection point for many of Create's blocks. $(br2)It does so in a straight line and can be rotated horizontally in two directions and one direction vertically."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "A helpful placement tip is that while you are looking at the hitbox of the Shaft block, a preview and arrow will appear to show you where the next shaft will be placed. You never have to look at the end of the blockface again!"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:cogwheel",
+            "text": "Please see the Ponder scene for this particular entry. Only so much can be explained through words."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:large_cogwheel",
+            "text": "The larger sibling to the regular cogwheel. $(br2)Please see the Ponder scene for this particular entry. Only so much can be explained through words."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:belt_connector",
+            "text": "Please see the Ponder scene for this particular entry. Only so much can be explained through words. A way of transporting items from one place to another. Items on a belt will never despawn unless if they are visibly floating above the belt, in which case they will eventually despawn because of capacity."
+        },        
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:gearbox",
+            "text": "Please see the Ponder scene for this particular entry. Only so much can be explained through words."
+        }
+    ]
+}

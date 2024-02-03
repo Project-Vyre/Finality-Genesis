@@ -1,0 +1,21 @@
+{
+    "name": "Mechanical Belt",
+    "icon": "create:belt_connector",
+    "category": "finality:momentum/kinetic_blocks",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:belt_connector",
+            "text": "Please see the Ponder scene for this particular entry. Only so much can be explained through words. $(br2)A way of transporting items from one place to another. Items on a belt will never despawn unless if they are visibly floating above the belt, in which case they will eventually despawn because of capacity."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "placeholder text"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "create:crafting/kinetics/belt_connector",
+            "text": "Here is the recipe for making a Mechanical Belt."
+        }
+    ]
+}

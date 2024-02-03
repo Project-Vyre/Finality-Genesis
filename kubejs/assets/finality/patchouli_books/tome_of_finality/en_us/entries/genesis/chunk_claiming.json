@@ -1,0 +1,39 @@
+{
+    "name": "Chunk Claiming 101",
+    "icon": "minecraft:map",
+    "category": "finality:genesis/tips",
+    "flag": "&mod:openpartiesandclaims,mod:chunkloaders",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This is a tutorial on how to force load chunks with Open Parties & Claims without the use of mods that add chunk loaders as a block. $(br2)To claim a chunk, press M to open the world map. Your chunk selection is highlighted by a light gray box. Right click, and then select $(l)Claim Selected$(). If you want to mass select you can click and drag."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "You can also force load chunks by right clicking claimed chunks and selecting $(l)Forceload Selected$(). $(br2)If you prefer using actual chunk loaders that come in the form of a block, look at the $(l:genesis/chunk_loaders)Chunk Loaders$() entry instead. Commands are currently mandatory for making chunk parties with OP&C and are listed in the next page. You can also open the UI with the ' key, located next to the Enter key."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "As these are vanilla commands, you can see all the options available and cycle through them by pressing Tab. $(br2)/openpac $(li)Player config commands $(br2)/openpac-claims $(li)Everything claim-related $(br2)/openpac-parties $(li)Everything party-related $(br2)/opm $(li)Shortcut for party chat"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Notice: You can change the color of your own claims and party claims with a hex code. $(br2)See below for an example on how to change the color for your claims. $(br)$(c:/openpac player-config set claims.color FF3D4A)/openpac player-config set claims.color FF3D4A$(/c)"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "/openpac",
+            "text": "$(br)/openpac player-config set parties.name ExampleName $(li)Sets your party name to ExampleName. $(br)/openpac player-config set claims.color $(li)Sets your claims color"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "/openpac-claims",
+            "text": "Use while standing in the chunk. $(br)$(c:/openpac-claims claim)/openpac-claims claim$(/c) $(br)$(c:/openpac-claims unclaim)/openpac-claims unclaim$(/c)"
+        },
+        {
+            "type": "patchouli:text",
+            "title": "/openpac-parties",
+            "text": "$(c:/openpac-parties create)/openpac-parties create$(/c)"
+        }
+    ]
+}

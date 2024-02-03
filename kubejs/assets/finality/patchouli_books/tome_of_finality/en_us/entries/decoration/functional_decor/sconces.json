@@ -1,0 +1,26 @@
+{
+    "name": "Torches Upgraded",
+    "icon": "supplementaries:sconce",
+    "category": "finality:decoration/functional_decor",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This entry contains all the sconces and their crafting recipes from Supplementaries."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "supplementaries:sconce",
+            "text": "It's a regular torch, but better suited for your base."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "supplementaries:sconce_soul",
+            "text": "The soul fire version of the regular sconce."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "supplementaries:sconce_lever",
+            "text": "Suited for hiding piston doors in your base. $(br2)Pull the lever Kronk!"
+        }
+    ]
+}

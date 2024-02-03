@@ -1,0 +1,12 @@
+{
+    "name": "Brass",
+    "icon": "create:brass_ingot",
+    "category": "finality:momentum/materials",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:brass_ingot",
+            "text": "It takes one Zinc Ingot and one Copper Ingot in a Blaze Burner heated Basin with a Mechanical Mixer directly on top of the Basin.$(br2)As for what Brass is used for, it is used in many recipes in the Brass Age."
+        }
+    ]
+}

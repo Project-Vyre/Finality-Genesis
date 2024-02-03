@@ -1,0 +1,16 @@
+{
+    "name": "Adjustable Chain Gearshift",
+    "icon": "create:adjustable_chain_gearshift",
+    "category": "finality:momentum/kinetic_blocks",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:adjustable_chain_gearshift",
+            "text": "Very useful in stepping up and stepping down RPM in tight spaces."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "This entry contains information as well as advice on the many methods of connectivity to Create's appliances and more. $(br2)As a general rule of thumb when it comes to using cogwheels you take into account what direction they are rotating to avoid future building headaches."
+        }
+    ]
+}

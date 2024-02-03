@@ -1,0 +1,16 @@
+{
+    "name": "Spout",
+    "icon": "create:spout",
+    "category": "finality:momentum/fluid_manipulation",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:spout",
+            "text": "Press [w] to Ponder. $(br2)The Spout is special because it can fill up buckets, potions and even accomplish certain special recipes when given the right ingredient."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(li)Ensure that it is fed a constant supply of the ingredient fluid."
+        }
+    ]
+}

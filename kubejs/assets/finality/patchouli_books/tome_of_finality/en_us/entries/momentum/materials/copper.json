@@ -1,0 +1,12 @@
+{
+    "name": "Copper",
+    "icon": "minecraft:copper_ingot",
+    "category": "finality:momentum/materials",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "minecraft:copper_ingot",
+            "text": "Copper in Create is important for everything liquid related.$(br2)It is also used to make Brass and is essential to make Fluid Tanks for use in steam boilers, the most powerful source of stress units."
+        }
+    ]
+}

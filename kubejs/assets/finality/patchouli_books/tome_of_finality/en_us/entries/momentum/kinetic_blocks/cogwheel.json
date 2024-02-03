@@ -1,0 +1,16 @@
+{
+    "name": "Cogwheel",
+    "icon": "create:cogwheel",
+    "category": "finality:momentum/kinetic_blocks",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:cogwheel",
+            "text": "Please see the Ponder scene for this particular entry. Only so much can be explained through words. The tooltip should appear and have the $(3)Hold [W] to Ponder$() prompt."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "As a general rule of thumb when it comes to using cogwheels you take into account what direction they are rotating to avoid future building headaches."
+        }
+    ]
+}

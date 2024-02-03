@@ -1,0 +1,35 @@
+{
+    "name": "Advice for Noobs",
+    "icon": "minecraft:writable_book",
+    "category": "finality:genesis/introduction",
+    "priority": true,
+    "sortnum": 2,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Notice: Most recipes are very close to vanilla, but any recipe ID that contains $(o)Recipe by Finality$() has either been modified, added or re-added by me. Please do not ask why my recipes are not working outside the modpack as the answer is very self-explanatory."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Here are some helpful tips from me that may help on your journey.$(br)$(li)If you have not already, press F3 then H to enable advanced tooltips. There is NO NEED to install Mod Name Tooltip or anything similar. $(li)Press I to open and close Inventory HUD+ inventory preview. Press [ to open Inventory HUD+ customization settings."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(li)The search bar of Just Enough Items (JEI) can be quickly accessed from the inventory by pressing two keys: Ctrl + F$(br)$(li)Quark adds hotbar swapping from your inventory when you press Z then 1, 2 or 3.$(br)$(li)Don't engage in losing battles! Always come prepared, even if potion crafting is a bit of a long process."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(li)Iron, copper, gold and diamonds are easily obtainable AND renewable with the custom recipes in this modpack. USE THEM!$(li2)You can also find Inferium Essence throughout the Overworld. Get much of it as you can! $(li)Press L (the default keybind for Achievements) to reveal achievements, if you don't already know that."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:wand_of_symmetry",
+            "text": "Use Create's Wand of Symmetry to make excavating in the Nether for Ancient Debris blocks easier! You can break 8 blocks around the mirror horizontally with the Octagonal setting or dig a single tunnel with the Mirror on the Z / X axis options!"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "eccentrictome:tome",
+            "text": "This item consolidates a lot of items and books. It is very useful."
+        }
+    ]
+}

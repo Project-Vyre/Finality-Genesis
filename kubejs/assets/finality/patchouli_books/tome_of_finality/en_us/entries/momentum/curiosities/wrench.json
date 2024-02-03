@@ -1,0 +1,18 @@
+{
+    "name": "Wrench",
+    "icon": "create:wrench",
+    "category": "finality:momentum/curiosities",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:wrench",
+            "text": "An engineer's primary tool, secondary for architects. $(br2)Allows instant collection of most of Create's blocks with Shift + Right Click and transports them to your inventory. It also adjusts many of Create's blocks by scrolling and right clicking to rotate and shortens Mechanical Belts."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "create:crafting/kinetics/wrench",
+            "title": "Wrench Recipe",
+            "text": "Use the Wrench on the ENDS of placed Mechanical Belts in order to shorten them so you don't break the whole belt!"
+        }
+    ]
+}

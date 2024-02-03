@@ -1,0 +1,21 @@
+{
+    "name": "Steam Engine",
+    "icon": "create:steam_engine",
+    "category": "finality:momentum/kinetic_sources",
+    "sortnum": 3,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:steam_engine",
+            "text": "This is what is considered $(d)Tier 3$() in terms of stress generation. $(br2)A single Steam Engine can output a maximum of $(3)16,384su$(). However, you can have a maximum of 9 Steam Engines together on a Level 9 boiler and output $(3)147,456su$() if connected altogether."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Ensure that your Mechanical Pump is rotating at a fast enough RPM and uses a separate source of stress as making a self-sufficient boiler will only cause additional complexity. $(br2)I recommend using a Windmill Bearing as the source of stress for your Mechanical Pump array. $(br2)Turn to the next page to see the recipes of required components."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "text"
+        }
+    ]
+}

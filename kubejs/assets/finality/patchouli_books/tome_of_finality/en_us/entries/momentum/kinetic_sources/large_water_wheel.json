@@ -1,0 +1,13 @@
+{
+    "name": "Large Water Wheel",
+    "icon": "create:large_water_wheel",
+    "category": "finality:momentum/kinetic_sources",
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:large_water_wheel",
+            "text": "Can be considered $(a)Tier 1.5$() in terms of stress generation. $(br2)Maximum stress output is $(3)512su$()."
+        }
+    ]
+}

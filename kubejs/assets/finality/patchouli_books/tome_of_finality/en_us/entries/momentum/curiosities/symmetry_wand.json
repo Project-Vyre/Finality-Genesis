@@ -1,0 +1,16 @@
+{
+    "name": "Wand of Symmetry",
+    "icon": "create:wand_of_symmetry",
+    "category": "finality:momentum/curiosities",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:wand_of_symmetry",
+            "text": "An architect's best friend. It perfectly mirrors blocks placed and broken, but respects differentiating blocks.$(br2)Shift + Right Click to adjust its settings!"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Requires Mechanical Crafters to create. Please refer to JEI for the recipe. $(li)Keep in mind the mirror entity is only visible to you and not your friends! $(li)It only keeps track of blocks placed and destroyed by the one who placed the mirror."
+        }
+    ]
+}

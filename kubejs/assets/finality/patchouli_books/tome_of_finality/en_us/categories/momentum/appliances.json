@@ -1,0 +1,6 @@
+{
+    "name": "Appliances",
+    "description": "Everything related to Create's appliances.",
+    "icon": "create:mechanical_press",
+	"parent": "finality:momentum/momentum"
+}

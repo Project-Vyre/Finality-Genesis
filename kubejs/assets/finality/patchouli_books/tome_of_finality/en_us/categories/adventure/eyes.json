@@ -1,0 +1,6 @@
+{
+    "name": "Eyes of Myth",
+    "description": "How do you get to the end? Good question! $(br2)This category serves to keep track of what eyes you have or have not collected. Highly recommended to keep track through FTB Quests instead. $(br2)Mark the quest pages as complete as you go!",
+    "icon": "minecraft:ender_eye",
+    "parent": "finality:adventure/adventure"
+}

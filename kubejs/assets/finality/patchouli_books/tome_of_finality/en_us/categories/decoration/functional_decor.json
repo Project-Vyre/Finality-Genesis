@@ -1,0 +1,6 @@
+{
+    "name": "Functional Decor",
+    "description": "For all your decorative needs.",
+    "icon": "create:rose_quartz_lamp",
+    "parent": "finality:decoration/decoration"
+}

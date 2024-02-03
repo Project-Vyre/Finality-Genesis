@@ -1,0 +1,19 @@
+{
+    "name": "Netherite Diving Helmet",
+    "icon": "create:netherite_diving_helmet",
+    "category": "finality:momentum/curiosities",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:netherite_diving_helmet",
+            "text": "$(4)Provides full lava immunity when paired with the Netherite Backtank and a full set of Netherite armor. $(br2)Ensure your backtank is filled with some pressurized air before diving into lava.$()"
+        },
+        {
+            "type": "patchouli:smithing",
+            "title": "Recipes",
+            "recipe": "create:crafting/appliances/netherite_diving_helmet",
+            "recipe2": "create:crafting/appliances/netherite_diving_helmet_from_netherite",
+            "text": "The more economical option is the first smithing recipe."
+        }
+    ]
+}

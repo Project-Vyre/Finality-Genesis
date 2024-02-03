@@ -1,0 +1,6 @@
+{
+    "name": "Curiosities",
+    "description": "Everything related to Create's player utilities and tools.",
+    "icon": "create:precision_mechanism",
+	"parent": "finality:momentum/momentum"
+}

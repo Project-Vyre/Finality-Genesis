@@ -1,0 +1,16 @@
+{
+    "name": "Encased Fan",
+    "icon": "create:encased_fan",
+    "category": "finality:momentum/appliances",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:encased_fan",
+            "text": "Can do the following: $(li)Bulk blasting (lava) $(li)Bulk smoking (fire) $(li)Bulk washing (water) $(br)Notice: Any items incompatible with bulk blasting will be deleted."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Notice: Faster RPM does not equate to faster processing. $(br2)Instead, it is the quantity of fans focused on the same block. You can have 4 fans facing a single block horizontally and have 2 fans vertically, just make sure they are blowing towards the block and not pulling from the block."
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "name": "Humble Beginnings",
+    "icon": "minecraft:dirt",
+    "category": "finality:genesis/introduction",
+    "priority": true,
+    "sortnum": 1,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "If you are new to using Patchouli, here are some key things you should know as a beginner:$(br)$(li)Italicized entry names are important entry names and will always remain on the top.$(br)$(li)Patchouli also has holographic building guides that you can place in your world for building assistance."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "In Spotlight pages, where an item is featured you can hover your item over Create's blocks and items and directly access the Ponder system when you press and hold W. $(br2)Please turn to the next page as there are more pages.$(br2)$(l)Always check the corners for page turning arrows as they may not always be noticeable to everyone.$()"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "There are also many mod developers who have written their own Patchouli books in this modpack. PLEASE use them! $(br2)I simply can't document everything from a mod as complex as Mystical Agriculture or Create through FTB Quests.$(br2)Although I technically did document most of Create in FTB Quests, it was still quite the task."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "If you have not done so already: To access FTB Quests, open your inventory by pressing E and clicking the book on the very top left corner of the game window. $(br2)With that out of the way, I would also highly recommend not wearing the Ring of the Seven Curses until you are actually ready to suffer. However, you may choose to wear it to turn up the difficulty 10x."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "enigmaticlegacy:cursed_ring",
+            "title": "The Cursed Ring",
+            "text": "Read the tooltip very carefully with your mouse cursor hovering over the item above while your Shift key is pressed. $(br)$(4)This ring becomes permanently attached to you upon wearing it. There is also a permanent cost if you destroy it legitimately with a... certain stone.$()"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "There is also another accessory that you arrived with, it's called the Enigmatic Amulet. $(br2)Now, prepare yourself by getting some wood by punching down some trees before night hits.$(br2)Let's just say the night has become significantly more dangerous and I can safely say you might need to be more... prepared."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "enigmaticlegacy:enigmatic_amulet",
+            "text": "There is no gravestone mod. Instead, you will have this amulet which transforms into a vessel that stores your items upon death. $(br2)Be careful though, if you die again before re-acquiring the vessel, it will shatter and drop your items."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "More text to come."
+        }
+    ]
+}

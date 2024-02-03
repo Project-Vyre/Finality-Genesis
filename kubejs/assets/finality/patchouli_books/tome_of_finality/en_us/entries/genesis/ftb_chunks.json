@@ -1,0 +1,20 @@
+{
+  "name": "FTB Chunks 101",
+  "icon": "minecraft:map",
+  "category": "finality:genesis/tips",
+  "flag": "mod:ftbchunks",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(4)FTB Chunks has been removed. This entry remains here for archival purposes."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "This is a tutorial on how to force load chunks with FTB Chunks without the use of mods that add chunk loaders as a block. $(br2)To claim a chunk, press M to open the world map then look at the very top left corner. There should be a small map icon. Clicking this will open a smaller window."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Simply click the individual squares in this smaller window to claim chunks. Ownership limitations can be seen on the bottom left corner when looking at this screen. $(br2)If you prefer using actual chunk loaders that come in the form of a block, look at the $(l:genesis/chunk_loaders)Chunk Loaders$() entry instead. $(br2)For issues with Deployers not working in claimed chunks, see the $(l:genesis/broken_deployer)Create Deployer Fix$() entry."
+    }
+  ]
+}

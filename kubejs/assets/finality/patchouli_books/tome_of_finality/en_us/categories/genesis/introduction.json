@@ -1,0 +1,6 @@
+{
+  "name": "Introduction",
+  "description": "All entries here are for your guidance.",
+  "icon": "minecraft:cobblestone",
+  "parent": "finality:genesis/genesis"
+}

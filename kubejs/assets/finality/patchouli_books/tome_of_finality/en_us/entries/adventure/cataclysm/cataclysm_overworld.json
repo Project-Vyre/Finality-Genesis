@@ -1,0 +1,35 @@
+{
+    "name": "Overworld",
+    "icon": "minecraft:grass_block",
+    "category": "finality:adventure/cataclysm",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Notice: Contains information on the following:$(li)Harbinger $(li)Leviathan"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Go to the next page. I am trying to keep the formatting consistent here..."
+        },
+        {
+            "type": "patchouli:entity",
+            "entity": "cataclysm:the_harbinger",
+            "scale": 0.75,
+            "text": "A very dangerous boss. Re-awaken with a Nether Star."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "High DPS output. It also doesn't help when the laser beam of death ignores most of your armor!"
+        },
+        {
+            "type": "patchouli:entity",
+            "entity": "cataclysm:the_leviathan",
+            "scale": 0.75,
+            "text": "Very dangerous. You need the Abyssal Sacrifice to summon it back in this world."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Highly recommended to gear up for an underwater boss fight. Good options would be Create's Netherite Diving Helmet, Netherite Backtank paired with a Power V Potato Cannon."
+        }
+    ]
+}

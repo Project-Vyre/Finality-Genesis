@@ -1,0 +1,16 @@
+{
+    "name": "Mechanical Press",
+    "icon": "create:mechanical_press",
+    "category": "finality:momentum/appliances",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:mechanical_press",
+            "text": "Essential for making all kinds of pressed sheets and certain sequenced assembly recipes."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Used for making... $(li)Iron Sheet $(li)Copper Sheet $(li)Golden Sheet $(li)Brass Sheet $(li)Sturdy Sheet"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Mechanical Saw",
+    "icon": "create:mechanical_saw",
+    "category": "finality:momentum/appliances",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:mechanical_saw",
+            "text": "Wood goes in, then gets refined based on the block or item that you have placed on the Saw's recipe filter. $(br2)Please refer to the Ponder viewer by holding W while the mouse is hovering over the item on the top of this page for a more thorough explanation."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Notice: You must set a filter to get the output you want if an input ingredient has many outcomes. $(br2)The Mechanical Saw can also be used to damage mobs and can be used in place of lava. Damage dealt is dependent on how fast it is rotating."
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "name": "Create Delicacies",
+    "icon": "create:honeyed_apple",
+    "category": "finality:sustenance/create_food",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Yes, the base version of Create has its own food items. YES they are good. Addon foods for Create will be located in another entry."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:builders_tea",
+            "text": "Hard to automate, but provides haste and saturation.$(br2)It is created with the following ingredients in a $(6)heated$() basin mixer setup: $(li)1 Leaf Block $(li)250mB of Water $(li)250mB of Milk "
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:honeyed_apple",
+            "text": "Simply use a Spout to pour honey onto an apple, it is as simple as that. You should be excited to automate a honey farm using Create's fluid pipes!"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:sweet_roll",
+            "text": "Use a Spout to pour milk onto bread. Enjoy your sweet bread roll!"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:bar_of_chocolate",
+            "text": "Easier to automate than Builder's Tea, but does not provide any buffs or cause a sugar rush. $(br2)Mix the following ingredients in a $(6)heated$() basin mixer setup: $(li)1 Sugar $(li)1 bunch of Cocoa Beans $(li)250mB of Milk"
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:chocolate_glazed_berries",
+            "text": "Use a Spout to pour chocolate onto regular berries. Enjoy!"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Hand Crank",
+    "icon": "create:hand_crank",
+    "category": "finality:momentum/manual_power",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:hand_crank",
+            "text": "The Hand Crank outputs higher RPM than the Copper Valve Handle. $(br2)How to use: $(br)Hold right click while standing to rotate counter-clockwise.$(br2)Hold right click while sneaking to rotate clockwise."
+        }
+    ]
+}

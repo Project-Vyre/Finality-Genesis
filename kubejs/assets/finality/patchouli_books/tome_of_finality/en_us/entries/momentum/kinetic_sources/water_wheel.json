@@ -1,0 +1,13 @@
+{
+    "name": "Water Wheel",
+    "icon": "create:water_wheel",
+    "category": "finality:momentum/kinetic_sources",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:water_wheel",
+            "text": "This is what is considered $(a)Tier 1$() in terms of stress generation. $(br2)Maximum stress output is $(3)256su$() as of Create 0.5.1 and no longer requires water to be flowing in a specific direction."
+        }
+    ]
+}

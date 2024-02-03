@@ -1,0 +1,12 @@
+{
+    "name": "Gearbox",
+    "icon": "create:gearbox",
+    "category": "finality:momentum/kinetic_blocks",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:gearbox",
+            "text": "Please see the Ponder scene for this particular entry. Only so much can be explained through words."
+        }
+    ]
+}

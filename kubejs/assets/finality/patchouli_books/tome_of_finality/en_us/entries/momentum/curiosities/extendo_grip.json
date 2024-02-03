@@ -1,0 +1,12 @@
+{
+    "name": "Extendo Grip",
+    "icon": "create:extendo_grip",
+    "category": "finality:momentum/curiosities",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:extendo_grip",
+            "text": "$(4)Please use with a filled Copper or Netherite Backtank to preserve durability!$() $(br2)This handy gadget increases your interaction range by 10 blocks when placed in your off-hand slot."
+        }
+    ]
+}

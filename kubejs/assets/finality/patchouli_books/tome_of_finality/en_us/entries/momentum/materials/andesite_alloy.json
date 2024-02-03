@@ -1,0 +1,21 @@
+{
+    "name": "Andesite Alloy",
+    "icon": "create:andesite_alloy",
+    "category": "finality:momentum/materials",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:andesite_alloy",
+            "text": "This material is the foundation of Create, make a lot of it. $(br2)I recommend using the version of the recipe that only needs 2 Iron Ingots and 2 Andesite Alloy blocks. $(br2)Turn to the next page to see the recipe."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "create:crafting/materials/andesite_alloy",
+            "text": "This recipe can't be mirrored.$(br2)In base Create, Zinc Ore is a non-renewable resource. Consequently, this makes Brass non-renewable."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Knowing this, it is only logical to use Iron Nuggets instead of Zinc Nuggets when making Andesite Alloy.$(br2)Iron is renewable while Zinc is not.$(br2)Also, a fun fact: Copper is actually renewable from Drowned in vanilla Minecraft."
+        }
+    ]
+}

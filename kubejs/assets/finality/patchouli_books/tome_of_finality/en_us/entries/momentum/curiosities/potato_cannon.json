@@ -1,0 +1,12 @@
+{
+    "name": "Potato Cannon",
+    "icon": "create:potato_cannon",
+    "category": "finality:momentum/curiosities",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:potato_cannon",
+            "text": "$(4)Please use with a filled Copper or Netherite Backtank to preserve durability!$() $(br2)Actually one of the strongest weapons in the modpack if Golden Carrots are used as ammunition while the cannon is enchanted with Power V."
+        }
+    ]
+}

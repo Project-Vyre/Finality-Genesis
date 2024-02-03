@@ -1,0 +1,16 @@
+{
+    "name": "Mechanical Mixer",
+    "icon": "create:mechanical_mixer",
+    "category": "finality:momentum/appliances",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:mechanical_mixer",
+            "text": "Notice: Has a minimum RPM requirement of 30 RPM to operate. $(br2)It also integrates differently, using a horizontally placed cogwheel as stress input instead of a shaft connection."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "The Mechanical Mixer is highly multi-purpose and can do the following in an automated manner: $(li)Potion brewing $(li)Shapeless crafting $(li)Metallic alloying $(li)Making food $(li)Making dough $(li)Making slime $(li)and more!"
+        }
+    ]
+}

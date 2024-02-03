@@ -1,0 +1,16 @@
+{
+    "name": "Smart Fluid Pipe",
+    "icon": "create:smart_fluid_pipe",
+    "category": "finality:momentum/fluid_manipulation",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:smart_fluid_pipe",
+            "text": "Press [w] to Ponder. $(br2)This is the pipe that allows specific extraction if there are multiple fluids in a basin. For example, trying to extract chocolate while there is milk in the basin still left over from the process."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(li)Running multiple Mechanical Pumps adjacent together and connected together as shown previously in the Ponder scene for Mechanical Pumps significantly increases the fluid throughput. $(li)High RPM also works."
+        }
+    ]
+}

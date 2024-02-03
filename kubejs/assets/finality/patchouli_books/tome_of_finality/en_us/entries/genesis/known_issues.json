@@ -1,0 +1,34 @@
+{
+    "name": "Known Issues",
+    "icon": "minecraft:netherrack",
+    "category": "finality:genesis/introduction",
+    "priority": true,
+    "sortnum": 4,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Here is the entry that contains known issues for my modpack. However, not all known issues are caused by my modifications and you may need to issue bug reports to mod developers on their respective GitHub pages. Just keep in mind that it could also be caused by mod incompatibilities."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "An important notice below: $(br)$(#AA0000)I am not responsible for any bugs whether they are graphical or broken visuals that may result from using optimization mods such as OptiFine, Rubidium or Oculus.$() $(br2)Now that you know, to see known issues turn to the next page or go to the $(l:https://trello.com/b/60JjUmBh/finality-development)Trello Board$(/l) and check the Known Issues label."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(m)Currently, certain recipes in Create Stuff & Additions are non-functional due to MCreator mishaps with KubeJS's Create addon. Affected items are: $(li)Steam Engine $(li)Heat Engine $(li)Hydraulic Engine You will not be able to craft related items using these items, so please check frequently for updates.$() $(br2)Edit: As of modpack version 0.5.7b, recipes have been resolved with KubeJS magic."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(m)I will eventually re-implement the recipes myself through KubeJS once I find the exact recipe for each item.$()$(br2)Another problem child is Carry On causing crashes when interacting with very specific entities. Please report what you were doing at the time to help blacklist those items and entities."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "patchouli:guide_book",
+            "text": "Another issue is that KubeJS does not respect Patchouli's Book IDs while CraftTweaker does... Currently waiting for a fix without using the workaround provided by Reveter#1305 because my brain can't remember all of that ;-;"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Also, yes I am currently using the workaround because I have no other options."
+        }
+    ]
+}

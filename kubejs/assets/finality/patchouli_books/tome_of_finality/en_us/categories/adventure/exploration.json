@@ -1,0 +1,6 @@
+{
+    "name": "Exploration",
+    "description": "Placeholder description.",
+    "icon": "minecraft:deepslate",
+    "parent": "finality:adventure/adventure"
+}

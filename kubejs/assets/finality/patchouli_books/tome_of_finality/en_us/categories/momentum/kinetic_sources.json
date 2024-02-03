@@ -1,0 +1,6 @@
+{
+    "name": "Kinetic Sources",
+    "description": "Sources of mechanical stress power without the need for player intervention.",
+    "icon": "create:stressometer",
+	"parent": "finality:momentum/momentum"
+}

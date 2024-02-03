@@ -1,0 +1,16 @@
+{
+    "name": "Rope Pulley",
+    "icon": "create:rope_pulley",
+    "category": "finality:momentum/appliances",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:rope_pulley",
+            "text": "Work in progress"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Work in progress"
+        }
+    ]
+}

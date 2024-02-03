@@ -1,0 +1,16 @@
+{
+    "name": "Netherite Backtank",
+    "icon": "create:netherite_backtank",
+    "category": "finality:momentum/curiosities",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:netherite_backtank",
+            "text": "$(4)Provides full lava immunity when paired with the Netherite Diving Helmet and a full set of Netherite Armor. Ensure it is filled with pressurized air.$() $(br2)Provides pressurized air durability for the Potato Cannon and Extendo Grip."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "To replenish air, provide stress to the shaft on the top when it is placed.$(br2)Can be enchanted with Capacity to increase air capacity."
+        }
+    ]
+}

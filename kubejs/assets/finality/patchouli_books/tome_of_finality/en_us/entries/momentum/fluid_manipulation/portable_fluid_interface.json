@@ -1,0 +1,16 @@
+{
+    "name": "Portable Fluid Interface",
+    "icon": "create:portable_fluid_interface",
+    "category": "finality:momentum/fluid_manipulation",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:portable_fluid_interface",
+            "text": "Press [w] to Ponder. $(br2)This is the main method of (when paired with a Fluid Pipe and some Mechanical Pumps) extracting, pumping in, or transporting fluids on contraptions and trains."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(li)Running multiple Mechanical Pumps adjacent together and connected together as shown previously in the Ponder scene for Mechanical Pumps significantly increases the fluid throughput. $(li)High RPM also works."
+        }
+    ]
+}

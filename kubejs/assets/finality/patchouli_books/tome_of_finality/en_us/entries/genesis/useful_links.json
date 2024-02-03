@@ -1,0 +1,18 @@
+{
+  "name": "Useful Links",
+  "icon": "create:minecart_coupling",
+  "category": "finality:genesis/introduction",
+  "priority": true,
+  "pages": [
+    {
+      "type": "patchouli:link",
+      "text": "This entry contains useful links such as the modpack's wiki / changelog. $(br2)If you did not see the button on the main menu, here it is below.",
+      "url": "https://github.com/CelestialAbyss/Finality-Minecraft-Things/wiki",
+      "link_text": "GitHub Wiki"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Any blue text you see here is a clickable link. $(br2)Want to talk or play with us? Come join on $(l:https://discord.gg/UF8yMZEmmc)Discord$(/l)."
+    }
+  ]
+}

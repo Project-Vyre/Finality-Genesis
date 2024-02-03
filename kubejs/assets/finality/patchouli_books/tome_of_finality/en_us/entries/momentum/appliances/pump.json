@@ -1,0 +1,16 @@
+{
+    "name": "Mechanical Pump",
+    "icon": "create:mechanical_pump",
+    "category": "finality:momentum/appliances",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:mechanical_pump",
+            "text": "This is responsible for pumping fluids out of or into depending on how the cogwheel interacting with it is rotating. You can also change the direction that it is pumping by right clicking with a Wrench. $(br2)Don't Shift + Right click, otherwise you will cause the wrench to pick it up."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Notice: Mechanical Pumps running in parallel together pump fluid faster. $(br2)sAs always, please refer to the Ponder viewer by holding W while the mouse is hovering over the item on the spotlight page for a more thorough explanation."
+        }
+    ]
+}

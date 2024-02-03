@@ -1,0 +1,12 @@
+{
+    "name": "Zinc",
+    "icon": "create:zinc_ingot",
+    "category": "finality:momentum/materials",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:zinc_ingot",
+            "text": "Raw zinc ore can only be mined with an Iron or higher tier pickaxe.$(br2)Its primary purpose is to make Brass and Rose Quartz Lamps. It is also normally not renewable in base Create."
+        }
+    ]
+}

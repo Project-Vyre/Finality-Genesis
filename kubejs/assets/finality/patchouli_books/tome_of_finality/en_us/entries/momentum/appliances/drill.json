@@ -1,0 +1,16 @@
+{
+    "name": "Mechanical Drill",
+    "icon": "create:mechanical_drill",
+    "category": "finality:momentum/appliances",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:mechanical_drill",
+            "text": "Work in progress"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Work in progress"
+        }
+    ]
+}

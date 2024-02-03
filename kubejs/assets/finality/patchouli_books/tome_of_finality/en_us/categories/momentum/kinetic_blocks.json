@@ -1,0 +1,6 @@
+{
+    "name": "Kinetic Blocks",
+    "description": "Everything related to Create's connectivity blocks.",
+    "icon": "create:cogwheel",
+	"parent": "finality:momentum/momentum"
+}

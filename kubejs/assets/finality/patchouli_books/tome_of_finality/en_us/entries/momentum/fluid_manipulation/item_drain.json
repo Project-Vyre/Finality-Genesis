@@ -1,0 +1,16 @@
+{
+    "name": "Item Drain",
+    "icon": "create:item_drain",
+    "category": "finality:momentum/fluid_manipulation",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:item_drain",
+            "text": "Hold [w] to Ponder. $(br2)If you were wondering how to extract fluid from a bucket, this is the block that does exactly that!"
+        },
+        {
+            "type": "patchouli:text",
+            "text": "$(li)It is recommended to use an array of Mechanical Pumps in order to rapidly extract fluid as it can only hold 1,000mb of any given fluid. $(li)Items will automatically roll over in the direction they were initially given."
+        }
+    ]
+}

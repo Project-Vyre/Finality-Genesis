@@ -1,0 +1,19 @@
+{
+    "name": "Recipe Conflicts",
+    "icon": "minecraft:writable_book",
+    "category": "finality:genesis/introduction",
+    "priority": true,
+    "sortnum": 3,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "You may have noticed a weird button in the crafting table that looks like a repeat music button with two arrows going around in a circle. $(br2)This is the Polymorph mod. The purpose of this button is to resolve conflicting recipes and allow you to choose what *you* intended to craft and give you that output."
+        },
+        {
+            "type": "patchouli:link",
+            "text": "Here is the CurseForge page which demonstrates how it works.",
+            "url": "https://www.curseforge.com/minecraft/mc-mods/polymorph",
+            "link_text": "Polymorph"
+        }
+    ]
+}

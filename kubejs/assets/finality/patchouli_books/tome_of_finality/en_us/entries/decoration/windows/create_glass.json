@@ -1,0 +1,66 @@
+{
+    "name": "Glass from Create",
+    "icon": "create:framed_glass",
+    "category": "finality:decoration/glass",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "This entry contains a sample of glass blocks that might better suit your desire for better windows."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:framed_glass",
+            "text": "Minimal scratches and even has a connecting texture! It also has multiple variations for vertical and horizontal splitting. $(br2)Yes, there are glass pane versions."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:ornate_iron_window",
+            "text": "I can see this being used in your future factories."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "quark:framed_glass",
+            "text": "If you like iron framed glass, here's the colorless variant from Quark's side of glass."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:oak_window",
+            "text": "Create's glass and wood integration."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:spruce_window",
+            "text": "Create's glass and wood integration."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:birch_window",
+            "text": "Create's glass and wood integration."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:jungle_window",
+            "text": "Create's glass and wood integration."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:acacia_window",
+            "text": "Create's glass and wood integration."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:dark_oak_window",
+            "text": "Create's glass and wood integration."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:crimson_window",
+            "text": "Create's glass and wood integration. Looks slightly macrabe."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:warped_window",
+            "text": "Create's glass and wood integration. Looks distorted."
+        }
+    ]
+}

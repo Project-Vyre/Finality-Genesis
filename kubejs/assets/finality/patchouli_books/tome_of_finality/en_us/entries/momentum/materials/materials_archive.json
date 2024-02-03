@@ -1,0 +1,61 @@
+{
+    "name": "Materials 101 Archive",
+    "icon": "create:andesite_alloy",
+    "category": "finality:momentum/materials",
+    "priority": true,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "Create is one of the most in-depth mods out there, so you might find yourself reading this for a long time. $(br2)It is also essential in this modpack. $(br2)An important thing to remmeber is Press W to Ponder."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:andesite_alloy",
+            "text": "This material is the foundation of Create, make a lot of it. $(br2)I recommend using the version of the recipe that only needs 2 Iron Ingots and 2 Andesite Alloy blocks. $(br2)Turn to the next page to see the recipe."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "create:crafting/materials/andesite_alloy",
+            "text": "This recipe can't be mirrored.$(br2)In base Create, Zinc Ore is a non-renewable resource. Consequently, this makes Brass non-renewable."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Knowing this, it is only logical to use Iron Nuggets instead of Zinc Nuggets when making Andesite Alloy.$(br2)Iron is renewable while Zinc is not.$(br2)Also, a fun fact: Copper is actually renewable from Drowned in vanilla Minecraft."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "minecraft:copper_ingot",
+            "text": "Copper in Create is important for everything liquid related.$(br2)It is also used to make Brass and is essential to make Fluid Tanks for use in steam boilers, the most powerful source of stress units."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:zinc_ingot",
+            "text": "Raw zinc ore can only be mined with an Iron or higher tier pickaxe.$(br2)Its primary purpose is to make Brass and Rose Quartz Lamps. It is also normally not renewable in base Create."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:brass_ingot",
+            "text": "It takes one Zinc Ingot and one Copper Ingot in a Blaze Burner heated Basin with a Mechanical Mixer directly on top of the Basin.$(br2)As for what Brass is used for, it is used in many recipes in the Brass Age."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "create:crafting/materials/rose_quartz",
+            "text": "This is the first step to making an Electron Tube. However, Rose Quartz has to be polished through the use of Sandpaper."
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "create:crafting/materials/electron_tube",
+            "text": "Electron Tubes are another important ingredient that goes in hand with contraptions and machines from the Brass Age.$(br2)They make them intelligent, smarter and better."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:powdered_obsidian",
+            "text": "The first step in making Sturdy Sheets. It is made by crushing Obsidian blocks with a pair of Crushing Wheels."
+        },
+        {
+            "type": "patchouli:spotlight",
+            "item": "create:sturdy_sheet",
+            "text": "Primarily used for making Create Logistics train related things.$(br2)The recipe involves a Spout pouring lava on the first step, then two Mechanical Presses to forge the Sturdy Sheets."
+        }
+    ]
+}
