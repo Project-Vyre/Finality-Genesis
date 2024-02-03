@@ -15,11 +15,23 @@ let kjsItems = {
     crystal_lance: 'lance'
 }
 
+let finalityItems = {
+    final_sword: 'claymore',
+    final_pickaxe: 'mace'
+}
+
 ServerEvents.lowPriorityData(event => {
     for (const [item, type] of Object.entries(kjsItems)) {
         event.addJson(`kubejs:weapon_attributes/${item}.json`, {
             "parent": `bettercombat:${type}`
         })
+    }
+    if (Platform.isLoaded('finality')) {
+        for (const [item, type] of Object.entries(finalityItems)) {
+            event.addJson('finality:weapon_attributes/' + item + '.json', {
+                "parent": `bettercombat:${type}`
+            })
+        }
     }
     /**
      * @summary Adds a custom weapon type to the Better Combat schema.

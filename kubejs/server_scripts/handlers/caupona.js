@@ -44,4 +44,21 @@ ServerEvents.recipes(event => {
         'minecraft:flower_pot',
         Fluid.of('kubejs:fig_vinegar', 250)
     ]).id('finality:filling/vinegar_spice_from_figs')
+    event.recipes.create.compacting(Fluid.of('kubejs:walnut_oil', 250), [
+        '8x caupona:walnut'
+    ]).id('finality:compacting/walnut_oil_extraction')
+    event.recipes.create.filling(Item.of('caupona:gravy_boat', '{Damage:0}'), [
+        'minecraft:glass_bottle',
+        Fluid.of('kubejs:walnut_oil', 250)
+    ]).id('finality:filling/gravy_boat')
+    event.recipes.create.filling(Item.of('caupona:gravy_boat', '{Damage:0}'), [
+        [
+            Item.of('caupona:gravy_boat', '{Damage:1}').weakNBT(),
+            Item.of('caupona:gravy_boat', '{Damage:2}').weakNBT(),
+            Item.of('caupona:gravy_boat', '{Damage:3}').weakNBT(),
+            Item.of('caupona:gravy_boat', '{Damage:4}').weakNBT(),
+            Item.of('caupona:gravy_boat', '{Damage:5}').weakNBT()
+        ],
+        Fluid.of('kubejs:walnut_oil', 250)
+    ]).id('finality:filling/gravy_boat_refill')
 })
