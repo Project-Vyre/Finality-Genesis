@@ -472,28 +472,52 @@ ClientEvents.lang('en_us', event => {
             .setPalette($Palette.RED)
             .build()
     )
-    event.addAll(
-        'finality',
-        createTooltip('finality:living_nether_wart')
-            .addSummary('The living variant of _Nether Wart_. Don\'t worry about the fact that it looks like a soul!')
-            .addBehaviour([
-                'When "polished"',
-                'Converts back into dormant _Nether Wart_.'
-            ])
-            .setPalette($Palette.GREEN)
-            .build()
-    )
-    event.addAll(
-        'finality',
-        createTooltip('finality:pocket_singularity')
-            .addSummary('Work in progress! Don\'t worry about it!')
-            .addBehaviour([
-                'On R-Click',
-                'Ejects all stored items mined by the alternate form of the respective tool.'
-            ])
-            .setPalette($Palette.PURPLE)
-            .build()
-    )
+    if (Platform.isLoaded('finality')) {
+        event.addAll(
+            'finality',
+            createTooltip('finality:living_nether_wart')
+                .addSummary('The living variant of _Nether Wart_. Don\'t worry about the fact that it looks like a soul!')
+                .addBehaviour([
+                    'When "polished"',
+                    'Converts back into dormant _Nether Wart_.'
+                ])
+                .setPalette($Palette.GREEN)
+                .build()
+        )
+        event.addAll(
+            'finality',
+            createTooltip('finality:pocket_singularity')
+                .addSummary('Work in progress! Don\'t worry about it!')
+                .addBehaviour([
+                    'On R-Click',
+                    'Ejects all stored items mined by the alternate form of the respective tool.'
+                ])
+                .setPalette($Palette.PURPLE)
+                .build()
+        )
+        event.addAll(
+            'finality',
+            createTooltip('finality:final_sword')
+                .addSummary('Wield the _power_ of the event horizon in your hands. This version of the sword is a _work in progress_!')
+                .addBehaviour([
+                    'Caution!',
+                    'Don\'t _accidentally_ hit your friends!'
+                ])
+                .setPalette($Palette.PURPLE)
+                .build()
+        )
+        event.addAll(
+            'finality',
+            createTooltip('finality:final_pickaxe')
+                .addSummary('Tear through mountains without a care in the world. This version of the sword is a _work in progress_!')
+                .addBehaviour([
+                    'Caution!',
+                    'Don\'t _accidentally_ hit your friends!'
+                ])
+                .setPalette($Palette.PURPLE)
+                .build()
+        )
+    }
     if (Platform.isLoaded('summoningrituals')) {
         event.addAll(
             'summoningrituals',
