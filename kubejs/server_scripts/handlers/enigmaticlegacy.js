@@ -29,15 +29,17 @@ ServerEvents.recipes(event => {
         ingredients: Array(44).fill(Ingredient.of('extendedcrafting:the_ultimate_block').toJson()),
         result: { item: 'enigmaticlegacy:enigmatic_item' }
     }).id('finality:heart_of_creation')
-    event.shaped(Item.of('enigmaticlegacy:earth_heart'), [
-        'PSP',
-        'SDS',
-        'PSP'
-    ], {
-        S: 'mysticalagriculture:earth_essence',
-        P: 'mysticalagriculture:prosperity_shard',
-        D: 'quark:diamond_heart'
-    }).id('finality:earth_heart')
+    if (Platform.isLoaded('quark')) {
+        event.shaped(Item.of('enigmaticlegacy:earth_heart'), [
+            'PSP',
+            'SDS',
+            'PSP'
+        ], {
+            S: 'mysticalagriculture:earth_essence',
+            P: 'mysticalagriculture:prosperity_shard',
+            D: 'quark:diamond_heart'
+        }).id('finality:earth_heart')
+    }
     if (Platform.isLoaded('aether')) {
         event.custom({
             'type': 'aether:repairing',
