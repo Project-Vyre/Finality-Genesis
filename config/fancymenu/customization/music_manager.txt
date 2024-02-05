@@ -3,13 +3,13 @@ type = fancymenu_layout
 layout-meta {
   identifier = %fancymenu:universal_layout%
   render_custom_elements_behind_vanilla = true
-  last_edited_time = 1706791300750
+  last_edited_time = 1707130172197
   is_enabled = true
   randommode = false
   randomgroup = 1
   randomonlyfirsttime = false
   layout_index = 0
-  [loading_requirement_container_meta:171aa96d-6947-483d-b7a8-38d3d0ea194b-1706791288580] = [groups:][instances:]
+  [loading_requirement_container_meta:3716b3f8-d186-4837-82c1-5fdcced80925-1707130117415] = [groups:][instances:]
 }
 
 customization {
@@ -34,6 +34,9 @@ element {
   audio_instance_6 = [source:local]/config/fancymenu/assets/menu_music/cjbeards_worst_nightmare_instrumental.ogg
   audio_instance_7 = [source:local]/config/fancymenu/assets/menu_music/farabi_hasan_music_arlecchino.ogg
   audio_instance_8 = [source:local]/config/fancymenu/assets/menu_music/hide_and_seek_r3_music_box.ogg
+  audio_instance_9 = [source:local]/config/fancymenu/assets/menu_music/farabi_hasan_music_pantalone_double_phase.ogg
+  audio_instance_10 = [source:local]/config/fancymenu/assets/menu_music/farabi_hasan_music_sandrone_double_phase.ogg
+  audio_instance_11 = [source:local]/config/fancymenu/assets/menu_music/farabi_hasan_music_columbina_battle_phase_1and2.ogg
   play_mode = shuffle
   looping = true
   volume = 1.0

@@ -10,7 +10,7 @@
  * *cough* OptiFine *cough*
  */
 
-const BAD_MODS = ['optifine']
+const BAD_MODS = ['optifine', 'legendarytooltips']
 
 let badModsLoaded = BAD_MODS.filter(mod => Platform.getMods().keySet().contains(mod))
 

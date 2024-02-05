@@ -7,7 +7,7 @@
 
 <p align="center" dir="auto"><a href="https://"><img src="https://img.shields.io/badge/Available%20for-1.19.2%20%C2%A7%201.18.2-8450ff"></a> <a href="https://"><img alt="Discord" src="https://img.shields.io/discord/734146194397200424?color=%235865F2&label=Discord&logo=discord&logoColor=%23FFFFFF"></a>
 
-***
+---
   
 <p align="center" dir="auto"> <img alt="curseforge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/curseforge_vector.svg"> <img alt="forge" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/forge_vector.svg"> <img alt="discord-plural" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/social/discord-plural_vector.svg"> </p>
   
@@ -15,6 +15,7 @@ First things first...
 * [I have moved my Create custom recipes into the Create-Customized repository, click me if you are looking for those.](https://github.com/CelestialAbyss/Create-Customized)
   
 ### License clarifications
+
 Finality is released on CurseForge only as **All Rights Reserved.** However, there are exceptions such as:
 
 - KubeJS code written by outside contributors and KubeJS helpers / contributors.
@@ -27,6 +28,7 @@ Finality is released on CurseForge only as **All Rights Reserved.** However, the
 Please see the license page over here, thank you: https://project-vyre.github.io/finality-wiki/docs/credits/
 
 ### What does this mean?
+
 * For regular players, this does not mean anything other than **don't steal or repost without explicit permission from ClestialAbyss or Ryanite AKA Skensian on GitHub**. You are still permitted to play, film and stream the pack. If you want to make your own modpack, please feel free to look at the code and use it as a reference along with KubeJS's documents.
 * For others, **you are prohibited from redistributing any of the above folders or files in any publicly released packs without permission from us unless explicitly stated.** 
   * Again, this does not mean that you are not allowed to use the code as a reference on how to write things in KubeJS!

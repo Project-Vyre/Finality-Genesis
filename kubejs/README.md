@@ -1,17 +1,22 @@
 # Copyright Info
+
 Current keyholders are CelestialAbyss, squoshi and Skensian.
 
 ## Modpack Assets
+
 This includes scripts, models, pixel art and textures.
 
 ### squoshi
+
   - Gold Block texture
   - Assisted with writing KubeJS scripts
 
 ### MilkyFur
+
   - The basis of the Final Katana texture
 
 ### CelestialAbyss
+
 Over the course of developing the modpacks, I have only used color references and pixel art references from the Create team. Any coincidences in quest tree arrangement or custom recipes may occur due to common knowledge or shared philosophies / game design philosophies.
   - Menu animation
   - GUI textures
@@ -22,9 +27,11 @@ Over the course of developing the modpacks, I have only used color references an
   - I do not claim ownership of the JetBrains Mono NL font, though it was used extensively for some custom items.
 
 ## Music
+
 All original music belongs to the composers below.
 
 ### Cjbeards
+
 | Song Name | File Name |
 | --------- | --------- |
 | [Heart of the Wicked](https://www.youtube.com/watch?v=ZsKEZUgKaXg) | menu1.ogg |
@@ -43,7 +50,13 @@ All original music belongs to the composers below.
 | [Hide and Seek/Ho-ong-i feat. SeeU [Music Box]](https://www.youtube.com/watch?v=ZCTo2b-KUP8) | hide_and_seek_r3_music_box.ogg |
 
 ## Mod Assets
+
 Pixel art and models from mods.
 
 ### Create
-All original artwork belongs to the Create team and I claim no ownership of it.
+
+All original artwork from the Create team such as Brass Casing and the Precision Mechanism belongs to the Create team and I claim no ownership of it.
+
+### ExtendedCrafting
+
+Original singularity textures were made by BlakeBr0.
