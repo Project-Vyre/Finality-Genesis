@@ -10,10 +10,13 @@
 StartupEvents.registry('item', event => {
     event.create('kubejs:incomplete_three_tiered_cake', 'create:sequenced_assembly')
         .texture('kubejs:item/cakes/incomplete_three_tiered_cake')
+        .tag('create:upright_on_belt')
     event.create('kubejs:red_velvet_cake_base')
         .texture('kubejs:item/cakes/red_velvet_cake_base')
+        .tag('create:upright_on_belt')
     event.create('kubejs:red_velvet_cake_base_baked')
         .texture('kubejs:item/cakes/red_velvet_cake_base_baked')
+        .tag('create:upright_on_belt')
 })
 
 let jmcIcingProperties = {

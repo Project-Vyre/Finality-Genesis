@@ -138,8 +138,9 @@ StartupEvents.registry('item', event => {
                     .color(vanillaSingularityProperties[element].top)
             )
             .rarity('epic')
+            .tag('create:upright_on_belt')
     }
-    event.create('kubejs:potion_base_singularity')
+    event.create('kubejs:potion_base_singularity').tag('create:upright_on_belt')
     for (const element of createSingularities) {
         event.create('kubejs:' + element + '_singularity')
             .texture('layer0', 'kubejs:item/singularity')
@@ -151,8 +152,9 @@ StartupEvents.registry('item', event => {
                     .color(createSingularityProperties[element].top)
             )
             .rarity('epic')
+            .tag('create:upright_on_belt')
     }
-    event.create('kubejs:blaze_cake_singularity')
+    event.create('kubejs:blaze_cake_singularity').tag('create:upright_on_belt')
     if (Platform.isLoaded('salt')) {
         event.create('kubejs:salt_singularity')
             .texture('layer0', 'kubejs:item/singularity')
@@ -163,18 +165,19 @@ StartupEvents.registry('item', event => {
                 Component.string('Salt Singularity')
                     .color(0xA89A9A)
             )
+            .tag('create:upright_on_belt')
     }
     if (Platform.isLoaded('create_bic_bit')) {
-        event.create('kubejs:speculaas_singularity')
-        event.create('kubejs:stroopwafel_singularity')
-        event.create('kubejs:oliebollen_singularity')
-        event.create('kubejs:kroket_singularity')
-        event.create('kubejs:bitterballen_singularity')
-        event.create('kubejs:frikandel_singularity')
-        event.create('kubejs:fries_singularity')
-        event.create('kubejs:churros_singularity')
-        event.create('kubejs:stamppot_singularity')
-        event.create('kubejs:bic_bit_singularity').displayName('Create: Bitterballen Singularity')
+        event.create('kubejs:speculaas_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:stroopwafel_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:oliebollen_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:kroket_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:bitterballen_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:frikandel_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:fries_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:churros_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:stamppot_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:bic_bit_singularity').displayName('Create: Bitterballen Singularity').tag('create:upright_on_belt')
     }
     for (const element of concreteSingularities) {
         event.create('kubejs:' + element + '_singularity')
@@ -187,11 +190,13 @@ StartupEvents.registry('item', event => {
                     .color(concreteSingularityProperties[element].top)
             )
             .rarity('epic')
+            .tag('create:upright_on_belt')
     }
     event.create('kubejs:chromatic_concrete_singularity')
         .texture('layer0', 'kubejs:item/singularity')
         .texture('layer1', 'kubejs:item/chromatic_concrete_singularity_overlay')
         .rarity('epic')
+        .tag('create:upright_on_belt')
 })
 
 /*
