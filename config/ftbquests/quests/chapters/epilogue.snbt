@@ -410,6 +410,7 @@
 		{
 			dependencies: ["0999064FC6C4C5FE"]
 			id: "58EF68AEA9983F39"
+			subtitle: "Very sturdy! Perfect for trains."
 			tasks: [{
 				id: "0C5CF94494F73E05"
 				item: "kubejs:sturdy_sheet_singularity"
@@ -448,6 +449,7 @@
 		{
 			dependencies: ["7B35DC5287E45E32"]
 			id: "59AC01EE88361B2A"
+			subtitle: "Full steam ahead!"
 			tasks: [{
 				id: "1C34029F3E82006B"
 				item: "kubejs:track_singularity"
@@ -527,6 +529,7 @@
 			dependencies: ["4AF48E980CCBCE3B"]
 			description: ["Zinc ore actually emits some toxic fumes when smelted, so this is a bit awkward..."]
 			id: "7D825E2854279E2C"
+			subtitle: "Mostly only for brass..."
 			tasks: [{
 				id: "6893B960970E8F8D"
 				item: "kubejs:zinc_singularity"
@@ -869,7 +872,7 @@
 			subtitle: "Feeling blue?"
 			tasks: [{
 				id: "32C29D313FDAB36C"
-				item: "kubejs:lapis_lazuli_singularity"
+				item: "kubejs:lapis_singularity"
 				match_nbt: true
 				type: "item"
 			}]

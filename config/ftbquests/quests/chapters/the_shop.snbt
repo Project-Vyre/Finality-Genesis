@@ -25,7 +25,11 @@
 	quests: [
 		{
 			dependencies: ["4A691BB889286C89"]
-			description: ["The shop page is in early development. Stay tuned!"]
+			description: [
+				"The shop page is in early development. Stay tuned!"
+				""
+				"Currently, the only way to obtain coins are through villager trades or trading in singularities through this page."
+			]
 			id: "464C6D59436C1B33"
 			rewards: [{
 				id: "1336EE5513B7D6FB"

@@ -7,7 +7,7 @@
 		{ count: 16, item: "kubejs:copper_coin" }
 		{ count: 32, item: "kubejs:copper_coin", weight: 2.0f }
 		{ count: 4, item: "kubejs:iron_coin", weight: 0.4f }
-		{ count: 16, item: "kubejs:iron_coin", weight: 0.3f }
+		{ count: 8, item: "kubejs:iron_coin", weight: 0.3f }
 	]
 	title: "Iron Singularity Pool"
 }
