@@ -1,4 +1,4 @@
-// priority: 1
+// priority: 5
 // requires: kubejs_create
 
 /**
@@ -65,7 +65,7 @@ let incVanillaProperties = {
     gunpowder: { color: 0x888888 },
     honey: { color: 0xF7DB28 },
     iron: { color: 0xE1E1E1 },
-    lapis_lazuli: { color: 0x678DEA },
+    lapis: { color: 0x678DEA },
     netherite: { color: 0x93847D },
     quartz: { color: 0xB19E8F },
     red_sand: { color: 0xD97B30 },
@@ -92,7 +92,7 @@ let VANILLA = [
     'gunpowder',
     'honey',
     'iron',
-    'lapis_lazuli',
+    'lapis',
     'netherite',
     'quartz',
     'red_sand',
@@ -106,27 +106,29 @@ let VANILLA = [
 
 let incCreateProperties = {
     andesite_alloy: { color: 0xB4C1B8 },
-    zinc: { color: 0xB5D1BA },
     brass: { color: 0xF2C16D },
-    rose_quartz: { color: 0xF74572 },
+    builders_tea: { color: 0xE28568 },
+    chocolate: { color: 0xE68A65 },
+    electron_tube: { color: 0xFFFFFF },
     framed_glass: { color: 0xC2DAD9 },
     precision_mechanism: { color: 0xA7A7A7 },
+    rose_quartz: { color: 0xF74572 },
     sturdy_sheet: { color: 0x6F6D80 },
     track: { color: 0x606060 },
-    chocolate: { color: 0xE68A65 },
-    builders_tea: { color: 0xE28568 },
+    zinc: { color: 0xB5D1BA },
 }
 let CMAT = [
     'andesite_alloy',
-    'zinc',
     'brass',
-    'rose_quartz',
+    'builders_tea',
+    'chocolate',
+    'electron_tube',
     'framed_glass',
     'precision_mechanism',
+    'rose_quartz',
     'sturdy_sheet',
     'track',
-    'chocolate',
-    'builders_tea',
+    'zinc'
 ]
 
 let PRIMORDIAL_MECHANISMS = [
@@ -161,6 +163,7 @@ StartupEvents.registry('item', event => {
         event.create(`kubejs:incomplete_${material}_singularity`, 'create:sequenced_assembly')
             .texture('kubejs:item/incomplete_singularity')
             .color(0, incCreateProperties[material].color)
+            .tag('create:upright_on_belt')
             .maxStackSize(1)
     }
     // replace with Color.DYE.forEach() on 1902+ as the Colors automatically has all 16 MC colors
@@ -172,10 +175,12 @@ StartupEvents.registry('item', event => {
             .maxStackSize(1)
     }
     event.create('kubejs:incomplete_potion_base_singularity', 'create:sequenced_assembly')
-        .texture('kubejs:item/incomplete_singularities/incomplete_potion_base')
+        .texture('kubejs:item/incomplete_singularity')
+        .color(0, 0x863D11)
         .tag('create:upright_on_belt')
     event.create('kubejs:incomplete_blaze_cake_singularity', 'create:sequenced_assembly')
-        .texture('kubejs:item/incomplete_singularities/incomplete_blaze_cake')
+        .texture('kubejs:item/incomplete_singularity')
+        .color(0, 0x3F4A7F)
         .tag('create:upright_on_belt')
     event.create('kubejs:incomplete_enchanted_golden_apple', 'create:sequenced_assembly')
         .texture('minecraft:item/golden_apple')
@@ -185,18 +190,6 @@ StartupEvents.registry('item', event => {
             .color(0, 0xA89A9A)
             .tag('create:upright_on_belt')
             .maxStackSize(1)
-    }
-    if (Platform.isLoaded('create_bic_bit')) {
-        event.create('kubejs:incomplete_speculaas_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
-        event.create('kubejs:incomplete_stroopwafel_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
-        event.create('kubejs:incomplete_oliebollen_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
-        event.create('kubejs:incomplete_kroket_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
-        event.create('kubejs:incomplete_bitterballen_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
-        event.create('kubejs:incomplete_frikandel_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
-        event.create('kubejs:incomplete_fries_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
-        event.create('kubejs:incomplete_churros_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
-        event.create('kubejs:incomplete_stamppot_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
-        event.create('kubejs:incomplete_bic_bit_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
     }
     event.create('kubejs:stabilizing_qubit', 'create:sequenced_assembly')
         .texture('kubejs:item/stabilizing_qubit')
@@ -220,4 +213,16 @@ StartupEvents.registry('item', event => {
     event.create('kubejs:incomplete_entropy_coin', 'create:sequenced_assembly')
         .texture('kubejs:item/entropy_coin')
         .fireResistant(true)
+    if (Platform.isLoaded('create_bic_bit')) {
+        event.create('kubejs:incomplete_speculaas_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
+        event.create('kubejs:incomplete_stroopwafel_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
+        event.create('kubejs:incomplete_oliebollen_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
+        event.create('kubejs:incomplete_kroket_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
+        event.create('kubejs:incomplete_bitterballen_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
+        event.create('kubejs:incomplete_frikandel_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
+        event.create('kubejs:incomplete_fries_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
+        event.create('kubejs:incomplete_churros_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
+        event.create('kubejs:incomplete_stamppot_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
+        event.create('kubejs:incomplete_bic_bit_singularity', 'create:sequenced_assembly').texture('kubejs:item/incomplete_singularities/incomplete_singularity_placeholder').tag('create:upright_on_belt')
+    }
 })

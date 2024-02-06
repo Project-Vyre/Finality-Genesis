@@ -21,8 +21,7 @@ let example_debug = false
 
 if (standard_skilljs) {
     ItemEvents.firstLeftClicked('kubejs:command_block', event => {
-        event.player.tell('<rainb>Command Block</rainb> function activated.')
-    
+        event.player.tell('<rainb>Command Block</rainb> function activated. Not yet implemented!')
         event.player.addItemCooldown(event.item, 60)
     })
 

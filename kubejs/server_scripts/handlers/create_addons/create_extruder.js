@@ -15,12 +15,12 @@ let orestones = {
 
 ServerEvents.recipes(event => {
     event.shaped('create_mechanical_extruder:mechanical_extruder', [
-        ' S ',
+        'A A',
         'GPG',
-        ' G '
+        'AGA'
     ], {
-        S: 'create:shaft',
-        G: '#forge:glass',
+        A: 'create:cut_andesite',
+        G: '#forge:glass/colorless',
         P: 'create:mechanical_press'
     }).id('create_mechanical_extruder:mechanical_extruder')
     event.recipes.create_mechanical_extruder.extruding('minecraft:obsidian', [
@@ -58,10 +58,10 @@ ServerEvents.recipes(event => {
         Fluid.of('minecraft:lava')
     ]).requiredBonks(1).withCatalyst('kubejs:repeating_command_block').id('finality:repeating_command_block/scoria_compat')
     if (Platform.isLoaded('malum')) {
-        event.recipes.create_mechanical_extruder.extruding(Item.of('malum:block_of_cthonic_gold').withChance(0.12), [
+        event.recipes.create_mechanical_extruder.extruding(Item.of('malum:block_of_cthonic_gold').withChance(0.06), [
             Item.of('minecraft:raw_gold_block'),
             Fluid.of('kubejs:condensed_universal_entropy')
-        ]).requiredBonks(6).withCatalyst('malum:twisted_rock').id('finality:malum/extruder_cthonic_gold')
+        ]).requiredBonks(24).withCatalyst('malum:twisted_rock').id('finality:malum/extruder_cthonic_gold')
     }
     if (Platform.isLoaded('quark')) {
         event.recipes.create_mechanical_extruder.extruding(Item.of('quark:shale'), [

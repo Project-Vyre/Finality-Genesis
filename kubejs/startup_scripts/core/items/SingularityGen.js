@@ -1,4 +1,4 @@
-// priority: 0
+// priority: 5
 
 /**
  * @file KubeJS singularity registration.
@@ -23,7 +23,7 @@ const vanillaSingularityProperties = {
     gunpowder: { top: 0x888888, bottom: 0x3D3D3D, name: 'Gunpowder' },
     honey: { top: 0xF7DB28, bottom: 0xD26A2A, name: 'Honey' },
     iron: { top: 0xE1E1E1, bottom: 0x6C6C6C, name: 'Iron' },
-    lapis_lazuli: { top: 0x678DEA, bottom: 0x1B53A7, name: 'Lapis Lazuli' },
+    lapis: { top: 0x678DEA, bottom: 0x1B53A7, name: 'Lapis Lazuli' },
     netherite: { top: 0x93847D, bottom: 0x24110B, name: 'Netherite' },
     quartz: { top: 0xB19E8F, bottom: 0x6E5C59, name: 'Quartz' },
     red_sand: { top: 0xD97B30, bottom: 0xAC5712, name: 'Red Sand' },
@@ -50,7 +50,7 @@ let vanillaSingularities = [
     'gunpowder',
     'honey',
     'iron',
-    'lapis_lazuli',
+    'lapis',
     'netherite',
     'quartz',
     'red_sand',
@@ -167,18 +167,6 @@ StartupEvents.registry('item', event => {
             )
             .tag('create:upright_on_belt')
     }
-    if (Platform.isLoaded('create_bic_bit')) {
-        event.create('kubejs:speculaas_singularity').tag('create:upright_on_belt')
-        event.create('kubejs:stroopwafel_singularity').tag('create:upright_on_belt')
-        event.create('kubejs:oliebollen_singularity').tag('create:upright_on_belt')
-        event.create('kubejs:kroket_singularity').tag('create:upright_on_belt')
-        event.create('kubejs:bitterballen_singularity').tag('create:upright_on_belt')
-        event.create('kubejs:frikandel_singularity').tag('create:upright_on_belt')
-        event.create('kubejs:fries_singularity').tag('create:upright_on_belt')
-        event.create('kubejs:churros_singularity').tag('create:upright_on_belt')
-        event.create('kubejs:stamppot_singularity').tag('create:upright_on_belt')
-        event.create('kubejs:bic_bit_singularity').displayName('Create: Bitterballen Singularity').tag('create:upright_on_belt')
-    }
     for (const element of concreteSingularities) {
         event.create('kubejs:' + element + '_singularity')
             .texture('layer0', 'kubejs:item/singularity')
@@ -197,6 +185,18 @@ StartupEvents.registry('item', event => {
         .texture('layer1', 'kubejs:item/chromatic_concrete_singularity_overlay')
         .rarity('epic')
         .tag('create:upright_on_belt')
+    if (Platform.isLoaded('create_bic_bit')) {
+        event.create('kubejs:speculaas_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:stroopwafel_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:oliebollen_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:kroket_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:bitterballen_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:frikandel_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:fries_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:churros_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:stamppot_singularity').tag('create:upright_on_belt')
+        event.create('kubejs:bic_bit_singularity').displayName('Create: Bitterballen Singularity').tag('create:upright_on_belt')
+    }
 })
 
 /*

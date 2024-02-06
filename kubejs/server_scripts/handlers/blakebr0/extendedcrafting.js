@@ -229,7 +229,7 @@ ServerEvents.recipes(event => {
         'kubejs:concrete_light_blue_singularity',
         'kubejs:concrete_lime_singularity',
         'kubejs:concrete_purple_singularity',
-        'kubejs:lapis_lazuli_singularity',
+        'kubejs:lapis_singularity',
         'kubejs:gunpowder_singularity',
         'kubejs:builders_tea_singularity',
         'kubejs:redstone_singularity',

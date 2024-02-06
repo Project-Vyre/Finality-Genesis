@@ -37,8 +37,12 @@ ItemEvents.firstRightClicked(event => {
             Component.of(' cure this curse.')
         ])
         player.inventory.clear('minecraft:milk_bucket')
+        player.setHealth(2)
         player.potionEffects.add('minecraft:slowness', 999999, 255, false, false)
         player.potionEffects.add('minecraft:wither', 999999, 255, false, false)
+        event.server.scheduleInTicks(200, t => {
+            player.kill()
+        })
     }
 })
 

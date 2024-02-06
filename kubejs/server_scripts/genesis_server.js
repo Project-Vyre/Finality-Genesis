@@ -244,7 +244,13 @@ PlayerEvents.inventoryChanged(event => {
             item.hasEnchantment('minecraft:unbreaking', 1) ||
             item.hasEnchantment('apotheosis:life_mending', 1)
         ) {
+            player.setHealth(2)
+            player.potionEffects.add('minecraft:slowness', 999999, 255, false, false)
             player.potionEffects.add('minecraft:wither', 999999, 255, false, false)
+            player.inventory.clear('#create:sandpaper')
+            event.server.scheduleInTicks(240, t => {
+                player.kill()
+            })
             player.tell([
                 Component.of('Heavenly Principles: ').bold().red(),
                 Component.of('If you insist on keeping it... ').red()
@@ -276,7 +282,13 @@ PlayerEvents.inventoryChanged(event => {
             item.hasEnchantment('minecraft:unbreaking', 1) ||
             item.hasEnchantment('apotheosis:life_mending', 1)
         ) {
+            player.setHealth(2)
+            player.potionEffects.add('minecraft:slowness', 999999, 255, false, false)
             player.potionEffects.add('minecraft:wither', 999999, 255, false, false)
+            player.inventory.clear('create:super_glue')
+            event.server.scheduleInTicks(240, t => {
+                player.kill()
+            })
             player.tell([
                 Component.of('Heavenly Principles: ').bold().red(),
                 Component.of('If you insist on keeping it... ').red()

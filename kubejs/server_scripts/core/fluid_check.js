@@ -36,7 +36,6 @@ function isInFluid(player, fluid) {
 }
 
 PlayerEvents.tick(event => {
-    if (event.player.level.time % 100 === 0)
     if (isInFluid(event.player, Fluid.getType('create:honey'))) {
         event.player.potionEffects.add('minecraft:regeneration', 200, 2, true, false)
         event.player.potionEffects.add('minecraft:absorption', 200, 5, true, false)
