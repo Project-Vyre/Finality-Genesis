@@ -1,8 +1,9 @@
 {
   "variant": "acuti_ora",
-  "weight": 1,
+  "weight": 0,
   "quality": 0,
   "dimensions": [],
+  "unique": true,
   "bonuses": [
     {
       "type": "apotheosis:multi_attribute",
@@ -19,48 +20,24 @@
           "attribute": "apotheosis:armor_shred",
           "operation": "MULTIPLY_BASE",
           "values": {
-            "common": 0.01,
-            "uncommon": 0.05,
-            "rare": 0.25,
-            "epic": 0.625,
-            "mythic": 3.125,
-            "ancient": 999999.0
+            "common": 0.05,
+            "uncommon": 0.10,
+            "rare": 0.20,
+            "epic": 0.30,
+            "mythic": 0.40,
+            "ancient": 0.50
           }
         },
         {
           "attribute": "apotheosis:prot_shred",
           "operation": "MULTIPLY_BASE",
           "values": {
-            "common": 0.01,
-            "uncommon": 0.05,
-            "rare": 0.25,
-            "epic": 0.625,
-            "mythic": 3.125,
-            "ancient": 999999.0
-          }
-        },
-        {
-          "attribute": "apotheosis:armor_shred",
-          "operation": "MULTIPLY_TOTAL",
-          "values": {
-            "common": 0.01,
-            "uncommon": 0.05,
-            "rare": 0.25,
-            "epic": 0.625,
-            "mythic": 3.125,
-            "ancient": 999999.0
-          }
-        },
-        {
-          "attribute": "apotheosis:prot_shred",
-          "operation": "MULTIPLY_TOTAL",
-          "values": {
-            "common": 0.01,
-            "uncommon": 0.05,
-            "rare": 0.25,
-            "epic": 0.625,
-            "mythic": 3.125,
-            "ancient": 999999.0
+            "common": 0.05,
+            "uncommon": 0.10,
+            "rare": 0.20,
+            "epic": 0.30,
+            "mythic": 0.40,
+            "ancient": 0.50
           }
         }
       ]
@@ -79,48 +56,24 @@
           "attribute": "apotheosis:armor_shred",
           "operation": "MULTIPLY_BASE",
           "values": {
-            "common": 0.01,
-            "uncommon": 0.05,
-            "rare": 0.25,
-            "epic": 0.625,
-            "mythic": 3.125,
-            "ancient": 999999.0
+            "common": 0.05,
+            "uncommon": 0.10,
+            "rare": 0.20,
+            "epic": 0.30,
+            "mythic": 0.40,
+            "ancient": 0.50
           }
         },
         {
           "attribute": "apotheosis:prot_shred",
           "operation": "MULTIPLY_BASE",
           "values": {
-            "common": 0.01,
-            "uncommon": 0.05,
-            "rare": 0.25,
-            "epic": 0.625,
-            "mythic": 3.125,
-            "ancient": 999999.0
-          }
-        },
-        {
-          "attribute": "apotheosis:armor_shred",
-          "operation": "MULTIPLY_TOTAL",
-          "values": {
-            "common": 0.01,
-            "uncommon": 0.05,
-            "rare": 0.25,
-            "epic": 0.625,
-            "mythic": 3.125,
-            "ancient": 999999.0
-          }
-        },
-        {
-          "attribute": "apotheosis:prot_shred",
-          "operation": "MULTIPLY_TOTAL",
-          "values": {
-            "common": 0.01,
-            "uncommon": 0.05,
-            "rare": 0.25,
-            "epic": 0.625,
-            "mythic": 3.125,
-            "ancient": 999999.0
+            "common": 0.05,
+            "uncommon": 0.10,
+            "rare": 0.20,
+            "epic": 0.30,
+            "mythic": 0.40,
+            "ancient": 0.50
           }
         }
       ]
@@ -140,48 +93,24 @@
           "attribute": "apotheosis:prot_shred",
           "operation": "MULTIPLY_BASE",
           "values": {
-            "common": 0.01,
-            "uncommon": 0.05,
-            "rare": 0.25,
-            "epic": 0.625,
-            "mythic": 3.125,
-            "ancient": 999999.0
+            "common": 0.05,
+            "uncommon": 0.10,
+            "rare": 0.20,
+            "epic": 0.30,
+            "mythic": 0.40,
+            "ancient": 0.50
           }
         },
         {
           "attribute": "apotheosis:armor_shred",
           "operation": "MULTIPLY_BASE",
           "values": {
-            "common": 0.01,
-            "uncommon": 0.05,
-            "rare": 0.25,
-            "epic": 0.625,
-            "mythic": 3.125,
-            "ancient": 999999.0
-          }
-        },
-        {
-          "attribute": "apotheosis:prot_shred",
-          "operation": "MULTIPLY_TOTAL",
-          "values": {
-            "common": 0.01,
-            "uncommon": 0.05,
-            "rare": 0.25,
-            "epic": 0.625,
-            "mythic": 3.125,
-            "ancient": 999999.0
-          }
-        },
-        {
-          "attribute": "apotheosis:armor_shred",
-          "operation": "MULTIPLY_TOTAL",
-          "values": {
-            "common": 0.01,
-            "uncommon": 0.05,
-            "rare": 0.25,
-            "epic": 0.625,
-            "mythic": 3.125,
-            "ancient": 999999.0
+            "common": 0.05,
+            "uncommon": 0.10,
+            "rare": 0.20,
+            "epic": 0.30,
+            "mythic": 0.40,
+            "ancient": 0.50
           }
         }
       ]
