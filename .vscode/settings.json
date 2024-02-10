@@ -1,26 +1,31 @@
 {
-    "json.schemas": [
-        {
-            "fileMatch": [
-                "/lang/*.json"
-            ],
-            "url": "./.vscode/probe.lang-schema.json"
-        },
-        {
-            "fileMatch": [
-                "/probe/docs/*.json"
-            ],
-            "url": "./.vscode/probe.doc-schema.json"
-        }
-    ],
-    "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
-    "editor.detectIndentation": true,
-    "editor.indentSize": "tabSize",
-    "[javascript]": {
-        "editor.tabSize": 4
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/lang/*.json"
+      ],
+      "url": "./.vscode/probe.lang-schema.json"
     },
-    "[json]": {
-        "editor.tabSize": 2
-    },
-    "files.eol": "\n"
+    {
+      "fileMatch": [
+        "/probe/docs/*.json"
+      ],
+      "url": "./.vscode/probe.doc-schema.json"
+    }
+  ],
+  "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
+  "editor.detectIndentation": true,
+  "editor.indentSize": "tabSize",
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "workbench.colorTheme": "GitHub Dark Default",
+  "files.eol": "\n"
 }
