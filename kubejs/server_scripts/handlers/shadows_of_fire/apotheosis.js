@@ -1,5 +1,6 @@
 // requires: apotheosis
 // requires: kubejs_create
+// requires: lootjs
 
 /**
  * @file Server handler for Apotheosis.
@@ -335,4 +336,13 @@ ServerEvents.tags('block', event => {
         'apotheosis:salvaging_table',
         'apotheosis:gem_cutting_table'
     ])
+})
+
+LootJS.modifiers(event => {
+    event.addEntityLootModifier('minecraft:warden')
+        .randomChance(0.002).addLoot(Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"common"}').weakNBT())
+    if (Platform.isLoaded('graveyard')) {
+        event.addEntityLootModifier('graveyard:lich')
+            .randomChance(0.10).addLoot(Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"common"}').weakNBT())
+    }
 })
