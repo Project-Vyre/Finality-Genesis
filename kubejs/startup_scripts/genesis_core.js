@@ -290,6 +290,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:armor')
         .tag('forge:armors')
         .tag('forge:armors/helmets')
+        .tag('kubejs:final_armor')
         .group('combat')
 
     event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor')
@@ -302,6 +303,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:armor')
         .tag('forge:armors')
         .tag('forge:armors/chestplates')
+        .tag('kubejs:final_armor')
         .group('combat')
 
     event.create('kubejs:final_leggings', 'leggings').tier('final_armor')
@@ -314,6 +316,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:armor')
         .tag('forge:armors')
         .tag('forge:armors/leggings')
+        .tag('kubejs:final_armor')
         .group('combat')
 
     event.create('kubejs:final_boots', 'boots').tier('final_armor')
@@ -326,6 +329,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
         .tag('forge:armor')
         .tag('forge:armors')
         .tag('forge:armors/boots')
+        .tag('kubejs:final_armor')
         .group('combat')
     // shapes and alphanumeric
     for (let [character, name] of Object.entries(LETTERS)) {
@@ -544,7 +548,7 @@ StartupEvents.postInit(event => {
         Platform.isLoaded(mod) && console.error(`This mod is not supported: ${mod} - Reason: ${reason}`)
     }
     if (!Platform.isLoaded('embeddium') && Platform.isLoaded('rubidium')) {
-        console.error('This mod is not supported: rubidium - Reason: Embeddium has replaced Rubidium. Stop using Rubidium.')        
+        console.error('This mod is not supported: rubidium - Reason: Embeddium has replaced Rubidium. Stop using Rubidium.')
     }
     if (!Platform.isLoaded('embeddium') && Platform.isLoaded('rubidium') && Platform.isLoaded('textanimator')) {
         console.error('This mod is not supported: rubidium - Reason: Embeddium has replaced Rubidium. <shake>Stop using Rubidium.</shake>')
