@@ -20,25 +20,25 @@ public static final Block CAKE = Blocks.register("cake", new CakeBlock(BlockBeha
 */
 
 StartupEvents.registry('block', event => {
-    event.createCustom('kubejs:la_lettre_a_focalors', () => new $CakeBlock(new $BlockProperties.copy(Block.getBlock('cake'))))
-    event.createCustom('kubejs:pour_la_justice', () => new $CakeBlock(new $BlockProperties.copy(Block.getBlock('cake'))))
+  event.createCustom('kubejs:la_lettre_a_focalors', () => new $CakeBlock(new $BlockProperties.copy(Block.getBlock('cake'))))
+  event.createCustom('kubejs:pour_la_justice', () => new $CakeBlock(new $BlockProperties.copy(Block.getBlock('cake'))))
 })
 
 StartupEvents.registry('item', event => {
-    event.createCustom('kubejs:la_lettre_a_focalors', () => new $BlockItem('kubejs:la_lettre_a_focalors',
-        new $ItemProperties().tab($KubeJS.tab).food(new $FoodBuilder()
-            .nutrition(2)
-            .saturationMod(0.5)
-            .fast()
-            .build()
-        )
-    ))
-    event.createCustom('kubejs:pour_la_justice', () => new $BlockItem('kubejs:pour_la_justice',
-        new $ItemProperties().tab($KubeJS.tab).food(new $FoodBuilder()
-            .nutrition(2)
-            .saturationMod(0.5)
-            .fast()
-            .build()
-        )
-    ))
+  event.createCustom('kubejs:la_lettre_a_focalors', () => new $BlockItem('kubejs:la_lettre_a_focalors',
+    new $ItemProperties().tab($KubeJS.tab).food(new $FoodBuilder()
+      .nutrition(2)
+      .saturationMod(0.5)
+      .fast()
+      .build()
+    )
+  ))
+  event.createCustom('kubejs:pour_la_justice', () => new $BlockItem('kubejs:pour_la_justice',
+    new $ItemProperties().tab($KubeJS.tab).food(new $FoodBuilder()
+      .nutrition(2)
+      .saturationMod(0.5)
+      .fast()
+      .build()
+    )
+  ))
 })

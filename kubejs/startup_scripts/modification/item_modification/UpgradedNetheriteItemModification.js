@@ -17,56 +17,56 @@ let UPNETHERITE_ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
 let T2 = ['gold_upgraded', 'fire_upgraded', 'ender_upgraded', 'water_upgraded', 'wither_upgraded', 'poison_upgraded', 'phantom_upgraded', 'feather_upgraded']
 let T3 = ['echo_upgraded', 'corrupt_upgraded']
 ItemEvents.modification(event => {
-    for (let i = 0; i < T2.length; i++) {
-        for (let j = 0; j < UPNETHERITE_TOOLS.length; j++) {
-            event.modify(`upgradednetherite:${T2[i]}_netherite_${UPNETHERITE_TOOLS[j]}`, item => { item.maxDamage = T2_TOOLS })
-        }
+  for (let i = 0; i < T2.length; i++) {
+    for (let j = 0; j < UPNETHERITE_TOOLS.length; j++) {
+      event.modify(`upgradednetherite:${T2[i]}_netherite_${UPNETHERITE_TOOLS[j]}`, item => { item.maxDamage = T2_TOOLS })
     }
-    for (let i = 0; i < T3.length; i++) {
-        for (let j = 0; j < UPNETHERITE_TOOLS.length; j++) {
-            event.modify(`upgradednetherite:${T3[i]}_netherite_${UPNETHERITE_TOOLS[j]}`, item => { item.maxDamage = T3_TOOLS })
-        }
+  }
+  for (let i = 0; i < T3.length; i++) {
+    for (let j = 0; j < UPNETHERITE_TOOLS.length; j++) {
+      event.modify(`upgradednetherite:${T3[i]}_netherite_${UPNETHERITE_TOOLS[j]}`, item => { item.maxDamage = T3_TOOLS })
     }
-    for (let i = 0; i < T2.length; i++) {
-        for (let j = 0; j < UPNETHERITE_ARMOR.length; j++) {
-            event.modify(`upgradednetherite:${T2[i]}_netherite_${UPNETHERITE_ARMOR[j]}`, item => { item.maxDamage = T2_ARMOR })
-        }
+  }
+  for (let i = 0; i < T2.length; i++) {
+    for (let j = 0; j < UPNETHERITE_ARMOR.length; j++) {
+      event.modify(`upgradednetherite:${T2[i]}_netherite_${UPNETHERITE_ARMOR[j]}`, item => { item.maxDamage = T2_ARMOR })
     }
-    for (let i = 0; i < T3.length; i++) {
-        for (let j = 0; j < UPNETHERITE_ARMOR.length; j++) {
-            event.modify(`upgradednetherite:${T3[i]}_netherite_${UPNETHERITE_ARMOR[j]}`, item => { item.maxDamage = T3_ARMOR })
-        }
+  }
+  for (let i = 0; i < T3.length; i++) {
+    for (let j = 0; j < UPNETHERITE_ARMOR.length; j++) {
+      event.modify(`upgradednetherite:${T3[i]}_netherite_${UPNETHERITE_ARMOR[j]}`, item => { item.maxDamage = T3_ARMOR })
     }
-    for (let i = 0; i < UPNETHERITE_TOOLS.length; i++) {
-        let ult = UPNETHERITE_TOOLS[i];
-        event.modify(`upgradednetherite_ultimate:ultimate_upgraded_netherite_${ult}`, item => { item.maxDamage = T3_TOOLS })
-        event.modify(`upgradednetherite_creative:creative_upgraded_netherite_${ult}`, item => { item.maxDamage = T3_TOOLS })
-    }
-    for (let i = 0; i < UPNETHERITE_ARMOR.length; i++) {
-        let ult = UPNETHERITE_ARMOR[i];
-        event.modify(`upgradednetherite_ultimate:ultimate_upgraded_netherite_${ult}`, item => { item.maxDamage = T3_ARMOR })
-        event.modify(`upgradednetherite_creative:creative_upgraded_netherite_${ult}`, item => { item.maxDamage = T3_ARMOR })
-    }
-    // shields
-    event.modify('upgradednetherite:netherite_shield', item => {
-        item.maxDamage = 512
+  }
+  for (let i = 0; i < UPNETHERITE_TOOLS.length; i++) {
+    let ult = UPNETHERITE_TOOLS[i];
+    event.modify(`upgradednetherite_ultimate:ultimate_upgraded_netherite_${ult}`, item => { item.maxDamage = T3_TOOLS })
+    event.modify(`upgradednetherite_creative:creative_upgraded_netherite_${ult}`, item => { item.maxDamage = T3_TOOLS })
+  }
+  for (let i = 0; i < UPNETHERITE_ARMOR.length; i++) {
+    let ult = UPNETHERITE_ARMOR[i];
+    event.modify(`upgradednetherite_ultimate:ultimate_upgraded_netherite_${ult}`, item => { item.maxDamage = T3_ARMOR })
+    event.modify(`upgradednetherite_creative:creative_upgraded_netherite_${ult}`, item => { item.maxDamage = T3_ARMOR })
+  }
+  // shields
+  event.modify('upgradednetherite:netherite_shield', item => {
+    item.maxDamage = 512
+  })
+  for (let i = 0; i < T2.length; i++) {
+    let upgrade = T2[i];
+    event.modify(`upgradednetherite:${upgrade}_netherite_shield`, item => {
+      item.maxDamage = 512
     })
-    for (let i = 0; i < T2.length; i++) {
-        let upgrade = T2[i];
-        event.modify(`upgradednetherite:${upgrade}_netherite_shield`, item => {
-            item.maxDamage = 512
-        })        
-    }
-    for (let i = 0; i < T3.length; i++) {
-        let upgrade = T3[i];
-        event.modify(`upgradednetherite:${upgrade}_netherite_shield`, item => {
-            item.maxDamage = 1024
-        })
-    }
-    event.modify('upgradednetherite_ultimate:ultimate_upgraded_netherite_shield', item => {
-        item.maxDamage = 1024
+  }
+  for (let i = 0; i < T3.length; i++) {
+    let upgrade = T3[i];
+    event.modify(`upgradednetherite:${upgrade}_netherite_shield`, item => {
+      item.maxDamage = 1024
     })
-    event.modify('upgradednetherite_creative:creative_upgraded_netherite_shield', item => {
-        item.maxDamage = 2048
-    })
+  }
+  event.modify('upgradednetherite_ultimate:ultimate_upgraded_netherite_shield', item => {
+    item.maxDamage = 1024
+  })
+  event.modify('upgradednetherite_creative:creative_upgraded_netherite_shield', item => {
+    item.maxDamage = 2048
+  })
 })

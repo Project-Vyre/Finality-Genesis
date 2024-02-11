@@ -13,35 +13,35 @@
 bossDeathToast('headhunter_mod:head_hunter', 'minecraft:skeleton_skull', red, red, red, 0x001332, darkRed)
 
 let hhSpawnItems = [
-    'headhunter_mod:hh_vanilla_difficulty',
-    'headhunter_mod:hh_hard_difficulty',
-    'headhunter_mod:hhv_hard_difficulty',
-    'headhunter_mod:hh_true_difficulty'
+  'headhunter_mod:hh_vanilla_difficulty',
+  'headhunter_mod:hh_hard_difficulty',
+  'headhunter_mod:hhv_hard_difficulty',
+  'headhunter_mod:hh_true_difficulty'
 ]
 
 ItemEvents.firstRightClicked(event => {
-    for (let i = 0; i < hhSpawnItems.length; i++) {
-        let element = hhSpawnItems[i];
-        if (event.item.getId() == element) {
-            event.player.inventory.clear(hhSpawnItems)
-        }
+  for (let i = 0; i < hhSpawnItems.length; i++) {
+    let element = hhSpawnItems[i];
+    if (event.item.getId() == element) {
+      event.player.inventory.clear(hhSpawnItems)
     }
+  }
 })
 
 LootJS.modifiers(event => {
-    event.addEntityLootModifier('headhunter_mod:head_hunter')
-        .entityPredicate(entity => {
-            if (
-                entity.hasCustomName() &&
-                entity.getCustomName().getString() == 'HeadHunter EX'
-            ) {
-                return true
-            } else {
-                return false
-            }
-        })
-        .randomChance(0.05).addLoot('kubejs:unstable_entropy_particles')
-        .randomChanceWithLooting(0.15, 3).addLoot('3x kubejs:unstable_entropy_particles')
+  event.addEntityLootModifier('headhunter_mod:head_hunter')
+    .entityPredicate(entity => {
+      if (
+        entity.hasCustomName() &&
+        entity.getCustomName().getString() == 'HeadHunter EX'
+      ) {
+        return true
+      } else {
+        return false
+      }
+    })
+    .randomChance(0.05).addLoot('kubejs:unstable_entropy_particles')
+    .randomChanceWithLooting(0.15, 3).addLoot('3x kubejs:unstable_entropy_particles')
 })
 
 /**
@@ -51,37 +51,37 @@ LootJS.modifiers(event => {
 let damageCapping = false
 
 EntityEvents.hurt('headhunter_mod:head_hunter', event => {
-    if (!event.source.player) { event.cancel() }
+  if (!event.source.player) { event.cancel() }
 
-    if (damageCapping) {
-        // if damage is not from player, cancel it (this works)
-        if (!event.player) { event.cancel() }
-        //if (event.entity.hasCustomName() && event.entity.getCustomName().getString() === 'HeadHunter EX' && !event.source.player) { event.cancel() }
-        // None of these fire off in log
-        if (event.player) {
-            console.log('Null check passed')
-            if (
-                // if player punches with empty hand deal 1 damage via Forge damage override event in startup
-                event.entity.hasCustomName() && event.entity.getCustomName().getString() === 'HeadHunter EX' &&
-                event.getDamage() > 20 && !event.player.getMainHandItem().getId() === 'kubejs:crystal_lance'
-            ) {
-                global.onHurtApply1d
-                console.log('1 damage')
-            } else if (
-                // if player is using the crystal lance, deal 5 damage via Forge damage override event in startup
-                event.entity.hasCustomName() && event.entity.getCustomName().getString() === 'HeadHunter EX' &&
-                event.getDamage() > 20 && event.player.getMainHandItem().getId() === 'kubejs:crystal_lance'
-            ) {
-                global.onHurtApply5d
-                console.log('5 damage')
-            }
-            // if player is using items tagged final_tools, deal 20 damage via Forge damage override event in startup
-            if (event.player.getMainHandItem().hasTag('kubejs:final_tools')) {
-                global.onHurtApply20d
-                console.log('20 damage')
-            }
-        }
+  if (damageCapping) {
+    // if damage is not from player, cancel it (this works)
+    if (!event.player) { event.cancel() }
+    //if (event.entity.hasCustomName() && event.entity.getCustomName().getString() === 'HeadHunter EX' && !event.source.player) { event.cancel() }
+    // None of these fire off in log
+    if (event.player) {
+      console.log('Null check passed')
+      if (
+        // if player punches with empty hand deal 1 damage via Forge damage override event in startup
+        event.entity.hasCustomName() && event.entity.getCustomName().getString() === 'HeadHunter EX' &&
+        event.getDamage() > 20 && !event.player.getMainHandItem().getId() === 'kubejs:crystal_lance'
+      ) {
+        global.onHurtApply1d
+        console.log('1 damage')
+      } else if (
+        // if player is using the crystal lance, deal 5 damage via Forge damage override event in startup
+        event.entity.hasCustomName() && event.entity.getCustomName().getString() === 'HeadHunter EX' &&
+        event.getDamage() > 20 && event.player.getMainHandItem().getId() === 'kubejs:crystal_lance'
+      ) {
+        global.onHurtApply5d
+        console.log('5 damage')
+      }
+      // if player is using items tagged final_tools, deal 20 damage via Forge damage override event in startup
+      if (event.player.getMainHandItem().hasTag('kubejs:final_tools')) {
+        global.onHurtApply20d
+        console.log('20 damage')
+      }
     }
+  }
 })
 
 /*

@@ -15,6 +15,6 @@ const $ScreenshakeInstance = Java.loadClass('team.lodestar.lodestone.systems.scr
 const $Easing = Java.loadClass('team.lodestar.lodestone.systems.easing.Easing')
 
 NetworkEvents.dataReceived('screenshake', event => {
-    const { i1, i2, i3, duration } = event.data
-    $ScreenshakeHandler.addScreenshake($ScreenshakeInstance(duration).setIntensity(i1, i2, i3).setEasing($Easing.SINE_IN, $Easing.QUAD_IN))
+  const { i1, i2, i3, duration } = event.data
+  $ScreenshakeHandler.addScreenshake($ScreenshakeInstance(duration).setIntensity(i1, i2, i3).setEasing($Easing.SINE_IN, $Easing.QUAD_IN))
 })

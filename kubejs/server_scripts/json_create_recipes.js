@@ -14,11 +14,11 @@
  * @param {string} recipeId 
  */
 function jsonCreateBlasting(event, outputs, inputs, recipeId) {
-    event.custom({
-        type: 'create:blasting',
-        ingredients: inputs,
-        results: outputs
-    }).id(recipeId)
+  event.custom({
+    type: 'create:blasting',
+    ingredients: inputs,
+    results: outputs
+  }).id(recipeId)
 }
 /**
  * 
@@ -28,11 +28,11 @@ function jsonCreateBlasting(event, outputs, inputs, recipeId) {
  * @param {*} recipeId 
  */
 function jsonCreateSmoking(event, outputs, inputs, recipeId) {
-    event.custom({
-        type: 'create:smoking',
-        ingredients: inputs,
-        results: outputs
-    }).id()
+  event.custom({
+    type: 'create:smoking',
+    ingredients: inputs,
+    results: outputs
+  }).id()
 }
 /**
  * 
@@ -42,11 +42,11 @@ function jsonCreateSmoking(event, outputs, inputs, recipeId) {
  * @param {*} recipeId 
  */
 function jsonCreateSplashing(event, outputs, input, recipeId) {
-    event.custom({
-        type: 'create:splashing',
-        ingredients: input,
-        results: outputs
-    }).id(recipeId)
+  event.custom({
+    type: 'create:splashing',
+    ingredients: input,
+    results: outputs
+  }).id(recipeId)
 }
 
 /**
@@ -60,13 +60,13 @@ function jsonCreateSplashing(event, outputs, input, recipeId) {
  * @param {string} recipeId 
  */
 function jsonCreateMechanicalCrafting(event, output, outputQuantity, arrangement, ingredientKeys, mirrored, recipeId) {
-    event.custom({
-        type: 'create:mechanical_crafting',
-        pattern: arrangement,
-        key: ingredientKeys,
-        result: Item.of(output, outputQuantity).toJson(),
-        acceptMirrored: mirrored
-    }).id(recipeId)
+  event.custom({
+    type: 'create:mechanical_crafting',
+    pattern: arrangement,
+    key: ingredientKeys,
+    result: Item.of(output, outputQuantity).toJson(),
+    acceptMirrored: mirrored
+  }).id(recipeId)
 }
 
 /**
@@ -77,9 +77,9 @@ function jsonCreateMechanicalCrafting(event, output, outputQuantity, arrangement
  * @param {string} recipeId 
  */
 function jsonCreateMixing(event, outputs, inputs, recipeId) {
-    event.custom({
-        type: 'create:mixing',
-        ingredients: inputs,
-        results: outputs
-    }).id(recipeId)
+  event.custom({
+    type: 'create:mixing',
+    ingredients: inputs,
+    results: outputs
+  }).id(recipeId)
 }

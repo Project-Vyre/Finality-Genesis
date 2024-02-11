@@ -5,7 +5,7 @@
  */
 
 ServerEvents.tags('item', event => {
-    if (Platform.isLoaded('aether')) {
-        event.add('aether:slider_damaging_items', 'kubejs:final_pickaxe')
-    }
+  if (Platform.isLoaded('aether')) {
+    event.add('aether:slider_damaging_items', 'kubejs:final_pickaxe')
+  }
 })

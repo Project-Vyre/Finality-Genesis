@@ -12,72 +12,72 @@ let dmgScriptDebug = false
 // NOTE TO SLEEPY SELF FIX MATH
 
 EntityEvents.hurt(event => {
-    const {
-        entity,
-        source: { actual, player }
-    } = event
-    if (!(actual && actual.isPlayer() && player)) {
-        return;
-    }
+  const {
+    entity,
+    source: { actual, player }
+  } = event
+  if (!(actual && actual.isPlayer() && player)) {
+    return;
+  }
 
-    function finPercentScaling(percentage) {
-        entity.attack(entity.getHealth() * percentage)
-        console.log(entity.attack(entity.getHealth() * percentage))
-    }
-    //let final_atk_scaling = entity.health -= Math.max((entity.getHealth() * 0.25).toFixed(0))
-    switch (player.getMainHandItem()) {
-        case 'kubejs:final_sword':
-            finPercentScaling(0.25)
-            break;
-        case 'kubejs:final_pickaxe':
-            finPercentScaling(0.25)
-            break;
-        case 'kubejs:final_axe':
-            finPercentScaling(0.25)
-            break;
-        case 'kubejs:final_shovel':
-            finPercentScaling(0.25)
-            break;
-        case 'kubejs:final_hoe':
-            finPercentScaling(0.25)
-            break;
-        case 'kubejs:final_scythe':
-            finPercentScaling(0.25)
-            break;
-        case 'kubejs:final_katana':
-            finPercentScaling(0.25)
-            break;
-        case 'kubejs:final_lance':
-            finPercentScaling(0.25)
-            break;
-        case 'kubejs:high_entropy_alloy':
-            // Get slapped by ingot that breaks reality
-            entity.health -= Math.max((entity.getHealth() * 0.02).toFixed(2))
-            break;
-        // Cataclysm weapon checks
-        case 'cataclysm:infernal_forge':
-            event.damage - 24
-            break;
-        case 'cataclysm:the_incinerator':
-            entity.secondsOnFire = 10
-            event.damage - 32
-        case 'cataclysm:meat_shredder':
-            // subtract one percent per tick from an entity's max health
-            // Warden HP (500) - 100 (1/100) * 100
-            // So it would be subtracting 1% per tick from the Warden's health
-            let shredderDmg = Number.parseFloat(event.damage).toFixed(2) = Number.parseFloat(entity.getMaxHealth() * 0.1).toFixed(2)
-            shredderDmg
-            if (dmgScriptDebug) { console.log('Meat Shredder:' + shredderDmg) }
-            break;
-        default:
-            //if (dmgScriptDebug) { console.log("hurt DEFAULT") }
-            break;
-    }
+  function finPercentScaling(percentage) {
+    entity.attack(entity.getHealth() * percentage)
+    console.log(entity.attack(entity.getHealth() * percentage))
+  }
+  //let final_atk_scaling = entity.health -= Math.max((entity.getHealth() * 0.25).toFixed(0))
+  switch (player.getMainHandItem()) {
+    case 'kubejs:final_sword':
+      finPercentScaling(0.25)
+      break;
+    case 'kubejs:final_pickaxe':
+      finPercentScaling(0.25)
+      break;
+    case 'kubejs:final_axe':
+      finPercentScaling(0.25)
+      break;
+    case 'kubejs:final_shovel':
+      finPercentScaling(0.25)
+      break;
+    case 'kubejs:final_hoe':
+      finPercentScaling(0.25)
+      break;
+    case 'kubejs:final_scythe':
+      finPercentScaling(0.25)
+      break;
+    case 'kubejs:final_katana':
+      finPercentScaling(0.25)
+      break;
+    case 'kubejs:final_lance':
+      finPercentScaling(0.25)
+      break;
+    case 'kubejs:high_entropy_alloy':
+      // Get slapped by ingot that breaks reality
+      entity.health -= Math.max((entity.getHealth() * 0.02).toFixed(2))
+      break;
+    // Cataclysm weapon checks
+    case 'cataclysm:infernal_forge':
+      event.damage - 24
+      break;
+    case 'cataclysm:the_incinerator':
+      entity.secondsOnFire = 10
+      event.damage - 32
+    case 'cataclysm:meat_shredder':
+      // subtract one percent per tick from an entity's max health
+      // Warden HP (500) - 100 (1/100) * 100
+      // So it would be subtracting 1% per tick from the Warden's health
+      let shredderDmg = Number.parseFloat(event.damage).toFixed(2) = Number.parseFloat(entity.getMaxHealth() * 0.1).toFixed(2)
+      shredderDmg
+      if (dmgScriptDebug) { console.log('Meat Shredder:' + shredderDmg) }
+      break;
+    default:
+      //if (dmgScriptDebug) { console.log("hurt DEFAULT") }
+      break;
+  }
 
-    if (!entity.isAlive() && entity.getLastDamageSource() == player) {
-        entity.die(event.source)
-        //if (dmgScriptDebug) { console.log(event.source) }
-    }  
+  if (!entity.isAlive() && entity.getLastDamageSource() == player) {
+    entity.die(event.source)
+    //if (dmgScriptDebug) { console.log(event.source) }
+  }
 })
 
 /*

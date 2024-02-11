@@ -25,10 +25,10 @@ let compon = []
  * @param {string} tipText - Translation text.
  */
 function finTip(tipId, tipText) {
-    compon.push({
-        id: tipId,
-        text: tipText
-    })
+  compon.push({
+    id: tipId,
+    text: tipText
+  })
 }
 let jokeCompon = []
 /**
@@ -37,10 +37,10 @@ let jokeCompon = []
  * @param {string} tipText - Translation text.
  */
 function finJokeTip(tipId, tipText) {
-    jokeCompon.push({
-        id: tipId,
-        text: tipText
-    })
+  jokeCompon.push({
+    id: tipId,
+    text: tipText
+  })
 }
 let createCompon = []
 /**
@@ -49,10 +49,10 @@ let createCompon = []
  * @param {string} tipText - Translation text.
  */
 function createTip(tipId, tipText) {
-    createCompon.push({
-        id: tipId,
-        text: tipText
-    })
+  createCompon.push({
+    id: tipId,
+    text: tipText
+  })
 }
 let specCreateCompon = []
 /**
@@ -61,10 +61,10 @@ let specCreateCompon = []
  * @param {string} tipText - Translation text.
  */
 function specialCreateTip(tipId, tipText) {
-    specCreateCompon.push({
-        id: tipId,
-        text: tipText
-    })
+  specCreateCompon.push({
+    id: tipId,
+    text: tipText
+  })
 }
 let jeiCompon = []
 /**
@@ -73,10 +73,10 @@ let jeiCompon = []
  * @param {string} tipText - Translation text.
  */
 function jeiTip(tipId, tipText) {
-    jeiCompon.push({
-        id: tipId,
-        text: tipText
-    })
+  jeiCompon.push({
+    id: tipId,
+    text: tipText
+  })
 }
 let reiCompon = []
 /**
@@ -85,104 +85,104 @@ let reiCompon = []
  * @param {string} tipText - Translation text.
  */
 function reiTip(tipId, tipText) {
-    reiCompon.push({
-        id: tipId,
-        text: tipText
-    })
+  reiCompon.push({
+    id: tipId,
+    text: tipText
+  })
 }
 
 ClientEvents.lang("en_us", event => {
-    // Tip Titles
-    event.addAll("kubejs", {
-        "kubejs.tip.finality_tip": "Finality Tip",
-        "kubejs.tip.create_tip": "Create Tip",
-        "kubejs.tip.rainb_create_tip": "<rainb>Create Tip</rainb>",
-        "kubejs.tip.jei_tip": "JEI Tip",
-        "kubejs.tip.rei_tip": "REI Tip"
-    })
-    // resourcelocation | translation key id | tip text string
-    compon.forEach(thing => {
-        event.add('kubejs', `kubejs.tip.${thing.id}`, thing.text)
-    })
-    jokeCompon.forEach(thing => {
-        event.add('kubejs', `kubejs.tip.joke_${thing.id}`, thing.text)
-    })
-    createCompon.forEach(thing => {
-        event.add('kubejs', `kubejs.tip.create_${thing.id}`, thing.text)
-    })
-    specCreateCompon.forEach(thing => {
-        event.add('kubejs', `kubejs.tip.create_${thing.id}`, thing.text)
-    })
-    jeiCompon.forEach(thing => {
-        event.add('kubejs', `kubejs.tip.jei_${thing.id}`, thing.text)
-    })
-    reiCompon.forEach(thing => {
-        event.add('kubejs', `kubejs.tip.rei_${thing.id}`, thing.text)
-    })
+  // Tip Titles
+  event.addAll("kubejs", {
+    "kubejs.tip.finality_tip": "Finality Tip",
+    "kubejs.tip.create_tip": "Create Tip",
+    "kubejs.tip.rainb_create_tip": "<rainb>Create Tip</rainb>",
+    "kubejs.tip.jei_tip": "JEI Tip",
+    "kubejs.tip.rei_tip": "REI Tip"
+  })
+  // resourcelocation | translation key id | tip text string
+  compon.forEach(thing => {
+    event.add('kubejs', `kubejs.tip.${thing.id}`, thing.text)
+  })
+  jokeCompon.forEach(thing => {
+    event.add('kubejs', `kubejs.tip.joke_${thing.id}`, thing.text)
+  })
+  createCompon.forEach(thing => {
+    event.add('kubejs', `kubejs.tip.create_${thing.id}`, thing.text)
+  })
+  specCreateCompon.forEach(thing => {
+    event.add('kubejs', `kubejs.tip.create_${thing.id}`, thing.text)
+  })
+  jeiCompon.forEach(thing => {
+    event.add('kubejs', `kubejs.tip.jei_${thing.id}`, thing.text)
+  })
+  reiCompon.forEach(thing => {
+    event.add('kubejs', `kubejs.tip.rei_${thing.id}`, thing.text)
+  })
 })
 ClientEvents.highPriorityAssets(event => {
-    compon.forEach(thing => {
-        event.add(`kubejs:tips/tip_${thing.id}`, {
-            "title": {
-                "translate": "kubejs.tip.finality_tip",
-                "bold": true,
-                "color": "light_purple"
-            },
-            // "translate": "kubejs.tip.${fileName}"
-            "tip": { "translate": 'kubejs.tip.' + thing.id }
-        })
+  compon.forEach(thing => {
+    event.add(`kubejs:tips/tip_${thing.id}`, {
+      "title": {
+        "translate": "kubejs.tip.finality_tip",
+        "bold": true,
+        "color": "light_purple"
+      },
+      // "translate": "kubejs.tip.${fileName}"
+      "tip": { "translate": 'kubejs.tip.' + thing.id }
     })
-    jokeCompon.forEach(thing => {
-        event.add(`kubejs:tips/joke_tips/joke_tip_${thing.id}`, {
-            "title": {
-                "translate": "kubejs.tip.finality_tip",
-                "bold": true,
-                "color": "red"
-            },
-            // "translate": "kubejs.tip.joke_${fileName}"
-            "tip": { "translate": 'kubejs.tip.joke_' + thing.id }
-        })
+  })
+  jokeCompon.forEach(thing => {
+    event.add(`kubejs:tips/joke_tips/joke_tip_${thing.id}`, {
+      "title": {
+        "translate": "kubejs.tip.finality_tip",
+        "bold": true,
+        "color": "red"
+      },
+      // "translate": "kubejs.tip.joke_${fileName}"
+      "tip": { "translate": 'kubejs.tip.joke_' + thing.id }
     })
-    createCompon.forEach(thing => {
-        event.add(`kubejs:tips/create_tips/create_${thing.id}`, {
-            "title": {
-                "translate": "kubejs.tip.create_tip",
-                "bold": true,
-                "color": "gold"
-            },
-            "tip": { "translate": 'kubejs.tip.create_' + thing.id }
-        })
+  })
+  createCompon.forEach(thing => {
+    event.add(`kubejs:tips/create_tips/create_${thing.id}`, {
+      "title": {
+        "translate": "kubejs.tip.create_tip",
+        "bold": true,
+        "color": "gold"
+      },
+      "tip": { "translate": 'kubejs.tip.create_' + thing.id }
     })
-    specCreateCompon.forEach(thing => {
-        event.add(`kubejs:tips/create_tips/create_${thing.id}`, {
-            "title": {
-                "translate": "kubejs.tip.rainb_create_tip", // "translate": "kubejs.tip.rainb_create_tip"
-                "bold": true,
-                "color": "gold"
-            },
-            "tip": { "translate": 'kubejs.tip.create_' + thing.id }
-        })
+  })
+  specCreateCompon.forEach(thing => {
+    event.add(`kubejs:tips/create_tips/create_${thing.id}`, {
+      "title": {
+        "translate": "kubejs.tip.rainb_create_tip", // "translate": "kubejs.tip.rainb_create_tip"
+        "bold": true,
+        "color": "gold"
+      },
+      "tip": { "translate": 'kubejs.tip.create_' + thing.id }
     })
-    jeiCompon.forEach(thing => {
-        event.add(`kubejs:tips/jei_${thing.id}`, {
-            "title": {
-                "translate": "kubejs.tip.jei_tip",
-                "bold": true,
-                "color": "dark_green"
-            },
-            "tip": { "translate": 'kubejs.tip.jei_' + thing.id }
-        })
+  })
+  jeiCompon.forEach(thing => {
+    event.add(`kubejs:tips/jei_${thing.id}`, {
+      "title": {
+        "translate": "kubejs.tip.jei_tip",
+        "bold": true,
+        "color": "dark_green"
+      },
+      "tip": { "translate": 'kubejs.tip.jei_' + thing.id }
     })
-    reiCompon.forEach(thing => {
-        event.add(`kubejs:tips/rei_${thing.id}`, {
-            "title": {
-                "translate": "kubejs.tip.rei_tip",
-                "bold": true,
-                "color": "light_gray"
-            },
-            "tip": { "translate": 'kubejs.tip.rei_' + thing.id }
-        })
+  })
+  reiCompon.forEach(thing => {
+    event.add(`kubejs:tips/rei_${thing.id}`, {
+      "title": {
+        "translate": "kubejs.tip.rei_tip",
+        "bold": true,
+        "color": "light_gray"
+      },
+      "tip": { "translate": 'kubejs.tip.rei_' + thing.id }
     })
+  })
 })
 
 /**
@@ -211,51 +211,51 @@ finTip("tooltips", "Always read tooltips! I am not responsible for any damages t
 finTip("lapis_from_witches", "Witches now drop Lapis Lazuli in addition to previous item drops.")
 finTip("zinc_from_creepers", "Creepers now drop Zinc Nuggets in addition to previous item drops.")
 if (Platform.isLoaded("apotheosis")) {
-    finTip("spawners", "Spawners now drop Structure Void which can be used to recraft them. Use the Capturing enchantment to acquire Spawn Eggs.")
+  finTip("spawners", "Spawners now drop Structure Void which can be used to recraft them. Use the Capturing enchantment to acquire Spawn Eggs.")
 }
 if (Platform.isLoaded("armorstandshiftswap")) {
-    finTip("armor_stand_swap", "[Shift] + R-click on Armor Stands to put your entire armor set at once with the addition of Armor Stand Shift Swap.")
+  finTip("armor_stand_swap", "[Shift] + R-click on Armor Stands to put your entire armor set at once with the addition of Armor Stand Shift Swap.")
 }
 if (Platform.isLoaded("autumnity")) {
-    finJokeTip("turkey_head", "Careful not to get a turkey dropped on your head!")
+  finJokeTip("turkey_head", "Careful not to get a turkey dropped on your head!")
 }
 if (Platform.isLoaded("backpacked")) {
-    finTip("backpacked", "It is recommended to make a backpack. 6 Leather, 2 String and 1 Iron Ingot is all you need.")
+  finTip("backpacked", "It is recommended to make a backpack. 6 Leather, 2 String and 1 Iron Ingot is all you need.")
 }
 if (Platform.isLoaded("betterchunkloading")) {
-    finTip("predictive_chunk_loading", "This is more of a fun fact, but the modpack uses predictive chunk loading from Better Chunk Loading. Sorry if chunks are a bit weird on occasion.")
+  finTip("predictive_chunk_loading", "This is more of a fun fact, but the modpack uses predictive chunk loading from Better Chunk Loading. Sorry if chunks are a bit weird on occasion.")
 }
 if (Platform.isLoaded("bhc")) {
-    finTip("bhc_wither_bones", "Bones can be haunted into Wither Bones.")
+  finTip("bhc_wither_bones", "Bones can be haunted into Wither Bones.")
 }
 if (Platform.isLoaded("better_climbing")) {
-    finTip("better_climbing", "Look up to climb faster and look down to climb down faster. You also gain momentum in either direction.")
+  finTip("better_climbing", "Look up to climb faster and look down to climb down faster. You also gain momentum in either direction.")
 }
 if (Platform.isLoaded("blockrunner")) {
-    finTip("blockrunner", "If a block has a <rainb>Speed Modifier</rainb> in their tooltip, they allow you to move faster on them.")
+  finTip("blockrunner", "If a block has a <rainb>Speed Modifier</rainb> in their tooltip, they allow you to move faster on them.")
 }
 if (Platform.isLoaded("carryon")) {
-    finTip("carryon_lootr_chests", "You can pick up Lootr chests by Shift + Right clicking on them when near enough. Useful for moving them out of the way without breaking them!")
-    finTip("carryon_spawners", "You can pick up Spawners by Shift + Right clicking on them when near enough.")
+  finTip("carryon_lootr_chests", "You can pick up Lootr chests by Shift + Right clicking on them when near enough. Useful for moving them out of the way without breaking them!")
+  finTip("carryon_spawners", "You can pick up Spawners by Shift + Right clicking on them when near enough.")
 }
 if (Platform.isLoaded("enigmaticlegacy")) {
-    finTip("seven_curses_slime", "Wearing the Ring of the Seven Curses can yield extra rewards such as Slime Balls from Zombies, at the cost of your <shake>sanity</shake>. So choose wisely!")
+  finTip("seven_curses_slime", "Wearing the Ring of the Seven Curses can yield extra rewards such as Slime Balls from Zombies, at the cost of your <shake>sanity</shake>. So choose wisely!")
 }
 if (Platform.isLoaded("healingcampfire")) {
-    finTip("campfire_regen", "Campfires now regenerate health when you are nearby.")
+  finTip("campfire_regen", "Campfires now regenerate health when you are nearby.")
 }
 if (Platform.isLoaded("lilwings")) {
-    finTip("lil_wings_butterflies", "Butterflies around the world can assist you greatly when housed in a jar, though some are best kept fluttering freely.")
-    finTip("lil_wings_catcher", "A certain butterfly that hangs around villages can help accelerate crop growth.")
+  finTip("lil_wings_butterflies", "Butterflies around the world can assist you greatly when housed in a jar, though some are best kept fluttering freely.")
+  finTip("lil_wings_catcher", "A certain butterfly that hangs around villages can help accelerate crop growth.")
 }
 if (Platform.isLoaded("portablehole")) {
-    finTip("portable_hole", "Strongholds now contain a very special portable item that lets you break reality and make holes in walls.")
+  finTip("portable_hole", "Strongholds now contain a very special portable item that lets you break reality and make holes in walls.")
 }
 if (Platform.isLoaded("tinyskeletons")) {
-    finTip("tiny_wither_skeletons", "You can give a baby Wither Skeleton a Wither Rose in exchange for a Wither Skeleton Skull if you find that they are too cute to be killed.")
+  finTip("tiny_wither_skeletons", "You can give a baby Wither Skeleton a Wither Rose in exchange for a Wither Skeleton Skull if you find that they are too cute to be killed.")
 }
 if (Platform.isLoaded("torchmaster")) {
-    finTip("torchmaster_megatorch", "Megatorches from the Torchmaster mod prevent hostile mob spawning in a cube radius of 64 blocks.")
+  finTip("torchmaster_megatorch", "Megatorches from the Torchmaster mod prevent hostile mob spawning in a cube radius of 64 blocks.")
 }
 /*
 Create Tips
@@ -288,25 +288,25 @@ createTip("blast_proof_vaults", "Create's Item Vaults are actually blast proof, 
  * Create Addons
  */
 if (Platform.isLoaded("create_enchantment_indsutry")) {
-    finTip("store_experience", "Experience can be extracted using Disenchanters and then pumped into Fluid Tanks.")
+  finTip("store_experience", "Experience can be extracted using Disenchanters and then pumped into Fluid Tanks.")
 }
 // recipe viewer tips
 if (Platform.isLoaded("roughlyenoughitems")
-    && Platform.isLoaded("roughlyenoughresources")
-    && Platform.isLoaded("roughlyenoughprofessions")
+  && Platform.isLoaded("roughlyenoughresources")
+  && Platform.isLoaded("roughlyenoughprofessions")
 ) {
-    reiTip("search_bar", "While in your inventory screen, press <rainb>Ctrl + F</rainb> to quickly access REI's search bar.")
-    reiTip("recipes_shortcut", "Hovering over an item and pressing R will show all recipe methods on how to get that item.")
-    reiTip("usage_shortcut", "Hovering over an item and pressing U will show all recipe uses for that item.")
-    reiTip("recipe_saving", "You can click and drag recipe windows to bookmark them on the top left corner for easier viewing. None of that back and forth between the crafting grid and forgetting the recipe then having to check the recipe again.")
-    reiTip("drag_n_drop", "A <wiggle><wave>lot</wave></wiggle> of things can be dragged and drop to the bookmarks area.")
-    reiTip("customization", "REI is highly customizable! Feel free to experiment.")
+  reiTip("search_bar", "While in your inventory screen, press <rainb>Ctrl + F</rainb> to quickly access REI's search bar.")
+  reiTip("recipes_shortcut", "Hovering over an item and pressing R will show all recipe methods on how to get that item.")
+  reiTip("usage_shortcut", "Hovering over an item and pressing U will show all recipe uses for that item.")
+  reiTip("recipe_saving", "You can click and drag recipe windows to bookmark them on the top left corner for easier viewing. None of that back and forth between the crafting grid and forgetting the recipe then having to check the recipe again.")
+  reiTip("drag_n_drop", "A <wiggle><wave>lot</wave></wiggle> of things can be dragged and drop to the bookmarks area.")
+  reiTip("customization", "REI is highly customizable! Feel free to experiment.")
 }
 if (Platform.isLoaded("jei")
-    && Platform.isLoaded("jeresources")
-    && Platform.isLoaded("justenoughprofessions")
+  && Platform.isLoaded("jeresources")
+  && Platform.isLoaded("justenoughprofessions")
 ) {
-    jeiTip("search_bar", "While in your inventory screen, press <rainb>Ctrl + F</rainb> to quickly access JEI's search bar.")
-    jeiTip("recipes_shortcut", "Hovering over an item and pressing R will show all recipe methods on how to get that item.")
-    jeiTip("usage_shortcut", "Hovering over an item and pressing U will show all recipe uses for that item.")
+  jeiTip("search_bar", "While in your inventory screen, press <rainb>Ctrl + F</rainb> to quickly access JEI's search bar.")
+  jeiTip("recipes_shortcut", "Hovering over an item and pressing R will show all recipe methods on how to get that item.")
+  jeiTip("usage_shortcut", "Hovering over an item and pressing U will show all recipe uses for that item.")
 }

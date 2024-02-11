@@ -13,29 +13,29 @@ To-Do List
 */
 
 ServerEvents.recipes(event => {
-    event.shaped('backpacked:backpack', [
-        'HHH',
-        'SIS',
-        'HHH'
-    ], {
-        H: 'minecraft:rabbit_hide',
-        S: 'minecraft:string',
-        I: 'minecraft:iron_ingot'
-    }).id('backpacked:backpack')
-    event.shaped('backpacked:backpack', [
-        'LLL',
-        'SIS',
-        'LLL'
-    ], {
-        L: 'minecraft:leather',
-        S: 'minecraft:string',
-        I: 'minecraft:iron_ingot'
-    }).id('finality:backpack_alt')
+  event.shaped('backpacked:backpack', [
+    'HHH',
+    'SIS',
+    'HHH'
+  ], {
+    H: 'minecraft:rabbit_hide',
+    S: 'minecraft:string',
+    I: 'minecraft:iron_ingot'
+  }).id('backpacked:backpack')
+  event.shaped('backpacked:backpack', [
+    'LLL',
+    'SIS',
+    'LLL'
+  ], {
+    L: 'minecraft:leather',
+    S: 'minecraft:string',
+    I: 'minecraft:iron_ingot'
+  }).id('finality:backpack_alt')
 })
 
 ServerEvents.tags('block', event => {
-    for (let i = 0; i < WOOD_TYPES.length; i++) {
-        let wood = WOOD_TYPES[i];
-        event.add('create:wrench_pickup', `backpacked:${wood}_backpack_shelf`)
-    }
+  for (let i = 0; i < WOOD_TYPES.length; i++) {
+    let wood = WOOD_TYPES[i];
+    event.add('create:wrench_pickup', `backpacked:${wood}_backpack_shelf`)
+  }
 })

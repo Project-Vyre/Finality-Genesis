@@ -10,87 +10,87 @@
 
 // Preventive measures are a work in progress...
 ItemEvents.firstRightClicked(event => {
-    const { item, level, player } = event
-    const { x, y, z } = player
-    if (item.getId() == 'supplementaries:soap' &&
-        (player.persistentData.struckBySandpaper || player.persistentData.struckBySuperglue)
-    ) {
-        player.persistentData.struckBySandpaper = false
-        player.persistentData.struckBySuperglue = false
-        player.tell([
-            Component.of('Heavenly Principles: ').bold().red(),
-            Component.of('You have been '),
-            Component.of('cleansed').green(),
-            Component.of(' of both curses.')
-        ])
-        player.inventory.clear('supplementaries:soap')
-        player.potionEffects.add('minecraft:slowness', 100, 255, false, false)
-        player.block.createEntity('graveyard:skeleton_creeper').spawn()
-    }
-    if (item.getId() == 'minecraft:milk_bucket' &&
-        (player.persistentData.struckBySandpaper || player.persistentData.struckBySuperglue)
-    ) {
-        player.tell([
-            Component.of('Heavenly Principles: ').bold().red(),
-            Component.of('Drinking milk will '),
-            Component.of('not').red(),
-            Component.of(' cure this curse.')
-        ])
-        player.inventory.clear('minecraft:milk_bucket')
-        player.setHealth(2)
-        player.potionEffects.add('minecraft:slowness', 999999, 255, false, false)
-        player.potionEffects.add('minecraft:wither', 999999, 255, false, false)
-        event.server.scheduleInTicks(200, t => {
-            player.kill()
-        })
-    }
+  const { item, level, player } = event
+  const { x, y, z } = player
+  if (item.getId() == 'supplementaries:soap' &&
+    (player.persistentData.struckBySandpaper || player.persistentData.struckBySuperglue)
+  ) {
+    player.persistentData.struckBySandpaper = false
+    player.persistentData.struckBySuperglue = false
+    player.tell([
+      Component.of('Heavenly Principles: ').bold().red(),
+      Component.of('You have been '),
+      Component.of('cleansed').green(),
+      Component.of(' of both curses.')
+    ])
+    player.inventory.clear('supplementaries:soap')
+    player.potionEffects.add('minecraft:slowness', 100, 255, false, false)
+    player.block.createEntity('graveyard:skeleton_creeper').spawn()
+  }
+  if (item.getId() == 'minecraft:milk_bucket' &&
+    (player.persistentData.struckBySandpaper || player.persistentData.struckBySuperglue)
+  ) {
+    player.tell([
+      Component.of('Heavenly Principles: ').bold().red(),
+      Component.of('Drinking milk will '),
+      Component.of('not').red(),
+      Component.of(' cure this curse.')
+    ])
+    player.inventory.clear('minecraft:milk_bucket')
+    player.setHealth(2)
+    player.potionEffects.add('minecraft:slowness', 999999, 255, false, false)
+    player.potionEffects.add('minecraft:wither', 999999, 255, false, false)
+    event.server.scheduleInTicks(200, t => {
+      player.kill()
+    })
+  }
 })
 
 ItemEvents.foodEaten(event => {
-    const { item } = event
-    if (Platform.isLoaded('some_assembly_required') &&
-        Platform.isLoaded('artifacts') &&
-        item.getNbtString().includes('id:"artifacts:eternal_steak"')
-    ) {
-        event.server.tell([
-            Component.of('Uh oh!\n').red(),
-            Component.of('\nLooks like someone ate a sandiwch with '),
-            Component.of('Eternal Steak ').gold(),
-            Component.of('in it.')
-        ])
-        event.player.give('artifacts:eternal_steak')
-    } else if (
-        Platform.isLoaded('some_assembly_required') &&
-        Platform.isLoaded('artifacts') &&
-        item.getNbtString().includes('id:"artifacts:everlasting_beef"')
-    ) {
-        event.server.tell([
-            Component.of('Uh oh!\n').red(),
-            Component.of('\nLooks like someone ate a sandiwch with '),
-            Component.of('Everlasting Beef ').gold(),
-            Component.of('in it.')
-        ])
-        event.player.give('artifacts:everlasting_beef')
-    }
+  const { item } = event
+  if (Platform.isLoaded('some_assembly_required') &&
+    Platform.isLoaded('artifacts') &&
+    item.getNbtString().includes('id:"artifacts:eternal_steak"')
+  ) {
+    event.server.tell([
+      Component.of('Uh oh!\n').red(),
+      Component.of('\nLooks like someone ate a sandiwch with '),
+      Component.of('Eternal Steak ').gold(),
+      Component.of('in it.')
+    ])
+    event.player.give('artifacts:eternal_steak')
+  } else if (
+    Platform.isLoaded('some_assembly_required') &&
+    Platform.isLoaded('artifacts') &&
+    item.getNbtString().includes('id:"artifacts:everlasting_beef"')
+  ) {
+    event.server.tell([
+      Component.of('Uh oh!\n').red(),
+      Component.of('\nLooks like someone ate a sandiwch with '),
+      Component.of('Everlasting Beef ').gold(),
+      Component.of('in it.')
+    ])
+    event.player.give('artifacts:everlasting_beef')
+  }
 })
 
 BlockEvents.rightClicked(event => {
-    const { block, level, player } = event
-    const { x, y, z } = player
-    if (block.id == 'minecraft:sculk_shrieker' && player.mainHandItem == 'minecraft:echo_shard') {
-        player.inventory.clear('minecraft:echo_shard')
-        block.up.createEntity('minecraft:warden').mergeNbt({
-            PersistenceRequired: 1,
-            Brain: {
-                memories: {
-                    "minecraft:dig_cooldown": {
-                        value: {},
-                        ttl: 1200
-                    }
-                }
-            }
-        }).spawn()
-    }
+  const { block, level, player } = event
+  const { x, y, z } = player
+  if (block.id == 'minecraft:sculk_shrieker' && player.mainHandItem == 'minecraft:echo_shard') {
+    player.inventory.clear('minecraft:echo_shard')
+    block.up.createEntity('minecraft:warden').mergeNbt({
+      PersistenceRequired: 1,
+      Brain: {
+        memories: {
+          "minecraft:dig_cooldown": {
+            value: {},
+            ttl: 1200
+          }
+        }
+      }
+    }).spawn()
+  }
 })
 
 /*

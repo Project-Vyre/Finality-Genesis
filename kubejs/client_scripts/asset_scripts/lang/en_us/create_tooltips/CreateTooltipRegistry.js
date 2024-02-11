@@ -84,160 +84,160 @@ const $Palette = Java.loadClass('com.simibubi.create.foundation.item.TooltipHelp
  * )
  * @param {string} itemId 
  */
-function createTooltip(/** @type {Special.Item} */ itemId) {
-    return new CreateTooltipBuilder(itemId)
+function createTooltip (/** @type {Special.Item} */ itemId) {
+  return new CreateTooltipBuilder(itemId)
 }
 
-function CreateTooltipBuilder(itemId) {
-    this.itemId = Item.of(itemId).idLocation
-    this.descriptionId = Item.of(itemId).descriptionId
-    this.summary = ""
-    this.conditions = []
-    this.behaviours = []
-    this.controls = []
-    this.actions = []
-    this.palette = $Palette.STANDARD_CREATE
+function CreateTooltipBuilder (itemId) {
+  this.itemId = Item.of(itemId).idLocation
+  this.descriptionId = Item.of(itemId).descriptionId
+  this.summary = ""
+  this.conditions = []
+  this.behaviours = []
+  this.controls = []
+  this.actions = []
+  this.palette = $Palette.STANDARD_CREATE
 }
 CreateTooltipBuilder.prototype = {
-    addSummary: function (/** @type {string} */ summary) {
-        this.summary = summary
-        return this
-    },
-    addBehaviour: function (/** @type {string[]} */ conditionAndBehaviour
-    ) {
-        this.conditions.push(conditionAndBehaviour[0])
-        this.behaviours.push(conditionAndBehaviour[1])
-        return this
-    },
-    addAction: function (/** @type {string[]} */ controlsAndActions) {
-        this.controls.push(controlsAndActions[0])
-        this.actions.push(controlsAndActions[1])
-        return this
-    },
-    /**
-     * 
-     * @info Sets the color of the Create tooltip text. Only accepts the following:
-     * @default $Palette.STANDARD_CREATE
-     * @example $Palette.BLUE
-     * @example $Palette.GREEN
-     * @example $Palette.YELLOW
-     * @example $Palette.RED
-     * @example $Palette.PURPLE
-     * @example $Palette.GRAY
-     * @example $Palette.ALL_GRAY
-     * @example $Palette.GRAY_AND_BLUE
-     * @example $Palette.GRAY_AND_WHITE
-     * @example $Palette.GRAY_AND_GOLD
-     * @example $Palette.GRAY_AND_RED
-     * @returns 
-     */
-    setPalette: function (/** @type {Internal.TooltipHelper$Palette} */ palette) {
-        this.palette = palette
-        return this
-    },
-    build: function () {
-        $TooltipModifier.REGISTRY.registerDeferred(this.itemId, (item) => new $ItemDescription(item, this.palette))
-        let map = Utils.newMap()
-        map.putIfAbsent(this.descriptionId + ".tooltip", this.itemId.path.toUpperCase())
-        if (this.summary != "") {
-            map.putIfAbsent(this.descriptionId + ".tooltip.summary", this.summary)
-        }
-        for (let index = 0; index < this.conditions.length; index++) {
-            map.putIfAbsent(this.descriptionId + ".tooltip.condition" + (index + 1), this.conditions[index])
-        }
-        for (let index = 0; index < this.behaviours.length; index++) {
-            map.putIfAbsent(this.descriptionId + ".tooltip.behaviour" + (index + 1), this.behaviours[index])
-        }
-        for (let index = 0; index < this.controls.length; index++) {
-            map.putIfAbsent(this.descriptionId + ".tooltip.control" + (index + 1), this.controls[index])
-        }
-        for (let index = 0; index < this.actions.length; index++) {
-            map.putIfAbsent(this.descriptionId + ".tooltip.action" + (index + 1), this.actions[index])
-        }
-        return map
+  addSummary: function (/** @type {string} */ summary) {
+    this.summary = summary
+    return this
+  },
+  addBehaviour: function (/** @type {string[]} */ conditionAndBehaviour
+  ) {
+    this.conditions.push(conditionAndBehaviour[0])
+    this.behaviours.push(conditionAndBehaviour[1])
+    return this
+  },
+  addAction: function (/** @type {string[]} */ controlsAndActions) {
+    this.controls.push(controlsAndActions[0])
+    this.actions.push(controlsAndActions[1])
+    return this
+  },
+  /**
+   * 
+   * @info Sets the color of the Create tooltip text. Only accepts the following:
+   * @default $Palette.STANDARD_CREATE
+   * @example $Palette.BLUE
+   * @example $Palette.GREEN
+   * @example $Palette.YELLOW
+   * @example $Palette.RED
+   * @example $Palette.PURPLE
+   * @example $Palette.GRAY
+   * @example $Palette.ALL_GRAY
+   * @example $Palette.GRAY_AND_BLUE
+   * @example $Palette.GRAY_AND_WHITE
+   * @example $Palette.GRAY_AND_GOLD
+   * @example $Palette.GRAY_AND_RED
+   * @returns 
+   */
+  setPalette: function (/** @type {Internal.TooltipHelper$Palette} */ palette) {
+    this.palette = palette
+    return this
+  },
+  build: function () {
+    $TooltipModifier.REGISTRY.registerDeferred(this.itemId, (item) => new $ItemDescription(item, this.palette))
+    let map = Utils.newMap()
+    map.putIfAbsent(this.descriptionId + ".tooltip", this.itemId.path.toUpperCase())
+    if (this.summary != "") {
+      map.putIfAbsent(this.descriptionId + ".tooltip.summary", this.summary)
     }
+    for (let index = 0; index < this.conditions.length; index++) {
+      map.putIfAbsent(this.descriptionId + ".tooltip.condition" + (index + 1), this.conditions[index])
+    }
+    for (let index = 0; index < this.behaviours.length; index++) {
+      map.putIfAbsent(this.descriptionId + ".tooltip.behaviour" + (index + 1), this.behaviours[index])
+    }
+    for (let index = 0; index < this.controls.length; index++) {
+      map.putIfAbsent(this.descriptionId + ".tooltip.control" + (index + 1), this.controls[index])
+    }
+    for (let index = 0; index < this.actions.length; index++) {
+      map.putIfAbsent(this.descriptionId + ".tooltip.action" + (index + 1), this.actions[index])
+    }
+    return map
+  }
 }
 /**
  * 
  * @param {string} itemID 
  */
-function STANDARD_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.STANDARD_CREATE))
+function STANDARD_PALETTE (itemID) {
+  $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.STANDARD_CREATE))
 }
 /**
  * 
  * @param {string} itemID 
  */
-function BLUE_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.BLUE))
+function BLUE_PALETTE (itemID) {
+  $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.BLUE))
 }
 /**
  * 
  * @param {string} itemID 
  */
-function GREEN_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GREEN))
+function GREEN_PALETTE (itemID) {
+  $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GREEN))
 }
 /**
  * 
  * @param {string} itemID 
  */
-function YELLOW_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.YELLOW))
+function YELLOW_PALETTE (itemID) {
+  $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.YELLOW))
 }
 /**
  * 
  * @param {string} itemID 
  */
-function RED_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.RED))
+function RED_PALETTE (itemID) {
+  $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.RED))
 }
 /**
  * 
  * @param {string} itemID 
  */
-function PURPLE_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.PURPLE))
+function PURPLE_PALETTE (itemID) {
+  $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.PURPLE))
 }
 /**
  * 
  * @param {string} itemID 
  */
-function GRAY_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY))
+function GRAY_PALETTE (itemID) {
+  $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY))
 }
 /**
  * 
  * @param {string} itemID 
  */
-function MONO_GRAY_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.ALL_GRAY))
+function MONO_GRAY_PALETTE (itemID) {
+  $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.ALL_GRAY))
 }
 /**
  * 
  * @param {string} itemID 
  */
-function GRAY_BLUE_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_BLUE))
+function GRAY_BLUE_PALETTE (itemID) {
+  $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_BLUE))
 }
 /**
  * 
  * @param {string} itemID 
  */
-function GRAY_WHITE_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_WHITE))
+function GRAY_WHITE_PALETTE (itemID) {
+  $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_WHITE))
 }
 /**
  * 
  * @param {string} itemID 
  */
-function GRAY_GOLD_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_GOLD))
+function GRAY_GOLD_PALETTE (itemID) {
+  $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_GOLD))
 }
 /**
  * 
  * @param {string} itemID 
  */
-function GRAY_RED_PALETTE(itemID) {
-    $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_RED))
+function GRAY_RED_PALETTE (itemID) {
+  $TooltipModifier.REGISTRY.register(itemID, new $ItemDescription(itemID, $Palette.GRAY_AND_RED))
 }

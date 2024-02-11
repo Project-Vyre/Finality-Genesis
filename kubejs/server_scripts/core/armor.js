@@ -9,107 +9,107 @@
  */
 
 EntityEvents.hurt(event => {
-    if (!event.player) return
-    if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
-        event.player.getChestArmorItem() === 'kubejs:final_chestplate' &&
-        event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
-        event.player.getFeetArmorItem() === 'kubejs:final_boots'
-    ) {
-        event.player.setHealth(100)
-        event.cancel()
-    }
-    if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
-        event.player.getChestArmorItem() === 'create:netherite_backtank' &&
-        event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
-        event.player.getFeetArmorItem() === 'kubejs:final_boots'
-    ) {
-        event.player.setHealth(100)
-        event.cancel()
-    }
+  if (!event.player) return
+  if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
+    event.player.getChestArmorItem() === 'kubejs:final_chestplate' &&
+    event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
+    event.player.getFeetArmorItem() === 'kubejs:final_boots'
+  ) {
+    event.player.setHealth(100)
+    event.cancel()
+  }
+  if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
+    event.player.getChestArmorItem() === 'create:netherite_backtank' &&
+    event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
+    event.player.getFeetArmorItem() === 'kubejs:final_boots'
+  ) {
+    event.player.setHealth(100)
+    event.cancel()
+  }
 })
 
 EntityEvents.death(event => {
-    if (!event.player) return
-    if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
-        event.player.getChestArmorItem() === 'kubejs:final_chestplate' &&
-        event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
-        event.player.getFeetArmorItem() === 'kubejs:final_boots'
-    ) {
-        event.player.setHealth(10)
-        event.cancel()
-    }
-    if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
-        event.player.getChestArmorItem() === 'create:netherite_backtank' &&
-        event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
-        event.player.getFeetArmorItem() === 'kubejs:final_boots'
-    ) {
-        event.player.setHealth(10)
-        event.cancel()
-    }
+  if (!event.player) return
+  if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
+    event.player.getChestArmorItem() === 'kubejs:final_chestplate' &&
+    event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
+    event.player.getFeetArmorItem() === 'kubejs:final_boots'
+  ) {
+    event.player.setHealth(10)
+    event.cancel()
+  }
+  if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
+    event.player.getChestArmorItem() === 'create:netherite_backtank' &&
+    event.player.getLegsArmorItem() === 'kubejs:final_leggings' &&
+    event.player.getFeetArmorItem() === 'kubejs:final_boots'
+  ) {
+    event.player.setHealth(10)
+    event.cancel()
+  }
 })
 
 const set = {
-    "name": "kubejs:final",
-    "effects": [
-        {
-            "effect": "saturation",
-            "duration": 400,
-            "amplifier": 255
-        },
-        {
-            "effect": "haste",
-            "duration": 400,
-            "amplifier": 2
-        },
-        {
-            "effect": "strength",
-            "duration": 400,
-            "amplifier": 3
-        },
-        {
-            "effect": "speed",
-            "duration": 400,
-            "amplifier": 3
-        },
-        {
-            "effect": "fire_resistance",
-            "duration": 400,
-            "amplifier": 3
-        },
-        {
-            "effect": "jump_boost",
-            "duration": 400,
-            "amplifier": 3
-        },
-        {
-            "effect": "luck",
-            "duration": 400,
-            "amplifier": 5
-        }
-    ]
+  "name": "kubejs:final",
+  "effects": [
+    {
+      "effect": "saturation",
+      "duration": 400,
+      "amplifier": 255
+    },
+    {
+      "effect": "haste",
+      "duration": 400,
+      "amplifier": 2
+    },
+    {
+      "effect": "strength",
+      "duration": 400,
+      "amplifier": 3
+    },
+    {
+      "effect": "speed",
+      "duration": 400,
+      "amplifier": 3
+    },
+    {
+      "effect": "fire_resistance",
+      "duration": 400,
+      "amplifier": 3
+    },
+    {
+      "effect": "jump_boost",
+      "duration": 400,
+      "amplifier": 3
+    },
+    {
+      "effect": "luck",
+      "duration": 400,
+      "amplifier": 5
+    }
+  ]
 }
 
 const sets = [set];
 
 PlayerEvents.tick(check => {
-    const { headArmorItem, chestArmorItem, legsArmorItem, feetArmorItem } = check.player;
-    if (check.player.level.time % 100 === 0) {
-        for (let armorSet in sets) {
-            if (headArmorItem.id === sets[armorSet].name + '_helmet' &&
-                chestArmorItem.id === sets[armorSet].name + '_chestplate' &&
-                legsArmorItem.id === sets[armorSet].name + '_leggings' &&
-                feetArmorItem.id === sets[armorSet].name + '_boots'
-            ) {
-                for (let x in sets[armorSet].effects) {
-                    check.player.potionEffects.add(
-                        sets[armorSet].effects[x].effect,
-                        sets[armorSet].effects[x].duration,
-                        sets[armorSet].effects[x].amplifier,
-                        false,
-                        false
-                    )
-                }
-            }
+  const { headArmorItem, chestArmorItem, legsArmorItem, feetArmorItem } = check.player;
+  if (check.player.level.time % 100 === 0) {
+    for (let armorSet in sets) {
+      if (headArmorItem.id === sets[armorSet].name + '_helmet' &&
+        chestArmorItem.id === sets[armorSet].name + '_chestplate' &&
+        legsArmorItem.id === sets[armorSet].name + '_leggings' &&
+        feetArmorItem.id === sets[armorSet].name + '_boots'
+      ) {
+        for (let x in sets[armorSet].effects) {
+          check.player.potionEffects.add(
+            sets[armorSet].effects[x].effect,
+            sets[armorSet].effects[x].duration,
+            sets[armorSet].effects[x].amplifier,
+            false,
+            false
+          )
         }
+      }
     }
+  }
 })

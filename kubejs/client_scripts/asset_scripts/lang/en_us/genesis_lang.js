@@ -9,424 +9,424 @@
  */
 
 let INTEGERS = {
-    zero: 'Zero',
-    one: 'One',
-    two: 'Two',
-    three: 'Three',
-    four: 'Four',
-    five: 'Five',
-    six: 'Six',
-    seven: 'Seven',
-    eight: 'Eight',
-    nine: 'Nine'
+  zero: 'Zero',
+  one: 'One',
+  two: 'Two',
+  three: 'Three',
+  four: 'Four',
+  five: 'Five',
+  six: 'Six',
+  seven: 'Seven',
+  eight: 'Eight',
+  nine: 'Nine'
 }
 let LETTERS = {
-    a: 'A',
-    b: 'B',
-    c: 'C',
-    d: 'D',
-    e: 'E',
-    f: 'F',
-    g: 'G',
-    h: 'H',
-    i: 'I',
-    j: 'J',
-    k: 'K',
-    l: 'L',
-    m: 'M',
-    n: 'N',
-    o: 'O',
-    p: 'P',
-    q: 'Q',
-    r: 'R',
-    s: 'S',
-    t: 'T',
-    u: 'U',
-    v: 'V',
-    w: 'W',
-    x: 'X',
-    y: 'Y',
-    z: 'Z'
+  a: 'A',
+  b: 'B',
+  c: 'C',
+  d: 'D',
+  e: 'E',
+  f: 'F',
+  g: 'G',
+  h: 'H',
+  i: 'I',
+  j: 'J',
+  k: 'K',
+  l: 'L',
+  m: 'M',
+  n: 'N',
+  o: 'O',
+  p: 'P',
+  q: 'Q',
+  r: 'R',
+  s: 'S',
+  t: 'T',
+  u: 'U',
+  v: 'V',
+  w: 'W',
+  x: 'X',
+  y: 'Y',
+  z: 'Z'
 }
 
 let CMD = {
-    command_block: 'Command Block',
-    chain_command_block: 'Chain Command Block',
-    repeating_command_block: 'Repeating Command Block'
+  command_block: 'Command Block',
+  chain_command_block: 'Chain Command Block',
+  repeating_command_block: 'Repeating Command Block'
 }
 
 let seqDYE = {
-    black: 'Black',
-    gray: 'Gray',
-    light_gray: 'Light Gray',
-    white: 'White',
-    pink: 'Pink',
-    light_blue: 'Light Blue',
-    brown: 'Brown',
-    red: 'Red',
-    orange: 'Orange',
-    yellow: 'Yellow',
-    lime: 'Lime',
-    green: 'Green',
-    cyan: 'Cyan',
-    blue: 'Blue',
-    purple: 'Purple',
-    magenta: 'Magenta'
+  black: 'Black',
+  gray: 'Gray',
+  light_gray: 'Light Gray',
+  white: 'White',
+  pink: 'Pink',
+  light_blue: 'Light Blue',
+  brown: 'Brown',
+  red: 'Red',
+  orange: 'Orange',
+  yellow: 'Yellow',
+  lime: 'Lime',
+  green: 'Green',
+  cyan: 'Cyan',
+  blue: 'Blue',
+  purple: 'Purple',
+  magenta: 'Magenta'
 }
 
 let NATR = {
-    blue_ice: 'Blue Ice',
-    sand: 'Sand',
-    red_sand: 'Red Sand',
-    coarse_dirt: 'Coarse Dirt',
-    cobblestone: 'Cobblestone',
-    tinted_glass: 'Tinted Glass',
-    soul_sand: 'Soul Sand',
-    soul_soil: 'Soul Soil',
-    end_crystal: 'End Crystal'
+  blue_ice: 'Blue Ice',
+  sand: 'Sand',
+  red_sand: 'Red Sand',
+  coarse_dirt: 'Coarse Dirt',
+  cobblestone: 'Cobblestone',
+  tinted_glass: 'Tinted Glass',
+  soul_sand: 'Soul Sand',
+  soul_soil: 'Soul Soil',
+  end_crystal: 'End Crystal'
 }
 
 let CMAT = {
-    andesite_alloy: 'Andesite Alloy',
-    zinc: 'Zinc',
-    copper: 'Copper',
-    brass: 'Brass',
-    rose_quartz: 'Rose Quartz',
-    framed_glass: 'Framed Glass',
-    precision_mechanism: 'Precision Mechanism',
-    sturdy_sheet: 'Sturdy Sheet',
-    track: 'Track',
-    chocolate: 'Chocolate',
-    builders_tea: "Builder's Tea"
+  andesite_alloy: 'Andesite Alloy',
+  zinc: 'Zinc',
+  copper: 'Copper',
+  brass: 'Brass',
+  rose_quartz: 'Rose Quartz',
+  framed_glass: 'Framed Glass',
+  precision_mechanism: 'Precision Mechanism',
+  sturdy_sheet: 'Sturdy Sheet',
+  track: 'Track',
+  chocolate: 'Chocolate',
+  builders_tea: "Builder's Tea"
 }
 
 let PRIMORDIAL_MECHANISMS = {
-    terra_mechanism: 'Terra Mechanism',
-    gluttony_mechanism: 'Gluttony Mechanism',
-    metallurgy_mechanism: 'Metallurgy Mechanism',
-    lattice_mechanism: 'Lattice Mechanism',
-    umbral_mechanism: 'Umbral Mechanism',
-    genesis_mechanism: 'Genesis Mechanism',
-    ascendant_mechanism: 'Ascendant Mechanism',
-    entropy_mechanism: 'Entropy Mechanism'
+  terra_mechanism: 'Terra Mechanism',
+  gluttony_mechanism: 'Gluttony Mechanism',
+  metallurgy_mechanism: 'Metallurgy Mechanism',
+  lattice_mechanism: 'Lattice Mechanism',
+  umbral_mechanism: 'Umbral Mechanism',
+  genesis_mechanism: 'Genesis Mechanism',
+  ascendant_mechanism: 'Ascendant Mechanism',
+  entropy_mechanism: 'Entropy Mechanism'
 }
 
 let compressedBlocks = {
-    cobblestone: 'Cobblestone',
-    cobbled_deepslate: 'Cobbled Deepslate',
-    gravel: 'Gravel',
-    sand: 'Sand',
-    red_sand: 'Red Sand',
-    netherrack: 'Netherrack'
+  cobblestone: 'Cobblestone',
+  cobbled_deepslate: 'Cobbled Deepslate',
+  gravel: 'Gravel',
+  sand: 'Sand',
+  red_sand: 'Red Sand',
+  netherrack: 'Netherrack'
 }
 
 ClientEvents.lang('en_us', event => {
-    if (!Platform.isLoaded('textanimator')) {
-        event.addAll('kubejs', {
-            "item.kubejs.dormant_singularity_core": "§dDormant Singularity Core",
-            "item.kubejs.awakened_singularity_core": "§dAwakened Singularity Core",
-            "item.kubejs.denied_result": "§dDenied Result",
-            "item.kubejs.errored_result": "§4Errored Result",
-            "item.kubejs.removed_item": "§4Removed Item",
-            "block.kubejs.molten_iron": "§cMolten Iron",
-            "block.kubejs.molten_gold": "§eMolten Gold",
-            "block.kubejs.molten_copper": "§6Molten Copper",
-            "block.kubejs.molten_zinc": "§3Molten Zinc",
-            "block.kubejs.molten_brass": "§eMolten Brass",
-            "block.kubejs.molten_netherite": "§8Molten Netherite",
-            "item.kubejs.final_pickaxe": "Particula Eversorem",
-            "item.kubejs.final_axe": "Natura Exitium",
-            "item.kubejs.final_shovel": "Terra Confractus",
-            "item.kubejs.final_hoe": "Agricola Manus",
-            "item.kubejs.final_sword": "Corevis Ultimatum",
-            "item.kubejs.final_scythe": "Scythe of Eternal Oblivion",
-            "item.kubejs.final_lance": "Tenebris Punctura",
-            "item.kubejs.final_katana": "Celeritas Obumbratio",
-            "item.kubejs.crystal_lance": "Crystallus Hasta",
-            "item.kubejs.final_helmet": "Conscientia Oculi",
-            "item.kubejs.final_chestplate": "Vitale Cordis",
-            "item.kubejs.final_leggings": "Universum Motus",
-            "item.kubejs.final_boots": "Gravitas Anchoram",
-            "block.kubejs.command_block": "Command Block",
-            "block.kubejs.chain_command_block": "Chain Command Block",
-            "block.kubejs.repeating_command_block": "Repeating Command Block",
-            "block.kubejs.null_storage_block": "Null Storage Block"
-        })
-        for (let [number, name] of Object.entries(INTEGERS)) {
-            event.add(
-                'kubejs',
-                'item.kubejs.' + number,
-                'Number ' + name
-            )
-        }
-        event.add(
-            'kubejs',
-            'item.kubejs.octothorpe',
-            'Hashtag'
-        )
-        if (Platform.isLoaded('constructionwand')) {
-            event.add(
-                'kubejs',
-                'item.kubejs.construction_core_diamond',
-                '§bActivated Construction Diamond Crystal'
-            )
-        }
-        if (Platform.isLoaded('paxeljs')) {
-            event.add(
-                'kubejs',
-                'item.kubejs.final_paxel',
-                'Omni Figura'
-            )
-        }
-        for (let [material, name] of Object.entries(NATR)) {
-            event.add(
-                'kubejs',
-                'item.kubejs.incomplete_' + material + '_singularity',
-                '§7Incomplete ' + name + ' Singularity'
-            )
-        }
-        for (let [material, name] of Object.entries(CMAT)) {
-            event.add(
-                'kubejs',
-                'item.kubejs.incomplete_' + material + '_singularity',
-                '§7Incomplete ' + name + ' Singularity'
-            )
-        }
-        // replace with Color.DYE.forEach() on 1902+ as the Colors automatically has all 16 MC colors
-        for (let [color, name] of Object.entries(seqDYE)) {
-            event.add(
-                'kubejs',
-                'item.kubejs.incomplete_concrete_' + color + '_singularity',
-                '§7Incomplete ' + name + ' Concrete Singularity'
-            )
-        }
-    }
-    if (Platform.isLoaded('textanimator')) {
-        event.addAll('kubejs', {
-            "item.kubejs.dormant_singularity_core": "§d<shake>Dormant Singularity Core</shake>",
-            "item.kubejs.awakened_singularity_core": "§d<shake><rainb>Awakened Singularity Core</rainb></shake>",
-            "item.kubejs.denied_result": "§d<shake>Denied Result</shake>",
-            "item.kubejs.errored_result": "§4<shake>Errored Result</shake>",
-            "item.kubejs.removed_item": "§4<shake>Removed Item</shake>",
-            "item.kubejs.qubit": "<rainb>Qubit</rainb>",
-            "item.kubejs.octothorpe": "<rainb>Hashtag</rainb>",
-            "item.kubejs.slash": "<rainb>Slash</rainb>",
-            "item.kubejs.at_sign": "<rainb>At Sign</rainb>",
-            "block.kubejs.condensed_universal_entropy": "<rainb>Condensed Universal Entropy</rainb>",
-            "fluid.kubejs.condensed_universal_entropy": "<rainb>Condensed Universal Entropy</rainb>",
-            "item.kubejs.condensed_universal_entropy_bucket": "<rainb>Condensed Universal Entropy Bucket</rainb>",
-            "block.kubejs.condensed_universal_order": "<rainb>Condensed Universal Order</rainb>",
-            "fluid.kubejs.condensed_universal_order": "<rainb>Condensed Universal Order</rainb>",
-            "item.kubejs.condensed_universal_order_bucket": "<rainb>Condensed Universal Order Bucket</rainb>",
-            "block.kubejs.shimmer": "<rainb>Shimmer</rainb>",
-            "fluid.kubejs.shimmer": "<rainb>Shimmer</rainb>",
-            "item.kubejs.shimmer_bucket": "<rainb>Shimmer Bucket</rainb>",
-            "item.kubejs.unstable_entropy_particles": "<rainb>Unstable Entropy Particles</rainb>",
-            "item.kubejs.stable_entropy_particles": "<rainb>Stable Entropy Particles</rainb>",
-            "block.kubejs.molten_iron": "§cMolten Iron",
-            "block.kubejs.molten_gold": "§eMolten Gold",
-            "block.kubejs.molten_copper": "§6Molten Copper",
-            "block.kubejs.molten_zinc": "§3Molten Zinc",
-            "block.kubejs.molten_brass": "§eMolten Brass",
-            "block.kubejs.molten_netherite": "§8Molten Netherite",
-            "item.kubejs.high_entropy_alloy": "<rainb>High Entropy Alloy</rainb>",
-            "block.kubejs.high_entropy_alloy_block": "<rainb>Block of High Entropy Alloy</rainb>",
-            "item.kubejs.high_entropy_alloy_nugget": "<rainb>High Entropy Alloy Nugget</rainb>",
-            "item.kubejs.high_entropy_alloy_sheet": "<rainb>High Entropy Alloy Sheet</rainb>",
-            "item.kubejs.high_entropy_alloy_rod": "<rainb>High Entropy Alloy Rod</rainb>",
-            "item.kubejs.final_pickaxe": "<rainb>Particula Eversorem</rainb>",
-            "item.kubejs.final_axe": "<rainb>Natura Exitium</rainb>",
-            "item.kubejs.final_shovel": "<rainb>Terra Confractus</rainb>",
-            "item.kubejs.final_hoe": "<rainb>Agricola Manus</rainb>",
-            "item.kubejs.final_sword": "<rainb>Corevis Ultimatum</rainb>",
-            "item.kubejs.final_scythe": "<rainb>Scythe of Eternal Oblivion<rainb>",
-            "item.kubejs.final_lance": "<rainb>Tenebris Punctura</rainb>",
-            "item.kubejs.final_katana": "<rainb>Celeritas Obumbratio</rainb>",
-            "item.kubejs.crystal_lance": "<rainb>Crystallus Hasta</rainb>",
-            "item.kubejs.final_helmet": "<rainb>Conscientia Oculi</rainb>",
-            "item.kubejs.final_chestplate": "<rainb>Vitale Cordis</rainb>",
-            "item.kubejs.final_leggings": "<rainb>Universum Motus</rainb>",
-            "item.kubejs.final_boots": "<rainb>Gravitas Anchoram</rainb>",
-            "block.kubejs.command_block": "<rainb>Command Block</rainb>",
-            "block.kubejs.chain_command_block": "<rainb>Chain Command Block",
-            "block.kubejs.repeating_command_block": "<rainb>Repeating Command Block",
-            "block.kubejs.null_storage_block": "<rainb>Null Storage Block</rainb>"
-        })
-        for (let [id, name] of Object.entries(compressedBlocks)) {
-            event.add(
-                'kubejs',
-                'block.kubejs.compressed' + id,
-                'Compressed' + name
-            )
-            event.add(
-                'kubejs',
-                'block.kubejs.double_compressed_' + id,
-                '<shake>Double Compressed</shake> ' + name
-            )
-            event.add(
-                'kubejs',
-                'block.kubejs.triple_compressed_' + id,
-                '<shake>Triple Compressed</shake> ' + name
-            )
-        }
-        for (let [character, name] of Object.entries(LETTERS)) {
-            event.add(
-                'kubejs',
-                'item.kubejs.letter_' + character,
-                '<rainb>Letter ' + name + '</rainb>'
-            )
-        }
-        for (let [number, name] of Object.entries(INTEGERS)) {
-            event.add(
-                'kubejs',
-                'item.kubejs.' + number,
-                '<rainb>Number ' + name + '</rainb>'
-            )
-        }
-        if (Platform.isLoaded('paxeljs')) {
-            event.add(
-                'kubejs',
-                'item.kubejs.final_paxel',
-                '<rainb>Omni Figura</rainb>'
-            )
-        }
-        if (Platform.isLoaded('constructionwand')) {
-            event.add(
-                'kubejs',
-                'item.kubejs.construction_core_diamond',
-                '§bActivated Construction Diamond Crystal'
-            )
-        }
-        for (let [material, name] of Object.entries(NATR)) {
-            event.add(
-                'kubejs',
-                'item.kubejs.incomplete_' + material + '_singularity',
-                '§7Incomplete ' + name + ' Singularity'
-            )
-        }
-        for (let [material, name] of Object.entries(CMAT)) {
-            event.add(
-                'kubejs',
-                'item.kubejs.incomplete_' + material + '_singularity',
-                '§7Incomplete ' + name + ' Singularity'
-            )
-        }
-        // replace with Color.DYE.forEach() on 1902+ as the Colors automatically has all 16 MC colors
-        for (let [color, name] of Object.entries(seqDYE)) {
-            event.add(
-                'kubejs',
-                'item.kubejs.incomplete_concrete_' + color + '_singularity',
-                '§7Incomplete ' + name + ' Concrete Singularity'
-            )
-        }
-        for (let [mechanism, name] of Object.entries(PRIMORDIAL_MECHANISMS)) {
-            event.add(
-                'kubejs',
-                'item.kubejs.' + mechanism,
-                '<rainb>' + name + '</rainb>'
-            )
-            event.add(
-                'kubejs',
-                'item.kubejs.incomplete_' + mechanism,
-                '<rainb>Incomplete ' + name + '</rainb>'
-            )
-        }
-        for (let [insert, name] of Object.entries(CMD)) {
-            event.add(
-                'kubejs',
-                'block.kubejs.' + insert,
-                '<rainb>' + name + '</rainb>'
-            )
-        }
-    }
+  if (!Platform.isLoaded('textanimator')) {
     event.addAll('kubejs', {
-        "item.kubejs.potion_base_singularity": "Potion Base Singularity",
-        "item.kubejs.blaze_cake_singularity": "Blaze Cake Singularity"
+      "item.kubejs.dormant_singularity_core": "§dDormant Singularity Core",
+      "item.kubejs.awakened_singularity_core": "§dAwakened Singularity Core",
+      "item.kubejs.denied_result": "§dDenied Result",
+      "item.kubejs.errored_result": "§4Errored Result",
+      "item.kubejs.removed_item": "§4Removed Item",
+      "block.kubejs.molten_iron": "§cMolten Iron",
+      "block.kubejs.molten_gold": "§eMolten Gold",
+      "block.kubejs.molten_copper": "§6Molten Copper",
+      "block.kubejs.molten_zinc": "§3Molten Zinc",
+      "block.kubejs.molten_brass": "§eMolten Brass",
+      "block.kubejs.molten_netherite": "§8Molten Netherite",
+      "item.kubejs.final_pickaxe": "Particula Eversorem",
+      "item.kubejs.final_axe": "Natura Exitium",
+      "item.kubejs.final_shovel": "Terra Confractus",
+      "item.kubejs.final_hoe": "Agricola Manus",
+      "item.kubejs.final_sword": "Corevis Ultimatum",
+      "item.kubejs.final_scythe": "Scythe of Eternal Oblivion",
+      "item.kubejs.final_lance": "Tenebris Punctura",
+      "item.kubejs.final_katana": "Celeritas Obumbratio",
+      "item.kubejs.crystal_lance": "Crystallus Hasta",
+      "item.kubejs.final_helmet": "Conscientia Oculi",
+      "item.kubejs.final_chestplate": "Vitale Cordis",
+      "item.kubejs.final_leggings": "Universum Motus",
+      "item.kubejs.final_boots": "Gravitas Anchoram",
+      "block.kubejs.command_block": "Command Block",
+      "block.kubejs.chain_command_block": "Chain Command Block",
+      "block.kubejs.repeating_command_block": "Repeating Command Block",
+      "block.kubejs.null_storage_block": "Null Storage Block"
     })
-    /* Not yet implemented.
-    event.add('block.kubejs.la_lettre_a_focalors', 'La Lettre a Focalors')
-    event.add('block.kubejs.pour_la_justice', 'Pour la Justice')
-    */
-    event.addAll('create', {
-        // create death messages
-        "death.attack.create.crush": "%1$s was processed by Crushing Wheels, an unfortunate accident.",
-        "death.attack.create.crush.player": "%1$s was thrown into Crushing Wheels by %2$s. The ultimate betrayal by a fellow engineer!",
-        "death.attack.create.fan_fire": "%1$s got smoked by an Encased Fan",
-        "death.attack.create.fan_fire.player": "%1$s was thrown into a smoker by %2$s. Does anyone smell bacon?",
-        "death.attack.create.fan_lava": "%1$s was incinerated by an Encased Fan",
-        "death.attack.create.fan_lava.player": "%1$s was thrown into a smelter by %2$s",
-        "death.attack.create.mechanical_drill": "%1$s was impaled by a Mechanical Drill",
-        "death.attack.create.mechanical_drill.player": "%1$s was thrown in front of a Drill by %2$s",
-        "death.attack.create.mechanical_roller": "%1$s was flattened by a Mechanical Roller",
-        "death.attack.create.mechanical_roller.player": "%1$s was thrown in front of a Mechanical Roller by %2$s",
-        "death.attack.create.mechanical_saw": "%1$s got cut in half by a Mechanical Saw",
-        "death.attack.create.mechanical_saw.player": "%1$s was thrown into a Saw by %2$s",
-        "death.attack.create.potato_cannon": "%1$s was shot by %2$s's Potato Cannon",
-        "death.attack.create.potato_cannon.item": "%1$s was shot by %2$s using %3$s",
-        "death.attack.create.cuckoo_clock_explosion": "%1$s was blown up by tampered cuckoo clock",
-        "death.attack.create.cuckoo_clock_explosion.player": "%1$s was blown up by tampered cuckoo clock",
-        "death.attack.create.run_over": "%1$s was run over by %2$s"
+    for (let [number, name] of Object.entries(INTEGERS)) {
+      event.add(
+        'kubejs',
+        'item.kubejs.' + number,
+        'Number ' + name
+      )
+    }
+    event.add(
+      'kubejs',
+      'item.kubejs.octothorpe',
+      'Hashtag'
+    )
+    if (Platform.isLoaded('constructionwand')) {
+      event.add(
+        'kubejs',
+        'item.kubejs.construction_core_diamond',
+        '§bActivated Construction Diamond Crystal'
+      )
+    }
+    if (Platform.isLoaded('paxeljs')) {
+      event.add(
+        'kubejs',
+        'item.kubejs.final_paxel',
+        'Omni Figura'
+      )
+    }
+    for (let [material, name] of Object.entries(NATR)) {
+      event.add(
+        'kubejs',
+        'item.kubejs.incomplete_' + material + '_singularity',
+        '§7Incomplete ' + name + ' Singularity'
+      )
+    }
+    for (let [material, name] of Object.entries(CMAT)) {
+      event.add(
+        'kubejs',
+        'item.kubejs.incomplete_' + material + '_singularity',
+        '§7Incomplete ' + name + ' Singularity'
+      )
+    }
+    // replace with Color.DYE.forEach() on 1902+ as the Colors automatically has all 16 MC colors
+    for (let [color, name] of Object.entries(seqDYE)) {
+      event.add(
+        'kubejs',
+        'item.kubejs.incomplete_concrete_' + color + '_singularity',
+        '§7Incomplete ' + name + ' Concrete Singularity'
+      )
+    }
+  }
+  if (Platform.isLoaded('textanimator')) {
+    event.addAll('kubejs', {
+      "item.kubejs.dormant_singularity_core": "§d<shake>Dormant Singularity Core</shake>",
+      "item.kubejs.awakened_singularity_core": "§d<shake><rainb>Awakened Singularity Core</rainb></shake>",
+      "item.kubejs.denied_result": "§d<shake>Denied Result</shake>",
+      "item.kubejs.errored_result": "§4<shake>Errored Result</shake>",
+      "item.kubejs.removed_item": "§4<shake>Removed Item</shake>",
+      "item.kubejs.qubit": "<rainb>Qubit</rainb>",
+      "item.kubejs.octothorpe": "<rainb>Hashtag</rainb>",
+      "item.kubejs.slash": "<rainb>Slash</rainb>",
+      "item.kubejs.at_sign": "<rainb>At Sign</rainb>",
+      "block.kubejs.condensed_universal_entropy": "<rainb>Condensed Universal Entropy</rainb>",
+      "fluid.kubejs.condensed_universal_entropy": "<rainb>Condensed Universal Entropy</rainb>",
+      "item.kubejs.condensed_universal_entropy_bucket": "<rainb>Condensed Universal Entropy Bucket</rainb>",
+      "block.kubejs.condensed_universal_order": "<rainb>Condensed Universal Order</rainb>",
+      "fluid.kubejs.condensed_universal_order": "<rainb>Condensed Universal Order</rainb>",
+      "item.kubejs.condensed_universal_order_bucket": "<rainb>Condensed Universal Order Bucket</rainb>",
+      "block.kubejs.shimmer": "<rainb>Shimmer</rainb>",
+      "fluid.kubejs.shimmer": "<rainb>Shimmer</rainb>",
+      "item.kubejs.shimmer_bucket": "<rainb>Shimmer Bucket</rainb>",
+      "item.kubejs.unstable_entropy_particles": "<rainb>Unstable Entropy Particles</rainb>",
+      "item.kubejs.stable_entropy_particles": "<rainb>Stable Entropy Particles</rainb>",
+      "block.kubejs.molten_iron": "§cMolten Iron",
+      "block.kubejs.molten_gold": "§eMolten Gold",
+      "block.kubejs.molten_copper": "§6Molten Copper",
+      "block.kubejs.molten_zinc": "§3Molten Zinc",
+      "block.kubejs.molten_brass": "§eMolten Brass",
+      "block.kubejs.molten_netherite": "§8Molten Netherite",
+      "item.kubejs.high_entropy_alloy": "<rainb>High Entropy Alloy</rainb>",
+      "block.kubejs.high_entropy_alloy_block": "<rainb>Block of High Entropy Alloy</rainb>",
+      "item.kubejs.high_entropy_alloy_nugget": "<rainb>High Entropy Alloy Nugget</rainb>",
+      "item.kubejs.high_entropy_alloy_sheet": "<rainb>High Entropy Alloy Sheet</rainb>",
+      "item.kubejs.high_entropy_alloy_rod": "<rainb>High Entropy Alloy Rod</rainb>",
+      "item.kubejs.final_pickaxe": "<rainb>Particula Eversorem</rainb>",
+      "item.kubejs.final_axe": "<rainb>Natura Exitium</rainb>",
+      "item.kubejs.final_shovel": "<rainb>Terra Confractus</rainb>",
+      "item.kubejs.final_hoe": "<rainb>Agricola Manus</rainb>",
+      "item.kubejs.final_sword": "<rainb>Corevis Ultimatum</rainb>",
+      "item.kubejs.final_scythe": "<rainb>Scythe of Eternal Oblivion<rainb>",
+      "item.kubejs.final_lance": "<rainb>Tenebris Punctura</rainb>",
+      "item.kubejs.final_katana": "<rainb>Celeritas Obumbratio</rainb>",
+      "item.kubejs.crystal_lance": "<rainb>Crystallus Hasta</rainb>",
+      "item.kubejs.final_helmet": "<rainb>Conscientia Oculi</rainb>",
+      "item.kubejs.final_chestplate": "<rainb>Vitale Cordis</rainb>",
+      "item.kubejs.final_leggings": "<rainb>Universum Motus</rainb>",
+      "item.kubejs.final_boots": "<rainb>Gravitas Anchoram</rainb>",
+      "block.kubejs.command_block": "<rainb>Command Block</rainb>",
+      "block.kubejs.chain_command_block": "<rainb>Chain Command Block",
+      "block.kubejs.repeating_command_block": "<rainb>Repeating Command Block",
+      "block.kubejs.null_storage_block": "<rainb>Null Storage Block</rainb>"
     })
-    if (Platform.isLoaded('roughlyenoughitems')) {
-        // Corrected from Recipe Id: to Recipe ID: for consistency.
-        event.add('roughlyenoughitems', 'text.rei.recipe_id', '\n%sRecipe ID: %s')
+    for (let [id, name] of Object.entries(compressedBlocks)) {
+      event.add(
+        'kubejs',
+        'block.kubejs.compressed' + id,
+        'Compressed' + name
+      )
+      event.add(
+        'kubejs',
+        'block.kubejs.double_compressed_' + id,
+        '<shake>Double Compressed</shake> ' + name
+      )
+      event.add(
+        'kubejs',
+        'block.kubejs.triple_compressed_' + id,
+        '<shake>Triple Compressed</shake> ' + name
+      )
     }
-    if (Platform.isLoaded('alexsmobs')) {
-        event.addAll('alexsmobs', {
-            "alexsmobs.potion.soulsteal.desc": "Your attacks are granted life-steal.",
-            "alexsmobs.potion.bug_pheromones.desc": "Makes hostile arthopods neutral to you.",
-            "alexsmobs.potion.poison_resistance.desc": "Grants immunity to poison."
-        })
+    for (let [character, name] of Object.entries(LETTERS)) {
+      event.add(
+        'kubejs',
+        'item.kubejs.letter_' + character,
+        '<rainb>Letter ' + name + '</rainb>'
+      )
     }
-    if (Platform.isLoaded('apotheosis') && Platform.isLoaded('gateways')) {
-        event.addAll('kubejs', {
-            "kubejs.drowned_gate_small": "Small Drowned Gate",
-            "kubejs.drowned_gate": "Drowned Gate",
-            "kubejs.drowned_gate_large": "Large Drowned Gate",
-            "kubejs.husk_gate_small": "Small Husk Gate",
-            "kubejs.husk_gate": "Husk Gate",
-            "kubejs.husk_gate_large": "Large Husk Gate",
-            "kubejs.hoglin_gate_small": "Small Hoglin Gate",
-            "kubejs.hoglin_gate": "Hoglin Gate",
-            "kubejs.hoglin_gate_large": "Large Hoglin Gate",
-            "kubejs.boss_gate": "Apothic Boss Gate",
-            "kubejs.boss_gate_large": "Large Apothic Boss Gate",
-            "kubejs.ultimatum_boss_gate": "Ultimatum Boss Gate",
-            "kubejs.mutant_boss_gate_large": "Large Mutant Boss Gate",
-            "kubejs.mass_destruction_boss_gate_large": "Bosses of Mass Destruction Gate",
-            "item.apotheosis.gem.kubejs:eversor": "Eversor Gem",
-            "item.apotheosis.gem.kubejs:acuti_ora": "Acuti Ora Gem"
-        })
+    for (let [number, name] of Object.entries(INTEGERS)) {
+      event.add(
+        'kubejs',
+        'item.kubejs.' + number,
+        '<rainb>Number ' + name + '</rainb>'
+      )
     }
-    if (Platform.isLoaded('create_bic_bit')) {
-        event.addAll('kubejs', {
-            "item.kubejs.speculaas_singularity": "Speculaas Singularity",
-            "item.kubejs.stroopwafel_singularity": "Stroopwafel Singularity",
-            "item.kubejs.oliebollen_singularity": "Oliebollen Singularity",
-            "item.kubejs.kroket_singularity": "Kroket Singularity",
-            "item.kubejs.bitterballen_singularity": "Bitterballen Singularity",
-            "item.kubejs.frikandel_singularity": "Frikandel Singularity",
-            "item.kubejs.fries_singularity": "Fries Singularity",
-            "item.kubejs.churros_singularity": "Churros Singularity",
-            "item.kubejs.stamppot_singularity": "Stamppot Singularity",
-            "item.kubejs.bic_bit_singularity": "Create: Bitterballen Singularity"
-        })
+    if (Platform.isLoaded('paxeljs')) {
+      event.add(
+        'kubejs',
+        'item.kubejs.final_paxel',
+        '<rainb>Omni Figura</rainb>'
+      )
     }
-    if (Platform.isLoaded('eccentrictome')) {
-        event.addAll('eccentrictome', {
-            "eccentrictome.convert": "Shift + Right-click",
-            "eccentrictome.name": "Eccentric Tome (%s)",
-            "item.eccentrictome.tome": "Eccentric Tome"
-        })
+    if (Platform.isLoaded('constructionwand')) {
+      event.add(
+        'kubejs',
+        'item.kubejs.construction_core_diamond',
+        '§bActivated Construction Diamond Crystal'
+      )
     }
-    if (Platform.isLoaded('createaddition')) {
-        event.addAll('createaddition', {
-            "createaddition.ponder.liquid_blaze_burner.header": "DISABLED - Liquid Fuel Burning",
-            "createaddition.ponder.liquid_blaze_burner.text_1": "DISABLED - Giving the Blaze Burner a Straw",
-            "createaddition.ponder.liquid_blaze_burner.text_2": "This feature is disabled.",
-            "createaddition.ponder.liquid_blaze_burner.text_3": "This feature is disabled."
-        })
+    for (let [material, name] of Object.entries(NATR)) {
+      event.add(
+        'kubejs',
+        'item.kubejs.incomplete_' + material + '_singularity',
+        '§7Incomplete ' + name + ' Singularity'
+      )
     }
+    for (let [material, name] of Object.entries(CMAT)) {
+      event.add(
+        'kubejs',
+        'item.kubejs.incomplete_' + material + '_singularity',
+        '§7Incomplete ' + name + ' Singularity'
+      )
+    }
+    // replace with Color.DYE.forEach() on 1902+ as the Colors automatically has all 16 MC colors
+    for (let [color, name] of Object.entries(seqDYE)) {
+      event.add(
+        'kubejs',
+        'item.kubejs.incomplete_concrete_' + color + '_singularity',
+        '§7Incomplete ' + name + ' Concrete Singularity'
+      )
+    }
+    for (let [mechanism, name] of Object.entries(PRIMORDIAL_MECHANISMS)) {
+      event.add(
+        'kubejs',
+        'item.kubejs.' + mechanism,
+        '<rainb>' + name + '</rainb>'
+      )
+      event.add(
+        'kubejs',
+        'item.kubejs.incomplete_' + mechanism,
+        '<rainb>Incomplete ' + name + '</rainb>'
+      )
+    }
+    for (let [insert, name] of Object.entries(CMD)) {
+      event.add(
+        'kubejs',
+        'block.kubejs.' + insert,
+        '<rainb>' + name + '</rainb>'
+      )
+    }
+  }
+  event.addAll('kubejs', {
+    "item.kubejs.potion_base_singularity": "Potion Base Singularity",
+    "item.kubejs.blaze_cake_singularity": "Blaze Cake Singularity"
+  })
+  /* Not yet implemented.
+  event.add('block.kubejs.la_lettre_a_focalors', 'La Lettre a Focalors')
+  event.add('block.kubejs.pour_la_justice', 'Pour la Justice')
+  */
+  event.addAll('create', {
+    // create death messages
+    "death.attack.create.crush": "%1$s was processed by Crushing Wheels, an unfortunate accident.",
+    "death.attack.create.crush.player": "%1$s was thrown into Crushing Wheels by %2$s. The ultimate betrayal by a fellow engineer!",
+    "death.attack.create.fan_fire": "%1$s got smoked by an Encased Fan",
+    "death.attack.create.fan_fire.player": "%1$s was thrown into a smoker by %2$s. Does anyone smell bacon?",
+    "death.attack.create.fan_lava": "%1$s was incinerated by an Encased Fan",
+    "death.attack.create.fan_lava.player": "%1$s was thrown into a smelter by %2$s",
+    "death.attack.create.mechanical_drill": "%1$s was impaled by a Mechanical Drill",
+    "death.attack.create.mechanical_drill.player": "%1$s was thrown in front of a Drill by %2$s",
+    "death.attack.create.mechanical_roller": "%1$s was flattened by a Mechanical Roller",
+    "death.attack.create.mechanical_roller.player": "%1$s was thrown in front of a Mechanical Roller by %2$s",
+    "death.attack.create.mechanical_saw": "%1$s got cut in half by a Mechanical Saw",
+    "death.attack.create.mechanical_saw.player": "%1$s was thrown into a Saw by %2$s",
+    "death.attack.create.potato_cannon": "%1$s was shot by %2$s's Potato Cannon",
+    "death.attack.create.potato_cannon.item": "%1$s was shot by %2$s using %3$s",
+    "death.attack.create.cuckoo_clock_explosion": "%1$s was blown up by tampered cuckoo clock",
+    "death.attack.create.cuckoo_clock_explosion.player": "%1$s was blown up by tampered cuckoo clock",
+    "death.attack.create.run_over": "%1$s was run over by %2$s"
+  })
+  if (Platform.isLoaded('roughlyenoughitems')) {
+    // Corrected from Recipe Id: to Recipe ID: for consistency.
+    event.add('roughlyenoughitems', 'text.rei.recipe_id', '\n%sRecipe ID: %s')
+  }
+  if (Platform.isLoaded('alexsmobs')) {
+    event.addAll('alexsmobs', {
+      "alexsmobs.potion.soulsteal.desc": "Your attacks are granted life-steal.",
+      "alexsmobs.potion.bug_pheromones.desc": "Makes hostile arthopods neutral to you.",
+      "alexsmobs.potion.poison_resistance.desc": "Grants immunity to poison."
+    })
+  }
+  if (Platform.isLoaded('apotheosis') && Platform.isLoaded('gateways')) {
+    event.addAll('kubejs', {
+      "kubejs.drowned_gate_small": "Small Drowned Gate",
+      "kubejs.drowned_gate": "Drowned Gate",
+      "kubejs.drowned_gate_large": "Large Drowned Gate",
+      "kubejs.husk_gate_small": "Small Husk Gate",
+      "kubejs.husk_gate": "Husk Gate",
+      "kubejs.husk_gate_large": "Large Husk Gate",
+      "kubejs.hoglin_gate_small": "Small Hoglin Gate",
+      "kubejs.hoglin_gate": "Hoglin Gate",
+      "kubejs.hoglin_gate_large": "Large Hoglin Gate",
+      "kubejs.boss_gate": "Apothic Boss Gate",
+      "kubejs.boss_gate_large": "Large Apothic Boss Gate",
+      "kubejs.ultimatum_boss_gate": "Ultimatum Boss Gate",
+      "kubejs.mutant_boss_gate_large": "Large Mutant Boss Gate",
+      "kubejs.mass_destruction_boss_gate_large": "Bosses of Mass Destruction Gate",
+      "item.apotheosis.gem.kubejs:eversor": "Eversor Gem",
+      "item.apotheosis.gem.kubejs:acuti_ora": "Acuti Ora Gem"
+    })
+  }
+  if (Platform.isLoaded('create_bic_bit')) {
+    event.addAll('kubejs', {
+      "item.kubejs.speculaas_singularity": "Speculaas Singularity",
+      "item.kubejs.stroopwafel_singularity": "Stroopwafel Singularity",
+      "item.kubejs.oliebollen_singularity": "Oliebollen Singularity",
+      "item.kubejs.kroket_singularity": "Kroket Singularity",
+      "item.kubejs.bitterballen_singularity": "Bitterballen Singularity",
+      "item.kubejs.frikandel_singularity": "Frikandel Singularity",
+      "item.kubejs.fries_singularity": "Fries Singularity",
+      "item.kubejs.churros_singularity": "Churros Singularity",
+      "item.kubejs.stamppot_singularity": "Stamppot Singularity",
+      "item.kubejs.bic_bit_singularity": "Create: Bitterballen Singularity"
+    })
+  }
+  if (Platform.isLoaded('eccentrictome')) {
+    event.addAll('eccentrictome', {
+      "eccentrictome.convert": "Shift + Right-click",
+      "eccentrictome.name": "Eccentric Tome (%s)",
+      "item.eccentrictome.tome": "Eccentric Tome"
+    })
+  }
+  if (Platform.isLoaded('createaddition')) {
+    event.addAll('createaddition', {
+      "createaddition.ponder.liquid_blaze_burner.header": "DISABLED - Liquid Fuel Burning",
+      "createaddition.ponder.liquid_blaze_burner.text_1": "DISABLED - Giving the Blaze Burner a Straw",
+      "createaddition.ponder.liquid_blaze_burner.text_2": "This feature is disabled.",
+      "createaddition.ponder.liquid_blaze_burner.text_3": "This feature is disabled."
+    })
+  }
 })
 
 /* The full JSON lang archive TYPED BY HAND
