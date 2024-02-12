@@ -33,7 +33,7 @@ LootJS.modifiers(event => {
     .entityPredicate(entity => {
       if (
         entity.hasCustomName() &&
-        entity.getCustomName().getString() == 'HeadHunter EX'
+        entity.getCustomName().getString() === 'HeadHunter EX'
       ) {
         return true
       } else {
@@ -42,6 +42,20 @@ LootJS.modifiers(event => {
     })
     .randomChance(0.05).addLoot('kubejs:unstable_entropy_particles')
     .randomChanceWithLooting(0.15, 3).addLoot('3x kubejs:unstable_entropy_particles')
+  if (Platform.isLoaded('apotheosis')) {
+    event.addEntityLootModifier('headhunter_mod:head_hunter')
+      .entityPredicate(entity => {
+        if (
+          entity.hasCustomName() &&
+          entity.getCustomName().getString() === 'HeadHunter EX'
+        ) {
+          return true
+        } else {
+          return false
+        }
+      })
+      .randomChance(0.10).addLoot(Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"common"}').weakNBT())
+  }
 })
 
 /**
