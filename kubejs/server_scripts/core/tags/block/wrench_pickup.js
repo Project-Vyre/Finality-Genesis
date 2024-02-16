@@ -15,6 +15,7 @@ ServerEvents.tags('block', event => {
     'minecraft:barrel',
     'minecraft:redstone_lamp',
     'minecraft:crafting_table',
+    'minecraft:composter',
     'minecraft:smithing_table',
     'minecraft:stonecutter',
     'minecraft:grindstone',
