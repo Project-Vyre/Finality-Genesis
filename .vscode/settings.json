@@ -27,5 +27,7 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "workbench.colorTheme": "GitHub Dark Default",
-  "files.eol": "\r\n"
+  "files.eol": "\r\n",
+  "prettier.endOfLine": "crlf",
+  "prettier.trailingComma": "none"
 }
