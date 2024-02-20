@@ -68,6 +68,10 @@
     "ench": true,
     "spawner": true
   },
+  "oregrowth": {
+    "ore_growth_hint": true,
+    "ore_growth_icon": true
+  },
   "lootr": {
     "info": true
   },

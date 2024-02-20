@@ -182,7 +182,7 @@
 			subtitle: "Convert your netherite coins to entropy coins here!"
 			tasks: [{
 				consume_items: true
-				count: 64L
+				count: 256L
 				disable_toast: true
 				id: "0D5188385C225B86"
 				item: "kubejs:netherite_coin"
@@ -199,7 +199,7 @@
 			hide: true
 			id: "46E204F9603B8D2D"
 			rewards: [{
-				count: 64
+				count: 256
 				id: "7B7EAC3BEB18FA07"
 				item: "kubejs:netherite_coin"
 				type: "item"
