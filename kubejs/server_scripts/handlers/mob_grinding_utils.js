@@ -316,7 +316,11 @@ ServerEvents.recipes(event => {
     event.shapeless('create_enchantment_industry:experience_rotor', [
       'create:zinc_nugget',
       'create:experience_nugget'
-    ]).id('finality:shaped/cei_experience_rotor')
+    ]).id('finality:shapeless/cei_mgutls_experience_rotor')
+    event.recipes.create.deploying('create_enchantment_industry:experience_rotor', [
+      'create:propeller',
+      'create:experience_nugget'
+    ]).id('finality:deploying/cei_mgutls_experience_rotor')
     event.recipes.create.mixing(Fluid.of('create_enchantment_industry:experience', 10), [
       'create_enchantment_industry:experience_rotor',
       Fluid.of('mob_grinding_utils:fluid_xp', 200)

@@ -30,11 +30,16 @@ ServerEvents.recipes(event => {
   ]).id('finality:compacting/condensing_universe_essence')
 
   event.recipes.create.compacting([
-    Fluid.of('kubejs:condensed_universal_entropy', 500),
-    Item.of('create:experience_nugget').withChance(0.50)
+    Fluid.of('kubejs:condensed_universal_entropy'),
+    Item.of('create:experience_nugget').withChance(0.25)
   ], [
     'minecraft:crying_obsidian'
   ]).superheated().id('finality:compacting/condensing_universe_essence_superheated')
+
+  event.recipes.create.emptying(
+    Fluid.of('kubejs:condensed_universal_entropy', 50),
+    'minecraft:crying_obsidian'
+  ).id('finality:emptying/cue_from_crying_obsidian')
 
   event.recipes.create.filling('kubejs:awakened_singularity_core', [
     'kubejs:dormant_singularity_core',
@@ -47,7 +52,7 @@ ServerEvents.recipes(event => {
   ], 'kubejs:awakened_singularity_core', [
     event.recipes.create.deploying(['kubejs:incomplete_andesite_alloy_singularity'], ['kubejs:incomplete_andesite_alloy_singularity', 'create:andesite_alloy_block']),
     event.recipes.create.pressing(['kubejs:incomplete_andesite_alloy_singularity'], ['kubejs:incomplete_andesite_alloy_singularity'])
-  ]).transitionalItem('kubejs:incomplete_andesite_alloy_singularity').loops(256).id('finality:sequenced_assembly/andesite_alloy_singularity')
+  ]).transitionalItem('kubejs:incomplete_andesite_alloy_singularity').loops(9).id('finality:sequenced_assembly/andesite_alloy_singularity')
   for (let i = 0; i < CREATEVALUED.length; i++) {
     let valued = CREATEVALUED[i];
     event.recipes.create.sequenced_assembly([
@@ -55,14 +60,14 @@ ServerEvents.recipes(event => {
     ], 'kubejs:awakened_singularity_core', [
       event.recipes.create.deploying([`kubejs:incomplete_${valued}_singularity`], [`kubejs:incomplete_${valued}_singularity`, `create:${valued}_block`]),
       event.recipes.create.pressing([`kubejs:incomplete_${valued}_singularity`], [`kubejs:incomplete_${valued}_singularity`])
-    ]).transitionalItem(`kubejs:incomplete_${valued}_singularity`).loops(256).id(`finality:sequenced_assembly/${valued}_singularity`)
+    ]).transitionalItem(`kubejs:incomplete_${valued}_singularity`).loops(9).id(`finality:sequenced_assembly/${valued}_singularity`)
   }
   event.recipes.create.sequenced_assembly([
     'kubejs:track_singularity'
   ], 'kubejs:awakened_singularity_core', [
     event.recipes.create.deploying(['kubejs:incomplete_track_singularity'], ['kubejs:incomplete_track_singularity', 'create:track']),
     event.recipes.create.pressing(['kubejs:incomplete_track_singularity'], ['kubejs:incomplete_track_singularity'])
-  ]).transitionalItem('kubejs:incomplete_track_singularity').loops(256).id('finality:sequenced_assembly/track_singularity')
+  ]).transitionalItem('kubejs:incomplete_track_singularity').loops(9).id('finality:sequenced_assembly/track_singularity')
 
   // sequenced assembly singularities
   event.recipes.create.sequenced_assembly([
@@ -73,7 +78,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing(['kubejs:incomplete_blue_ice_singularity'], ['kubejs:incomplete_blue_ice_singularity']),
     event.recipes.create.pressing(['kubejs:incomplete_blue_ice_singularity'], ['kubejs:incomplete_blue_ice_singularity']),
     event.recipes.create.pressing(['kubejs:incomplete_blue_ice_singularity'], ['kubejs:incomplete_blue_ice_singularity'])
-  ]).transitionalItem('kubejs:incomplete_blue_ice_singularity').loops(16).id('finality:sequenced_assembly/blue_ice_singularity')
+  ]).transitionalItem('kubejs:incomplete_blue_ice_singularity').loops(9).id('finality:sequenced_assembly/blue_ice_singularity')
   event.recipes.create.emptying([
     Fluid.of('kubejs:condensed_universal_order', 500),
     'kubejs:awakened_singularity_core'
@@ -87,7 +92,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('kubejs:incomplete_coarse_dirt_singularity', 'kubejs:incomplete_coarse_dirt_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_coarse_dirt_singularity', 'kubejs:incomplete_coarse_dirt_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_coarse_dirt_singularity', 'kubejs:incomplete_coarse_dirt_singularity')
-  ]).transitionalItem('kubejs:incomplete_coarse_dirt_singularity').loops(16).id('finality:sequenced_assembly/coarse_dirt_singularity')
+  ]).transitionalItem('kubejs:incomplete_coarse_dirt_singularity').loops(9).id('finality:sequenced_assembly/coarse_dirt_singularity')
 
   for (let i = 0; i < SAND.length; i++) {
     let insert = SAND[i];
@@ -99,7 +104,7 @@ ServerEvents.recipes(event => {
       event.recipes.create.pressing(`kubejs:incomplete_${insert}_singularity`, `kubejs:incomplete_${insert}_singularity`),
       event.recipes.create.pressing(`kubejs:incomplete_${insert}_singularity`, `kubejs:incomplete_${insert}_singularity`),
       event.recipes.create.pressing(`kubejs:incomplete_${insert}_singularity`, `kubejs:incomplete_${insert}_singularity`)
-    ]).transitionalItem(`kubejs:incomplete_${insert}_singularity`).loops(16).id(`finality:sequenced_assembly/${insert}_singularity`)
+    ]).transitionalItem(`kubejs:incomplete_${insert}_singularity`).loops(9).id(`finality:sequenced_assembly/${insert}_singularity`)
   }
 
   event.recipes.create.sequenced_assembly([
@@ -111,7 +116,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('kubejs:incomplete_soul_sand_singularity', 'kubejs:incomplete_soul_sand_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_soul_sand_singularity', 'kubejs:incomplete_soul_sand_singularity'),
     event.recipes.create.cutting('kubejs:incomplete_soul_sand_singularity', 'kubejs:incomplete_soul_sand_singularity').processingTime(20)
-  ]).transitionalItem('kubejs:incomplete_soul_sand_singularity').loops(32).id('finality:sequenced_assembly/soul_sand_singularity')
+  ]).transitionalItem('kubejs:incomplete_soul_sand_singularity').loops(9).id('finality:sequenced_assembly/soul_sand_singularity')
 
   event.recipes.create.sequenced_assembly([
     'kubejs:soul_soil_singularity'
@@ -122,17 +127,19 @@ ServerEvents.recipes(event => {
     event.recipes.create.cutting('kubejs:incomplete_soul_sand_singularity', 'kubejs:incomplete_soul_sand_singularity').processingTime(20),
     event.recipes.create.pressing('kubejs:incomplete_soul_sand_singularity', 'kubejs:incomplete_soul_sand_singularity'),
     event.recipes.create.cutting('kubejs:incomplete_soul_sand_singularity', 'kubejs:incomplete_soul_sand_singularity').processingTime(20)
-  ]).transitionalItem('kubejs:incomplete_soul_soil_singularity').loops(32).id('finality:sequenced_assembly/soul_soil_singularity')
+  ]).transitionalItem('kubejs:incomplete_soul_soil_singularity').loops(9).id('finality:sequenced_assembly/soul_soil_singularity')
 
   event.recipes.create.sequenced_assembly([
-    'kubejs:cobblestone_singularity'
+    Item.of('kubejs:cobblestone_singularity').withChance(0.50),
+    Item.of('minecraft:cobblestone').withChance(0.25),
+    Item.of('minecraft:stone').withChance(0.25)
   ], 'kubejs:awakened_singularity_core', [
     event.recipes.create.deploying('kubejs:incomplete_cobblestone_singularity', ['kubejs:incomplete_cobblestone_singularity', 'minecraft:cobblestone']),
     event.recipes.create.filling('kubejs:incomplete_cobblestone_singularity', ['kubejs:incomplete_cobblestone_singularity', Fluid.of('minecraft:lava', 25)]),
     event.recipes.create.pressing('kubejs:incomplete_cobblestone_singularity', 'kubejs:incomplete_cobblestone_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_cobblestone_singularity', 'kubejs:incomplete_cobblestone_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_cobblestone_singularity', 'kubejs:incomplete_cobblestone_singularity')
-  ]).transitionalItem('kubejs:incomplete_cobblestone_singularity').loops(256).id('finality:sequenced_assembly/cobblestone_singularity')
+  ]).transitionalItem('kubejs:incomplete_cobblestone_singularity').loops(9).id('finality:sequenced_assembly/cobblestone_singularity')
 
   event.recipes.create.sequenced_assembly([
     'kubejs:framed_glass_singularity'
@@ -142,7 +149,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.deploying('kubejs:incomplete_framed_glass_singularity', ['kubejs:incomplete_framed_glass_singularity', 'create:framed_glass']),
     event.recipes.create.pressing('kubejs:incomplete_framed_glass_singularity', 'kubejs:incomplete_framed_glass_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_framed_glass_singularity', 'kubejs:incomplete_framed_glass_singularity')
-  ]).transitionalItem('kubejs:incomplete_framed_glass_singularity').loops(32).id('finality:sequenced_assembly/framed_glass_singularity')
+  ]).transitionalItem('kubejs:incomplete_framed_glass_singularity').loops(4).id('finality:sequenced_assembly/framed_glass_singularity')
 
   event.recipes.create.sequenced_assembly([
     'kubejs:tinted_glass_singularity'
@@ -152,7 +159,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.deploying('kubejs:incomplete_tinted_glass_singularity', ['kubejs:incomplete_tinted_glass_singularity', 'minecraft:tinted_glass']),
     event.recipes.create.pressing('kubejs:incomplete_tinted_glass_singularity', 'kubejs:incomplete_tinted_glass_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_tinted_glass_singularity', 'kubejs:incomplete_tinted_glass_singularity')
-  ]).transitionalItem('kubejs:incomplete_tinted_glass_singularity').loops(32).id('finality:sequenced_assembly/tinted_glass_singularity')
+  ]).transitionalItem('kubejs:incomplete_tinted_glass_singularity').loops(4).id('finality:sequenced_assembly/tinted_glass_singularity')
 
   event.recipes.create.sequenced_assembly([
     Item.of('kubejs:precision_mechanism_singularity').withChance(75.0),
@@ -166,7 +173,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.deploying('kubejs:incomplete_precision_mechanism_singularity', ['kubejs:incomplete_precision_mechanism_singularity', 'create:large_cogwheel']),
     event.recipes.create.pressing('kubejs:incomplete_precision_mechanism_singularity', 'kubejs:incomplete_precision_mechanism_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_precision_mechanism_singularity', 'kubejs:incomplete_precision_mechanism_singularity')
-  ]).transitionalItem('kubejs:incomplete_precision_mechanism_singularity').loops(16).id('finality:sequenced_assembly/precision_mechanism_singularity')
+  ]).transitionalItem('kubejs:incomplete_precision_mechanism_singularity').loops(5).id('finality:sequenced_assembly/precision_mechanism_singularity')
 
   event.recipes.create.sequenced_assembly([
     'kubejs:sturdy_sheet_singularity'
@@ -177,7 +184,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('kubejs:incomplete_sturdy_sheet_singularity', 'kubejs:incomplete_sturdy_sheet_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_sturdy_sheet_singularity', 'kubejs:incomplete_sturdy_sheet_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_sturdy_sheet_singularity', 'kubejs:incomplete_sturdy_sheet_singularity')
-  ]).transitionalItem('kubejs:incomplete_sturdy_sheet_singularity').loops(16).id('finality:sequenced_assembly/sturdy_sheet_singularity')
+  ]).transitionalItem('kubejs:incomplete_sturdy_sheet_singularity').loops(4).id('finality:sequenced_assembly/sturdy_sheet_singularity')
 
   event.recipes.create.sequenced_assembly([
     'kubejs:builders_tea_singularity'
@@ -188,7 +195,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.filling('kubejs:incomplete_builders_tea_singularity', ['kubejs:incomplete_builders_tea_singularity', Fluid.of('create:tea', 250)]),
     event.recipes.create.pressing('kubejs:incomplete_builders_tea_singularity', 'kubejs:incomplete_builders_tea_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_builders_tea_singularity', 'kubejs:incomplete_builders_tea_singularity')
-  ]).transitionalItem('kubejs:incomplete_builders_tea_singularity').loops(32).id('finality:sequenced_assembly/builders_tea_singularity')
+  ]).transitionalItem('kubejs:incomplete_builders_tea_singularity').loops(4).id('finality:sequenced_assembly/builders_tea_singularity')
 
   event.recipes.create.sequenced_assembly([
     'kubejs:chocolate_singularity'
@@ -199,7 +206,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.deploying('kubejs:incomplete_chocolate_singularity', ['kubejs:incomplete_chocolate_singularity', 'create:bar_of_chocolate']),
     event.recipes.create.filling('kubejs:incomplete_chocolate_singularity', ['kubejs:incomplete_chocolate_singularity', Fluid.of('create:chocolate', 250)]),
     event.recipes.create.pressing('kubejs:incomplete_chocolate_singularity', 'kubejs:incomplete_chocolate_singularity')
-  ]).transitionalItem('kubejs:incomplete_chocolate_singularity').loops(36).id('finality:sequenced_assembly/chocolate_singularity')
+  ]).transitionalItem('kubejs:incomplete_chocolate_singularity').loops(4).id('finality:sequenced_assembly/chocolate_singularity')
 
   event.recipes.create.sequenced_assembly([
     'kubejs:end_crystal_singularity'
@@ -214,13 +221,20 @@ ServerEvents.recipes(event => {
     let color = COLOR[i];
     event.recipes.create.sequenced_assembly([
       'kubejs:concrete_' + color + '_singularity'
+    ], 'kubejs:awakened_singularity_core', [
+      event.recipes.create.deploying(`kubejs:incomplete_concrete_${color}_singularity`, [`kubejs:incomplete_concrete_${color}_singularity`, `minecraft:${color}_concrete_powder`]),
+      event.recipes.create.filling(`kubejs:incomplete_concrete_${color}_singularity`, [`kubejs:incomplete_concrete_${color}_singularity`, Fluid.of('minecraft:water', 500)]),
+      event.recipes.create.pressing(`kubejs:incomplete_concrete_${color}_singularity`, `kubejs:incomplete_concrete_${color}_singularity`)
+    ]).transitionalItem(`kubejs:incomplete_concrete_${color}_singularity`).loops(9).id(`finality:sequenced_assembly/${color}_concrete_singularity`)
+    event.recipes.create.sequenced_assembly([
+      'kubejs:concrete_' + color + '_singularity'
     ], `minecraft:${color}_concrete`, [
       event.recipes.create.deploying(`kubejs:incomplete_concrete_${color}_singularity`, [`kubejs:incomplete_concrete_${color}_singularity`, `minecraft:${color}_concrete_powder`]),
       event.recipes.create.filling(`kubejs:incomplete_concrete_${color}_singularity`, [`kubejs:incomplete_concrete_${color}_singularity`, Fluid.of('minecraft:water', 500)]),
       event.recipes.create.pressing(`kubejs:incomplete_concrete_${color}_singularity`, `kubejs:incomplete_concrete_${color}_singularity`),
       event.recipes.create.pressing(`kubejs:incomplete_concrete_${color}_singularity`, `kubejs:incomplete_concrete_${color}_singularity`),
       event.recipes.create.pressing(`kubejs:incomplete_concrete_${color}_singularity`, `kubejs:incomplete_concrete_${color}_singularity`)
-    ]).transitionalItem(`kubejs:incomplete_concrete_${color}_singularity`).loops(128).id(`finality:sequenced_assembly/${color}_concrete_singularity`)
+    ]).transitionalItem(`kubejs:incomplete_concrete_${color}_singularity`).loops(9).id(`finality:sequenced_assembly/${color}_concrete_singularity_from_compression`)
   }
 
   event.recipes.create.mixing('kubejs:chromatic_concrete_singularity', [
@@ -257,7 +271,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('kubejs:incomplete_coal_singularity', 'kubejs:incomplete_coal_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_coal_singularity', 'kubejs:incomplete_coal_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_coal_singularity', 'kubejs:incomplete_coal_singularity')
-  ]).transitionalItem('kubejs:incomplete_coal_singularity').loops(64).id('finality:sequenced_assembly/coal_singularity')
+  ]).transitionalItem('kubejs:incomplete_coal_singularity').loops(9).id('finality:sequenced_assembly/coal_singularity')
 
   event.recipes.create.mechanical_crafting('kubejs:lapis_singularity', [
     ' LLLLLLL ',
@@ -285,7 +299,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('kubejs:incomplete_lapis_singularity', 'kubejs:incomplete_lapis_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_lapis_singularity', 'kubejs:incomplete_lapis_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_lapis_singularity', 'kubejs:incomplete_lapis_singularity')
-  ]).transitionalItem('kubejs:incomplete_lapis_singularity').loops(64).id('finality:sequenced_assembly/lapis_singularity')
+  ]).transitionalItem('kubejs:incomplete_lapis_singularity').loops(9).id('finality:sequenced_assembly/lapis_singularity')
 
   for (let i = 0; i < VANILLAMATS.length; i++) {
     let vanilla = VANILLAMATS[i];
@@ -315,7 +329,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('kubejs:incomplete_amethyst_singularity', 'kubejs:incomplete_amethyst_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_amethyst_singularity', 'kubejs:incomplete_amethyst_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_amethyst_singularity', 'kubejs:incomplete_amethyst_singularity')
-  ]).transitionalItem('kubejs:incomplete_amethyst_singularity').loops(64).id('finality:sequenced_assembly/amethyst_singularity')
+  ]).transitionalItem('kubejs:incomplete_amethyst_singularity').loops(4).id('finality:sequenced_assembly/amethyst_singularity')
   event.recipes.create.sequenced_assembly([
     Item.of('kubejs:copper_singularity').withChance(0.50),
     Item.of('kubejs:errored_result').withChance(0.25),
@@ -328,7 +342,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('kubejs:incomplete_copper_singularity', 'kubejs:incomplete_copper_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_copper_singularity', 'kubejs:incomplete_copper_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_copper_singularity', 'kubejs:incomplete_copper_singularity')
-  ]).transitionalItem('kubejs:incomplete_copper_singularity').loops(64).id('finality:sequenced_assembly/copper_singularity')
+  ]).transitionalItem('kubejs:incomplete_copper_singularity').loops(9).id('finality:sequenced_assembly/copper_singularity')
   event.recipes.create.sequenced_assembly([
     Item.of('kubejs:iron_singularity').withChance(0.50),
     Item.of('kubejs:errored_result').withChance(0.25),
@@ -341,7 +355,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('kubejs:incomplete_iron_singularity', 'kubejs:incomplete_iron_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_iron_singularity', 'kubejs:incomplete_iron_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_iron_singularity', 'kubejs:incomplete_iron_singularity')
-  ]).transitionalItem('kubejs:incomplete_iron_singularity').loops(64).id('finality:sequenced_assembly/iron_singularity')
+  ]).transitionalItem('kubejs:incomplete_iron_singularity').loops(9).id('finality:sequenced_assembly/iron_singularity')
   event.recipes.create.sequenced_assembly([
     Item.of('kubejs:redstone_singularity').withChance(0.50),
     Item.of('kubejs:errored_result').withChance(0.25),
@@ -369,7 +383,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('kubejs:incomplete_gold_singularity', 'kubejs:incomplete_gold_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_gold_singularity', 'kubejs:incomplete_gold_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_gold_singularity', 'kubejs:incomplete_gold_singularity')
-  ]).transitionalItem('kubejs:incomplete_gold_singularity').loops(64).id('finality:sequenced_assembly/gold_singularity')
+  ]).transitionalItem('kubejs:incomplete_gold_singularity').loops(9).id('finality:sequenced_assembly/gold_singularity')
   event.recipes.create.sequenced_assembly([
     Item.of('kubejs:diamond_singularity').withChance(0.50),
     Item.of('kubejs:errored_result').withChance(0.25),
@@ -383,7 +397,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('kubejs:incomplete_diamond_singularity', 'kubejs:incomplete_diamond_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_diamond_singularity', 'kubejs:incomplete_diamond_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_diamond_singularity', 'kubejs:incomplete_diamond_singularity')
-  ]).transitionalItem('kubejs:incomplete_diamond_singularity').loops(64).id('finality:sequenced_assembly/diamond_singularity')
+  ]).transitionalItem('kubejs:incomplete_diamond_singularity').loops(9).id('finality:sequenced_assembly/diamond_singularity')
   event.recipes.create.sequenced_assembly([
     Item.of('kubejs:emerald_singularity').withChance(0.50),
     Item.of('kubejs:errored_result').withChance(0.25),
@@ -397,13 +411,12 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('kubejs:incomplete_emerald_singularity', 'kubejs:incomplete_emerald_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_emerald_singularity', 'kubejs:incomplete_emerald_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_emerald_singularity', 'kubejs:incomplete_emerald_singularity')
-  ]).transitionalItem('kubejs:incomplete_emerald_singularity').loops(64).id('finality:sequenced_assembly/emerald_singularity')
+  ]).transitionalItem('kubejs:incomplete_emerald_singularity').loops(9).id('finality:sequenced_assembly/emerald_singularity')
   event.recipes.create.sequenced_assembly([
     Item.of('kubejs:quartz_singularity').withChance(0.50),
     Item.of('kubejs:errored_result').withChance(0.25),
     Item.of('minecraft:quartz_block').withChance(0.10),
-    'minecraft:quartz_ore',
-    'minecraft:deepslate_quartz_ore'
+    'minecraft:nether_quartz_ore'
   ], 'kubejs:awakened_singularity_core', [
     event.recipes.create.deploying('kubejs:incomplete_quartz_singularity', ['kubejs:incomplete_quartz_singularity', 'minecraft:quartz_block']),
     event.recipes.create.pressing('kubejs:incomplete_quartz_singularity', 'kubejs:incomplete_quartz_singularity'),
@@ -411,7 +424,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('kubejs:incomplete_quartz_singularity', 'kubejs:incomplete_quartz_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_quartz_singularity', 'kubejs:incomplete_quartz_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_quartz_singularity', 'kubejs:incomplete_quartz_singularity')
-  ]).transitionalItem('kubejs:incomplete_quartz_singularity').loops(64).id('finality:sequenced_assembly/quartz_singularity')
+  ]).transitionalItem('kubejs:incomplete_quartz_singularity').loops(9).id('finality:sequenced_assembly/quartz_singularity')
   event.recipes.create.sequenced_assembly([
     Item.of('kubejs:netherite_singularity').withChance(0.50),
     Item.of('kubejs:errored_result').withChance(0.25),
@@ -425,7 +438,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('kubejs:incomplete_netherite_singularity', 'kubejs:incomplete_netherite_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_netherite_singularity', 'kubejs:incomplete_netherite_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_netherite_singularity', 'kubejs:incomplete_netherite_singularity')
-  ]).transitionalItem('kubejs:incomplete_netherite_singularity').loops(64).id('finality:sequenced_assembly/netherite_singularity')
+  ]).transitionalItem('kubejs:incomplete_netherite_singularity').loops(9).id('finality:sequenced_assembly/netherite_singularity')
   event.recipes.create.sequenced_assembly([
     Item.of('kubejs:honey_singularity').withChance(0.50),
     Item.of('kubejs:errored_result').withChance(0.25),
@@ -436,7 +449,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.deploying('kubejs:incomplete_honey_singularity', ['kubejs:incomplete_honey_singularity', 'minecraft:honey_block']),
     event.recipes.create.pressing('kubejs:incomplete_honey_singularity', 'kubejs:incomplete_honey_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_honey_singularity', 'kubejs:incomplete_honey_singularity')
-  ]).transitionalItem('kubejs:incomplete_honey_singularity').loops(16).id('finality:sequenced_assembly/honey_singularity')
+  ]).transitionalItem('kubejs:incomplete_honey_singularity').loops(9).id('finality:sequenced_assembly/honey_singularity')
 
   let vnonstan = VANILLANOTSTANDARD.length;
   for (let i = 0; i < vnonstan; i++) {
@@ -465,7 +478,7 @@ ServerEvents.recipes(event => {
       event.recipes.create.pressing('kubejs:incomplete_' + insert + '_singularity', 'kubejs:incomplete_' + insert + '_singularity'),
       event.recipes.create.pressing('kubejs:incomplete_' + insert + '_singularity', 'kubejs:incomplete_' + insert + '_singularity'),
       event.recipes.create.pressing('kubejs:incomplete_' + insert + '_singularity', 'kubejs:incomplete_' + insert + '_singularity')
-    ]).transitionalItem('kubejs:incomplete_' + insert + '_singularity').loops(64).id('finality:sequenced_assembly/' + insert + '_singularity')
+    ]).transitionalItem('kubejs:incomplete_' + insert + '_singularity').loops(9).id('finality:sequenced_assembly/' + insert + '_singularity')
   }
 
   let x = 0, l = CREATEITEMS.length;
@@ -497,7 +510,7 @@ ServerEvents.recipes(event => {
       event.recipes.create.pressing('kubejs:incomplete_' + insert + '_singularity', 'kubejs:incomplete_' + insert + '_singularity'),
       event.recipes.create.pressing('kubejs:incomplete_' + insert + '_singularity', 'kubejs:incomplete_' + insert + '_singularity'),
       event.recipes.create.pressing('kubejs:incomplete_' + insert + '_singularity', 'kubejs:incomplete_' + insert + '_singularity')
-    ]).transitionalItem('kubejs:incomplete_' + insert + '_singularity').loops(64).id('finality:sequenced_assembly/' + insert + '_singularity')
+    ]).transitionalItem('kubejs:incomplete_' + insert + '_singularity').loops(9).id('finality:sequenced_assembly/' + insert + '_singularity')
   }
 
   event.recipes.create.sequenced_assembly([
@@ -532,7 +545,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.deploying('kubejs:incomplete_blaze_cake_singularity', ['kubejs:incomplete_blaze_cake_singularity', 'create:blaze_cake']),
     event.recipes.create.deploying('kubejs:incomplete_blaze_cake_singularity', ['kubejs:incomplete_blaze_cake_singularity', 'create:blaze_cake']),
     event.recipes.create.pressing('kubejs:incomplete_blaze_cake_singularity', 'kubejs:incomplete_blaze_cake_singularity')
-  ]).transitionalItem('kubejs:incomplete_blaze_cake_singularity').loops(32).id('finality:sequenced_assembly/blaze_cake_singularity')
+  ]).transitionalItem('kubejs:incomplete_blaze_cake_singularity').loops(4).id('finality:sequenced_assembly/blaze_cake_singularity')
 
   if (Platform.isLoaded('salt')) {
     event.recipes.create.sequenced_assembly([
@@ -544,7 +557,7 @@ ServerEvents.recipes(event => {
       event.recipes.create.deploying('kubejs:incomplete_salt_singularity', ['kubejs:incomplete_salt_singularity', 'salt:salt_block']),
       event.recipes.create.pressing('kubejs:incomplete_salt_singularity', 'kubejs:incomplete_salt_singularity'),
       event.recipes.create.pressing('kubejs:incomplete_salt_singularity', 'kubejs:incomplete_salt_singularity')
-    ]).transitionalItem('kubejs:incomplete_salt_singularity').loops(128).id('finality:sequenced_assembly/salt_singularity')
+    ]).transitionalItem('kubejs:incomplete_salt_singularity').loops(9).id('finality:sequenced_assembly/salt_singularity')
   }
 
   event.recipes.create.mixing([

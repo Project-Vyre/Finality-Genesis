@@ -332,5 +332,5 @@ ServerEvents.recipes(event => {
     event.recipes.create.deploying('kubejs:stabilizing_qubit', ['kubejs:stabilizing_qubit', 'minecraft:blue_ice']),
     event.recipes.create.deploying('kubejs:stabilizing_qubit', ['kubejs:stabilizing_qubit', 'minecraft:blue_ice']),
     event.recipes.create.deploying('kubejs:stabilizing_qubit', ['kubejs:stabilizing_qubit', 'minecraft:blue_ice'])
-  ]).transitionalItem('kubejs:stabilizing_qubit').loops(4).id('finality:sequenced_assembly/qubit_stabilization')
+  ]).transitionalItem('kubejs:stabilizing_qubit').loops(1).id('finality:sequenced_assembly/qubit_stabilization')
 })

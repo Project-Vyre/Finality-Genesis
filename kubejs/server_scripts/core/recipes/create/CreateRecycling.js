@@ -67,6 +67,10 @@ ServerEvents.recipes(event => {
     'minecraft:flint_and_steel',
     'kubejs:deconstructor'
   ]).keepHeldItem().id('finality:deploying/flint_steel_deconstruction')
+  event.recipes.create.deploying('2x minecraft:iron_ingot', [
+    'minecraft:shears',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:deploying/shears_deconstruction')
   event.recipes.create.item_application([
     'create:iron_sheet',
     'minecraft:redstone'
@@ -120,6 +124,18 @@ ServerEvents.recipes(event => {
     'minecraft:dirt',
     'kubejs:deconstructor'
   ]).keepHeldItem().id('finality:item_application/undo_coarse_dirt')
+  event.recipes.create.item_application('minecraft:stone', [
+    'minecraft:cobblestone',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:item_application/undo_cobblestone_to_stone')
+  event.recipes.create.item_application('minecraft:stone', [
+    'minecraft:smooth_stone',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:item_application/undo_smooth_stone_to_stone')
+  event.recipes.create.item_application('minecraft:deepslate', [
+    'minecraft:cobbled_deepslate',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:item_application/undo_cobbled_deepslate_to_deepslate')
   event.recipes.create.item_application('minecraft:gravel', [
     'minecraft:coarse_dirt',
     'kubejs:deconstructor'
@@ -152,6 +168,88 @@ ServerEvents.recipes(event => {
     'create:railway_casing',
     'kubejs:deconstructor'
   ]).keepHeldItem().id('finality:item_application/undo_railway_casing')
+  event.recipes.create.deploying([
+    'create:shaft',
+    'minecraft:spruce_planks'
+  ], [
+    'create:cogwheel',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:deploying/cogwheel_deconstruction')
+  event.recipes.create.deploying([
+    'create:shaft',
+    '2x minecraft:spruce_planks'
+  ], [
+    'create:large_cogwheel',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:deploying/large_cogwheel_deconstruction')
+  // gearbox deconstruction
+  event.recipes.create.deploying([
+    '4x create:cogwheel',
+    'create:andesite_casing'
+  ], [
+    'create:gearbox',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:deploying/gearbox_deconstruction')
+  event.recipes.create.deploying([
+    '4x create:cogwheel',
+    'create:andesite_casing'
+  ], [
+    'create:vertical_gearbox',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:deploying/vertical_gearbox_deconstruction')
+  event.recipes.create.deploying([
+    '3x create:andesite_alloy',
+    'minecraft:iron_ingot',
+    'create:andesite_casing'
+  ], [
+    'create:mechanical_drill',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:deploying/mechanical_drill_deconstruction')
+  event.recipes.create.deploying([
+    'create:shaft',
+    'create:andesite_casing',
+    'minecraft:iron_block'
+  ], [
+    'create:mechanical_press',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:deploying/mechanical_press_deconstruction')
+  event.recipes.create.deploying([
+    '3x create:iron_sheet',
+    'minecraft:iron_ingot',
+    'create:andesite_casing'
+  ], [
+    'create:mechanical_saw',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:deploying/mechanical_saw_deconstruction')
+  event.recipes.create.deploying([
+    'create:shaft',
+    'create:andesite_casing',
+    'create:propeller'
+  ], [
+    'create:encased_fan',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:deploying/encased_fan_deconstruction')
+  event.recipes.create.deploying([
+    '4x create:iron_sheet',
+    'create:andesite_alloy'
+  ], [
+    'create:propeller',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:deploying/propeller_deconstruction')
+  event.recipes.create.deploying([
+    '2x create:iron_sheet',
+    'minecraft:barrel'
+  ], [
+    'create:item_vault',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:deploying/item_vault_deconstruction')
+  event.recipes.create.deploying([
+    '2x create:copper_sheet',
+    'minecraft:barrel'
+  ], [
+    'create:fluid_tank',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:deploying/fluid_tank_deconstruction')
   if (Platform.isLoaded('quark')) {
     event.recipes.create.item_application([
       '2x minecraft:gold_ingot',
@@ -186,8 +284,4 @@ ServerEvents.recipes(event => {
       'kubejs:deconstructor'
     ]).keepHeldItem().id('finality:item_application/supplementaries/netherite_trapdoor_deconstruction')
   }
-  event.recipes.create.deploying('2x minecraft:iron_ingot', [
-    'minecraft:shears',
-    'kubejs:deconstructor'
-  ]).keepHeldItem().id('finality:deploying/shears_deconstruction')
 })

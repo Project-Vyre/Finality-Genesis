@@ -81,11 +81,11 @@ ServerEvents.recipes(event => {
       event.recipes.create.deploying(transitional, [transitional, input]),
       event.recipes.create.pressing(transitional, transitional),
       event.recipes.create.pressing(transitional, transitional)
-    ]).transitionalItem(transitional).loops(64).id(recipeId)
+    ]).transitionalItem(transitional).loops(9).id(recipeId)
   }
   seqSingularity([
     Item.of('kubejs:speculaas_singularity').withChance(0.80),
-    Item.of('create_bic_bit:speculaas', 64).withChance(0.25),
+    Item.of('create_bic_bit:speculaas', 9).withChance(0.25),
     Item.of('kubejs:errored_result').withChance(0.10)
   ],
     'create_bic_bit:speculaas',
@@ -94,7 +94,7 @@ ServerEvents.recipes(event => {
   )
   seqSingularity([
     Item.of('kubejs:stroopwafel_singularity').withChance(0.80),
-    Item.of('create_bic_bit:stroopwafel', 64).withChance(0.25),
+    Item.of('create_bic_bit:stroopwafel', 9).withChance(0.25),
     Item.of('kubejs:errored_result').withChance(0.10)
   ],
     'create_bic_bit:stroopwafel',
@@ -103,7 +103,7 @@ ServerEvents.recipes(event => {
   )
   seqSingularity([
     Item.of('kubejs:oliebollen_singularity').withChance(0.80),
-    Item.of('create_bic_bit:oliebollen', 64).withChance(0.25),
+    Item.of('create_bic_bit:oliebollen', 9).withChance(0.25),
     Item.of('kubejs:errored_result').withChance(0.10)
   ],
     'create_bic_bit:oliebollen',
@@ -112,7 +112,7 @@ ServerEvents.recipes(event => {
   )
   seqSingularity([
     Item.of('kubejs:kroket_singularity').withChance(0.80),
-    Item.of('create_bic_bit:kroket', 64).withChance(0.25),
+    Item.of('create_bic_bit:kroket', 9).withChance(0.25),
     Item.of('kubejs:errored_result').withChance(0.10)
   ],
     'create_bic_bit:kroket',
@@ -121,7 +121,7 @@ ServerEvents.recipes(event => {
   )
   seqSingularity([
     Item.of('kubejs:bitterballen_singularity').withChance(0.80),
-    Item.of('create_bic_bit:bitterballen', 64).withChance(0.25),
+    Item.of('create_bic_bit:bitterballen', 9).withChance(0.25),
     Item.of('kubejs:errored_result').withChance(0.10)
   ],
     'create_bic_bit:bitterballen',
@@ -130,7 +130,7 @@ ServerEvents.recipes(event => {
   )
   seqSingularity([
     Item.of('kubejs:frikandel_singularity').withChance(0.80),
-    Item.of('create_bic_bit:frikandel').withChance(0.25),
+    Item.of('create_bic_bit:frikandel', 9).withChance(0.25),
     Item.of('kubejs:errored_result').withChance(0.10)
   ],
     'create_bic_bit:frikandel',
@@ -139,7 +139,7 @@ ServerEvents.recipes(event => {
   )
   seqSingularity([
     Item.of('kubejs:fries_singularity').withChance(0.80),
-    Item.of('create_bic_bit:bitterballen', 64).withChance(0.25),
+    Item.of('create_bic_bit:bitterballen', 9).withChance(0.25),
     Item.of('kubejs:errored_result').withChance(0.10)
   ],
     'create_bic_bit:fries',
@@ -148,7 +148,7 @@ ServerEvents.recipes(event => {
   )
   seqSingularity([
     Item.of('kubejs:churros_singularity').withChance(0.80),
-    Item.of('create_bic_bit:churros', 64).withChance(0.25),
+    Item.of('create_bic_bit:churros', 9).withChance(0.25),
     Item.of('kubejs:errored_result').withChance(0.10)
   ],
     'create_bic_bit:churros',
@@ -162,7 +162,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.filling('kubejs:incomplete_stamppot_singularity', ['kubejs:incomplete_stamppot_singularity', Fluid.of('create_bic_bit:stamppot', 250)]),
     event.recipes.create.pressing('kubejs:incomplete_stamppot_singularity', 'kubejs:incomplete_stamppot_singularity'),
     event.recipes.create.pressing('kubejs:incomplete_stamppot_singularity', 'kubejs:incomplete_stamppot_singularity')
-  ]).transitionalItem('kubejs:incomplete_stamppot_singularity').loops(16).id('finality:sequenced_assembly/stamppot_singularity')
+  ]).transitionalItem('kubejs:incomplete_stamppot_singularity').loops(4).id('finality:sequenced_assembly/stamppot_singularity')
   event.recipes.create.mixing('kubejs:bic_bit_singularity', [
     'kubejs:speculaas_singularity',
     'kubejs:stroopwafel_singularity',

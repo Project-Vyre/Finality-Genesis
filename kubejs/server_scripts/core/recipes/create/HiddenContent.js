@@ -19,4 +19,12 @@ ServerEvents.recipes(event => {
     '#forge:stripped_logs',
     'create:shadow_steel'
   ]).id('create:shadow_steel_casing')
+  event.recipes.create.deploying('create:refined_radiance', [
+    'create:chromatic_compound',
+    'minecraft:beacon'
+  ]).keepHeldItem().id('finality:deploying/refined_radiance_from_beacon')
+  event.recipes.create.deploying('create:shadow_steel', [
+    'create:chromatic_compound',
+    'minecraft:crying_obsidian'
+  ]).keepHeldItem().id('finality:deploying/shadow_steel_from_crying_obsidian')
 })

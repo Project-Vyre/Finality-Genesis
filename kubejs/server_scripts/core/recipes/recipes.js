@@ -552,6 +552,28 @@ ServerEvents.recipes(event => {
     Fluid.of('kubejs:shimmer', 750),
     'minecraft:netherrack',
   ]).id('finality:compacting/netherite_scrap_renewal')
+  event.recipes.create.compacting([
+    Item.of('minecraft:raw_gold', 9).withChance(0.25),
+    Item.of('minecraft:raw_copper', 9).withChance(0.25),
+    Item.of('create:raw_zinc', 9).withChance(0.25),
+    Item.of('minecraft:raw_iron', 9).withChance(0.25)
+  ], [
+    'minecraft:tuff',
+    Fluid.of('kubejs:shimmer')
+  ]).id('finality:compacting/shimmer_tuff')
+  event.recipes.create.compacting([
+    Item.of('minecraft:raw_gold', 9).withChance(0.25),
+    Item.of('minecraft:raw_copper', 9).withChance(0.25),
+    Item.of('create:raw_zinc', 9).withChance(0.25),
+    Item.of('minecraft:raw_iron', 9).withChance(0.25)
+  ], [
+    '#create:stone_types/tuff',
+    Fluid.of('kubejs:shimmer')
+  ]).id('finality:compacting/shimmer_tuff_recycling')
+  event.recipes.create.filling('minecraft:budding_amethyst', [
+    'minecraft:amethyst_block',
+    Fluid.of('kubejs:condensed_universal_order', 250)
+  ]).id('finality:filling/budding_amethyst')
   // Mushroom Stew
   event.recipes.create.filling('minecraft:mushroom_stew', [
     'minecraft:bowl',

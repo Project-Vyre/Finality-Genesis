@@ -20,6 +20,10 @@ ServerEvents.recipes(event => {
     { id: 'functionalstorage:gold_upgrade' },
     { id: 'functionalstorage:diamond_upgrade' },
     { id: 'functionalstorage:netherite_upgrade' },
+    { id: 'functionalstorage:collector_upgrade' },
+    { id: 'functionalstorage:puller_upgrade' },
+    { id: 'functionalstorage:pusher_upgrade' },
+    { id: 'functionalstorage:void_upgrade' },
     { id: 'functionalstorage:ender_drawer' }
   ])
   event.shapeless('kubejs:ender_drawer_linking_guide', [
@@ -222,6 +226,45 @@ ServerEvents.recipes(event => {
     N: 'kubejs:netherite_singularity',
     U: 'functionalstorage:diamond_upgrade'
   }).id('finality:functionalstorage/crafting/netherite_upgrade')
+  // Utility Upgrades
+  event.shaped('functionalstorage:collector_upgrade', [
+    'IHI',
+    'RDR',
+    'IHI'
+  ], {
+    I: '#forge:plates/iron',
+    H: 'minecraft:hopper',
+    R: 'minecraft:redstone',
+    D: '#functionalstorage:drawer'
+  }).id('finality:functionalstorage/crafting/collector_upgrade')
+  event.shaped('functionalstorage:puller_upgrade', [
+    'IHI',
+    'IDI',
+    'IRI'
+  ], {
+    I: '#forge:plates/iron',
+    H: 'minecraft:hopper',
+    R: 'minecraft:redstone',
+    D: '#functionalstorage:drawer'
+  }).id('finality:functionalstorage/crafting/puller_upgrade')
+  event.shaped('functionalstorage:pusher_upgrade', [
+    'IRI',
+    'IDI',
+    'IHI'
+  ], {
+    I: '#forge:plates/iron',
+    H: 'minecraft:hopper',
+    R: 'minecraft:redstone',
+    D: '#functionalstorage:drawer'
+  }).id('finality:functionalstorage/pusher_upgrade')
+  event.shaped('functionalstorage:void_upgrade', [
+    'UUU',
+    'UDU',
+    'UUU'
+  ], {
+    U: '#forge:plates/obsidian',
+    D: '#functionalstorage:drawer'
+  }).id('finality:functionalstorage/void_upgrade')
 })
 
 ServerEvents.tags('block', event => {
