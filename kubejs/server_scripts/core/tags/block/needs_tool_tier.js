@@ -5,5 +5,8 @@
  */
 
 ServerEvents.tags('block', event => {
-  event.add('minecraft:needs_stone_tool', 'minecraft:deepslate')
+  event.add('minecraft:needs_stone_tool', [
+    'minecraft:cobbled_deepslate',
+    'minecraft:deepslate'
+  ])
 })

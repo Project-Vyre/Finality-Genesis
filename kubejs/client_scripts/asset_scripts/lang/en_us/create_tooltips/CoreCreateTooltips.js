@@ -278,7 +278,7 @@ ClientEvents.lang('en_us', event => {
     "item.minecraft.raw_copper.tooltip": "RAW COPPER",
     "item.minecraft.raw_copper.tooltip.summary": "Unrefined, but an _important_ ingredient in everything related to Create _fluid_ manipulation.",
     "item.minecraft.raw_copper.tooltip.condition1": "Renewal",
-    "item.minecraft.raw_copper.tooltip.behaviour1": "Can be _renewed_ from _Drowned_ in ingot form or from _Tuff_ in nugget form.",
+    "item.minecraft.raw_copper.tooltip.behaviour1": "Can be _renewed_ from _Drowned_ in ingot form as a loot drop or from _Tuff_ in nugget form.",
     "item.minecraft.copper_ingot.tooltip": "COPPER INGOT",
     "item.minecraft.copper_ingot.tooltip.summary": "Now in its _refined_ form, it is now _useful_ to you.",
     "item.minecraft.copper_ingot.tooltip.condition1": "When combined with a Zinc Ingot",
@@ -286,7 +286,7 @@ ClientEvents.lang('en_us', event => {
     "item.minecraft.copper_ingot.tooltip.condition2": "When pressed",
     "item.minecraft.copper_ingot.tooltip.behaviour2": "Turns into a _Copper Sheet_ which has additional uses, primarily focused on fluid manipulation.",
     "item.minecraft.copper_ingot.tooltip.condition3": "Renewal",
-    "item.minecraft.copper_ingot.tooltip.behaviour3": "Can be _renewed_ from Drowned or from _Tuff_ in nugget form.",
+    "item.minecraft.copper_ingot.tooltip.behaviour3": "Can be _renewed_ from _Drowned_ as a loot drop or from _Tuff_ in nugget form.",
     "item.minecraft.raw_gold.tooltip": "RAW GOLD",
     "item.minecraft.raw_gold.tooltip.summary": "Unrefined, but an _important_ ingredient in Create components.",
     "item.minecraft.raw_gold.tooltip.condition1": "Renewal",
@@ -514,6 +514,15 @@ ClientEvents.lang('en_us', event => {
           'Caution!',
           'Don\'t _accidentally_ hit your friends!'
         ])
+        .setPalette($Palette.PURPLE)
+        .build()
+    )
+  }
+  if (Platform.isLoaded('fusion')) {
+    event.addAll(
+      'kubejs',
+      createTooltip('kubejs:high_entropy_alloy_block_connecting')
+        .addSummary('The _connecting_ variant.')
         .setPalette($Palette.PURPLE)
         .build()
     )
