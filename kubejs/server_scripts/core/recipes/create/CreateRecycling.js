@@ -15,14 +15,31 @@ ServerEvents.recipes(event => {
       '',
   ], 'minecraft:detector_rail').processingTime(120).id('finality:crushing/detector_rail_recycling')
   */
+  // anvil recycling
   event.recipes.create.crushing([
     '3x minecraft:iron_block',
     '4x minecraft:iron_ingot'
   ], 'minecraft:anvil').processingTime(300).id('finality:crushing/anvil_recycling')
+  event.recipes.create.crushing([
+    '3x minecraft:iron_block',
+    '4x minecraft:iron_ingot'
+  ], 'minecraft:chipped_anvil').processingTime(300).id('finality:crushing/chipped_anvil_recycling')
+  event.recipes.create.crushing([
+    '3x minecraft:iron_block',
+    '4x minecraft:iron_ingot'
+  ], 'minecraft:damaged_anvil').processingTime(300).id('finality:crushing/damaged_anvil_recycling')
   event.recipes.create.item_application('31x minecraft:iron_ingot', [
     'minecraft:anvil',
     'kubejs:deconstructor'
   ]).keepHeldItem().id('finality:item_application/anvil_deconstruction')
+  event.recipes.create.item_application('31x minecraft:iron_ingot', [
+    'minecraft:chipped_anvil',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:item_application/chipped_anvil_deconstruction')
+  event.recipes.create.item_application('31x minecraft:iron_ingot', [
+    'minecraft:damaged_anvil',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('finality:item_application/damaged_anvil_deconstruction')
   event.recipes.create.cutting([
     'minecraft:gold_block',
     'create:golden_sheet'
@@ -283,5 +300,16 @@ ServerEvents.recipes(event => {
       'supplementaries:netherite_trapdoor',
       'kubejs:deconstructor'
     ]).keepHeldItem().id('finality:item_application/supplementaries/netherite_trapdoor_deconstruction')
+  }
+  if (Platform.isLoaded('irons_spellbooks')) {
+    event.recipes.create.deploying([
+      '3x minecraft:amethyst_block',
+      '2x minecraft:anvil',
+      'minecraft:diamond',
+      'minecraft:netherite_ingot'
+    ], [
+      'irons_spellbooks:arcane_anvil',
+      'kubejs:deconstructor'
+    ]).keepHeldItem().id('finality:item_application/irons_spellbooks/arcane_anvil_deconstruction')
   }
 })
