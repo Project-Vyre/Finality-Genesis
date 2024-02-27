@@ -30,15 +30,15 @@
     "entity_health": true,
     "energy_storage": true,
     "entity_armor.max_for_render": 40,
-    "enchantment_power": true,
     "breaking_progress": true,
+    "enchantment_power": true,
     "tnt_stability": true,
     "villager_profession": true,
     "mob_breeding": true,
     "entity_health.icons_per_line": 10,
     "item_frame": true,
-    "crop_progress": true,
     "fluid.detailed": false,
+    "crop_progress": true,
     "total_enchantment_power": true,
     "potion_effects": true,
     "command_block": true,
@@ -68,16 +68,16 @@
     "ench": true,
     "spawner": true
   },
+  "lootr": {
+    "info": true
+  },
   "oregrowth": {
     "ore_growth_hint": true,
     "ore_growth_icon": true
   },
-  "lootr": {
-    "info": true
-  },
   "extendedcrafting": {
-    "ender_crafter": true,
     "elite_auto_table": true,
+    "ender_crafter": true,
     "basic_auto_table": true,
     "flux_crafter": true,
     "advanced_table": true,
@@ -89,6 +89,10 @@
     "crafting_core": true,
     "advanced_auto_table": true,
     "compressor": true
+  },
+  "tesseract": {
+    "tesseract": true,
+    "remove_default": true
   },
   "jadeaddons": {
     "equipment_requirement": ""
