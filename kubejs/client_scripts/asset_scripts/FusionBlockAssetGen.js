@@ -22,7 +22,13 @@ ClientEvents.highPriorityAssets(event => {
     "loader": "fusion:model",
     "type": "fusion:connecting",
     "connections": [
-      { "type": "is_same_block" }
+      {
+        "type": "and",
+        "predicates": [
+          { "type": "is_same_block" },
+          { "type": "is_face_visible" }
+        ]
+      }
     ],
     "parent": "minecraft:block/cube_all",
     "textures": {
