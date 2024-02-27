@@ -1,11 +1,15 @@
 // requires: better_beacons
+// requires: fusion
 
 ServerEvents.tags('item', event => {
   event.add('minecraft:beacon_payment_items', 'kubejs:high_entropy_alloy')
 })
 
 ServerEvents.tags('block', event => {
-  event.add('minecraft:beacon_base_blocks', 'kubejs:high_entropy_alloy_block')
+  event.add('minecraft:beacon_base_blocks', [
+    'kubejs:high_entropy_alloy_block',
+    'kubejs:high_entropy_alloy_block_connecting'
+  ])
 })
 
 ServerEvents.highPriorityData(event => {
@@ -30,10 +34,6 @@ ServerEvents.highPriorityData(event => {
       {
         "item": "minecraft:netherite_ingot",
         "range": 60
-      },
-      {
-        "item": "kubejs:high_entropy_alloy",
-        "range": 512
       }
     ]
   })
@@ -58,9 +58,25 @@ ServerEvents.highPriorityData(event => {
       {
         "block": "minecraft:netherite_block",
         "amplifier": 3
-      },
+      }
+    ]
+  })
+  event.addJson('better_beacons:payment_items_range/kubejs', {
+    "values": [
+      {
+        "item": "kubejs:high_entropy_alloy",
+        "range": 512
+      }
+    ]
+  })
+  event.addJson('better_beacons:base_blocks_amplifier/kubejs', {
+    "values": [
       {
         "block": "kubejs:high_entropy_alloy_block",
+        "amplifier": 128
+      },
+      {
+        "block": "kubejs:high_entropy_alloy_block_connecting",
         "amplifier": 254
       }
     ]
