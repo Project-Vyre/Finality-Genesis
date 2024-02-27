@@ -75,15 +75,5 @@ ServerEvents.recipes(event => {
       C: 'minecraft:ender_chest',
       E: 'extendedcrafting:enhanced_ender_catalyst'
     }).id('finality:shetiphian/extended_ender_chest')
-    // ender pouch
-    event.shaped('enderchests:ender_pouch', [
-      'ALA',
-      'LEL',
-      'LLL'
-    ], {
-      A: 'minecraft:gold_nugget',
-      L: 'minecraft:leather',
-      E: 'minecraft:ender_eye'
-    }).id('finality:shetiphian/extended_ender_pouch')
   }
 })

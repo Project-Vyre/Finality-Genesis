@@ -333,7 +333,6 @@ ServerEvents.recipes(event => {
   ], [
     Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:awkward"}'),
     Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:mundane"}'),
-    Fluid.of('kubejs:condensed_universal_entropy', 50),
     ['minecraft:stone', 'minecraft:cobblestone', 'minecraft:deepslate', 'minecraft:cobbled_deepslate'],
     ['minecraft:poisonous_potato', 'minecraft:gunpowder'],
     'salt:salt',

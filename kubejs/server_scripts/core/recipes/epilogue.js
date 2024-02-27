@@ -227,7 +227,8 @@ ServerEvents.recipes(event => {
       event.recipes.create.pressing(`kubejs:incomplete_concrete_${color}_singularity`, `kubejs:incomplete_concrete_${color}_singularity`)
     ]).transitionalItem(`kubejs:incomplete_concrete_${color}_singularity`).loops(9).id(`finality:sequenced_assembly/${color}_concrete_singularity`)
     event.recipes.create.sequenced_assembly([
-      'kubejs:concrete_' + color + '_singularity'
+      Item.of('kubejs:concrete_' + color + '_singularity').withChance(0.75),
+      Item.of('minecraft:' + color + '_concrete_powder', 9).withChance(0.25)
     ], `minecraft:${color}_concrete`, [
       event.recipes.create.deploying(`kubejs:incomplete_concrete_${color}_singularity`, [`kubejs:incomplete_concrete_${color}_singularity`, `minecraft:${color}_concrete_powder`]),
       event.recipes.create.filling(`kubejs:incomplete_concrete_${color}_singularity`, [`kubejs:incomplete_concrete_${color}_singularity`, Fluid.of('minecraft:water', 500)]),
@@ -246,7 +247,7 @@ ServerEvents.recipes(event => {
     'kubejs:concrete_magenta_singularity'
   ]).id('finality:mixing/chromatic_concrete_singularity')
   // mechanical crafting singularities
-  event.recipes.create.mechanical_crafting('kubejs:coal_singularity', [
+  event.recipes.create.mechanical_crafting('9x kubejs:coal_singularity', [
     ' CCCCCCC ',
     'CCCCCCCCC',
     'CCCCCCCCC',
@@ -273,7 +274,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('kubejs:incomplete_coal_singularity', 'kubejs:incomplete_coal_singularity')
   ]).transitionalItem('kubejs:incomplete_coal_singularity').loops(9).id('finality:sequenced_assembly/coal_singularity')
 
-  event.recipes.create.mechanical_crafting('kubejs:lapis_singularity', [
+  event.recipes.create.mechanical_crafting('9x kubejs:lapis_singularity', [
     ' LLLLLLL ',
     'LLLOOOLLL',
     'LLOOOOOLL',
@@ -303,7 +304,7 @@ ServerEvents.recipes(event => {
 
   for (let i = 0; i < VANILLAMATS.length; i++) {
     let vanilla = VANILLAMATS[i];
-    event.recipes.create.mechanical_crafting('kubejs:' + vanilla + '_singularity', [
+    event.recipes.create.mechanical_crafting('9x kubejs:' + vanilla + '_singularity', [
       ' LLLLLLL ',
       'LLLOOOLLL',
       'LLOOOOOLL',
@@ -454,7 +455,7 @@ ServerEvents.recipes(event => {
   let vnonstan = VANILLANOTSTANDARD.length;
   for (let i = 0; i < vnonstan; i++) {
     let insert = VANILLANOTSTANDARD[i];
-    event.recipes.create.mechanical_crafting('kubejs:' + insert + '_singularity', [
+    event.recipes.create.mechanical_crafting('9x kubejs:' + insert + '_singularity', [
       ' LLLLLLL ',
       'LLLOOOLLL',
       'LLOOOOOLL',
@@ -486,7 +487,7 @@ ServerEvents.recipes(event => {
   while (x < l) {
     insert = CREATEITEMS[x];
     ++x;
-    event.recipes.create.mechanical_crafting('kubejs:' + insert + '_singularity', [
+    event.recipes.create.mechanical_crafting('9x kubejs:' + insert + '_singularity', [
       ' LLLLLLL ',
       'LLLRRRLLL',
       'LLRRRRRLL',

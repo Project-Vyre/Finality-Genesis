@@ -1,12 +1,12 @@
-// priority: 5
-// requires: extendedcrafting
-// requires: create
-
 /**
  * @file Server handler for Extended Crafting.
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  * @author tizu69 <https://github.com/tizu69> Wrote ExtendedCrafting table JSON auto-gen functions
  */
+
+// priority: 5
+// requires: extendedcrafting
+// requires: create
 
 ServerEvents.recipes(event => {
   event.remove([
@@ -207,8 +207,13 @@ ServerEvents.recipes(event => {
 
   event.recipes.create.mixing('kubejs:high_entropy_alloy_nugget', [
     'kubejs:stable_entropy_particles',
+    'extendedcrafting:the_ultimate_nugget'
+  ]).id('finality:extendedcrafting/mixing/high_entropy_nugget')
+
+  event.recipes.create.mixing('kubejs:high_entropy_alloy_block', [
+    'kubejs:stable_entropy_particles',
     'extendedcrafting:the_ultimate_catalyst'
-  ]).superheated().id('finality:extendedcrafting/mixing/high_entropy_nugget')
+  ]).superheated().id('finality:extendedcrafting/mixing/high_entropy_block_from_catalyst')
 
   console.log('Forcibly applying Ultimate Singularity recipe. If it is missing again, please report this to the GitHub Issue tracker, thank you.')
 
@@ -270,6 +275,72 @@ ServerEvents.recipes(event => {
     'kubejs:blaze_cake_singularity',
     'kubejs:bic_bit_singularity'
   ]).merge({ tier: 4 }).id('kubejs:cucumber_library_failure')
+  event.recipes.create.mechanical_crafting('extendedcrafting:ultimate_singularity', [
+    'ABCDEFGHI',
+    'JKLMNOPQR',
+    'STUVWXYZ1',
+    '23456789!',
+    '@#$%^&*()',
+    '[]{}/~-=+',
+    '<>       '
+  ], {
+    'A': 'kubejs:amethyst_singularity',
+    'B': 'kubejs:blue_ice_singularity',
+    'C': 'kubejs:coal_singularity',
+    'D': 'kubejs:coarse_dirt_singularity',
+    'E': 'kubejs:cobblestone_singularity',
+    'F': 'kubejs:copper_singularity',
+    'G': 'kubejs:diamond_singularity',
+    'H': 'kubejs:emerald_singularity',
+    'I': 'kubejs:end_crystal_singularity',
+    'J': 'kubejs:ender_pearl_singularity',
+    'K': 'kubejs:glowstone_singularity',
+    'L': 'kubejs:gold_singularity',
+    'M': 'kubejs:gunpowder_singularity',
+    'N': 'kubejs:honey_singularity',
+    'O': 'kubejs:iron_singularity',
+    'P': 'kubejs:lapis_singularity',
+    'Q': 'kubejs:netherite_singularity',
+    'R': 'kubejs:quartz_singularity',
+    'S': 'kubejs:red_sand_singularity',
+    'T': 'kubejs:redstone_singularity',
+    'U': 'kubejs:sand_singularity',
+    'V': 'kubejs:sea_lantern_singularity',
+    'W': 'kubejs:soul_sand_singularity',
+    'X': 'kubejs:soul_soil_singularity',
+    'Y': 'kubejs:tinted_glass_singularity',
+    'Z': 'kubejs:potion_base_singularity',
+    '1': 'kubejs:andesite_alloy_singularity',
+    '2': 'kubejs:brass_singularity',
+    '3': 'kubejs:builders_tea_singularity',
+    '4': 'kubejs:chocolate_singularity',
+    '5': 'kubejs:electron_tube_singularity',
+    '6': 'kubejs:framed_glass_singularity',
+    '7': 'kubejs:precision_mechanism_singularity',
+    '8': 'kubejs:rose_quartz_singularity',
+    '9': 'kubejs:sturdy_sheet_singularity',
+    '!': 'kubejs:track_singularity',
+    '@': 'kubejs:zinc_singularity',
+    '#': 'kubejs:blaze_cake_singularity',
+    '$': 'kubejs:salt_singularity',
+    '%': 'kubejs:concrete_black_singularity',
+    '^': 'kubejs:concrete_blue_singularity',
+    '&': 'kubejs:concrete_brown_singularity',
+    '*': 'kubejs:concrete_cyan_singularity',
+    '(': 'kubejs:concrete_gray_singularity',
+    ')': 'kubejs:concrete_green_singularity',
+    '[': 'kubejs:concrete_light_blue_singularity',
+    ']': 'kubejs:concrete_light_gray_singularity',
+    '{': 'kubejs:concrete_lime_singularity',
+    '}': 'kubejs:concrete_magenta_singularity',
+    '/': 'kubejs:concrete_orange_singularity',
+    '~': 'kubejs:concrete_pink_singularity',
+    '-': 'kubejs:concrete_purple_singularity',
+    '=': 'kubejs:concrete_red_singularity',
+    '+': 'kubejs:concrete_white_singularity',
+    '<': 'kubejs:concrete_yellow_singularity',
+    '>': 'kubejs:bic_bit_singularity'
+  }).id('finality:mechanical_crafting/ultimate_singularity_translate')
 })
 
 ServerEvents.tags('block', event => {
