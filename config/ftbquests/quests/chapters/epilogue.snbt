@@ -158,39 +158,17 @@
 			icon: "extendedcrafting:ultimate_singularity"
 			id: "123D0E0F69B73A88"
 			subtitle: "Congratulations are in order!"
-			tasks: [
-				{
-					id: "2F6C1657E021958E"
-					item: "extendedcrafting:ultimate_singularity"
-					type: "item"
-				}
-				{
-					id: "28E0184043487A64"
-					item: "extendedcrafting:the_ultimate_nugget"
-					type: "item"
-				}
-				{
-					id: "0B716CF61348159F"
-					item: "extendedcrafting:the_ultimate_ingot"
-					type: "item"
-				}
-				{
-					id: "48CC203D69FA905F"
-					item: "extendedcrafting:crystaltine_catalyst"
-					type: "item"
-				}
-				{
-					id: "1E37BD8F6B386BB1"
-					item: "kubejs:high_entropy_alloy"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "2F6C1657E021958E"
+				item: "extendedcrafting:ultimate_singularity"
+				type: "item"
+			}]
 			title: "The Ultimate Singularity"
 			x: 0.0d
-			y: -7.0d
+			y: 20.0d
 		}
 		{
-			dependencies: ["123D0E0F69B73A88"]
+			dependencies: ["16DE8734477FB97A"]
 			id: "53850BE8EF49D0AF"
 			subtitle: "The very mechanism used for manipulating the universe."
 			tasks: [{
@@ -200,7 +178,7 @@
 			}]
 			title: "Creating the Entropy Mechanism"
 			x: 0.0d
-			y: -3.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["6441CF7A7EB2A425"]
@@ -548,8 +526,8 @@
 				match_nbt: true
 				type: "item"
 			}]
-			x: -9.0d
-			y: 9.0d
+			x: -16.5d
+			y: 18.0d
 		}
 		{
 			dependencies: ["5A411EC4C3F730AF"]
@@ -632,7 +610,7 @@
 			y: -16.0d
 		}
 		{
-			dependencies: ["123D0E0F69B73A88"]
+			dependencies: ["7D62F82D07137026"]
 			id: "0E7069A0CF461FAF"
 			subtitle: "The tools of the Creator."
 			tasks: [
@@ -663,11 +641,11 @@
 				}
 			]
 			title: "&l<rainb>Instrumenta Omnipotens</rainb>"
-			x: -4.5d
-			y: -4.5d
+			x: -1.0d
+			y: 17.0d
 		}
 		{
-			dependencies: ["123D0E0F69B73A88"]
+			dependencies: ["7D62F82D07137026"]
 			description: [""]
 			id: "6EA37B17D3E8D6DC"
 			subtitle: "Armor of the Creator."
@@ -694,11 +672,11 @@
 				}
 			]
 			title: "&l<rainb>Arma Omnipotens</rainb>"
-			x: 4.5d
-			y: -4.5d
+			x: 1.0d
+			y: 17.0d
 		}
 		{
-			dependencies: ["123D0E0F69B73A88"]
+			dependencies: ["16DE8734477FB97A"]
 			description: ["There's Ultimerite and Creativerite armor and tools for you to use as well, if you like."]
 			id: "2E104733BBA290DB"
 			subtitle: "Are you still sane?"
@@ -715,8 +693,8 @@
 				}
 			]
 			title: "Ultimerite to Creativerite"
-			x: 0.0d
-			y: -9.0d
+			x: 2.5d
+			y: 14.5d
 		}
 		{
 			dependencies: ["1544915BBE4467E4"]
@@ -821,8 +799,8 @@
 				}
 			]
 			title: "The Concrete Singularities"
-			x: 9.0d
-			y: 9.0d
+			x: 16.5d
+			y: 18.0d
 		}
 		{
 			dependencies: ["1C30A2D6BD191C6A"]
@@ -888,8 +866,8 @@
 				item: "kubejs:potion_base_singularity"
 				type: "item"
 			}]
-			x: -4.5d
-			y: 4.5d
+			x: -2.0d
+			y: 18.0d
 		}
 		{
 			dependencies: ["4F8E459413F29159"]
@@ -900,8 +878,65 @@
 				item: "kubejs:blaze_cake_singularity"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 4.5d
+			x: 2.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["123D0E0F69B73A88"]
+			id: "7C0E917B470F929D"
+			subtitle: "Now crush them."
+			tasks: [{
+				id: "492D2FC4FAA4B512"
+				item: "extendedcrafting:the_ultimate_nugget"
+				type: "item"
+			}]
+			title: "The Ultimate Nugget"
+			x: 0.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["7C0E917B470F929D"]
+			id: "7D62F82D07137026"
+			subtitle: "H.E.A for short."
+			tasks: [
+				{
+					id: "65BD9FEBF54618EA"
+					item: "kubejs:high_entropy_alloy_nugget"
+					type: "item"
+				}
+				{
+					id: "5CC85E58EB2CAD02"
+					item: "kubejs:high_entropy_alloy"
+					type: "item"
+				}
+			]
+			title: "Presenting High Entropy Alloy"
+			x: 0.0d
+			y: 16.5d
+		}
+		{
+			dependencies: ["7D62F82D07137026"]
+			id: "16DE8734477FB97A"
+			tasks: [
+				{
+					id: "594D2922462C0776"
+					item: "kubejs:command_block"
+					type: "item"
+				}
+				{
+					id: "4F0A363F9D15B0B5"
+					item: "kubejs:chain_command_block"
+					type: "item"
+				}
+				{
+					id: "505C85AB532327F6"
+					item: "kubejs:repeating_command_block"
+					type: "item"
+				}
+			]
+			title: "Command Blocks"
+			x: 0.0d
+			y: 14.5d
 		}
 	]
 	subtitle: ["<rainb>Are you sure you want to do this?</rainb>"]
