@@ -160,6 +160,10 @@ ClientEvents.lang('en_us', event => {
     'kubejs',
     createTooltip('kubejs:unstable_entropy_particles')
       .addSummary('It appears that it needs to be _stabilized_ first by something that is _very_ cold.')
+      .addBehaviour([
+        'Acquisition',
+        'Can only be created by mixing many different materials together.'
+      ])
       .setPalette($Palette.PURPLE)
       .build()
   )
@@ -167,6 +171,17 @@ ClientEvents.lang('en_us', event => {
     'kubejs',
     createTooltip('kubejs:stable_entropy_particles')
       .addSummary('Can now be molded into other forms that may be more useful.')
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('kubejs:high_entropy_alloy_nugget')
+      .addSummary('A nugget of alloy that seems to be constantly changing shape, awaiting your instruction.')
+      .addBehaviour([
+        'Acquisition',
+        'Can only be made from combining many different materials consolidated with _Stable Entropy Particles_.'
+      ])
       .setPalette($Palette.PURPLE)
       .build()
   )
