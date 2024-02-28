@@ -20,6 +20,7 @@
 		darken_re-textured_menu_buttons = false
 
 [hidden]
+	previously_launched_with_container = 1
 
 	[hidden.hidden]
 		emote_perspective = 1
