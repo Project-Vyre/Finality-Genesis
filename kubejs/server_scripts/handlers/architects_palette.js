@@ -94,4 +94,16 @@ ServerEvents.recipes(event => {
     '2x architects_palette:mushy_myonite_brick_vertical_slab',
     'architects_palette:mushy_myonite_bricks'
   ).id('kubejs:vertslabs/stonecutting/mushy_myonite_brick_vslab_from_mushy_myonite_bricks_stonecutting')
+  event.recipes.minecraft.crafting_shapeless(
+    'minecraft:flint',
+    'architects_palette:flint_block'
+  ).id('kubejs:architects_palette/flint_block_to_flint')
+  event.recipes.minecraft.crafting_shapeless(
+    'architects_palette:flint_block',
+    'architects_palette:flint_tiles'
+  ).id('kubejs:architects_palette/flint_tiles_to_flint_block')
+  event.recipes.minecraft.crafting_shapeless(
+    'architects_palette:flint_block',
+    'architects_palette:flint_pillar'
+  ).id('kubejs:architects_palette/flint_pillar_to_flint_block')
 })
