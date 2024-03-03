@@ -342,7 +342,7 @@
 			disable_toast: true
 			id: "3CD97106597161FB"
 			rewards: [{
-				auto: "invisible"
+				auto: "no_toast"
 				id: "7771965535BAC7B7"
 				table_id: 7080486431739256636L
 				team_reward: false
@@ -367,7 +367,7 @@
 			disable_toast: true
 			id: "79707400E036B51E"
 			rewards: [{
-				auto: "invisible"
+				auto: "no_toast"
 				id: "383D4E2BFAFF89F4"
 				table_id: 860113756744595796L
 				team_reward: false
@@ -392,7 +392,7 @@
 			disable_toast: true
 			id: "0F40B913DB55176F"
 			rewards: [{
-				auto: "invisible"
+				auto: "no_toast"
 				id: "57D74757A2CE1BD7"
 				table_id: 1404298105814737688L
 				team_reward: false
@@ -417,7 +417,7 @@
 			disable_toast: true
 			id: "66C295822C53109E"
 			rewards: [{
-				auto: "invisible"
+				auto: "no_toast"
 				id: "55029DC529D0708F"
 				table_id: 4003590059278366596L
 				team_reward: false
