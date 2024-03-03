@@ -338,6 +338,50 @@ ServerEvents.tags('block', event => {
   ])
 })
 
+ServerEvents.highPriorityData(event => {
+  event.addJson('kubejs:enchanting_stats/command_block', {
+    "block": "kubejs:command_block",
+    "stats": {
+      "maxEterna": 900000,
+      "eterna": 900000,
+      "quanta": 0,
+      "arcana": 0
+    }
+  })
+  event.addJson('kubejs:enchanting_stats/chain_command_block', {
+    "block": "kubejs:chain_command_block",
+    "stats": {
+      "maxEterna": 0,
+      "eterna": 0,
+      "quanta": 900000,
+      "arcana": 0
+    }
+  })
+  event.addJson('kubejs:enchanting_stats/repeating_command_block', {
+    "block": "kubejs:repeating_command_block",
+    "stats": {
+      "maxEterna": 0,
+      "eterna": 0,
+      "quanta": 0,
+      "arcana": 900000
+    }
+  })
+  event.addJson('kubejs:enchanting_stats/high_entropy_alloy_block', {
+    "block": "kubejs:high_entropy_alloy_block",
+    "stats": {
+      "rectification": 900000
+    }
+  })
+  if (Platform.isLoaded('fusion')) {
+    event.addJson('kubejs:enchanting_stats/high_entropy_alloy_block_connecting', {
+      "block": "kubejs:high_entropy_alloy_block_connecting",
+      "stats": {
+        "rectification": 900000
+      }
+    })
+  }
+})
+
 LootJS.modifiers(event => {
   event.addEntityLootModifier('minecraft:warden')
     .randomChance(0.002).addLoot(Item.of('apotheosis:gem', '{gem:"kubejs:eversor",rarity:"common"}').weakNBT())
