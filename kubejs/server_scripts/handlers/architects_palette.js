@@ -106,4 +106,11 @@ ServerEvents.recipes(event => {
     'architects_palette:flint_block',
     'architects_palette:flint_pillar'
   ).id('kubejs:architects_palette/flint_pillar_to_flint_block')
+  event.recipes.create.deploying([
+    '2x minecraft:white_wool',
+    'minecraft:oak_fence'
+  ], [
+    'architects_palette:spool',
+    'kubejs:deconstructor'
+  ]).id('finality:deploying/architects_palette/spool_deconstruction')
 })

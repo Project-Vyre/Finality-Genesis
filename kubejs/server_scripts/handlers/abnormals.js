@@ -1,7 +1,7 @@
 // requires: atmospheric
 // requires: autumnity
 // requires: woodworks
-// requires: create
+// requires: kubejs_create
 
 /**
  * @file Server handler for Team Abnormals related mods.
@@ -9,6 +9,14 @@
  */
 
 ServerEvents.recipes(event => {
+  event.recipes.create.deploying('atmospheric:grimwood_sapling', [
+    '#minecraft:saplings',
+    'minecraft:echo_shard'
+  ]).id('finality:deploying/atmospheric/grimwood_sapling')
+  event.recipes.create.deploying('atmospheric:yucca_sapling', [
+    '#minecraft:saplings',
+    '#minecraft:sand'
+  ]).id('finality:deploying/atmospheric/yucca_sapling')
   console.log('Applying chest compat recipes for Woodworks...')
   for (let i = 0; i < WOOD_TYPES.length; i++) {
     let insert = WOOD_TYPES[i];
