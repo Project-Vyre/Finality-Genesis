@@ -1,3 +1,4 @@
+// requires: bcc
 // requires: netjs
 
 /**

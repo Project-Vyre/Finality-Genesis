@@ -1,4 +1,5 @@
 // priority: 2
+// requires: bcc
 // requires: netjs
 
 /**
