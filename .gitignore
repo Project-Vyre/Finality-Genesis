@@ -37,6 +37,7 @@ o_prof
 config/voicechat/username-cache.json
 blacksmith.jar
 config/aether/aether_customizations.txt
+*.jar.meta
 
 # Ignore folders 
 backups/
