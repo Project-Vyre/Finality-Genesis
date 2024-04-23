@@ -983,3 +983,11 @@ ServerEvents.tags('block', event => {
     event.add('create:wrench_pickup', `mysticalagriculture:${furnaces}_furnace`)
   }
 })
+
+ServerEvents.tags('fluid', event => {
+  event.add('create:bottomless/deny', [
+    'kubejs:inferior_infusion_essence',
+    'kubejs:supreme_infusion_essence',
+    'kubejs:infusion_energy'
+  ])
+})

@@ -55,3 +55,7 @@ ServerEvents.recipes(event => {
     }).id(`finality:biomesoplenty/crafting/vanilla_chest_fallback`)
   }
 })
+
+ServerEvents.tags('fluid', event => {
+  event.add('create:bottomless/allow', 'biomesoplenty:blood')
+})

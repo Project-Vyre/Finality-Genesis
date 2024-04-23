@@ -81,6 +81,12 @@ ServerEvents.recipes(event => {
   ]).id('finality:headgear_doll_revert')
 })
 
+ServerEvents.tags('fluid', event => {
+  event.add('create:bottomless/allow', [
+    'kubejs:nether_wart_jam'
+  ])
+})
+
 LootJS.modifiers(event => {
   event.addEntityLootModifier('grimoireofgaia:mimic')
     .randomChance(0.01).addLoot('grimoireofgaia:doll_maid')

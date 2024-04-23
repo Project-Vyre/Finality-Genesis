@@ -165,6 +165,16 @@ ServerEvents.recipes(event => {
   */
 })
 
+ServerEvents.tags('fluid', event => {
+  event.add('create:bottomless/deny', [
+    'kubejs:common_arcane_ink',
+    'kubejs:uncommon_arcane_ink',
+    'kubejs:rare_arcane_ink',
+    'kubejs:epic_arcane_ink',
+    'kubejs:legendary_arcane_ink'
+  ])
+})
+
 LootJS.modifiers(event => {
   event.addEntityLootModifier('minecraft:witch')
     .randomChance(0.1).addLoot('irons_spellbooks:common_ink')
