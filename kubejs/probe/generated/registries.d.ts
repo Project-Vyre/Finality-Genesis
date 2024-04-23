@@ -27,6 +27,7 @@ declare namespace Registry {
         create(id: string, type: "falling"): Internal.FallingBlockBuilder;
         create(id: string, type: "crop"): Internal.CropBlockBuilder;
         create(id: string, type: "cardinal"): Internal.HorizontalDirectionalBlockBuilder;
+        create(id: string, type: "carpet"): Internal.CarpetBlockBuilder;
         create(id: string): Internal.BasicBlockJS$Builder;
     }
     class Enchantment extends Internal.RegistryEventJS {
@@ -212,6 +213,8 @@ declare namespace Registry {
     class Instrument extends Internal.RegistryEventJS {
     }
     class Condition extends Internal.RegistryEventJS {
+    }
+    class AdvancementSoundOverride extends Internal.RegistryEventJS {
     }
     class MoaType extends Internal.RegistryEventJS {
     }
