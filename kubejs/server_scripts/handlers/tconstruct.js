@@ -10,6 +10,10 @@
 ServerEvents.recipes(event => {
   event.remove([
     {
+      mod: 'tconstruct',
+      output: 'minecraft:beacon'
+    },
+    {
       output: 'tconstruct:grout',
       type: 'minecraft:crafting_shapeless'
     },
@@ -18,12 +22,14 @@ ServerEvents.recipes(event => {
       type: 'minecraft:crafting_shapeless'
     },
     {
+      mod: 'tconstruct',
       output: 'tconstruct:seared_brick',
       type: 'minecraft:smelting',
       type: 'minecraft:blasting'
     },
     {
-      outuput: 'tconstruct:scorched_brick',
+      mod: 'tconstruct',
+      output: 'tconstruct:scorched_brick',
       type: 'minecraft:smelting',
       type: 'minecraft:blasting'
     }
