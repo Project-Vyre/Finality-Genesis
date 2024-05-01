@@ -1,3 +1,4 @@
+// priority: 0
 // requires: headhunter_mod
 // requires: lootjs
 // ignored: false

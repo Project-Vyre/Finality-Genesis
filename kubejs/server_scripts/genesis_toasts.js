@@ -1,4 +1,4 @@
-// priority: 0
+// priority: 20
 
 /**
  * @author EvanHsieh0415 <https://github.com/EvanHsieh0415> Creating the basis of the boss death toast notification. https://discord.com/channels/303440391124942858/1129981022554050630
