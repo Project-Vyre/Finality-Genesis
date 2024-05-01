@@ -3,13 +3,13 @@ type = fancymenu_layout
 layout-meta {
   identifier = %fancymenu:universal_layout%
   render_custom_elements_behind_vanilla = true
-  last_edited_time = 1707130172197
+  last_edited_time = 1714587075954
   is_enabled = true
   randommode = false
   randomgroup = 1
   randomonlyfirsttime = false
   layout_index = 0
-  [loading_requirement_container_meta:3716b3f8-d186-4837-82c1-5fdcced80925-1707130117415] = [groups:][instances:]
+  [loading_requirement_container_meta:2e26bcfd-7da2-4080-8573-f552b5dbf009-1714586996019] = [groups:][instances:]
 }
 
 customization {
@@ -22,6 +22,8 @@ scroll_list_customization {
   render_scroll_list_header_shadow = true
   render_scroll_list_footer_shadow = true
   show_scroll_list_header_footer_preview_in_editor = false
+  repeat_scroll_list_header_texture = false
+  repeat_scroll_list_footer_texture = false
 }
 
 element {
@@ -37,6 +39,7 @@ element {
   audio_instance_9 = [source:local]/config/fancymenu/assets/menu_music/farabi_hasan_music_pantalone_double_phase.ogg
   audio_instance_10 = [source:local]/config/fancymenu/assets/menu_music/farabi_hasan_music_sandrone_double_phase.ogg
   audio_instance_11 = [source:local]/config/fancymenu/assets/menu_music/farabi_hasan_music_columbina_battle_phase_1and2.ogg
+  audio_instance_12 = [source:local]/config/fancymenu/assets/menu_music/cjbeards_boo_hoo.ogg
   play_mode = shuffle
   looping = true
   volume = 1.0
