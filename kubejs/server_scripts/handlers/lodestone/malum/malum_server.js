@@ -34,7 +34,8 @@ ServerEvents.recipes(event => {
     { id: 'malum:malum/blazing_sconce' },
     { id: 'malum:create/crushing/crush_rare_earths_block' }
   ])
-  malumOres.forEach(ore => {
+  for (let i = 0; i < malumOres.length; i++) {
+    let ore = malumOres[i];
     event.remove([
       {
         mod: 'malum',
@@ -47,7 +48,7 @@ ServerEvents.recipes(event => {
         input: ore
       }
     ])
-  })
+  }
   // recipes
   console.log("Create is loaded. Removing Malum's Copper Nuggets.")
   event.remove({

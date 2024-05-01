@@ -39,7 +39,8 @@ ServerEvents.recipes(event => {
   /**
    * THIS IS FOR YOUR OWN GOOD SO YOU DON'T WASTE ADDITIONAL LOOT!
    */
-  adAstraOreBlocks.forEach(insert => { // why can you even smelt and blast these ores? YOU LITERALLY LOSE SO MUCH!
+  for (let i = 0; i < adAstraOreBlocks.length; i++) { // why can you even smelt and blast these ores? YOU LITERALLY LOSE SO MUCH!
+    let insert = adAstraOreBlocks[i];
     event.remove([
       {
         mod: 'ad_astra',
@@ -56,7 +57,7 @@ ServerEvents.recipes(event => {
         input: insert
       }
     ])
-  })
+  }
   event.recipes.create.mixing(Fluid.of('ad_astra:oil', 250), [
     '2x minecraft:coal',
     Fluid.of('createaddition:seed_oil', 250)
