@@ -108,6 +108,7 @@ let GRAY_REGISTRY = [
   'minecraft:andesite',
   'minecraft:cobblestone',
   'minecraft:cobbled_deepslate',
+  'minecraft:dirt',
   'minecraft:gravel',
   'kubejs:deepslate_shard'
 ]
@@ -204,6 +205,10 @@ ClientEvents.lang('en_us', event => {
     "block.minecraft.cobblestone.tooltip.behaviour1": "Can be used in making _Diorite_ which can then be used to make _Andesite_ for easy creation of _Andesite Alloy_.",
     "block.minecraft.cobblestone.tooltip.condition2": "When milled or crushed",
     "block.minecraft.cobblestone.tooltip.behaviour2": "Turns into _Gravel_ which can be _washed_ for more _useful_ materials.",
+    "block.minecraft.dirt.tooltip": "DIRT",
+    "block.minecraft.dirt.tooltip.summary": "The _foundation_ of many agricultural farms.",
+    "block.minecraft.dirt.tooltip.condition1": "Renewal",
+    "block.minecraft.dirt.tooltip.behaviour1": "Can be renewed by mixing _gravel_ with some _organic matter_ in a _Basin_ paired with a _Mechanical Mixer_.",
     "block.minecraft.gravel.tooltip": "GRAVEL",
     "block.minecraft.gravel.tooltip.summary": "Now has _additional uses_ in recpipes.",
     "block.minecraft.gravel.tooltip.condition1": "When washed",
