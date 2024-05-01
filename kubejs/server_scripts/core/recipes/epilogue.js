@@ -246,6 +246,12 @@ ServerEvents.recipes(event => {
     'kubejs:concrete_yellow_singularity',
     'kubejs:concrete_magenta_singularity'
   ]).id('finality:mixing/chromatic_concrete_singularity')
+  // will balance in the future...
+  event.recipes.create.mixing('kubejs:high_entropy_alloy_nugget', [
+    '4x kubejs:stable_entropy_particles',
+    'kubejs:chromatic_concrete_singularity',
+    '4x create:chromatic_compound'
+  ]).id('finality:mixing/high_entropy_alloy_nugget_from_chromatic')
   // mechanical crafting singularities
   event.recipes.create.mechanical_crafting('9x kubejs:coal_singularity', [
     ' CCCCCCC ',
