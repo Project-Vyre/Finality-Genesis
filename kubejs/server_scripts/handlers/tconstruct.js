@@ -7,6 +7,11 @@
 // requires: tconstruct
 // requires: kubejs_create
 
+let tinker_bricks = [
+  'seared',
+  'scorched'
+]
+
 ServerEvents.recipes(event => {
   event.remove([
     {
@@ -23,17 +28,25 @@ ServerEvents.recipes(event => {
     },
     {
       mod: 'tconstruct',
-      output: 'tconstruct:seared_brick',
-      type: 'minecraft:smelting',
-      type: 'minecraft:blasting'
-    },
-    {
-      mod: 'tconstruct',
-      output: 'tconstruct:scorched_brick',
-      type: 'minecraft:smelting',
-      type: 'minecraft:blasting'
+      output: 'minecraft:flint',
+      type: 'minecraft:crafting_shapeless'
     }
   ])
+  for (let i = 0; i < tinker_bricks.length; i++) {
+    let type = tinker_bricks[i];
+    event.remove([
+      {
+        mod: 'tconstruct',
+        output: 'tconstruct:' + type + '_brick',
+        type: 'minecraft:smelting'
+      },
+      {
+        mod: 'tconstruct',
+        output: 'tconstruct:' + type + '_brick',
+        type: 'minecraft:blasting'
+      }
+    ])
+  }
   // all the grout
   event.recipes.create.mixing('2x tconstruct:grout', [
     'minecraft:clay_ball',
@@ -66,10 +79,17 @@ ServerEvents.recipes(event => {
     '4x #forge:gravel'
   ]).id('finality:tconstruct/mixing/bulk_nether_grout_from_soul_soil')
 
-  event.recipes.create.compacting(
+  event.recipes.create.compacting([
     'tconstruct:seared_brick',
-    'tconstruct:grout'
+    Item.of('create:experience_nugget').withChance(0.05)
+  ], 'tconstruct:grout'
   ).heated().id('finality:tconstruct/compacting/seared_brick_solidify')
+
+  event.recipes.create.compacting([
+    'tconstruct:scorched_brick',
+    Item.of('create:experience_nugget').withChance(0.05)
+  ], 'tconstruct:nether_grout'
+  ).heated().id('finality:tconstruct/compacting/scorched_brick_solidify')
 })
 
 ServerEvents.tags('fluid', event => {
@@ -82,6 +102,6 @@ ServerEvents.tags('fluid', event => {
   event.add('create:bottomless/allow', [
   ])
   event.add('create:bottomless/deny', [
-    
+
   ])
 })
