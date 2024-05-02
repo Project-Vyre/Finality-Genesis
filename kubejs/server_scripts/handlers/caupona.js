@@ -61,4 +61,13 @@ ServerEvents.recipes(event => {
     ],
     Fluid.of('kubejs:walnut_oil', 250)
   ]).id('finality:filling/gravy_boat_refill')
+  if (Platform.isLoaded('aether')) {
+    event.shaped('minecraft:chest', [
+      'WWW',
+      'W W',
+      'WWW'
+    ], {
+      W: 'caupona:walnut_planks'
+    }).id('finality:caupona/walnut_to_vanilla_chest_fallback')
+  }
 })

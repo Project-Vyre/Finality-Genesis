@@ -63,6 +63,28 @@ ServerEvents.recipes(event => {
     'malum:chunk_of_brilliance',
     'minecraft:glass_bottle'
   ]).id('finality:malum/deploying/experience_bottle')
+  if (Platform.isLoaded('aether')) {
+    event.shaped('minecraft:chest', [
+      'WWW',
+      'W W',
+      'WWW'
+    ], {
+      W: [
+        'malum:runewood_planks',
+        'malum:cut_runewood_planks'
+      ]
+    }).id('finality:malum/crafting/runewood_vanilla_chest_fallback')
+    event.shaped('minecraft:chest', [
+      'WWW',
+      'W W',
+      'WWW'
+    ], {
+      W: [
+        'malum:soulwood_planks',
+        'malum:cut_soulwood_planks'
+      ]
+    }).id('finality:malum/crafting/soulwood_vanilla_chest_fallback')
+  }
 })
 
 ServerEvents.tags('item', event => {
