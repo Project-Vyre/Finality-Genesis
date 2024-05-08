@@ -157,6 +157,7 @@
 			]
 			icon: "extendedcrafting:ultimate_singularity"
 			id: "123D0E0F69B73A88"
+			optional: true
 			subtitle: "Congratulations are in order!"
 			tasks: [{
 				id: "2F6C1657E021958E"
@@ -886,6 +887,7 @@
 		{
 			dependencies: ["123D0E0F69B73A88"]
 			id: "7C0E917B470F929D"
+			optional: true
 			subtitle: "Now crush them."
 			tasks: [{
 				id: "492D2FC4FAA4B512"
