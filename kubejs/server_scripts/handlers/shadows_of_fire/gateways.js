@@ -88,7 +88,7 @@ ServerEvents.recipes(event => {
     P: 'minecraft:porkchop',
     E: 'minecraft:nether_star'
   }).id('finality:hoglin_gate_large')
-  event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"apotheosis:boss_gate_small"}'), [
+  event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:boss_gate_small"}'), [
     'SDS',
     'DED',
     'SDS'
