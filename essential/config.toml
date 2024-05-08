@@ -5,7 +5,6 @@
 		timestamps_format = 0
 		streamer_mode = false
 		modcore_warning = true
-		essential_gui_scale = 0
 
 	[general.online_status]
 		show_essential_indicator_on_tab = true
@@ -99,7 +98,7 @@
 		"cosmetic_&_armor_conflict_-_on_others" = 0
 
 [__meta]
-	version = 11
+	version = 12
 
 	[__meta.migration_log]
 
@@ -152,4 +151,9 @@
 
 			[__meta.migration_log.10.changed]
 				"emotes.general.emote_preview_in_first_person" = true
+
+		[__meta.migration_log.11]
+
+			[__meta.migration_log.11.changed]
+				"general.general.essential_gui_scale" = 0
 
