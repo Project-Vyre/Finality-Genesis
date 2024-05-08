@@ -391,6 +391,7 @@ ClientEvents.lang('en_us', event => {
       "kubejs.hoglin_gate_large": "Large Hoglin Gate",
       "kubejs.boss_gate": "Apothic Boss Gate",
       "kubejs.boss_gate_large": "Large Apothic Boss Gate",
+      "kubejs.boss_gate_small": "Small Apothic Boss Gate",
       "kubejs.ultimatum_boss_gate": "Ultimatum Boss Gate",
       "kubejs.mutant_boss_gate_large": "Large Mutant Boss Gate",
       "kubejs.mass_destruction_boss_gate_large": "Bosses of Mass Destruction Gate",
