@@ -11,6 +11,11 @@ ServerEvents.recipes(event => {
     { id: 'endrem:exotic_eye' },
     { id: 'endrem:witch_eye' }
   ])
+  event.recipes.create.mixing('endrem:cryptic_eye', [
+    'create:experience_block',
+    'minecraft:ender_eye',
+    Fluid.of('kubejs:condensed_universal_entropy', 250)
+  ]).heated().id('finality:endrem/mixing/cryptic_eye')
   if (!Platform.isLoaded('extendedcrafting')) {
     event.recipes.create.mixing('endrem:exotic_eye', [
       '4x minecraft:glow_ink_sac',
