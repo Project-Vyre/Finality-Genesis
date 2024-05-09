@@ -35,7 +35,7 @@ enigmatic_persistence.dat
 o_prof
 config/voicechat/username-cache.json
 blacksmith.jar
-config/aether/aether_customizations.txt
+config/aether/*
 embeddium-fingerprint.json
 
 # Ignore Essential files
