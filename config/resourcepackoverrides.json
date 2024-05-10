@@ -1,0 +1,31 @@
+{
+  "schema_version": "2",
+  "failed_reloads_per_session": 5,
+  "default_packs": [
+    "create:legacy_copper",
+    "file/Nicer-Rain-1.0.0.zip",
+    "file/Slightly-Improved-Font-1.1.3.zip",
+    "file/Enhanced Audio r6.zip",
+    "file/Enhanced Audio Ambience r1.zip"
+  ],
+  "default_overrides": {
+    "force_compatible": true
+  },
+  "pack_overrides": {
+    "genesis_resources": [
+      "file/Nicer-Rain-1.0.0.zip",
+      "file/Slightly-Improved-Font-1.1.3.zip",
+      "file/Enhanced Audio r6.zip",
+      "file/Enhanced Audio Ambience r1.zip"
+    ],
+    "$$genesis_resources": {
+      "fixed_position": true,
+      "force_compatible": true,
+      "required": true
+    },
+    "loadmyresources.hiddenpack": {
+      "required": true,
+      "hidden": true
+    }
+  }
+}

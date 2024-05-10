@@ -1,0 +1,33 @@
+type = fancymenu_layout
+
+layout-meta {
+  identifier = %fancymenu:universal_layout%
+  render_custom_elements_behind_vanilla = false
+  last_edited_time = 1706221554226
+  is_enabled = false
+  randommode = false
+  randomgroup = 1
+  randomonlyfirsttime = false
+  layout_index = 0
+  [loading_requirement_container_meta:521a081f-8d13-414d-a5b9-99229e18ea30-1706221554226] = [groups:largerthan1920butsmallerthan4k;][instances:]
+  [loading_requirement_group:largerthan1920butsmallerthan4k] = [group_mode:or]
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:largerthan1920butsmallerthan4k][req_id:db6f1d53-003f-410a-8c99-e3db31402f621696763708854] = 2560
+}
+
+customization {
+  action = setscale
+  scale = 2.0
+}
+
+customization {
+  action = backgroundoptions
+  keepaspectratio = false
+}
+
+scroll_list_customization {
+  preserve_scroll_list_header_footer_aspect_ratio = true
+  render_scroll_list_header_shadow = true
+  render_scroll_list_footer_shadow = true
+  show_scroll_list_header_footer_preview_in_editor = false
+}
+

@@ -1,0 +1,41 @@
+type = fancymenu_layout
+
+layout-meta {
+  identifier = %fancymenu:universal_layout%
+  render_custom_elements_behind_vanilla = false
+  last_edited_time = 1706221554254
+  is_enabled = false
+  randommode = false
+  randomgroup = 1
+  randomonlyfirsttime = false
+  layout_index = 0
+  [loading_requirement_container_meta:14b59ada-2f73-43e4-817f-cda3d9154993-1706221554254] = [groups:less_than_1600_width_res_check;][instances:]
+  [loading_requirement_group:less_than_1600_width_res_check] = [group_mode:or]
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:cb3cd903-78f1-4ac6-8a3b-2bac9d273e881696761610359] = 1280
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:20cbe427-0718-4e37-8a72-ebecfd9fbaf41696762954670] = 1176
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:061aa09c-7d66-468e-9873-e732657be9671696761829777] = 1366
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:d3c49387-a5ce-4ea7-9825-df52661a87ac1696763249821] = 1440
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:56f74327-7921-48db-8de8-aaf290707d431696762971470] = 1152
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:ca411e08-3ea8-40d0-a7e6-66748ffc7aca1696763342956] = 1600
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:d34eb85d-065d-40a7-841b-3581c78239941696761912526] = 1024
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:00624cfa-a45c-482e-bf5f-c2e2739526b11696762466730] = 1360
+  [loading_requirement:fancymenu_loading_requirement_is_window_width][requirement_mode:if][group:less_than_1600_width_res_check][req_id:e08a45ff-67c1-495b-a701-59b3350eb9bf1696762878132] = 800
+}
+
+customization {
+  action = setscale
+  scale = 1.0
+}
+
+customization {
+  action = backgroundoptions
+  keepaspectratio = false
+}
+
+scroll_list_customization {
+  preserve_scroll_list_header_footer_aspect_ratio = true
+  render_scroll_list_header_shadow = true
+  render_scroll_list_footer_shadow = true
+  show_scroll_list_header_footer_preview_in_editor = false
+}
+

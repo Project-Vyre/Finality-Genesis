@@ -1,0 +1,12 @@
+# Use Cloth Config mod for the descriptions.
+---
+modules:
+  slot_unlock_recipe: true
+naturallyCharging: true
+damageAcceleration: 1.0
+interruptedOnHurt: false
+playChargeCompleteSound: true
+playerCustomizable: true
+slots:
+  maxSlots: 3
+  beginnerSlots: 0
