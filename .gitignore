@@ -37,6 +37,7 @@ config/voicechat/username-cache.json
 blacksmith.jar
 config/aether/*
 embeddium-fingerprint.json
+config/resourceful-config-web.json
 
 # Ignore Essential files
 essential/*.jar
