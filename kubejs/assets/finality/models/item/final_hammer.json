@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "finality:item/final_pickaxe/final_hammer"
+  }
+}

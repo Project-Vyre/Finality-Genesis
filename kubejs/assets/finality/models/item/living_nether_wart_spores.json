@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "finality:item/living_nether_wart_spores"
+  }
+
+}

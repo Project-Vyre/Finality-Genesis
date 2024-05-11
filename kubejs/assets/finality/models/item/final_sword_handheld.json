@@ -1,0 +1,40 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "finality:item/final_sword_handheld"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [14, -90, 55],
+      "translation": [0, 13, 3],
+      "scale": [1.7, 1.7, 0.85]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [104, -90, 55],
+      "translation": [0, 13, 3],
+      "scale": [1.7, 1.7, 0.85]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, 90, 25],
+      "translation": [0, 10, 0],
+      "scale": [1.3, 1.3, 0.65]
+    },
+    "firstperson_lefthand": {
+      "rotation": [-100, 90, 25],
+      "translation": [0, 10, 0],
+      "scale": [1.3, 1.3, 0.65]
+    },
+    "ground": {
+      "rotation": [0, 0, 45],
+      "translation": [0, 17, 0],
+      "scale": [1.5, 1.5, 1.5]
+    },
+    "gui": {
+      "scale": [1.3, 1.3, 1]
+    },
+    "fixed": {
+      "rotation": [0, 180, 0]
+    }
+  }
+}
