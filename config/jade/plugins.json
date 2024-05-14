@@ -97,6 +97,9 @@
   "jadeaddons": {
     "equipment_requirement": ""
   },
+  "exposure": {
+    "lightroom": true
+  },
   "shetiphiancore": {
     "hud.rgb16": true,
     "hud": true,
