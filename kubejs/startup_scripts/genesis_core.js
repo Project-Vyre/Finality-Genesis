@@ -452,7 +452,7 @@ ItemEvents.modification(event => {
       item.maxDamage = 1024
     })
     event.modify(`minecraft:netherite_${tool}`, item => {
-      item.maxDamage = 4096
+      item.maxDamage = -1
     })
   }
   event.modify('minecraft:shears', item => {
@@ -485,7 +485,7 @@ ItemEvents.modification(event => {
       item.maxDamage = 512
     })
     event.modify(`minecraft:netherite_${armor}`, item => {
-      item.maxDamage = 2048
+      item.maxDamage = -1
     })
   }
   for (let i = 0; i < DIVING.length; i++) {
@@ -494,7 +494,7 @@ ItemEvents.modification(event => {
       item.maxDamage = 128
     })
     event.modify(`create:netherite_${armor}`, item => {
-      item.maxDamage = 2048
+      item.maxDamage = -1
     })
   }
   event.modify('create:super_glue', item => {
@@ -511,7 +511,7 @@ ItemEvents.modification(event => {
     item.maxDamage = 1820
   })
   event.modify('farmersdelight:netherite_knife', item => {
-    item.maxDamage = 4096
+    item.maxDamage = -1
   })
 })
 
