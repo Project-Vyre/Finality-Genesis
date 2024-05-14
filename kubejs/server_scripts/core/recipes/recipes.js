@@ -279,6 +279,18 @@ ServerEvents.recipes(event => {
     B: '#forge:storage_blocks/gold',
     T: '#forge:plates/gold'
   }).id('minecraft:bell')
+  event.recipes.minecraft.crafting_shapeless('minecraft:end_crystal', [
+    '4x #forge:glass/colorless',
+    'minecraft:nether_star',
+    'minecraft:ghast_tear',
+    'minecraft:fermented_spider_eye'
+  ]).id('minecraft:end_crystal')
+  event.recipes.minecraft.crafting_shapeless('minecraft:end_crystal', [
+    '4x #forge:glass/colorless',
+    'kubejs:awakened_singularity_core',
+    'minecraft:respawn_anchor',
+    'create:experience_nugget'
+  ]).id('finality:end_crystal_from_respawn_anchor')
   event.shaped('kubejs:deconstructor', [
     'DSS'
   ], {
