@@ -19,6 +19,10 @@ ServerEvents.recipes(event => {
       output: 'minecraft:beacon'
     },
     {
+      mod: 'tconstruct',
+      output: 'minecraft:end_crystal'
+    },
+    {
       output: 'tconstruct:grout',
       type: 'minecraft:crafting_shapeless'
     },
