@@ -129,12 +129,12 @@ ServerEvents.recipes(event => {
   ]).keepHeldItem().id('finality:nether_star_duplication')
 
   // modified vanilla recipes
-  event.shapeless('minecraft:end_crystal', [
+  event.shapeless('4x minecraft:end_crystal', [
     '4x #forge:glass/colorless',
     'extendedcrafting:ender_star',
     'minecraft:ghast_tear',
-    'minecraft:fermented_spider_eye',
-  ]).id('minecraft:end_crystal')
+    'minecraft:fermented_spider_eye'
+  ]).id('finality:extended_end_crystal')
 
   // ender crafting
   event.shaped('extendedcrafting:ender_crafter', [
