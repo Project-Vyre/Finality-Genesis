@@ -7,7 +7,7 @@
 		modcore_warning = true
 
 	[general.online_status]
-		show_essential_indicator_on_tab = true
+		show_essential_indicator_on_tab = false
 		show_essential_indicator_on_nametags = true
 
 	[general.experience]
