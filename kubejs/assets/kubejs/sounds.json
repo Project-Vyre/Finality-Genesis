@@ -1,0 +1,74 @@
+{
+  "music_disc.bad_deeds_inst": {
+    "sounds": [
+      {
+        "name": "kubejs:records/bad_deeds_inst",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.boo_hoo": {
+    "sounds": [
+      {
+        "name": "kubejs:records/boo_hoo",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.from_the_shadows": {
+    "sounds": [
+      {
+        "name": "kubejs:records/from_the_shadows",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.get_away_inst": {
+    "sounds": [
+      {
+        "name": "kubejs:records/get_away_inst",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.heart_of_the_wicked": {
+    "sounds": [
+      {
+        "name": "kubejs:records/heart_of_the_wicked",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.mirror_mirror_inst": {
+    "sounds": [
+      {
+        "name": "kubejs:records/mirror_mirror_inst",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.open_up_inst": {
+    "sounds": [
+      {
+        "name": "kubejs:records/open_up_inst",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.silent_night": {
+    "sounds": [
+      {
+        "name": "kubejs:records/silent_night",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.worst_nightmare_inst": {
+    "sounds": [
+      {
+        "name": "kubejs:records/worst_nightmare_inst",
+        "stream": true
+      }
+    ]
+  }
+}

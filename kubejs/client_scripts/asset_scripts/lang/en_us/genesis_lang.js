@@ -343,6 +343,21 @@ ClientEvents.lang('en_us', event => {
     "item.kubejs.potion_base_singularity": "Potion Base Singularity",
     "item.kubejs.blaze_cake_singularity": "Blaze Cake Singularity"
   })
+  let discLang = {
+    'bad_deeds_inst': 'Cjbeards - Bad Deeds (Instrumental)',
+    'boo_hoo': 'Cjbeards - Boo Hoo',
+    'from_the_shadows': 'Cjbeards - From the Shadows',
+    'get_away_inst': 'Cjbeards - Get Away (Instrumental',
+    'heart_of_the_wicked': 'Cjbeards - Heart of the Wicked',
+    'mirror_mirror_inst': 'Cjbeards - Mirror Mirror (Instrumental)',
+    'open_up_inst': 'Cjbeards - Open Up (Instrumental)',
+    'silent_night': 'Cjbeards - Silent Night',
+    'worst_nightmare_inst': 'Cjbeards - Worst Nightmare (Instrumental)'
+  }
+  for (let [id, txt] of Object.entries(discLang)) {
+    event.add('kubejs', `item.kubejs.music_disc_${id}`, 'Music Disc')
+    event.add('kubejs', `item.kubejs.music_disc_${id}.desc`, txt)
+  }
   /* Not yet implemented.
   event.add('block.kubejs.la_lettre_a_focalors', 'La Lettre a Focalors')
   event.add('block.kubejs.pour_la_justice', 'Pour la Justice')
