@@ -13,6 +13,7 @@
 		{ item: "create:brass_block", random_bonus: 8, weight: 8.0f }
 		{ item: "create:andesite_alloy_block", random_bonus: 8, weight: 9.0f }
 		{ item: "minecraft:redstone_block", random_bonus: 8, weight: 7.0f }
+		{ item: "kubejs:high_entropy_alloy_nugget", weight: 0.05f }
 	]
 	title: "Valuable Riches"
 	use_title: true
