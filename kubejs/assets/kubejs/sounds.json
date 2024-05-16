@@ -1,4 +1,12 @@
 {
+  "arlecchino_battle_theme": {
+    "sounds": [
+      {
+        "name": "kubejs:arlecchino_battle_theme",
+        "stream": true
+      }
+    ]
+  },
   "bad_deeds_inst": {
     "sounds": [
       {
@@ -11,6 +19,14 @@
     "sounds": [
       {
         "name": "kubejs:boo_hoo",
+        "stream": true
+      }
+    ]
+  },
+  "columbina_battle_theme": {
+    "sounds": [
+      {
+        "name": "kubejs:columbina_battle_theme",
         "stream": true
       }
     ]
@@ -51,6 +67,22 @@
     "sounds": [
       {
         "name": "kubejs:open_up_inst",
+        "stream": true
+      }
+    ]
+  },
+  "pantalone_battle_theme": {
+    "sounds": [
+      {
+        "name": "kubejs:pantalone_battle_theme",
+        "stream": true
+      }
+    ]
+  },
+  "sandrone_battle_theme": {
+    "sounds": [
+      {
+        "name": "kubejs:sandrone_battle_theme",
         "stream": true
       }
     ]
