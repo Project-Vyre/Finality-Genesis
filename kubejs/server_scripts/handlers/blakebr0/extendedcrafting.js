@@ -47,16 +47,6 @@ ServerEvents.recipes(event => {
     S: 'extendedcrafting:black_iron_slate'
   }).id('finality:mechanical_crafting/basic_table')
 
-  event.shaped('minecraft:beacon', [
-    'GGG',
-    'GSG',
-    'OOO'
-  ], {
-    G: '#forge:glass/colorless',
-    S: 'extendedcrafting:ender_star',
-    O: 'minecraft:obsidian'
-  }).id('finality:extendedcrafting/beacon_from_ender_star')
-
   let material_crystaltine_pattern = [
     'DLLLLLD',
     'DAFNFAD',
