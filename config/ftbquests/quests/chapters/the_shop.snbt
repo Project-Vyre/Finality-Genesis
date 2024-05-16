@@ -436,6 +436,104 @@
 			x: 4.5d
 			y: 2.5d
 		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			id: "35F68BA13B907F9A"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "39DE3AA7CD4E654D"
+				table_id: 7842881072256618789L
+				type: "choice"
+			}]
+			subtitle: "Need food in exchange for gold coins?"
+			tasks: [{
+				consume_items: true
+				id: "17244CB1ACA68D0D"
+				item: "kubejs:gold_coin"
+				type: "item"
+			}]
+			title: "Food Shop (Gold)"
+			x: 3.5d
+			y: 2.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			id: "0B4C857D5B332181"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "36D22E3E427A7BBE"
+				table_id: 7481526204613945549L
+				type: "choice"
+			}]
+			subtitle: "Need certain enchanted books?"
+			tasks: [{
+				consume_items: true
+				id: "7EBFE46370156C82"
+				item: "kubejs:gold_coin"
+				type: "item"
+			}]
+			title: "Enchanted Books Shop (Gold)"
+			x: 2.5d
+			y: 3.5d
+		}
+		{
+			can_repeat: true
+			dependencies: ["464C6D59436C1B33"]
+			id: "3ABDD9289BD0EE8B"
+			tasks: [{
+				consume_items: true
+				id: "2D4C68EE690944CA"
+				item: "kubejs:gold_coin"
+				type: "item"
+			}]
+			title: "Work in Progress (Gold)"
+			x: 2.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["464C6D59436C1B33"]
+			id: "59D3137606DED95B"
+			subtitle: "For your mass storage needs."
+			tasks: [{
+				consume_items: true
+				id: "52CFD8600AD44AE4"
+				item: "kubejs:netherite_coin"
+				type: "item"
+			}]
+			title: "Something Shop? (Netherite)"
+			x: -2.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["464C6D59436C1B33"]
+			id: "302F279156A973A4"
+			subtitle: "Enigmatic Legacy wares possibly? Work in progress."
+			tasks: [{
+				consume_items: true
+				id: "5C39ABD56386875F"
+				item: "kubejs:netherite_coin"
+				type: "item"
+			}]
+			title: "Enigmatic Shop?"
+			x: -2.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["464C6D59436C1B33"]
+			id: "205AF1729B066313"
+			subtitle: "Work in progress."
+			tasks: [{
+				consume_items: true
+				id: "0C8B2A61064CEB3A"
+				item: "kubejs:netherite_coin"
+				type: "item"
+			}]
+			title: "Food Shop? (Netherite)"
+			x: -3.5d
+			y: 2.5d
+		}
 	]
 	subtitle: ["Currency exchange for coins."]
 	title: "The Shop"

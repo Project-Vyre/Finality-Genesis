@@ -1,0 +1,16 @@
+{
+	icon: "farmersdelight:ratatouille"
+	id: "6CD782C8277D9125"
+	loot_size: 1
+	order_index: 24
+	rewards: [
+		{ item: "farmersdelight:beef_stew" }
+		{ item: "farmersdelight:vegetable_soup" }
+		{ item: "farmersdelight:fish_stew" }
+		{ item: "farmersdelight:pasta_with_meatballs" }
+		{ item: "farmersdelight:pasta_with_mutton_chop" }
+		{ item: "farmersdelight:mushroom_rice" }
+		{ item: "farmersdelight:steak_and_potatoes" }
+	]
+	title: "Food Shop T3"
+}
