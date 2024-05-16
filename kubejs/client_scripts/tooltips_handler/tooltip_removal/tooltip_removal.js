@@ -7,6 +7,7 @@
  */
 
 ItemEvents.tooltip(event => {
+  /*
   let music_discs = [
     '13',
     'cat',
@@ -30,6 +31,7 @@ ItemEvents.tooltip(event => {
       text.remove(1)
     })
   }
+  */
   if (Platform.isLoaded('etched')) {
     event.addAdvanced('etched:boombox', (item, advanced, text) => {
       text.remove(1)
