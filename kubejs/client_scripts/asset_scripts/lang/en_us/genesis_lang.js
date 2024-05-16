@@ -344,13 +344,17 @@ ClientEvents.lang('en_us', event => {
     "item.kubejs.blaze_cake_singularity": "Blaze Cake Singularity"
   })
   let discLang = {
+    'arlecchino_battle_theme': 'Farabi Hasan Music - Arlecchino Battle Theme Phase 1 & 2 (Fan-Made) | Genshin Impact',
     'bad_deeds_inst': 'Cjbeards - Bad Deeds (Instrumental)',
     'boo_hoo': 'Cjbeards - Boo Hoo',
+    'columbina_battle_theme': 'Columbina Battle Phase 1 & 2 (Fan-Made) | Genshin Impact',
     'from_the_shadows': 'Cjbeards - From the Shadows',
-    'get_away_inst': 'Cjbeards - Get Away (Instrumental',
+    'get_away_inst': 'Cjbeards - Get Away (Instrumental)',
     'heart_of_the_wicked': 'Cjbeards - Heart of the Wicked',
     'mirror_mirror_inst': 'Cjbeards - Mirror Mirror (Instrumental)',
     'open_up_inst': 'Cjbeards - Open Up (Instrumental)',
+    'pantalone_battle_theme': 'Pantalone Double Phase Battle Theme (Fan-Made) | Genshin Impact',
+    'sandrone_battle_theme': 'Sandrone Marionette Double Phase Battle Theme (Fan-Made) | Genshin Impact',
     'silent_night': 'Cjbeards - Silent Night',
     'worst_nightmare_inst': 'Cjbeards - Worst Nightmare (Instrumental)'
   }

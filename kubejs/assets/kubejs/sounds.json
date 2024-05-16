@@ -1,72 +1,72 @@
 {
-  "music_disc.bad_deeds_inst": {
+  "bad_deeds_inst": {
     "sounds": [
       {
-        "name": "kubejs:records/bad_deeds_inst",
+        "name": "kubejs:bad_deeds_inst",
         "stream": true
       }
     ]
   },
-  "music_disc.boo_hoo": {
+  "boo_hoo": {
     "sounds": [
       {
-        "name": "kubejs:records/boo_hoo",
+        "name": "kubejs:boo_hoo",
         "stream": true
       }
     ]
   },
-  "music_disc.from_the_shadows": {
+  "from_the_shadows": {
     "sounds": [
       {
-        "name": "kubejs:records/from_the_shadows",
+        "name": "kubejs:from_the_shadows",
         "stream": true
       }
     ]
   },
-  "music_disc.get_away_inst": {
+  "get_away_inst": {
     "sounds": [
       {
-        "name": "kubejs:records/get_away_inst",
+        "name": "kubejs:get_away_inst",
         "stream": true
       }
     ]
   },
-  "music_disc.heart_of_the_wicked": {
+  "heart_of_the_wicked": {
     "sounds": [
       {
-        "name": "kubejs:records/heart_of_the_wicked",
+        "name": "kubejs:heart_of_the_wicked",
         "stream": true
       }
     ]
   },
-  "music_disc.mirror_mirror_inst": {
+  "mirror_mirror_inst": {
     "sounds": [
       {
-        "name": "kubejs:records/mirror_mirror_inst",
+        "name": "kubejs:mirror_mirror_inst",
         "stream": true
       }
     ]
   },
-  "music_disc.open_up_inst": {
+  "open_up_inst": {
     "sounds": [
       {
-        "name": "kubejs:records/open_up_inst",
+        "name": "kubejs:open_up_inst",
         "stream": true
       }
     ]
   },
-  "music_disc.silent_night": {
+  "silent_night": {
     "sounds": [
       {
-        "name": "kubejs:records/silent_night",
+        "name": "kubejs:silent_night",
         "stream": true
       }
     ]
   },
-  "music_disc.worst_nightmare_inst": {
+  "worst_nightmare_inst": {
     "sounds": [
       {
-        "name": "kubejs:records/worst_nightmare_inst",
+        "name": "kubejs:worst_nightmare_inst",
         "stream": true
       }
     ]
