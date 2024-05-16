@@ -55,7 +55,7 @@ ServerEvents.recipes(event => {
     G: '#forge:glass/colorless',
     S: 'extendedcrafting:ender_star',
     O: 'minecraft:obsidian'
-  }).id('finality:beacon')
+  }).id('finality:extendedcrafting/beacon_from_ender_star')
 
   let material_crystaltine_pattern = [
     'DLLLLLD',

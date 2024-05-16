@@ -155,6 +155,15 @@ ServerEvents.recipes(event => {
     N: 'minecraft:nether_star',
     O: 'minecraft:obsidian'
   }).id('minecraft:beacon')
+  event.shaped('minecraft:beacon', [
+    'GGG',
+    'GNG',
+    'OOO'
+  ], {
+    G: '#forge:glass/colorless',
+    N: 'minecraft:end_crystal',
+    O: 'minecraft:obsidian'
+  }).id('finality:beacon')
   event.shaped('minecraft:bucket', [
     'I I',
     ' I '
