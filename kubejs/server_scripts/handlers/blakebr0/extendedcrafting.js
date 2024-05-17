@@ -47,16 +47,6 @@ ServerEvents.recipes(event => {
     S: 'extendedcrafting:black_iron_slate'
   }).id('finality:mechanical_crafting/basic_table')
 
-  event.shaped('minecraft:beacon', [
-    'GGG',
-    'GSG',
-    'OOO'
-  ], {
-    G: '#forge:glass/colorless',
-    S: 'extendedcrafting:ender_star',
-    O: 'minecraft:obsidian'
-  }).id('finality:beacon')
-
   let material_crystaltine_pattern = [
     'DLLLLLD',
     'DAFNFAD',
@@ -129,12 +119,12 @@ ServerEvents.recipes(event => {
   ]).keepHeldItem().id('finality:nether_star_duplication')
 
   // modified vanilla recipes
-  event.shapeless('minecraft:end_crystal', [
+  event.shapeless('4x minecraft:end_crystal', [
     '4x #forge:glass/colorless',
     'extendedcrafting:ender_star',
     'minecraft:ghast_tear',
-    'minecraft:fermented_spider_eye',
-  ]).id('minecraft:end_crystal')
+    'minecraft:fermented_spider_eye'
+  ]).id('finality:extended_end_crystal')
 
   // ender crafting
   event.shaped('extendedcrafting:ender_crafter', [

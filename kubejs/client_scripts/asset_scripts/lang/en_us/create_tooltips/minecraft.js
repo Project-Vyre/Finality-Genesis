@@ -2,6 +2,7 @@
 // requires: create
 
 ClientEvents.lang('en_us', event => {
+  /*
   event.addAll(
     'minecraft',
     createTooltip('minecraft:music_disc_13')
@@ -107,6 +108,7 @@ ClientEvents.lang('en_us', event => {
       .setPalette($Palette.BLUE)
       .build()
   )
+  */
   event.addAll(
     'kubejs',
     createTooltip('minecraft:composter')

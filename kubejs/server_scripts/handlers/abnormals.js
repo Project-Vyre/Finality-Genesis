@@ -77,12 +77,14 @@ let ATMOLOG = [
   'morado_log',
   'yucca_log',
   'aspen_log',
+  'laurel_log'
 ]
 let ATMOWOOD = [
   'rosewood',
   'morado_wood',
   'yucca_wood',
-  'aspen_wood'
+  'aspen_wood',
+  'laurel_wood'
 ]
 let ATMO_WOOD_TYPES = [
   'rosewood',
@@ -90,6 +92,7 @@ let ATMO_WOOD_TYPES = [
   'yucca',
   'kousa',
   'aspen',
+  'laurel',
   'grimwood'
 ]
 

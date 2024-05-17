@@ -45,9 +45,10 @@ let STANDARD_PALETTE_REGISTRY = [
   'minecraft:wooden_pickaxe',
   'minecraft:stone_pickaxe',
   'minecraft:iron_pickaxe',
-  'minecraft:fletching_table',
   'minecraft:dried_kelp_block',
+  'minecraft:coal',
   'minecraft:coal_block',
+  'minecraft:diamond',
   'minecraft:diamond_block',
   'minecraft:raw_iron',
   'minecraft:raw_gold',
@@ -106,6 +107,9 @@ let GRAY_REGISTRY = [
   'minecraft:rotten_flesh',
   'minecraft:pointed_dripstone',
   'minecraft:andesite',
+  'minecraft:diorite',
+  'minecraft:granite',
+  'minecraft:tuff',
   'minecraft:cobblestone',
   'minecraft:cobbled_deepslate',
   'minecraft:dirt',
@@ -196,9 +200,19 @@ ClientEvents.lang('en_us', event => {
     "block.minecraft.andesite.tooltip.condition1": "Usage",
     "block.minecraft.andesite.tooltip.behaviour1": "Used in making _Andesite Alloy_.",
     "block.minecraft.andesite.tooltip.condition2": "Renewal",
-    "block.minecraft.andesite.tooltip.behaviour2": "Can be _renewed_ by _compacting_ some _Gravel_, _Flint_ and _Lava_ in a _Basin_. _Cobblestone_ and _Diorite_ can also be _mixed_ together in a shapeless recipe.",
+    "block.minecraft.andesite.tooltip.behaviour2": "Can be _renewed_ by _compacting_ some Gravel, Flint and Lava in a _Basin_. Cobblestone and Diorite can also be _mixed_ together in a shapeless recipe.",
     "block.minecraft.andesite.tooltip.condition3": "When haunted",
     "block.minecraft.andesite.tooltip.behaviour3": "Turns into _Deepslate_.",
+    "block.minecraft.diorite.tooltip": "DIORITE",
+    "block.minecraft.diorite.tooltip.summary": "Now has _additional usefulness_ due to Create's presence.",
+    "block.minecraft.diorite.tooltip.condition1": "Primary Use",
+    "block.minecraft.diorite.tooltip.behaviour1": "An easy method of acquiring _Andesite_ for those moments where you can't find any.",
+    "block.minecraft.diorite.tooltip.condition2": "Renewal",
+    "block.minecraft.diorite.tooltip.behaviour2": "Combine 2x quartz and 2x cobblestone either with a _Mechanical Mixer_ or in a 2x2 _crafting grid_.",
+    "block.minecraft.granite.tooltip": "GRANITE",
+    "block.minecraft.granite.tooltip.summary": "Now has _additional usefulness_ due to Create's presence.",
+    "block.minecraft.granite.tooltip.condition1": "When milled or crushed",
+    "block.minecraft.granite.tooltip.behaviour1": "Turns _Red Sand_ which can be _washed_ to procure useful materials such as nuggets of gold.",
     "block.minecraft.cobblestone.tooltip": "COBBLESTONE",
     "block.minecraft.cobblestone.tooltip.summary": "Now has _additional uses_ in recipes.",
     "block.minecraft.cobblestone.tooltip.condition1": "Usage",
@@ -213,6 +227,14 @@ ClientEvents.lang('en_us', event => {
     "block.minecraft.gravel.tooltip.summary": "Now has _additional uses_ in recpipes.",
     "block.minecraft.gravel.tooltip.condition1": "When washed",
     "block.minecraft.gravel.tooltip.behaviour1": "Has a chance of revealing _iron nuggets_ and _flint_.",
+    "block.minecraft.tuff.tooltip": "TUFF",
+    "block.minecraft.tuff.tooltip.summary": "Now has _additional uses_ in recipes.",
+    "block.minecraft.tuff.tooltip.condition1": "When crushed",
+    "block.minecraft.tuff.tooltip.behaviour1": "Can randomly provide flint or _nuggets_ of gold, copper, zinc or iron.",
+    "block.minecraft.tuff.tooltip.condition2": "Renewal Method 1",
+    "block.minecraft.tuff.tooltip.behaviour2": "Can be made by _compacting_ some gravel and lava in a _superheated_ Basin.",
+    "block.minecraft.tuff.tooltip.condition3": "Renewal Method 2",
+    "block.minecraft.tuff.tooltip.behaviour3": "Can also be made by _compacting_ some deepslate and lava in a _heated_ Basin.",
     "block.minecraft.dried_kelp_block.tooltip": "DRIED KELP BLOCK",
     "block.minecraft.dried_kelp_block.tooltip.summary": "Now has _additional uses_ in recipes.",
     "block.minecraft.dried_kelp_block.tooltip.condition1": "Heated Compacting",
@@ -223,13 +245,25 @@ ClientEvents.lang('en_us', event => {
     "block.minecraft.netherrack.tooltip.behaviour1": "Used for making _Blaze Cakes_ or _redstone_ when _crushed_ into _Cinder Flour_. Can also _rarely_ _produce_ _Netherite Scrap_ when _crushed_.",
     "block.minecraft.netherrack.tooltip.condition2": "Renewal",
     "block.minecraft.netherrack.tooltip.behaviour2": "Can be _renewed_ with _Instant Health II_ which can be _fully automated_ with quite a few Mechanical Mixers and Blaze Burners.",
+    "item.minecraft.coal.tooltip": "COAL",
+    "item.minecraft.coal.tooltip.summary": "Now has _additional uses_ in recipes.",
+    "item.minecraft.coal.tooltip.condition1": "When milled",
+    "item.minecraft.coal.tooltip.behaviour1": "Produces black dye with a _chance_ of gray dye.",
+    "item.minecraft.coal.tooltip.condition2": "Renewal",
+    "item.minecraft.coal.tooltip.behaviour2": "Can be infinitely renewed from _compacting_ dried kelp blocks in a _heated_ basin.",
     "block.minecraft.coal_block.tooltip": "COAL BLOCK",
     "block.minecraft.coal_block.tooltip.summary": "Now has _additional uses_ in recpipes.",
     "block.minecraft.coal_block.tooltip.condition1": "Superheated Compacting",
     "block.minecraft.coal_block.tooltip.behaviour1": "Now turns into _diamonds_ when given sufficient _heat_ and _pressure_.",
+    "block.minecraft.coal_block.tooltip.condition2": "Renewal",
+    "block.minecraft.coal_block.tooltip.behaviour2": "Can be infinitely renewed from _compacting_ dried kelp blocks in a _heated_ basin.",
+    "item.minecraft.diamond.tooltip": "DIAMOND",
+    "item.minecraft.diamond.tooltip.summary": "Formerly the strongest material. Now has _additional uses_ in recipes.",
+    "item.minecraft.diamond.tooltip.condition1": "Renewal",
+    "item.minecraft.diamond.tooltip.behaviour1": "Can be infinitely renewed from _compacting_ coal blocks in a _superheated_ basin.",
     "block.minecraft.diamond_block.tooltip": "DIAMOND BLOCK",
     "block.minecraft.diamond_block.tooltip.summary": "Now has _additional uses_ in recipes.",
-    "block.minecraft.diamond_block.tooltip.condition1": "Infinitely renewable",
+    "block.minecraft.diamond_block.tooltip.condition1": "Renewal",
     "block.minecraft.diamond_block.tooltip.behaviour1": "Can be _infinitely_ renewed from _compacting_ coal blocks in a _superheated_ basin.",
     "block.minecraft.beacon.tooltip": "BEACON",
     "block.minecraft.beacon.tooltip.summary": "Gives _positive_ effects to players in a certain radius. Requires a base built out of precious materials to function!",
@@ -269,10 +303,6 @@ ClientEvents.lang('en_us', event => {
     "item.minecraft.rotten_flesh.tooltip.behaviour1": "Is the basis of creating _enriched_ soil for _higher_ crop yields.",
     "item.minecraft.rotten_flesh.tooltip.condition2": "When haunted",
     "item.minecraft.rotten_flesh.tooltip.behaviour2": "Turns into _Phantom Membrane_.",
-    "block.minecraft.fletching_table.tooltip": "FLETCHING TABLE",
-    "block.minecraft.fletching_table.tooltip.summary": "Now has a _purpose_ and can _actually_ make arrows!",
-    "block.minecraft.fletching_table.tooltip.condition1": "On right click:",
-    "block.minecraft.fletching_table.tooltip.behaviour1": "It can now _craft_ arrows along with other _types_ of arrows.",
     "item.minecraft.nether_star.tooltip": "NETHER STAR",
     "item.minecraft.nether_star.tooltip.summary": "Now has _additional uses_.",
     "item.minecraft.nether_star.tooltip.condition1": "Usage",
@@ -482,6 +512,21 @@ ClientEvents.lang('en_us', event => {
   )
   */
   event.addAll(
+    'kubejs',
+    createTooltip('minecraft:red_sand')
+      .addSummary('It\'s Sand, but red.')
+      .addBehaviour([
+        'When washed',
+        'Can yield both gold nuggets and dead bushes.'
+      ])
+      .addBehaviour([
+        'Renewal',
+        'Can be obtained from milling or crushing granite.',
+      ])
+      .setPalette($Palette.GRAY)
+      .build()
+  )
+  event.addAll(
     'minecraft',
     createTooltip('minecraft:nether_wart')
       .addSummary('A _red_ fungus used in _potion brewing_. Primarily used for brewing _Awkward Potions_.')
@@ -588,6 +633,16 @@ ClientEvents.lang('en_us', event => {
     )
   }
   if (Platform.isLoaded('apotheosis')) {
+    event.addAll(
+      'kubejs',
+      createTooltip('minecraft:fletching_table')
+        .addSummary('Now has a _purpose_ and can _actually_ make arrows!')
+        .addBehaviour([
+          'On R-Click',
+          'It can now _craft_ arrows along with other _types_ of arrows.'
+        ])
+        .build()
+    )
     event.addAll(
       'kubejs',
       createTooltip('minecraft:spawner')

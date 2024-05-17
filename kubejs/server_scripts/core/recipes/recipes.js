@@ -155,6 +155,15 @@ ServerEvents.recipes(event => {
     N: 'minecraft:nether_star',
     O: 'minecraft:obsidian'
   }).id('minecraft:beacon')
+  event.shaped('minecraft:beacon', [
+    'GGG',
+    'GNG',
+    'OOO'
+  ], {
+    G: '#forge:glass/colorless',
+    N: 'minecraft:end_crystal',
+    O: 'minecraft:obsidian'
+  }).id('finality:beacon')
   event.shaped('minecraft:bucket', [
     'I I',
     ' I '
@@ -279,6 +288,18 @@ ServerEvents.recipes(event => {
     B: '#forge:storage_blocks/gold',
     T: '#forge:plates/gold'
   }).id('minecraft:bell')
+  event.recipes.minecraft.crafting_shapeless('minecraft:end_crystal', [
+    '4x #forge:glass/colorless',
+    'minecraft:nether_star',
+    'minecraft:ghast_tear',
+    'minecraft:fermented_spider_eye'
+  ]).id('minecraft:end_crystal')
+  event.recipes.minecraft.crafting_shapeless('minecraft:end_crystal', [
+    '4x #forge:glass/colorless',
+    'kubejs:awakened_singularity_core',
+    'minecraft:respawn_anchor',
+    'create:experience_nugget'
+  ]).id('finality:end_crystal_from_respawn_anchor')
   event.shaped('kubejs:deconstructor', [
     'DSS'
   ], {
@@ -536,6 +557,116 @@ ServerEvents.recipes(event => {
   /**
    * >-----<
    */
+  // Cjbeards Music Discs
+  event.recipes.minecraft.crafting_shapeless('kubejs:music_disc_bad_deeds_inst', [
+    'minecraft:music_disc_5',
+    'minecraft:iron_sword',
+    'minecraft:red_dye',
+    '3x minecraft:green_dye',
+    '#minecraft:wool'
+  ]).id('finality:music_disc_bad_deeds_inst')
+  event.recipes.minecraft.crafting_shapeless('kubejs:music_disc_boo_hoo', [
+    'minecraft:music_disc_5',
+    'minecraft:nether_wart',
+    'minecraft:glass_bottle',
+    'minecraft:flint_and_steel'
+  ]).id('finality:music_disc_boo_hoo')
+  event.recipes.minecraft.crafting_shapeless('kubejs:music_disc_from_the_shadows', [
+    'minecraft:music_disc_5',
+    'minecraft:crying_obsidian',
+    'minecraft:iron_sword',
+    'minecraft:shield'
+  ]).id('finality:music_disc_from_the_shadows')
+  event.recipes.minecraft.crafting_shapeless('kubejs:music_disc_get_away_inst', [
+    'minecraft:music_disc_5',
+    'minecraft:end_crystal',
+    '4x minecraft:bone',
+    '#minecraft:wool'
+  ]).id('finality:music_disc_get_away_inst')
+  event.recipes.create.mechanical_crafting('kubejs:music_disc_heart_of_the_wicked', [
+    ' W   W ',
+    'W WWW W',
+    'W  M  W',
+    ' W   W ',
+    '  W W  ',
+    '   W   '
+  ], {
+    W: 'create:framed_glass',
+    M: 'minecraft:music_disc_5'
+  }).id('finality:heart_of_the_wicked')
+  event.recipes.create.mechanical_crafting('kubejs:music_disc_mirror_mirror_inst', [
+    ' WSW ',
+    'WGRGW',
+    'WRMGW',
+    'WGGGW',
+    ' WWW ',
+    '  W  ',
+    '  W  '
+  ], {
+    W: 'minecraft:white_dye',
+    G: 'minecraft:tinted_glass',
+    R: 'create:polished_rose_quartz',
+    M: 'minecraft:music_disc_5',
+    S: '#minecraft:wool'
+  }).id('finality:mirror_mirror_inst')
+  event.recipes.create.mechanical_crafting('kubejs:music_disc_open_up_inst', [
+    'S       ',
+    'SS    W ',
+    'SSRRRRRE',
+    'SSR  RRR',
+    'SS      '
+  ], {
+    S: 'minecraft:stone',
+    R: 'minecraft:rotten_flesh',
+    E: 'minecraft:music_disc_5',
+    W: '#minecraft:wool'
+  }).id('finality:music_disc_open_up_inst')
+  event.recipes.create.mechanical_crafting('kubejs:music_disc_silent_night', [
+    '   C   ',
+    '   M   ',
+    ' R C R ',
+    'RRRRRRR'
+  ], {
+    C: '#minecraft:candles',
+    M: 'minecraft:music_disc_5',
+    R: '#minecraft:wool_carpets'
+  }).id('finality:music_disc_silent_night')
+  event.recipes.minecraft.crafting_shapeless('kubejs:music_disc_worst_nightmare_inst', [
+    'minecraft:music_disc_5',
+    '4x create:flywheel',
+    '#minecraft:wool'
+  ]).id('finality:music_disc_worst_nightmare_inst')
+  // Farabi Hasan Music
+  event.recipes.create.mechanical_crafting('kubejs:music_disc_arlecchino_battle_theme', [
+    'A   A',
+    ' A A ',
+    '  X  ',
+    ' A A ',
+    'A   A'
+  ], {
+    A: 'minecraft:red_dye',
+    X: 'minecraft:music_disc_5'
+  }).id('finality:music_disc_arlecchino_battle_theme')
+  event.recipes.create.mixing('kubejs:music_disc_columbina_battle_theme', [
+    'minecraft:music_disc_5',
+    'minecraft:ender_pearl',
+    'minecraft:feather',
+    'minecraft:soul_sand',
+    'minecraft:magenta_dye',
+    Fluid.of('kubejs:condensed_universal_entropy', 10)
+  ]).id('finality:music_disc_columbina_battle_theme')
+  event.recipes.create.mixing('kubejs:music_disc_pantalone_battle_theme', [
+    'minecraft:music_disc_5',
+    'kubejs:gold_coin',
+    'minecraft:clock',
+    'minecraft:chain'
+  ]).id('finality:music_disc_pantalone_battle_theme')
+  event.recipes.create.mixing('kubejs:music_disc_sandrone_battle_theme', [
+    'minecraft:music_disc_5',
+    'create:precision_mechanism',
+    'create:mechanical_arm',
+    'create:clockwork_bearing',
+  ]).id('finality:music_disc_sandrone_battle_theme')
   // Shimmer Recipes
   event.recipes.create.mixing(Fluid.of('kubejs:shimmer', 1000), [
     'create:refined_radiance',
