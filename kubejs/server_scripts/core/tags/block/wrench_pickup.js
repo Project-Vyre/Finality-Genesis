@@ -53,6 +53,22 @@ ServerEvents.tags('block', event => {
     'minecraft:beehive',
     'minecraft:chain',
     'minecraft:cartography_table',
-    'minecraft:ladder'
+    'minecraft:ladder',
+    'kubejs:iridium_block',
+    'kubejs:high_entropy_alloy_block'
   ])
+  let CMD = [
+    'command_block',
+    'chain_command_block',
+    'repeating_command_block'
+  ]
+  for (let insert of CMD) {
+    event.add('create:wrench_pickup', `kubejs:${insert}`)
+  }
+  if (Platform.isLoaded('fusion')) {
+    event.add('create:wrench_pickup', [
+      'kubejs:iridium_block_connecting',
+      'kubejs:high_entropy_alloy_block_connecting'
+    ])
+  }
 })

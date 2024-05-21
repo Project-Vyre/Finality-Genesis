@@ -11,6 +11,15 @@ let CMD = [
 ]
 
 StartupEvents.registry('block', event => {
+  event.create('kubejs:iridium_block')
+    .soundType('netherite_block')
+    .hardness(75)
+    .resistance(250)
+    .requiresTool(true)
+    .tagBlock('minecraft:wither_immune')
+    .tagBlock('minecraft:dragon_immune')
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('forge:needs_netherite_tool')
   event.create('kubejs:high_entropy_alloy_block')
     .textureAll('kubejs:block/high_entropy_alloy_block')
     .soundType('netherite_block')
@@ -22,7 +31,6 @@ StartupEvents.registry('block', event => {
     .tagBlock('minecraft:dragon_immune')
     .tagBlock('minecraft:mineable/pickaxe')
     .tagBlock('forge:needs_netherite_tool')
-    .tagBlock('create:wrench_pickup')
   for (let insert of CMD) {
     event.create(`kubejs:${insert}`)
       .textureAll(`kubejs:block/${insert}`)
@@ -35,7 +43,6 @@ StartupEvents.registry('block', event => {
       .tagBlock('minecraft:dragon_immune')
       .tagBlock('minecraft:mineable/pickaxe')
       .tagBlock('forge:needs_netherite_tool')
-      .tagBlock('create:wrench_pickup')
       .tagItem('kubejs:command_blocks')
       .blockEntity(entityInfo => {
         entityInfo.inventory(9, 1)
