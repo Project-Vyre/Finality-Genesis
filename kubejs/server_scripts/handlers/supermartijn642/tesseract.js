@@ -4,7 +4,7 @@
  */
 
 // requires: tesseract
-// requires: create
+// requires: kubejs_create
 
 ServerEvents.recipes(event => {
   event.remove({ id: 'tesseract:tesseract' })
@@ -13,8 +13,8 @@ ServerEvents.recipes(event => {
     'EPE',
     'OEO'
   ], {
-    O: 'kubejs:high_entropy_alloy_block',
+    O: 'kubejs:iridium_block',
     E: 'kubejs:ender_pearl_singularity',
     P: 'kubejs:precision_mechanism_singularity'
-  }).id('finality:mechanical_crafting/tesseract')
+  }).id('kubejs:mechanical_crafting/tesseract')
 })

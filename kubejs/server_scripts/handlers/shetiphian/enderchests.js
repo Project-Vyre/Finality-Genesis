@@ -1,10 +1,10 @@
-// requires: enderchests
-// requires: create
-
 /**
  * @file Server handler for ShetiPhian's EnderChests mod.
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
+
+// requires: enderchests
+// requires: kubejs_create
 
 ServerEvents.tags('block', event => {
   event.add('create:wrench_pickup', 'enderchests:ender_chest')

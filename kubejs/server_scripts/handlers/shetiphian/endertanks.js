@@ -1,10 +1,10 @@
-// requires: endertanks
-// requires: create
-
 /**
  * @file Server handler for ShetiPhian's EnderTanks mod.
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
+
+// requires: endertanks
+// requires: create
 
 ServerEvents.tags('block', event => {
   event.add('create:wrench_pickup', 'endertanks:tank')
