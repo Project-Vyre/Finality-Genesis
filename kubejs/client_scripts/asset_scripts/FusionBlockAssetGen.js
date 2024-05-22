@@ -1,6 +1,11 @@
 // requires: fusion
 
 ClientEvents.lang('en_us', event => {
+  event.add(
+    'kubejs',
+    'block.kubejs.iridium_block_connecting',
+    'Block of Iridium (Connecting)'
+  )
   if (Platform.isLoaded('textanimator')) {
     event.add(
       'kubejs',
@@ -15,24 +20,4 @@ ClientEvents.lang('en_us', event => {
       'Block of High Entropy Alloy (Connecting)'
     )
   }
-})
-
-ClientEvents.highPriorityAssets(event => {
-  event.add('kubejs:models/block/high_entropy_alloy_block_connecting', {
-    "loader": "fusion:model",
-    "type": "fusion:connecting",
-    "connections": [
-      {
-        "type": "and",
-        "predicates": [
-          { "type": "is_same_block" },
-          { "type": "is_face_visible" }
-        ]
-      }
-    ],
-    "parent": "minecraft:block/cube_all",
-    "textures": {
-      "all": "kubejs:block/high_entropy_alloy_block_connecting"
-    }
-  })
 })

@@ -147,6 +147,10 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .texture('kubejs:item/removed')
     .maxStackSize(1)
     .fireResistant(true)
+  event.create('kubejs:raw_iridium')
+    .texture('kubejs:item/raw_iridium')
+    .rarity('rare')
+    .fireResistant(true)
   event.create('kubejs:iridium_ingot')
     .texture('kubejs:item/iridium_ingot')
     .rarity('rare')
@@ -160,6 +164,69 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .fireResistant(true)
     .rarity('rare')
     .fireResistant(true)
+  event.create('kubejs:iridium_pickaxe', 'pickaxe').tier('iridium_tool')
+    .rarity('rare')
+    .texture('kubejs:item/iridium_pickaxe')
+    .maxStackSize(1)
+    .fireResistant(true)
+    .tag('forge:pickaxes')
+    .tag('forge:tools')
+    .tag('forge:tools/pickaxe')
+    .tag('forge:tools/pickaxes')
+    .tag('kubejs:iridium_tools')
+
+  event.create('kubejs:iridium_axe', 'axe').tier('iridium_tool')
+    .rarity('rare')
+    .texture('kubejs:item/iridium_axe')
+    .maxStackSize(1)
+    .fireResistant(true)
+    .tag('forge:axes')
+    .tag('forge:tools')
+    .tag('forge:tools/axe')
+    .tag('forge:tools/axes')
+    .tag('kubejs:iridium_tools')
+
+  event.create('kubejs:iridium_shovel', 'shovel').tier('iridium_tool')
+    .rarity('rare')
+    .texture('kubejs:item/iridium_shovel')
+    .maxStackSize(1)
+    .fireResistant(true)
+    .tag('forge:shovels')
+    .tag('forge:tools')
+    .tag('forge:tools/shovel')
+    .tag('forge:tools/shovels')
+    .tag('kubejs:iridium_tools')
+
+  if (Platform.isLoaded('paxeljs')) {
+    event.create('kubejs:iridium_paxel', 'paxel').tier('iridium_tool')
+      .rarity('rare')
+      .texture('kubejs:item/iridium_paxel')
+      .maxStackSize(1)
+      .fireResistant(true)
+  }
+
+  event.create('kubejs:iridium_hoe', 'hoe').tier('iridium_tool')
+    .rarity('rare')
+    .texture('kubejs:item/iridium_hoe')
+    .maxStackSize(1)
+    .fireResistant(true)
+    .tag('forge:hoes')
+    .tag('forge:tools')
+    .tag('forge:tools/hoe')
+    .tag('forge:tools/hoes')
+    .tag('kubejs:iridium_tools')
+
+  event.create('kubejs:iridium_sword', 'sword').tier('iridium_tool')
+    .rarity('rare')
+    .texture('kubejs:item/iridium_sword')
+    .maxStackSize(1)
+    .fireResistant(true)
+    .tag('forge:swords')
+    .tag('forge:tools')
+    .tag('forge:tools/sword')
+    .tag('forge:tools/swords')
+    .tag('kubejs:iridium_tools')
+
   event.create('kubejs:unstable_entropy_particles')
     .rarity('epic')
     .texture('kubejs:item/unstable_entropy')
@@ -393,13 +460,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
 
 // tiers
 ItemEvents.toolTierRegistry(event => {
-  event.add('final_tool', tier => {
-    tier.uses = -1
-    tier.speed = 256.0
-    tier.attackDamageBonus = 65.0
-    tier.level = 5
-    tier.enchantmentValue = 30
-  })
   event.add('crystalline_tool', tier => {
     tier.uses = -1
     tier.speed = 32
@@ -407,16 +467,38 @@ ItemEvents.toolTierRegistry(event => {
     tier.level = 5
     tier.enchantmentValue = 30
   })
+  event.add('iridium_tool', tier => {
+    tier.uses = -1
+    tier.speed = 40
+    tier.attackDamageBonus = 50.0
+    tier.level = 5
+    tier.enchantmentValue = 30
+  })
+  event.add('final_tool', tier => {
+    tier.uses = -1
+    tier.speed = 256.0
+    tier.attackDamageBonus = 65.0
+    tier.level = 5
+    tier.enchantmentValue = 30
+  })
 })
 
 ItemEvents.armorTierRegistry(event => {
+  event.add('iridium_armor', tier => {
+    tier.durabilityMultiplier = -1
+    tier.slotProtections = [20, 20, 20, 20]
+    tier.enchantmentValue = 30
+    tier.equipSound = 'minecraft:item.armor.equip_netherite'
+    tier.toughness = 80
+    tier.knockbackResistance = 5.0
+  })
   event.add('final_armor', tier => {
     tier.durabilityMultiplier = -1
     tier.slotProtections = [99999999, 99999999, 99999999, 99999999]
     tier.enchantmentValue = 30
     tier.equipSound = 'minecraft:item.armor.equip_netherite'
     tier.toughness = 99999999
-    tier.knockbackResistance = 5.0
+    tier.knockbackResistance = 10.0
   })
 })
 

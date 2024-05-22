@@ -1,0 +1,21 @@
+{
+  "loader": "fusion:model",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "and",
+      "predicates": [
+        {
+          "type": "is_same_block"
+        },
+        {
+          "type": "is_face_visible"
+        }
+      ]
+    }
+  ],
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "kubejs:block/high_entropy_alloy_block_connecting"
+  }
+}
