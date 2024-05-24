@@ -583,15 +583,6 @@ ClientEvents.lang('en_us', event => {
         .build()
     )
   }
-  if (Platform.isLoaded('fusion')) {
-    event.addAll(
-      'kubejs',
-      createTooltip('kubejs:high_entropy_alloy_block_connecting')
-        .addSummary('The _connecting_ variant.')
-        .setPalette($Palette.PURPLE)
-        .build()
-    )
-  }
   if (Platform.isLoaded('summoningrituals')) {
     event.addAll(
       'summoningrituals',
@@ -676,13 +667,13 @@ ClientEvents.lang('en_us', event => {
     )
     event.addAll('kubejs', {
       "item.kubejs.final_pickaxe.tooltip.condition1": "Caution!",
-      "item.kubejs.final_pickaxe.tooltip.behaviour1": "_Apotheosis_ can make this tool _destroy a chunk at a time_. _It does not matter what block type it is!_ Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_.",
+      "item.kubejs.final_pickaxe.tooltip.behaviour1": "_Apotheosis_ can make this tool destroy up to a maximum area size of _5x5_. It does not matter what block type it is! Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_.",
       "item.kubejs.final_axe.tooltip.condition1": "Caution!",
-      "item.kubejs.final_axe.tooltip.behaviour1": "_Apotheosis_ can make this tool _destroy a chunk at a time_. _It does not matter what block type it is!_ Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_.",
+      "item.kubejs.final_axe.tooltip.behaviour1": "_Apotheosis_ can make this tool destroy up to a maximum area size of _5x5_. It does not matter what block type it is! Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_.",
       "item.kubejs.final_shovel.tooltip.condition1": "Caution!",
-      "item.kubejs.final_shovel.tooltip.behaviour1": "_Apotheosis_ can make this tool _destroy a chunk at a time_. _It does not matter what block type it is!_ Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_.",
+      "item.kubejs.final_shovel.tooltip.behaviour1": "_Apotheosis_ can make this tool destroy up to a maximum area size of _5x5_. It does not matter what block type it is! Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_.",
       "item.kubejs.final_hoe.tooltip.condition1": "Caution!",
-      "item.kubejs.final_hoe.tooltip.behaviour1": "_Apotheosis_ can make this tool _destroy a chunk at a time_. _It does not matter what block type it is!_ Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_."
+      "item.kubejs.final_hoe.tooltip.behaviour1": "_Apotheosis_ can make this tool destroy up to a maximum area size of _5x5_. It does not matter what block type it is! Don't say I warned you! If you do happen to get the perfect affix, simply hold _[Shift]_ to destroy blocks with _precision_."
     })
   }
   if (Platform.isLoaded('malum')) {
