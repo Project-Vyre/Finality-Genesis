@@ -137,7 +137,7 @@ ServerEvents.recipes(event => {
     C: 'extendedcrafting:crafting_core'
   }).id('extendedcrafting:ender_crafter')
 
-
+/*
   event.recipes.create.mechanical_crafting('kubejs:command_block', [
     'IIGIIGII',
     'IIQPPQII',
@@ -194,7 +194,7 @@ ServerEvents.recipes(event => {
     Q: 'create:rose_quartz_lamp',
     P: 'create:powered_toggle_latch'
   }).id('finality:mechanical_crafting/repeating_command_block')
-
+*/
   event.recipes.create.mixing('kubejs:high_entropy_alloy_nugget', [
     'kubejs:stable_entropy_particles',
     'extendedcrafting:the_ultimate_nugget'
