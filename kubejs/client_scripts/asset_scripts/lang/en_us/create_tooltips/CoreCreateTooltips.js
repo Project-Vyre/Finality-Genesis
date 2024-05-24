@@ -530,14 +530,14 @@ ClientEvents.lang('en_us', event => {
     'minecraft',
     createTooltip('minecraft:nether_wart')
       .addSummary('A _red_ fungus used in _potion brewing_. Primarily used for brewing _Awkward Potions_.')
-      .addBehaviour([
-        'When haunted',
-        'Absorbs soul energy to _re-awaken_.'
-      ])
       .setPalette($Palette.RED)
       .build()
   )
   if (Platform.isLoaded('finality')) {
+    event.addAll('finality', {
+      'item.minecraft.nether_wart.tooltip.condition1': 'When haunted',
+      'item.minecraft.nether_wart.tooltip.behaviour1': 'Absorbs soul energy to _re-awaken_.'
+    })
     event.addAll(
       'finality',
       createTooltip('finality:living_nether_wart')
