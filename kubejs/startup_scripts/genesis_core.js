@@ -1,6 +1,3 @@
-// priority: 10
-// requires: create
-
 /**
  * @file The core registry, responsible for items, blocks, fluids, etc.
  * @version 1.19.2
@@ -10,6 +7,9 @@
  * @author Hunter19823 <https://github.com/Hunter19823> Helped me a lot very early on. Thank you.
  * @author ladylexxie <https://github.com/ladylexxie> Helped a lot very early on. Thank you.
  */
+
+// priority: 10
+// requires: create
 
 Platform.mods.kubejs.name = 'FinalityJS'
 
@@ -61,6 +61,24 @@ const DIVING = ['diving_helmet', 'backtank', 'diving_boots']
 
 StartupEvents.registry('item', event => { // Register new items here event.create('example_item').displayName('Example Item')
   /**
+   * CORE MATERIALS
+   */
+
+  // ZINC
+  event.create('kubejs:zinc_sheet')
+    .texture('kubejs:item/zinc_sheet')
+    .tag('forge:plates/zinc')
+  // NETHERITE
+  event.create('kubejs:netherite_nugget')
+    .texture('kubejs:item/netherite_nugget')
+    .tag('forge:nuggets/netherite')
+    .fireResistant(true)
+  event.create('kubejs:netherite_sheet')
+    .texture('kubejs:item/netherite_sheet')
+    .fireResistant(true)
+    .tag('forge:plates/netherite')
+
+  /**
    * 
    * @param {string} itemId 
    */
@@ -104,12 +122,12 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
   event.create('kubejs:dormant_singularity_core')
     .rarity('uncommon')
     .texture('kubejs:item/dormant_singularity_core')
-    .maxStackSize(16)
+    .maxStackSize(1)
     .fireResistant(true)
   event.create('kubejs:awakened_singularity_core')
     .rarity('epic')
     .texture('kubejs:item/awakened_singularity_core')
-    .maxStackSize(8)
+    .maxStackSize(1)
     .fireResistant(true)
   event.create('kubejs:denied_result')
     .displayName('§dDenied Result')
@@ -129,51 +147,159 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .texture('kubejs:item/removed')
     .maxStackSize(1)
     .fireResistant(true)
-  event.create('kubejs:qubit')
+  event.create('kubejs:crystal_lance', 'sword').tier('crystalline_tool')
     .rarity('epic')
-    .texture('kubejs:item/qubit')
     .maxStackSize(1)
     .fireResistant(true)
+    .group('combat')
+  event.create('kubejs:raw_iridium')
+    .texture('kubejs:item/raw_iridium')
+    .rarity('rare')
+    .fireResistant(true)
+  event.create('kubejs:iridium_ingot')
+    .texture('kubejs:item/iridium_ingot')
+    .rarity('rare')
+    .fireResistant(true)
+  event.create('kubejs:iridium_nugget')
+    .texture('kubejs:item/iridium_nugget')
+    .rarity('rare')
+    .fireResistant(true)
+  event.create('kubejs:iridium_sheet')
+    .texture('kubejs:item/iridium_sheet')
+    .fireResistant(true)
+    .rarity('rare')
+  event.create('kubejs:iridium_rod')
+    .texture('kubejs:item/iridium_rod')
+    .fireResistant(true)
+    .rarity('rare')
+  event.create('kubejs:iridium_pickaxe', 'pickaxe').tier('iridium_tool')
+    .rarity('rare')
+    .texture('kubejs:item/iridium_pickaxe')
+    .maxStackSize(1)
+    .fireResistant(true)
+    .tag('forge:pickaxes')
+    .tag('forge:tools')
+    .tag('forge:tools/pickaxe')
+    .tag('forge:tools/pickaxes')
+    .tag('kubejs:iridium_tools')
+  event.create('kubejs:iridium_axe', 'axe').tier('iridium_tool')
+    .rarity('rare')
+    .texture('kubejs:item/iridium_axe')
+    .maxStackSize(1)
+    .fireResistant(true)
+    .tag('forge:axes')
+    .tag('forge:tools')
+    .tag('forge:tools/axe')
+    .tag('forge:tools/axes')
+    .tag('kubejs:iridium_tools')
+  event.create('kubejs:iridium_shovel', 'shovel').tier('iridium_tool')
+    .rarity('rare')
+    .texture('kubejs:item/iridium_shovel')
+    .maxStackSize(1)
+    .fireResistant(true)
+    .tag('forge:shovels')
+    .tag('forge:tools')
+    .tag('forge:tools/shovel')
+    .tag('forge:tools/shovels')
+    .tag('kubejs:iridium_tools')
+  if (Platform.isLoaded('paxeljs')) {
+    event.create('kubejs:iridium_paxel', 'paxel').tier('iridium_tool')
+      .rarity('rare')
+      .texture('kubejs:item/iridium_paxel')
+      .maxStackSize(1)
+      .fireResistant(true)
+  }
+  event.create('kubejs:iridium_hoe', 'hoe').tier('iridium_tool')
+    .rarity('rare')
+    .texture('kubejs:item/iridium_hoe')
+    .maxStackSize(1)
+    .fireResistant(true)
+    .tag('forge:hoes')
+    .tag('forge:tools')
+    .tag('forge:tools/hoe')
+    .tag('forge:tools/hoes')
+    .tag('kubejs:iridium_tools')
+  event.create('kubejs:iridium_sword', 'sword').tier('iridium_tool')
+    .rarity('rare')
+    .texture('kubejs:item/iridium_sword')
+    .maxStackSize(1)
+    .fireResistant(true)
+    .tag('forge:swords')
+    .tag('forge:tools')
+    .tag('forge:tools/sword')
+    .tag('forge:tools/swords')
+    .tag('kubejs:iridium_tools')
+
+  event.create('kubejs:iridium_helmet', 'helmet').tier('iridium_armor')
+    .rarity('rare')
+    .texture('kubejs:item/iridium_helmet')
+    .maxStackSize(1)
+    .fireResistant(true)
+    .tag('forge:helmets')
+    .tag('forge:armor')
+    .tag('forge:armors')
+    .tag('forge:armors/helmets')
+    .tag('kubejs:iridium_armor')
+    .group('combat')
+  event.create('kubejs:iridium_chestplate', 'chestplate').tier('iridium_armor')
+    .rarity('rare')
+    .texture('kubejs:item/iridium_chestplate')
+    .maxStackSize(1)
+    .fireResistant(true)
+    .tag('forge:chestplates')
+    .tag('forge:armor')
+    .tag('forge:armors')
+    .tag('forge:armors/chestplates')
+    .tag('kubejs:iridium_armor')
+    .group('combat')
+  event.create('kubejs:iridium_leggings', 'leggings').tier('iridium_armor')
+    .rarity('rare')
+    .texture('kubejs:item/iridium_leggings')
+    .maxStackSize(1)
+    .fireResistant(true)
+    .tag('forge:leggings')
+    .tag('forge:armor')
+    .tag('forge:armors')
+    .tag('forge:armors/leggings')
+    .tag('kubejs:iridium_armor')
+    .group('combat')
+  event.create('kubejs:iridium_boots', 'boots').tier('iridium_armor')
+    .rarity('rare')
+    .texture('kubejs:item/iridium_boots')
+    .maxStackSize(1)
+    .fireResistant(true)
+    .tag('forge:boots')
+    .tag('forge:armor')
+    .tag('forge:armors')
+    .tag('forge:armors/boots')
+    .tag('kubejs:iridium_armor')
+
   event.create('kubejs:unstable_entropy_particles')
     .rarity('epic')
     .texture('kubejs:item/unstable_entropy')
-    .maxStackSize(64)
     .fireResistant(true)
-    .rarity('epic')
   event.create('kubejs:stable_entropy_particles')
     .rarity('epic')
     .texture('kubejs:item/stable_entropy')
-    .maxStackSize(64)
     .fireResistant(true)
-    .rarity('epic')
   event.create('kubejs:high_entropy_alloy')
     .rarity('epic')
     .texture('kubejs:item/final_ingot')
-    .maxStackSize(64)
     .fireResistant(true)
-    .rarity('epic')
-    .group('miscellaneous')
   event.create('kubejs:high_entropy_alloy_nugget')
     .rarity('epic')
     .texture('kubejs:item/final_nugget')
-    .maxStackSize(64)
     .fireResistant(true)
-    .rarity('epic')
   event.create('kubejs:high_entropy_alloy_sheet')
     .rarity('epic')
     .texture('kubejs:item/final_sheet')
-    .maxStackSize(64)
     .fireResistant(true)
-    .rarity('epic')
   event.create('kubejs:high_entropy_alloy_rod')
     .rarity('epic')
     .texture('kubejs:item/final_rod')
-    .maxStackSize(64)
     .fireResistant(true)
-    .rarity('epic')
   // tools
   event.create('kubejs:final_pickaxe', 'pickaxe').tier('final_tool')
-    .displayName('Particula Eversorem')
     .rarity('epic')
     .texture('kubejs:item/final_pickaxe')
     .maxStackSize(1)
@@ -186,7 +312,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .group('tools')
 
   event.create('kubejs:final_axe', 'axe').tier('final_tool')
-    .displayName('Natura Exitium')
     .rarity('epic')
     .texture('kubejs:item/final_axe')
     .maxStackSize(1)
@@ -199,7 +324,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .group('tools')
 
   event.create('kubejs:final_shovel', 'shovel').tier('final_tool')
-    .displayName('Terra Confractus')
     .rarity('epic')
     .texture('kubejs:item/final_shovel')
     .maxStackSize(1)
@@ -213,7 +337,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
 
   if (Platform.isLoaded('paxeljs')) {
     event.create('kubejs:final_paxel', 'paxel').tier('final_tool')
-      .displayName('Omni Figura')
       .rarity('epic')
       .texture('kubejs:item/final_paxel')
       .maxStackSize(1)
@@ -221,7 +344,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
   }
 
   event.create('kubejs:final_hoe', 'hoe').tier('final_tool')
-    .displayName('Agricola Manus')
     .rarity('epic')
     .texture('kubejs:item/final_hoe')
     .maxStackSize(1)
@@ -234,7 +356,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .group('tools')
   // weapons
   event.create('kubejs:final_sword', 'sword').tier('final_tool')
-    .displayName('Corevis Ultimatum')
     .rarity('epic')
     .texture('kubejs:item/final_sword')
     .maxStackSize(1)
@@ -247,14 +368,12 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .group('combat')
 
   event.create('kubejs:final_lance', 'sword').tier('final_tool')
-    .displayName('Tenebris Punctura')
     .rarity('epic')
     .maxStackSize(1)
     .fireResistant(true)
     .group('combat')
 
   event.create('kubejs:final_scythe', 'sword').tier('final_tool')
-    .displayName('Scythe of Eternal Oblivion')
     .rarity('epic')
     .texture('kubejs:item/final_scythe')
     .maxStackSize(1)
@@ -266,22 +385,14 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .group('combat')
 
   event.create('kubejs:final_katana', 'sword').tier('final_tool')
-    .displayName('Celeritas Obumbratio')
     .rarity('epic')
     .texture('kubejs:item/final_katana')
     .maxStackSize(1)
     .fireResistant(true)
     .group('combat')
 
-  event.create('kubejs:crystal_lance', 'sword').tier('crystalline_tool')
-    .displayName('Crystallus Hasta')
-    .rarity('epic')
-    .maxStackSize(1)
-    .fireResistant(true)
-    .group('combat')
   // armor
   event.create('kubejs:final_helmet', 'helmet').tier('final_armor')
-    .displayName('Conscientia Oculi')
     .rarity('epic')
     .texture('kubejs:item/final_helmet')
     .maxStackSize(1)
@@ -294,7 +405,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .group('combat')
 
   event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor')
-    .displayName('Vitale Cordis')
     .rarity('epic')
     .texture('kubejs:item/final_chestplate')
     .maxStackSize(1)
@@ -307,7 +417,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .group('combat')
 
   event.create('kubejs:final_leggings', 'leggings').tier('final_armor')
-    .displayName('Universum Motus')
     .rarity('epic')
     .texture('kubejs:item/final_leggings')
     .maxStackSize(1)
@@ -320,7 +429,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .group('combat')
 
   event.create('kubejs:final_boots', 'boots').tier('final_armor')
-    .displayName('Gravitas Anchoram')
     .rarity('epic')
     .texture('kubejs:item/final_boots')
     .maxStackSize(1)
@@ -331,7 +439,13 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:armors/boots')
     .tag('kubejs:final_armor')
     .group('combat')
+
   // shapes and alphanumeric
+  event.create('kubejs:qubit')
+    .rarity('epic')
+    .texture('kubejs:item/qubit')
+    .maxStackSize(1)
+    .fireResistant(true)
   for (let [character, name] of Object.entries(LETTERS)) {
     event.create(`kubejs:letter_${character}`)
       .displayName(`Letter ${name}`)
@@ -385,10 +499,29 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .maxStackSize(64)
     .fireResistant(true)
     .glow(true)
+  event.create('kubejs:null_matter')
+    .rarity('epic')
+    .texture('layer0', 'kubejs:item/null_matter')
+    .texture('layer1', 'kubejs:item/null_matter_overlay')
+    .fireResistant(true)
 })
 
 // tiers
 ItemEvents.toolTierRegistry(event => {
+  event.add('crystalline_tool', tier => {
+    tier.uses = -1
+    tier.speed = 12
+    tier.attackDamageBonus = 20.0
+    tier.level = 5
+    tier.enchantmentValue = 30
+  })
+  event.add('iridium_tool', tier => {
+    tier.uses = -1
+    tier.speed = 64
+    tier.attackDamageBonus = 46.0
+    tier.level = 5
+    tier.enchantmentValue = 30
+  })
   event.add('final_tool', tier => {
     tier.uses = -1
     tier.speed = 256.0
@@ -396,23 +529,24 @@ ItemEvents.toolTierRegistry(event => {
     tier.level = 5
     tier.enchantmentValue = 30
   })
-  event.add('crystalline_tool', tier => {
-    tier.uses = -1
-    tier.speed = 32
-    tier.attackDamageBonus = 42.0
-    tier.level = 5
-    tier.enchantmentValue = 30
-  })
 })
 
 ItemEvents.armorTierRegistry(event => {
+  event.add('iridium_armor', tier => {
+    tier.durabilityMultiplier = -1
+    tier.slotProtections = [20, 20, 20, 20]
+    tier.enchantmentValue = 30
+    tier.equipSound = 'minecraft:item.armor.equip_netherite'
+    tier.toughness = 80
+    tier.knockbackResistance = 5.0
+  })
   event.add('final_armor', tier => {
     tier.durabilityMultiplier = -1
     tier.slotProtections = [99999999, 99999999, 99999999, 99999999]
     tier.enchantmentValue = 30
     tier.equipSound = 'minecraft:item.armor.equip_netherite'
     tier.toughness = 99999999
-    tier.knockbackResistance = 5.0
+    tier.knockbackResistance = 10.0
   })
 })
 
