@@ -273,6 +273,10 @@ JEIEvents.information(event => {
     'Take advantage of its floating properties, perhaps you can automate this?'
   ])
   event.addItem('kubejs:lemon_seed', ['Can only be acquired from breaking grass or trading with farmers.'])
+  event.addItem('kubejs:raw_iridium', [
+    'Can only be found in the Overworld in the deepslate layer.',
+    'Can also be acquired occasionally from Wandering Traders.'
+  ])
   if (Platform.isLoaded('cataclysm')) {
     event.addItem('minecraft:nether_star', [
       'If you find a deactivated and mechanical version of the Wither, give it a Nether Star.',

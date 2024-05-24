@@ -377,6 +377,10 @@ REIEvents.information(event => {
   event.addItem('minecraft:soul_campfire', 'New Functionality', ['Campfires now regenerate your health. <wave>Cozy!</wave>'])
   event.addItem('minecraft:dragon_egg', 'Uses', ['Can be used to make Dragon Breath.'])
   event.addItem('kubejs:lemon_seed', 'Acquisition', ['Can only be acquired from breaking grass or trading with farmers.'])
+  event.addItem('kubejs:raw_iridium', 'Acquisition', [
+    'Can only be found in the Overworld in the deepslate layer.',
+    'Can also be acquired occasionally from Wandering Traders.'
+  ])
   event.addItem('create:refined_radiance', 'Acquisition', [
     'When Chromatic Compound is thrown into a grid of Beacons, it changes form and becomes Refined Radiance.',
     'Take advantage of its floating properties, perhaps you can automate this?'
