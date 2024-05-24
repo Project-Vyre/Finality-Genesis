@@ -333,7 +333,7 @@
     },
     "heartbeat": {
       "enabled": true,
-      "opacity": 1.0,
+      "opacity": 0.3,
       "useHealthPercentage": false,
       "maxHealth": 6,
       "maxHealthPercentage": 0.3,
