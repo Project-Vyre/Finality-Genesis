@@ -4,6 +4,8 @@
  * @author LLytho <https://github.com/LLytho> Prevented the head bashing
  */
 
+// requires: fusion
+
 let CMD = [
   'command_block',
   'chain_command_block',
@@ -11,6 +13,69 @@ let CMD = [
 ]
 
 StartupEvents.registry('block', event => {
+  event.create('kubejs:deepslate_iridium_ore')
+    .soundType('deepslate')
+    .hardness(10)
+    .resistance(5)
+    .requiresTool(true)
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('forge:needs_netherite_tool')
+    .item(ctx => {
+      ctx.rarity('rare')
+    })
+  event.create('kubejs:raw_iridium_block')
+    .soundType('stone')
+    .hardness(10)
+    .resistance(5)
+    .requiresTool(true)
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('forge:needs_netherite_tool')
+    .item(ctx => {
+      ctx.rarity('rare')
+      ctx.fireResistant(true)
+    })
+  event.create('kubejs:iridium_block')
+    .soundType('netherite_block')
+    .hardness(25)
+    .resistance(250)
+    .requiresTool(true)
+    .tagBlock('minecraft:wither_immune')
+    .tagBlock('minecraft:dragon_immune')
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('forge:needs_netherite_tool')
+    .item(ctx => {
+      ctx.rarity('rare')
+      ctx.fireResistant(true)
+    })
+  event.create('kubejs:iridium_block_connecting')
+    .textureAll('kubejs:block/iridium_block_connecting')
+    .soundType('netherite_block')
+    .hardness(25)
+    .resistance(1000)
+    .requiresTool(true)
+    .tagBlock('minecraft:wither_immune')
+    .tagBlock('minecraft:dragon_immune')
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('forge:needs_netherite_tool')
+    .item(ctx => {
+      ctx.rarity('rare')
+      ctx.fireResistant(true)
+    })
+  event.create('kubejs:iridium_casing')
+    .textureAll('kubejs:block/iridium_casing_connected')
+    .soundType('netherite_block')
+    .hardness(25)
+    .resistance(1000)
+    .requiresTool(true)
+    .tagBlock('minecraft:wither_immune')
+    .tagBlock('minecraft:dragon_immune')
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('minecraft:mineable/axe')
+    .tagBlock('forge:needs_netherite_tool')
+    .item(ctx => {
+      ctx.rarity('rare')
+      ctx.fireResistant(true)
+    })
   event.create('kubejs:high_entropy_alloy_block')
     .textureAll('kubejs:block/high_entropy_alloy_block')
     .soundType('netherite_block')
@@ -22,7 +87,25 @@ StartupEvents.registry('block', event => {
     .tagBlock('minecraft:dragon_immune')
     .tagBlock('minecraft:mineable/pickaxe')
     .tagBlock('forge:needs_netherite_tool')
-    .tagBlock('create:wrench_pickup')
+    .item(ctx => {
+      ctx.rarity('epic')
+      ctx.fireResistant(true)
+    })
+  event.create('kubejs:high_entropy_alloy_block_connecting')
+    .textureAll('kubejs:block/high_entropy_alloy_block_connecting')
+    .soundType('netherite_block')
+    .hardness(500)
+    .resistance(1000)
+    .lightLevel(1.0)
+    .requiresTool(true)
+    .tagBlock('minecraft:wither_immune')
+    .tagBlock('minecraft:dragon_immune')
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('forge:needs_netherite_tool')
+    .item(ctx => {
+      ctx.rarity('epic')
+      ctx.fireResistant(true)
+    })
   for (let insert of CMD) {
     event.create(`kubejs:${insert}`)
       .textureAll(`kubejs:block/${insert}`)
@@ -35,7 +118,6 @@ StartupEvents.registry('block', event => {
       .tagBlock('minecraft:dragon_immune')
       .tagBlock('minecraft:mineable/pickaxe')
       .tagBlock('forge:needs_netherite_tool')
-      .tagBlock('create:wrench_pickup')
       .tagItem('kubejs:command_blocks')
       .blockEntity(entityInfo => {
         entityInfo.inventory(9, 1)
@@ -43,6 +125,10 @@ StartupEvents.registry('block', event => {
         entityInfo.serverTick(1200, 0, entity => {
           entity.inventory.insertItem('kubejs:high_entropy_alloy_block', false)
         }) // reminder to self: add inventory capabilities
+      })
+      .item(ctx => {
+        ctx.rarity('epic')
+        ctx.fireResistant(true)
       })
   }
   event.create('kubejs:null_storage_block')
@@ -55,6 +141,9 @@ StartupEvents.registry('block', event => {
       entityInfo.inventory(9, 9)
       entityInfo.rightClickOpensInventory()
       // reminder to self: add inventory capabilities
+    })
+    .item(ctx => {
+      ctx.rarity('uncommon')
     })
   event.create('kubejs:dripstone_transitional_stone')
     .textureAll('kubejs:block/dripstone_stone')
