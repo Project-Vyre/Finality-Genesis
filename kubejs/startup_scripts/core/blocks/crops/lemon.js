@@ -56,6 +56,7 @@ StartupEvents.registry('block', event => {
     .crop('kubejs:lemon')
     .item(seedItem => {
       seedItem.texture('kubejs:item/lemon_seeds')
+      seedItem.rarity('uncommon')
     })
     .texture(0, 'kubejs:block/lemon_tree_stage0')
     .texture(1, 'kubejs:block/lemon_tree_stage1')
