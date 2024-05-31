@@ -3,13 +3,13 @@ type = fancymenu_layout
 layout-meta {
   identifier = %fancymenu:universal_layout%
   render_custom_elements_behind_vanilla = true
-  last_edited_time = 1714587075954
+  last_edited_time = 1717179740821
   is_enabled = true
   randommode = false
   randomgroup = 1
   randomonlyfirsttime = false
   layout_index = 0
-  [loading_requirement_container_meta:2e26bcfd-7da2-4080-8573-f552b5dbf009-1714586996019] = [groups:][instances:]
+  [loading_requirement_container_meta:6b3b2b30-da86-451a-947a-cfbd870f6c43-1717179612630] = [groups:][instances:]
 }
 
 customization {
@@ -40,10 +40,13 @@ element {
   audio_instance_10 = [source:local]/config/fancymenu/assets/menu_music/farabi_hasan_music_sandrone_double_phase.ogg
   audio_instance_11 = [source:local]/config/fancymenu/assets/menu_music/farabi_hasan_music_columbina_battle_phase_1and2.ogg
   audio_instance_12 = [source:local]/config/fancymenu/assets/menu_music/cjbeards_boo_hoo.ogg
+  audio_instance_13 = [source:local]/config/fancymenu/assets/menu_music/cjbeards_open_up.ogg
+  audio_instance_14 = [source:local]/config/fancymenu/assets/menu_music/cjbeards_black_white_red.ogg
+  audio_instance_15 = [source:local]/config/fancymenu/assets/menu_music/cjbeards_worst_nightmare.ogg
   play_mode = shuffle
   looping = true
   volume = 1.0
-  sound_source = music
+  sound_source = record
   element_type = audio_v2
   instance_identifier = 93ae9858-a4bb-403a-bbff-67b3bac3ee33-1706223167829
   appearance_delay = no_delay
