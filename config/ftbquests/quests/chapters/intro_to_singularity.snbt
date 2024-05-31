@@ -1126,7 +1126,12 @@
 				}
 				{
 					id: "1A765A58EF2FA74D"
-					item: "kubejs:music_disc_worst_nightmare_inst"
+					item: "kubejs:music_disc_worst_nightmare"
+					type: "item"
+				}
+				{
+					id: "4BEDEE986C0213EC"
+					item: "kubejs:music_disc_black_white_red"
 					type: "item"
 				}
 			]
