@@ -15,11 +15,11 @@ let orestones = {
 
 ServerEvents.recipes(event => {
   event.shaped('create_mechanical_extruder:mechanical_extruder', [
-    'A A',
+    'I I',
     'GPG',
-    'AGA'
+    'IGI'
   ], {
-    A: 'create:cut_andesite',
+    I: 'kubejs:iridium_casing',
     G: '#forge:glass/colorless',
     P: 'create:mechanical_press'
   }).id('create_mechanical_extruder:mechanical_extruder')
@@ -57,11 +57,15 @@ ServerEvents.recipes(event => {
     Fluid.of('create:chocolate'),
     Fluid.of('minecraft:lava')
   ]).requiredBonks(1).withCatalyst('kubejs:repeating_command_block').id('finality:repeating_command_block/scoria_compat')
+  event.recipes.create_mechanical_extruder.extruding(Item.of('kubejs:raw_iridium'), [
+    Fluid.of('kubejs:condensed_universal_entropy'),
+    Item.of('kubejs:deepslate_iridium_ore')
+  ]).requiredBonks(1).withCatalyst('minecraft:crying_obsidian').id('finality:extruding/raw_iridium')
   if (Platform.isLoaded('malum')) {
-    event.recipes.create_mechanical_extruder.extruding(Item.of('malum:block_of_cthonic_gold').withChance(0.06), [
-      Item.of('minecraft:raw_gold_block'),
+    event.recipes.create_mechanical_extruder.extruding(Item.of('malum:cthonic_gold').withChance(0.12), [
+      Item.of('malum:twisted_rock'),
       Fluid.of('kubejs:condensed_universal_entropy')
-    ]).requiredBonks(24).withCatalyst('malum:twisted_rock').id('finality:malum/extruder_cthonic_gold')
+    ]).requiredBonks(6).withCatalyst('malum:block_of_cthonic_gold').id('finality:malum/extruder_cthonic_gold')
   }
   if (Platform.isLoaded('quark')) {
     event.recipes.create_mechanical_extruder.extruding(Item.of('quark:shale'), [

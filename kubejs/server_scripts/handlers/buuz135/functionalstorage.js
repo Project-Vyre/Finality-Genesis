@@ -12,6 +12,9 @@
 
 ServerEvents.recipes(event => {
   event.remove([
+    { id: 'functionalstorage:oak_drawer_alternate_x1' },
+    { id: 'functionalstorage:oak_drawer_alternate_x2'},
+    { id: 'functionalstorage:oak_drawer_alternate_x4'},
     { id: 'functionalstorage:compacting_drawer' },
     { id: 'functionalstorage:compacting_framed_drawer' },
     { id: 'functionalstorage:simple_compacting_drawer' },
@@ -30,25 +33,6 @@ ServerEvents.recipes(event => {
     'minecraft:ender_pearl',
     'minecraft:paper'
   ]).id('finality:ender_drawer_linking_guide')
-  event.shaped('kubejs:denied_result', [
-    'W'
-  ], {
-    W: '#forge:chests/wooden'
-  }).id('functionalstorage:oak_drawer_alternate_x1')
-  event.shaped('kubejs:denied_result', [
-    ' W ',
-    '   ',
-    ' W '
-  ], {
-    W: '#forge:chests/wooden'
-  }).id('functionalstorage:oak_drawer_alternate_x2')
-  event.shaped('kubejs:denied_result', [
-    'W W',
-    '   ',
-    'W W'
-  ], {
-    W: '#forge:chests/wooden'
-  }).id('functionalstorage:oak_drawer_alternate_x4')
   for (let i = 0; i < WOOD_TYPES.length; i++) {
     let material = WOOD_TYPES[i];
     event.shaped(`functionalstorage:${material}_1`, [

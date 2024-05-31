@@ -13,7 +13,7 @@ ServerEvents.recipes(event => {
     'RTB',
     'QQQ'
   ], {
-    Q: 'minecraft:quartz_block',
+    Q: 'create:iron_sheet',
     R: 'create:rose_quartz_lamp',
     T: 'minecraft:tinted_glass',
     B: 'minecraft:beacon'
@@ -26,9 +26,9 @@ ServerEvents.recipes(event => {
     ' UUU '
   ], {
     U: 'create:sturdy_sheet',
-    T: 'create:railway_casing',
+    T: 'kubejs:iridium_casing',
     E: 'kubejs:electron_tube_singularity',
     P: 'kubejs:precision_mechanism_singularity',
-    B: 'minecraft:beacon'
+    B: 'kubejs:ender_pearl_singularity'
   }).id('finality:mechanical_crafting/overseers_tempad')
 })

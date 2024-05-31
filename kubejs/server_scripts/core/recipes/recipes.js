@@ -1,8 +1,3 @@
-// priority: 100
-// requires: kubejs_create
-// requires: supplementaries
-// requires: salt
-
 /**
  * @file Handler for core recipes.
  * 
@@ -13,6 +8,13 @@
  * @author puu7693 <https://github.com/puu7693> for writing the script that grants potion effects when wearing a specific set of armor
  * @author MaxNeedsSnacks <https://github.com/MaxNeedsSnacks> Fixing KubeJS Create bugs
  */
+
+// priority: 100
+// requires: fusion
+// requires: kubejs_create
+// requires: farmersdelight
+// requires: salt
+// requires: supplementaries
 
 const WOOD_TYPES = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'crimson', 'warped']
 const STANDARD_ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
@@ -108,53 +110,19 @@ ServerEvents.recipes(event => {
     R: 'minecraft:redstone'
   }).id('minecraft:heavy_weighted_pressure_plate')
   // denied
-  event.shapeless('kubejs:denied_result', [
-    '4x minecraft:netherite_scrap',
-    '4x minecraft:gold_ingot'
-  ]).id('minecraft:netherite_ingot')
-  event.shaped('kubejs:denied_result', [
-    ' G ',
-    'GMG',
-    ' G '
-  ], {
-    G: 'minecraft:gold_ingot',
-    M: 'minecraft:redstone'
-  }).id('minecraft:clock')
-  event.shaped('kubejs:denied_result', [
-    ' I ',
-    'IRI',
-    ' I '
-  ], {
-    I: 'minecraft:iron_ingot',
-    R: 'minecraft:redstone'
-  }).id('minecraft:compass')
-  event.shaped('kubejs:denied_result', [
-    'WWW',
-    'CEC',
-    'CRC'
-  ], {
-    W: '#minecraft:planks',
-    C: 'minecraft:cobblestone',
-    E: 'minecraft:iron_ingot',
-    R: 'minecraft:redstone'
-  }).id('minecraft:piston')
-  event.shaped('kubejs:denied_result', [
-    'F F',
-    'FCF',
-    ' F '
-  ], {
-    F: 'minecraft:iron_ingot',
-    C: '#forge:chests/wooden'
-  }).id('minecraft:hopper')
-  event.shaped('kubejs:denied_result', [
-    'GGG',
-    'GNG',
-    'OOO'
-  ], {
-    G: 'minecraft:glass',
-    N: 'minecraft:nether_star',
-    O: 'minecraft:obsidian'
-  }).id('minecraft:beacon')
+  let vanilla_recipes = [
+    'minecraft:netherite_ingot',
+    'minecraft:clock',
+    'minecraft:compass',
+    'minecraft:piston',
+    'minecraft:hopper',
+    'minecraft:beacon',
+    'minecraft:bucket'
+  ]
+  for (let i = 0; i < vanilla_recipes.length; i++) {
+    let recipeIds = vanilla_recipes[i];
+    event.remove({ id: recipeIds })
+  }
   event.shaped('minecraft:beacon', [
     'GGG',
     'GNG',
@@ -307,11 +275,19 @@ ServerEvents.recipes(event => {
     S: 'create:shaft'
   }).id('finality:deconstructor')
   /**
+   * QoL
+   */
+  event.recipes.minecraft.smelting('create:zinc_block', 'create:raw_zinc_block')
+    .cookingTime(1000).xp(6.3)
+    .id('finality:smelting/zinc_block_from_raw_zinc_block')
+  event.recipes.minecraft.blasting('create:zinc_block', 'create:raw_zinc_block')
+    .cookingTime(900).xp(6.3)
+    .id('finality:blasting/zinc_block_from_raw_zinc_block')
+  /**
    * BLASTING
    * 
    * Notice: Blasting recipes are automatically added by Create!
    */
-  event.recipes.minecraft.blasting('create:zinc_block', 'create:raw_zinc_block').id('finality:blasting/raw_zinc_block')
   event.recipes.minecraft.blasting('minecraft:skeleton_skull', 'minecraft:zombie_head').id('finality:blasting/zombie_head_flesh_burning')
   /**
    * CAMPFIRE COOKING / SMOKING
@@ -362,6 +338,12 @@ ServerEvents.recipes(event => {
     Fluid.water(1000),
     Fluid.lava(1000)
   ]).id('finality:compacting/cursed_obsidian')
+  event.recipes.create.compacting('create:blaze_cake_base', [
+    'farmersdelight:rice',
+    'minecraft:sugar',
+    'create:cinder_flour',
+    'minecraft:potato'
+  ]).id('finality:compacting/blaze_cake_base_from_rice')
   /**
    * CRUSHING
    */
@@ -410,6 +392,15 @@ ServerEvents.recipes(event => {
       Item.of('create:zinc_nugget').withChance(0.10),
       Item.of('minecraft:iron_nugget').withChance(0.10)
     ], '#create:stone_types/tuff').processingTime(350).id('create:crushing/tuff_recycling')
+    console.log('Also removing Electrum from Ochrum.')
+    event.recipes.create.crushing([
+      Item.of('create:crushed_raw_gold').withChance(0.2),
+      Item.of('minecraft:gold_nugget').withChance(0.2)
+    ], 'create:ochrum').processingTime(250).id('create:crushing/ochrum')
+    event.recipes.create.crushing([
+      Item.of('create:crushed_raw_gold').withChance(0.2),
+      Item.of('minecraft:gold_nugget').withChance(0.2)
+    ], '#create:stone_types/ochrum').processingTime(250).id('create:crushing/ochrum_recycling')
   }
   /**
    * FILLING
@@ -441,6 +432,10 @@ ServerEvents.recipes(event => {
     Item.of('minecraft:echo_shard').withChance(0.02),
     Item.of('minecraft:disc_fragment_5').withChance(0.01)
   ], 'kubejs:deepslate_shard').id('finality:haunting/echo_shard')
+  event.recipes.create.haunting(
+    'minecraft:skeleton_skull',
+    'minecraft:bone_block'
+  ).id('finality:haunting/skeleton_skull_from_bone_block')
   event.recipes.create.haunting([
     'minecraft:wither_skeleton_skull',
     Item.of('minecraft:coal').withChance(0.25)
@@ -557,7 +552,425 @@ ServerEvents.recipes(event => {
   /**
    * >-----<
    */
+  // IRIDIUM
+  event.shaped('kubejs:raw_iridium_block', [
+    'III',
+    'III',
+    'III'
+  ], {
+    I: 'kubejs:raw_iridium'
+  }).id('finality:raw_iridium_block')
+  event.shaped('kubejs:iridium_block', [
+    'III',
+    'III',
+    'III'
+  ], {
+    I: 'kubejs:iridium_ingot'
+  }).id('finality:iridium_block')
+  event.shapeless('9x kubejs:iridium_ingot', [
+    'kubejs:iridium_block'
+  ]).id('finality:iridium_block_decompression')
+  event.shaped('kubejs:iridium_ingot', [
+    'III',
+    'III',
+    'III'
+  ], {
+    I: 'kubejs:iridium_nugget'
+  }).id('finality:iridium_nugget_compression')
+  event.shapeless('9x kubejs:iridium_nugget', [
+    'kubejs:iridium_ingot'
+  ]).id('finality:iridium_ingot_decompression')
+  let iridium_blocks = [
+    'iridium_block_connecting',
+    'ornate_iridium_block_connecting',
+    'ornate_iridium_pillar_connecting',
+    'iridium_quartz_block_connecting',
+    'iridium_tiles',
+    'iridium_tiles_connecting'
+  ]
+  for (let i = 0; i < iridium_blocks.length; i++) {
+    let blockId = iridium_blocks[i];
+    event.recipes.minecraft.stonecutting(
+      'kubejs:' + blockId,
+      '#kubejs:iridium_blocks'
+    ).id('kubejs:' + blockId)
+  }
+  event.recipes.minecraft.stonecutting(
+    'kubejs:iridium_block',
+    '#kubejs:iridium_blocks'
+  ).id('finality:iridium_block_deconnecting')
+  event.recipes.minecraft.smelting('kubejs:iridium_ingot', 'kubejs:raw_iridium')
+    .cookingTime(200).xp(0.7)
+    .id('finality:iridium_ingot_from_smelting_raw_iridium')
+  event.recipes.minecraft.smelting('kubejs:iridium_block', 'kubejs:raw_iridium_block')
+    .cookingTime(1000).xp(6.3)
+    .id('finality:iridium_block_from_smelting_raw_iridium_block')
+  event.recipes.minecraft.blasting('kubejs:iridium_ingot', 'kubejs:raw_iridium')
+    .cookingTime(100).xp(0.7)
+    .id('finality:iridium_ingot_from_blasting_raw_iridium')
+  event.recipes.minecraft.blasting('kubejs:iridium_block', 'kubejs:raw_iridium_block')
+    .cookingTime(900).xp(6.3)
+    .id('finality:blasting/raw_iridium_block')
+  event.recipes.create.crushing([
+    '4x kubejs:crushed_raw_iridium',
+    Item.of('kubejs:crushed_raw_iridium', 2).withChance(0.25),
+    Item.of('create:experience_nugget').withChance(0.75),
+    Item.of('minecraft:cobbled_deepslate').withChance(0.125)
+  ], 'kubejs:deepslate_iridium_ore').processingTime(450).id('finality:crushing/deepslate_iridium_ore')
+  event.recipes.minecraft.smelting(
+    'kubejs:iridium_ingot',
+    'kubejs:crushed_raw_iridium'
+  ).cookingTime(200).xp(0.1).id('finality:smelting/iridium_ingot_from_crushed')
+  event.recipes.minecraft.blasting(
+    'kubejs:iridium_ingot',
+    'kubejs:crushed_raw_iridium'
+  ).cookingTime(100).xp(0.1).id('finality:blasting/iridium_ingot_from_crushed')
+  event.recipes.create.splashing([
+    '9x kubejs:iridium_nugget',
+    Item.of('minecraft:lapis_lazuli').withChance(0.75)
+  ], 'kubejs:crushed_raw_iridium').id('finality:splashing/crushed_raw_iridium')
+  event.recipes.create.pressing(
+    'kubejs:iridium_sheet',
+    'kubejs:iridium_ingot'
+  ).id('finality:pressing/iridium_sheet')
+  event.recipes.create.item_application('kubejs:iridium_casing', [
+    'create:railway_casing',
+    'kubejs:iridium_sheet'
+  ]).id('finality:item_application/iridium_casing')
+  event.recipes.create.cutting(
+    '2x kubejs:iridium_rod',
+    'kubejs:iridium_ingot'
+  ).processingTime(200).id('finality:cutting/iridium_rod')
+  event.shaped('kubejs:iridium_helmet', [
+    'III',
+    'I I'
+  ], {
+    I: 'kubejs:iridium_ingot'
+  }).id('finality:iridium_helmet')
+  event.shaped('kubejs:iridium_chestplate', [
+    'I I',
+    'III',
+    'III'
+  ], {
+    I: 'kubejs:iridium_ingot'
+  }).id('finality:iridium_chestplate')
+  event.shaped('kubejs:iridium_leggings', [
+    'III',
+    'I I',
+    'I I'
+  ], {
+    I: 'kubejs:iridium_ingot'
+  }).id('finality:iridium_leggings')
+  event.shaped('kubejs:iridium_boots', [
+    'I I',
+    'I I'
+  ], {
+    I: 'kubejs:iridium_ingot'
+  }).id('finality:iridium_boots')
+  event.shaped('kubejs:iridium_sword', [
+    'E',
+    'E',
+    'S'
+  ], {
+    E: 'kubejs:iridium_ingot',
+    S: 'kubejs:iridium_rod'
+  }).id('finality:crafting/iridium_sword')
+  event.shaped('kubejs:iridium_pickaxe', [
+    'EEE',
+    ' S ',
+    ' S '
+  ], {
+    E: 'kubejs:iridium_ingot',
+    S: 'kubejs:iridium_rod'
+  }).id('finality:crafting/iridium_pickaxe')
+  event.shaped('kubejs:iridium_axe', [
+    'EE',
+    'ES',
+    ' S'
+  ], {
+    E: 'kubejs:iridium_ingot',
+    S: 'kubejs:iridium_rod'
+  }).id('finality:crafting/iridium_axe')
+  event.shaped('kubejs:iridium_shovel', [
+    'E',
+    'S',
+    'S'
+  ], {
+    E: 'kubejs:iridium_ingot',
+    S: 'kubejs:iridium_rod'
+  }).id('finality:crafting/iridium_shovel')
+  if (Platform.isLoaded('paxeljs')) {
+    event.shaped('kubejs:iridium_paxel', [
+      'ABC',
+      ' S ',
+      ' S '
+    ], {
+      A: 'kubejs:iridium_axe',
+      B: 'kubejs:iridium_shovel',
+      C: 'kubejs:iridium_pickaxe',
+      S: 'kubejs:iridium_rod'
+    }).id('finality:crafting/iridium_paxel')
+  }
+  event.shaped('kubejs:iridium_hoe', [
+    'EE',
+    ' S',
+    ' S'
+  ], {
+    E: 'kubejs:iridium_ingot',
+    S: 'kubejs:iridium_rod'
+  }).id('finality:crafting/iridium_hoe')
+  event.recipes.create.mixing('kubejs:iridium_nugget', [
+    'kubejs:netherite_nugget',
+    'create:brass_nugget',
+    Fluid.of('kubejs:condensed_universal_entropy', 10)
+  ]).superheated().id('finality:mixing/iridium_nugget_from_netherite')
+  event.recipes.create.mixing('kubejs:iridium_ingot', [
+    'minecraft:netherite_ingot',
+    'create:brass_ingot',
+    Fluid.of('kubejs:condensed_universal_entropy', 90)
+  ]).superheated().id('finality:mixing/iridium_ingot_from_netherite')
+  // HIGH ENTROPY ALLOY / FINAL
+  event.recipes.create.mixing([
+    Item.of('kubejs:unstable_entropy_particles').withChance(0.50),
+    Item.of('kubejs:errored_result').withChance(0.25),
+    Item.of('create:experience_nugget').withChance(0.25)
+  ], [
+    'create:chromatic_compound',
+    'create:railway_casing',
+    'minecraft:netherite_block',
+    'create:brass_block',
+    'create:andesite_alloy_block',
+    'minecraft:diamond_block',
+    'minecraft:amethyst_shard',
+    '2x minecraft:chorus_fruit',
+    Fluid.of('kubejs:condensed_universal_entropy', 1000)
+  ]).superheated().id('finality:mixing/unstable_entropy_creation1')
+  event.recipes.create.mixing([
+    '9x kubejs:unstable_entropy_particles',
+    Item.of('kubejs:unstable_entropy_particles', 9).withChance(0.50),
+    Item.of('kubejs:errored_result').withChance(0.25),
+    Item.of('create:experience_block').withChance(0.12)
+  ], [
+    'kubejs:amethyst_singularity',
+    'kubejs:brass_singularity',
+    'kubejs:andesite_alloy_singularity',
+    'kubejs:diamond_singularity',
+    'create:chromatic_compound',
+    'kubejs:netherite_singularity',
+    'kubejs:sturdy_sheet_singularity',
+    Fluid.of('kubejs:condensed_universal_entropy'),
+    'kubejs:electron_tube_singularity'
+  ]).id('finality:mixing/unstable_entropy_creation_from_singularities')
+  event.recipes.create.mixing('kubejs:unstable_entropy_particles', [
+    'kubejs:errored_result',
+    Fluid.of('kubejs:condensed_universal_entropy', 250)
+  ]).id('finality:mixing/errored_result_recycling')
+  event.recipes.create.sequenced_assembly([
+    Item.of('kubejs:stable_entropy_particles').withChance(0.75),
+    Item.of('kubejs:unstable_entropy_particles').withChance(0.25)
+  ], 'kubejs:unstable_entropy_particles', [
+    event.recipes.create.filling('kubejs:stabilizing_entropy_particles', ['kubejs:stabilizing_entropy_particles', Fluid.of('kubejs:condensed_universal_order', 250)]),
+    event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles'),
+    event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles'),
+    event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles'),
+    event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles')
+  ]).transitionalItem('kubejs:stabilizing_entropy_particles').loops(4).id('finality:sequenced_assembly/stable_entropy_particles')
+  event.shaped('kubejs:high_entropy_alloy_block', [
+    'EEE',
+    'EEE',
+    'EEE'
+  ], {
+    E: 'kubejs:high_entropy_alloy'
+  }).id('finality:high_entropy_alloy_block_compression')
+  event.shapeless('9x kubejs:high_entropy_alloy', [
+    'kubejs:high_entropy_alloy_block'
+  ]).id('finality:high_entropy_alloy_block_decompression')
+  event.shaped('kubejs:high_entropy_alloy', [
+    'EEE',
+    'EEE',
+    'EEE'
+  ], {
+    E: 'kubejs:high_entropy_alloy_nugget'
+  }).id('finality:high_entropy_alloy_nugget_compression')
+  event.shapeless('9x kubejs:high_entropy_alloy_nugget', [
+    'kubejs:high_entropy_alloy'
+  ]).id('finality:high_entropy_alloy_decompression')
+  event.recipes.minecraft.stonecutting(
+    'kubejs:high_entropy_alloy_block_connecting',
+    'kubejs:high_entropy_alloy_block'
+  ).id('finality:high_entropy_alloy_block_connecting_conversion')
+  event.recipes.minecraft.stonecutting(
+    'kubejs:high_entropy_alloy_block',
+    'kubejs:high_entropy_alloy_block_connecting'
+  ).id('finality:high_entropy_alloy_block_deconnecting')
+  event.recipes.create.pressing(
+    'kubejs:high_entropy_alloy_sheet',
+    'kubejs:high_entropy_alloy'
+  ).id('finality:pressing/high_entropy_alloy_sheet')
+  event.recipes.create.cutting(
+    '2x kubejs:high_entropy_alloy_rod',
+    'kubejs:high_entropy_alloy'
+  ).processingTime(200).id('finality:cutting/high_entropy_alloy_rod')
+  // FINAL ARMOR
+  event.recipes.create.mechanical_crafting('kubejs:final_helmet', [
+    '   EEE   ',
+    ' EEEREEE ',
+    'EEIEREIEE',
+    'IEIEREIEI',
+    'EEEEEEEEE'
+  ], {
+    E: 'kubejs:high_entropy_alloy_block',
+    R: 'kubejs:repeating_command_block',
+    I: 'kubejs:iridium_block'
+  }).id('finality:mechanical_crafting/final_helmet')
+  event.recipes.create.mechanical_crafting('kubejs:final_chestplate', [
+    'EEE   EEE',
+    'ECE   ECE',
+    'EEE   EEE',
+    'EEEEEEEEE',
+    'EEEEEEEEE',
+    'EEEEEEEEE',
+    'EEEEEEEEE',
+    'EEEEEEEEE',
+    'EEEEEEEEE'
+  ], {
+    E: 'kubejs:high_entropy_alloy_block',
+    C: 'kubejs:chain_command_block'
+  }).id('finality:mechanical_crafting/final_chestplate')
+  event.recipes.create.mechanical_crafting('kubejs:final_leggings', [
+    'EEEEEEEEE',
+    'EEEEEEEEE',
+    'EEEEEEEEE',
+    'EEE   EEE',
+    'EEE   EEE',
+    'EEE   EEE',
+    'EEE   EEE',
+    'EEE   EEE',
+    'EEE   EEE'
+  ], {
+    E: 'kubejs:high_entropy_alloy_block'
+  }).id('finality:mechanical_crafting/final_leggings')
+  event.recipes.create.mechanical_crafting('kubejs:final_boots', [
+    'EEE   EEE',
+    'EEE   EEE',
+    'EEE   EEE',
+    'EEE   EEE',
+    'EEE   EEE',
+    'EEE   EEE'
+  ], {
+    E: 'kubejs:high_entropy_alloy_block'
+  }).id('finality:mechanical_crafting/final_boots')
+  // FINAL ITEMS & TOOLS
+  event.recipes.create.mechanical_crafting('kubejs:final_sword', [
+    'E',
+    'E',
+    'E',
+    'S'
+  ], {
+    E: 'kubejs:high_entropy_alloy',
+    S: 'kubejs:high_entropy_alloy_rod'
+  }).id('finality:mechanical_crafting/final_sword')
+  event.recipes.create.mechanical_crafting('kubejs:final_pickaxe', [
+    'EEE',
+    ' S ',
+    ' S '
+  ], {
+    E: 'kubejs:high_entropy_alloy',
+    S: 'kubejs:high_entropy_alloy_rod'
+  }).id('finality:mechanical_crafting/final_pickaxe')
+  event.recipes.create.mechanical_crafting('kubejs:final_axe', [
+    'EE',
+    'ES',
+    ' S'
+  ], {
+    E: 'kubejs:high_entropy_alloy',
+    S: 'kubejs:high_entropy_alloy_rod'
+  }).id('finality:mechanical_crafting/final_axe')
+  event.recipes.create.mechanical_crafting('kubejs:final_shovel', [
+    'E',
+    'S',
+    'S'
+  ], {
+    E: 'kubejs:high_entropy_alloy',
+    S: 'kubejs:high_entropy_alloy_rod'
+  }).id('finality:mechanical_crafting/final_shovel')
+  if (Platform.isLoaded('paxeljs')) {
+    event.recipes.create.mechanical_crafting('kubejs:final_paxel', [
+      'ABC',
+      ' S ',
+      ' S '
+    ], {
+      A: 'kubejs:final_axe',
+      B: 'kubejs:final_shovel',
+      C: 'kubejs:final_pickaxe',
+      S: 'kubejs:high_entropy_alloy_rod'
+    }).id('finality:mechanical_crafting/final_paxel')
+  }
+  event.recipes.create.mechanical_crafting('kubejs:final_hoe', [
+    'EE',
+    ' S',
+    ' S'
+  ], {
+    E: 'kubejs:high_entropy_alloy',
+    S: 'kubejs:high_entropy_alloy_rod'
+  }).id('finality:mechanical_crafting/final_hoe')
+  event.recipes.create.mechanical_crafting('kubejs:final_scythe', [
+    'EEE',
+    ' SE',
+    ' S '
+  ], {
+    E: 'kubejs:high_entropy_alloy',
+    S: 'kubejs:high_entropy_alloy_rod'
+  }).id('finality:mechanical_crafting/final_scythe')
+  event.recipes.create.mechanical_crafting('kubejs:crystal_lance', [
+    'BAB',
+    'BAB',
+    'NNN',
+    ' N ',
+    ' N ',
+    ' N ',
+    ' N '
+  ], {
+    A: 'minecraft:amethyst_shard',
+    B: 'minecraft:echo_shard',
+    N: 'minecraft:netherite_ingot'
+  }).id('finality:mechanical_crafting/crystal_lance')
+  event.recipes.create.mechanical_crafting('kubejs:final_katana', [
+    ' E ',
+    ' E ',
+    ' E ',
+    'GGG',
+    ' I '
+  ], {
+    E: 'kubejs:high_entropy_alloy',
+    G: 'minecraft:amethyst_shard',
+    I: 'kubejs:high_entropy_alloy_rod'
+  }).id('finality:mechanical_crafting/final_katana')
+  event.recipes.create.mechanical_crafting('kubejs:final_lance', [
+    '  E  ',
+    'I E I',
+    'IIIII',
+    '  I  ',
+    '  I  ',
+    '  I  ',
+    '  I  '
+  ], {
+    E: 'kubejs:high_entropy_alloy',
+    I: 'kubejs:high_entropy_alloy_rod'
+  }).id('finality:mechanical_crafting/final_lance')
+  event.smithing(
+    'kubejs:final_lance',
+    'kubejs:crystal_lance',
+    'kubejs:high_entropy_alloy'
+  ).id('finality:smithing/crystal_lance_entropy_upgrade')
+
   // Cjbeards Music Discs
+  event.recipes.minecraft.crafting_shapeless('kubejs:music_disc_bad_deeds', [
+    'minecraft:music_disc_5',
+    'minecraft:iron_sword',
+    'minecraft:red_dye',
+    '3x minecraft:green_dye'
+  ]).id('finality:music_disc_bad_deeds')
   event.recipes.minecraft.crafting_shapeless('kubejs:music_disc_bad_deeds_inst', [
     'minecraft:music_disc_5',
     'minecraft:iron_sword',
@@ -565,6 +978,34 @@ ServerEvents.recipes(event => {
     '3x minecraft:green_dye',
     '#minecraft:wool'
   ]).id('finality:music_disc_bad_deeds_inst')
+  event.recipes.create.mechanical_crafting('kubejs:music_disc_black_white_red', [
+    '    B    ',
+    '  BBBBB  ',
+    'BBBBMBBBB',
+    'BRRRBRRRB',
+    'BBBBBBBBB',
+    ' BRBBBRB ',
+    ' BRRRRRB ',
+    ' BBBBBBB '
+  ], {
+    M: 'minecraft:music_disc_5',
+    B: 'minecraft:coal_block',
+    R: 'minecraft:redstone_block'
+  }).id('finality:music_disc_black_white_red')
+  event.recipes.create.mechanical_crafting('kubejs:music_disc_black_white_red_inst', [
+    '    B    ',
+    '  BBBBB  ',
+    'BBBBMBBBB',
+    'BRRRBRRRB',
+    'BBBBBBBBB',
+    ' BRBBBRB ',
+    ' BRRRRRB ',
+    ' BBBBBBB '
+  ], {
+    M: 'minecraft:music_disc_5',
+    B: 'minecraft:black_wool',
+    R: 'minecraft:red_wool'
+  }).id('finality:music_disc_black_white_red_inst')
   event.recipes.minecraft.crafting_shapeless('kubejs:music_disc_boo_hoo', [
     'minecraft:music_disc_5',
     'minecraft:nether_wart',
@@ -577,6 +1018,11 @@ ServerEvents.recipes(event => {
     'minecraft:iron_sword',
     'minecraft:shield'
   ]).id('finality:music_disc_from_the_shadows')
+  event.recipes.minecraft.crafting_shapeless('kubejs:music_disc_get_away', [
+    'minecraft:music_disc_5',
+    'minecraft:end_crystal',
+    '4x minecraft:bone'
+  ]).id('finality:music_disc_get_away')
   event.recipes.minecraft.crafting_shapeless('kubejs:music_disc_get_away_inst', [
     'minecraft:music_disc_5',
     'minecraft:end_crystal',
@@ -594,6 +1040,21 @@ ServerEvents.recipes(event => {
     W: 'create:framed_glass',
     M: 'minecraft:music_disc_5'
   }).id('finality:heart_of_the_wicked')
+  event.recipes.create.mechanical_crafting('kubejs:music_disc_mirror_mirror', [
+    ' WSW ',
+    'WGRGW',
+    'WRMGW',
+    'WGGGW',
+    ' WWW ',
+    '  W  ',
+    '  W  '
+  ], {
+    W: 'minecraft:white_dye',
+    G: 'minecraft:tinted_glass',
+    R: 'create:polished_rose_quartz',
+    M: 'minecraft:music_disc_5',
+    S: 'minecraft:white_concrete'
+  }).id('finality:mirror_mirror')
   event.recipes.create.mechanical_crafting('kubejs:music_disc_mirror_mirror_inst', [
     ' WSW ',
     'WGRGW',
@@ -609,6 +1070,17 @@ ServerEvents.recipes(event => {
     M: 'minecraft:music_disc_5',
     S: '#minecraft:wool'
   }).id('finality:mirror_mirror_inst')
+  event.recipes.create.mechanical_crafting('kubejs:music_disc_open_up', [
+    'S       ',
+    'SS      ',
+    'SSRRRRRE',
+    'SSR  RRR',
+    'SS      '
+  ], {
+    S: 'minecraft:stone',
+    R: 'minecraft:rotten_flesh',
+    E: 'minecraft:music_disc_5'
+  }).id('finality:music_disc_open_up')
   event.recipes.create.mechanical_crafting('kubejs:music_disc_open_up_inst', [
     'S       ',
     'SS    W ',
@@ -631,9 +1103,15 @@ ServerEvents.recipes(event => {
     M: 'minecraft:music_disc_5',
     R: '#minecraft:wool_carpets'
   }).id('finality:music_disc_silent_night')
+  event.recipes.minecraft.crafting_shapeless('kubejs:music_disc_worst_nightmare', [
+    'minecraft:music_disc_5',
+    '4x create:flywheel',
+    'create:steam_engine'
+  ]).id('finality:music_disc_worst_nightmare')
   event.recipes.minecraft.crafting_shapeless('kubejs:music_disc_worst_nightmare_inst', [
     'minecraft:music_disc_5',
     '4x create:flywheel',
+    'create:steam_engine',
     '#minecraft:wool'
   ]).id('finality:music_disc_worst_nightmare_inst')
   // Farabi Hasan Music
@@ -773,6 +1251,14 @@ ServerEvents.recipes(event => {
   event.recipes.create.sequenced_assembly('minecraft:enchanted_golden_apple', 'minecraft:golden_apple', [
     event.recipes.create.deploying('kubejs:incomplete_enchanted_golden_apple', ['kubejs:incomplete_enchanted_golden_apple', 'create:experience_block'])
   ]).transitionalItem('kubejs:incomplete_enchanted_golden_apple').loops(5).id('finality:sequenced_assembly/enchanted_golden_apple')
+  event.recipes.minecraft.crafting_shaped('minecraft:zombie_head', [
+    'RRR',
+    'RSR',
+    'RRR'
+  ], {
+    R: 'minecraft:rotten_flesh',
+    S: 'minecraft:skeleton_skull'
+  }).id('finality:rotten_flesh_on_skeleton_skull')
   /**
    * Supplementaries 
    */
