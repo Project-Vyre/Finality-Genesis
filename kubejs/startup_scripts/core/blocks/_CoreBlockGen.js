@@ -47,6 +47,7 @@ StartupEvents.registry('block', event => {
     .item(ctx => {
       ctx.rarity('rare')
       ctx.fireResistant(true)
+      ctx.tag('kubejs:iridium_blocks')
     })
   event.create('kubejs:iridium_block_connecting')
     .textureAll('kubejs:block/iridium_block_connecting')
