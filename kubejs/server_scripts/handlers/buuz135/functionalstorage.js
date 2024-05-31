@@ -266,7 +266,7 @@ ServerEvents.recipes(event => {
     D: '#functionalstorage:drawer'
   }).id('finality:functionalstorage/void_upgrade')
 })
-
+/*
 ServerEvents.tags('block', event => {
   for (let type of WOOD_TYPES) {
     event.add('create:wrench_pickup', [
@@ -294,3 +294,4 @@ ServerEvents.tags('block', event => {
     'functionalstorage:ender_drawer'
   ])
 })
+*/
