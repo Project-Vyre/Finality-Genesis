@@ -5,7 +5,7 @@
     "3": "create_mechanical_extruder:block/top_window",
     "5": "create:block/funnel_closed",
     "6": "create_mechanical_extruder:block/basin_slot",
-    "7": "create:block/gearbox",
+    "7": "create_mechanical_extruder:block/shaft_point",
     "particle": "create_mechanical_extruder:block/extruder_top"
   },
   "elements": [
