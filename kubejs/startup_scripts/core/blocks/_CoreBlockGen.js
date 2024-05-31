@@ -2,6 +2,7 @@
  * @file Block registration.
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  * @author LLytho <https://github.com/LLytho> Prevented the head bashing
+ * @author PieTheNiceGuy <https://github.com/hunter19823> Block placement logic help
  */
 
 // requires: fusion
@@ -62,12 +63,45 @@ StartupEvents.registry('block', event => {
       ctx.fireResistant(true)
       ctx.tag('kubejs:iridium_blocks')
     })
+  event.create('kubejs:iridium_casing')
+    .textureAll('kubejs:block/iridium_casing_connected')
+    .soundType('netherite_block')
+    .hardness(25)
+    .resistance(1000)
+    .requiresTool(true)
+    .tagBlock('minecraft:wither_immune')
+    .tagBlock('minecraft:dragon_immune')
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('minecraft:mineable/axe')
+    .tagBlock('forge:needs_netherite_tool')
+    .item(ctx => {
+      ctx.rarity('rare')
+      ctx.fireResistant(true)
+    })
   event.create('kubejs:ornate_iridium_block_connecting')
     .textureAll('kubejs:block/ornate_iridium_block_connecting')
     .soundType('netherite_block')
     .hardness(25)
     .resistance(1000)
     .requiresTool(true)
+    .tagBlock('minecraft:wither_immune')
+    .tagBlock('minecraft:dragon_immune')
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('forge:needs_netherite_tool')
+    .item(ctx => {
+      ctx.rarity('rare')
+      ctx.fireResistant(true)
+      ctx.tag('kubejs:iridium_blocks')
+    })
+  event.create('kubejs:ornate_iridium_pillar_connecting')
+    .soundType('netherite_block')
+    .hardness(25)
+    .resistance(1000)
+    .requiresTool(true)
+    .property(BlockProperties.AXIS)
+    .placementState(ctx => {
+      ctx.set(BlockProperties.AXIS, ctx.nearestLookingDirection.axis)
+    })
     .tagBlock('minecraft:wither_immune')
     .tagBlock('minecraft:dragon_immune')
     .tagBlock('minecraft:mineable/pickaxe')
@@ -92,8 +126,8 @@ StartupEvents.registry('block', event => {
       ctx.fireResistant(true)
       ctx.tag('kubejs:iridium_blocks')
     })
-  event.create('kubejs:iridium_casing')
-    .textureAll('kubejs:block/iridium_casing_connected')
+  event.create('kubejs:iridium_tiles_connecting')
+    .textureAll('kubejs:block/iridium_tiles_connecting')
     .soundType('netherite_block')
     .hardness(25)
     .resistance(1000)
@@ -101,11 +135,11 @@ StartupEvents.registry('block', event => {
     .tagBlock('minecraft:wither_immune')
     .tagBlock('minecraft:dragon_immune')
     .tagBlock('minecraft:mineable/pickaxe')
-    .tagBlock('minecraft:mineable/axe')
     .tagBlock('forge:needs_netherite_tool')
     .item(ctx => {
       ctx.rarity('rare')
       ctx.fireResistant(true)
+      ctx.tag('kubejs:iridium_blocks')
     })
   event.create('kubejs:high_entropy_alloy_block')
     .textureAll('kubejs:block/high_entropy_alloy_block')

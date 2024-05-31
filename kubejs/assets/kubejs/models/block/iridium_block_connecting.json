@@ -1,13 +1,12 @@
 {
   "loader": "fusion:model",
   "type": "fusion:connecting",
-  "parent": "minecraft:block/cube",
   "connections": [
     {
       "type": "and",
       "predicates": [
         {
-          "type": "fusion:is_same_state"
+          "type": "is_same_state"
         },
         {
           "type": "is_face_visible"
@@ -15,6 +14,7 @@
       ]
     }
   ],
+  "parent": "minecraft:block/cube",
   "textures": {
     "up": "kubejs:block/iridium_block_top_connecting",
     "down": "kubejs:block/iridium_block_top_connecting",
