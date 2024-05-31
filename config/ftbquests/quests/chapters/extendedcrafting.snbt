@@ -1,11 +1,13 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: "rsquare"
+	disable_toast: true
 	filename: "extendedcrafting"
 	group: "65124948534FAE42"
 	icon: "extendedcrafting:the_ultimate_catalyst"
 	id: "15317D0AF9607D6E"
 	order_index: 0
+	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
@@ -523,9 +525,6 @@
 			y: 14.0d
 		}
 	]
-	subtitle: [
-		"Work in progress."
-		"The progression is there, however."
-	]
+	subtitle: ["This is quest tree is now archived! Don't use it!"]
 	title: "ExtendedCrafting"
 }

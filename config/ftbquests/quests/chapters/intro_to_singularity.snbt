@@ -1050,12 +1050,13 @@
 			id: "4843FF760BED67F6"
 			rewards: [
 				{
-					id: "10F2D3BC1247A639"
-					item: "kubejs:high_entropy_alloy"
-					type: "item"
+					exclude_from_claim_all: true
+					id: "17A86BAA03F45FA2"
+					table_id: 103743719166323827L
+					type: "random"
 				}
 				{
-					id: "31751355E38EE3B9"
+					id: "7CB7E8EA2152D35D"
 					type: "xp_levels"
 					xp_levels: 30
 				}
