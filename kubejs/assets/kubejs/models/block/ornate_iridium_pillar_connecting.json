@@ -6,10 +6,10 @@
       "type": "and",
       "predicates": [
         {
-          "type": "is_same_block"
+          "type": "is_same_state"
         },
         {
-          "type": "is_face_visible"
+          "type": "is_same_block"
         }
       ]
     }
