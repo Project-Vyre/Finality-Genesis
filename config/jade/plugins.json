@@ -46,7 +46,7 @@
     "mob_breeding": true,
     "entity_health.icons_per_line": 10,
     "total_enchantment_power": true,
-    "potion_effects": false,
+    "potion_effects": true,
     "painting": true,
     "chiseled_bookshelf": true
   },
@@ -57,9 +57,14 @@
   "jadeaddons": {
     "equipment_requirement": ""
   },
-  "delightful": {
-    "crop_progress": true,
-    "pie_icons": true
+  "exposure": {
+    "lightroom": true
+  },
+  "reliquary": {
+    "pedestal": true,
+    "altar": true,
+    "mortar": true,
+    "cauldron": true
   },
   "supplementaries": {
     "hat_stand": true
@@ -76,7 +81,7 @@
     "filter": true,
     "backtank_capacity": true,
     "goggles.requires_goggles": true,
-    "goggles": false,
+    "goggles": true,
     "blaze_burner": true,
     "exact_block": true,
     "crafting_blueprint": true,
@@ -90,5 +95,12 @@
   },
   "lootr": {
     "info": true
+  },
+  "productivebees": {
+    "solitary_nest": true,
+    "jar": true,
+    "canvas_beehive": true,
+    "bee_attributes": true,
+    "productive_bee": true
   }
 }
