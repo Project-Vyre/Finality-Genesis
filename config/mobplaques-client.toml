@@ -1,0 +1,69 @@
+
+[general]
+	#Selectors for choosing mobs to render plaques for.
+	#Selectors for choosing mobs to render plaques for.
+	#Allowed Values: ALL, TAMED, TAMED_ONLY_OWNER, PLAYER, MONSTER, BOSS, MOUNT
+	allowed_mob_selectors = ["ALL"]
+	#Selectors for choosing mobs to prevent rendering plaques for, takes priority over allowed list.
+	#Selectors for choosing mobs to prevent rendering plaques for, takes priority over allowed list.
+	#Allowed Values: ALL, TAMED, TAMED_ONLY_OWNER, PLAYER, MONSTER, BOSS, MOUNT
+	disallowed_mob_selectors = []
+	#Render mob plaques below the mob's name tag instead of above.
+	render_below_name_tag = false
+	#Show a black background box behind plaques. Disabled by default as it doesn't work with shaders.
+	plaque_background = true
+	#Amount of pixels a row of plaques may take up, when exceeding this value a new row will be started.
+	#Range: > 0
+	max_plaque_row_width = 108
+	#Distance to the mob at which plaques will still be visible. The distance is halved when the mob is crouching.
+	#Range: > 0
+	max_render_distance = 48
+	#Show plaques from mobs obstructed by walls the player cannot see through, similar to the nameplates of other players.
+	behind_walls = true
+	#Dynamically increase plaque size the further away the camera is to simplify readability.
+	scale_with_distance = true
+	#Height offset from default position.
+	#Range: > -2147483648
+	height_offset = 0
+	#Show plaques for the entity picked by the crosshair only.
+	picked_entity = false
+	#Entities blacklisted from showing any plaques.
+	#Format for every entry is "<namespace>:<path>". Tags are supported, must be in the format of "#<namespace>:<path>". Namespace may be omitted to use "minecraft" by default. May use asterisk as wildcard parameter via pattern matching, e.g. "minecraft:*_shulker_box" to match all shulker boxes no matter of color. Begin an entry with "!" to make sure it is excluded, useful e.g. when it has already been matched by another pattern.
+	mob_blacklist = ["minecraft:armor_stand"]
+	#Custom scale for rendering plaques.
+	#Range: 0.05 ~ 2.0
+	plaque_scale = 0.5
+	#Always render plaques with full brightness to be most visible, ignoring local lighting conditions.
+	#Allowed Values: ALWAYS, UNOBSTRUCTED, NEVER
+	full_brightness = "UNOBSTRUCTED"
+	#Hide all plaques when mob has full health.
+	hide_at_full_health = false
+	#Are mob plaques enabled, toggleable in-game using the 'J' key by default.
+	allow_rendering = true
+
+[health]
+	#Allow for rendering this type of plaque.
+	allow_rendering = true
+	#Transition text colors depending on current percentage.
+	shift_colors = false
+	#Show current amount either as percentage or as absolute value.
+	#Allowed Values: ABSOLUTE, ABSOLUTE_WITH_MAX, RELATIVE
+	plaque_value = "RELATIVE"
+
+[air]
+	#Allow for rendering this type of plaque.
+	allow_rendering = true
+	#Transition text colors depending on current percentage.
+	shift_colors = false
+	#Show current amount either as percentage or as absolute value.
+	#Allowed Values: ABSOLUTE, ABSOLUTE_WITH_MAX, RELATIVE
+	plaque_value = "RELATIVE"
+
+[armor]
+	#Allow for rendering this type of plaque.
+	allow_rendering = true
+
+[toughness]
+	#Allow for rendering this type of plaque.
+	allow_rendering = true
+
