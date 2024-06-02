@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "kubejs:block/ornate_iridium_pillar_connecting",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "kubejs:block/ornate_iridium_pillar_connecting"
+    },
+    "axis=z": {
+      "model": "kubejs:block/ornate_iridium_pillar_connecting",
+      "x": 90
+    }
+  }
+}

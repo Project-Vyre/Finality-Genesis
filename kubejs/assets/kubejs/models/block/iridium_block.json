@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "kubejs:block/iridium_block_top",
+    "side": "kubejs:block/iridium_block"
+  }
+}

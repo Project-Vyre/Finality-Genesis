@@ -1,0 +1,27 @@
+{
+  "loader": "fusion:model",
+  "type": "fusion:connecting",
+  "connections": [
+    {
+      "type": "and",
+      "predicates": [
+        {
+          "type": "is_same_state"
+        },
+        {
+          "type": "is_same_block"
+        }
+      ]
+    }
+  ],
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "up": "kubejs:block/ornate_iridium_block_connecting",
+    "down": "kubejs:block/ornate_iridium_block_connecting",
+    "north": "kubejs:block/ornate_iridium_pillar_side_connecting",
+    "east": "kubejs:block/ornate_iridium_pillar_side_connecting",
+    "south": "kubejs:block/ornate_iridium_pillar_side_connecting",
+    "west": "kubejs:block/ornate_iridium_pillar_side_connecting",
+    "particle": "kubejs:block/ornate_iridium_pillar_side_connecting"
+  }
+}

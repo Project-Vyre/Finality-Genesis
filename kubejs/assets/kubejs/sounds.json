@@ -7,10 +7,34 @@
       }
     ]
   },
+  "bad_deeds": {
+    "sounds": [
+      {
+        "name": "kubejs:bad_deeds",
+        "stream": true
+      }
+    ]
+  },
   "bad_deeds_inst": {
     "sounds": [
       {
         "name": "kubejs:bad_deeds_inst",
+        "stream": true
+      }
+    ]
+  },
+  "black_white_red": {
+    "sounds": [
+      {
+        "name": "kubejs:black_white_red",
+        "stream": true
+      }
+    ]
+  },
+  "black_white_red_inst": {
+    "sounds": [
+      {
+        "name": "kubejs:black_white_red_inst",
         "stream": true
       }
     ]
@@ -39,6 +63,14 @@
       }
     ]
   },
+  "get_away": {
+    "sounds": [
+      {
+        "name": "kubejs:get_away",
+        "stream": true
+      }
+    ]
+  },
   "get_away_inst": {
     "sounds": [
       {
@@ -55,10 +87,26 @@
       }
     ]
   },
+  "mirror_mirror": {
+    "sounds": [
+      {
+        "name": "kubejs:mirror_mirror",
+        "stream": true
+      }
+    ]
+  },
   "mirror_mirror_inst": {
     "sounds": [
       {
         "name": "kubejs:mirror_mirror_inst",
+        "stream": true
+      }
+    ]
+  },
+  "open_up": {
+    "sounds": [
+      {
+        "name": "kubejs:open_up",
         "stream": true
       }
     ]
@@ -91,6 +139,14 @@
     "sounds": [
       {
         "name": "kubejs:silent_night",
+        "stream": true
+      }
+    ]
+  },
+  "worst_nightmare": {
+    "sounds": [
+      {
+        "name": "kubejs:worst_nightmare",
         "stream": true
       }
     ]

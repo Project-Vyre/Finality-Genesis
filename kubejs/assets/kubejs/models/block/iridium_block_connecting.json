@@ -6,7 +6,7 @@
       "type": "and",
       "predicates": [
         {
-          "type": "is_same_block"
+          "type": "is_same_state"
         },
         {
           "type": "is_face_visible"
@@ -14,8 +14,14 @@
       ]
     }
   ],
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "kubejs:block/iridium_block_connecting"
+    "up": "kubejs:block/iridium_block_top_connecting",
+    "down": "kubejs:block/iridium_block_top_connecting",
+    "north": "kubejs:block/iridium_block_side_connecting",
+    "east": "kubejs:block/iridium_block_side_connecting",
+    "south": "kubejs:block/iridium_block_side_connecting",
+    "west": "kubejs:block/iridium_block_side_connecting",
+    "particle": "kubejs:block/iridium_block_side_connecting"
   }
 }
