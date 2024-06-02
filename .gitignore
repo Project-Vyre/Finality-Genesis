@@ -18,6 +18,7 @@ servers.essential.dat
 *.tar.gz
 *.exe
 *.apng
+*.fma
 .curseclient
 .qmenu_opened.marker
 imgui.ini
