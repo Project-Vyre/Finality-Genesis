@@ -11,7 +11,7 @@ ItemEvents.modification(event => {
   }
   for (let i = 0; i < ARMOR.length; i++) {
     let insert = ARMOR[i];
-    event.modify(`enigmaticlegacy:etherium${insert}`, item => {
+    event.modify(`enigmaticlegacy:etherium_${insert}`, item => {
       item.maxDamage = -1
       item.fireResistant = true
     })
