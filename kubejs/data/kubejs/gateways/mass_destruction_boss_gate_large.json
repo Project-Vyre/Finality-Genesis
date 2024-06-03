@@ -1,0 +1,200 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "kubejs"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "bosses_of_mass_destruction"
+    }
+  ],
+  "size": "large",
+  "color": "#7FD2FF",
+  "leash_range": 1024,
+  "waves": [
+    {
+      "entities": [
+        {
+          "entity": "bosses_of_mass_destruction:void_blossom"
+        }
+      ],
+      "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 70
+        },
+        {
+          "attribute": "generic.armor",
+          "operation": "ADDITION",
+          "value": 10.5
+        },
+        {
+          "attribute": "generic.attack_damage",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.75
+        },
+        {
+          "attribute": "generic.knockback_resistance",
+          "operation": "ADDITION",
+          "value": 1
+        },
+        {
+          "attribute": "generic.movement_speed",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "entity_loot",
+          "entity": "bosses_of_mass_destruction:void_blossom",
+          "rolls": 20
+        }
+      ],
+      "max_wave_time": 36000,
+      "setup_time": 150
+    },
+    {
+      "entities": [
+        {
+          "entity": "bosses_of_mass_destruction:lich"
+        }
+      ],
+      "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 70
+        },
+        {
+          "attribute": "generic.armor",
+          "operation": "ADDITION",
+          "value": 10.5
+        },
+        {
+          "attribute": "generic.attack_damage",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.75
+        },
+        {
+          "attribute": "generic.knockback_resistance",
+          "operation": "ADDITION",
+          "value": 1
+        },
+        {
+          "attribute": "generic.movement_speed",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "entity_loot",
+          "entity": "bosses_of_mass_destruction:lich",
+          "rolls": 20
+        }
+      ],
+      "max_wave_time": 36000,
+      "setup_time": 150
+    },
+    {
+      "entities": [
+        {
+          "entity": "bosses_of_mass_destruction:gauntlet"
+        }
+      ],
+      "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 70
+        },
+        {
+          "attribute": "generic.armor",
+          "operation": "ADDITION",
+          "value": 10.5
+        },
+        {
+          "attribute": "generic.knockback_resistance",
+          "operation": "ADDITION",
+          "value": 1
+        },
+        {
+          "attribute": "generic.movement_speed",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "entity_loot",
+          "entity": "bosses_of_mass_destruction:gauntlet",
+          "rolls": 20
+        }
+      ],
+      "max_wave_time": 36000,
+      "setup_time": 150
+    },
+    {
+      "entities": [
+        {
+          "entity": "bosses_of_mass_destruction:obsidilith"
+        }
+      ],
+      "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 70
+        },
+        {
+          "attribute": "generic.armor",
+          "operation": "ADDITION",
+          "value": 10.5
+        },
+        {
+          "attribute": "generic.attack_damage",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.75
+        },
+        {
+          "attribute": "generic.knockback_resistance",
+          "operation": "ADDITION",
+          "value": 1
+        },
+        {
+          "attribute": "generic.movement_speed",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.10
+        }
+      ],
+      "rewards": [
+        {
+          "type": "entity_loot",
+          "entity": "minecraft:shulker",
+          "rolls": 20
+        }
+      ],
+      "max_wave_time": 36000,
+      "setup_time": 150
+    }
+  ],
+  "rewards": [
+    {
+      "type": "stack",
+      "stack": {
+        "item": "minecraft:nether_star"
+      }
+    },
+    {
+      "type": "stack",
+      "stack": {
+        "item": "extendedcrafting:crystaltine_ingot"
+      }
+    }
+  ],
+  "completion_xp": 7200,
+  "spawn_range": 9
+}

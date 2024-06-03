@@ -1,0 +1,119 @@
+{
+  "variant": "acuti_ora",
+  "weight": 0,
+  "quality": 0,
+  "dimensions": [],
+  "unique": true,
+  "bonuses": [
+    {
+      "type": "apotheosis:multi_attribute",
+      "desc": "bonus.apotheosis:multi_attr.desc.and",
+      "gem_class": {
+        "key": "light_weapon",
+        "types": [
+          "sword",
+          "trident"
+        ]
+      },
+      "modifiers": [
+        {
+          "attribute": "apotheosis:armor_shred",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.05,
+            "uncommon": 0.10,
+            "rare": 0.20,
+            "epic": 0.30,
+            "mythic": 0.40,
+            "ancient": 0.50
+          }
+        },
+        {
+          "attribute": "apotheosis:prot_shred",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.05,
+            "uncommon": 0.10,
+            "rare": 0.20,
+            "epic": 0.30,
+            "mythic": 0.40,
+            "ancient": 0.50
+          }
+        }
+      ]
+    },
+    {
+      "type": "apotheosis:multi_attribute",
+      "desc": "bonus.apotheosis:multi_attr.desc.and",
+      "gem_class": {
+        "key": "heavy_weapon",
+        "types": [
+          "heavy_weapon"
+        ]
+      },
+      "modifiers": [
+        {
+          "attribute": "apotheosis:armor_shred",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.05,
+            "uncommon": 0.10,
+            "rare": 0.20,
+            "epic": 0.30,
+            "mythic": 0.40,
+            "ancient": 0.50
+          }
+        },
+        {
+          "attribute": "apotheosis:prot_shred",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.05,
+            "uncommon": 0.10,
+            "rare": 0.20,
+            "epic": 0.30,
+            "mythic": 0.40,
+            "ancient": 0.50
+          }
+        }
+      ]
+    },
+    {
+      "type": "apotheosis:multi_attribute",
+      "desc": "bonus.apotheosis:multi_attr.desc.and",
+      "gem_class": {
+        "key": "ranged_weapon",
+        "types": [
+          "bow",
+          "crossbow"
+        ]
+      },
+      "modifiers": [
+        {
+          "attribute": "apotheosis:prot_shred",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.05,
+            "uncommon": 0.10,
+            "rare": 0.20,
+            "epic": 0.30,
+            "mythic": 0.40,
+            "ancient": 0.50
+          }
+        },
+        {
+          "attribute": "apotheosis:armor_shred",
+          "operation": "MULTIPLY_BASE",
+          "values": {
+            "common": 0.05,
+            "uncommon": 0.10,
+            "rare": 0.20,
+            "epic": 0.30,
+            "mythic": 0.40,
+            "ancient": 0.50
+          }
+        }
+      ]
+    }
+  ]
+}
