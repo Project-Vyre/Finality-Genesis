@@ -17,7 +17,7 @@
       "rewards": [
         {
           "type": "apotheosis:affix",
-          "rarity": "uncommon"
+          "rarity": "apotheosis:uncommon"
         }
       ],
       "max_wave_time": 1250,

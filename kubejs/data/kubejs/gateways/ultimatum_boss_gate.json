@@ -62,7 +62,7 @@
       "rewards": [
         {
           "type": "apotheosis:affix",
-          "rarity": "mythic"
+          "rarity": "apotheosis:mythic"
         }
       ],
       "max_wave_time": 72000,
@@ -105,7 +105,7 @@
       "rewards": [
         {
           "type": "apotheosis:affix",
-          "rarity": "mythic"
+          "rarity": "apotheosis:mythic"
         }
       ],
       "max_wave_time": 72000,
@@ -115,31 +115,31 @@
   "rewards": [
     {
       "type": "apotheosis:affix",
-      "rarity": "mythic"
+      "rarity": "apotheosis:mythic"
     },
     {
       "type": "apotheosis:affix",
-      "rarity": "mythic"
+      "rarity": "apotheosis:mythic"
     },
     {
       "type": "apotheosis:affix",
-      "rarity": "mythic"
+      "rarity": "apotheosis:mythic"
     },
     {
       "type": "apotheosis:affix",
-      "rarity": "mythic"
+      "rarity": "apotheosis:mythic"
     },
     {
       "type": "apotheosis:affix",
-      "rarity": "mythic"
+      "rarity": "apotheosis:mythic"
     },
     {
       "type": "apotheosis:affix",
-      "rarity": "mythic"
+      "rarity": "apotheosis:mythic"
     },
     {
       "type": "apotheosis:affix",
-      "rarity": "mythic"
+      "rarity": "apotheosis:mythic"
     }
   ],
   "completion_xp": 2700,
