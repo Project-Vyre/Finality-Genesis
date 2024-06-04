@@ -4,6 +4,7 @@
   "quality": 0,
   "dimensions": [],
   "unique": true,
+  "min_rarity": "common",
   "bonuses": [
     {
       "type": "apotheosis:multi_attribute",
@@ -29,7 +30,7 @@
           }
         },
         {
-          "attribute": "apotheosis:crit_chance",
+          "attribute": "attributeslib:crit_chance",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.05,
@@ -41,7 +42,7 @@
           }
         },
         {
-          "attribute": "apotheosis:crit_damage",
+          "attribute": "attributeslib:crit_damage",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.05,
@@ -77,7 +78,7 @@
           }
         },
         {
-          "attribute": "apotheosis:crit_chance",
+          "attribute": "attributeslib:crit_chance",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.05,
@@ -89,7 +90,7 @@
           }
         },
         {
-          "attribute": "apotheosis:crit_damage",
+          "attribute": "attributeslib:crit_damage",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.05,
@@ -134,7 +135,7 @@
       },
       "modifiers": [
         {
-          "attribute": "apotheosis:arrow_velocity",
+          "attribute": "attributeslib:arrow_velocity",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.01,
@@ -146,7 +147,7 @@
           }
         },
         {
-          "attribute": "apotheosis:arrow_damage",
+          "attribute": "attributeslib:arrow_damage",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.05,
@@ -158,7 +159,7 @@
           }
         },
         {
-          "attribute": "apotheosis:crit_chance",
+          "attribute": "attributeslib:crit_chance",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.05,
@@ -170,7 +171,7 @@
           }
         },
         {
-          "attribute": "apotheosis:crit_damage",
+          "attribute": "attributeslib:crit_damage",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.05,

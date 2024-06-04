@@ -4,6 +4,7 @@
   "quality": 0,
   "dimensions": [],
   "unique": true,
+  "min_rarity": "common",
   "bonuses": [
     {
       "type": "apotheosis:multi_attribute",
@@ -17,7 +18,7 @@
       },
       "modifiers": [
         {
-          "attribute": "apotheosis:armor_shred",
+          "attribute": "attributeslib:armor_shred",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.05,
@@ -29,7 +30,7 @@
           }
         },
         {
-          "attribute": "apotheosis:prot_shred",
+          "attribute": "attributeslib:prot_shred",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.05,
@@ -53,7 +54,7 @@
       },
       "modifiers": [
         {
-          "attribute": "apotheosis:armor_shred",
+          "attribute": "attributeslib:armor_shred",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.05,
@@ -65,7 +66,7 @@
           }
         },
         {
-          "attribute": "apotheosis:prot_shred",
+          "attribute": "attributeslib:prot_shred",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.05,
@@ -90,7 +91,7 @@
       },
       "modifiers": [
         {
-          "attribute": "apotheosis:prot_shred",
+          "attribute": "attributeslib:prot_shred",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.05,
@@ -102,7 +103,7 @@
           }
         },
         {
-          "attribute": "apotheosis:armor_shred",
+          "attribute": "attributeslib:armor_shred",
           "operation": "MULTIPLY_BASE",
           "values": {
             "common": 0.05,
