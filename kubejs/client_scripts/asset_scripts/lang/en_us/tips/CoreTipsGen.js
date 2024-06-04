@@ -211,6 +211,9 @@ finTip("tooltips", "Always read tooltips! I am not responsible for any damages t
 finTip("lapis_from_witches", "Witches now drop Lapis Lazuli in addition to previous item drops.")
 finTip("zinc_from_creepers", "Creepers now drop Zinc Nuggets in addition to previous item drops.")
 finTip("main_gameplay_tip", "Automation is everything! Just DO IT!")
+if (Platform.isLoaded('immediatelyfast')) {
+  finTip("immediatelyfast_glitch", "Some items may cause visual artifacts on the inventory hotbar when ImmediatelyFast is present due to custom shaders.")
+}
 if (Platform.isLoaded("apotheosis")) {
   finTip("spawners", "Spawners now drop Structure Void which can be used to recraft them. Use the Capturing enchantment to acquire Spawn Eggs.")
 }
