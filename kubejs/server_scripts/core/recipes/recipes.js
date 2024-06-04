@@ -236,6 +236,10 @@ ServerEvents.recipes(event => {
     '#forge:storage_blocks/quartz'
   ).id('finality:quartz_block_revert')
   event.shapeless(
+    '4x minecraft:amethyst_shard',
+    '#forge:storage_blocks/amethyst'
+  ).id('finality:amethyst_block_revert')
+  event.shapeless(
     '4x minecraft:pointed_dripstone',
     'minecraft:dripstone_block'
   ).id('finality:pointed_dripstone_from_block')
@@ -376,32 +380,6 @@ ServerEvents.recipes(event => {
     Item.of('kubejs:deepslate_shard', 9).withChance(0.25),
     Item.of('minecraft:gravel').withChance(0.24)
   ], 'minecraft:cobbled_deepslate').processingTime(250).id('finality:crushing/deepslate_shard_from_cobbled_deepslate')
-  if (Platform.isLoaded('createaddition')) {
-    console.log('Create Crafts & Additions detected! Restoring Tuff crushing recipes.')
-    event.recipes.create.crushing([
-      Item.of('minecraft:flint').withChance(0.25),
-      Item.of('minecraft:gold_nugget').withChance(0.10),
-      Item.of('create:copper_nugget').withChance(0.10),
-      Item.of('create:zinc_nugget').withChance(0.10),
-      Item.of('minecraft:iron_nugget').withChance(0.10)
-    ], 'minecraft:tuff').processingTime(350).id('create:crushing/tuff')
-    event.recipes.create.crushing([
-      Item.of('minecraft:flint').withChance(0.25),
-      Item.of('minecraft:gold_nugget').withChance(0.10),
-      Item.of('create:copper_nugget').withChance(0.10),
-      Item.of('create:zinc_nugget').withChance(0.10),
-      Item.of('minecraft:iron_nugget').withChance(0.10)
-    ], '#create:stone_types/tuff').processingTime(350).id('create:crushing/tuff_recycling')
-    console.log('Also removing Electrum from Ochrum.')
-    event.recipes.create.crushing([
-      Item.of('create:crushed_raw_gold').withChance(0.2),
-      Item.of('minecraft:gold_nugget').withChance(0.2)
-    ], 'create:ochrum').processingTime(250).id('create:crushing/ochrum')
-    event.recipes.create.crushing([
-      Item.of('create:crushed_raw_gold').withChance(0.2),
-      Item.of('minecraft:gold_nugget').withChance(0.2)
-    ], '#create:stone_types/ochrum').processingTime(250).id('create:crushing/ochrum_recycling')
-  }
   /**
    * FILLING
    */
