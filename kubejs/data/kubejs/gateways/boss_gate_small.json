@@ -102,7 +102,7 @@
       "rewards": [
         {
           "type": "apotheosis:affix",
-          "rarity": "epic"
+          "rarity": "apotheosis:epic"
         }
       ],
       "max_wave_time": 2250,
@@ -112,7 +112,7 @@
   "rewards": [
     {
       "type": "apotheosis:affix",
-      "rarity": "mythic"
+      "rarity": "apotheosis:mythic"
     }
   ],
   "completion_xp": 2500,

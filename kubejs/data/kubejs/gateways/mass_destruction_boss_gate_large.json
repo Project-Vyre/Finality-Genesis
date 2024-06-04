@@ -48,7 +48,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "bosses_of_mass_destruction:void_blossom",
           "rolls": 20
         }
@@ -91,7 +91,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "bosses_of_mass_destruction:lich",
           "rolls": 20
         }
@@ -129,7 +129,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "bosses_of_mass_destruction:gauntlet",
           "rolls": 20
         }
@@ -172,7 +172,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:shulker",
           "rolls": 20
         }
@@ -183,15 +183,9 @@
   ],
   "rewards": [
     {
-      "type": "stack",
+      "type": "gateways:stack",
       "stack": {
         "item": "minecraft:nether_star"
-      }
-    },
-    {
-      "type": "stack",
-      "stack": {
-        "item": "extendedcrafting:crystaltine_ingot"
       }
     }
   ],

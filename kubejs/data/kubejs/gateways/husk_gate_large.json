@@ -31,7 +31,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:husk",
           "rolls": 20
         }
@@ -89,7 +89,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:husk",
           "rolls": 30
         }
@@ -153,7 +153,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:husk",
           "rolls": 40
         }
@@ -223,7 +223,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:husk",
           "rolls": 50
         }
@@ -305,7 +305,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:husk",
           "rolls": 60
         }
@@ -316,12 +316,12 @@
   ],
   "rewards": [
     {
-      "type": "entity_loot",
+      "type": "gateways:entity_loot",
       "entity": "minecraft:husk",
       "rolls": 120
     },
     {
-      "type": "stack",
+      "type": "gateways:stack",
       "stack": {
         "item": "minecraft:nether_star"
       }

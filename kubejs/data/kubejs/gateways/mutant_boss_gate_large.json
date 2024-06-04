@@ -52,7 +52,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:skeleton",
           "rolls": 20
         }
@@ -95,7 +95,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:zombie",
           "rolls": 20
         }
@@ -138,7 +138,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:creeper",
           "rolls": 20
         }
@@ -181,7 +181,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:enderman",
           "rolls": 20
         }
@@ -224,7 +224,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:wither_skeleton",
           "rolls": 20
         }
@@ -267,7 +267,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:blaze",
           "rolls": 20
         }
@@ -278,15 +278,9 @@
   ],
   "rewards": [
     {
-      "type": "stack",
+      "type": "gateways:stack",
       "stack": {
         "item": "minecraft:nether_star"
-      }
-    },
-    {
-      "type": "stack",
-      "stack": {
-        "item": "extendedcrafting:crystaltine_ingot"
       }
     }
   ],

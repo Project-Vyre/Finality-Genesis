@@ -19,7 +19,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:drowned",
           "rolls": 3
         }
@@ -65,7 +65,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:drowned",
           "rolls": 6
         }
@@ -117,7 +117,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:drowned",
           "rolls": 9
         }
@@ -169,7 +169,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:drowned",
           "rolls": 12
         }
@@ -224,7 +224,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:drowned",
           "rolls": 15
         }
@@ -235,7 +235,7 @@
   ],
   "rewards": [
     {
-      "type": "entity_loot",
+      "type": "gateways:entity_loot",
       "entity": "minecraft:drowned",
       "rolls": 30
     }

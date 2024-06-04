@@ -129,7 +129,7 @@
       "rewards": [
         {
           "type": "apotheosis:affix",
-          "rarity": "epic"
+          "rarity": "apotheosis:epic"
         }
       ],
       "max_wave_time": 4500,
@@ -180,7 +180,7 @@
       "rewards": [
         {
           "type": "apotheosis:affix",
-          "rarity": "epic"
+          "rarity": "apotheosis:epic"
         }
       ],
       "max_wave_time": 4500,
@@ -227,7 +227,7 @@
       "rewards": [
         {
           "type": "apotheosis:affix",
-          "rarity": "epic"
+          "rarity": "apotheosis:epic"
         }
       ],
       "max_wave_time": 96000,
@@ -278,7 +278,7 @@
       "rewards": [
         {
           "type": "apotheosis:affix",
-          "rarity": "mythic"
+          "rarity": "apotheosis:mythic"
         }
       ],
       "max_wave_time": 96000,
@@ -288,7 +288,7 @@
   "rewards": [
     {
       "type": "apotheosis:affix",
-      "rarity": "mythic"
+      "rarity": "apotheosis:mythic"
     }
   ],
   "completion_xp": 2500,

@@ -22,7 +22,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:husk",
           "rolls": 5
         }
@@ -71,7 +71,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:husk",
           "rolls": 10
         }
@@ -126,7 +126,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:husk",
           "rolls": 15
         }
@@ -184,7 +184,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:husk",
           "rolls": 20
         }
@@ -245,7 +245,7 @@
       ],
       "rewards": [
         {
-          "type": "entity_loot",
+          "type": "gateways:entity_loot",
           "entity": "minecraft:husk",
           "rolls": 25
         }
@@ -256,7 +256,7 @@
   ],
   "rewards": [
     {
-      "type": "entity_loot",
+      "type": "gateways:entity_loot",
       "entity": "minecraft:husk",
       "rolls": 60
     }
