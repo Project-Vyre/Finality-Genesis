@@ -1,0 +1,23 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "oregrowth:default_recipes"
+    },
+    {
+      "modid": "ad_astra",
+      "type": "supermartijn642corelib:mod_loaded"
+    }
+  ],
+  "recipe": {
+    "type": "oregrowth:ore_growth",
+    "base": "ad_astra:mars_ostrum_ore",
+    "stages": 4,
+    "spawn_chance": 0.1,
+    "growth_chance": 0.02,
+    "result": {
+      "item": "ad_astra:raw_ostrum",
+      "count": 1
+    }
+  }
+}

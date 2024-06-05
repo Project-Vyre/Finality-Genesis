@@ -1,0 +1,23 @@
+{
+  "type": "supermartijn642corelib:conditional",
+  "conditions": [
+    {
+      "type": "oregrowth:default_recipes"
+    },
+    {
+      "modid": "malum",
+      "type": "supermartijn642corelib:mod_loaded"
+    }
+  ],
+  "recipe": {
+    "type": "oregrowth:ore_growth",
+    "base": "malum:blazing_quartz_ore",
+    "stages": 4,
+    "spawn_chance": 0.2,
+    "growth_chance": 0.3,
+    "result": {
+      "item": "malum:blazing_quartz",
+      "count": 1
+    }
+  }
+}
