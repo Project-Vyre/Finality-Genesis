@@ -1,9 +1,10 @@
-// requires: morejs
-
 /**
  * @file Server handler for villager and wanderer trades.
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
+
+// requires: morejs
+// requires: create
 
 MoreJSEvents.villagerTrades(event => {
   event.addTrade('minecraft:weaponsmith', 2, [
@@ -35,6 +36,15 @@ MoreJSEvents.villagerTrades(event => {
   event.addTrade('minecraft:fisherman', 2, [
     'minecraft:pufferfish'
   ], '1x kubejs:iron_coin').maxUses(1)
+  event.addTrade('minecraft:librarian', 5, [
+    'minecraft:end_crystal'
+  ], 'kubejs:gold_coin').maxUses(16)
+  if (Platform.isLoaded('supplementaries')) {
+    event.addTrade('minecraft:cartographer', 5, [
+      'kubejs:iron_coin',
+      'minecraft:ink_sac'
+    ], 'supplementaries:antique_ink')
+  }
   //coinTrade(event)
 })
 
@@ -52,6 +62,10 @@ MoreJSEvents.wandererTrades(event => {
     '32x minecraft:emerald',
     '1x minecraft:respawn_anchor'
   ], '8x minecraft:chorus_fruit')
+  event.addTrade(1, [
+    '2x kubejs:gold_coin',
+    'create:precision_mechanism'
+  ], 'kubejs:deepslate_iridium_ore').maxUses(9)
   if (Platform.isLoaded('apotheosis')) {
     event.addTrade(1, [
       'minecraft:sculk',
@@ -124,6 +138,10 @@ MoreJSEvents.wandererTrades(event => {
       'kubejs:deepslate_shard',
       'minecraft:emerald'
     ], 'malum:runewood_sapling')
+    event.addTrade(1, [
+      '8x minecraft:amethyst_shard',
+      '4x kubejs:gold_coin'
+    ], 'malum:block_of_cthonic_gold').maxUses(3)
   }
   if (Platform.isLoaded('quark')) {
     event.addTrade(1, [

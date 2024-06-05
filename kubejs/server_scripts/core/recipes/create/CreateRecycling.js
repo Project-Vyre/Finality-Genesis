@@ -267,6 +267,16 @@ ServerEvents.recipes(event => {
     'create:fluid_tank',
     'kubejs:deconstructor'
   ]).keepHeldItem().id('finality:deploying/fluid_tank_deconstruction')
+  // BANNER DECONSTRUCTION
+  for (let id of COLOR) {
+    event.recipes.create.deploying([
+      `6x minecraft:${id}_wool`,
+      'minecraft:stick'
+    ], [
+      `minecraft:${id}_banner`,
+      'kubejs:deconstructor'
+    ]).keepHeldItem().id(`finality:item_application/${id}_banner_deconstruction`)
+  }
   if (Platform.isLoaded('quark')) {
     event.recipes.create.item_application([
       '2x minecraft:gold_ingot',

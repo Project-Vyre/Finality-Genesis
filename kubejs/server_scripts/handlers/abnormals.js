@@ -23,9 +23,15 @@ ServerEvents.recipes(event => {
     event.shapeless(`woodworks:${insert}_chest`, [
       'minecraft:chest'
     ]).id(`finality:woodworks/vanilla_chest_to_${insert}_chest_conversion`)
+    event.shapeless('minecraft:chest', [
+      `woodworks:${insert}_chest`
+    ]).id(`finality:woodworks/woodworks_${insert}_chest_to_vanilla_conversion`)
     event.shapeless(`woodworks:${insert}_trapped_chest`, [
       'minecraft:trapped_chest'
     ]).id(`finality:woodworks/vanilla_trapped_chest_to_${insert}_trapped_chest_conversion`)
+    event.shapeless('minecraft:trapped_chest', [
+      `woodworks:${insert}_trapped_chest`
+    ]).id(`finality:woodworks/woodworks_trapped_${insert}_chest_to_vanilla_conversion`)
     event.shapeless(`minecraft:${insert}_planks`, [
       `woodworks:${insert}_boards`
     ]).id(`finality:woodworks/${insert}_boards_revert`)

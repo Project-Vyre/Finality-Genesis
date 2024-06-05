@@ -246,11 +246,27 @@ ServerEvents.recipes(event => {
     'kubejs:concrete_yellow_singularity',
     'kubejs:concrete_magenta_singularity'
   ]).id('finality:mixing/chromatic_concrete_singularity')
+  event.recipes.create.mixing('kubejs:monochromatic_singularity', [
+    'create:shadow_steel',
+    'create:refined_radiance',
+    'kubejs:awakened_singularity_core'
+  ]).id('finality:mixing/monochromatic_singularity')
+  event.recipes.create.crushing([
+    '4x kubejs:null_matter',
+    Item.of('kubejs:monochromatic_singularity').withChance(0.75)
+  ], 'kubejs:monochromatic_singularity').processingTime(500).id('finality:crushing/monochromatic_singularity')
+  event.recipes.create.crushing([
+    Item.of('kubejs:null_matter').withChance(0.12),
+    Item.of('kubejs:unstable_entropy_particles').withChance(0.002)
+  ], 'create:crushing_wheel').processingTime(500).id('finality:crushing/divide_crushing_by_crushing_equals_null')
   // will balance in the future...
   event.recipes.create.mixing('kubejs:high_entropy_alloy_nugget', [
     '4x kubejs:stable_entropy_particles',
     'kubejs:chromatic_concrete_singularity',
-    '4x create:chromatic_compound'
+    'kubejs:null_matter',
+    'kubejs:metallurgy_mechanism',
+    '4x create:chromatic_compound',
+    'kubejs:iridium_nugget'
   ]).id('finality:mixing/high_entropy_alloy_nugget_from_chromatic')
   // mechanical crafting singularities
   event.recipes.create.mechanical_crafting('9x kubejs:coal_singularity', [
@@ -638,6 +654,63 @@ ServerEvents.recipes(event => {
     event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),
     event.recipes.create.pressing('kubejs:incomplete_ascendant_mechanism', 'kubejs:incomplete_ascendant_mechanism')
   ]).transitionalItem('kubejs:incomplete_ascendant_mechanism').loops(5).id('finality:sequenced_assembly/ascendant_mechanism_creation')
+
+  event.recipes.create.mechanical_crafting('kubejs:command_block', [
+    'IIGIIGII',
+    'IIQPPQII',
+    'GQCRRCQG',
+    'IPRUURPI',
+    'IPRUURPI',
+    'GQCRRCQG',
+    'IIQPPQII',
+    'IIGIIGII'
+  ], {
+    I: 'kubejs:high_entropy_alloy',
+    G: '#forge:glass/colorless',
+    R: 'kubejs:redstone_singularity',
+    U: 'kubejs:null_matter',
+    C: 'kubejs:iridium_block',
+    Q: 'create:rose_quartz_lamp',
+    P: 'create:pulse_repeater'
+  }).id('finality:mechanical_crafting/command_block')
+
+  event.recipes.create.mechanical_crafting('kubejs:chain_command_block', [
+    'IIGIIGII',
+    'IIQPPQII',
+    'GQCRRCQG',
+    'IPRUURPI',
+    'IPRUURPI',
+    'GQCRRCQG',
+    'IIQPPQII',
+    'IIGIIGII'
+  ], {
+    I: 'kubejs:high_entropy_alloy',
+    G: '#forge:glass/colorless',
+    R: 'kubejs:redstone_singularity',
+    U: 'kubejs:null_matter',
+    C: 'kubejs:iridium_block',
+    Q: 'create:rose_quartz_lamp',
+    P: 'create:sequenced_gearshift'
+  }).id('finality:mechanical_crafting/chain_command_block')
+
+  event.recipes.create.mechanical_crafting('kubejs:repeating_command_block', [
+    'IIGIIGII',
+    'IIQPPQII',
+    'GQCRRCQG',
+    'IPRUURPI',
+    'IPRUURPI',
+    'GQCRRCQG',
+    'IIQPPQII',
+    'IIGIIGII'
+  ], {
+    I: 'kubejs:high_entropy_alloy',
+    G: '#forge:glass/colorless',
+    R: 'kubejs:redstone_singularity',
+    U: 'kubejs:null_matter',
+    C: 'kubejs:iridium_block',
+    Q: 'create:rose_quartz_lamp',
+    P: 'create:powered_toggle_latch'
+  }).id('finality:mechanical_crafting/repeating_command_block')
   /*
   let RNG1 = 0
   let RNG2 = 0
