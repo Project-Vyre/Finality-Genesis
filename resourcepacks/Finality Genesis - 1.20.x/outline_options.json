@@ -1,0 +1,108 @@
+{
+	"formatVersion": 4,
+	"blockRenderSettings": {
+		"anim-speed": 1000,
+		"reverse-animation-direction": true,
+		"colour-period": 2,
+		"smooth-mix": true,
+		"anim-with-distance": true,
+		"anim-along-lines": false,
+		"line-width": 2,
+		"ignores-depth": false,
+		"colours": [
+			[
+				"#fff9bf",
+				1
+			],
+			[
+				"#ffeb8c",
+				1
+			],
+			[
+				"#f7cb6c",
+				1
+			],
+			[
+				"#cea05a",
+				1
+			],
+			[
+				"#af794f",
+				1
+			],
+			[
+				"#995a3d",
+				1
+			],
+			[
+				"#724731",
+				1
+			],
+			[
+				"#6c3528",
+				1
+			],
+			[
+				"#592424",
+				1
+			],
+			[
+				"#6c3528",
+				1
+			],
+			[
+				"#724731",
+				1
+			],
+			[
+				"#995a3d",
+				1
+			],
+			[
+				"#af794f",
+				1
+			],
+			[
+				"#cea05a",
+				1
+			],
+			[
+				"#f7cb6c",
+				1
+			],
+			[
+				"#ffeb8c",
+				1
+			],
+			[
+				"#fff9bf",
+				1
+			]
+		]
+	},
+	"hitboxRenderSettings": {
+		"anim-speed": 400,
+		"reverse-animation-direction": false,
+		"colour-period": 0.5,
+		"smooth-mix": true,
+		"anim-with-distance": false,
+		"anim-along-lines": true,
+		"line-width": 2,
+		"apply-to-all-hitbox-lines": false,
+		"colours": [
+			[
+				"#995a3d",
+				1
+			],
+			[
+				"#f7cb6c",
+				1
+			],
+			[
+				"#fff9bf",
+				1
+			]
+		]
+	},
+	"customName": "Create Brass"
+}

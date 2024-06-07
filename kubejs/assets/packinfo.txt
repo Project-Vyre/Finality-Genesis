@@ -1,6 +1,0 @@
-{
-	"pack": {
-		"description": "§dResources for Finality by CelestialAbyss. REQUIRED!",
-		"pack_format": 9
-	}
-}
