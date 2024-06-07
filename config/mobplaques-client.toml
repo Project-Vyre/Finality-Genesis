@@ -37,7 +37,7 @@
 	#Allowed Values: ALWAYS, UNOBSTRUCTED, NEVER
 	full_brightness = "UNOBSTRUCTED"
 	#Hide all plaques when mob has full health.
-	hide_at_full_health = false
+	hide_at_full_health = true
 	#Are mob plaques enabled, toggleable in-game using the 'J' key by default.
 	allow_rendering = true
 
