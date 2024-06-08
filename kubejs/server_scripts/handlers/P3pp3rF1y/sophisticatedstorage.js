@@ -4,14 +4,47 @@
  */
 
 // requires: sophisticatedstorage
-// requires: alexscaves
 // requires: kubejs_create
 // ignored: true
 
 // I apparently forgot I never commit this file sooo starting from scratch, again.
 
+let recipeIds = [
+  'pickup',
+  'filter',
+  'magnet',
+  'feeding',
+  'compacting',
+  'void'
+]
+
+let singleStep = [
+  'crafting',
+  'stonecutter'
+]
+
+let autoIds = [
+  'smelting',
+  'smoking',
+  'blasting'
+]
+
 ServerEvents.recipes(event => {
-  event.remove({ mod: 'sophisticatedstorage' })
+  for (let i = 0; i < recipeIds.length; i++) {
+    let element = recipeIds[i];
+    event.remove([
+      { id: 'sophisticatedstorage:' + element + '_upgrade' },
+      { id: 'sophisticatedstorage:advanced_' + element + '_upgrade' }
+    ])
+  }
+  for (let i = 0; i < autoIds.length; i++) {
+    let element = autoIds[i];
+    event.remove([
+      { id: 'sophisticatedstorage:' + element + '_upgrade' },
+      { id: 'sophisticatedstorage:auto_' + element + '_upgrade' }
+    ])
+  }
+  event.remove({ id: 'sophisticatedstorage:upgrade_base' })
   /**
    * TIER UPGRADES
    */
@@ -184,31 +217,60 @@ ServerEvents.recipes(event => {
     'create:attribute_filter'
   ]).id('kubejs:sophisticatedstorage/advanced_filter_upgrade')
   // magnet
-  event.recipes.minecraft.crafting_shaped('sophisticatedstorage:magnet_upgrade', [
-    'III',
-    'IPI',
-    'N S'
-  ], {
-    I: 'create:industrial_iron_block',
-    P: 'sophisticatedstorage:pickup_upgrade',
-    N: 'alexscaves:scarlet_neodymium_ingot',
-    S: 'alexscaves:azure_neodymium_ingot'
-  }).id('kubejs:sophisticatedstorage/magnet_upgrade')
-  event.recipes.create.mechanical_crafting('sophisticatedstorage:advanced_magnet_upgrade', [
-    ' ERE ',
-    'IBMBI',
-    'I   I',
-    'I   I',
-    'N   S'
-  ], {
-    R: 'create:precision_mechanism',
-    E: 'create:electron_tube',
-    B: 'create:brass_block',
-    M: 'sophisticatedstorage:magnet_upgrade',
-    I: 'create:industrial_iron_block',
-    N: 'alexscaves:block_of_scarlet_neodymium',
-    S: 'alexscaves:block_of_azure_neodymium'
-  }).id('kubejs:sophisticatedstorage/mechanical_crafting/advanced_magnet_upgrade')
+  if (!Platform.isLoaded('alexscaves')) {
+    event.recipes.minecraft.crafting_shaped('sophisticatedstorage:magnet_upgrade', [
+      'III',
+      'IPI',
+      'N S'
+    ], {
+      I: 'create:industrial_iron_block',
+      P: 'sophisticatedstorage:pickup_upgrade',
+      N: 'minecraft:redstone_block',
+      S: 'minecraft:lapis_block'
+    }).id('kubejs:sophisticatedstorage/magnet_upgrade')
+    event.recipes.create.mechanical_crafting('sophisticatedstorage:advanced_magnet_upgrade', [
+      ' ERE ',
+      'IBMBI',
+      'I   I',
+      'I   I',
+      'N   S'
+    ], {
+      R: 'create:precision_mechanism',
+      E: 'create:electron_tube',
+      B: 'create:brass_block',
+      M: 'sophisticatedstorage:magnet_upgrade',
+      I: 'create:industrial_iron_block',
+      N: 'minecraft:redstone_block',
+      S: 'minecraft:lapis_block'
+    }).id('kubejs:sophisticatedstorage/mechanical_crafting/advanced_magnet_upgrade')
+  }
+  if (Platform.isLoaded('alexscaves')) {
+    event.recipes.minecraft.crafting_shaped('sophisticatedstorage:magnet_upgrade', [
+      'III',
+      'IPI',
+      'N S'
+    ], {
+      I: 'create:industrial_iron_block',
+      P: 'sophisticatedstorage:pickup_upgrade',
+      N: 'alexscaves:scarlet_neodymium_ingot',
+      S: 'alexscaves:azure_neodymium_ingot'
+    }).id('kubejs:sophisticatedstorage/magnet_upgrade')
+    event.recipes.create.mechanical_crafting('sophisticatedstorage:advanced_magnet_upgrade', [
+      ' ERE ',
+      'IBMBI',
+      'I   I',
+      'I   I',
+      'N   S'
+    ], {
+      R: 'create:precision_mechanism',
+      E: 'create:electron_tube',
+      B: 'create:brass_block',
+      M: 'sophisticatedstorage:magnet_upgrade',
+      I: 'create:industrial_iron_block',
+      N: 'alexscaves:block_of_scarlet_neodymium',
+      S: 'alexscaves:block_of_azure_neodymium'
+    }).id('kubejs:sophisticatedstorage/mechanical_crafting/advanced_magnet_upgrade')
+  }
   // feeding
   event.recipes.minecraft.crafting_shaped('sophisticatedstorage:feeding_upgrade', [
     ' C ',
@@ -268,10 +330,32 @@ ServerEvents.recipes(event => {
     A: 'kubejs:awakened_singularity_core',
     B: 'sophisticatedstorage:void_upgrade'
   }).id('kubejs:sophisticatedstorage/mechanical_crafting/advanced_void_upgrade')
-
+  // crafting
+  event.recipes.minecraft.crafting_shaped('sophisticatedstorage:crafting_upgrade', [
+    ' T ',
+    'EBE',
+    ' I '
+  ], {
+    T: 'minecraft:crafting_table',
+    E: 'create:electron_tube',
+    B: 'sophisticatedstorage:upgrade_base',
+    I: 'create:item_vault'
+  }).id('kubejs:sophisticatedstorage/crafting_upgrade')
+  // stonecutter
+  event.recipes.minecraft.crafting_shaped('sophisticatedstorage:stonecutter_upgrade', [
+    ' T ',
+    'EBE',
+    ' I '
+  ], {
+    T: 'minecraft:stonecutter',
+    E: 'create:electron_tube',
+    B: 'sophisticatedstorage:upgrade_base',
+    I: 'create:iron_sheet'
+  }).id('kubejs:sophisticatedstorage/stonecutter_upgrade')
   /**
    * STORAGE BLOCKS
    */
+  /*
   for (let i = 0; i < WOOD_TYPES.length; i++) {
     let element = WOOD_TYPES[i]; // Item.of('sophisticatedstorage:copper_barrel', '{woodType:"acacia"}')
     event.recipes.minecraft.crafting_shaped(Item.of('sophisticatedstorage:copper_barrel', `{woodType:"${element}"}`), [
@@ -283,4 +367,5 @@ ServerEvents.recipes(event => {
       B: Item.of('sophisticatedstorage:barrel', `{woodType:"${element}"}`).weakNBT()
     }).id(`kubejs:sophisticatedstorage/${element}_copper_barrel`)
   }
+  */
 })
