@@ -75,7 +75,20 @@ let aetherRecipeIds = [
 */
 
 ServerEvents.recipes(event => {
-  event.remove({ id: 'aether:aether_saddle' })
+  event.remove([
+    { id: 'aether:aether_saddle' },
+    { id: 'aether:skyroot_piston' }
+  ])
+  event.recipes.minecraft.crafting_shaped('minecraft:piston', [
+    'SSS',
+    'CEC',
+    'CRC'
+  ], {
+    S: 'aether:skyroot_planks',
+    C: 'minecraft:cobblestone',
+    E: 'create:piston_extension_pole',
+    R: 'minecraft:redstone'
+  }).id('kubejs:aether/skyroot_piston')
   aetherEnchantingBlocks(event,
     'aether:enchanted_gravitite',
     Ingredient.of('aether:gravitite_ore').toJson(),
