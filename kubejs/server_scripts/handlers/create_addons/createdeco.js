@@ -46,7 +46,7 @@ ServerEvents.recipes(event => {
     }
   ])
   COIN_MELT_HEATED('iron', 'iron')
-  COIN_MELT_HEATED('iron', 'cast_iron')
+  COIN_MELT_HEATED('iron', 'industrial_iron')
   COIN_MELT_HEATED('gold', 'gold')
   COIN_MELT_HEATED('copper', 'copper')
   COIN_MELT_HEATED('zinc', 'zinc')
@@ -55,7 +55,7 @@ ServerEvents.recipes(event => {
     'createdeco:netherite_coin'
   ]).superheated().id('finality:createdeco/netherite_coin_melting')
   COINSTACK_MELTING('iron', 'iron')
-  COINSTACK_MELTING('iron', 'cast_iron')
+  COINSTACK_MELTING('iron', 'industrial_iron')
   COINSTACK_MELTING('gold', 'gold')
   COINSTACK_MELTING('copper', 'copper')
   COINSTACK_MELTING('zinc', 'zinc')
@@ -63,9 +63,9 @@ ServerEvents.recipes(event => {
   event.recipes.create.mixing(Fluid.of('kubejs:molten_netherite', 40), [
     'createdeco:netherite_coinstack'
   ]).superheated().id('finality:createdeco/netherite_coinstack_melting')
-  event.recipes.create.mixing(Fluid.of('kubejs:molten_iron', 90), 'createdeco:cast_iron_sheet')
+  event.recipes.create.mixing(Fluid.of('kubejs:molten_iron', 90), 'createdeco:industrial_iron_sheet')
     .heated()
-    .id('finality:createdeco/basin/cast_iron_sheet_melting')
+    .id('finality:createdeco/basin/industrial_iron_sheet_melting')
 })
 
 let cdeco_lamp_colors = [
@@ -79,7 +79,7 @@ let cdeco_lamp_mats = [
   'netherite',
   'andesite',
   'brass',
-  'cast_iron',
+  'industrial_iron',
   'iron',
   'copper',
   'zinc'
@@ -95,8 +95,8 @@ ServerEvents.tags('block', event => {
     'createdeco:andesite_bars_overlay',
     'createdeco:brass_bars',
     'createdeco:brass_bars_overlay',
-    'createdeco:cast_iron_bars',
-    'createdeco:cast_iron_bars_overlay',
+    'createdeco:industrial_iron_bars',
+    'createdeco:industrial_iron_bars_overlay',
     'createdeco:polished_iron_bars',
     'createdeco:polished_iron_bars_overlay',
     'createdeco:iron_bars_overlay',
