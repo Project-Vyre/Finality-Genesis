@@ -596,7 +596,7 @@ ServerEvents.recipes(event => {
 
   event.recipes.create.sequenced_assembly([
     'kubejs:gluttony_mechanism'
-  ], 'kubejs:terra_mechanism', [
+  ], 'create:precision_mechanism', [
     event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'artifacts:eternal_steak']).keepHeldItem(),
     event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'kubejs:honey_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'kubejs:chocolate_singularity']),
@@ -605,7 +605,7 @@ ServerEvents.recipes(event => {
 
   event.recipes.create.sequenced_assembly([
     'kubejs:metallurgy_mechanism'
-  ], 'kubejs:gluttony_mechanism', [
+  ], 'create:precision_mechanism', [
     event.recipes.create.deploying('kubejs:incomplete_metallurgy_mechanism', ['kubejs:incomplete_metallurgy_mechanism', 'kubejs:iron_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_metallurgy_mechanism', ['kubejs:incomplete_metallurgy_mechanism', 'kubejs:andesite_alloy_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_metallurgy_mechanism', ['kubejs:incomplete_metallurgy_mechanism', 'kubejs:copper_singularity']),
@@ -617,7 +617,7 @@ ServerEvents.recipes(event => {
 
   event.recipes.create.sequenced_assembly([
     'kubejs:lattice_mechanism'
-  ], 'kubejs:metallurgy_mechanism', [
+  ], 'create:precision_mechanism', [
     event.recipes.create.deploying('kubejs:incomplete_lattice_mechanism', ['kubejs:incomplete_lattice_mechanism', 'kubejs:amethyst_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_lattice_mechanism', ['kubejs:incomplete_lattice_mechanism', 'kubejs:quartz_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_lattice_mechanism', ['kubejs:incomplete_lattice_mechanism', 'kubejs:diamond_singularity']),
@@ -627,7 +627,7 @@ ServerEvents.recipes(event => {
 
   event.recipes.create.sequenced_assembly([
     'kubejs:umbral_mechanism'
-  ], 'kubejs:lattice_mechanism', [
+  ], 'create:precision_mechanism', [
     event.recipes.create.deploying('kubejs:incomplete_umbral_mechanism', ['kubejs:incomplete_umbral_mechanism', 'kubejs:soul_sand_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_umbral_mechanism', ['kubejs:incomplete_umbral_mechanism', 'kubejs:soul_soil_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_umbral_mechanism', ['kubejs:incomplete_umbral_mechanism', 'kubejs:end_crystal_singularity'])
@@ -635,7 +635,7 @@ ServerEvents.recipes(event => {
 
   event.recipes.create.sequenced_assembly([
     'kubejs:genesis_mechanism'
-  ], 'kubejs:umbral_mechanism', [
+  ], 'create:precision_mechanism', [
     event.recipes.create.deploying('kubejs:incomplete_genesis_mechanism', ['kubejs:incomplete_genesis_mechanism', 'create:steam_engine']),
     event.recipes.create.deploying('kubejs:incomplete_genesis_mechanism', ['kubejs:incomplete_genesis_mechanism', 'create:shaft']),
     event.recipes.create.deploying('kubejs:incomplete_genesis_mechanism', ['kubejs:incomplete_genesis_mechanism', 'create:rotation_speed_controller']),
