@@ -154,7 +154,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .rarity('epic')
     .maxStackSize(1)
     .fireResistant(true)
-    //.group('combat')
   event.create('kubejs:raw_iridium')
     .texture('kubejs:item/raw_iridium')
     .rarity('rare')
@@ -248,7 +247,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:armors')
     .tag('forge:armors/helmets')
     .tag('kubejs:iridium_armor')
-    //.group('combat')
   event.create('kubejs:iridium_chestplate', 'chestplate').tier('iridium_armor')
     .rarity('rare')
     .texture('kubejs:item/iridium_chestplate')
@@ -259,7 +257,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:armors')
     .tag('forge:armors/chestplates')
     .tag('kubejs:iridium_armor')
-    //.group('combat')
   event.create('kubejs:iridium_leggings', 'leggings').tier('iridium_armor')
     .rarity('rare')
     .texture('kubejs:item/iridium_leggings')
@@ -270,7 +267,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:armors')
     .tag('forge:armors/leggings')
     .tag('kubejs:iridium_armor')
-    //.group('combat')
   event.create('kubejs:iridium_boots', 'boots').tier('iridium_armor')
     .rarity('rare')
     .texture('kubejs:item/iridium_boots')
@@ -317,7 +313,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:tools/pickaxe')
     .tag('forge:tools/pickaxes')
     .tag('kubejs:final_tools')
-    //.group('tools')
 
   event.create('kubejs:final_axe', 'axe').tier('final_tool')
     .rarity('epic')
@@ -329,7 +324,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:tools/axe')
     .tag('forge:tools/axes')
     .tag('kubejs:final_tools')
-    //.group('tools')
 
   event.create('kubejs:final_shovel', 'shovel').tier('final_tool')
     .rarity('epic')
@@ -341,7 +335,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:tools/shovel')
     .tag('forge:tools/shovels')
     .tag('kubejs:final_tools')
-    //.group('tools')
 
   if (Platform.isLoaded('paxeljs')) {
     event.create('kubejs:final_paxel', 'paxel').tier('final_tool')
@@ -361,7 +354,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:tools/hoe')
     .tag('forge:tools/hoes')
     .tag('kubejs:final_tools')
-    //.group('tools')
   // weapons
   event.create('kubejs:final_sword', 'sword').tier('final_tool')
     .rarity('epic')
@@ -373,13 +365,11 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:tools/sword')
     .tag('forge:tools/swords')
     .tag('kubejs:final_tools')
-    //.group('combat')
 
   event.create('kubejs:final_lance', 'sword').tier('final_tool')
     .rarity('epic')
     .maxStackSize(1)
     .fireResistant(true)
-    //.group('combat')
 
   event.create('kubejs:final_scythe', 'sword').tier('final_tool')
     .rarity('epic')
@@ -390,14 +380,12 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:tools')
     .tag('forge:tools/scythe')
     .tag('forge:tools/scythes')
-    //.group('combat')
 
   event.create('kubejs:final_katana', 'sword').tier('final_tool')
     .rarity('epic')
     .texture('kubejs:item/final_katana')
     .maxStackSize(1)
     .fireResistant(true)
-    //.group('combat')
 
   // armor
   event.create('kubejs:final_helmet', 'helmet').tier('final_armor')
@@ -410,7 +398,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:armors')
     .tag('forge:armors/helmets')
     .tag('kubejs:final_armor')
-    //.group('combat')
 
   event.create('kubejs:final_chestplate', 'chestplate').tier('final_armor')
     .rarity('epic')
@@ -422,7 +409,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:armors')
     .tag('forge:armors/chestplates')
     .tag('kubejs:final_armor')
-    //.group('combat')
 
   event.create('kubejs:final_leggings', 'leggings').tier('final_armor')
     .rarity('epic')
@@ -434,7 +420,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:armors')
     .tag('forge:armors/leggings')
     .tag('kubejs:final_armor')
-    //.group('combat')
 
   event.create('kubejs:final_boots', 'boots').tier('final_armor')
     .rarity('epic')
@@ -446,7 +431,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:armors')
     .tag('forge:armors/boots')
     .tag('kubejs:final_armor')
-    //.group('combat')
 
   // shapes and alphanumeric
   event.create('kubejs:qubit')
@@ -505,6 +489,12 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .rarity('epic')
     .texture('kubejs:item/deconstructor')
     .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
+  event.create('kubejs:duplicator')
+    .rarity('epic')
+    .texture('kubejs:item/duplicator')
+    .maxStackSize(1)
     .fireResistant(true)
     .glow(true)
   event.create('kubejs:null_matter')
@@ -956,7 +946,6 @@ StartupEvents.registry('fluid', event => {
 
 let blacklist = {
   ae2: 'This mod does not belong in this variant of the modpack. Make your own storage systems.',
-  ars_nouveau: 'Not supported in this variant of the modpack.',
   createcasing: 'Not supported.',
   createdieselgenerators: 'Not supported.',
   create_confectionery: 'MCreator mod.',
