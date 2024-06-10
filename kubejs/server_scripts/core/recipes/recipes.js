@@ -322,6 +322,14 @@ ServerEvents.recipes(event => {
       'kubejs:duplicator'
     ]).keepHeldItem().id('finality:deploying/' + element + '_duplication')
   }
+  event.recipes.minecraft.crafting_shaped('minecraft:ender_pearl', [
+    'TTT',
+    'TNT',
+    'TTT'
+  ], {
+    T: 'minecraft:tinted_glass',
+    N: 'kubejs:null_matter'
+  }).id('finality:ender_pearl_from_null_matter')
   /**
    * BLASTING
    * 
