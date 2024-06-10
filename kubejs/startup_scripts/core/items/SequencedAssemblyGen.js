@@ -136,8 +136,10 @@ let PRIMORDIAL_MECHANISMS = [
   'gluttony_mechanism', // delicacy related, ingredient for entropy mechanism
   'metallurgy_mechanism', // metal related, ingredient for entropy mechanism
   'lattice_mechanism', // crystal related, ingredient for entropy mechanism
+  'amorphous_mechanism',
   'umbral_mechanism', // darkness related, ingredient for entropy mechanism
   'genesis_mechanism', // create related, ingredient for entropy mechanism
+  'logistics_mechanism',
   'ascendant_mechanism', // experience related, ingredient for entropy mechanism
   'entropy_mechanism' // CONSOLIDATION
 ]

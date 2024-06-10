@@ -190,6 +190,18 @@ StartupEvents.registry('item', event => {
     .texture('layer1', 'kubejs:item/monochromatic_singularity_overlay')
     .rarity('epic')
     .tag('create:upright_on_belt')
+  event.create('kubejs:final_singularity')
+    .texture('layer0', 'kubejs:item/null_matter')
+    .texture('layer1', 'kubejs:item/singularity_overlay')
+    .texture('layer2', 'kubejs:item/null_matter_overlay')
+    .color(0, 0x918AAD)
+    .color(1, 0xD6CCFF)
+    .formattedDisplayName(
+      Component.string('Final Singularity')
+        .color(0xD6CCFF)
+    )
+    .rarity('epic')
+    .tag('create:upright_on_belt')
   if (Platform.isLoaded('create_bic_bit')) {
     event.create('kubejs:speculaas_singularity').tag('create:upright_on_belt')
     event.create('kubejs:stroopwafel_singularity').tag('create:upright_on_belt')
