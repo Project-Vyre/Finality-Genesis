@@ -1,6 +1,6 @@
 /**
  * @file Handler for core recipes.
- * 
+ * @version 1.20.1
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  * @author squoshi <https://github.com/squoshi> Helped a lot early on in development. Thank you. Also helped translate my ideas into scripts!
  * @author pietro-lopes <https://github.com/pietro-lopes> AKA Uncandango in the KubeJS Discord. Fixed issues related to damage cancel script
@@ -95,6 +95,7 @@ ServerEvents.recipes(event => {
       `minecraft:${wood}_slab`
     ], `${wood}_planks`).processingTime(50).id(`finality:${wood}_pressure_plate`)
   }
+  event.remove({ id: 'minecraft:netherite_upgrade_smithing_template' })
   event.shaped('minecraft:light_weighted_pressure_plate', [
     'G',
     'R'
@@ -278,6 +279,14 @@ ServerEvents.recipes(event => {
     D: 'minecraft:crying_obsidian',
     S: 'create:shaft'
   }).id('finality:deconstructor')
+  event.recipes.create.mechanical_crafting('kubejs:duplicator', [
+    'NC',
+    'SN'
+  ], {
+    C: 'create:clipboard',
+    S: 'create:sturdy_sheet',
+    N: 'kubejs:netherite_nugget'
+  }).id('finality:mechanical_crafting/duplicator')
   /**
    * QoL
    */
@@ -287,6 +296,32 @@ ServerEvents.recipes(event => {
   event.recipes.minecraft.blasting('create:zinc_block', 'create:raw_zinc_block')
     .cookingTime(900).xp(6.3)
     .id('finality:blasting/zinc_block_from_raw_zinc_block')
+  let duplication = [
+    'netherite_upgrade_smithing_template',
+    'sentry_armor_trim_smithing_template',
+    'vex_armor_trim_smithing_template',
+    'wild_armor_trim_smithing_template',
+    'coast_armor_trim_smithing_template',
+    'dune_armor_trim_smithing_template', 
+    'wayfinder_armor_trim_smithing_template', 
+    'raiser_armor_trim_smithing_template',
+    'shaper_armor_trim_smithing_template',
+    'host_armor_trim_smithing_template',
+    'ward_armor_trim_smithing_template',
+    'silence_armor_trim_smithing_template',
+    'tide_armor_trim_smithing_template',
+    'snout_armor_trim_smithing_template',
+    'rib_armor_trim_smithing_template',
+    'eye_armor_trim_smithing_template',
+    'spire_armor_trim_smithing_template'
+  ]
+  for (let i = 0; i < duplication.length; i++) {
+    let element = duplication[i];
+    event.recipes.create.deploying('2x minecraft:' + element, [
+      'minecraft:' + element,
+      'kubejs:duplicator'
+    ]).keepHeldItem().id('finality:deploying/' + element + '_duplication')
+  }
   /**
    * BLASTING
    * 

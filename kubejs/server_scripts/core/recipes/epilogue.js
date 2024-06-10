@@ -252,12 +252,12 @@ ServerEvents.recipes(event => {
     'kubejs:awakened_singularity_core'
   ]).id('finality:mixing/monochromatic_singularity')
   event.recipes.create.crushing([
-    '4x kubejs:null_matter',
+    '16x kubejs:null_matter',
     Item.of('kubejs:monochromatic_singularity').withChance(0.75)
   ], 'kubejs:monochromatic_singularity').processingTime(500).id('finality:crushing/monochromatic_singularity')
   event.recipes.create.crushing([
     Item.of('kubejs:null_matter').withChance(0.12),
-    Item.of('kubejs:unstable_entropy_particles').withChance(0.002)
+    Item.of('kubejs:null_matter', 2).withChance(0.01)
   ], 'create:crushing_wheel').processingTime(500).id('finality:crushing/divide_crushing_by_crushing_equals_null')
   // will balance in the future...
   event.recipes.create.mixing('kubejs:high_entropy_alloy_nugget', [
@@ -597,7 +597,7 @@ ServerEvents.recipes(event => {
   event.recipes.create.sequenced_assembly([
     'kubejs:gluttony_mechanism'
   ], 'create:precision_mechanism', [
-    event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'artifacts:eternal_steak']).keepHeldItem(),
+    event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'create:sweet_roll']),
     event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'kubejs:honey_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'kubejs:chocolate_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'kubejs:builders_tea_singularity'])
@@ -646,14 +646,48 @@ ServerEvents.recipes(event => {
 
   event.recipes.create.sequenced_assembly([
     'kubejs:ascendant_mechanism'
-  ], 'kubejs:genesis_mechanism', [
-    event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),
-    event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),
+  ], 'create:precision_mechanism', [
+    event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'kubejs:lapis_singularity']),
+    event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'kubejs:glowstone_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),
     event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),
     event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),
     event.recipes.create.pressing('kubejs:incomplete_ascendant_mechanism', 'kubejs:incomplete_ascendant_mechanism')
   ]).transitionalItem('kubejs:incomplete_ascendant_mechanism').loops(5).id('finality:sequenced_assembly/ascendant_mechanism_creation')
+
+  event.recipes.create.sequenced_assembly([
+    'kubejs:amorphous_mechanism'
+  ], 'create:precision_mechanism', [
+    event.recipes.create.deploying('kubejs:incomplete_amorphous_mechanism', ['kubejs:incomplete_amorphous_mechanism', 'kubejs:framed_glass_singularity']),
+    event.recipes.create.deploying('kubejs:incomplete_amorphous_mechanism', ['kubejs:incomplete_amorphous_mechanism', 'kubejs:tinted_glass_singularity']),
+    event.recipes.create.deploying('kubejs:incomplete_amorphous_mechanism', ['kubejs:incomplete_amorphous_mechanism', 'kubejs:sea_lantern_singularity']),
+    event.recipes.create.pressing('kubejs:incomplete_amorphous_mechanism', 'kubejs:incomplete_amorphous_mechanism')
+  ]).transitionalItem('kubejs:incomplete_amorphous_mechanism').loops(1).id('finality:sequenced_assembly/amorphous_mechanism')
+  event.recipes.create.sequenced_assembly([
+    'kubejs:logistics_mechanism'
+  ], 'create:precision_mechanism', [
+    event.recipes.create.deploying('kubejs:incomplete_logistics_mechanism', ['kubejs:incomplete_logistics_mechanism', 'create:controls']),
+    event.recipes.create.deploying('kubejs:incomplete_logistics_mechanism', ['kubejs:incomplete_logistics_mechanism', 'kubejs:sturdy_sheet_singularity']),
+    event.recipes.create.deploying('kubejs:incomplete_logistics_mechanism', ['kubejs:incomplete_logistics_mechanism', 'kubejs:track_singularity'])
+  ]).transitionalItem('kubejs:incomplete_logistics_mechanism').loops(1).id('finality:sequenced_assembly/logistics_mechanism')
+
+  event.recipes.create.compacting('kubejs:final_singularity', [
+    'kubejs:terra_mechanism',
+    'kubejs:gluttony_mechanism',
+    'kubejs:metallurgy_mechanism',
+    'kubejs:lattice_mechanism',
+    'kubejs:amorphous_mechanism',
+    'kubejs:umbral_mechanism',
+    'kubejs:genesis_mechanism',
+    'kubejs:logistics_mechanism',
+    'kubejs:ascendant_mechanism'
+  ]).id('finality:compacting/final_singularity_from_primordial_mechanisms')
+
+  event.recipes.create.crushing([
+    '32x kubejs:unstable_entropy_particles',
+    Item.of('kubejs:unstable_entropy_particles', 32).withChance(0.25),
+    Item.of('kubejs:final_singularity').withChance(0.75)
+  ], 'kubejs:final_singularity').processingTime(500).id('finality:crushing/final_singularity')
 
   event.recipes.create.mechanical_crafting('kubejs:command_block', [
     'IIGIIGII',
@@ -751,8 +785,8 @@ ServerEvents.recipes(event => {
     Item.of('kubejs:chain_command_block').withChance(25.0),
     Item.of('kubejs:repeating_command_block').withChance(25.0),
     'minecraft:grass_block'
-  ], 'kubejs:ascendant_mechanism', [
-    event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:awakened_singularity_core']),
+  ], 'create:precision_mechanism', [
+    event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:null_matter']),
     event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'create:sequenced_gearshift']),
     event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:qubit']),
     event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:cpu_shape']),

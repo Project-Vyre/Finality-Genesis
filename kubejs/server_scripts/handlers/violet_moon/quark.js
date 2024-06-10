@@ -43,6 +43,10 @@ ServerEvents.recipes(event => {
       `quark:${element}_wood`
     ).processingTime(50).id(`create:cutting/compat/quark/${element}_wood`)
   }
+  event.recipes.create.deploying('2x quark:smithing_template_rune', [
+    'quark:smithing_template_rune',
+    'kubejs:duplicator'
+  ]).keepHeldItem().id('kubejs:deploying/smithing_template_rune_duplication')
   if (Platform.isLoaded('aether')) {
     event.shaped('minecraft:chest', [
       'WWW',
