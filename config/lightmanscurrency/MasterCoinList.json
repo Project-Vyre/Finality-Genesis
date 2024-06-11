@@ -1,0 +1,424 @@
+{
+  "Chains": [
+    {
+      "chain": "emeralds",
+      "name": {
+        "translate": "lightmanscurrency.money.chain.emeralds"
+      },
+      "displayType": "lightmanscurrency:number",
+      "displayFormat": {
+        "translate": "lightmanscurrency.money.chain.emeralds.display"
+      },
+      "displayFormatWordy": {
+        "translate": "lightmanscurrency.money.chain.emeralds.display.wordy"
+      },
+      "InputType": "DEFAULT",
+      "CoreChain": [
+        {
+          "Coin": "minecraft:emerald",
+          "baseUnit": true
+        },
+        {
+          "Coin": "minecraft:emerald_block",
+          "exchangeRate": 9
+        }
+      ]
+    },
+    {
+      "chain": "main",
+      "name": {
+        "translate": "lightmanscurrency.money.chain.main"
+      },
+      "displayType": "lightmanscurrency:coin",
+      "InputType": "DEFAULT",
+      "CoreChain": [
+        {
+          "Coin": "kubejs:copper_coin",
+          "initial": {
+            "translate": "item.kubejs.lightman.copper_coin.initial"
+          },
+          "plural": {
+            "translate": "item.kubejs.lightman.copper_coin.plural"
+          }
+        },
+        {
+          "Coin": "kubejs:iron_coin",
+          "exchangeRate": 64,
+          "initial": {
+            "translate": "item.kubejs.lightman.iron_coin.initial"
+          },
+          "plural": {
+            "translate": "item.kubejs.lightman.iron_coin.plural"
+          }
+        },
+        {
+          "Coin": "kubejs:gold_coin",
+          "exchangeRate": 64,
+          "initial": {
+            "translate": "item.kubejs.lightman.gold_coin.initial"
+          },
+          "plural": {
+            "translate": "item.kubejs.lightman.gold_coin.plural"
+          }
+        },
+        {
+          "Coin": "kubejs:netherite_coin",
+          "exchangeRate": 64,
+          "initial": {
+            "translate": "item.kubejs.lightman.netherite_coin.initial"
+          },
+          "plural": {
+            "translate": "item.kubejs.lightman.netherite_coin.plural"
+          }
+        },
+        {
+          "Coin": "kubejs:entropy_coin",
+          "exchangeRate": 256,
+          "initial": {
+            "translate": "item.kubejs.lightman.entropy_coin.initial"
+          },
+          "plural": {
+            "translate": "item.kubejs.lightman.entropy_coin.plural"
+          }
+        }
+      ],
+      "SideChains": [],
+      "ATMData": {
+        "ExchangeButtons": [
+          {
+            "x": 27,
+            "y": 17,
+            "width": 122,
+            "command": "exchangeAllUp",
+            "icons": [
+              {
+                "type": "lightmanscurrency:item",
+                "x": 1,
+                "y": 1,
+                "item": "kubejs:copper_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 19,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 27,
+                "y": 1,
+                "item": "kubejs:iron_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 45,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 53,
+                "y": 1,
+                "item": "kubejs:gold_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 71,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 79,
+                "y": 1,
+                "item": "kubejs:netherite_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 97,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 105,
+                "y": 1,
+                "item": "kubejs:entropy_coin"
+              }
+            ]
+          },
+          {
+            "x": 27,
+            "y": 40,
+            "width": 122,
+            "command": "exchangeAllDown",
+            "icons": [
+              {
+                "type": "lightmanscurrency:item",
+                "x": 1,
+                "y": 1,
+                "item": "kubejs:entropy_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 19,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 27,
+                "y": 1,
+                "item": "kubejs:netherite_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 45,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 53,
+                "y": 1,
+                "item": "kubejs:gold_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 71,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 79,
+                "y": 1,
+                "item": "kubejs:iron_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 97,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 105,
+                "y": 1,
+                "item": "kubejs:copper_coin"
+              }
+            ]
+          },
+          {
+            "x": 5,
+            "y": 68,
+            "width": 40,
+            "command": "exchangeDown-kubejs:iron_coin",
+            "icons": [
+              {
+                "type": "lightmanscurrency:item",
+                "x": 1,
+                "y": 1,
+                "item": "kubejs:iron_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 17,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 23,
+                "y": 1,
+                "item": "kubejs:copper_coin"
+              }
+            ]
+          },
+          {
+            "x": 5,
+            "y": 88,
+            "width": 40,
+            "command": "exchangeUp-kubejs:copper_coin",
+            "icons": [
+              {
+                "type": "lightmanscurrency:item",
+                "x": 1,
+                "y": 1,
+                "item": "kubejs:copper_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 17,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 23,
+                "y": 1,
+                "item": "kubejs:iron_coin"
+              }
+            ]
+          },
+          {
+            "x": 47,
+            "y": 68,
+            "width": 40,
+            "command": "exchangeDown-kubejs:gold_coin",
+            "icons": [
+              {
+                "type": "lightmanscurrency:item",
+                "x": 1,
+                "y": 1,
+                "item": "kubejs:gold_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 17,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 23,
+                "y": 1,
+                "item": "kubejs:iron_coin"
+              }
+            ]
+          },
+          {
+            "x": 47,
+            "y": 88,
+            "width": 40,
+            "command": "exchangeUp-kubejs:iron_coin",
+            "icons": [
+              {
+                "type": "lightmanscurrency:item",
+                "x": 1,
+                "y": 1,
+                "item": "kubejs:iron_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 17,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 23,
+                "y": 1,
+                "item": "kubejs:gold_coin"
+              }
+            ]
+          },
+          {
+            "x": 89,
+            "y": 68,
+            "width": 40,
+            "command": "exchangeDown-kubejs:netherite_coin",
+            "icons": [
+              {
+                "type": "lightmanscurrency:item",
+                "x": 1,
+                "y": 1,
+                "item": "kubejs:netherite_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 17,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 23,
+                "y": 1,
+                "item": "kubejs:gold_coin"
+              }
+            ]
+          },
+          {
+            "x": 89,
+            "y": 88,
+            "width": 40,
+            "command": "exchangeUp-kubejs:gold_coin",
+            "icons": [
+              {
+                "type": "lightmanscurrency:item",
+                "x": 1,
+                "y": 1,
+                "item": "kubejs:gold_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 17,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 23,
+                "y": 1,
+                "item": "kubejs:netherite_coin"
+              }
+            ]
+          },
+          {
+            "x": 131,
+            "y": 68,
+            "width": 40,
+            "command": "exchangeDown-kubejs:entropy_coin",
+            "icons": [
+              {
+                "type": "lightmanscurrency:item",
+                "x": 1,
+                "y": 1,
+                "item": "kubejs:entropy_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 17,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 23,
+                "y": 1,
+                "item": "kubejs:netherite_coin"
+              }
+            ]
+          },
+          {
+            "x": 131,
+            "y": 88,
+            "width": 40,
+            "command": "exchangeUp-kubejs:netherite_coin",
+            "icons": [
+              {
+                "type": "lightmanscurrency:item",
+                "x": 1,
+                "y": 1,
+                "item": "kubejs:netherite_coin"
+              },
+              {
+                "type": "lightmanscurrency:small_arrow",
+                "x": 17,
+                "y": 6,
+                "direction": "RIGHT"
+              },
+              {
+                "type": "lightmanscurrency:item",
+                "x": 23,
+                "y": 1,
+                "item": "kubejs:entropy_coin"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
