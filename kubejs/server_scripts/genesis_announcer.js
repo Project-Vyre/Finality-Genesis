@@ -1,13 +1,14 @@
-// priority: 7
-// requires: create
-
 /**
- * Authors
+ * @file Live in-game tips.
  * 
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  * @author squoshi <https://github.com/squoshi> Proposing the switch function
  * @author pietro-lopes <https://github.com/pietro-lopes> For fixing the math portion
  */
+
+// priority: 7
+// requires: create
+// ignored: true
 
 /**
  * 360 for every few seconds | 7200 for 6 minutes | 36000 for 30 minutes
