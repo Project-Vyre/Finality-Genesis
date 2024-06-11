@@ -496,6 +496,21 @@ ClientEvents.lang('en_us', event => {
       .setPalette($Palette.PURPLE)
       .build()
   )
+  event.addAll(
+    'kubejs',
+    createTooltip('kubejs:duplicator')
+      .addSummary('It uhh... _copies_ things...')
+      .addBehaviour([
+        'On R-Click on a block',
+        'Depending on the block, it will essentially _[Ctrl] + [C]_ then _[Ctrl] + [V]_ if applicable.'
+      ])
+      .addBehaviour([
+        'Additional Info',
+        'Does _not_ duplicate everything.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
   /*
   event.addAll(
       'kubejs',
