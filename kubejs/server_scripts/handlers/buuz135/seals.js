@@ -30,15 +30,15 @@ ServerEvents.recipes(event => {
    */
   function itemSeal(lang, reqs, itemStack, invis, advId) {
     event.custom({
-      lang_key: 'kubejs.seal.' + lang,
-      requisites: [reqs],
+      lang_key: 'kubejs.' + lang,
+      requisites: reqs,
       icon: {
         type: "item",
         value: { stack: itemStack }
       },
       invisible: invis,
       type: "seals:seal"
-    }).id('kubejs:seals/item_seal' + advId)
+    }).id('kubejs:seals/item_seal/' + advId)
   }
 
   itemSeal(
