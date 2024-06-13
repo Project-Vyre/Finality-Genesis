@@ -2,7 +2,7 @@
   "minecraft": {
     "item_storage.show_name_amount": 5,
     "furnace": true,
-    "harvest_tool.show_unbreakable": false,
+    "harvest_tool.show_unbreakable": true,
     "animal_owner": true,
     "harvest_tool.effective_tool": true,
     "item_storage.normal_amount": 9,
@@ -50,25 +50,6 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
-  "tesseract": {
-    "tesseract": true,
-    "remove_default": true
-  },
-  "jadeaddons": {
-    "equipment_requirement": ""
-  },
-  "exposure": {
-    "lightroom": true
-  },
-  "reliquary": {
-    "pedestal": true,
-    "altar": true,
-    "mortar": true,
-    "cauldron": true
-  },
-  "supplementaries": {
-    "hat_stand": true
-  },
   "jade": {
     "coordinates.rel": false,
     "distance": false,
@@ -76,17 +57,6 @@
     "coordinates": false,
     "registry_name": "OFF",
     "mod_name": true
-  },
-  "create": {
-    "filter": true,
-    "backtank_capacity": true,
-    "goggles.requires_goggles": true,
-    "goggles": true,
-    "blaze_burner": true,
-    "exact_block": true,
-    "crafting_blueprint": true,
-    "goggles.detailed": false,
-    "placard": true
   },
   "apotheosis": {
     "adventure": true,
@@ -106,5 +76,38 @@
     "canvas_beehive": true,
     "bee_attributes": true,
     "productive_bee": true
+  },
+  "ars_nouveau": {
+    "mob_jar": true
+  },
+  "tesseract": {
+    "tesseract": true,
+    "remove_default": true
+  },
+  "jadeaddons": {
+    "equipment_requirement": ""
+  },
+  "exposure": {
+    "lightroom": true
+  },
+  "reliquary": {
+    "pedestal": true,
+    "altar": true,
+    "mortar": true,
+    "cauldron": true
+  },
+  "supplementaries": {
+    "hat_stand": true
+  },
+  "create": {
+    "filter": true,
+    "backtank_capacity": true,
+    "goggles.requires_goggles": true,
+    "goggles": true,
+    "blaze_burner": true,
+    "exact_block": true,
+    "crafting_blueprint": true,
+    "goggles.detailed": false,
+    "placard": true
   }
 }
