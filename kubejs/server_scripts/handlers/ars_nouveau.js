@@ -63,5 +63,5 @@ ServerEvents.recipes(event => {
   event.recipes.create.milling([
     '4x ars_nouveau:magebloom_fiber',
     Item.of('ars_nouveau:magebloom_fiber', 4).withChance(0.12)
-  ], 'ars_noveau:magebloom').processingTime(150).id('kubejs:milling/compat/ars_nouveau/magebloom_fiber')
+  ], 'ars_nouveau:magebloom').processingTime(150).id('kubejs:milling/compat/ars_nouveau/magebloom_fiber')
 })
