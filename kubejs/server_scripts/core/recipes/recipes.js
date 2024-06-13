@@ -791,7 +791,7 @@ ServerEvents.recipes(event => {
     Item.of('kubejs:unstable_entropy_particles').withChance(0.25)
   ], 'kubejs:unstable_entropy_particles', [
     event.recipes.create.filling('kubejs:stabilizing_entropy_particles', ['kubejs:stabilizing_entropy_particles', Fluid.of('kubejs:condensed_universal_order', 250)]),
-    event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles'),
+    event.recipes.create.deploying('kubejs:stabilizing_entropy_particles', ['kubejs:stabilizing_entropy_particles', 'kubejs:null_matter']),
     event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles'),
     event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles'),
     event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles')

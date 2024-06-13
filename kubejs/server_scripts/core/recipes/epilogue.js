@@ -260,6 +260,14 @@ ServerEvents.recipes(event => {
     Item.of('kubejs:null_matter', 2).withChance(0.01)
   ], 'create:crushing_wheel').processingTime(500).id('finality:crushing/divide_crushing_by_crushing_equals_null')
   // will balance in the future...
+  event.recipes.minecraft.crafting_shaped('kubejs:high_entropy_alloy_nugget', [
+    'EEE',
+    'EEE',
+    'EEE'
+  ], {
+    E: 'kubejs:stable_entropy_particles'
+  }).id('kubejs:high_entropy_alloy_nugget_from_stable_entropy_particles')
+  /*
   event.recipes.create.mixing('kubejs:high_entropy_alloy_nugget', [
     '4x kubejs:stable_entropy_particles',
     'kubejs:chromatic_concrete_singularity',
@@ -268,6 +276,7 @@ ServerEvents.recipes(event => {
     '4x create:chromatic_compound',
     'kubejs:iridium_nugget'
   ]).id('finality:mixing/high_entropy_alloy_nugget_from_chromatic')
+  */
   // mechanical crafting singularities
   event.recipes.create.mechanical_crafting('9x kubejs:coal_singularity', [
     ' CCCCCCC ',
