@@ -1,6 +1,6 @@
 // requires: bcc
 // requires: netjs
-// ignored: true
+// ignored: false
 
 /**
  * @file Server side modpack update checker.
@@ -8,12 +8,12 @@
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
-const $BCC = Java.loadClass('dev.wuffs.bcc.BCC')
+const $BCC = Java.loadClass('dev.wuffs.bcc.BCCForge')
 
 let TIME_INTERVAL = 20 * 60
 
 let modpack_name = 'Finality Genesis'
-let url_id = 'bdBHqLHc'
+let url_id = 'ichBTqwH'
 
 function check_updates() {
   let server = Utils.server

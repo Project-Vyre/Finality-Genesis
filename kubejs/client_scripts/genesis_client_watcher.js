@@ -1,7 +1,7 @@
 // priority: 10
 // requires: bcc
 // requires: netjs
-// ignored: true
+// ignored: false
 
 /**
  * @file Client side modpack update checker.
@@ -9,17 +9,17 @@
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
-const $BCC = Java.loadClass('dev.wuffs.bcc.BCC')
+const $BCC = Java.tryLoadClass('dev.wuffs.bcc.BCCForge')
 // const $ConfirmScreen = Java.loadClass('net.minecraft.client.gui.screens.ConfirmScreen')
 let modpack_name = 'Finality Genesis'
-let url_id = 'bdBHqLHc'
+let url_id = 'ichBTqwH'
 
 NetworkEvents.dataReceived('update_notifier_check', event => {
   check_updates()
 })
 
 function check_updates() {
-  let version = $BCC.localPingData.version
+  let version = $BCC.PingData.version
   let current = JsonIO.read('kubejs/update_notifier.json') ?? {}
   if (!("enabled" in current)) { current["enabled"] = true }
   if (!("skipped_versions" in current)) { current["skipped_versions"] = [] }
