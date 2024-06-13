@@ -1,3 +1,7 @@
+/**
+ * @version 1.20.1
+ */
+
 // requires: kubejs_create
 
 ServerEvents.recipes(event => {
@@ -23,5 +27,14 @@ ServerEvents.recipes(event => {
     event.shapeless('4x minecraft:nether_wart', [
       'minecraft:nether_wart_block'
     ]).id('finality:quark_compat_nether_wart_block_decompression')
+  }
+  // cherry planks
+  if (Platform.isLoaded('biomesoplenty')) {
+    event.remove([
+      { id: 'create:cutting/compat/biomesoplenty/stripped_cherry_log' },
+      { id: 'create:cutting/compat/biomesoplenty/cherry_wood' },
+      { id: 'create:cutting/compat/biomesoplenty/stripped_cherry_wood' },
+      { id: 'create:cutting/compat/biomesoplenty/cherry_log' }
+    ])
   }
 })
