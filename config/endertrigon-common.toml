@@ -7,11 +7,11 @@ crashPhaseDestroysBlocks = true
 #Specifies the max amount of baby ender dragons the Ender Dragon can spawn during its hatching (dive bomb) phase.
 #Default: 4
 #Range: 1 ~ 16
-maxBabyEnderDragons = 4
+maxBabyEnderDragons = 9
 #Specifies the amount of special attacks, plus the amount of remaining end crystals, the dragon must do until it can potentially perch.
 #Default: 4
 #Range: 1 ~ 16
-attacksUntilPerch = 4
+attacksUntilPerch = 6
 
 #Enaled Custom Phases
 [enabled_custom_phases]
