@@ -28,10 +28,10 @@ ServerEvents.recipes(event => {
       Item.of(raw),
       Fluid.of('kubejs:condensed_universal_entropy')
     ]).requiredBonks(1).withCatalyst('kubejs:repeating_command_block').requiredBonks(1).id(`finality:repeating_command_block/${material}`)
-    event.recipes.create_mechanical_extruder.extruding(Item.of(`create:${material}`).withChance(0.75), [
+    event.recipes.create_mechanical_extruder.extruding(Item.of(`create:${material}`), [
       Item.of(raw),
       Fluid.of('kubejs:condensed_universal_entropy')
-    ]).requiredBonks(5).withCatalyst('minecraft:crying_obsidian').id(`finality:renew_extruder_${material}_with_crying_obsidian`)
+    ]).requiredBonks(1).withCatalyst('minecraft:crying_obsidian').id(`finality:renew_extruder_${material}_with_crying_obsidian`)
   }
   event.recipes.create_mechanical_extruder.extruding(Item.of('create:limestone'), [
     Fluid.of('create:honey'),

@@ -296,14 +296,14 @@ ServerEvents.recipes(event => {
   event.recipes.minecraft.blasting('create:zinc_block', 'create:raw_zinc_block')
     .cookingTime(900).xp(6.3)
     .id('finality:blasting/zinc_block_from_raw_zinc_block')
-  let duplication = [
+  let template_duplication = [
     'netherite_upgrade_smithing_template',
     'sentry_armor_trim_smithing_template',
     'vex_armor_trim_smithing_template',
     'wild_armor_trim_smithing_template',
     'coast_armor_trim_smithing_template',
-    'dune_armor_trim_smithing_template', 
-    'wayfinder_armor_trim_smithing_template', 
+    'dune_armor_trim_smithing_template',
+    'wayfinder_armor_trim_smithing_template',
     'raiser_armor_trim_smithing_template',
     'shaper_armor_trim_smithing_template',
     'host_armor_trim_smithing_template',
@@ -315,12 +315,24 @@ ServerEvents.recipes(event => {
     'eye_armor_trim_smithing_template',
     'spire_armor_trim_smithing_template'
   ]
-  for (let i = 0; i < duplication.length; i++) {
-    let element = duplication[i];
+  for (let i = 0; i < template_duplication.length; i++) {
+    let element = template_duplication[i];
     event.recipes.create.deploying('2x minecraft:' + element, [
       'minecraft:' + element,
       'kubejs:duplicator'
     ]).keepHeldItem().id('finality:deploying/' + element + '_duplication')
+  }
+  let item_duplication = {
+    asurine: 'create:asurine',
+    crimsite: 'create:crimsite',
+    ochrum: 'create:ochrum',
+    veridium: 'create:veridium'
+  }
+  for (let [recipeId, itemId] of Object.entries(item_duplication)) {
+    event.recipes.create.deploying(Item.of(itemId, 2), [
+      itemId,
+      'kubejs:duplicator'
+    ]).keepHeldItem().id('finality:deploying/' + recipeId + '_duplication')
   }
   event.recipes.minecraft.crafting_shaped('minecraft:ender_pearl', [
     'TTT',
