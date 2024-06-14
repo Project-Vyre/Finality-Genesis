@@ -14,7 +14,6 @@ ServerEvents.tags('item', event => {
 
 ServerEvents.recipes(event => {
   event.remove([
-    { id: 'createaddition:crafting/electrum_amulet' },
     { id: 'createaddition:rolling/brass_ingot' },
     { id: 'createaddition:mixing/bioethanol' },
     { id: 'createaddition:mixing/netherrack' },
