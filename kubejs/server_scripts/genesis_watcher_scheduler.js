@@ -1,6 +1,6 @@
 // requires: bcc
 // requires: netjs
-// ignored: false
+// ignored: true
 
 /**
  * @file Server side modpack update checker.

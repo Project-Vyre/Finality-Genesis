@@ -1,7 +1,7 @@
 // priority: 10
 // requires: bcc
 // requires: netjs
-// ignored: false
+// ignored: true
 
 /**
  * @file Client side modpack update checker.
