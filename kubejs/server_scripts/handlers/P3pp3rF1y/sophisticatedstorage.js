@@ -5,22 +5,25 @@
 
 // requires: sophisticatedstorage
 // requires: kubejs_create
-// ignored: true
+// ignored: false
 
 // I apparently forgot I never commit this file sooo starting from scratch, again.
 
-let recipeIds = [
+let itemIds = [
   'pickup',
   'filter',
   'magnet',
   'feeding',
   'compacting',
-  'void'
+  'void',
+  'hopper'
 ]
 
 let singleStep = [
   'crafting',
-  'stonecutter'
+  'stonecutter',
+  'jukebox',
+  'compression'
 ]
 
 let autoIds = [
@@ -30,21 +33,45 @@ let autoIds = [
 ]
 
 ServerEvents.recipes(event => {
-  for (let i = 0; i < recipeIds.length; i++) {
-    let element = recipeIds[i];
-    event.remove([
-      { id: 'sophisticatedstorage:' + element + '_upgrade' },
-      { id: 'sophisticatedstorage:advanced_' + element + '_upgrade' }
-    ])
+  for (let i = 0; i < itemIds.length; i++) {
+    let element = itemIds[i];
+    event.remove({ output: 'sophisticatedstorage:' + element + '_upgrade' })
+    event.remove({ output: 'sophisticatedstorage:advanced_' + element + '_upgrade' })
+  }
+  for (let i = 0; i < singleStep.length; i++) {
+    let element = singleStep[i];
+    event.remove({ output: 'sophisticatedstorage:' + element + '_upgrade' })
   }
   for (let i = 0; i < autoIds.length; i++) {
     let element = autoIds[i];
-    event.remove([
-      { id: 'sophisticatedstorage:' + element + '_upgrade' },
-      { id: 'sophisticatedstorage:auto_' + element + '_upgrade' }
-    ])
+    event.remove({ output: 'sophisticatedstorage:' + element + '_upgrade' })
+    event.remove({ output: 'sophisticatedstorage:auto_' + element + '_upgrade' })
   }
-  event.remove({ id: 'sophisticatedstorage:upgrade_base' })
+  event.remove([
+    { id: 'sophisticatedstorage:upgrade_base' },
+    { output: 'sophisticatedstorage:stack_upgrade_tier_1' },
+    { output: 'sophisticatedstorage:stack_upgrade_tier_1_plus' },
+    { output: 'sophisticatedstorage:stack_upgrade_tier_2' },
+    { output: 'sophisticatedstorage:stack_upgrade_tier_3' },
+    { output: 'sophisticatedstorage:stack_upgrade_tier_4' },
+    { output: 'sophisticatedstorage:stack_upgrade_tier_5' },
+    { output: 'sophisticatedstorage:basic_tier_upgrade' },
+    { output: 'sophisticatedstorage:basic_to_copper_tier_upgrade' },
+    { output: 'sophisticatedstorage:basic_to_iron_tier_upgrade' },
+    { output: 'sophisticatedstorage:basic_to_gold_tier_upgrade' },
+    { output: 'sophisticatedstorage:basic_to_diamond_tier_upgrade' },
+    { output: 'sophisticatedstorage:basic_to_netherite_tier_upgrade' },
+    { output: 'sophisticatedstorage:copper_to_iron_tier_upgrade' },
+    { output: 'sophisticatedstorage:copper_to_gold_tier_upgrade' },
+    { output: 'sophisticatedstorage:copper_to_diamond_tier_upgrade' },
+    { output: 'sophisticatedstorage:copper_to_netherite_tier_upgrade' },
+    { output: 'sophisticatedstorage:iron_to_gold_tier_upgrade' },
+    { output: 'sophisticatedstorage:iron_to_diamond_tier_upgrade' },
+    { output: 'sophisticatedstorage:iron_to_netherite_tier_upgrade' },
+    { output: 'sophisticatedstorage:gold_to_diamond_tier_upgrade' },
+    { output: 'sophisticatedstorage:gold_to_netherite_tier_upgrade' },
+    { output: 'sophisticatedstorage:diamond_to_netherite_tier_upgrade' }
+  ])
   /**
    * TIER UPGRADES
    */
@@ -115,7 +142,7 @@ ServerEvents.recipes(event => {
     'GGG'
   ], {
     G: 'create:golden_sheet',
-    I: 'sophisticatedstorage:copper_to_iron_tier_upgrade'
+    C: 'sophisticatedstorage:copper_to_iron_tier_upgrade'
   }).id('kubejs:sophisticatedstorage/copper_to_gold_tier_upgrade')
   event.recipes.minecraft.crafting_shaped('sophisticatedstorage:copper_to_diamond_tier_upgrade', [
     'DDD',
@@ -193,7 +220,7 @@ ServerEvents.recipes(event => {
     'PBP',
     ' E '
   ], {
-    M: 'create:mechanical_piston',
+    M: 'create:sticky_mechanical_piston',
     P: '#minecraft:planks',
     B: 'sophisticatedstorage:upgrade_base',
     E: 'create:electron_tube'
@@ -280,7 +307,7 @@ ServerEvents.recipes(event => {
     C: 'minecraft:golden_carrot',
     A: 'minecraft:golden_apple',
     B: 'sophisticatedstorage:upgrade_base',
-    M: 'minecraft:glistering_melon',
+    M: 'minecraft:glistering_melon_slice',
     D: 'create:deployer'
   }).id('kubejs:sophisticatedstorage/feeding_upgrade')
   event.recipes.create.mechanical_crafting('sophisticatedstorage:advanced_feeding_upgrade', [
@@ -290,7 +317,7 @@ ServerEvents.recipes(event => {
   ], {
     S: 'create:smart_chute',
     C: 'create:brass_casing',
-    B: 'sophisticatedstorage:upgrade_base',
+    B: 'sophisticatedstorage:feeding_upgrade',
     R: 'create:mechanical_arm'
   }).id('kubejs:sophisticatedstorage/mechanical_crafting/advanced_feeding_upgrade')
   // compacting
@@ -352,6 +379,88 @@ ServerEvents.recipes(event => {
     B: 'sophisticatedstorage:upgrade_base',
     I: 'create:iron_sheet'
   }).id('kubejs:sophisticatedstorage/stonecutter_upgrade')
+  // STACK UPGRADES
+  event.recipes.minecraft.crafting_shaped('sophisticatedstorage:stack_upgrade_tier_1', [
+    'LLL',
+    'LUL',
+    'LLL'
+  ], {
+    L: '#minecraft:logs',
+    U: 'sophisticatedstorage:upgrade_base'
+  }).id('kubejs:sophisticatedstorage/stack_upgrade_tier_1')
+  event.recipes.create.mechanical_crafting('sophisticatedstorage:stack_upgrade_tier_1_plus', [
+    'CCC',
+    'CUC',
+    'CCC'
+  ], {
+    C: 'kubejs:copper_singularity',
+    U: 'sophisticatedstorage:stack_upgrade_tier_1'
+  }).id('kubejs:sophisticatedstorage/stack_upgrade_tier_1_plus')
+  event.recipes.create.mechanical_crafting('sophisticatedstorage:stack_upgrade_tier_2', [
+    'III',
+    'IUI',
+    'III'
+  ], {
+    I: 'kubejs:iron_singularity',
+    U: 'sophisticatedstorage:stack_upgrade_tier_1_plus'
+  }).id('kubejs:sophisticatedstorage/stack_upgrade_tier_2')
+  event.recipes.create.mechanical_crafting('sophisticatedstorage:stack_upgrade_tier_3', [
+    'GGG',
+    'GUG',
+    'GGG'
+  ], {
+    G: 'kubejs:gold_singularity',
+    U: 'sophisticatedstorage:stack_upgrade_tier_2'
+  }).id('kubejs:sophisticatedstorage/stack_upgrade_tier_3')
+  event.recipes.create.mechanical_crafting('sophisticatedstorage:stack_upgrade_tier_4', [
+    'DDD',
+    'DUD',
+    'DDD'
+  ], {
+    D: 'kubejs:diamond_singularity',
+    U: 'sophisticatedstorage:stack_upgrade_tier_3'
+  }).id('kubejs:sophisticatedstorage/stack_upgrade_tier_4')
+  event.recipes.create.mechanical_crafting('sophisticatedstorage:stack_upgrade_tier_5', [
+    'NNN',
+    'NUN',
+    'NNN'
+  ], {
+    N: 'kubejs:netherite_singularity',
+    U: 'sophisticatedstorage:stack_upgrade_tier_4'
+  }).id('kubejs:sophisticatedstorage/stack_upgrade_tier_5')
+  // jukebox
+  event.recipes.minecraft.crafting_shapeless('sophisticatedstorage:jukebox_upgrade', [
+    'sophisticatedstorage:upgrade_base',
+    'minecraft:jukebox',
+    'create:electron_tube'
+  ]).id('kubejs:sophisticatedstorage/jukebox_upgrade')
+  // compression
+  event.recipes.create.compacting('sophisticatedstorage:compression_upgrade', [
+    'sophisticatedstorage:upgrade_base',
+    '2x create:iron_sheet',
+    '2x create:mechanical_piston',
+    '2x create:electron_tube'
+  ]).id('kubejs:sophisticatedstorage/compression_upgrade')
+  // hopper
+  event.recipes.minecraft.crafting_shaped('sophisticatedstorage:hopper_upgrade', [
+    ' C ',
+    'IUI',
+    ' E '
+  ], {
+    C: 'create:chute',
+    I: 'create:iron_sheet',
+    U: 'sophisticatedstorage:upgrade_base',
+    E: 'create:electron_tube'
+  }).id('kubejs:sophisticatedstorage/hopper_upgrade')
+  event.recipes.create.mechanical_crafting('sophisticatedstorage:advanced_hopper_upgrade', [
+    ' C ',
+    'BUB',
+    ' B '
+  ], {
+    C: 'create:smart_chute',
+    B: 'create:brass_sheet',
+    U: 'sophisticatedstorage:hopper_upgrade'
+  }).id('kubejs:sophisticatedstorage/advanced_hopper_upgrade')
   /**
    * STORAGE BLOCKS
    */
