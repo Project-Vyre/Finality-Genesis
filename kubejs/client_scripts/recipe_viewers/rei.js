@@ -3,6 +3,7 @@
 // requires: roughlyenoughresources
 // requires: roughlyenoughprofessions
 // requires: create
+// ignored: true
 
 /**
  * @file Responsible for handling REI grouping, hiding, adding, etc.
@@ -358,6 +359,16 @@ REIEvents.hide('item', event => {
   ])
   if (Platform.isLoaded('decorative_blocks')) {
     event.hide('decorative_blocks:blockstate_copy_item')
+  }
+  if (Platform.isLoaded('sophisticatedstorage')) {
+    event.hide([
+      'sophisticatedstorage:smelting_upgrade',
+      'sophisticatedstorage:advanced_smelting_upgrade',
+      'sophisticatedstorage:smoking_upgrade',
+      'sophisticatedstorage:advanced_smoking_upgrade',
+      'sophisticatedstorage:blasting_upgrade',
+      'sophisticatedstorage:advanced_blasting_upgrade'
+    ])
   }
 })
 
