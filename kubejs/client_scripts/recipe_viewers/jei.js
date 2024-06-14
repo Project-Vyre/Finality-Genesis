@@ -3,6 +3,7 @@
 // requires: jeresources
 // requires: justenoughprofessions
 // requires: create
+// ignored: false
 
 /**
  * @file Responsible for handling JEI hiding, adding, etc.
@@ -81,16 +82,7 @@ let MYSHIDE = [
   'lead'
 ]
 let CAdditionsItems = [
-  'straw',
-  'brass_rod',
-  'electrum_rod',
-  'electrum_ingot',
-  'electrum_sheet',
-  'electrum_nugget',
-  'electrum_wire',
-  'electrum_spool',
-  'electrum_amulet',
-  'digital_adapter'
+
 ]
 
 JEIEvents.addItems(event => {
@@ -106,16 +98,21 @@ JEIEvents.addItems(event => {
 })
 
 JEIEvents.hideItems(event => {
+  event.hide([
+    'kubejs:stabilizing_qubit',
+    'kubejs:stabilizing_entropy_particles'
+  ])
+  event.hide(/^kubejs.*[_:\/]incomplete(?![a-zA-Z0-9]).*/)
   if (Platform.isLoaded('createaddition')) {
     event.hide([
-      /^createaddition.*[_:\/]electrum(?![a-zA-Z0-9]).*/,
+      // /^createaddition.*[_:\/]electrum(?![a-zA-Z0-9]).*/,
       'createaddition:diamond_grit',
       'createaddition:diamond_grit_sandpaper',
-      'createaddition:zinc_sheet'
+      'createaddition:zinc_sheet',
+      'createaddition:straw',
+      'createaddition:brass_rod',
+      'createaddition:digital_adapter'
     ])
-    CAdditionsItems.forEach(name => {
-      event.hide(`createaddition:${name}`)
-    })
   }
   if (Platform.isLoaded('createdeco')) {
     event.hide([
@@ -238,6 +235,27 @@ JEIEvents.hideItems(event => {
       Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"headhunter_mod:screenshakepotion"}').strongNBT(),
       Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"headhunter_mod:screencolourpotion"}').strongNBT(),
       Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"headhunter_mod:fly_potion"}').strongNBT()
+    ])
+  }
+
+  if (Platform.isLoaded('sophisticatedstorage')) {
+    event.hide([
+      'sophisticatedstorage:smelting_upgrade',
+      'sophisticatedstorage:auto_smelting_upgrade',
+      'sophisticatedstorage:smoking_upgrade',
+      'sophisticatedstorage:auto_smoking_upgrade',
+      'sophisticatedstorage:blasting_upgrade',
+      'sophisticatedstorage:auto_blasting_upgrade'
+    ])
+  }
+  if (Platform.isLoaded('sophisticatedbackpacks')) {
+    event.hide([
+      'sophisticatedbackpacks:smelting_upgrade',
+      'sophisticatedbackpacks:auto_smelting_upgrade',
+      'sophisticatedbackpacks:smoking_upgrade',
+      'sophisticatedbackpacks:auto_smoking_upgrade',
+      'sophisticatedbackpacks:blasting_upgrade',
+      'sophisticatedbackpacks:auto_blasting_upgrade'
     ])
   }
 })
