@@ -370,6 +370,11 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .rarity('epic')
     .maxStackSize(1)
     .fireResistant(true)
+    .tag('forge:swords')
+    .tag('forge:tools')
+    .tag('forge:tools/sword')
+    .tag('forge:tools/swords')
+    .tag('kubejs:final_tools')
 
   event.create('kubejs:final_scythe', 'sword').tier('final_tool')
     .rarity('epic')
@@ -380,12 +385,18 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:tools')
     .tag('forge:tools/scythe')
     .tag('forge:tools/scythes')
+    .tag('kubejs:final_tools')
 
   event.create('kubejs:final_katana', 'sword').tier('final_tool')
     .rarity('epic')
     .texture('kubejs:item/final_katana')
     .maxStackSize(1)
     .fireResistant(true)
+    .tag('forge:swords')
+    .tag('forge:tools')
+    .tag('forge:tools/sword')
+    .tag('forge:tools/swords')
+    .tag('kubejs:final_tools')
 
   // armor
   event.create('kubejs:final_helmet', 'helmet').tier('final_armor')
@@ -523,7 +534,7 @@ ItemEvents.toolTierRegistry(event => {
   event.add('final_tool', tier => {
     tier.uses = -1
     tier.speed = 256.0
-    tier.attackDamageBonus = 65.0
+    tier.attackDamageBonus = 69995.0
     tier.level = 5
     tier.enchantmentValue = 30
   })
