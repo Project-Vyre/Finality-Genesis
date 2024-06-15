@@ -13,7 +13,7 @@
   },
   "disableLightning": {
     "desc:": "Disables lightning spawns: default:false",
-    "disableLightning": false
+    "disableLightning": true
   },
   "antiflightAbility": {
     "desc:": "Enables anti-flight ability: default:true",
@@ -21,7 +21,7 @@
   },
   "dragonHealthModifier": {
     "desc:": "Sets the dragon health modifier: default:1.0",
-    "dragonHealthModifier": 1.0
+    "dragonHealthModifier": 3.0
   },
   "dragonDamageModifier": {
     "desc:": "Sets the dragon damage modifier: default:1.0",
@@ -29,7 +29,7 @@
   },
   "mobSpawnAmountModifier": {
     "desc:": "Sets the mob spawn amount modifier: default:1.0",
-    "mobSpawnAmountModifier": 3.0
+    "mobSpawnAmountModifier": 1.0
   },
   "dragonXPModifier": {
     "desc:": "Sets the XP drop modifier: default:1.0",
@@ -41,13 +41,13 @@
   },
   "disableDragonAreaSpawns": {
     "desc:": "Disables mob spawning on the Dragon island during the fight: default:true",
-    "disableDragonAreaSpawns": false
+    "disableDragonAreaSpawns": true
   },
   "descSpawnEntries": "Below are configuration options for entity spawning, when trying to use nbt append it right after the entity type, e.g. minecraft:zombie{}. Put a backslash in front of all quotation marks",
   "spawnoncrystaldestroy": {
     "desc:": "List of mobs spawning when a crystal is destroyed at range, intended to be flying or ranged to close the gap: e.g. format :  [\"minecraft:zombie\", \"minecraft:creeper\"]",
     "spawnoncrystaldestroy": [
-      "grimoireofgaia:behender"
+      "grimoireofgaia:deathword"
     ]
   },
   "spawnoncrystalrespawn": {
@@ -59,15 +59,15 @@
   "spawnwhilelanded": {
     "desc:": "List of mobs spawning while the dragon is sitting in the middle, intended to be melee and not vulnerable to ranged: e.g. format :  [\"minecraft:zombie\", \"minecraft:creeper\"]",
     "spawnwhilelanded": [
-      "minecraft:enderman",
       "grimoireofgaia:banshee",
-      "graveyard:nightmare",
       "grimoireofgaia:wither_cow",
       "grimoireofgaia:spriggan"
     ]
   },
   "crystalPendingRespawns": {
     "desc:": "List of crystal respawn locations for the end crystals, filled automatically on destroy recommended to not touch. XYZ coords seperated by semicolon",
-    "crystalPendingRespawns": []
+    "crystalPendingRespawns": [
+      "-44;92;-32"
+    ]
   }
 }
