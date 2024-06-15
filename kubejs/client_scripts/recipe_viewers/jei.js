@@ -318,7 +318,30 @@ JEIEvents.information(event => {
       '_Copies_ color channels from the Ender Tank onto the bucket.'
     ])
   }
-  if (Platform.isLoaded('endrem')) {
+  if (Platform.isLoaded('endrem') && !Platform.isLoaded('extendedcrafting')) {
+    event.addItem('minecraft:ender_eye', [
+      'There is a certain eye that can only be acquired from enchanting.',
+      'It is very rare, however.'
+    ])
+    event.addItem('endrem:black_eye', ['Can be found in lost treasure chests.'])
+    event.addItem('endrem:cold_eye', ['Found in igloos.'])
+    event.addItem('endrem:corrupted_eye', ['Found in Pillager Outposts.'])
+    event.addItem('endrem:lost_eye', ['Usually found in Mineshafts.'])
+    event.addItem('endrem:nether_eye', ['Found in Nether Fortresses.'])
+    event.addItem('endrem:old_eye', ['Found in Desert Pyramids.'])
+    event.addItem('endrem:rogue_eye', ['Usually found in Jungle Temples.'])
+    event.addItem('endrem:cursed_eye', ['Usually found in Bastions.'])
+    event.addItem('endrem:evil_eye', ['Usually acquired from a Master Cleric.'])
+    event.addItem('endrem:guardian_eye', ['Usually acquired from slaying Elder Guardians.'])
+    event.addItem('endrem:magical_eye', ['Acquired from slaying Evokers.'])
+    event.addItem('endrem:wither_eye', ['Obviously only drops from the Wither.'])
+    event.addItem('endrem:witch_eye', ['Requires a Witch Pupil to craft.'])
+    event.addItem('endrem:undead_eye', ['Requires a skeleton horse to be slain in order to acquire the Undead Soul.'])
+    event.addItem('endrem:undead_soul', ['Acquired from slaying a skeleton horse.'])
+    event.addItem('endrem:exotic_eye', ['Created by combining multiple exotic ingredients using a Mechanical Mixer and a Basin.'])
+    event.addItem('endrem:witch_pupil', ['Drops from Witches.'])
+  }
+  if (Platform.isLoaded('endrem') && Platform.isLoaded('extendedcrafting')) {
     event.addItem('minecraft:ender_eye', [
       'There is a certain eye that can only be acquired from enchanting.',
       'It is very rare, however.'

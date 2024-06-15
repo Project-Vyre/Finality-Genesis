@@ -61,7 +61,7 @@ ServerEvents.recipes(event => {
       result: {
         item: 'endrem:exotic_eye'
       }
-    }).id('endrem:ritual_exotic_eye')
+    }).id('finality:extendedcrafting/combination/ritual_exotic_eye')
     event.custom({
       type: 'extendedcrafting:combination',
       powerCost: 100000,
@@ -81,6 +81,6 @@ ServerEvents.recipes(event => {
       result: {
         item: 'endrem:witch_eye'
       }
-    }).id('finality:ritual_witch_eye')
+    }).id('finality:extendedcrafting/combination/ritual_witch_eye')
   }
 })
