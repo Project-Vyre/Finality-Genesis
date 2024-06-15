@@ -339,6 +339,7 @@
 		{
 			dependencies: ["29C067F6758E7FAC"]
 			id: "58E50E3ADD6879BF"
+			subtitle: "Important for making mage armor!"
 			tasks: [{
 				id: "1EEEBE1AFEB1E835"
 				item: "ars_nouveau:magebloom_fiber"
@@ -346,28 +347,6 @@
 			}]
 			x: -8.0d
 			y: -6.5d
-		}
-		{
-			dependencies: ["58E50E3ADD6879BF"]
-			id: "73ABB949DA5D2BD7"
-			tasks: [{
-				id: "202FFD4284F987A2"
-				item: "ars_nouveau:blaze_fiber"
-				type: "item"
-			}]
-			x: -8.0d
-			y: -8.5d
-		}
-		{
-			dependencies: ["73ABB949DA5D2BD7"]
-			id: "263FE17924F2423D"
-			tasks: [{
-				id: "68F3F2E9B2B64DF8"
-				item: "ars_nouveau:end_fiber"
-				type: "item"
-			}]
-			x: -8.0d
-			y: -10.5d
 		}
 		{
 			dependencies: ["56D960EC0664E2AF"]
@@ -471,165 +450,6 @@
 			y: 5.5d
 		}
 		{
-			dependencies: ["58E50E3ADD6879BF"]
-			id: "3252174771979252"
-			tasks: [
-				{
-					id: "47E8A7871A747BED"
-					item: {
-						Count: 1b
-						id: "ars_nouveau:novice_hood"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "11C42D725D57760E"
-					item: {
-						Count: 1b
-						id: "ars_nouveau:novice_robes"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "5C5601156DF9B13E"
-					item: {
-						Count: 1b
-						id: "ars_nouveau:novice_leggings"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "2DDE81B6B140E103"
-					item: {
-						Count: 1b
-						id: "ars_nouveau:novice_boots"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-			]
-			title: "Novice Armor"
-			x: -10.0d
-			y: -6.5d
-		}
-		{
-			dependencies: ["73ABB949DA5D2BD7"]
-			id: "18A1BF8032F630AD"
-			tasks: [
-				{
-					id: "7323BE47C05CEFFE"
-					item: {
-						Count: 1b
-						id: "ars_nouveau:apprentice_hood"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "084CB96B7FEEA5E5"
-					item: {
-						Count: 1b
-						id: "ars_nouveau:apprentice_robes"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "57C203C7A77AABF8"
-					item: {
-						Count: 1b
-						id: "ars_nouveau:apprentice_leggings"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "2109FB6C0BA09C62"
-					item: {
-						Count: 1b
-						id: "ars_nouveau:apprentice_boots"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-			]
-			title: "Mage Armor"
-			x: -10.0d
-			y: -8.5d
-		}
-		{
-			dependencies: ["263FE17924F2423D"]
-			id: "2586BD2F8B3D3227"
-			tasks: [
-				{
-					id: "0593A4EFFF552588"
-					item: {
-						Count: 1b
-						id: "ars_nouveau:archmage_hood"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "21094FB367CF1634"
-					item: {
-						Count: 1b
-						id: "ars_nouveau:archmage_robes"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "4A69D09DF017E230"
-					item: {
-						Count: 1b
-						id: "ars_nouveau:archmage_leggings"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "1935BE7E1DC7FBCB"
-					item: {
-						Count: 1b
-						id: "ars_nouveau:archmage_boots"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-			]
-			title: "Archmage Armor"
-			x: -10.0d
-			y: -10.5d
-		}
-		{
 			dependencies: ["091E0C610F8580D8"]
 			id: "3DDA9FAC66036930"
 			tasks: [
@@ -649,6 +469,7 @@
 					type: "item"
 				}
 			]
+			title: "Spell Turrets!"
 			x: -1.5d
 			y: -6.0d
 		}
