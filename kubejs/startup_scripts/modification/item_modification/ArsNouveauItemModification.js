@@ -11,6 +11,9 @@ ItemEvents.modification(event => {
   event.modify('ars_nouveau:enchanters_sword', item => {
     item.maxDamage = -1
   })
+  event.modify('ars_nouveau:enchanters_shield', item => {
+    item.maxDamage = -1
+  })
   for (let i = 0; i < battle_mage.length; i++) {
     let element = battle_mage[i];
     event.modify(element, item => {
