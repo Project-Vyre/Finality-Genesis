@@ -36,7 +36,7 @@ const vec4 block_COLOURS[] = vec4[](
 #define block_ANIMATE_WITH_DISTANCE true
 #define block_ANIMATE_ALONG_LINES false
 #define block_ANIM_DIRECTION -1
-#define block_LINE_THICKNESS 2
+#define block_LINE_THICKNESS 1
 #define block_IGNORES_DEPTH false
 
 const vec4 hitbox_COLOURS[] = vec4[](
@@ -50,5 +50,5 @@ const vec4 hitbox_COLOURS[] = vec4[](
 #define hitbox_ANIMATE_WITH_DISTANCE false
 #define hitbox_ANIMATE_ALONG_LINES true
 #define hitbox_ANIM_DIRECTION 1
-#define hitbox_LINE_THICKNESS 2
+#define hitbox_LINE_THICKNESS 1
 #define hitbox_APPLY_TO_ALL_LINES false

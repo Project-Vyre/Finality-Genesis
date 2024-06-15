@@ -7,7 +7,7 @@
 		"smooth-mix": true,
 		"anim-with-distance": true,
 		"anim-along-lines": false,
-		"line-width": 2,
+		"line-width": 1,
 		"ignores-depth": false,
 		"colours": [
 			[
@@ -87,7 +87,7 @@
 		"smooth-mix": true,
 		"anim-with-distance": false,
 		"anim-along-lines": true,
-		"line-width": 2,
+		"line-width": 1,
 		"apply-to-all-hitbox-lines": false,
 		"colours": [
 			[
