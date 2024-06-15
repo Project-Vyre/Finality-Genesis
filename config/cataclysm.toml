@@ -110,7 +110,7 @@
 ["Ender Guardian"]
 	#EnderGuardian's Health Multiplier
 	#Range: 0.0 ~ 1000000.0
-	EnderGuardianHealthMultiplier = 3.0
+	EnderGuardianHealthMultiplier = 6.0
 	#EnderGuardian's Damage Multiplier
 	#Range: 0.0 ~ 1000000.0
 	EnderGuardianDamageMultiplier = 1.0
@@ -162,7 +162,7 @@
 	Lavabombamount = 9
 	#Monstrosity's Health Multiplier
 	#Range: 0.0 ~ 1000000.0
-	MonstrosityHealthMultiplier = 2.0
+	MonstrosityHealthMultiplier = 5.0
 	#Monstrosity's Damage Multiplier
 	#Range: 0.0 ~ 1000000.0
 	MonstrosityDamageMultiplier = 1.0
@@ -200,7 +200,7 @@
 [Ignis]
 	#Ignis's Health Multiplier
 	#Range: 0.0 ~ 1000000.0
-	IgnisHealthMultiplier = 2.5
+	IgnisHealthMultiplier = 5.0
 	#Ignis's Damage Multiplier
 	#Range: 0.0 ~ 1000000.0
 	IgnisDamageMultiplier = 1.0
@@ -241,7 +241,7 @@
 ["The Harbinger"]
 	#Harbinger's Health Multiplier
 	#Range: 0.0 ~ 1000000.0
-	HarbingerHealthMultiplier = 3.0
+	HarbingerHealthMultiplier = 5.0
 	#Harbinger's Damage Multiplier
 	#Range: 0.0 ~ 1000000.0
 	HarbingerDamageMultiplier = 1.0
@@ -269,7 +269,7 @@
 ["The Leviathan"]
 	#Leviathan's Health Multiplier
 	#Range: 0.0 ~ 1000000.0
-	LeviathanHealthMultiplier = 3.0
+	LeviathanHealthMultiplier = 9.0
 	#Leviathan's Damage Multiplier
 	#Range: 0.0 ~ 1000000.0
 	LeviathanDamageMultiplier = 1.0
@@ -329,7 +329,7 @@
 ["Ancient Remnant"]
 	#Ancient Remnant's Health Multiplier
 	#Range: 0.0 ~ 1000000.0
-	AncientRemnantHealthMultiplier = 1.5
+	AncientRemnantHealthMultiplier = 2.0
 	#Ancient Remnant's Damage Multiplier
 	#Range: 0.0 ~ 1000000.0
 	AncientRemnantDamageMultiplier = 1.0
