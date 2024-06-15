@@ -1,0 +1,83 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "grimoire_of_gaia"
+	group: "6855847200ADBE3A"
+	hide_quest_until_deps_visible: true
+	icon: "grimoireofgaia:experience_diamond"
+	id: "4B83C16E8E21E942"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["02DFEA76CD668AFB"]
+			id: "370E58CD722100AF"
+			tasks: [{
+				id: "2AA086214DAFFD0D"
+				item: {
+					Count: 1
+					id: "grimoireofgaia:cursed_metal_sword"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["370E58CD722100AF"]
+			id: "3459D3FA4A8E9F41"
+			tasks: [{
+				id: "5F624C91606A9E03"
+				item: {
+					Count: 1
+					id: "grimoireofgaia:metal_club"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3459D3FA4A8E9F41"]
+			id: "5ABB7594B4C2EAFD"
+			tasks: [{
+				id: "6389408EE46AECC0"
+				item: {
+					Count: 1
+					id: "grimoireofgaia:minotaur_hammer"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "02DFEA76CD668AFB"
+			rewards: [{
+				id: "785BE3E5D633F4D4"
+				item: "grimoireofgaia:pearl_block"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6250EE567C7A2610"
+				title: "Click me to see the rest!"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Adding harder mobs to the world."]
+	title: "Grimoire of Gaia"
+}

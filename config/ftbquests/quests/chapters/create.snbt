@@ -1,0 +1,4189 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create"
+	group: ""
+	icon: "create:brass_hand"
+	id: "62E40BF215C76563"
+	images: [{
+		height: 36.0d
+		image: "minecraft:textures/gui/presets/create_quests.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
+	order_index: 1
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["187E2B3FDE19DD4D"]
+			description: [
+				"Upon completing this quest node, a Clipboard will be rewarded. Hopefully you can make use of it to keep track of what to do!"
+				""
+				"So you made your very first &7Andesite Alloy&r ingot, what do you do now?"
+				""
+				"-+-"
+				""
+				"If FTB Quests is not showing you the recipe for &7Andesite Alloy&r, press R while your cursor is hovered over it."
+				""
+				"Make another &7Andesite Alloy&r and make a Shaft and get some planks and make a &3Water Wheel&r."
+				""
+				"&3Water Wheels&r are Create's &aearly game&r power source and will help you get started."
+				""
+				"If you are wondering how to make &7Andesite Casing&r, it's a simple task... Simply &6right click&r a &l&9stripped log&r&r with an &7Andesite Alloy&r in your hand."
+				""
+				"&7Andesite Casing&r is extremely useful and is an important ingredient for many of Create's items, so be sure to always have spares!"
+			]
+			icon: "create:andesite_alloy"
+			id: "57A69334C4D4299A"
+			rewards: [
+				{
+					id: "5AB6A9EB9EE654BF"
+					item: "create:clipboard"
+					title: "Use me as your To-Do list to help you remember things!"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "72653388C1D3E5E7"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "407189AC4B5485AC"
+					type: "xp"
+					xp: 500
+				}
+			]
+			subtitle: "Andesite Alloy is the foundational material of Create."
+			tasks: [
+				{
+					count: 2L
+					id: "20A2F110261941C6"
+					item: "minecraft:andesite"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "71EF3B59B4B398E7"
+					item: "minecraft:iron_nugget"
+					type: "item"
+				}
+				{
+					id: "6E65BE51052A8124"
+					item: "create:andesite_alloy"
+					type: "item"
+				}
+				{
+					id: "129B0365A1EF634C"
+					title: "Begin the Andesite Age. Click me to claim your rewards!"
+					type: "checkmark"
+				}
+			]
+			title: "The Andesite Age"
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"57A69334C4D4299A"
+				"654CC532C1F17209"
+			]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Please note that it is not required to use a Depot with a Mechanical Press to press ingots into sheets! It's just to prevent items from spawning in case you forget about them."
+			]
+			hide: true
+			id: "157C4AD3062BC31A"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7AF6E0F9ADACA5CA"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "27132B9339F93B0A"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "rsquare"
+			subtitle: "Convenient for holding items so they don't despawn."
+			tasks: [{
+				id: "17BEDDF08AA14B60"
+				item: "create:depot"
+				type: "item"
+			}]
+			title: "Make the Depot"
+			x: -6.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["57A69334C4D4299A"]
+			dependency_requirement: "one_completed"
+			description: [
+				"To make Andesite Casing, strip any log with your axe. Once the log is stripped, right click with Andesite Alloy in your main hand."
+				""
+				"This process can be automated of course, with a Mechanical Saw and Deployer setup, but we'll get into that later."
+			]
+			id: "6D8C28D34ABF7636"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "49BD66DB70DD1367"
+				table_id: 7477086534417165542L
+				type: "random"
+			}]
+			shape: "hexagon"
+			subtitle: "Very important material. Plus it looks nice! Don't mind the pun."
+			tasks: [{
+				id: "654CC532C1F17209"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			title: "Create some Andesite Casing"
+			x: 0.0d
+			y: -7.5d
+		}
+		{
+			dependencies: ["157C4AD3062BC31A"]
+			description: [
+				"The Mechanical Press has a very involved recipe tree, so expect to use it a lot."
+				""
+				"In case you didn't see this the first time: You don't need to use the Depot to press ingots into sheets. It's just to prevent items from despawning in the first place."
+				""
+				"Hold [w] to Ponder to learn more!"
+			]
+			icon: "create:mechanical_press"
+			id: "62D55614D95E7356"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "6308F85FFE0B1BF8"
+					table_id: 7159138545964995551L
+					type: "loot"
+				}
+				{
+					id: "567E67DDEBDC4A46"
+					type: "xp"
+					xp: 500
+				}
+			]
+			shape: "rsquare"
+			subtitle: "The Mechanical Press is very useful, trust me on this."
+			tasks: [{
+				id: "78AB1F02F29D15E3"
+				item: "create:mechanical_press"
+				type: "item"
+			}]
+			title: "Bonk!"
+			x: -6.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["57A69334C4D4299A"]
+			id: "527A4B10DDE51E37"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4C70994C553AC9B3"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "5D8FE34C9C67CA7A"
+					type: "xp"
+					xp: 250
+				}
+			]
+			shape: "rsquare"
+			subtitle: "Create the Basin, an integral component for the Mechanical Mixer."
+			tasks: [{
+				id: "074F12DE8761901F"
+				item: "create:basin"
+				type: "item"
+			}]
+			title: "Mixing Foundations"
+			x: 7.5d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"76DE1DB31C32A913"
+				"527A4B10DDE51E37"
+			]
+			description: [
+				"The Mechanical Mixer has a very involved recipe tree, expect to use it very frequently!"
+				""
+				"Hold [w] to Ponder to learn more!"
+			]
+			id: "400260FDC774443B"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0494C6E0A0BD12FF"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "2BE56B900C38D860"
+					type: "xp"
+					xp: 500
+				}
+			]
+			shape: "rsquare"
+			subtitle: "Automated mixing, highly multi-purpose!"
+			tasks: [{
+				id: "64522091ABF7D72A"
+				item: "create:mechanical_mixer"
+				type: "item"
+			}]
+			title: "The Mixer"
+			x: 7.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["249F8A4FAEB5CDDE"]
+			description: [
+				"If you need to make things &brotate faster&r, use the large coghweel to small cogwheel gear ratio."
+				""
+				"If you need to make things &arotate slower&r, use the small cogwheel to large cogwheel gear ratio."
+				""
+				"This is explained in the Ponder tutorial for Create's cogwheels."
+			]
+			id: "76DE1DB31C32A913"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "28D46303F421578D"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "39CEA773836DAC0C"
+					type: "xp"
+					xp: 50
+				}
+			]
+			tasks: [{
+				id: "41601DFCB348DDD7"
+				item: "create:cogwheel"
+				type: "item"
+			}]
+			x: 5.5d
+			y: -10.0d
+		}
+		{
+			dependencies: ["76DE1DB31C32A913"]
+			description: [
+				"If you need to make things &brotate faster&r, use the large coghweel to small cogwheel gear ratio."
+				""
+				"If you need to make things &arotate slower&r, use the small cogwheel to large cogwheel gear ratio."
+				""
+				"This is explained in the Ponder tutorial for Create's cogwheels."
+			]
+			id: "3FF3FB9AC560FD61"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0C5D881A93081DC6"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "1DB77082DA7FFF90"
+					type: "xp"
+					xp: 50
+				}
+			]
+			tasks: [{
+				id: "13ACDF0716E431C1"
+				item: "create:large_cogwheel"
+				type: "item"
+			}]
+			x: 5.5d
+			y: -11.5d
+		}
+		{
+			dependencies: ["249F8A4FAEB5CDDE"]
+			description: [
+				"As of Create 0.5.1, Water Wheels now output &3256su&r at &a8 RPM&r."
+				""
+				"Covering additional sides will &lnot&r give you additional &3su&r or speed. Soul sand also no longer increases speed."
+			]
+			icon: "create:water_wheel"
+			id: "7D464E248ADF8C04"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2914FD6783F25645"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "44112113DE883E90"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "hexagon"
+			subtitle: "An easy but weak source of rotational power."
+			tasks: [{
+				id: "269222C04CEA8B71"
+				item: "create:water_wheel"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["57A69334C4D4299A"]
+			description: ["Hold [w] to Ponder to learn more!"]
+			id: "249F8A4FAEB5CDDE"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5B63F674BE35DCDA"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "23C9770AD315DBE5"
+					type: "xp"
+					xp: 25
+				}
+			]
+			subtitle: "Basic rotational force transfer in a straight line."
+			tasks: [{
+				id: "2A7932E0191CB3B8"
+				item: "create:shaft"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["62D55614D95E7356"]
+			id: "770AD4193CC23EA3"
+			rewards: [{
+				id: "181B75596FF864D8"
+				type: "xp"
+				xp: 200
+			}]
+			subtitle: "A foundational ingredient."
+			tasks: [{
+				id: "4968755DF97B9F34"
+				item: "create:iron_sheet"
+				type: "item"
+			}]
+			x: -10.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["62D55614D95E7356"]
+			id: "2E386081E5302CF5"
+			rewards: [{
+				id: "48FD3AB2D6DA0474"
+				type: "xp"
+				xp: 200
+			}]
+			subtitle: "A foundational ingredient."
+			tasks: [{
+				id: "38B3DD686D998467"
+				item: "create:copper_sheet"
+				type: "item"
+			}]
+			x: -10.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["62D55614D95E7356"]
+			id: "00DA4B8905FE3CAF"
+			rewards: [{
+				id: "41D82D2FDBE0B793"
+				type: "xp"
+				xp: 250
+			}]
+			subtitle: "A useful ingredient for logic components and more."
+			tasks: [{
+				id: "56467B6E0BF1289B"
+				item: "create:brass_sheet"
+				type: "item"
+			}]
+			x: -11.5d
+			y: -11.0d
+		}
+		{
+			dependencies: ["62D55614D95E7356"]
+			id: "75E673394451C2F4"
+			rewards: [{
+				id: "78C5C0046566E6A5"
+				type: "xp"
+				xp: 200
+			}]
+			subtitle: "A very useful ingredient."
+			tasks: [{
+				id: "0F8883072FD3C1E3"
+				item: "create:golden_sheet"
+				type: "item"
+			}]
+			x: -6.5d
+			y: -10.0d
+		}
+		{
+			dependencies: ["0044994A32BC5631"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Conveyor belts are essential if you want to transport items or want a cheaper alternative to Chain Drives for transferring rotational power (Su) over long distances."
+				""
+				"You can also decorate them with Andesite and Brass Casing blocks by right clicking."
+			]
+			id: "3E68ADF888E6E99E"
+			rewards: [
+				{
+					id: "3A127719A7F772A1"
+					type: "xp"
+					xp: 300
+				}
+				{
+					exclude_from_claim_all: true
+					id: "119E467F822FACDD"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+			]
+			subtitle: "Mechanical Belts are very useful."
+			tasks: [{
+				id: "0ACC90A18CD1E0BA"
+				item: "create:belt_connector"
+				type: "item"
+			}]
+			title: "Make some belts!"
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["187E2B3FDE19DD4D"]
+			description: ["Keep some spare dried kelp so you can make your Mechanical Belts!"]
+			id: "0044994A32BC5631"
+			rewards: [{
+				count: 32
+				id: "67D49E8F98961615"
+				item: "minecraft:dried_kelp_block"
+				type: "item"
+			}]
+			subtitle: "Dried kelp is food, but it's also a material."
+			tasks: [{
+				count: 6L
+				id: "123DE1FFA1F95BC7"
+				item: "minecraft:dried_kelp"
+				type: "item"
+			}]
+			title: "Introduction to Item Transportation"
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"78AB1F02F29D15E3"
+				"527A4B10DDE51E37"
+			]
+			description: [
+				"Step 1: Find a Nether Fortress in the Nether"
+				""
+				"Step 2: Find a Blaze Spawner"
+				""
+				"Step 3: Right click either the Blaze spawner or a Blaze with an Empty Blaze Burner."
+				""
+				"Step 4: Enjoy your sentient fireplace! Did I mention that they can drive Create's trains too?"
+				""
+				"Thanks to the existence of Ruined Nether Portals, you can acquire Empty Blaze Burners without going to the Nether."
+				""
+				"Hold [w] to Ponder to learn more!"
+			]
+			hide: true
+			id: "23744C5D8A153163"
+			rewards: [
+				{
+					id: "12E55DAB35AF24DA"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "0BD42467276E6488"
+					type: "xp"
+					xp: 250
+				}
+			]
+			shape: "hexagon"
+			subtitle: "You got it, now what?"
+			tasks: [{
+				id: "39F16EECF25DED7C"
+				item: "create:empty_blaze_burner"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["031AE396FB6DDD76"]
+			description: [
+				"Blaze Burners are a very reliable heat source."
+				""
+				"Click on the recipe then Hold [w] while hovering on the Blaze Burner to Ponder to learn more."
+			]
+			id: "1565E97748B8B342"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "65BFD9B4334851D3"
+					table_id: 3533172865185366803L
+					type: "random"
+				}
+				{
+					id: "5F564D434F037C8E"
+					type: "xp"
+					xp: 750
+				}
+			]
+			shape: "hexagon"
+			subtitle: "You will need more for other purposes."
+			tasks: [{
+				id: "4A3C4765A986ABCA"
+				item: "create:blaze_burner"
+				title: "Acquire a sentient fireplace."
+				type: "item"
+			}]
+			x: 11.5d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"527A4B10DDE51E37"
+				"1565E97748B8B342"
+				"400260FDC774443B"
+			]
+			hide: true
+			id: "3AF368FDC6BEC625"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3C1CEA03245DF0F2"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "12A6FBE176165B85"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			size: 1.5d
+			subtitle: "Making some brass requires some setup..."
+			tasks: [{
+				count: 2L
+				id: "67B3F409A2928F28"
+				item: "create:brass_ingot"
+				type: "item"
+			}]
+			title: "Beginning of the Brass Age"
+			x: 11.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["76DE1DB31C32A913"]
+			id: "1CF9859D66D393AC"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "594FA2AC0E23036D"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "5AF9E1A0C8A7585F"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "An easy method of routing shafts vertically if you rotate them with a Wrench."
+			tasks: [{
+				id: "01AE4850A2D6DE1B"
+				item: "create:gearbox"
+				type: "item"
+			}]
+			x: 7.0d
+			y: -10.0d
+		}
+		{
+			dependencies: ["6D8C28D34ABF7636"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Unlike Mechanical Belts which can't rotate mid-way or at the endpoints, Encased Chain Drives do just that."
+				""
+				"They are also not limited by the default 20 block range that Mechanical Belts do."
+			]
+			id: "1DBC16B691A15476"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "04FDA8C43888FE69"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "7B696788B9204898"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Far more flexible than Mechanical Belts in terms of relaying kinetic energy."
+			tasks: [{
+				id: "1E129C8B985D4588"
+				item: "create:encased_chain_drive"
+				type: "item"
+			}]
+			title: "The Chain Drive Family - Encased Chain Drive"
+			x: -1.0d
+			y: -8.5d
+		}
+		{
+			dependencies: [
+				"0194851298AADB65"
+				"1E129C8B985D4588"
+			]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Adjustable Chain Gearshifts only apply their RPM adjustment when powered either by a Lever or an Analog Lever."
+				""
+				"An Analog Lever is preferred for fine tuning while normal Levers are preferred for applying maximum adjustment."
+			]
+			hide: true
+			id: "1006DEF6267D3741"
+			rewards: [
+				{
+					id: "48873FD4055276C4"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "214D55F98A4299AE"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "Gear ratios without cogwheels!"
+			tasks: [{
+				id: "22132BA00C57A9B9"
+				item: "create:adjustable_chain_gearshift"
+				type: "item"
+			}]
+			title: "The Chain Drive Family - Adjustable Chain Gearshift"
+			x: 19.5d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"0044994A32BC5631"
+				"5FFC63500CF7754D"
+			]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"They can merge multiple lines of belts and also distribute items from one belt into many. Their distribution method can also be modified by looking at their tops!"
+				""
+				"They also can utilize &7List Filters&r and &6Attribute Filters&r and can use items as their item filter. Just right click their filter slot with a filter or item in your hand."
+			]
+			hide: true
+			id: "068660484145BE87"
+			rewards: [
+				{
+					id: "1EABD36EB177305C"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0627C4760F1147FD"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "Splitting items intelligently."
+			tasks: [{
+				count: 2L
+				id: "4486E08E99A0DDD1"
+				item: "create:brass_tunnel"
+				type: "item"
+			}]
+			title: "Intelligent Item Transportation and Management - Brass Tunnels"
+			x: 1.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["76DE1DB31C32A913"]
+			description: [
+				"Gearshifts are useful for reversing the direction of rotational power."
+				""
+				"Typically you would use Gearshifts for retracting a Mechanical Piston, Gantry or reversing the direction of a Mechanical Bearing, reversing the direction of Mechanical Belts..."
+				""
+				"I can't tell you &levery&r situation this can be used in."
+			]
+			id: "5082C1012024ED2D"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "217302D92364572C"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "0D235AA7727E28EF"
+					type: "xp"
+					xp: 50
+				}
+			]
+			subtitle: "UNO Reverse!"
+			tasks: [{
+				id: "53A06909BD9B47FC"
+				item: "create:gearshift"
+				type: "item"
+			}]
+			title: "Shifting Gears"
+			x: 6.5d
+			y: -11.0d
+		}
+		{
+			dependencies: ["0194851298AADB65"]
+			id: "7EE9C850EF4C9BDC"
+			rewards: [
+				{
+					id: "0929108E45283B8A"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5552C394EC582DA9"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "The smart and precise Sequenced Gearshift."
+			tasks: [{
+				id: "47A4649D15EE3D15"
+				item: "create:sequenced_gearshift"
+				type: "item"
+			}]
+			title: "Shifting Gears in Sequence"
+			x: 22.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"654CC532C1F17209"
+				"67B3F409A2928F28"
+				"3AF368FDC6BEC625"
+			]
+			hide: true
+			id: "054BC637EF86609C"
+			rewards: [
+				{
+					id: "66D13D19DCC16AD2"
+					item: "minecraft:raw_copper_block"
+					type: "item"
+				}
+				{
+					id: "520C4CB40F2EA31F"
+					item: "create:raw_zinc_block"
+					type: "item"
+				}
+				{
+					id: "158FF2226B86E960"
+					type: "xp"
+					xp: 500
+				}
+			]
+			shape: "hexagon"
+			size: 1.2d
+			subtitle: "Smarter components!"
+			tasks: [{
+				id: "6FA06A383C2E878E"
+				item: "create:brass_casing"
+				type: "item"
+			}]
+			title: "The Brass Age"
+			x: 15.5d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"0044994A32BC5631"
+				"5FFC63500CF7754D"
+			]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Brass Funnels have the ability to select EXACT amounts or allowed UP TO a certain amount of items permitted to be extracted or received from their attached inventory."
+				""
+				"They also can utilize &7List Filters&r and &6Attribute Filters&r and can use items as their item filter. Just right click their filter slot with a filter or item in your hand."
+			]
+			hide: true
+			id: "42A8249377616678"
+			rewards: [
+				{
+					id: "3B72CD4B1BA67B90"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7F4C1AA6D31E3248"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "Managing items intelligently."
+			tasks: [{
+				count: 2L
+				id: "41FC57734A2F322C"
+				item: "create:brass_funnel"
+				type: "item"
+			}]
+			title: "Intelligent Item Transportation and Management - Brass Funnels"
+			x: 1.5d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"5CC08ACE604AFED8"
+				"00DA4B8905FE3CAF"
+				"5FFC63500CF7754D"
+				"7D7D96030BC1CDC1"
+			]
+			description: [
+				"Smart Chutes have an inventory size of 64 and have the ability to filter items, just not in specific quantities."
+				""
+				"Chutes below a connected Smart Chute at the top will also accept a stack size of 64, as long as the items are received through a Smart Chute at the top."
+				""
+				"If you saw kuantities previously, my Q key was broken."
+			]
+			hide: true
+			id: "1D08D9144CE10BCA"
+			subtitle: "The smarter Chute."
+			tasks: [{
+				id: "43E52C183B4389FE"
+				item: "create:smart_chute"
+				type: "item"
+			}]
+			title: "Filtered Vertical Item Transfer - Smart Chutes"
+			x: -11.5d
+			y: -8.5d
+		}
+		{
+			dependencies: ["770AD4193CC23EA3"]
+			description: [
+				"Did you know you can use &7Encased Fans&r to push items up or pull items up?"
+				""
+				"Just depends on which end of the Chute you place the Encased Fan in and what direction it is rotating. "
+				""
+				"You can use &eEngineer's Goggles&r to look at a Chute and the tooltip will let you know if items are being pushed down, pushed up or pulled up."
+			]
+			id: "7D7D96030BC1CDC1"
+			rewards: [{
+				id: "26E47EBADD570BE2"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "Vertical item transportation!"
+			tasks: [{
+				id: "5CC08ACE604AFED8"
+				item: "create:chute"
+				type: "item"
+			}]
+			title: "Basic Vertical Item Transfer - Chutes"
+			x: -11.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["770AD4193CC23EA3"]
+			description: [
+				"Want to know a fun fact that most people don't know yet? It's that Item Vaults are &lcompletely&r &6blast proof&r. Very secure storage."
+				""
+				"Use it on Create's Trains, make a rotating Item Vault wheel... the limit is your imagination. "
+				""
+				"They can also be used for instant item transportation in certain scenarios."
+				""
+				"Trains do not consume fuel inside Item Vaults!"
+			]
+			id: "3C188F3CFEB46683"
+			rewards: [{
+				id: "57F47E8E5A498941"
+				type: "xp"
+				xp: 100
+			}]
+			subtitle: "Think of it as a very large chest that can be transported to places."
+			tasks: [{
+				id: "21E4A0186BB381B3"
+				item: "create:item_vault"
+				type: "item"
+			}]
+			title: "Giant Connected Inventories - Behold! The Item Vault!"
+			x: -10.5d
+			y: -7.5d
+		}
+		{
+			dependencies: ["770AD4193CC23EA3"]
+			description: ["Hold [w] to Ponder to learn more!"]
+			id: "6129B7088CC965FA"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "605261CE8BD5DA68"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5D0E7D4AC0EF6707"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "6CEEE0E0E1CFF7A4"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "Essential for cutting trees, harvesting crops or cleaning up tracks!"
+			tasks: [
+				{
+					id: "03F0BC34B4571A88"
+					item: "create:mechanical_saw"
+					type: "item"
+				}
+				{
+					id: "3E661D4DA142CCCA"
+					item: "create:mechanical_harvester"
+					type: "item"
+				}
+				{
+					id: "4D188905B5722B8A"
+					item: "create:mechanical_plough"
+					type: "item"
+				}
+			]
+			title: "Contraption Actors - Saws, Harvesters, Ploughs!"
+			x: -11.5d
+			y: -5.0d
+		}
+		{
+			dependencies: [
+				"75E673394451C2F4"
+				"22085A4AF847F19B"
+			]
+			description: [
+				"The &ePrecision Mechanism&r is used in multiple gadgets and is also needed for &6Mechanical Arms&r and the &6Rotation Speed Controller&r. "
+				""
+				"Right click the item in the JEI recipe window to see all the recipes that it is used in."
+				""
+				"The following gadgets use the Precision Mechanism:"
+				""
+				"&6Potato Cannon&r"
+				"- This is quite a strong gadget, just be sure to make a &3Copper&r / &8Netherite&r Backtank beforehand and fill it up with air by giving it rotational force."
+				""
+				"&eExtendo Grip&r"
+				"- Extends player reach by a total of 10 blocks. Like the Potato Cannon, be sure to make a &3Copper&r / &8Netherite&r Backtank beforehand."
+				""
+				"&bThe Wand of Symmetry&r"
+				"- Can be used for building with perfect symmetry or excavating large areas. Very useful!"
+				""
+				"An explanation for the Sequenced Assembly recipe is on the next page."
+				""
+				"{@pagebreak}"
+				"Firstly, you will need exactly &lthree&r &eDeployers&r and preferrably a &7Mechanical Belt&r line already laid out to send a Golden Sheet through the following sequence:"
+				""
+				"Step 1: Cogwheel"
+				"Step 2: Large Cogwheel"
+				"Step 3: Iron Nugget"
+				""
+				"This sequence needs to be repeated exactly 5 times, so you will need 5 of each item. You can always bring the Incomplete Precision Mechanism back to the start, but this process can be automated. To automate returning the Incomplete Precision Mechanism back to the start of the sequence, you can:"
+				""
+				"- Use a &eWeighted Ejector&r to toss it back to the start from the end of the sequence."
+				""
+				"- Use an &9Item Vault&r with the Brass Funnel's item filter set to only accept Incomplete Precision Mechanisms on the ending part of the sequence and an Andesite Funnel set to OUTPUT mode on the beginning part of the sequence. This method is instant item transportation."
+			]
+			hide: true
+			id: "18B37484A6C7F37E"
+			rewards: [{
+				id: "3463FCB44760D9E4"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			subtitle: "Quite an important component."
+			tasks: [{
+				id: "1406D000426425FC"
+				item: "create:precision_mechanism"
+				type: "item"
+			}]
+			title: "Complex Curiosities - Create a Precision Mechanism"
+			x: -7.5d
+			y: -11.0d
+		}
+		{
+			dependencies: ["75E673394451C2F4"]
+			description: ["When wearing this either in your Head Curios slot or Helmet Slot (not recommended for obvious protection reasons) your Jade tooltip on the top left corner will now display additional useful information when looking at Create related blocks and meters!"]
+			id: "328DCAF24F6DF4C5"
+			rewards: [{
+				id: "3FD3D67BDA26D8E7"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			subtitle: "It really helps you see Create related info at all times!"
+			tasks: [{
+				id: "239A73F5073D197C"
+				item: "create:goggles"
+				type: "item"
+			}]
+			title: "Analytical Vision - Engineer's Goggles"
+			x: -6.5d
+			y: -11.5d
+		}
+		{
+			dependencies: ["75E673394451C2F4"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Weighted Ejectors are great for throwing items long distances or in tight corners. They can also be configured to eject a specified stack size."
+				""
+				"By default they have a maximum range of 32 blocks."
+			]
+			id: "3ED7372ADB1D3FE7"
+			rewards: [{
+				id: "2CA2303796C75CA2"
+				type: "xp"
+				xp: 250
+			}]
+			subtitle: "Don't stand on it, seriously."
+			tasks: [{
+				id: "44EBA221A09B76FD"
+				item: "create:weighted_ejector"
+				type: "item"
+			}]
+			title: "Long Distance Item Transportation - The Weighted Ejector"
+			x: -8.0d
+			y: -10.0d
+		}
+		{
+			dependencies: ["2E386081E5302CF5"]
+			description: ["You can right click using a &6Wrench&r to open a window on the pipe or to make it not connect with adjacent fluid pipes."]
+			id: "6AC32180F67385D6"
+			rewards: [
+				{
+					id: "0CEA0F11A6431101"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "579D6B6BEF05F22E"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
+			subtitle: "Fluid transportation!"
+			tasks: [{
+				id: "12202DAEFFEB3B44"
+				item: "create:fluid_pipe"
+				type: "item"
+			}]
+			title: "Fluid Transportation Pt.1 - Fluid Pipe"
+			x: -11.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6AC32180F67385D6"]
+			description: ["Paired with Fluid Pipes, Mechanical Pumps can extract honey from beehives without angering the bees."]
+			id: "046D0A0ADA6236A8"
+			rewards: [
+				{
+					id: "3F9727754F4FE9A9"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "31F3B526E3D7055E"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
+			subtitle: "You have the puuump."
+			tasks: [{
+				id: "531FBFD8F57470D1"
+				item: "create:mechanical_pump"
+				type: "item"
+			}]
+			title: "Fluid Transportation Pt.2 - Mechanical Pump"
+			x: -12.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2E386081E5302CF5"]
+			id: "762E4AB54C6B5D42"
+			rewards: [
+				{
+					id: "33CEFD3A1375D6FE"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "380AF6CD02AB17AA"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			subtitle: "Mass fluid storage!"
+			tasks: [{
+				id: "478F08FED908E253"
+				item: "create:fluid_tank"
+				type: "item"
+			}]
+			title: "Mass Fluid Storage - Fluid Tanks"
+			x: -10.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["75E673394451C2F4"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"The max dimensions of a Steam Boiler are 3x3 with a height of 8 blocks, not including the Blaze Burners."
+				""
+				"-+-"
+				""
+				"You should have 1x Blaze Burner after completing the quest for it from the right side region of this chapter space, which is why 8x Blaze Burners are only being requested."
+			]
+			icon: "create:steam_engine"
+			id: "4EC7951A5F29EE1A"
+			rewards: [
+				{
+					id: "5DC0967F307BA583"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "3073B6F3BE5158BC"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+			shape: "hexagon"
+			subtitle: "The strongest source of rotational power."
+			tasks: [
+				{
+					id: "2C90C07728BDBA24"
+					item: "create:steam_engine"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "1735EB44C69C1DC9"
+					item: "create:blaze_burner"
+					type: "item"
+				}
+			]
+			title: "A Heart of Steam"
+			x: -7.5d
+			y: -9.0d
+		}
+		{
+			dependencies: [
+				"1406D000426425FC"
+				"18B37484A6C7F37E"
+				"00DA4B8905FE3CAF"
+			]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Mechanical Arms may be slow in your eyes, but they are able to deposit directly into Basins without the use of Andesite or Brass funnels."
+				""
+				"They can also reach then take and deposit fuel for your Blaze Burners that sit under your boiler precisely. It's neat!"
+			]
+			hide: true
+			id: "0352B65BF524BA37"
+			rewards: [
+				{
+					id: "45620FA6E4322AD5"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1D6E06F9BDA21B84"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "Achievement unlocked: Busy Hands"
+			tasks: [{
+				id: "054C34E3E5E37622"
+				item: "create:mechanical_arm"
+				type: "item"
+			}]
+			x: -10.0d
+			y: -11.0d
+		}
+		{
+			dependencies: ["00DA4B8905FE3CAF"]
+			description: ["Used in making the Deployer and Extendo Grip in base Create."]
+			id: "5DD3DEBA65F73267"
+			rewards: [
+				{
+					id: "5105BF42261D7175"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "4A4EAABA97B3B19D"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "A very handy component!"
+			tasks: [{
+				id: "52BEB8DC279F6D3A"
+				item: "create:brass_hand"
+				type: "item"
+			}]
+			x: -11.5d
+			y: -12.5d
+		}
+		{
+			dependencies: ["0CD722C2B48DF862"]
+			description: [
+				"You can fully automate potions after being brewed with a Mechanical Mixer."
+				""
+				"Hold [w] to Ponder to learn more!"
+			]
+			id: "16B642E5E7DBE75D"
+			rewards: [
+				{
+					id: "670871EAC8BA9470"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "33E03D4513250F2A"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
+			subtitle: "Automated pouring!"
+			tasks: [{
+				id: "5526AF6D60A35374"
+				item: "create:spout"
+				type: "item"
+			}]
+			title: "Craft the Spout"
+			x: -4.5d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"16FA2F3F79C9F5B3"
+				"054BC637EF86609C"
+			]
+			description: ["There is quite a bit to get into, so remember to <rainb>Hold [w] to Ponder to learn more!</rainb>"]
+			hide: true
+			icon: "create:railway_casing"
+			id: "1E0CDA1ED53FACEE"
+			rewards: [{
+				id: "1B629007CA840690"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			shape: "hexagon"
+			subtitle: "Begin the age of the train network."
+			tasks: [
+				{
+					id: "187B0F4E6388C3EC"
+					item: "create:railway_casing"
+					type: "item"
+				}
+				{
+					count: 128L
+					id: "56EA74D47605B4E2"
+					item: "create:track"
+					title: "Make a lot of tracks, you'll need them."
+					type: "item"
+				}
+			]
+			title: "Beginning of the Logistics Age"
+			x: 15.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["2E4CFF3F7A4508AB"]
+			id: "4EBF56E85BA4465B"
+			rewards: [{
+				id: "223677C9EB037EF6"
+				type: "xp"
+				xp: 250
+			}]
+			subtitle: "Powdered Obsidian is an important component to Sturdy Sheets."
+			tasks: [{
+				id: "777D61B53D3FF020"
+				item: "create:powdered_obsidian"
+				type: "item"
+			}]
+			title: "Casually Crushed Obsidian"
+			x: 19.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["2FF7795C03DDC67B"]
+			description: [
+				"You can use two gearboxes with a shaft in between to make them rotate opposite directions to be able to crush stuff."
+				""
+				"Also, you can place them horizontally to be able to be used in a production line."
+				""
+				"Hold [w] to Ponder to learn more!"
+			]
+			icon: "create:crushing_wheel"
+			id: "2E4CFF3F7A4508AB"
+			rewards: [
+				{
+					id: "3CDC75F8A6E3A094"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "433CB0656E669D70"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+			]
+			shape: "octagon"
+			size: 2.0d
+			subtitle: "A pair of giants."
+			tasks: [{
+				count: 2L
+				id: "147CD7D3F7E5697F"
+				item: "create:crushing_wheel"
+				type: "item"
+			}]
+			title: "Create the Crushing Wheels"
+			x: 19.0d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"054BC637EF86609C"
+				"0194851298AADB65"
+			]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"They also have the power to compress the fabric of the universe, mechanically."
+				""
+				"You will see what I mean later."
+				""
+				"Have air gaps in recipes? Use a &6Crafter Slot Cover&r to cover those spots."
+				""
+				"Need to connect Mechanical Crafter inventories? Use a &6Wrench&r on the &lback&r of each Mechanical Crafter that needs to be connected and matches the same material needed for the shaped recipe."
+			]
+			hide: true
+			icon: "create:mechanical_crafter"
+			id: "2FF7795C03DDC67B"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3FDAA28CFC2179BC"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "4103AF973C6B6636"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "4C4853612A490A30"
+					type: "xp"
+					xp: 750
+				}
+			]
+			shape: "octagon"
+			size: 2.0d
+			subtitle: "Crafting huge things."
+			tasks: [
+				{
+					id: "65511F53C5D74053"
+					item: "create:mechanical_crafter"
+					type: "item"
+				}
+				{
+					id: "721275C2A8CEF9DC"
+					item: "create:crafter_slot_cover"
+					type: "item"
+				}
+			]
+			title: "Mechanical Crafter Power!"
+			x: 20.5d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"5526AF6D60A35374"
+				"4EBF56E85BA4465B"
+			]
+			hide: true
+			id: "16FA2F3F79C9F5B3"
+			rewards: [{
+				id: "70497A27C2D4882C"
+				type: "xp"
+				xp: 250
+			}]
+			subtitle: "The material for everything train related."
+			tasks: [{
+				id: "2314125F47BB10F2"
+				item: "create:sturdy_sheet"
+				type: "item"
+			}]
+			title: "Very Sturdy Sheets"
+			x: 19.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1E0CDA1ED53FACEE"]
+			description: ["Hold [w] to Ponder to learn more!"]
+			icon: "create:track_station"
+			id: "383978292CA1C392"
+			rewards: [{
+				id: "6D7A50D3B337865F"
+				type: "xp"
+				xp: 750
+			}]
+			subtitle: "Logistic train network essentials."
+			tasks: [
+				{
+					id: "7F01A90315258F8B"
+					item: "create:track_station"
+					type: "item"
+				}
+				{
+					id: "11E9327BD0347341"
+					item: "create:track_signal"
+					type: "item"
+				}
+				{
+					id: "592B1BD8D68AB7FB"
+					item: "create:track_observer"
+					type: "item"
+				}
+			]
+			title: "Train Management"
+			x: 15.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1E0CDA1ED53FACEE"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"You will also need TWO of them for bi-directionality on your trains. One oriented forwards and one oriented backwards."
+				""
+				"You will also need someone to drive your trains... why not assign one of your blazes to be the train conductor?"
+			]
+			icon: "create:controls"
+			id: "0D86C2F010562CE2"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "30B1707DFE423CE3"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "37DDDABCBE934526"
+					type: "xp"
+					xp: 750
+				}
+			]
+			subtitle: "Well, what did you expect? You need controls!"
+			tasks: [
+				{
+					id: "15F21DE8F3B64025"
+					item: "create:controls"
+					type: "item"
+				}
+				{
+					id: "2D96DE8A957A9EF4"
+					item: "create:schedule"
+					type: "item"
+				}
+			]
+			title: "Train Controls and Scheduling"
+			x: 14.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1ABCB56633B96C2B"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Super Glue has been reworked since 0.5.0 and allows you to have super glued selections that can traverse multiple blocks with one right click."
+				""
+				"The Sticker block can be used in conjunction with the Rope Pulley to lift structures! If your imagination is lacking, I'll just say this:"
+				""
+				"&lYou can make a crane.&r"
+			]
+			icon: {
+				Count: 1
+				id: "create:super_glue"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "7C14DC327046D141"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "009210FA3AC21FA9"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "003341266082468F"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "These utilities allow you to move ENTIRE structures."
+			tasks: [
+				{
+					id: "0B0EFAF6239C249D"
+					item: {
+						Count: 1
+						id: "create:super_glue"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "57F6A0BB06B3C1B6"
+					item: "create:sticker"
+					type: "item"
+				}
+			]
+			title: "Sticky Utilities - Super Glue and the Sticker"
+			x: -5.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["6D8C28D34ABF7636"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Create's Millstones are very good at refining things."
+				""
+				"You can even get 2-3 sugar for each sugar cane processed!"
+				""
+				"Keep in mind Millstones can only process 1 item at a time. Crushing Wheels on the other hand can process entire stacks."
+				""
+				"Millstones are also unable to process ore blocks."
+			]
+			id: "79F980EE4DAB682D"
+			rewards: [
+				{
+					count: 16
+					id: "31D5846AD6B0A65F"
+					item: "minecraft:wheat_seeds"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "7BA745B69BC8065A"
+					item: "minecraft:sugar_cane"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "33ED1628F14B9836"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+			]
+			subtitle: "Refinement on a small scale."
+			tasks: [{
+				id: "26329C95CA373C91"
+				item: "create:millstone"
+				type: "item"
+			}]
+			title: "The Humble Millstone"
+			x: -1.5d
+			y: -7.5d
+		}
+		{
+			dependencies: ["79F980EE4DAB682D"]
+			description: [
+				"Wheat flour can be used to make Bread in two ways."
+				""
+				"You have the option of using 3 wheat flour in one Basin filled with 1,000mb of Water to make Dough, but the water is consumed in this process."
+				""
+				"The other method is using Bulk Washing on the Wheat Flour on a moving Mechanical Belt production line."
+				""
+				"Just keep in mind that additional Encased Fans aimed at the same block is the only way of speeding up this process."
+			]
+			id: "1EC1E1E64C630B96"
+			rewards: [{
+				id: "4D1530196DF6B127"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			subtitle: "Wheat can be now be refined further."
+			tasks: [{
+				id: "13099E6F5FCC596F"
+				item: "create:wheat_flour"
+				type: "item"
+			}]
+			title: "Wheat Refinement"
+			x: -3.0d
+			y: -7.5d
+		}
+		{
+			dependencies: ["3A0AE21655B5678E"]
+			description: [
+				"Did you know Sea Pickles placed on living coral blocks when given bone meal will grow more of themselves? "
+				""
+				"They also directly give you Lime Dye which is used in the creation of Slime Balls."
+			]
+			id: "1ABCB56633B96C2B"
+			rewards: [
+				{
+					id: "6EEA27A337DAAE0D"
+					item: "minecraft:sea_pickle"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5E26F55142CA1A3E"
+					table_id: 4958094920791629302L
+					type: "choice"
+				}
+				{
+					id: "327349C8EECB2300"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "Create some slimeballs using the dough you created from earlier."
+			tasks: [{
+				count: 9L
+				id: "74DFBB9EC6BF2E0B"
+				item: "minecraft:slime_ball"
+				type: "item"
+			}]
+			title: "Homemade Slime"
+			x: -4.0d
+			y: -7.0d
+		}
+		{
+			dependencies: ["26D176C88B664911"]
+			description: [
+				"Encased Fans are very useful for a lot of things. Just be careful not to have another Encased Fan unintentionally cooling off your uncooked beef!"
+				""
+				"Hold [w] to Ponder and see how to use them."
+				""
+				"Nozzles can be used to blow entities away in front of the fan in all directions instead of just in a straight line directly in front of the fan."
+			]
+			icon: "create:encased_fan"
+			id: "38E2EE3F3F2C2E6C"
+			rewards: [{
+				id: "09255A212B36D970"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "I believe I can fly!"
+			tasks: [
+				{
+					id: "7FBE092BD3DC3EC2"
+					item: "create:encased_fan"
+					type: "item"
+				}
+				{
+					id: "5BEEC2CABCE38B5D"
+					item: "create:nozzle"
+					type: "item"
+				}
+			]
+			title: "Making Wind Pt.2 - Encased Fans"
+			x: -13.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["1EC1E1E64C630B96"]
+			description: [
+				"Soooo, you finally got here."
+				""
+				"What do you do to Dough in real life? You bake it."
+				""
+				"You bake it automatically by using a Campfire in front of an Encased Fan."
+				""
+				"&c&lDO NOT USE <shake>LAVA</shake> TO BAKE YOUR DOUGH!&r&r"
+			]
+			id: "3A0AE21655B5678E"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "41CC70CFDDAF6CD3"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "14B65FC61A9B00E2"
+					type: "xp"
+					xp: 300
+				}
+			]
+			subtitle: "Prepare some dough."
+			tasks: [{
+				id: "5A7DD92171EFE75A"
+				item: "create:dough"
+				type: "item"
+			}]
+			title: "Baker's Passion"
+			x: -3.0d
+			y: -6.0d
+		}
+		{
+			dependencies: [
+				"4196F75FB2342B67"
+				"0B28CEE35831A75F"
+			]
+			description: ["Time to get to polishing with your Sand Paper!"]
+			hide: true
+			id: "4946DBA60513DCE3"
+			rewards: [{
+				id: "59217051E1FD53C7"
+				type: "xp"
+				xp: 100
+			}]
+			subtitle: "Looks like it needs to be polished first before it can be used..."
+			tasks: [{
+				id: "1F73E22F97327F1A"
+				item: "create:rose_quartz"
+				type: "item"
+			}]
+			title: "Electron Tube - Part 1"
+			x: 7.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4946DBA60513DCE3"]
+			id: "2A56BEC8A6D0E102"
+			rewards: [{
+				id: "191B4F18BC4F7E9D"
+				type: "xp"
+				xp: 150
+			}]
+			subtitle: "An important component for smarter things."
+			tasks: [{
+				id: "22C85B6112E91D2B"
+				item: "create:polished_rose_quartz"
+				type: "item"
+			}]
+			title: "Electron Tube - Part 2"
+			x: 7.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"2BDE2710088B452C"
+				"187E2B3FDE19DD4D"
+			]
+			description: ["Hold [Shift] for a summary on how to use."]
+			hide: true
+			icon: {
+				Count: 1
+				id: "create:sand_paper"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "4196F75FB2342B67"
+			rewards: [{
+				id: "36FB389E65C3633A"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "The first step in making Electron Tubes."
+			tasks: [{
+				id: "6515E9AECCF5EC65"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "create:sandpaper"
+					}
+				}
+				title: "Any #create:sandpaper"
+				type: "item"
+			}]
+			title: "Craft some Sandpaper"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"2A56BEC8A6D0E102"
+				"78AB1F02F29D15E3"
+				"4968755DF97B9F34"
+			]
+			hide: true
+			id: "0194851298AADB65"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3C5E3B7D5E0801F0"
+					table_id: 9193491821639565519L
+					type: "random"
+				}
+				{
+					id: "2A7A9A0FF4ED5D09"
+					type: "xp"
+					xp: 500
+				}
+			]
+			size: 1.5d
+			subtitle: "Computers took up entire buildings previously."
+			tasks: [{
+				id: "5FFC63500CF7754D"
+				item: "create:electron_tube"
+				type: "item"
+			}]
+			title: "Create an Electron Tube"
+			x: 20.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7D7D96030BC1CDC1"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"To extract or pump in fluids from a contraption, you must use a Fluid Pipe connected to the stationary Portable Fluid Interface and have a few Mechanical Pumps."
+				""
+				"Be sure to craft TWO as well since one PFI is going to be stationary while the other is going to be moving about on the contraption."
+				""
+				"It is also very important to leave a one or two block AIR gap between the PFIs so they can interface correctly. Blocks do not obstruct their ability to connect with each other."
+				""
+				"As of 0.5.1 Mechanical Pumps can't be reversed, so think of a creative solution involving two Fluid Valves to control which Mechanical Pump is used."
+				""
+				"This quest node will award you with one PFI so you can have a total of two in your inventory."
+			]
+			id: "2A1F1209201F3019"
+			rewards: [
+				{
+					id: "3D95B1C27D7C22C8"
+					type: "xp"
+					xp: 500
+				}
+				{
+					id: "63EEDD8361FE5502"
+					item: "create:portable_fluid_interface"
+					type: "item"
+				}
+			]
+			subtitle: "Contraption fluid inventory output and input."
+			tasks: [{
+				id: "6B4178561BE8854C"
+				item: "create:portable_fluid_interface"
+				type: "item"
+			}]
+			title: "Contraption Fluid Storage Management - Portable Fluid Interface"
+			x: -13.0d
+			y: -7.0d
+		}
+		{
+			dependencies: ["7D7D96030BC1CDC1"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"The Portable Storage Interface must have a Funnel or a Chute / Smart Chute attached to it to be able to export from or import to a contraption's inventory."
+				""
+				"Be sure to craft TWO as well since one PSI is going to be stationary while the other is going to be moving about on the contraption."
+				""
+				"It is also very important to leave a one or two block AIR gap between the PSIs so they can interface correctly. Blocks do not obstruct their ability to connect with each other."
+				""
+				"This quest node will award you with one PSI so you can have a total of two in your inventory."
+			]
+			id: "6BCDDC8851A0617E"
+			rewards: [
+				{
+					id: "7D61D3528C6F812C"
+					type: "xp"
+					xp: 500
+				}
+				{
+					id: "3931061AD6E0DDEC"
+					item: "create:portable_storage_interface"
+					type: "item"
+				}
+			]
+			subtitle: "Contraption item inventory output and input."
+			tasks: [{
+				id: "7027944D7A8B01E3"
+				item: "create:portable_storage_interface"
+				type: "item"
+			}]
+			title: "Contraption Item Inventory Management - Portable Storage Interface"
+			x: -12.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["0044994A32BC5631"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Redstone can also be used to disable funnels from receiving or exporting items."
+			]
+			id: "5DB5C71834CFBC1D"
+			rewards: [
+				{
+					id: "0F7654044AEBF796"
+					type: "xp"
+					xp: 100
+				}
+				{
+					exclude_from_claim_all: true
+					id: "376BB060E7D3BC68"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+			]
+			subtitle: "The basic funnel with no filtering capabilities. Can only manage 1 item at a time."
+			tasks: [{
+				count: 2L
+				id: "1F5875FF4C17B443"
+				item: "create:andesite_funnel"
+				type: "item"
+			}]
+			title: "Basic Item Transportation and Management - Andesite Funnels"
+			x: -1.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["0044994A32BC5631"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"It can also be used as decoration, if needed."
+			]
+			id: "280A50D0712F4D78"
+			rewards: [
+				{
+					id: "45BF1C55E28EDC6A"
+					type: "xp"
+					xp: 100
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3C4590528FEA413C"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+			]
+			subtitle: "Takes a stack of items and splits off exactly 1 item into an adjacent Mechanical Belt."
+			tasks: [{
+				count: 2L
+				id: "6CFAE0B8F2952E31"
+				item: "create:andesite_tunnel"
+				type: "item"
+			}]
+			title: "Basic Item Transportation and Management - Andesite Tunnels"
+			x: -1.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["770AD4193CC23EA3"]
+			id: "4F6A720B7612E455"
+			subtitle: "This is what holds multiple minecarts together."
+			tasks: [{
+				id: "25DA028BA82B35F4"
+				item: "create:minecart_coupling"
+				type: "item"
+			}]
+			x: -9.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["770AD4193CC23EA3"]
+			id: "224178669A9DC1DA"
+			subtitle: "A required component for the Mechanical Mixer."
+			tasks: [{
+				id: "7142BF3C27D824F4"
+				item: "create:whisk"
+				type: "item"
+			}]
+			x: -10.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["770AD4193CC23EA3"]
+			id: "26D176C88B664911"
+			rewards: [{
+				id: "138475A47C84F59D"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "How am I supposed to create wind?"
+			tasks: [{
+				id: "765790D3C2086453"
+				item: "create:propeller"
+				type: "item"
+			}]
+			title: "Making Wind Pt.1 - Propeller"
+			x: -12.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["2E386081E5302CF5"]
+			description: ["In order for a body of fluid to be considered &d<shake>infinite</shake>&r it has to be 10,000 blocks in volume and some additional blocks because it can't be exactly 10,000 for some reason."]
+			id: "1DA9BAAA83A3959B"
+			rewards: [
+				{
+					id: "70349A32459AF48C"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "36D0A4DC0EB633D8"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
+			subtitle: "The key to extracting infinite amounts of fluids."
+			tasks: [{
+				id: "17A387A140D8C805"
+				item: "create:hose_pulley"
+				type: "item"
+			}]
+			title: "Fluid Extracton and Filling - Hose Pulley"
+			x: -11.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["770AD4193CC23EA3"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Example use cases are lowering a whole platform of Mechanical Drills for excavating an entire chunk."
+			]
+			id: "5AD4231580F52A6C"
+			rewards: [{
+				id: "2BDB0EF8D7239E39"
+				type: "xp"
+				xp: 100
+			}]
+			subtitle: "Elevators elevators elevators!"
+			tasks: [{
+				id: "2F4B4C72D514890B"
+				item: "create:rope_pulley"
+				type: "item"
+			}]
+			title: "Make the Rope Pulley"
+			x: -9.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["249F8A4FAEB5CDDE"]
+			description: [
+				"Did I mention they can independently rotate by themselves and serve as your rotary wheat farm without any external help?"
+				""
+				"Just be sure to keep the speed down, you don't want the Windmill Bearing to break space time and reality, do you?"
+			]
+			id: "076DA8BCE27D0E11"
+			rewards: [
+				{
+					count: 4
+					id: "209904F730846F43"
+					item: "create:white_sail"
+					type: "item"
+				}
+				{
+					id: "0DC10923BDC48808"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "hexagon"
+			subtitle: "A single windmill can provide a maximum of 8192 Su which is quite a lot."
+			tasks: [{
+				id: "78E2CB641F647208"
+				item: "create:windmill_bearing"
+				type: "item"
+			}]
+			title: "Windmill Basics"
+			x: 5.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["076DA8BCE27D0E11"]
+			id: "3A5A53C3D0C51C69"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "175C40985BF84046"
+					table_id: 7159138545964995551L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5F9FA83818C07E78"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "1A4DD706013CB8F7"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+			shape: "hexagon"
+			subtitle: "The amount of Sail Frames required for a maximum strength Windmill..."
+			tasks: [{
+				count: 128L
+				id: "4FF0828AAFBBE7D7"
+				item: "create:white_sail"
+				type: "item"
+			}]
+			title: "The Strongest Breeze"
+			x: 5.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["6D8C28D34ABF7636"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"This can break mostly everything, including wood and cactus blocks."
+				""
+				"Just make sure you are using Mechanical Saws instead for automating a tree farm as they are unique in their full tree harvest mechanic."
+			]
+			id: "10ADF400E8F057F1"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7A5E846E9E8039F8"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "2760BA4EAC9ABCD4"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "Very versatile in mining blocks and highly dependent on rotation speed."
+			tasks: [{
+				id: "316FDFDA5B7C8C2D"
+				item: "create:mechanical_drill"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -9.0d
+		}
+		{
+			dependencies: [
+				"76DE1DB31C32A913"
+				"75E673394451C2F4"
+			]
+			description: [
+				"Used for rotation and adjustment of certain blocks. Also allows direct inventory pickup on Shift + Right click while looking at a Create related block."
+				""
+				"Hold [Shift] for a summary on how to use."
+			]
+			id: "515DBB49AEF66282"
+			rewards: [
+				{
+					id: "4D56DE248B3EBF79"
+					item: "create:builders_tea"
+					type: "item"
+				}
+				{
+					id: "4B304A3EF2BEDC92"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			shape: "octagon"
+			subtitle: "An engineer's best friend."
+			tasks: [{
+				id: "0788B65A4ADDE989"
+				item: "create:wrench"
+				type: "item"
+			}]
+			title: "Engineer's Tools - The Wrench"
+			x: -5.0d
+			y: -10.0d
+		}
+		{
+			dependencies: ["65FC712C5D7E312D"]
+			description: [
+				"There is so much depth to &6Create&r, it is very difficult to fully document in both a text format and a progression tree."
+				""
+				"I highly recommend fully watching the &7Ponder&r tutorials for every item to increase your understanding."
+				""
+				"Hopefully you find yourself enlightened with how much you can do with Create, despite how \"inefficient\" it is compared to other tech mods."
+				""
+				"Remember to &6Hold [w] to Ponder&r or &6Hold [Shift] for more info&r!"
+				""
+				"Please thoroughly watch them and don't skim through. You can also click the buttons below to identify individual blocks or to slow down the mini tutorial."
+				""
+				"Remember that Zinc itself is not renewable in vanilla Create... but this isn't vanilla Create."
+				""
+				"Zinc is renewable in this modpack. Go wild!"
+			]
+			hide: true
+			icon: "create:schematic_and_quill"
+			id: "187E2B3FDE19DD4D"
+			min_required_dependencies: 1
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "71772E679E1870BE"
+				table_id: 7771384237349930739L
+				type: "random"
+			}]
+			size: 2.0d
+			subtitle: "Most Create items provide helpful info when you press and hold W or Shift for extensive tooltips."
+			tasks: [{
+				id: "2BDE2710088B452C"
+				title: "Use Ponder! Create's in-game tutorial!"
+				type: "checkmark"
+			}]
+			title: "Branching Out"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["57A69334C4D4299A"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Also Hold [Shift] to learn more on certain items in this quest node."
+			]
+			icon: "create:cart_assembler"
+			id: "32F1D92CAF4713E8"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7632368C79B86D06"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1D03557F1CE72721"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "3D1D4733E9944084"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
+			subtitle: "Making Furnace Minecarts useful again."
+			tasks: [
+				{
+					id: "5CB79BE7F5D165D8"
+					item: "create:cart_assembler"
+					type: "item"
+				}
+				{
+					id: "701CC9EC2E166F22"
+					item: "create:minecart_coupling"
+					type: "item"
+				}
+				{
+					id: "649D1112DBC39E64"
+					item: "minecraft:furnace_minecart"
+					type: "item"
+				}
+				{
+					id: "6D8B3CCE5D12E6E7"
+					item: "minecraft:minecart"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["187E2B3FDE19DD4D"]
+			description: [
+				"Fun Fact: Copper Casing can be used to encase Fluid Pipes to make them maintain their shape. "
+				""
+				"This does mean you can make them stay in an L shape if needed. Copper Casing also allows separation from adjacent Fluid Pipes, just make sure the pipes are not connected before encasing them."
+				""
+				"Copper Valve Handles are great for turning at very specific angle intervals. Use them on Fluid Valves or open doors that use a Mechanical Bearing at specific angles."
+			]
+			icon: "create:copper_casing"
+			id: "0CD722C2B48DF862"
+			rewards: [
+				{
+					count: 9
+					id: "5E508E1DF12169EA"
+					item: "minecraft:raw_copper_block"
+					type: "item"
+				}
+				{
+					id: "4585A4AE7FADBE4A"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5D3C6A5735F9457E"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
+			shape: "hexagon"
+			subtitle: "Acquire some basic Copper Age materials."
+			tasks: [
+				{
+					id: "049D69269B10FCA2"
+					item: "create:copper_casing"
+					type: "item"
+				}
+				{
+					id: "00B73524FDB8A393"
+					item: "minecraft:copper_ingot"
+					type: "item"
+				}
+				{
+					id: "2DC730757DA118CB"
+					title: "Begin the Copper Age."
+					type: "checkmark"
+				}
+			]
+			title: "The Copper Age"
+			x: -3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["054BC637EF86609C"]
+			id: "30E89B82FBE4E14C"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3537226B62845349"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "72C5A462E40A1072"
+					type: "xp"
+					xp: 500
+				}
+			]
+			subtitle: "Wireless redstone communication!"
+			tasks: [{
+				id: "140E181AA39D3C57"
+				item: "create:redstone_link"
+				type: "item"
+			}]
+			title: "Wireless Redstone - Redstone Link"
+			x: 14.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["0194851298AADB65"]
+			description: ["Hold [w] to Ponder to learn more!"]
+			id: "1D75F7EBD23D3988"
+			rewards: [
+				{
+					id: "185820DAC288B265"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3A2AD14E53CD0AB6"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "The mechanical eye that reveals the soul."
+			tasks: [{
+				id: "0B7AC270238DECD4"
+				item: "create:content_observer"
+				type: "item"
+			}]
+			title: "Looking Inside Inventories - Smart Observer"
+			x: 21.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["1D75F7EBD23D3988"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"An example use case for the Threshold Switch is stopping production when an Item Vault reaches a certain threshold of space used."
+			]
+			id: "050F508C5A4EA99E"
+			rewards: [
+				{
+					id: "4CBD455A6232C26C"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "01381DCB121C4AA2"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "The mechanical eye that monitors for emptiness or fullness."
+			tasks: [{
+				id: "3CEDE6CDCA284FA9"
+				item: "create:stockpile_switch"
+				type: "item"
+			}]
+			title: "Quantifying Inventories - Threshold Switch"
+			x: 21.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["054BC637EF86609C"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"The Display Link can receive information from &eSmart Observers&r, &eThreshold Switches&r, &6Brass Tunnels&r, &6Funnels&r, etc."
+				""
+				"However, it needs to &otransmit&r the information somewhere, right? That's where &bDisplay Boards&r and &bNixie Tubes&r come in."
+			]
+			id: "4B4B34406BD27008"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "19824F7EEF550020"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "425ADBA8CF671D03"
+					type: "xp"
+					xp: 750
+				}
+			]
+			tasks: [{
+				id: "244C187AEE88325E"
+				item: "create:display_link"
+				type: "item"
+			}]
+			title: "Wireless Data Transmission - Display Link"
+			x: 16.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["0194851298AADB65"]
+			id: "3F6B316FDB524F86"
+			rewards: [
+				{
+					id: "4FB0CC6265089428"
+					type: "xp"
+					xp: 50
+				}
+				{
+					exclude_from_claim_all: true
+					id: "438AF6C5F4D25279"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "Create the Clockwork Bearing"
+			tasks: [{
+				id: "2888BB0349EBFBA0"
+				item: "create:clockwork_bearing"
+				type: "item"
+			}]
+			title: "Big Ben"
+			x: 19.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["6D8C28D34ABF7636"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Mechanical Bearings are typically used for rotating large structures like a super glued wall that serves as one half for your door..."
+				""
+				"It can also rotate a large arm carrying a mass of basins among other things."
+			]
+			id: "3BDB0203FBA84A83"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4E635DD81A1DC617"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "4618A721EAE0754F"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Use this for rotating large doors, contraptions..."
+			tasks: [{
+				id: "1B19709697FE3672"
+				item: "create:mechanical_bearing"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -8.5d
+		}
+		{
+			dependencies: ["6D8C28D34ABF7636"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"It just does not get any smoother than this."
+				""
+				"Unlike regular Pistons which retracted when not receiving power, Mechanical Pistons will need to be retracted with rotational force in the &4opposite&r direction used for extending. A &cGearshift&r is helpful for achieving this easily!"
+				""
+				"Please note that Mechanical Pistons can't extend without at least &lone&r &7Extension Rod&r attached!"
+			]
+			icon: "create:mechanical_piston"
+			id: "22BAD50143A6422B"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5B0A9A325314D803"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "48F5F37B8C40C44C"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Flex on your friends who still use vanilla pistons!"
+			tasks: [
+				{
+					id: "1EA7D455412FAE39"
+					item: "create:piston_extension_pole"
+					type: "item"
+				}
+				{
+					id: "244DA5C73EE74A35"
+					item: "create:mechanical_piston"
+					type: "item"
+				}
+				{
+					id: "5A9D1D6155BC3E3B"
+					item: "create:sticky_mechanical_piston"
+					type: "item"
+				}
+			]
+			title: "Moving Giant Walls and Chunks - The Mighty Mechanical Piston"
+			x: 1.5d
+			y: -7.5d
+		}
+		{
+			dependencies: ["054BC637EF86609C"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"The Rotation Speed Controller allows you to change the rotation speed very easily."
+			]
+			id: "5A056CB8D0A7F5B2"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0EBD1D167EA0E7BA"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "2792B834627CB757"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "7EEF7D08BA1DDC13"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+			subtitle: "Engineers hate this!"
+			tasks: [{
+				id: "11E0E47AC0A22390"
+				item: "create:rotation_speed_controller"
+				type: "item"
+			}]
+			title: "Easy Speed Control - Rotation Speed Controller"
+			x: 15.5d
+			y: -5.5d
+		}
+		{
+			dependencies: ["30E89B82FBE4E14C"]
+			description: [
+				"Hold [Shift] for more info!"
+				""
+				"Can also be placed on a Lectern, so you can use it to control a crane to pick up and lower Item Vaults from a parked train, door powered by Sequenced Gearshifts, etc."
+			]
+			id: "6B8E99104DB46996"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1071669F62167DD9"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "1D6D0EC22FFC2784"
+					type: "xp"
+					xp: 500
+				}
+			]
+			subtitle: "Allows you to send signals right from your hand!"
+			tasks: [{
+				id: "7E0BB2EE61002933"
+				item: "create:linked_controller"
+				type: "item"
+			}]
+			title: "Wireless Redstone - Linked Controller"
+			x: 14.5d
+			y: -6.5d
+		}
+		{
+			dependencies: ["23744C5D8A153163"]
+			id: "7ED3366AD5222F93"
+			rewards: [
+				{
+					id: "2589AD1FACBD5896"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "0D1521D1A1D5576E"
+					type: "xp"
+					xp: 250
+				}
+			]
+			shape: "hexagon"
+			subtitle: "Visit the Nether."
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				icon: "minecraft:obsidian"
+				id: "0B28CEE35831A75F"
+				type: "dimension"
+			}]
+			title: "A Trip to Hell"
+			x: 8.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7ED3366AD5222F93"]
+			description: [
+				"Please do not break the first blaze spawner you see!"
+				""
+				"You can make an unlimited amount of Blaze Burners from a single blaze spawner."
+			]
+			id: "05A06882A2170564"
+			rewards: [
+				{
+					id: "73DD2B004A1697AE"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "143C62B155815FB4"
+					type: "xp"
+					xp: 500
+				}
+			]
+			shape: "hexagon"
+			subtitle: "It has valuables, but you're looking for a Blaze spawner."
+			tasks: [{
+				icon: "minecraft:nether_bricks"
+				id: "7EF2F9F8166D05E3"
+				structure: "betterfortresses:fortress"
+				type: "structure"
+			}]
+			title: "Find a Nether Fortress"
+			x: 9.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["05A06882A2170564"]
+			description: ["&oYes&r you can get an infinite amount of Blaze Burners from a single blaze spawner, so guard it well!"]
+			id: "031AE396FB6DDD76"
+			rewards: [{
+				id: "085FFAE014E23D82"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "Just right click the Blaze or Blaze Spawner with your Empty Blaze Burner."
+			tasks: [{
+				icon: "minecraft:blaze_spawn_egg"
+				id: "40191BB8A421F6CB"
+				observe_type: 5
+				timer: 0L
+				title: "Right click the Blaze with the Empty Blaze Burner"
+				to_observe: "minecraft:blaze"
+				type: "observation"
+			}]
+			title: "Capture a Blaze"
+			x: 10.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A0AE21655B5678E"]
+			description: ["Congratulations, you have made more bread than you usually do thanks to the power of the Millstone."]
+			id: "6A36F0E0A5E0154D"
+			rewards: [{
+				id: "57EE85F806E514C4"
+				type: "xp"
+				xp: 200
+			}]
+			subtitle: "Delicious bread!"
+			tasks: [{
+				id: "6574DE18574AF710"
+				item: "minecraft:bread"
+				type: "item"
+			}]
+			title: "Bread!"
+			x: -4.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["75E673394451C2F4"]
+			description: [
+				"Hold [Shift] for a summary on how to use the Toolbox."
+				""
+				"Has a default maximum range of 10 blocks."
+				""
+				"Hold left &e[Alt]&r to open the Toolbox interface and move your mouse to change selection."
+			]
+			id: "57D6D3AF17AE4DD1"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "680955B61C7DB63B"
+					table_id: 2071744225430230389L
+					type: "choice"
+				}
+				{
+					id: "154980D07025395D"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "Magically accessible without direct access!"
+			tasks: [{
+				id: "1DB9CFD6B2F25D54"
+				item: "create:brown_toolbox"
+				type: "item"
+			}]
+			title: "Engineer's Inventory - The Toolbox"
+			x: -5.5d
+			y: -11.0d
+		}
+		{
+			dependencies: ["187E2B3FDE19DD4D"]
+			description: [
+				"Safety should be your priority when riding your contraptions."
+				""
+				"Hold [Shift] for more info!"
+			]
+			id: "785FCB4A92E19D32"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "00D0B6CEE1B80D96"
+					table_id: 688710991345937406L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "30B1288C2A5E5721"
+					table_id: 6652661467762805826L
+					type: "random"
+				}
+			]
+			subtitle: "Make a seat."
+			tasks: [{
+				id: "4E08251400F4301C"
+				item: "create:white_seat"
+				type: "item"
+			}]
+			title: "Take a Seat!"
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1E0CDA1ED53FACEE"]
+			id: "0075BAE1BFBAA36D"
+			subtitle: "A seat fit for a conductor."
+			tasks: [{
+				id: "113FAC9FFDBE9EB9"
+				item: "create:black_seat"
+				type: "item"
+			}]
+			title: "The Black Seat"
+			x: 14.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0CD722C2B48DF862"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Did you know a Basin can directly spout fluid into an Item Drain? "
+				""
+				"This bypasses the need to use the Smart Fluid Pipe as you could right click the Basin's recipe filter with a Chocolate Bucket to filter it out."
+				""
+				"However, for potion making you will need to set a recipe filter first beforehand."
+			]
+			id: "60839EAF324E7086"
+			rewards: [
+				{
+					id: "48954AAB91FCB814"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7137128C0368DF40"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
+			subtitle: "Useful if you want to drain buckets from a milk farm, lava farm and more."
+			tasks: [{
+				id: "5BFFDC4C27256AC0"
+				item: "create:item_drain"
+				type: "item"
+			}]
+			title: "Craft the Item Drain"
+			x: -4.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["187E2B3FDE19DD4D"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"The powered toggle latch can be used to reverse a gantry's or mechanical piston's direction when it reaches one end with the help of redstone contacts."
+				""
+				"Upon reaching one end, the redstone contact will send a signal to the powered toggle patch which will either turn off or on the redstone wiring connected to the gearshift. This does heavily depend on your setup, however."
+			]
+			id: "24D7FAA4E3EFAD39"
+			rewards: [{
+				id: "207916CF526D1B98"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "Very useful redstone components."
+			tasks: [
+				{
+					id: "1CD6397F36852A79"
+					item: "create:powered_latch"
+					type: "item"
+				}
+				{
+					id: "09890671AD6AAC79"
+					item: "create:powered_toggle_latch"
+					type: "item"
+				}
+			]
+			title: "Redstone Latches"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0194851298AADB65"]
+			icon: "create:display_board"
+			id: "11F16BF2C56756F3"
+			rewards: [
+				{
+					id: "63E7891B309656CD"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0652095427AE340D"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "Very useful for displaying information."
+			tasks: [
+				{
+					id: "3A3176A04F0D51F7"
+					item: "create:display_board"
+					type: "item"
+				}
+				{
+					id: "0B3FE8C7E16B1EE0"
+					item: "create:nixie_tube"
+					type: "item"
+				}
+			]
+			title: "Behold! The Power of Visualization!"
+			x: 21.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["2FF7795C03DDC67B"]
+			description: [
+				"Hold [Shift] for more information!"
+				""
+				"The &6Potato Cannon&r is actually a very strong weapon."
+				""
+				"Simply enchant it with a &dPower V&r or higher and use food items as ammo. Don't worry, if the food item is unusable as ammunition, it simply won't consume the food item."
+				""
+				"Make sure to use a &6Copper&r / &8Netherite&r Backtank for safe operation with no risk for durability loss!"
+				""
+				"See the next page for some common ammunition types and their effects. I won't list the rest however as that is for you to <rainb>try them and see</rainb>."
+				"{@pagebreak}"
+				"&6Blaze Cake&r"
+				"High damage, sets targets on fire."
+				""
+				"&eGolden Carrots&r"
+				"High damage output."
+				""
+				"&6Potatoes&r"
+				"Average damage output."
+				""
+				"&6Baked Potatoes&r"
+				"Average damage output, sets targets on fire."
+				""
+				"&2Poison Potatoes&r"
+				"Low damage output, poisons targets."
+				""
+				"&cSweet Berries&r and &4Chocolate Glazed Berries&r"
+				"Splits into three projectiles, low damage output."
+				""
+				"&6Glow Berries&r"
+				"Splits into two projectiles and applies the Glowing effect to targets."
+				""
+				"&eGolden Apple&r"
+				"Applies the effects of the Golden Apple and cures Zombie Villagers. Not intended as damaging ammunition."
+				""
+				"&bEnchanted Golden Apple&r"
+				"Applies Enchanted Golden Apple effects but can't cure Zombie Villagers. Not intended as damaging ammunition."
+			]
+			id: "73E8B028453BD86E"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "20C1E9F7180D855A"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "583454557F4F24DA"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "466516E0AE001E2A"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "A toy, a very powerful toy."
+			tasks: [{
+				id: "1BED2C9E2AAF7E07"
+				item: {
+					Count: 1
+					id: "create:potato_cannon"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Useful Gadgets - The Potato Cannon"
+			x: 20.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["2FF7795C03DDC67B"]
+			description: [
+				"Hold [Shift] for more information!"
+				""
+				"The &6Wand of Symmetry&r is a very useful tool, make use of it when building structures!"
+			]
+			id: "53E2E000D9909FCE"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1F31A7B4105BD1B0"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "4044C644969CD7D4"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "429BF93664F2FF1A"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "An architect's best friend."
+			tasks: [{
+				id: "6118649B891C6A2C"
+				item: "create:wand_of_symmetry"
+				type: "item"
+			}]
+			title: "Useful Gadgets - The Wand of Symmetry"
+			x: 22.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["2FF7795C03DDC67B"]
+			description: [
+				"Hold [Shift] for more information!"
+				""
+				"Both an architect's and engineer's best friend for reaching long distances."
+				""
+				"Make sure to use a &6Copper&r / &8Netherite&r Backtank for safe operation with no risk for durability loss!"
+			]
+			id: "5ADBAF0BF56632CD"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0DD73954D0725759"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0E390FAD662C9050"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "3B48AC1222AC3479"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "Go go gadget arms!"
+			tasks: [{
+				id: "6772A84332B1D241"
+				item: {
+					Count: 1
+					id: "create:extendo_grip"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Useful Gadgets - Extendo Grip"
+			x: 22.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["00DA4B8905FE3CAF"]
+			id: "584B2971C4DEB905"
+			rewards: [{
+				id: "300E869AC71FD2F2"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			subtitle: "Does it feel peculiar to you?"
+			tasks: [{
+				id: "42CD2E502D645E60"
+				item: "create:peculiar_bell"
+				type: "item"
+			}]
+			title: "Create the Peculiar Bell"
+			x: -16.0d
+			y: -11.0d
+		}
+		{
+			dependencies: [
+				"584B2971C4DEB905"
+				"38E2EE3F3F2C2E6C"
+			]
+			description: [
+				"You can also hold the &3&l&o<wiggle>haunted</wiggle>&r bell in your offhand to see where mobs have the possibility of spawning."
+				""
+				"This is indicated by &3souls&r rising up from the top face of a block."
+			]
+			id: "3E0990C4385C0B5F"
+			rewards: [
+				{
+					id: "2B13EDD595D52174"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					exclude_from_claim_all: true
+					id: "54DCA3A94073C671"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "I shall show you where the souls of the damned appear o' wise one."
+			tasks: [{
+				id: "48375D6A6B20BE40"
+				item: "create:haunted_bell"
+				type: "item"
+			}]
+			title: "The Haunted Bell"
+			x: -16.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["0CD722C2B48DF862"]
+			description: [
+				"Want to swim and work underwater freely? Then this gear is for you!"
+				""
+				"The Copper Backtank is important for having an air supply. To refill it, place the Copper Backtank under a fast spinning Shaft. "
+				""
+				"Just keep in mind if you want to ascend quickly, take of your Diving Boots."
+				""
+				"Capacity of the Backtank can be increased by enchanting it with Capacity enchantment books."
+			]
+			icon: {
+				Count: 1
+				id: "create:copper_diving_helmet"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "61624301D1511BB0"
+			rewards: [
+				{
+					id: "52306D96A3377941"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "213022EF34518692"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
+			subtitle: "For underwater exploration."
+			tasks: [
+				{
+					id: "5CCDCE989856C5E8"
+					item: {
+						Count: 1
+						id: "create:copper_diving_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "252A5F4E6868400E"
+					item: {
+						Count: 1
+						id: "create:copper_backtank"
+						tag: {
+							Air: 900
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6A0F7E0635343EEF"
+					item: {
+						Count: 1
+						id: "create:copper_diving_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Gone diving!"
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["61624301D1511BB0"]
+			description: ["The Netherite Diving gear can only grant full lava immunity when your backtank is filled with SOME pressurized air."]
+			icon: {
+				Count: 1
+				id: "create:netherite_diving_helmet"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "41753F371DB962BC"
+			rewards: [
+				{
+					id: "712876AABAECD0B6"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					id: "3F52BD3EAEA30BD0"
+					item: "minecraft:netherite_block"
+					type: "item"
+				}
+			]
+			subtitle: "Gone swimming in the lava oceans of the Nether."
+			tasks: [
+				{
+					id: "571271BC7D901D0A"
+					item: {
+						Count: 1
+						id: "create:netherite_diving_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "74EB887FB5B3ED52"
+					item: {
+						Count: 1
+						id: "create:netherite_backtank"
+						tag: {
+							Air: 900
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "77A05EED1E75FCDD"
+					item: {
+						Count: 1
+						id: "minecraft:netherite_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0239A1EACF2F157E"
+					item: {
+						Count: 1
+						id: "create:netherite_diving_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Lava Diving!"
+			x: -6.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7D464E248ADF8C04"]
+			description: [
+				"Here is some helpful information that you will probably skip over: "
+				""
+				"Large Waterwheels output the maximum of &3512su&r at &a4 RPM&r."
+				""
+				"Covering additional sides will &lnot&r give you additional &3su&r or speed. Soul sand also no longer increases speed."
+			]
+			id: "4EDF41B3F8B25734"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4A0716BC7A5C3850"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "603B9819E2AD72F9"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "46163752AA17DB25"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "hexagon"
+			subtitle: "Biiiig waterwheels."
+			tasks: [{
+				id: "4B8FB2A1A25071A9"
+				item: "create:large_water_wheel"
+				type: "item"
+			}]
+			title: "Water Wheels, upgraded!"
+			x: 4.0d
+			y: -7.0d
+		}
+		{
+			dependencies: [
+				"054BC637EF86609C"
+				"32AD37AC33F00FD7"
+			]
+			description: ["Hold [w] to Ponder to learn more!"]
+			hide: true
+			id: "73F456AE957F4002"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "421AC1DB0AF18FDF"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "2B1EA5CE86C30985"
+					type: "xp"
+					xp: 750
+				}
+			]
+			subtitle: "Elevators made easy."
+			tasks: [{
+				id: "5510DE2F5AC3C19F"
+				item: "create:elevator_pulley"
+				type: "item"
+			}]
+			title: "Elevators Elevators Elevators!"
+			x: 14.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["2E4CFF3F7A4508AB"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Mechanical Rollers are extremely useful when it comes to clearing the way for your new train network."
+			]
+			id: "6E890DBBA3FFA4B3"
+			rewards: [{
+				id: "056DBEE6999C85B2"
+				type: "xp"
+				xp: 500
+			}]
+			shape: "rsquare"
+			size: 1.5d
+			subtitle: "Need to clear the way?"
+			tasks: [{
+				id: "473E12E9C8E7C782"
+				item: "create:mechanical_roller"
+				type: "item"
+			}]
+			title: "Terraforming with Trains - The Mechanical Roller"
+			x: 17.0d
+			y: -0.5d
+		}
+		{
+			dependencies: [
+				"24D7FAA4E3EFAD39"
+				"78AB1F02F29D15E3"
+			]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Notice: This quest node is a required dependency for &eElevator Pulleys&r from the &eBrass Age&r."
+				""
+				"Redstone Contacts paired with a Powered Toggle Latch can be utilized to make a Mechanical Piston or Gantry rotate in reverse with the help of a Gearshift."
+				""
+				"They can also be used with the Elevator Pulley to designate floors."
+			]
+			hide: true
+			id: "205BAFFFECA72D1E"
+			rewards: [
+				{
+					id: "0D226167D60F841A"
+					type: "xp"
+					xp: 50
+				}
+				{
+					id: "196341E471A2A5EB"
+					item: "create:redstone_contact"
+					type: "item"
+				}
+			]
+			subtitle: "This has many uses, trust me."
+			tasks: [{
+				id: "32AD37AC33F00FD7"
+				item: "create:redstone_contact"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["6AC32180F67385D6"]
+			description: [
+				"Smart Fluid Pipes allow you to filter what fluid you want from a Basin very easily. "
+				""
+				"An example use case would be automated brewing and having to extract the initial potion fluid from the resulting potion fluid."
+				""
+				"This also applies to making chocolate since the Basin would contain both the Milk and Chocolate fluids."
+			]
+			id: "0F77020B805CCEBC"
+			rewards: [
+				{
+					id: "32158E4693442B28"
+					type: "xp"
+					xp: 500
+				}
+				{
+					exclude_from_claim_all: true
+					id: "02BFEE4A0B96D78E"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
+			subtitle: "If you want to be very specific about fluid filtration."
+			tasks: [{
+				id: "289E3FF04E6072D0"
+				item: "create:smart_fluid_pipe"
+				type: "item"
+			}]
+			title: "Fluid Management and Filtering - Smart Fluid Pipe"
+			x: -11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00DA4B8905FE3CAF"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"What takes up so much space or requires the use of hoppers can now be achieved with less space taken."
+			]
+			id: "3D6A28C50E86EA2E"
+			rewards: [
+				{
+					id: "36C6AFD82EFC6AC7"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7998B1DF54AEC795"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "The most compact and adjustable redstone clock!"
+			tasks: [{
+				id: "74BF29F609571514"
+				item: "create:pulse_repeater"
+				type: "item"
+			}]
+			title: "Pulse Repeater"
+			x: -12.5d
+			y: -12.0d
+		}
+		{
+			dependencies: ["00DA4B8905FE3CAF"]
+			description: ["Hold [w] to Ponder to learn more!"]
+			id: "68376786E8D45E69"
+			rewards: [
+				{
+					id: "73387A060C0C7DF6"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+				{
+					exclude_from_claim_all: true
+					id: "1A46DF8DB3A4936C"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "This should be self-explanatory."
+			tasks: [{
+				id: "24C7307084B2B196"
+				item: "create:pulse_extender"
+				type: "item"
+			}]
+			title: "Pulse Extender"
+			x: -10.5d
+			y: -12.0d
+		}
+		{
+			dependencies: [
+				"5DD3DEBA65F73267"
+				"5FFC63500CF7754D"
+			]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"It is a perfect reflection of yourself, condensed into the form of a brass hand."
+			]
+			hide: true
+			id: "7ECC22C059800186"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7FDF7DCC806AF56F"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7F4DC618F0913534"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					id: "2BDEE711E10F7EEC"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "Create the Deployer."
+			tasks: [{
+				id: "22085A4AF847F19B"
+				item: "create:deployer"
+				type: "item"
+			}]
+			title: "The Deployer..."
+			x: -11.5d
+			y: -14.0d
+		}
+		{
+			dependencies: [
+				"0CD722C2B48DF862"
+				"0F8883072FD3C1E3"
+			]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Mostly used for decorative purposes."
+			]
+			hide: true
+			id: "1BD09AD0A5B739CA"
+			rewards: [
+				{
+					id: "2F1606AB1614F677"
+					type: "xp"
+					xp: 100
+				}
+				{
+					exclude_from_claim_all: true
+					id: "4581EF69FE3B6B62"
+					table_id: 4080767580040306585L
+					type: "random"
+				}
+			]
+			subtitle: "The voice of an angel..."
+			tasks: [{
+				id: "4D36CD45D808E2E2"
+				item: "create:steam_whistle"
+				type: "item"
+			}]
+			x: -3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0194851298AADB65"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Right click the filter on the Contraption Controls block with a contraption actor block in hand such as the following:"
+				""
+				"- Mechanical Roller"
+				"- Mechanical Drill"
+				"- Mechanical Saw"
+				"- Mechanical Harvester"
+				"- Mechanical Plough"
+				"- Deployer"
+				""
+				"Upon pressing the button, you can toggle the state of the contraption actor specified in the filter to be &aENABLED&r or &cDISABLED&r which can be very useful for trains and minecart contraptions so they don't accidentally break their tracks."
+			]
+			id: "5172E10D8831BABF"
+			rewards: [
+				{
+					id: "41B79585F387FDC6"
+					type: "xp"
+					xp: 500
+				}
+				{
+					exclude_from_claim_all: true
+					id: "7033007BD5674027"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+			]
+			subtitle: "Mechanical Rollers breaking everything? I take care of that."
+			tasks: [{
+				id: "4780AFC1FB496E12"
+				item: "create:contraption_controls"
+				type: "item"
+			}]
+			title: "Contraption Actors Management - Contraption Controls"
+			x: 20.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0075BAE1BFBAA36D"]
+			id: "43A6EBE4381E9916"
+			subtitle: "You don't want them defying space and time, do you?"
+			tasks: [{
+				id: "2AD53BEA066AF31A"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "create:seats"
+					}
+				}
+				title: "Any #create:seats"
+				type: "item"
+			}]
+			title: "Make Seats for your Passengers!"
+			x: 14.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["785FCB4A92E19D32"]
+			description: ["This is self-explanatory so you probably don't need to [Shift] for more info..."]
+			id: "28094E43F612C0E4"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "20C9D4F9C4578148"
+				table_id: 7771384237349930739L
+				type: "random"
+			}]
+			subtitle: "me right round baby right round..."
+			tasks: [{
+				id: "221DE49794CBB323"
+				item: "create:turntable"
+				type: "item"
+			}]
+			title: "Spin..."
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["28094E43F612C0E4"]
+			description: ["Train Doors exist, but that's for later."]
+			id: "7A1F13EA597AD89D"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "4C1CE40136F07F99"
+				table_id: 7771384237349930739L
+				type: "random"
+			}]
+			shape: "rsquare"
+			subtitle: "Very fancy indeed!"
+			tasks: [
+				{
+					count: 2L
+					id: "0CB72936167ED092"
+					item: "create:framed_glass_door"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "40A8536A46683B60"
+					item: "create:andesite_door"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7D7EE3B76C880796"
+					item: "create:copper_door"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7379A25AE7DD4A7B"
+					item: "create:brass_door"
+					type: "item"
+				}
+			]
+			title: "Fancy Doors and Trapdoors"
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0075BAE1BFBAA36D"]
+			id: "13A80E87623C81D5"
+			rewards: [{
+				id: "13DC86FDE2440CEA"
+				type: "xp"
+				xp: 100
+			}]
+			shape: "rsquare"
+			subtitle: "Doors fit for a train."
+			tasks: [{
+				count: 2L
+				id: "07266621F463A11C"
+				item: "create:train_door"
+				type: "item"
+			}]
+			title: "Fancy Train Doors"
+			x: 12.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00DA4B8905FE3CAF"]
+			id: "4E1378EE0FABE18C"
+			rewards: [{
+				id: "7D1697F523F721D8"
+				type: "xp"
+				xp: 50
+			}]
+			subtitle: "An elegant way to showcase an item."
+			tasks: [{
+				id: "1B061BD5EC858133"
+				item: "create:placard"
+				type: "item"
+			}]
+			title: "The Placard"
+			x: -12.5d
+			y: -10.0d
+		}
+		{
+			dependencies: ["187E2B3FDE19DD4D"]
+			description: [
+				"Hold [Shift] for more info!"
+				""
+				"With the item you want to either whitelist or blacklist in your inventory, place it into the available slots. The item is not consumed!"
+				""
+				"You can also use the List Filter in the recipe filter on Basins to allow certain items to be made or on Smart Fluid Pipes to extract certain fluids directly from the Basin or Fluid Tank."
+				""
+				"You can also put List filters inside List Filters."
+			]
+			id: "3D0E6E4D62F30495"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7C57533D20CE620E"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5CA0875C72117EDF"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "4EE8BAA156239986"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "rsquare"
+			subtitle: "Need to filter your items? Use me!"
+			tasks: [{
+				id: "6FA1F8132962C364"
+				item: "create:filter"
+				type: "item"
+			}]
+			title: "Create Utilities - The Mighty List Filter"
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3AF368FDC6BEC625"]
+			description: [
+				"Let's say you want to make a funnel accept all items tagged with &b#forge:ingots&r to accept all smelted results from a bulk blasting setup made with Encased Fans... this is exactly what you would use the Attribute Filter for!"
+				""
+				"The same also applies to setting the &6Brass Funnel&r that's used for giving the &eMechanical Arms&r to dump the items into the &7Encased Fan&r bulk blasting furnace setup and can be set to accept all raw ores as well."
+			]
+			id: "33B9370ECDC36505"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "01A9C744F90C2920"
+					table_id: 3317762105541170177L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "76969CA944DFDE6F"
+					table_id: 7771384237349930739L
+					type: "loot"
+				}
+				{
+					id: "31D2DEF256FCF9DA"
+					type: "xp"
+					xp: 250
+				}
+			]
+			shape: "rsquare"
+			subtitle: "Allows you to filter items by attribute."
+			tasks: [{
+				id: "3783BD3032FFDABA"
+				item: "create:attribute_filter"
+				type: "item"
+			}]
+			title: "Create Utilities - The Attribute Filter"
+			x: 11.5d
+			y: -5.5d
+		}
+		{
+			dependencies: ["187E2B3FDE19DD4D"]
+			description: [
+				"Hold [Shift] for more info!"
+				""
+				"To &cremove&r a stored recipe from a Crafting Blueprint, just crouch and then punch it exactly &lONCE&r. If you accidentally punch more than once, the blueprint will be taken off the wall."
+				""
+				"Also, Crafting Blueprints can't be moved with their stored recipes still intact. My advice to you is try not to move them around too much and make sure you establish an area where you will frequently be using them."
+			]
+			id: "69EE3A81D40C9D47"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0A5C57466655F6D9"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "7919388AA23C1165"
+					type: "xp"
+					xp: 50
+				}
+			]
+			shape: "rsquare"
+			subtitle: "Tired of clicking and dragging items to craft something? I got you covered!"
+			tasks: [{
+				id: "3C651867A5DAED99"
+				item: "create:crafting_blueprint"
+				type: "item"
+			}]
+			title: "Create Utilities - The Crafting Blueprint"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6D8C28D34ABF7636"
+				"1406D000426425FC"
+			]
+			hide: true
+			hide_dependent_lines: true
+			id: "1BC189AE6AA14C57"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "6DC5C667F14360E5"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "606105D21A8ED5F1"
+					type: "xp"
+					xp: 50
+				}
+			]
+			subtitle: "Makes sounds throughout the day, letting you know what time it is."
+			tasks: [{
+				id: "26598259531E51B9"
+				item: "create:cuckoo_clock"
+				type: "item"
+			}]
+			title: "Keeping Track of Time - Cuckoo Clock"
+			x: 1.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["6D8C28D34ABF7636"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Having trouble determining what &bspeed&r your cogwheels are rotating? "
+				""
+				"Having trouble determining how many &3stress units&r are being produced?"
+				""
+				"We got you covered!"
+				""
+				"Also, if you want to change your Speedometer into a Stressometer and vice versa, simply put it in your crafting grid to change what it reads."
+				""
+				"When wearing Engineer's Goggles, they provide numerical information."
+			]
+			id: "61D09463A16E0632"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3CC3D7241EBBDE38"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "62D6F7DCA682D750"
+					type: "xp"
+					xp: 100
+				}
+			]
+			subtitle: "Fancy meters that give useful information!"
+			tasks: [
+				{
+					id: "2294A6D6EB15BF85"
+					item: "create:speedometer"
+					type: "item"
+				}
+				{
+					id: "46B4635493FDECC2"
+					item: "create:stressometer"
+					type: "item"
+				}
+			]
+			title: "Visualizing Rotational Force - The Speedometer and Stressometer"
+			x: -1.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["6AC32180F67385D6"]
+			id: "472346AC958653EA"
+			rewards: [{
+				id: "398DD02644EBE1D0"
+				type: "xp"
+				xp: 250
+			}]
+			subtitle: "Need to prevent other fluids from going through temporarily? I got you covered!"
+			tasks: [{
+				id: "541E6D766ABAEBBE"
+				item: "create:fluid_valve"
+				type: "item"
+			}]
+			title: "Fluid Management - Fluid Valve"
+			x: -12.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["57A69334C4D4299A"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"Fun Fact: Gantries behave like worm gears when powered by redstone!"
+			]
+			id: "1F93A292D5CB15C6"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "7E5E6D2DDD5C143A"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "0FDAD100333AD105"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "384DADF06058546E"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			subtitle: "Can also move contraptions."
+			tasks: [
+				{
+					id: "68AEDC8BDC6FF95F"
+					item: "create:gantry_carriage"
+					type: "item"
+				}
+				{
+					id: "2B61A331801E67D5"
+					item: "create:gantry_shaft"
+					type: "item"
+				}
+			]
+			title: "Gantries Galore!"
+			x: 1.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["57A69334C4D4299A"]
+			description: [
+				"Hold [w] to Ponder to learn more!"
+				""
+				"If you don't have the materials to make a Water Wheel or want to manually provide rotational force, the Hand Crank is what you would use."
+			]
+			id: "2487DFEA82CBA230"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "16B7D22EB815223C"
+					table_id: 7477086534417165542L
+					type: "random"
+				}
+				{
+					id: "635D80104A5C3856"
+					type: "xp"
+					xp: 25
+				}
+			]
+			subtitle: "Everyone has to start somewhere."
+			tasks: [{
+				id: "2E89C0BE8AE1EC2B"
+				item: "create:hand_crank"
+				type: "item"
+			}]
+			title: "Basic Rotational Force - The Humble Hand Crank"
+			x: -1.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["400260FDC774443B"]
+			description: ["This stuff grows your plants and trees &l&o<rainb>instantly</rainb>&r, so it's best that you automate this for future usage!"]
+			id: "02ADC2412F6B6238"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "50E96FD8FAF7D0CD"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "02FBE2500FCB2AA5"
+					type: "xp"
+					xp: 250
+				}
+			]
+			subtitle: "Not your ordinary fertilizer!"
+			tasks: [{
+				id: "72A297B630BAB38A"
+				item: "create:tree_fertilizer"
+				type: "item"
+			}]
+			title: "Create Utilities - Tree Fertilizer"
+			x: 8.5d
+			y: -9.0d
+		}
+		{
+			dependencies: ["2E4CFF3F7A4508AB"]
+			description: [
+				"Blaze Cakes are multi-purpose. They are used for feeding your Blaze Burners so they can go into a &bsuperheated&r state in addition to being one of the strongest ammunition items for the &6Potato Cannon&r."
+				""
+				"What are &bsuperheated&r Blaze Burners used for?"
+				""
+				"- Unlocking new &o&2compacting&r and &o&2mixing&r recipes that involve the &7Basin&r."
+				""
+				"- Providing more heat to your &7Steam Boiler&r so it can support powering 18 &6Steam Engines&r in total."
+				""
+				"You can right click the &eBlaze Cake&r item in the items entry to see all the recipes that require a &bsuperheated&r Blaze Burner."
+				""
+				"At this point of progression, you are expected to be able to automate this fully. Helpful advice is on the next page."
+				""
+				"{@pagebreak}"
+				"Step 1: Automate egg collection from chickens as well as sugar production from sugar cane. Sugar can be refined by &eMillstones&r and &eCrushing Wheels&r for significantly better yields!"
+				""
+				"Step 2: Automate &4Cinder Flour&r production either from a Nether drill quarry or making Netherrack with a Spout containing &cHealing II&r. Automating Healing II potion creation might be quite a trip!"
+				""
+				"Step 3: Automate Lava collection. You can either do this with a Nether train system as you can easily find a lava lake that can satisfy the Bottomless Supply requirement of 10,000 source blocks. Use a &6Hose Pulley&r and start extracting while looking at it with &eEngineer's Goggles&r to verify this."
+			]
+			icon: "create:blaze_cake"
+			id: "2B16FED43886A343"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "6CD598827ADFEDF6"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "63B08A04146E6A74"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "Blaze Cakes are very useful!"
+			tasks: [
+				{
+					id: "2C72D5575EBD1B6B"
+					item: "create:cinder_flour"
+					type: "item"
+				}
+				{
+					count: 256L
+					id: "5016DDD97DAC93A0"
+					item: "create:blaze_cake_base"
+					type: "item"
+				}
+				{
+					count: 256L
+					id: "69D9530C09EA31C1"
+					item: "create:blaze_cake"
+					type: "item"
+				}
+			]
+			title: "Create Utilities - Blaze Cakes"
+			x: 17.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["1BC189AE6AA14C57"]
+			description: ["It might be a ticking time bomb, maaaaaybe."]
+			hide: true
+			hide_dependent_lines: true
+			id: "38298E81AD5B2875"
+			subtitle: "Totally nothing wrong with it!"
+			tasks: [{
+				id: "601475922D1EA63F"
+				item: "create:mysterious_cuckoo_clock"
+				type: "item"
+			}]
+			title: "The Other Cuckoo Clock"
+			x: 0.0d
+			y: -11.0d
+		}
+		{
+			dependencies: ["2E386081E5302CF5"]
+			id: "41F9E42072AC41C8"
+			rewards: [{
+				id: "7E918AC92E3D726A"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "Very precise rotation."
+			tasks: [{
+				id: "738034CAE71E110F"
+				item: "create:copper_valve_handle"
+				type: "item"
+			}]
+			title: "Create Utilities - The Copper Valve Handle"
+			x: -8.5d
+			y: -2.5d
+		}
+	]
+	subtitle: [
+		"This is Create."
+		"Have fun automating everything!"
+	]
+	title: "Age of Creation"
+}

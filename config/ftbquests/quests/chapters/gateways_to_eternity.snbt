@@ -1,0 +1,280 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "gateways_to_eternity"
+	group: "6855847200ADBE3A"
+	icon: {
+		Count: 1
+		id: "gateways:gate_pearl"
+		tag: {
+			gateway: "gateways:enderman_gate_large"
+		}
+	}
+	id: "5882F56349208E20"
+	images: [{
+		height: 64.0d
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["13186E7B0D6B6115"]
+			description: [
+				"I am &oactually&r being &cserious&r."
+				""
+				"You will have to kill all the enemies within a certain amount of time. Should you fail, you will lose access to the rewards."
+				""
+				"Copper is renewable from &3Drowned&r."
+				""
+				"Zinc is renewable from &2Creepers&r."
+				""
+				"Tired of not finding &6Hoglins&r? That has been addressed too."
+			]
+			hide_dependent_lines: true
+			id: "61165E1354B3FC40"
+			rewards: [{
+				id: "37113E6A32F94873"
+				item: {
+					Count: 1
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "gateways:enderman_gate_small"
+					}
+				}
+				type: "item"
+			}]
+			subtitle: "You will be fighting a lot of mobs."
+			tasks: [{
+				id: "1918ADF257E18F3D"
+				title: "Are you actually ready?"
+				type: "checkmark"
+			}]
+			title: "Beginning Eternity"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["61165E1354B3FC40"]
+			id: "17D234C6DC2AEAC7"
+			tasks: [{
+				id: "326F6574E9DF6E95"
+				item: {
+					Count: 1
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "kubejs:drowned_gate_small"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["17D234C6DC2AEAC7"]
+			id: "1604FB88E05B0441"
+			tasks: [{
+				id: "474AB8F08DC62BEF"
+				item: {
+					Count: 1
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "kubejs:drowned_gate"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1604FB88E05B0441"]
+			id: "6D2433D3784274DA"
+			tasks: [{
+				id: "2CA64E46157D70F5"
+				item: {
+					Count: 1
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "kubejs:drowned_gate_large"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["61165E1354B3FC40"]
+			id: "30917EE77BBEE538"
+			tasks: [{
+				id: "7B946499823EF568"
+				item: {
+					Count: 1
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "kubejs:hoglin_gate_small"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["30917EE77BBEE538"]
+			id: "0560745BDD85C048"
+			tasks: [{
+				id: "505D6D2EFFE6C775"
+				item: {
+					Count: 1
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "kubejs:hoglin_gate"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0560745BDD85C048"]
+			id: "65ADEEB43EE979B6"
+			tasks: [{
+				id: "6AA37B7F2EE34F2D"
+				item: {
+					Count: 1
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "kubejs:hoglin_gate_large"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["61165E1354B3FC40"]
+			id: "4E29BE72C8FBA6C2"
+			tasks: [{
+				id: "39AC0CF50E0161BF"
+				item: {
+					Count: 1
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "kubejs:husk_gate_small"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4E29BE72C8FBA6C2"]
+			id: "0A8E724CF441FA16"
+			tasks: [{
+				id: "0A1A113A22EF2031"
+				item: {
+					Count: 1
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "kubejs:husk_gate"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0A8E724CF441FA16"]
+			id: "42409708B766F94C"
+			tasks: [{
+				id: "0A2758C2FE2F4ED1"
+				item: {
+					Count: 1
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "kubejs:husk_gate_large"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["61165E1354B3FC40"]
+			id: "1A7614D2517AB280"
+			tasks: [{
+				id: "2057714E1A7E054B"
+				item: {
+					Count: 1
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "gateways:overworldian_nights"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1A7614D2517AB280"]
+			id: "63EB9837EBD48510"
+			tasks: [{
+				id: "4B2E2386A39FB8D7"
+				item: {
+					Count: 1
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "gateways:hellish_fortress"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["61165E1354B3FC40"]
+			id: "71E994294ECA17C2"
+			tasks: [{
+				id: "5E29AFCBAE5E04AE"
+				item: {
+					Count: 1
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "gateways:emerald_grove"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+	]
+	subtitle: ["Eternal mob loot. Quest tree work in progress."]
+	title: "Gateways to Eternity"
+}

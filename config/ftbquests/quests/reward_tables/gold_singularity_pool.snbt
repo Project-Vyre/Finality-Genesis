@@ -1,0 +1,13 @@
+{
+	icon: "kubejs:gold_singularity"
+	id: "378F9BF26D927784"
+	loot_size: 1
+	order_index: 22
+	rewards: [
+		{ item: "kubejs:gold_coin", weight: 0.02f }
+		{ item: "kubejs:copper_coin", weight: 3.5f }
+		{ item: "kubejs:iron_coin", weight: 4.0f }
+		{ item: "minecraft:gold_block", weight: 50.0f }
+	]
+	title: "Gold Singularity Pool"
+}

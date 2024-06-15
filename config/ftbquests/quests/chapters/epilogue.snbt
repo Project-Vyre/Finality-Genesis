@@ -1,0 +1,901 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "epilogue"
+	group: ""
+	icon: "kubejs:awakened_singularity_core"
+	id: "3D91EE1209DFA21C"
+	images: [{
+		height: 64.0d
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 64.0d
+		x: 0.0d
+		y: 0.0d
+	}]
+	order_index: 5
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"4EBF56E85BA4465B"
+				"38E2EE3F3F2C2E6C"
+				"2FF7795C03DDC67B"
+			]
+			description: [
+				"In all seriousness, good luck."
+				""
+				"-+-"
+				""
+				"I am sorry that the background image doesn't align to the quest nodes 100% but it's a bit difficult with the scaling and grid differences."
+			]
+			id: "7BFEF80899790FC7"
+			rewards: [{
+				id: "7A79C8AF962BF78D"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
+			subtitle: "Surprised you've made it this far."
+			tasks: [{
+				id: "4C847275ABA5869F"
+				item: "kubejs:dormant_singularity_core"
+				type: "item"
+			}]
+			title: "Step 1 - &d<shake>Dormant Singularity Core</shake>"
+			x: 0.0d
+			y: -20.0d
+		}
+		{
+			dependencies: ["7BFEF80899790FC7"]
+			id: "441B6755C6E69725"
+			rewards: [{
+				id: "0D557B70340E0E40"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
+			shape: "rsquare"
+			subtitle: "Are you out of your mind?"
+			tasks: [{
+				id: "09EF7D15277FEB92"
+				item: "kubejs:awakened_singularity_core"
+				type: "item"
+			}]
+			title: "Step 2 - <rainb><shake>Awakened Singularity Core</shake></rainb>"
+			x: 0.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["441B6755C6E69725"]
+			id: "1F8515F209C98116"
+			subtitle: "Let's start with the easiest one, shall we?"
+			tasks: [{
+				id: "781C616780708BED"
+				item: "kubejs:coal_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: 0.0d
+			y: -16.0d
+		}
+		{
+			dependencies: ["53850BE8EF49D0AF"]
+			description: [
+				"At last, you have reached enlightenment. However, a question remains as you look at the recipe."
+				""
+				"Where do you get the command blocks? Well, they're an unintended side effect as the result of breaking the game's rules soooo yeah. "
+				""
+				"Mechanical Crafters also have the power to craft them."
+			]
+			id: "01A8004472B9F446"
+			rewards: [{
+				id: "6D9E168B6AECD296"
+				type: "xp_levels"
+				xp_levels: 999999999
+			}]
+			subtitle: "Shaping the world, forever."
+			tasks: [{
+				id: "716C4AAB2675A2FC"
+				item: "create:handheld_worldshaper"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1F8515F209C98116"]
+			id: "634CF0AB7722167E"
+			subtitle: "Copper copper copper."
+			tasks: [{
+				id: "5481523B52689BA6"
+				item: "kubejs:copper_singularity"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -16.5d
+		}
+		{
+			dependencies: ["1F8515F209C98116"]
+			description: ["Also, ROCK AND STONE!"]
+			id: "6441CF7A7EB2A425"
+			subtitle: "*in turkey speak* COBBLE COBBLE COBBLE"
+			tasks: [{
+				id: "50A3755D5BC3CA49"
+				item: "kubejs:cobblestone_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: 1.5d
+			y: -16.5d
+		}
+		{
+			dependencies: ["634CF0AB7722167E"]
+			id: "002A7969EC03C1EC"
+			subtitle: "I'm sorry, how much iron?"
+			tasks: [{
+				id: "08E5007CF006F958"
+				item: "kubejs:iron_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -2.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["16DE8734477FB97A"]
+			id: "53850BE8EF49D0AF"
+			subtitle: "The very mechanism used for manipulating the universe."
+			tasks: [{
+				id: "24F82896C2181594"
+				item: "kubejs:entropy_mechanism"
+				type: "item"
+			}]
+			title: "Creating the Entropy Mechanism"
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["6441CF7A7EB2A425"]
+			id: "17243E628EAA6146"
+			subtitle: "Uhhhm...?"
+			tasks: [{
+				id: "15FFA94B3269F3B7"
+				item: "kubejs:coarse_dirt_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: 2.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["17243E628EAA6146"]
+			id: "2B203810B76A8C0A"
+			subtitle: "Inaros, the Pocket Sand Warframe."
+			tasks: [{
+				id: "026FE6916D4B44CC"
+				item: "kubejs:sand_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: 16.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["2B203810B76A8C0A"]
+			id: "5587D80342F8CAEE"
+			subtitle: "Somehow the power of glass defeated the Eidolons..."
+			tasks: [{
+				id: "700A495536DAB32A"
+				item: "kubejs:framed_glass_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: 16.5d
+			y: -16.5d
+		}
+		{
+			dependencies: ["002A7969EC03C1EC"]
+			description: [
+				"Mission Control: Yes, yes, you're rich... time to get a move on! I got Management breathing down my neck here!"
+				""
+				"-+-"
+				""
+				"Bonus points if you get that reference."
+			]
+			id: "7ACC286C8696BEF7"
+			subtitle: "We're rich!"
+			tasks: [{
+				id: "17F66931EDF0C439"
+				item: "kubejs:gold_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -16.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["7ACC286C8696BEF7"]
+			description: [
+				"It's raining diamonds from out of the sky!"
+				""
+				"Diamonds!"
+				""
+				"No need to ask why!"
+				""
+				"Just open your hands and catch them all"
+				""
+				"It's raining tacos!"
+			]
+			id: "7281437657B6287F"
+			subtitle: "It's raining diamonds!"
+			tasks: [{
+				id: "63944A2B242EE21A"
+				item: "kubejs:diamond_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -16.5d
+			y: -19.5d
+		}
+		{
+			dependencies: [
+				"7281437657B6287F"
+				"5C757553EC9D4B75"
+				"01AA908CE3006E6A"
+			]
+			id: "6762D7F87F3F59F3"
+			subtitle: "Those were the times..."
+			tasks: [{
+				id: "3CA9C04FD6FAE1DF"
+				item: "kubejs:netherite_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -18.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["7ACC286C8696BEF7"]
+			id: "01AA908CE3006E6A"
+			subtitle: "I'm out of ideas for quotes LOL"
+			tasks: [{
+				id: "7AB152441C107019"
+				item: "kubejs:emerald_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -16.5d
+			y: -16.5d
+		}
+		{
+			dependencies: ["43D0F0BE8749A33C"]
+			id: "30652DFC68BE93B2"
+			subtitle: "Oh look, it's my favorite color."
+			tasks: [{
+				id: "2E53EEA390CE1FEE"
+				item: "kubejs:amethyst_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -19.5d
+			y: -19.5d
+		}
+		{
+			dependencies: ["30652DFC68BE93B2"]
+			description: ["Did you know Amethyst is just a purple variety of Quartz?"]
+			id: "1644EB18E1A28B48"
+			subtitle: "Precise resonance."
+			tasks: [{
+				id: "4E4F85E651395AD6"
+				item: "kubejs:quartz_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -20.0d
+			y: -18.0d
+		}
+		{
+			dependencies: ["1644EB18E1A28B48"]
+			id: "5C757553EC9D4B75"
+			subtitle: "It's logic dust, don't question it."
+			tasks: [{
+				id: "6CDFDD7C8343BFEF"
+				item: "kubejs:redstone_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -19.5d
+			y: -16.5d
+		}
+		{
+			dependencies: ["7665244BC5744A0A"]
+			description: [
+				"You can use Mechanical Ploughs to harvest snowballs."
+				""
+				"From snowballs, you can compact them into snow blocks."
+				""
+				"From snow blocks you can compact them into ice blocks."
+				""
+				"From ice to packed ice to blue ice."
+				""
+				"Try your best to automate this process <rainb>en masse</rainb> will you?"
+			]
+			id: "2F9E165A7643EC15"
+			subtitle: "Ice ice baby"
+			tasks: [{
+				id: "1116E43D9206E410"
+				item: "kubejs:blue_ice_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: 18.0d
+			y: -20.0d
+		}
+		{
+			dependencies: ["3CCEB1500AFFD218"]
+			id: "1C30A2D6BD191C6A"
+			subtitle: "MY EYES!"
+			tasks: [{
+				id: "2C7CB2064CECB691"
+				item: "kubejs:glowstone_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: 18.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"59AC01EE88361B2A"
+				"58EF68AEA9983F39"
+			]
+			description: ["If you play DRG you would understand."]
+			id: "5A411EC4C3F730AF"
+			subtitle: "Tick tock, team...! We're not getting any younger here!"
+			tasks: [{
+				id: "2F417E2FA840DF1F"
+				item: "kubejs:precision_mechanism_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -18.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0999064FC6C4C5FE"]
+			id: "58EF68AEA9983F39"
+			subtitle: "Very sturdy! Perfect for trains."
+			tasks: [{
+				id: "0C5CF94494F73E05"
+				item: "kubejs:sturdy_sheet_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -16.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4AF48E980CCBCE3B"]
+			id: "1B5288FD0602ECDC"
+			subtitle: "Logic infused quartz, yay"
+			tasks: [{
+				id: "138F32B5080A595A"
+				item: "kubejs:rose_quartz_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -19.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1B5288FD0602ECDC"]
+			id: "7B35DC5287E45E32"
+			subtitle: "Logic upgraded!"
+			tasks: [{
+				id: "31B221A191BE5EDE"
+				item: "kubejs:electron_tube_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -20.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7B35DC5287E45E32"]
+			id: "59AC01EE88361B2A"
+			subtitle: "Full steam ahead!"
+			tasks: [{
+				id: "1C34029F3E82006B"
+				item: "kubejs:track_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -19.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1AF61723122CD57F"]
+			description: ["I personally enjoy Earl Gray tea myself, try some!"]
+			id: "4AA110E53E446F07"
+			subtitle: "It's great with tea!"
+			tasks: [{
+				id: "5095457D8E4B9A4A"
+				item: "kubejs:honey_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: 20.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4AA110E53E446F07"]
+			id: "3CCEB1500AFFD218"
+			subtitle: "Who lives in a pineapple under the sea?"
+			tasks: [{
+				id: "232E71752926B165"
+				item: "kubejs:sea_lantern_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: 19.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6762D7F87F3F59F3"]
+			id: "4AF48E980CCBCE3B"
+			subtitle: "Create's foundational material."
+			tasks: [{
+				id: "145CBB1E966FC57C"
+				item: "kubejs:andesite_alloy_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -18.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7D825E2854279E2C"]
+			id: "0999064FC6C4C5FE"
+			subtitle: "Very shiny"
+			tasks: [{
+				id: "2B055B4AC444B04D"
+				item: "kubejs:brass_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2B203810B76A8C0A"]
+			id: "7665244BC5744A0A"
+			subtitle: "Look! It's Martian sand!"
+			tasks: [{
+				id: "4E449E0F397979F5"
+				item: "kubejs:red_sand_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: 16.5d
+			y: -19.5d
+		}
+		{
+			dependencies: ["4AF48E980CCBCE3B"]
+			description: ["Zinc ore actually emits some toxic fumes when smelted, so this is a bit awkward..."]
+			id: "7D825E2854279E2C"
+			subtitle: "Mostly only for brass..."
+			tasks: [{
+				id: "6893B960970E8F8D"
+				item: "kubejs:zinc_singularity"
+				type: "item"
+			}]
+			x: -16.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6669529B330258FB"]
+			id: "7076B3EE15B33C23"
+			subtitle: "This might be very difficult to automate."
+			tasks: [{
+				id: "749E4B52142E3EAF"
+				item: "kubejs:end_crystal_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -16.5d
+			y: 18.0d
+		}
+		{
+			dependencies: ["5A411EC4C3F730AF"]
+			description: [
+				"<shake>*laughing maniacally*</shake>"
+				""
+				"&o<shake>FINALLY!</shake>&r"
+				""
+				"<shake>I've been trying to catch you boys all day!</shake>"
+				""
+				"Now that I've got you right where I want you..."
+				""
+				"*brings out a mountain of cash from his pocket*"
+				""
+				"&aI'd like to buy all of your chocolate.&r"
+				""
+				"-+-"
+				""
+				"A Spongebob reference."
+			]
+			id: "2E964E3859C482A9"
+			rewards: [{
+				count: 1024
+				id: "58741798889AF961"
+				item: "minecraft:netherite_block"
+				type: "item"
+			}]
+			subtitle: "CHOCOLATE? CHOCOLATE? CHOCOLATE!!!!!"
+			tasks: [{
+				id: "33FCC4E63EFB1237"
+				item: "kubejs:chocolate_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -18.0d
+			y: 16.5d
+		}
+		{
+			dependencies: ["2E964E3859C482A9"]
+			description: ["Try some Earl Gray tea, might just provide enough vitality to get you through this one."]
+			id: "6669529B330258FB"
+			subtitle: "Best enjoyed with a cup of tea."
+			tasks: [{
+				id: "5CE15E7D6ED67BF3"
+				item: "kubejs:builders_tea_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -18.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["63BBAEF6C31F1C1D"]
+			id: "0BCC4658B1525915"
+			subtitle: "/tpa"
+			tasks: [{
+				id: "2B2527CBAAB5A888"
+				item: "kubejs:ender_pearl_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: 18.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"5587D80342F8CAEE"
+				"2F9E165A7643EC15"
+			]
+			description: ["Everything is fine here chief"]
+			id: "63BBAEF6C31F1C1D"
+			subtitle: "*light mode*"
+			tasks: [{
+				id: "495BF0CFC9BA5E73"
+				item: "kubejs:tinted_glass_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: 18.0d
+			y: -16.0d
+		}
+		{
+			dependencies: ["7D62F82D07137026"]
+			id: "0E7069A0CF461FAF"
+			subtitle: "The tools of the Creator."
+			tasks: [
+				{
+					id: "4F8370680B7192C9"
+					item: "kubejs:final_sword"
+					type: "item"
+				}
+				{
+					id: "4FE5862CECE32A8A"
+					item: "kubejs:final_pickaxe"
+					type: "item"
+				}
+				{
+					id: "2700AE63E1262479"
+					item: "kubejs:final_axe"
+					type: "item"
+				}
+				{
+					id: "7AB11B0CE29F8EA8"
+					item: "kubejs:final_shovel"
+					type: "item"
+				}
+				{
+					id: "7DF5B623D8502F9F"
+					item: "kubejs:final_hoe"
+					type: "item"
+				}
+			]
+			title: "&l<rainb>Instrumenta Omnipotens</rainb>"
+			x: -3.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["7D62F82D07137026"]
+			description: [""]
+			id: "6EA37B17D3E8D6DC"
+			subtitle: "Armor of the Creator."
+			tasks: [
+				{
+					id: "620DD50BF1826F19"
+					item: "kubejs:final_helmet"
+					type: "item"
+				}
+				{
+					id: "6CE7690C2492FA1D"
+					item: "kubejs:final_chestplate"
+					type: "item"
+				}
+				{
+					id: "16B1EB4D64821F4C"
+					item: "kubejs:final_leggings"
+					type: "item"
+				}
+				{
+					id: "741E93B7515E1A4A"
+					item: "kubejs:final_boots"
+					type: "item"
+				}
+			]
+			title: "&l<rainb>Arma Omnipotens</rainb>"
+			x: 3.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["1544915BBE4467E4"]
+			id: "4F8E459413F29159"
+			subtitle: "Good luck."
+			tasks: [
+				{
+					id: "5B27C6D23E410D06"
+					item: "kubejs:concrete_black_singularity"
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "19A95F31F5CB4706"
+					item: "kubejs:concrete_white_singularity"
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "47815AB5F1AA1752"
+					item: "kubejs:concrete_pink_singularity"
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "28C5A25B97C19758"
+					item: "kubejs:concrete_orange_singularity"
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "1C7B3DD61250CA13"
+					item: "kubejs:concrete_red_singularity"
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "7D261CA53FD9122B"
+					item: "kubejs:concrete_gray_singularity"
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "289804B6869D2FAA"
+					item: "kubejs:concrete_yellow_singularity"
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "6DBD52CA265FFCEF"
+					item: "kubejs:concrete_brown_singularity"
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "0A89AFDE8C14CC3D"
+					item: "kubejs:concrete_cyan_singularity"
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "550C7408B785105F"
+					item: "kubejs:concrete_green_singularity"
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "5747E5F187A8FAD5"
+					item: "kubejs:concrete_light_gray_singularity"
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "42878BA1F3E120BD"
+					item: "kubejs:concrete_light_blue_singularity"
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "25A4A1F32B62B15F"
+					item: "kubejs:concrete_lime_singularity"
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "096292091963949D"
+					item: "kubejs:concrete_blue_singularity"
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "40BF2F4EC2AE4675"
+					item: "kubejs:concrete_magenta_singularity"
+					match_nbt: true
+					type: "item"
+				}
+				{
+					id: "40AB007036CB0AD1"
+					item: "kubejs:concrete_purple_singularity"
+					match_nbt: true
+					type: "item"
+				}
+			]
+			title: "The Concrete Singularities"
+			x: 16.5d
+			y: 18.0d
+		}
+		{
+			dependencies: ["1C30A2D6BD191C6A"]
+			description: ["Just need to loosen up the souls a bit, nothing is wrong with that."]
+			id: "41220EA822DD6B9F"
+			subtitle: "Don't think about it."
+			tasks: [{
+				id: "1BA4A0456CC76355"
+				item: "kubejs:soul_sand_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: 18.0d
+			y: 16.5d
+		}
+		{
+			dependencies: ["41220EA822DD6B9F"]
+			id: "1544915BBE4467E4"
+			subtitle: "Don't question it."
+			tasks: [{
+				id: "04BA94F6C3CD6E88"
+				item: "kubejs:soul_soil_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: 18.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["0BCC4658B1525915"]
+			description: ["*creeper explosion*"]
+			id: "1AF61723122CD57F"
+			subtitle: "SSSssssssss..."
+			tasks: [{
+				id: "2E24AB8C13DA10E2"
+				item: "kubejs:gunpowder_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: 19.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7281437657B6287F"]
+			description: ["I don't know what to put here."]
+			id: "43D0F0BE8749A33C"
+			subtitle: "Feeling blue?"
+			tasks: [{
+				id: "32C29D313FDAB36C"
+				item: "kubejs:lapis_singularity"
+				match_nbt: true
+				type: "item"
+			}]
+			x: -18.0d
+			y: -20.0d
+		}
+		{
+			dependencies: ["7076B3EE15B33C23"]
+			id: "48F7AA720F364C68"
+			subtitle: "Probably easy to automate..."
+			tasks: [{
+				id: "6B3E71A642D817B7"
+				item: "kubejs:potion_base_singularity"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["4F8E459413F29159"]
+			id: "16EFBAF2CDCCCA8C"
+			subtitle: "This should be a piece of cake... right?"
+			tasks: [{
+				id: "74929691DDBBDC17"
+				item: "kubejs:blaze_cake_singularity"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["1E1D3F1D96D2D774"]
+			id: "7D62F82D07137026"
+			subtitle: "H.E.A for short."
+			tasks: [
+				{
+					id: "65BD9FEBF54618EA"
+					item: "kubejs:high_entropy_alloy_nugget"
+					type: "item"
+				}
+				{
+					id: "5CC85E58EB2CAD02"
+					item: "kubejs:high_entropy_alloy"
+					type: "item"
+				}
+			]
+			title: "Presenting High Entropy Alloy"
+			x: 0.0d
+			y: 14.5d
+		}
+		{
+			dependencies: ["7D62F82D07137026"]
+			id: "16DE8734477FB97A"
+			tasks: [
+				{
+					id: "594D2922462C0776"
+					item: "kubejs:command_block"
+					type: "item"
+				}
+				{
+					id: "4F0A363F9D15B0B5"
+					item: "kubejs:chain_command_block"
+					type: "item"
+				}
+				{
+					id: "505C85AB532327F6"
+					item: "kubejs:repeating_command_block"
+					type: "item"
+				}
+			]
+			title: "Command Blocks"
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"48F7AA720F364C68"
+				"16EFBAF2CDCCCA8C"
+			]
+			id: "1E1D3F1D96D2D774"
+			size: 2.0d
+			tasks: [{
+				id: "15AE2DD45E11D798"
+				item: "kubejs:final_singularity"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 18.0d
+		}
+	]
+	subtitle: ["<rainb>Are you sure you want to do this?</rainb>"]
+	title: "Epilogue"
+}

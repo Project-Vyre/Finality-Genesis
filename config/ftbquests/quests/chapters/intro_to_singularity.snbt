@@ -1,0 +1,1085 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "intro_to_singularity"
+	group: ""
+	icon: "minecraft:crying_obsidian"
+	id: "063BF37EE3F476D4"
+	images: [{
+		height: 2.8106701366297986d
+		image: "minecraft:textures/gui/presets/packtitle.png"
+		rotation: 0.0d
+		width: 8.0d
+		x: 0.0d
+		y: -4.0d
+	}]
+	order_index: 0
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"&dHello! The 1.20.1 port of this modpack is a work in progress and is in a beta state. Please report any bugs you encounter on the Finality Genesis GitHub Issues page, thank you!&r"
+				""
+				"If you wish to play the modpack on its intended difficulty, set the difficulty to &cHard&r. For obvious reasons, this is optional."
+				""
+				"Quests on this chapter are not expected to be completed on the first few days."
+				""
+				"The rest of the chapters can be accessed after you click the &acheckmark&r here and move your cursor to the left edge of your screen."
+				""
+				"If you are playing with friends, please do not forget to make a party with &aFTB Teams&r! Press &dE&r to open your inventory and look for three person figures on the top left corner."
+				""
+				"This modpack is not complete and development is ongoing, but the end goal is &6reachable&r."
+				"{@pagebreak}"
+				"Press &bX&r to crawl."
+				""
+				"Press &eY&r while your cursor is hovering over an item to find that same item in a nearby chest. White particles will show up inside of it through the walls."
+				""
+				"Also, take the time now to SET YOUR KEYBINDS and adjust volume levels if needed."
+				""
+				"Tips for using &l&2JEI&r are on the next few pages in addition to &eLootr&r chest info. Just don't say I didn't warn you if your Lootr chest blows up."
+				"{@pagebreak}"
+				"&aJEI Tips and Tricks&r"
+				""
+				"- &bLeft clicking&r items shows how to get them, with all the methods shown at the top of the recipe viewing window where all those tabs are."
+				""
+				"- &3Right clicking&r items shows all the recipes that the item is used in."
+				""
+				"- &l&9Fluids&r&r in the recipe viewing area can be &bleft clicked&r to find out how to make them. This especially applies to filling by Create's Spout recipes."
+				""
+				"- Press &dCtrl + F&r to focus the search bar then start typing. "
+				""
+				"- If you want to clear the search bar instantly, do &cCtrl + A&r then press &cBackspace&r."
+				""
+				"- To search by mod, use &d@&r then type the modid of that mod. Examples: &d@create&r or &d@createaddition&r or &d@extendedcrafting&r"
+				""
+				"- To search by tags, use &b$&r then type the item tag you want to look up. Examples: &b$wood&r or &b$planks&r"
+				""
+				"&l&eLootr&r info is on the next page."
+				"{@pagebreak}"
+				"&l&eLootr&r chests provide a unique instance of loot for each player, so what your friends get can be different from what you get. It is common courtesy not to break them."
+				""
+				"- Lootr Chests DO NOT say if they are a trapped chest or not, even with Jade. What does this mean for you?"
+				""
+				"&l&c<shake>Check for TNT or redstone around each Lootr chest.</shake>&r"
+				"{@pagebreak}"
+				"Thinking of no longer using Patchouli for the guide book... information below is not relevant until it is more up to date."
+				""
+				"-+-"
+				""
+				"If you lose the &5Tome of Finality&r, it is reclaimable from Emergency Items (broken heart icon) on the right. You can also craft the guidebook with two sticks!"
+				""
+				"However, the book is not finished and won't be for a while. There is some info that isn't present in FTB Quests, however."
+			]
+			icon: "kubejs:brass_singularity"
+			id: "4A691BB889286C89"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1F326401E791AF1B"
+				table_id: 6652661467762805826L
+				type: "random"
+			}]
+			shape: "rsquare"
+			size: 1.5d
+			subtitle: "Click me to check the description of this button."
+			tasks: [
+				{
+					id: "10D0DC144CD6061E"
+					title: "You have acknowledged the button."
+					type: "checkmark"
+				}
+				{
+					id: "69C9A8653C2DA100"
+					item: {
+						Count: 1
+						id: "minecraft:wooden_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "173D685495C0B44E"
+					item: "ftbquests:book"
+					type: "item"
+				}
+			]
+			title: "Introduction Node - Hi! Welcome to Finality."
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"You may notice in your inventory that you come with two different items... a &4dark ring&r and an &6amulet&r."
+				""
+				"The &6Enigmatic Amulet&r keeps &l&oall&r &aexperience&r and &ditems&r on &cdeath&r, just make sure it is in your player's inventory or in the Curios accessories charm slot."
+				""
+				"The ring on the other hand is a double edged sword that cuts deeply."
+				""
+				"Once you wear the &l&4Ring of the Seven Curses&r, it is bound to you... &ceternally&r."
+				""
+				"Keep an eye out for extra shiny loot that may grant you special abilities!"
+			]
+			hide: true
+			icon: {
+				Count: 1
+				id: "enigmaticlegacy:enigmatic_amulet"
+				tag: {
+					AssignedColor: 0.1f
+				}
+			}
+			id: "6EEDB74144BCAD6C"
+			rewards: [{
+				id: "63B4F8ECA1B5F39F"
+				table_id: 3533172865185366803L
+				type: "random"
+			}]
+			shape: "rsquare"
+			subtitle: "Power is a double edged sword, choose wisely."
+			tasks: [{
+				id: "488C52212FD6799D"
+				title: "I accept."
+				type: "checkmark"
+			}]
+			title: "Introduction to Enigmatic Legacy"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"Certain \"zombies\" are a bit different."
+				""
+				"Oh and certain structures may be different, so keep an eye out for that. Also be sure to check around every Lootr chest in case there is TNT!"
+			]
+			hide: true
+			icon: {
+				Count: 1
+				id: "enigmaticlegacy:etherium_sword"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "4913D65B3D761C6F"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "19ECA5AD05CE2E28"
+				table_id: 946488619696883447L
+				type: "random"
+			}]
+			shape: "rsquare"
+			subtitle: "The night is ever so slightly more dangerous, see for yourself."
+			tasks: [
+				{
+					entity: "minecraft:zombie"
+					icon: "minecraft:rotten_flesh"
+					id: "78DB3180CA1FD879"
+					type: "kill"
+					value: 64L
+				}
+				{
+					entity: "minecraft:skeleton"
+					icon: "minecraft:bone"
+					id: "2F4CA9AFAB3CC7A8"
+					type: "kill"
+					value: 32L
+				}
+				{
+					entity: "minecraft:creeper"
+					icon: "minecraft:gunpowder"
+					id: "10DA198E3B5A7642"
+					type: "kill"
+					value: 8L
+				}
+				{
+					entity: "minecraft:spider"
+					icon: "minecraft:string"
+					id: "3A5644DA06E25C5F"
+					type: "kill"
+					value: 32L
+				}
+				{
+					entity: "minecraft:enderman"
+					icon: "minecraft:ender_pearl"
+					id: "65B6FE5E8BFB67C4"
+					type: "kill"
+					value: 16L
+				}
+			]
+			title: "Are you sure this is vanilla?"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"You're welcome~"
+				""
+				"Another thing, I have added Apotheosis gem crushing with Create's Millstone and Crushing Wheels, so have fun with making the most over powered tools to ever exist with it. Gem dust galore!"
+				""
+				"Let's just say my friends during playtesting showed me a shovel that he made deleting entire chunks to prove this fact."
+				""
+				"If you are questioning the chanced drops, it's actually because Create assigns a percent to each item in the item stack."
+			]
+			hide: true
+			id: "5693356D2578CF5E"
+			rewards: [
+				{
+					id: "04DB34818E781059"
+					item: "farmersdelight:sweet_berry_cheesecake"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "693CA5AE8141BD2D"
+					table_id: 946488619696883447L
+					type: "choice"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "Hey, so Apotheosis puts your Sugar Cane, Bamboo and Cactus on steroids."
+			tasks: [
+				{
+					count: 64L
+					id: "1F80310E2B4B5CA8"
+					item: "minecraft:sugar_cane"
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "2B4116DC02EF2E64"
+					item: "minecraft:bamboo"
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "5DEF2DD3DDFA3A5F"
+					item: "minecraft:cactus"
+					type: "item"
+				}
+			]
+			title: "I don't remember Sugar Cane growing that tall..."
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"You can now &arepair&r your tools in the crafting grid, so you won't have to throw away your tools."
+				""
+				"If you still find yourself running out of string or wool, gather &2flax seeds&r and plant them. &aFlax&r can then be refined with a &6Millstone&r to get additional string and seeds."
+				""
+				"This process can then be automated with &6Create&r and its &7Mechanical Harvesters&r."
+				""
+				"Also, if you didn't read the tooltip for &6Campfires&r like the majority of players who skim over &c<shake>everything</shake>&r, they can now regenerate your health. &6<wave>Cozy!</wave>&r"
+			]
+			hide: true
+			icon: "minecraft:crafting_table"
+			id: "0AE06EB85B6E1CB6"
+			rewards: [
+				{
+					id: "6AECAF1DB1A11A84"
+					item: "minecraft:raw_iron_block"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "376E44019CCE136C"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "3407EBD71CDAC867"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					id: "139BB63F1B9DEB8C"
+					item: "supplementaries:flax"
+					type: "item"
+				}
+				{
+					id: "0B0A46007FC704BC"
+					item: "supplementaries:flax_seeds"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "No really, they are very convenient."
+			tasks: [
+				{
+					id: "23A2283ADCF520ED"
+					item: "minecraft:campfire"
+					type: "item"
+				}
+				{
+					id: "6102D3B71CF616FF"
+					item: {
+						Count: 1
+						id: "minecraft:stone_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6D0C51FCA5C0A1D2"
+					title: "Make sure to make an FTB Teams party to synchronize quest progress!"
+					type: "checkmark"
+				}
+				{
+					id: "7C483B82D80A8F75"
+					item: "minecraft:bone_meal"
+					match_nbt: false
+					type: "item"
+				}
+			]
+			title: "Convenient Utilities Ch.1"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0AE06EB85B6E1CB6"]
+			description: [
+				"Instructions on how to use the Eccentric Tome are located in its tooltip. &b<wave>You're welcome!</wave>&r"
+				""
+				"As for Farmer's Delight tools, obviously you will need a knife to use the cutting board."
+				""
+				"Wondering what chalk can be used for?"
+				""
+				"It can be used for &ddrawing&r, &eoutlining builds&r, &eoutlining the path&r of a radial contraption farm and help you &bnavigate&r through &7cave systems&r, just in case you get lost. Additional symbols can be unlocked via advancements."
+				""
+				"Lastly, Fletching Tables are now usable and can make arrows now thanks to &dApotheosis&r!"
+			]
+			icon: {
+				Count: 1
+				id: "eccentrictome:tome"
+				tag: {
+					"eccentrictome:mods": { }
+				}
+			}
+			id: "2EF808209CCECE6A"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "30A53C3FE3D2ED84"
+					table_id: 7159138545964995551L
+					type: "random"
+				}
+				{
+					id: "7F6F973D2C757169"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			shape: "rsquare"
+			subtitle: "Scientia Consolidationis"
+			tasks: [
+				{
+					id: "781047FC0FE342C3"
+					item: {
+						Count: 1
+						id: "eccentrictome:tome"
+						tag: {
+							"eccentrictome:mods": { }
+						}
+					}
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "045F99F148F9E24C"
+					item: "farmersdelight:cutting_board"
+					type: "item"
+				}
+				{
+					id: "446D17BA62CD3F0B"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "farmersdelight:tools/knives"
+						}
+					}
+					title: "Any #farmersdelight:tools/knives"
+					type: "item"
+				}
+				{
+					id: "1277B528ADC1D6F8"
+					item: {
+						Count: 1
+						id: "farmersdelight:skillet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "7C06B649A52E60C0"
+					item: "farmersdelight:cooking_pot"
+					type: "item"
+				}
+				{
+					id: "0C4AF3D94C5361F1"
+					item: "farmersdelight:stove"
+					type: "item"
+				}
+				{
+					id: "2EFF728C6194E967"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "chalk:chalks"
+						}
+					}
+					title: "Any #chalk:chalks"
+					type: "item"
+				}
+				{
+					id: "27107A7D7AA97393"
+					item: {
+						Count: 1
+						id: "chalk:chalk_box"
+						tag: {
+							Items: [
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+								{
+									Count: 0b
+									id: "minecraft:air"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4896EF8D0C434B5E"
+					item: "minecraft:fletching_table"
+					type: "item"
+				}
+			]
+			title: "Convenient Utilities Ch.2"
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2EF808209CCECE6A"]
+			description: [
+				"&lThis quest node description has multiple pages that contain information for each item that does not explain its use through a tooltip.&r"
+				""
+				"Please read through them to learn more."
+				"{@pagebreak}"
+				"About Tempad:"
+				""
+				"Think of the &dTempad&r device as a personal waystone with a cooldown. It is very effective and customizable as well!"
+				""
+				"This quest also has a hidden step, but it requires you to get to The End first."
+				"{@pagebreak}"
+				"About Travel Anchors:"
+				""
+				"Teleporter elevators, but omni-directional!"
+				""
+				"&3Travel Anchors&r are very versatile and provide instantaneous travel in any direction with the &3Travel Staff&r. "
+				""
+				"They are also more reasonably priced compared to OpenBlocks Elevator which use just wool and an ender pearl in the middle."
+				""
+				"You can also get the Teleportation enchantment which allows you to utilize your tools as a &3Travel Staff&r."
+				""
+				"If you want to increase the range, get the Range enchantment. Just make sure the enchanted book has the Travel Anchors mod ID."
+				""
+				"-+-"
+				""
+				"To unlock the &3Travel Anchor&r to rename it, use a stick!"
+				"{@pagebreak}"
+				"About &eMega Torches&r from Torchmaster:"
+				""
+				"They prevent spawns in a 64 block radius from their position."
+				"{@pagebreak}"
+				"&7Mechanical Extruders&r can be used to make Create's orestones quite easily and can make smooth stone if the recipe filter is set."
+				"{@pagebreak}"
+				"The &aCreate Chunk Loader&r makes it so that trains and moving contraptions are able to load chunks themselves instead of using an incompatible stationary chunk loader."
+			]
+			icon: "tempad:tempad"
+			id: "5E5E9241EB84A4E9"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5B59718FEA832387"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "53C57E5487C6BEF8"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			shape: "rsquare"
+			subtitle: "For all time. Always."
+			tasks: [
+				{
+					id: "265931DE467928C8"
+					item: "tempad:tempad"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "555201282747EC85"
+					item: "travelanchors:travel_anchor"
+					title: "This is the Travel Anchor. You can name it too!"
+					type: "item"
+				}
+				{
+					id: "447EE71ED57A4615"
+					item: "travelanchors:travel_staff"
+					title: "The omni-directional teleportation rod!"
+					type: "item"
+				}
+				{
+					id: "1BDA8E7D4D6D138E"
+					item: "torchmaster:megatorch"
+					type: "item"
+				}
+				{
+					id: "1BDF17D753DA6548"
+					item: "create_mechanical_extruder:mechanical_extruder"
+					type: "item"
+				}
+				{
+					id: "6FECCB0334CF7626"
+					item: {
+						Count: 1
+						id: "monobank:monobank"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "7F1707757DF45D46"
+					item: "create_power_loader:andesite_chunk_loader"
+					type: "item"
+				}
+				{
+					id: "65A741FBD62349C1"
+					item: "create_power_loader:brass_chunk_loader"
+					type: "item"
+				}
+				{
+					id: "18D80E47FF8BB160"
+					item: "kubejs:deconstructor"
+					type: "item"
+				}
+			]
+			title: "Convenient Utilities Ch.3"
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"5E5E9241EB84A4E9"
+				"5098C9DA205BDE8A"
+			]
+			description: ["Unlimited teleports, for all time."]
+			hide: true
+			icon: "tempad:he_who_remains_tempad"
+			id: "38EC0E607FAE4543"
+			rewards: [
+				{
+					id: "5F652AE318FE64A7"
+					type: "xp_levels"
+					xp_levels: 50
+				}
+				{
+					count: 64
+					id: "214EB1AB55507226"
+					item: "minecraft:netherite_block"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "...at the End of time."
+			tasks: [{
+				id: "07E460614DD4774D"
+				item: "tempad:he_who_remains_tempad"
+				type: "item"
+			}]
+			title: "He who remains..."
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0AE06EB85B6E1CB6"]
+			description: [
+				"If you're lost, just play as if it is regular Minecraft."
+				""
+				"It's just that it is Minecraft with a lot more... &c<wave>dangers</wave>&r."
+				""
+				"You may notice that days and nights are longer as well, just so it does not feel like time is flying by."
+				""
+				"Also, I recommend making a backpack so you can handle loot more easily while you are out exploring and adventuring. The default keybind for opening your backpack is &dB&r."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:iron_pickaxe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "03F919758AA7E318"
+			rewards: [
+				{
+					count: 3
+					id: "358E2A2CFE70CDBE"
+					item: "minecraft:raw_gold_block"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "622143AAC4E8F062"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "74F16A4C8B3FAB4F"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "37614DAB7EBD19E6"
+					table_id: 4925255154089711758L
+					type: "random"
+				}
+				{
+					id: "3679FDE7CC174DAE"
+					item: {
+						Count: 1
+						id: "supplementaries:rope_arrow"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "I hope you have at least a base set up by now."
+			tasks: [
+				{
+					id: "142AB5886E71101E"
+					item: {
+						Count: 1
+						id: "minecraft:iron_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "5418A907AB1B1E49"
+					item: "sophisticatedbackpacks:backpack"
+					type: "item"
+				}
+				{
+					id: "71A8BBB9C2D9D525"
+					item: {
+						Count: 1
+						id: "minecraft:shield"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "39BA304983F7DA1C"
+					item: {
+						Count: 1
+						id: "minecraft:bow"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1C93B0D8F5C66FF2"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							Parent: {
+								Items: [ ]
+								SelectedSlot: 0
+								Size: 6
+							}
+						}
+						id: "supplementaries:quiver"
+					}
+					type: "item"
+				}
+			]
+			title: "Getting somewhere..."
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0AE06EB85B6E1CB6"]
+			description: [
+				"This is also &overy&r important..."
+				""
+				"<rainb>Hold [w] to Ponder to learn more!</rainb>"
+				""
+				"You can also access the <rainb>Ponder Index</rainb> from your Esc menu!"
+				""
+				"Here are some tips that I recommend following:"
+				""
+				"- Some <rainb>Ponder</rainb> views have &o&lmultiple scenes&r&r, so be sure to look at the bottom of your screen to see if there is a &lnext arrow&r."
+				""
+				"- Andesite, iron, copper and zinc are important. You will especially need andesite and iron."
+				""
+				"- Many useless vanilla items may no longer be useless when refined through Create's methods. Gravel can now be &9washed&r to make Iron Nuggets, for example."
+				""
+				"- Plan ahead with your logistics and the direction of your rotational force."
+			]
+			icon: "create:andesite_alloy"
+			id: "65FC712C5D7E312D"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "5F48B0E541D258E1"
+				table_id: 7771384237349930739L
+				type: "random"
+			}]
+			shape: "rsquare"
+			size: 3.0d
+			subtitle: "Click me to unlock Create's progression tree!"
+			tasks: [{
+				id: "580921EB09A555A0"
+				title: "Ready to proceed and unlock the Age of Creation? Click me to confirm."
+				type: "checkmark"
+			}]
+			title: "Introduction to Create"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["03F919758AA7E318"]
+			description: [
+				"Once you complete this quest, a chapter page will be unlocked."
+				""
+				"I can only hope that you have made the appropriate preparations for combat."
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:diamond_pickaxe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "13186E7B0D6B6115"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0FBF701F50C3B651"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "25170DED232E55A3"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					exclude_from_claim_all: true
+					id: "2AD714DD20BB5FB1"
+					table_id: 3832275843975625545L
+					type: "random"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "Be prepared."
+			tasks: [{
+				id: "080DD5B7DA2CF335"
+				item: {
+					Count: 1
+					id: "minecraft:diamond_pickaxe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Diamond Pickaxe Acquired!"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["13186E7B0D6B6115"]
+			description: [
+				"The &aNature's Compass&r allows you to find &lbiomes&r."
+				""
+				"The &7Explorer's Compass&r allows you to find &lstructures&r."
+			]
+			icon: "minecraft:compass"
+			id: "650B5FD6B6CAD69C"
+			rewards: [
+				{
+					id: "5550D0D6DDAF20F5"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					id: "0D1D658A5E8614B7"
+					item: "artifacts:mimic_spawn_egg"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "For both explorers and those who seek a certain biome."
+			tasks: [
+				{
+					id: "3BF5145CA2BFA938"
+					item: {
+						Count: 1
+						id: "naturescompass:naturescompass"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "0305240C1F21BE52"
+					item: {
+						Count: 1
+						id: "explorerscompass:explorerscompass"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "Useful Guidance"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"Well, don't be worried about that."
+				""
+				"&2Dried Kelp Blocks&r can be compressed to make Coal with the help of an &6active&r Blaze Burner."
+				""
+				"&7Coal Blocks&r can be compressed to make Diamonds with the help of a &bsuperheated&r Blaze Burner."
+				""
+				"&aEmeralds&r are renewable from mixing some glass, quartz and some iron in a &bsuperheated&r Blaze Burner."
+				""
+				"&7Tuff&r can be made from compacting either Gravel or Deepslate in a &bsuperheated&r or &6heated&r &7basin&r with some lava."
+				""
+				"&9Phantom Membranes&r can be made from &3<wave>haunting</wave>&r &4Rotten Flesh&r."
+				""
+				"&8Netherite&r is also now renewable with the use of Crushing Wheels by crushing &4Netherrack&r."
+				""
+				"Netherrack can now be renewed with &cInstant Health II&r potions, fully automated."
+			]
+			hide: true
+			hide_dependency_lines: true
+			icon: "minecraft:coal_block"
+			id: "0B185A46D4C2A558"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1BFDB0902256E94E"
+				table_id: 103743719166323827L
+				type: "random"
+			}]
+			shape: "rsquare"
+			subtitle: "Worried about running out of materials?"
+			tasks: [
+				{
+					id: "50344CAB6CFC2ADA"
+					item: "minecraft:coal"
+					type: "item"
+				}
+				{
+					id: "7636931033E3AEE3"
+					item: "minecraft:coal_block"
+					type: "item"
+				}
+				{
+					id: "6CB9E98C2793DF71"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "5615AE22BD72CECF"
+					item: "minecraft:diamond_block"
+					type: "item"
+				}
+				{
+					id: "3EC1D4E2D48C55FD"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+				{
+					id: "3ADE27B161EAF455"
+					item: "minecraft:deepslate"
+					type: "item"
+				}
+				{
+					id: "2FC324B035EC0BBC"
+					item: "minecraft:tuff"
+					type: "item"
+				}
+				{
+					id: "3EA870622004D7BE"
+					item: "minecraft:netherrack"
+					type: "item"
+				}
+				{
+					id: "5712112A95EF8468"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "33CDB492E3D94E84"
+					item: "minecraft:phantom_membrane"
+					type: "item"
+				}
+			]
+			title: "A Heads Up: Infinite Materials"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			hide_dependency_lines: true
+			id: "4843FF760BED67F6"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "17A86BAA03F45FA2"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "7CB7E8EA2152D35D"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			shape: "rsquare"
+			subtitle: "Like the menu music? Well, now they are here."
+			tasks: [
+				{
+					id: "6C06825EE4E8EC11"
+					item: "kubejs:music_disc_arlecchino_battle_theme"
+					type: "item"
+				}
+				{
+					id: "71E5597F31D4B61C"
+					item: "kubejs:music_disc_columbina_battle_theme"
+					type: "item"
+				}
+				{
+					id: "33B53D609EA0718C"
+					item: "kubejs:music_disc_pantalone_battle_theme"
+					type: "item"
+				}
+				{
+					id: "7D1B97A38AB73FD8"
+					item: "kubejs:music_disc_sandrone_battle_theme"
+					type: "item"
+				}
+				{
+					id: "39A3B576D71EE3A0"
+					item: "kubejs:music_disc_bad_deeds_inst"
+					type: "item"
+				}
+				{
+					id: "2C0865E107C53FEF"
+					item: "kubejs:music_disc_boo_hoo"
+					type: "item"
+				}
+				{
+					id: "5F3D147FB5DB25B8"
+					item: "kubejs:music_disc_from_the_shadows"
+					type: "item"
+				}
+				{
+					id: "46848EE92C0D807E"
+					item: "kubejs:music_disc_get_away_inst"
+					type: "item"
+				}
+				{
+					id: "03D4FD50484C2108"
+					item: "kubejs:music_disc_heart_of_the_wicked"
+					type: "item"
+				}
+				{
+					id: "163D75418430133B"
+					item: "kubejs:music_disc_mirror_mirror_inst"
+					type: "item"
+				}
+				{
+					id: "50E1A362161ADC6F"
+					item: "kubejs:music_disc_open_up_inst"
+					type: "item"
+				}
+				{
+					id: "01F274BC0F5CD6AA"
+					item: "kubejs:music_disc_silent_night"
+					type: "item"
+				}
+				{
+					id: "1A765A58EF2FA74D"
+					item: "kubejs:music_disc_worst_nightmare"
+					type: "item"
+				}
+				{
+					id: "4BEDEE986C0213EC"
+					item: "kubejs:music_disc_black_white_red"
+					type: "item"
+				}
+			]
+			title: "Menu Music Discs"
+			x: -1.5d
+			y: -1.5d
+		}
+	]
+	subtitle: ["This chapter serves both as an introduction and some awareness of utilities."]
+	title: "Humble beginnings..."
+}

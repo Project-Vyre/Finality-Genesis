@@ -1,0 +1,83 @@
+{
+	default_hide_dependency_lines: true
+	default_quest_shape: ""
+	filename: "miscellaneous_utilities"
+	group: "668E3EA3A7A91B79"
+	icon: "minecraft:experience_bottle"
+	id: "39AB89A7001538E5"
+	order_index: 4
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["2EF808209CCECE6A"]
+			id: "35DE8799CDD5E313"
+			tasks: [{
+				id: "6F50C61194779F98"
+				title: "Click me to reveal nodes..."
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			id: "7F2A0B88D493FCC2"
+			subtitle: "Wanted to go through walls? Use this."
+			tasks: [{
+				id: "6F6DDF0492C2944D"
+				item: "portablehole:portable_hole"
+				type: "item"
+			}]
+			title: "Wall Hacks 101!"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			id: "0CF1E1640EB623A0"
+			subtitle: "It's automated fishing!"
+			tasks: [{
+				id: "75E40E6B48C6EAAD"
+				item: "bobberdetector:bobber_detector"
+				type: "item"
+			}]
+			title: "Fishing with Create"
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			id: "185EDDB4B4741310"
+			subtitle: "Automatic crafting from the future!"
+			tasks: [{
+				id: "77DCD61D7A530148"
+				item: "quark:crafter"
+				type: "item"
+			}]
+			title: "The Crafter"
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["35DE8799CDD5E313"]
+			description: [
+				"Press H (default keybind) to access your skill slots."
+				""
+				"They are <rainb>magical</rainb> slots."
+			]
+			id: "61BBA4857719B2A4"
+			subtitle: "Storing items in skill slots."
+			tasks: [{
+				id: "75739AB63EF09B14"
+				item: "skillslots:unlock_slot"
+				type: "item"
+			}]
+			title: "Skill Slots"
+			x: 0.0d
+			y: -1.5d
+		}
+	]
+	subtitle: ["Some miscellaneous utilities..."]
+	title: "Miscellaneous Utilities"
+}

@@ -1,0 +1,166 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "architect_age"
+	group: "4B44486C4CFAE9FB"
+	icon: "create:polished_cut_ochrum"
+	id: "478E1A54F8FF90FA"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["0823CEAA341364B2"]
+			description: ["At least try each of them, because I believe they would look wonderful in a lot of builds. Look at CraisinLord's Integrated structures!"]
+			id: "56FBABA56EE62D70"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "01E49C249D6FE480"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "6EC3E0375A5899A9"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "Collect the basic building materials for each color palette in the Minecraft group."
+			tasks: [
+				{
+					count: 16L
+					id: "14D7CE6EF3BC1EDE"
+					item: "minecraft:granite"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "1AF5F3E831EF1E10"
+					item: "minecraft:diorite"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "5FEEB9ED71A32E1E"
+					item: "minecraft:andesite"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "7908C28073C6AAD6"
+					item: "minecraft:deepslate"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "51A183CBF465BD00"
+					item: "minecraft:dripstone_block"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "08986BA7D1CB433E"
+					item: "minecraft:tuff"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "632BF358D98CE08D"
+					item: "minecraft:calcite"
+					type: "item"
+				}
+			]
+			title: "Base Ingredients: The Vanilla Palette"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "0823CEAA341364B2"
+			subtitle: "An architect's best friend."
+			tasks: [{
+				id: "34B6FC50695C4DE6"
+				item: "minecraft:stonecutter"
+				type: "item"
+			}]
+			title: "The Mighty Stonecutter"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0823CEAA341364B2"]
+			description: [
+				"At least try each of them, because I believe they would look wonderful in a lot of builds. Look at CraisinLord's Integrated structures!"
+				""
+				"Limestone can be made by making honey flow into lava."
+				""
+				"Scoria is extremely burned chocolate, with Scorchia being even more burnt."
+			]
+			id: "257DBCB0BE981895"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "570389A2FD87E153"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "788E5C267D3E956D"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+			]
+			subtitle: "Collect the basic building materials for each color palette in the Create group."
+			tasks: [
+				{
+					count: 16L
+					id: "4F22F542B07F0480"
+					item: "create:crimsite"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "34B5F65742FD89FA"
+					item: "create:veridium"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "254FD726D4A1E151"
+					item: "create:asurine"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "4003D3C2318A1198"
+					item: "create:ochrum"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "333F680C2A414A37"
+					item: "create:limestone"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "7B84394A85A07A37"
+					item: "create:scoria"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "66871302D69AEA93"
+					item: "create:scorchia"
+					type: "item"
+				}
+			]
+			title: "Base Ingredients: The Create Palette"
+			x: 1.5d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Create's decorative palette colors."]
+	title: "Create: Architect Age"
+}

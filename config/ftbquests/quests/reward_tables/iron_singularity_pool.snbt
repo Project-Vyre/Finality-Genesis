@@ -1,0 +1,12 @@
+{
+	icon: "kubejs:iron_singularity"
+	id: "0BEFBCE799303954"
+	loot_size: 1
+	order_index: 21
+	rewards: [
+		{ item: "kubejs:copper_coin" }
+		{ item: "kubejs:iron_coin", weight: 0.4f }
+		{ item: "minecraft:iron_block", weight: 50.0f }
+	]
+	title: "Iron Singularity Pool"
+}

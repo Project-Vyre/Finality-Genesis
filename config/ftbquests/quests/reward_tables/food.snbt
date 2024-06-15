@@ -1,0 +1,25 @@
+{
+	icon: "create:builders_tea"
+	id: "6BD980CA105006F3"
+	loot_size: 3
+	order_index: 5
+	rewards: [
+		{ item: "create:builders_tea" }
+		{ item: "create:sweet_roll" }
+		{ item: "create:honeyed_apple" }
+		{ item: "create:chocolate_glazed_berries" }
+		{ item: "farmersdelight:mixed_salad" }
+		{ item: "farmersdelight:dumplings" }
+		{ item: "farmersdelight:fried_rice" }
+		{ item: "farmersdelight:egg_sandwich" }
+		{ item: "farmersdelight:fried_egg" }
+		{ item: "farmersdelight:stuffed_potato" }
+		{ item: "farmersdelight:kelp_roll_slice" }
+		{ item: "farmersdelight:bacon_sandwich" }
+		{ item: "farmersdelight:vegetable_noodles" }
+		{ item: "farmersdelight:steak_and_potatoes" }
+		{ item: "farmersdelight:fried_rice" }
+	]
+	title: "Food Rewards"
+	use_title: true
+}

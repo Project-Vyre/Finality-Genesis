@@ -1,0 +1,58 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "getting_to_the_end"
+	group: ""
+	icon: "minecraft:end_portal_frame"
+	id: "316C9BB1844BE86C"
+	images: [{
+		height: 144.0d
+		image: "minecraft:textures/gui/presets/end_bg.png"
+		rotation: 0.0d
+		width: 144.0d
+		x: 0.0d
+		y: 3.0d
+	}]
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"4A691BB889286C89"
+				"4E9DB5E5DA145FB7"
+			]
+			hide: true
+			icon: "minecraft:end_portal_frame"
+			id: "34BBD9B70AE0AAB1"
+			shape: "octagon"
+			size: 2.5d
+			subtitle: "All I can say is... good luck."
+			tasks: [{
+				dimension: "minecraft:the_end"
+				icon: "minecraft:end_stone"
+				id: "5098C9DA205BDE8A"
+				type: "dimension"
+			}]
+			title: "Unlocking The End"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "4E9DB5E5DA145FB7"
+			subtitle: "You won't get to the End that easily, however."
+			tasks: [{
+				advancement: "minecraft:story/follow_ender_eye"
+				criterion: ""
+				id: "41ADDCD19E1253FF"
+				type: "advancement"
+			}]
+			title: "Find a Stronghold"
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["It's a bit... complicated."]
+	title: "Getting to the End"
+}

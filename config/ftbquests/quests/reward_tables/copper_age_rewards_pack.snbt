@@ -1,0 +1,16 @@
+{
+	icon: "create:copper_casing"
+	id: "38A1CC7E433B9F99"
+	loot_size: 1
+	order_index: 13
+	rewards: [
+		{ item: "minecraft:raw_copper", weight: 5.0f }
+		{ item: "minecraft:raw_copper_block" }
+		{ item: "minecraft:kelp", weight: 6.0f }
+		{ item: "minecraft:dried_kelp_block" }
+		{ item: "minecraft:dried_kelp", weight: 2.0f }
+		{ count: 16, item: "minecraft:copper_ore", random_bonus: 16, weight: 1.5f }
+		{ count: 16, item: "minecraft:deepslate_copper_ore", random_bonus: 16 }
+	]
+	title: "Copper Age Rewards Pack"
+}

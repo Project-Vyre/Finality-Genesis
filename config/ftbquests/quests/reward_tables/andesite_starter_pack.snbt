@@ -1,0 +1,15 @@
+{
+	icon: "create:andesite_casing"
+	id: "67C3F29676CAACE6"
+	loot_size: 1
+	order_index: 0
+	rewards: [
+		{ count: 3, item: "minecraft:raw_iron", random_bonus: 6, weight: 3.0f }
+		{ count: 2, item: "minecraft:andesite", random_bonus: 2, weight: 7.0f }
+		{ item: "minecraft:raw_iron_block" }
+		{ count: 2, item: "minecraft:iron_nugget", random_bonus: 2, weight: 6.0f }
+		{ item: "minecraft:raw_iron", random_bonus: 3, weight: 4.0f }
+	]
+	title: "Andesite Starter Pack"
+	use_title: true
+}

@@ -1,0 +1,376 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "caupona"
+	group: "2B2D0B6DE31DE8D3"
+	icon: "caupona:clay_cistern"
+	id: "20BAC72CDA50240E"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["03F919758AA7E318"]
+			description: [
+				"Caupona makes heavy use of clay for its cookware! Be sure to get some while you have the chance."
+				""
+				"The guidebook also serves as really good documentation, please use it!"
+				""
+				"As usual, recipes can be seen via &7REI&r or &2JEI&r."
+			]
+			hide: true
+			icon: {
+				Count: 1
+				id: "patchouli:guide_book"
+				tag: {
+					"patchouli:book": "caupona:book"
+				}
+			}
+			id: "0A9BA7131745E23B"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "30F774FF86F9B1BC"
+				table_id: 7771384237349930739L
+				type: "random"
+			}]
+			subtitle: "Caupona's guidebook to your food journey."
+			tasks: [
+				{
+					id: "0C80D796A56B28C5"
+					item: {
+						Count: 1
+						id: "patchouli:guide_book"
+						tag: {
+							"patchouli:book": "caupona:book"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1BB48B03D7917DB8"
+					title: "Click me to reveal the rest of the quest tree."
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0A9BA7131745E23B"]
+			icon: "caupona:portable_brazier"
+			id: "1A361DEF3CEBB1E0"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2D60DF9C3DE8FB90"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+				{
+					id: "42F87102266B7359"
+					type: "xp"
+					xp: 250
+				}
+			]
+			subtitle: "Want to cook on the go? This is for you!"
+			tasks: [
+				{
+					id: "3905C3A037489A76"
+					item: "caupona:clay_portable_brazier"
+					type: "item"
+				}
+				{
+					id: "005280F7C802C394"
+					item: "caupona:portable_brazier"
+					type: "item"
+				}
+			]
+			title: "The Portable Brazier"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0A9BA7131745E23B"]
+			description: [
+				"Next thing to make is the stove."
+				""
+				"Once you have the stove made (in the next quest node) simply &bShift + right click&r to place the Stew Pot on top of whatever stove you decided to craft."
+				""
+				"A hint is provided on the next page on how to make a Stock base so you don't have to figure out all the proportions..."
+				"{@pagebreak}"
+				"Place the following items into the Stew Pot:"
+				""
+				"- 2 chicken"
+				"- 1 bone"
+				""
+				"This was only tested with Egg Drop Soup buut you can put 3 eggs afterward in the Stew Pot grid and begin cooking. This will be recognized as Egg Drop Soup with a Stock base."
+			]
+			icon: "caupona:stew_pot"
+			id: "6C36D237085C8503"
+			rewards: [
+				{
+					id: "47B6370C2142FBA4"
+					type: "xp"
+					xp: 250
+				}
+				{
+					id: "368F5FB64BE3D963"
+					item: "caupona:walnut_sapling"
+					type: "item"
+				}
+				{
+					id: "48D524422C23B03E"
+					item: "caupona:fig_sapling"
+					type: "item"
+				}
+			]
+			subtitle: "Make sure to have lots of water!"
+			tasks: [
+				{
+					id: "7D855A209DD35F19"
+					item: "caupona:clay_cistern"
+					type: "item"
+				}
+				{
+					id: "30C247F590C87CDF"
+					item: "caupona:stew_pot"
+					type: "item"
+				}
+			]
+			title: "Introduction to Stew and Soup Making - The Stewing Pot"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"6C36D237085C8503"
+				"4A6B4230AA91FA05"
+			]
+			description: [
+				"Accepted fuel types are coal and logs, simply place into the slot!"
+				""
+				"Pay attention to the proportions of ingredients and what is not accepted for the recipe."
+				""
+				"If it says &o&l&dMajority&r of a certain ingredient, then make sure there are more of those ingredients in the Stew Pot grid."
+				""
+				"If it says &o&l&cRejects&r of a certain ingredient or ingredients, then make sure there are &l&4none&r of those ingredients in the Stew Pot grid."
+				""
+				"You may have to go through a few tabs if you are using &7REI&r/&2JEI&r in order to view the stew and soup recipes. It's called the &aCook Stew/Soup&r recipe category."
+			]
+			id: "5B5E7384E4E458C1"
+			rewards: [
+				{
+					id: "2B5781C507A5B8BA"
+					type: "xp"
+					xp: 500
+				}
+				{
+					id: "3D38FF1AC9EE12D4"
+					item: "caupona:wolfberry_sapling"
+					type: "item"
+				}
+			]
+			subtitle: "You will obviously need a heat source."
+			tasks: [{
+				id: "76B30065335688AA"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "caupona:stoves"
+					}
+				}
+				title: "Any #caupona:stoves"
+				type: "item"
+			}]
+			title: "Caupona Basics - Stoves"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6C36D237085C8503"]
+			description: [
+				"Leave &estock&r based soup in the Dolium and let it rest in order for it to turn into &6aspic&r. "
+				""
+				"Soup and stew made with &9Nail Soup&r will not turn into aspic!"
+				""
+				"However, aspic is not the only item that can be created with this method."
+			]
+			id: "0F86CC83218D8B9B"
+			rewards: [{
+				id: "7A69CC21F929A639"
+				type: "xp"
+				xp: 500
+			}]
+			subtitle: "How stew and soup turn into aspic, a solidified gelatinous form."
+			tasks: [{
+				id: "506273568993CF4B"
+				item: "caupona:brick_counter_with_dolium"
+				type: "item"
+			}]
+			title: "Resting Pot - The Dolium"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0A9BA7131745E23B"]
+			description: [
+				"There's the &7Stone Gridle&r but it is inefficient with heat transfer, so cooking times are expected to be longer with it."
+				""
+				"I suggest making the &6Copper Frying Pan&r or the &8Iron Frying Pan&r as soon as possible."
+			]
+			id: "4A6B4230AA91FA05"
+			rewards: [
+				{
+					id: "3B32C65A3CB1DA73"
+					type: "xp"
+					xp: 250
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3AD03715D0C5E6C9"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+			]
+			subtitle: "Like frying food? These are for you!"
+			tasks: [{
+				id: "33668B8B89A74DCF"
+				item: "caupona:stone_griddle"
+				type: "item"
+			}]
+			title: "Introduction to Frying Foods"
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4A6B4230AA91FA05"]
+			id: "10D8A77F765401E6"
+			rewards: [
+				{
+					id: "4AC940803486860A"
+					type: "xp"
+					xp: 500
+				}
+				{
+					exclude_from_claim_all: true
+					id: "14882CC14BFAD930"
+					table_id: 7771384237349930739L
+					type: "random"
+				}
+			]
+			subtitle: "Frying foods but faster!"
+			tasks: [
+				{
+					id: "7EF3BDBD522B133A"
+					item: "caupona:copper_frying_pan"
+					type: "item"
+				}
+				{
+					id: "1A89AEEF1AF3B78C"
+					item: "caupona:iron_frying_pan"
+					type: "item"
+				}
+			]
+			title: "Better Heat Conduction!"
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0F86CC83218D8B9B"]
+			description: [
+				"Collect 8 or more &6Walnuts&r and place them into a &oDolium&r with an &7Anvil&r in any of the three slots."
+				""
+				"Afterwards, simply wait a long time with a glass bottle placed in the bowl slot. Eventually, the glass bottle will be turned into a Gravy Boat."
+				""
+				"Gravy Boats are used for providing oil to any adjacent frying pans regardless of what direction it is facing, so have some counter space available!"
+			]
+			id: "5959628CE2B56607"
+			rewards: [{
+				id: "633FF02204B52123"
+				type: "xp"
+				xp: 250
+			}]
+			subtitle: "Oil from walnuts!"
+			tasks: [{
+				id: "01BEA6429836012F"
+				item: {
+					Count: 1
+					id: "caupona:gravy_boat"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Acquiring Oil - The Gravy Boat"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5B5E7384E4E458C1"]
+			description: [
+				"Just make sure to place the chimney vent above the stew pot with a one block air gap in between, then place the chimney vent pot on top of the chimney vent."
+				""
+				"There's more block palettes than the Brick palette and they are conveniently grouped if you have &7REI&r installed."
+			]
+			id: "74BBBB57E59C59A0"
+			rewards: [{
+				id: "2ADA4D1195BC5748"
+				type: "xp"
+				xp: 250
+			}]
+			subtitle: "Soot can be collected from your cooking setups."
+			tasks: [
+				{
+					id: "49874673B4FF21C4"
+					item: "caupona:brick_chimney_flue"
+					type: "item"
+				}
+				{
+					id: "7338457164AC24D6"
+					item: "caupona:brick_chimney_pot"
+					type: "item"
+				}
+			]
+			title: "Chimneys and Soot!"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5B5E7384E4E458C1"]
+			description: ["I'm being serious. If you relax in the &6heated&r &9water&r you will slowly accumulate &aexperience&r."]
+			id: "420AFFB85BEEBACA"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "653AFD7D75CB379F"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "459E493D9C8E4FF4"
+					type: "xp"
+					xp: 500
+				}
+			]
+			subtitle: "Relax in your heated pool and continuously ponder."
+			tasks: [
+				{
+					id: "5BC2426ECBA3B271"
+					item: "caupona:brick_hypocaust_firebox"
+					type: "item"
+				}
+				{
+					id: "0840602FDDE5251E"
+					item: "caupona:brick_caliduct"
+					type: "item"
+				}
+			]
+			title: "Growing Wisdom from Bathing"
+			x: -1.5d
+			y: 4.5d
+		}
+	]
+	subtitle: ["Greco-roman style food cuisine and utility. Quest tree is a work in progress!"]
+	title: "Caupona"
+}

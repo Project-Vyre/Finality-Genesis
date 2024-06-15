@@ -1,0 +1,1138 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "ars_nouveau"
+	group: "6855847200ADBE3A"
+	icon: "ars_nouveau:archmage_spell_book"
+	id: "2AA25BC4CFE80649"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "5BE95A4CB26198C3"
+			shape: "rsquare"
+			tasks: [{
+				id: "001150238AE711ED"
+				item: "ars_nouveau:novice_spell_book"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["06A37230A8CE3CD4"]
+			id: "0A65D0229666E8DF"
+			shape: "octagon"
+			tasks: [{
+				id: "644DDF9B31F9AD1F"
+				item: "ars_nouveau:source_jar"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0A65D0229666E8DF"]
+			id: "5EAF613F4BA61EBE"
+			shape: "octagon"
+			subtitle: "Consumes fuel like wood and turns it into source."
+			tasks: [{
+				id: "2062097FB2D9ED58"
+				item: "ars_nouveau:volcanic_sourcelink"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0A65D0229666E8DF"]
+			id: "5882E15A49FBB8FF"
+			shape: "octagon"
+			subtitle: "Converts nature into source."
+			tasks: [{
+				id: "488C20AB8D5E7E96"
+				item: "ars_nouveau:agronomic_sourcelink"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0A65D0229666E8DF"]
+			id: "0FC81AA4BB68B029"
+			shape: "octagon"
+			subtitle: "Converts potions into source."
+			tasks: [{
+				id: "3FF49BDBCB35EB6C"
+				item: "ars_nouveau:alchemical_sourcelink"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0A65D0229666E8DF"]
+			id: "32E55B81059F0729"
+			shape: "octagon"
+			subtitle: "Turns life and death of others into source."
+			tasks: [{
+				id: "620B5173FED8CF63"
+				item: "ars_nouveau:vitalic_sourcelink"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["0A65D0229666E8DF"]
+			id: "5BB4178DE5EC747F"
+			shape: "octagon"
+			subtitle: "Creates Source from Mushroom related things."
+			tasks: [{
+				id: "45021E104E77F4DC"
+				item: "ars_nouveau:mycelial_sourcelink"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5BE95A4CB26198C3"]
+			id: "1EFD7D19B4A9131D"
+			tasks: [{
+				id: "36FBC8543608DF71"
+				item: "ars_nouveau:apprentice_spell_book"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1EFD7D19B4A9131D"]
+			id: "68CFEF87E1B4C336"
+			tasks: [{
+				id: "73794F3268159948"
+				item: "ars_nouveau:archmage_spell_book"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"5BE95A4CB26198C3"
+				"06A37230A8CE3CD4"
+			]
+			description: ["Want a minion or make copies of yourself? Start here."]
+			id: "4DBB1C601AED08A3"
+			shape: "pentagon"
+			subtitle: "Where you will inscribe new spells."
+			tasks: [{
+				id: "36E7D0C53B6BD807"
+				item: "ars_nouveau:scribes_table"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			id: "06A37230A8CE3CD4"
+			shape: "rsquare"
+			tasks: [{
+				id: "56752C33A86A89DA"
+				item: "ars_nouveau:archwood_planks"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["40427C571EE5DD58"]
+			id: "32E9D5D5BD7DAC59"
+			tasks: [{
+				id: "0B63BE2E7A1A9253"
+				item: "ars_nouveau:arcane_pedestal"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["356C4FF1F5E355E9"]
+			id: "40427C571EE5DD58"
+			tasks: [{
+				id: "7AFE6095A2485430"
+				item: "ars_nouveau:source_gem"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["06A37230A8CE3CD4"]
+			id: "356C4FF1F5E355E9"
+			tasks: [{
+				id: "6A892CD71E3C8AA5"
+				item: "ars_nouveau:imbuement_chamber"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["32E9D5D5BD7DAC59"]
+			id: "104D050458BA755A"
+			tasks: [{
+				id: "2A7852E8165C7EA1"
+				item: "ars_nouveau:ritual_brazier"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["36E7D0C53B6BD807"]
+			hide: true
+			id: "50661FA989613284"
+			shape: "rsquare"
+			subtitle: "Glyphs are responsible for adjusting the Strength of your spells."
+			tasks: [
+				{
+					id: "5F246B1A262556A2"
+					item: "ars_nouveau:glyph_amplify"
+					type: "item"
+				}
+				{
+					id: "50EB222D34A4AA5C"
+					item: "ars_nouveau:glyph_dampen"
+					type: "item"
+				}
+			]
+			title: "Spell Intensity Attunement"
+			x: 3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["40427C571EE5DD58"]
+			id: "7862BC3EBBD622EF"
+			tasks: [{
+				id: "282FF7EAF8FC58FC"
+				item: "ars_nouveau:source_gem_block"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["620FD233BD3F47A5"]
+			id: "7E105797895F8B49"
+			shape: "hexagon"
+			tasks: [{
+				id: "2282EC9708403B0B"
+				item: "ars_nouveau:relay_warp"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"40427C571EE5DD58"
+				"32E9D5D5BD7DAC59"
+			]
+			id: "091E0C610F8580D8"
+			shape: "octagon"
+			tasks: [{
+				id: "56D960EC0664E2AF"
+				item: "ars_nouveau:enchanting_apparatus"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["620FD233BD3F47A5"]
+			id: "4AF393E2523B8676"
+			shape: "hexagon"
+			tasks: [{
+				id: "2C2E1BD28BA32ED6"
+				item: "ars_nouveau:relay_deposit"
+				type: "item"
+			}]
+			x: -6.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["644DDF9B31F9AD1F"]
+			hide: true
+			id: "620FD233BD3F47A5"
+			shape: "hexagon"
+			tasks: [{
+				id: "7674CAC7B23F27BE"
+				item: "ars_nouveau:relay"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["620FD233BD3F47A5"]
+			id: "704DAEF1EDC2F24F"
+			shape: "hexagon"
+			tasks: [{
+				id: "13886F71FCF88C56"
+				item: "ars_nouveau:relay_splitter"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["620FD233BD3F47A5"]
+			id: "5EB64E51066F15F2"
+			shape: "hexagon"
+			tasks: [{
+				id: "1230B73EB5DE1D2A"
+				item: "ars_nouveau:relay_collector"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["091E0C610F8580D8"]
+			id: "7EF1BC41AD8D65FC"
+			tasks: [{
+				id: "39644DC1A0DC908D"
+				item: "ars_nouveau:dominion_wand"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -5.5d
+		}
+		{
+			dependencies: ["091E0C610F8580D8"]
+			id: "6011ADE0E4EC7917"
+			tasks: [{
+				id: "25EC38BAF16C3CDE"
+				item: "ars_nouveau:magebloom_crop"
+				type: "item"
+			}]
+			x: -6.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["6011ADE0E4EC7917"]
+			id: "29C067F6758E7FAC"
+			tasks: [{
+				id: "3731C8F796F7EA51"
+				item: "ars_nouveau:magebloom"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["29C067F6758E7FAC"]
+			id: "58E50E3ADD6879BF"
+			tasks: [{
+				id: "1EEEBE1AFEB1E835"
+				item: "ars_nouveau:magebloom_fiber"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["58E50E3ADD6879BF"]
+			id: "73ABB949DA5D2BD7"
+			tasks: [{
+				id: "202FFD4284F987A2"
+				item: "ars_nouveau:blaze_fiber"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -8.5d
+		}
+		{
+			dependencies: ["73ABB949DA5D2BD7"]
+			id: "263FE17924F2423D"
+			tasks: [{
+				id: "68F3F2E9B2B64DF8"
+				item: "ars_nouveau:end_fiber"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -10.5d
+		}
+		{
+			dependencies: ["56D960EC0664E2AF"]
+			hide: true
+			id: "298DF1FBF45DE62C"
+			tasks: [{
+				id: "4068592D0627D098"
+				item: {
+					Count: 1
+					id: "ars_nouveau:enchanters_sword"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["56D960EC0664E2AF"]
+			hide: true
+			id: "32576FE64A488304"
+			tasks: [{
+				id: "23E253784EB3D93C"
+				item: {
+					Count: 1
+					id: "ars_nouveau:enchanters_shield"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 4.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["56D960EC0664E2AF"]
+			hide: true
+			id: "5910E661494DF25F"
+			tasks: [{
+				id: "1FDFE5FA63B33A7B"
+				item: {
+					Count: 1
+					id: "ars_nouveau:wand"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 8.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["56D960EC0664E2AF"]
+			hide: true
+			id: "6EAABEBC7DDD9875"
+			tasks: [{
+				id: "57033B73C6246F7B"
+				item: {
+					Count: 1
+					id: "ars_nouveau:spell_bow"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 6.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6EAABEBC7DDD9875"]
+			id: "4CCFD467A471DF69"
+			tasks: [{
+				id: "7E0E61A957F7E100"
+				item: "ars_nouveau:pierce_arrow"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["6EAABEBC7DDD9875"]
+			id: "5189EC26D5258A34"
+			tasks: [{
+				id: "1D6494F22FF66470"
+				item: "ars_nouveau:split_arrow"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["6EAABEBC7DDD9875"]
+			id: "3CB2A0521B4ED3FC"
+			tasks: [{
+				id: "108F3010EB536AD8"
+				item: "ars_nouveau:amplify_arrow"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["58E50E3ADD6879BF"]
+			id: "3252174771979252"
+			tasks: [
+				{
+					id: "47E8A7871A747BED"
+					item: {
+						Count: 1b
+						id: "ars_nouveau:novice_hood"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "11C42D725D57760E"
+					item: {
+						Count: 1b
+						id: "ars_nouveau:novice_robes"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "5C5601156DF9B13E"
+					item: {
+						Count: 1b
+						id: "ars_nouveau:novice_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2DDE81B6B140E103"
+					item: {
+						Count: 1b
+						id: "ars_nouveau:novice_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Novice Armor"
+			x: -10.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["73ABB949DA5D2BD7"]
+			id: "18A1BF8032F630AD"
+			tasks: [
+				{
+					id: "7323BE47C05CEFFE"
+					item: {
+						Count: 1b
+						id: "ars_nouveau:apprentice_hood"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "084CB96B7FEEA5E5"
+					item: {
+						Count: 1b
+						id: "ars_nouveau:apprentice_robes"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "57C203C7A77AABF8"
+					item: {
+						Count: 1b
+						id: "ars_nouveau:apprentice_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2109FB6C0BA09C62"
+					item: {
+						Count: 1b
+						id: "ars_nouveau:apprentice_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Mage Armor"
+			x: -10.0d
+			y: -8.5d
+		}
+		{
+			dependencies: ["263FE17924F2423D"]
+			id: "2586BD2F8B3D3227"
+			tasks: [
+				{
+					id: "0593A4EFFF552588"
+					item: {
+						Count: 1b
+						id: "ars_nouveau:archmage_hood"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "21094FB367CF1634"
+					item: {
+						Count: 1b
+						id: "ars_nouveau:archmage_robes"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4A69D09DF017E230"
+					item: {
+						Count: 1b
+						id: "ars_nouveau:archmage_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1935BE7E1DC7FBCB"
+					item: {
+						Count: 1b
+						id: "ars_nouveau:archmage_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Archmage Armor"
+			x: -10.0d
+			y: -10.5d
+		}
+		{
+			dependencies: ["091E0C610F8580D8"]
+			id: "3DDA9FAC66036930"
+			tasks: [
+				{
+					id: "7A1D92D18F07EA3A"
+					item: "ars_nouveau:basic_spell_turret"
+					type: "item"
+				}
+				{
+					id: "6752C37583C9D277"
+					item: "ars_nouveau:timer_spell_turret"
+					type: "item"
+				}
+				{
+					id: "7B8D310FA85239EC"
+					item: "ars_nouveau:spell_turret"
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["6A892CD71E3C8AA5"]
+			hide: true
+			id: "3D2D563A20970A03"
+			tasks: [{
+				id: "3A0A529340B7100F"
+				item: "ars_nouveau:abjuration_essence"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["6A892CD71E3C8AA5"]
+			hide: true
+			id: "1BB5B73ED3CE5D70"
+			subtitle: "Long ago, the four nations lived together in harmony... then everything changed when the Fire Nation attacked."
+			tasks: [
+				{
+					id: "3BA19A97FA35EBE3"
+					item: "ars_nouveau:fire_essence"
+					type: "item"
+				}
+				{
+					id: "01F2E916D6E47486"
+					item: "ars_nouveau:earth_essence"
+					type: "item"
+				}
+				{
+					id: "2BB6EF5F07348A96"
+					item: "ars_nouveau:water_essence"
+					type: "item"
+				}
+				{
+					id: "62374885177A3FBF"
+					item: "ars_nouveau:air_essence"
+					type: "item"
+				}
+			]
+			title: "The Four Elemental Essences"
+			x: 9.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["6A892CD71E3C8AA5"]
+			hide: true
+			id: "1AB528BDD6AF8DEE"
+			tasks: [{
+				id: "02F721F5C94BEDF8"
+				item: "ars_nouveau:manipulation_essence"
+				type: "item"
+			}]
+			x: 5.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3D2D563A20970A03"]
+			id: "4A79DAB1A7317EAA"
+			tasks: [{
+				id: "0A629491B5809EA1"
+				item: "ars_nouveau:potion_jar"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["3D2D563A20970A03"]
+			id: "2EDBF0D89FA409CF"
+			tasks: [{
+				id: "67A4BECD207070B9"
+				item: {
+					Count: 1
+					id: "ars_nouveau:potion_flask"
+					tag: {
+						Damage: 8
+					}
+				}
+				type: "item"
+			}]
+			x: 3.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["3D2D563A20970A03"]
+			id: "60EEBF650F8C3851"
+			tasks: [{
+				id: "53185BA985C19D8F"
+				item: "ars_nouveau:potion_melder"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["1AB528BDD6AF8DEE"]
+			id: "72E3F3A80298E1C0"
+			tasks: [{
+				id: "53123DA028BE9504"
+				item: {
+					Count: 1
+					id: "ars_nouveau:runic_chalk"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 5.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["56D960EC0664E2AF"]
+			hide: true
+			id: "1D75AC79EF5F558D"
+			tasks: [{
+				id: "6D6D9869E6D64DFE"
+				item: {
+					Count: 1
+					id: "ars_nouveau:enchanters_mirror"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 10.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["36E7D0C53B6BD807"]
+			description: ["(placeholder text)"]
+			hide: true
+			id: "6C62EA09DFF5DEAE"
+			shape: "rsquare"
+			subtitle: "Multi-purpose spells for your use."
+			tasks: [
+				{
+					id: "5B8EEB997EEF20F0"
+					item: "ars_nouveau:glyph_projectile"
+					type: "item"
+				}
+				{
+					id: "3598739AC7B35E39"
+					item: "ars_nouveau:glyph_touch"
+					type: "item"
+				}
+				{
+					id: "36A16E6A3C267E81"
+					item: "ars_nouveau:glyph_self"
+					type: "item"
+				}
+			]
+			title: "Introduction to Spell Casting"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["36E7D0C53B6BD807"]
+			hide: true
+			id: "466EB5213703D731"
+			shape: "rsquare"
+			subtitle: "Glyphs responsible for extending or shortening the Duration of your spells."
+			tasks: [
+				{
+					id: "12C9D87872575970"
+					item: "ars_nouveau:glyph_extend_time"
+					type: "item"
+				}
+				{
+					id: "599B99B324F19791"
+					item: "ars_nouveau:glyph_duration_down"
+					type: "item"
+				}
+			]
+			title: "Chronomancer's Attunements"
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["36E7D0C53B6BD807"]
+			hide: true
+			id: "3F6C5755D3C7FB56"
+			shape: "rsquare"
+			tasks: [{
+				id: "468A0ADA4252EACF"
+				item: "ars_nouveau:glyph_orbit"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["36E7D0C53B6BD807"]
+			hide: true
+			id: "3C548AE3F8B6193E"
+			shape: "rsquare"
+			tasks: [{
+				id: "3947C0053D2F1596"
+				item: "ars_nouveau:glyph_split"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["36E7D0C53B6BD807"]
+			hide: true
+			id: "3272B8B0DBD1D8FF"
+			shape: "rsquare"
+			tasks: [{
+				id: "1BED603BB4D5D051"
+				item: "ars_nouveau:glyph_underfoot"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["36E7D0C53B6BD807"]
+			hide: true
+			id: "175871D2E7FC9C8A"
+			shape: "rsquare"
+			subtitle: "Glyphs responsible for accelerating or deccelerating your spell projectiles."
+			tasks: [
+				{
+					id: "78E87146AD647E4C"
+					item: "ars_nouveau:glyph_accelerate"
+					type: "item"
+				}
+				{
+					id: "5005F4BE0EB05B93"
+					item: "ars_nouveau:glyph_decelerate"
+					type: "item"
+				}
+			]
+			title: "Speed Attunements"
+			x: 5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["36E7D0C53B6BD807"]
+			hide: true
+			id: "0D146A8B6D9C0A66"
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "7959535F85BDE0C5"
+					item: "ars_nouveau:glyph_extract"
+					type: "item"
+				}
+				{
+					id: "3594C8037955B742"
+					item: "ars_nouveau:glyph_fortune"
+					type: "item"
+				}
+			]
+			title: "Extraction Attunements"
+			x: 6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["36E7D0C53B6BD807"]
+			hide: true
+			id: "515A58792804A2CE"
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "32EA991EF241CE5C"
+					item: "ars_nouveau:glyph_pierce"
+					type: "item"
+				}
+				{
+					id: "65BA24FE062D4D86"
+					item: "ars_nouveau:glyph_sensitive"
+					type: "item"
+				}
+				{
+					id: "289999E82AF9AC5C"
+					item: "ars_nouveau:glyph_aoe"
+					type: "item"
+				}
+			]
+			title: "Worldshaper Attunements"
+			x: 7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["36E7D0C53B6BD807"]
+			hide: true
+			id: "7A14D1573D68D07C"
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "69A33A674835BEAE"
+					item: "ars_nouveau:glyph_craft"
+					type: "item"
+				}
+				{
+					id: "5E433F6973214ED1"
+					item: "ars_nouveau:glyph_ender_inventory"
+					type: "item"
+				}
+				{
+					id: "185985676A5CBA39"
+					item: "ars_nouveau:glyph_smelt"
+					type: "item"
+				}
+				{
+					id: "5E8B8E3BF6B644EA"
+					item: "ars_nouveau:glyph_interact"
+					type: "item"
+				}
+				{
+					id: "1FD3599E40841558"
+					item: "ars_nouveau:glyph_light"
+					type: "item"
+				}
+				{
+					id: "4098D494C627D170"
+					item: "ars_nouveau:glyph_phantom_block"
+					type: "item"
+				}
+				{
+					id: "4F630DFCBC58D994"
+					item: "ars_nouveau:glyph_conjure_water"
+					type: "item"
+				}
+				{
+					id: "35F75FF2B06ACCEB"
+					item: "ars_nouveau:glyph_place_block"
+					type: "item"
+				}
+				{
+					id: "14294C6424D40A10"
+					item: "ars_nouveau:glyph_toss"
+					type: "item"
+				}
+				{
+					id: "65C6D3179E5D7667"
+					item: "ars_nouveau:glyph_exchange"
+					type: "item"
+				}
+				{
+					id: "1BC83982D6BDCEB8"
+					item: "ars_nouveau:glyph_crush"
+					type: "item"
+				}
+				{
+					id: "357CE89D4A1828F2"
+					item: "ars_nouveau:glyph_cut"
+					type: "item"
+				}
+				{
+					id: "50CDC9A69584089B"
+					item: "ars_nouveau:glyph_pickup"
+					type: "item"
+				}
+			]
+			title: "Utility Attunements"
+			x: 3.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["02F721F5C94BEDF8"]
+			hide: true
+			id: "6F2273EA39A07094"
+			shape: "rsquare"
+			tasks: [{
+				id: "0A5FC7B8A012B9AE"
+				item: "ars_nouveau:glyph_intangible"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"2BB6EF5F07348A96"
+				"36E7D0C53B6BD807"
+			]
+			hide: true
+			id: "52C0FDE29938AAFE"
+			shape: "rsquare"
+			subtitle: "Let it goooo!"
+			tasks: [
+				{
+					id: "14585146A3D10C10"
+					item: "ars_nouveau:glyph_freeze"
+					type: "item"
+				}
+				{
+					id: "1165F41C06BDF217"
+					item: "ars_nouveau:glyph_cold_snap"
+					type: "item"
+				}
+			]
+			title: "Water Elemental Attunements"
+			x: 9.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6A892CD71E3C8AA5"]
+			hide: true
+			id: "4156EC8AAE1B6FC8"
+			tasks: [{
+				id: "2095BF339689D4BA"
+				item: "ars_nouveau:conjuration_essence"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["36E7D0C53B6BD807"]
+			hide: true
+			id: "64873C4D3018CDCC"
+			shape: "rsquare"
+			subtitle: "Riiiise my minions!"
+			tasks: [
+				{
+					id: "0D3A030D80550D2E"
+					item: "ars_nouveau:glyph_summon_wolves"
+					type: "item"
+				}
+				{
+					id: "38148008B3EE12AA"
+					item: "ars_nouveau:glyph_summon_steed"
+					type: "item"
+				}
+				{
+					id: "310F262395C0433D"
+					title: "Animate Block (Only on 1.19.2!)"
+					type: "checkmark"
+				}
+				{
+					id: "541BB73E1E7FC698"
+					item: "ars_nouveau:glyph_summon_vex"
+					type: "item"
+				}
+				{
+					id: "52D25753DFCF443C"
+					item: "ars_nouveau:glyph_summon_undead"
+					type: "item"
+				}
+				{
+					id: "67E42900B25A413D"
+					item: "ars_nouveau:glyph_summon_decoy"
+					type: "item"
+				}
+			]
+			title: "Ally Attunements"
+			x: 4.0d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"3BA19A97FA35EBE3"
+				"36E7D0C53B6BD807"
+			]
+			hide: true
+			id: "66105F2E4DEE282E"
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "13182CC184DBE134"
+					item: "ars_nouveau:glyph_ignite"
+					type: "item"
+				}
+				{
+					id: "27EE27A0115BA1CC"
+					item: "ars_nouveau:glyph_firework"
+					type: "item"
+				}
+			]
+			title: "Fire Elemental Attunements"
+			x: 8.5d
+			y: 2.5d
+		}
+	]
+	subtitle: [
+		"Powerful magics."
+		"Work in progress!"
+	]
+	title: "Ars Nouveau"
+}
