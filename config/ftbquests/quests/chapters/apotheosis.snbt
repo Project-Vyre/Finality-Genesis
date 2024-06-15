@@ -596,6 +596,64 @@
 			x: 0.0d
 			y: -1.5d
 		}
+		{
+			dependencies: ["7A6003AA26F89F01"]
+			hide_dependency_lines: true
+			id: "53B6181EDDFCB093"
+			rewards: [{
+				id: "5D4CA490BC7F6B75"
+				item: "kubejs:eversor_gem_info"
+				type: "item"
+			}]
+			subtitle: "Acquire a Flawless Eversor Gem."
+			tasks: [{
+				id: "06707F9C9341AC85"
+				item: {
+					Count: 1
+					id: "apotheosis:gem"
+					tag: {
+						affix_data: {
+							rarity: "apotheosis:mythic"
+						}
+						gem: "kubejs:eversor"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			title: "Amplified Force"
+			x: -2.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["7A6003AA26F89F01"]
+			hide_dependency_lines: true
+			id: "62102E2388DCA02C"
+			rewards: [{
+				id: "1EF3C8A688098004"
+				item: "kubejs:acuti_ora_gem_info"
+				type: "item"
+			}]
+			subtitle: "Acquire a Flawless Acuti Ora gem."
+			tasks: [{
+				id: "2C71B0DCA09257A7"
+				item: {
+					Count: 1
+					id: "apotheosis:gem"
+					tag: {
+						affix_data: {
+							rarity: "apotheosis:mythic"
+						}
+						gem: "kubejs:acuti_ora"
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			title: "Precise Slicing"
+			x: 2.5d
+			y: 5.0d
+		}
 	]
 	subtitle: ["Apotheosis is that one mod that makes everything powerful."]
 	title: "Apotheosis"
