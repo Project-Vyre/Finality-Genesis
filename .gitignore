@@ -6,8 +6,8 @@ _site/
 .jekyll-metadata
 
 # Don't ignore default servers.dat
-!config/defaultoptions/servers.dat
 servers.dat
+!config/defaultoptions/servers.dat
 servers.dat_old
 servers.essential.dat
 
