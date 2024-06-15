@@ -46,7 +46,7 @@ scroll_list_customization {
 
 element {
   interactable = true
-  source = [source:web]https://raw.githubusercontent.com/Project-Vyre/finality-fm-live/main/finality-genesis-1.19.2.txt
+  source = [source:web]https://raw.githubusercontent.com/Project-Vyre/finality-fm-live/main/1.19.2/finality-genesis.txt
   source_mode = resource
   shadow = true
   scale = 1.0
