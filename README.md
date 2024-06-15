@@ -29,7 +29,7 @@ Please see the license page over here, thank you: https://project-vyre.github.io
 
 ### What does this mean?
 
-* For regular players, this does not mean anything other than **don't steal or repost without explicit permission from ClestialAbyss or Ryanite AKA Skensian on GitHub**. You are still permitted to play, film and stream the pack. If you want to make your own modpack, please feel free to look at the code and use it as a reference along with KubeJS's documents.
+* For regular players, this does not mean anything other than **don't steal or repost without explicit permission from CelestialAbyss or Ryanite AKA Skensian on GitHub**. You are still permitted to play, film and stream the pack. If you want to make your own modpack, please feel free to look at the code and use it as a reference along with KubeJS's documents.
 * For others, **you are prohibited from redistributing any of the above folders or files in any publicly released packs without permission from us unless explicitly stated.** 
   * Again, this does not mean that you are not allowed to use the code as a reference on how to write things in KubeJS!
 
