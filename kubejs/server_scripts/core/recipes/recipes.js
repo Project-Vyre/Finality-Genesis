@@ -1,6 +1,6 @@
 /**
  * @file Handler for core recipes.
- * 
+ * @version 1.19.2
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  * @author squoshi <https://github.com/squoshi> Helped a lot early on in development. Thank you. Also helped translate my ideas into scripts!
  * @author pietro-lopes <https://github.com/pietro-lopes> AKA Uncandango in the KubeJS Discord. Fixed issues related to damage cancel script
@@ -278,6 +278,14 @@ ServerEvents.recipes(event => {
     D: 'minecraft:crying_obsidian',
     S: 'create:shaft'
   }).id('finality:deconstructor')
+  event.recipes.create.mechanical_crafting('kubejs:duplicator', [
+    'NC',
+    'SN'
+  ], {
+    C: 'create:clipboard',
+    S: 'create:sturdy_sheet',
+    N: 'kubejs:netherite_nugget'
+  }).id('finality:mechanical_crafting/duplicator')
   /**
    * QoL
    */
@@ -287,6 +295,26 @@ ServerEvents.recipes(event => {
   event.recipes.minecraft.blasting('create:zinc_block', 'create:raw_zinc_block')
     .cookingTime(900).xp(6.3)
     .id('finality:blasting/zinc_block_from_raw_zinc_block')
+  let item_duplication = {
+    asurine: 'create:asurine',
+    crimsite: 'create:crimsite',
+    ochrum: 'create:ochrum',
+    veridium: 'create:veridium'
+  }
+  for (let [recipeId, itemId] of Object.entries(item_duplication)) {
+    event.recipes.create.deploying(Item.of(itemId, 2), [
+      itemId,
+      'kubejs:duplicator'
+    ]).keepHeldItem().id('finality:deploying/' + recipeId + '_duplication')
+  }
+  event.recipes.minecraft.crafting_shaped('minecraft:ender_pearl', [
+    'TTT',
+    'TNT',
+    'TTT'
+  ], {
+    T: 'minecraft:tinted_glass',
+    N: 'kubejs:null_matter'
+  }).id('finality:ender_pearl_from_null_matter')
   /**
    * BLASTING
    * 
@@ -748,7 +776,7 @@ ServerEvents.recipes(event => {
     Item.of('kubejs:unstable_entropy_particles').withChance(0.25)
   ], 'kubejs:unstable_entropy_particles', [
     event.recipes.create.filling('kubejs:stabilizing_entropy_particles', ['kubejs:stabilizing_entropy_particles', Fluid.of('kubejs:condensed_universal_order', 250)]),
-    event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles'),
+    event.recipes.create.deploying('kubejs:stabilizing_entropy_particles', ['kubejs:stabilizing_entropy_particles', 'kubejs:null_matter']),
     event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles'),
     event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles'),
     event.recipes.create.pressing('kubejs:stabilizing_entropy_particles', 'kubejs:stabilizing_entropy_particles')

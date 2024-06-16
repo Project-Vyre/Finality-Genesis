@@ -279,6 +279,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:armors')
     .tag('forge:armors/boots')
     .tag('kubejs:iridium_armor')
+    .group('combat')
 
   event.create('kubejs:unstable_entropy_particles')
     .rarity('epic')
@@ -378,17 +379,23 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .maxStackSize(1)
     .fireResistant(true)
     .group('combat')
+    .tag('forge:swords')
+    .tag('forge:tools')
+    .tag('forge:tools/sword')
+    .tag('forge:tools/swords')
+    .tag('kubejs:final_tools')
 
   event.create('kubejs:final_scythe', 'sword').tier('final_tool')
     .rarity('epic')
     .texture('kubejs:item/final_scythe')
     .maxStackSize(1)
     .fireResistant(true)
+    .group('combat')
     .tag('forge:scythes')
     .tag('forge:tools')
     .tag('forge:tools/scythe')
     .tag('forge:tools/scythes')
-    .group('combat')
+    .tag('kubejs:final_tools')
 
   event.create('kubejs:final_katana', 'sword').tier('final_tool')
     .rarity('epic')
@@ -396,6 +403,11 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .maxStackSize(1)
     .fireResistant(true)
     .group('combat')
+    .tag('forge:swords')
+    .tag('forge:tools')
+    .tag('forge:tools/sword')
+    .tag('forge:tools/swords')
+    .tag('kubejs:final_tools')
 
   // armor
   event.create('kubejs:final_helmet', 'helmet').tier('final_armor')
@@ -505,6 +517,13 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .maxStackSize(64)
     .fireResistant(true)
     .glow(true)
+  event.create('kubejs:duplicator')
+    .rarity('epic')
+    .texture('kubejs:item/duplicator')
+    .maxStackSize(1)
+    .fireResistant(true)
+    .group('combat')
+    .glow(true)
   event.create('kubejs:null_matter')
     .rarity('epic')
     .texture('layer0', 'kubejs:item/null_matter')
@@ -531,7 +550,7 @@ ItemEvents.toolTierRegistry(event => {
   event.add('final_tool', tier => {
     tier.uses = -1
     tier.speed = 256.0
-    tier.attackDamageBonus = 65.0
+    tier.attackDamageBonus = 69995.0
     tier.level = 5
     tier.enchantmentValue = 30
   })

@@ -219,6 +219,7 @@ ServerEvents.recipes(event => {
     '6': 'kubejs:six',
     '4': 'kubejs:four'
   }).id('finality:command/diamond_block_stack')
+  /*
   event.recipes.create.mechanical_crafting('64x create:blaze_cake', [
     '/GIVE @S ',
     'CREATE   ',
@@ -243,6 +244,7 @@ ServerEvents.recipes(event => {
     '6': 'kubejs:six',
     '4': 'kubejs:four'
   }).id('finality:command/blaze_cake_stack')
+  */
   for (let [shape, string] of Object.entries(global.SHAPES)) {
     for (let color of VALID_COLOR_MIX) {
       event.recipes.create.mixing(`kubejs:${color}_${shape}`, [
