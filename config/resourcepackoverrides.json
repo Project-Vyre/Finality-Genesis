@@ -13,7 +13,6 @@
   },
   "pack_overrides": {
     "genesis_resources": [
-      "file/Finality Genesis - 1.20.x",
       "file/Nicer-Rain-1.0.0.zip",
       "file/Enhanced Audio r6.zip",
       "file/Enhanced Audio Ambience r1.zip"

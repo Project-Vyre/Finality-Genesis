@@ -7,7 +7,7 @@
 		],
 		"description": [
 			{
-				"text": "Assets for "
+				"text": "Shaders for "
 			},
 			{
 				"text": "Finality Genesis",
@@ -18,7 +18,7 @@
 				"text": ".\n"
 			},
 			{
-				"text": "REQUIRED!",
+				"text": "OPTIONAL!",
 				"color": "#FF3D4A",
 				"bold": true
 			}
