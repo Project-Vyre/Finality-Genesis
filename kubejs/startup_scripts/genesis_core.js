@@ -863,7 +863,15 @@ StartupEvents.registry('block', event => {
         entityInfo.rightClickOpensInventory()
         entityInfo.serverTick(1200, 0, entity => {
           entity.inventory.insertItem('kubejs:high_entropy_alloy_block', false)
-        }) // reminder to self: add inventory capabilities
+        })
+        entityInfo.attachCapability(
+          CapabilityBuilder.ITEM.blockEntity()
+            .extractItem((blockEntity, slot, amount, simulate) => blockEntity.inventory.extractItem(slot, amount, simulate))
+            .insertItem((blockEntity, slot, stack, simulate) => blockEntity.inventory.insertItem(slot, stack, simulate))
+            .getSlots((blockEntity) => blockEntity.inventory.slots)
+            .isItemValid((blockEntity, slot, stack) => blockEntity.inventory.isItemValid(slot, stack))
+            .availableOn((blockEntity, direction) => direction != Direction.UP)
+        )
       })
       .item(ctx => {
         ctx.rarity('epic')
@@ -879,7 +887,14 @@ StartupEvents.registry('block', event => {
     .blockEntity(entityInfo => {
       entityInfo.inventory(9, 9)
       entityInfo.rightClickOpensInventory()
-      // reminder to self: add inventory capabilities
+      entityInfo.attachCapability(
+        CapabilityBuilder.ITEM.blockEntity()
+          .extractItem((blockEntity, slot, amount, simulate) => blockEntity.inventory.extractItem(slot, amount, simulate))
+          .insertItem((blockEntity, slot, stack, simulate) => blockEntity.inventory.insertItem(slot, stack, simulate))
+          .getSlots((blockEntity) => blockEntity.inventory.slots)
+          .isItemValid((blockEntity, slot, stack) => blockEntity.inventory.isItemValid(slot, stack))
+          .availableOn((blockEntity, direction) => direction != Direction.UP)
+      )
     })
     .item(ctx => {
       ctx.rarity('uncommon')
@@ -979,7 +994,8 @@ let blacklist = {
   strange: 'Causes the server to stall.',
   lucky: 'Not supported in this variant of the modpack. Also causes bugs.',
   twilightforest: 'Not supported in this variant of the modpack.',
-  createunlimited: 'NOT SUPPORTED AT ALL. Remove it.'
+  createunlimited: 'NOT SUPPORTED AT ALL. Remove it.',
+  theoneprobe: 'For the best experience and compatibility purposes, stick to Jade.'
 }
 
 StartupEvents.postInit(event => {
