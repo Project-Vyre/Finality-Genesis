@@ -31,7 +31,7 @@
 		beam_alpha = 0.75
 		#The distance from the player the beam should start fading.
 		#Range: 0.0 ~ 100.0
-		beam_fade_distance = 12.0
+		beam_fade_distance = 24.0
 		#If the Loot Beam should use a solid texture or the beacon style texture.
 		solid_beam = true
 		#If the Loot Beam should have a white center.
@@ -57,7 +57,7 @@
 		particle_size = 0.25
 		#The speed of the particles.
 		#Range: 1.0E-5 ~ 10.0
-		particle_speed = 0.2
+		particle_speed = 0.05
 		#The radius of the particles.
 		#Range: 1.0E-5 ~ 10.0
 		particle_radius = 0.1
@@ -66,7 +66,7 @@
 		randomness_intensity = 0.05
 		#The amount of particles to spawn per second.
 		#Range: 1.0 ~ 20.0
-		particle_count = 15.0
+		particle_count = 18.0
 		#The lifetime of the particles in ticks.
 		#Range: 1 ~ 100
 		particle_lifetime = 15
@@ -105,7 +105,7 @@
 		#If items should glow.
 		items_glow = false
 		#If all Items Loot Beams should be rendered. Has priority over only_equipment and only_rare.
-		all_items = false
+		all_items = true
 		#If Loot Beams should only be rendered on items with rarity.
 		only_rare = true
 		#If Loot Beams should only be rendered on equipment. (Equipment includes: Swords, Tools, Armor, Shields, Bows, Crossbows, Tridents, Arrows, and Fishing Rods)
@@ -155,7 +155,7 @@
 		#If the player should be crouching to see extended advanced tooltips.
 		screen_tooltips_require_crouch = true
 		#If the name and rarity should be combined into one tooltip.
-		combine_name_and_rarity = false
+		combine_name_and_rarity = true
 
 	#Sounds
 	["Loot Beams".Sounds]

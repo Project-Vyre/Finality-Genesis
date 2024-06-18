@@ -36,42 +36,42 @@
 		#Minting
 		[coin_mint.recipes.mint]
 			#Whether recipes of mintType "MINT" with an output of copper coins will function.
-			copper=true
+			copper=false
 			
 			#Whether recipes of mintType "MINT" with an output of iron coins will function.
-			iron=true
+			iron=false
 			
 			#Whether recipes of mintType "MINT" with an output of gold coins will function.
-			gold=true
+			gold=false
 			
 			#Whether recipes of mintType "MINT" with an output of emerald coins will function.
-			emerald=true
+			emerald=false
 			
 			#Whether recipes of mintType "MINT" with an output of diamond coins will function.
-			diamond=true
+			diamond=false
 			
 			#Whether recipes of mintType "MINT" with an output of netherite coins will function.
-			netherite=true
+			netherite=false
 			
 		#Melting
 		[coin_mint.recipes.melt]
 			#Whether recipes of mintType "MELT" with an output of copper ingots will function.
-			copper=true
+			copper=false
 			
 			#Whether recipes of mintType "MELT" with an output of iron ingots will function.
-			iron=true
+			iron=false
 			
 			#Whether recipes of mintType "MELT" with an output of gold ingots will function.
-			gold=true
+			gold=false
 			
 			#Whether recipes of mintType "MELT" with an output of emeralds will function.
-			emerald=true
+			emerald=false
 			
 			#Whether recipes of mintType "MELT" with an output of diamonds will function.
-			diamond=true
+			diamond=false
 			
 			#Whether recipes of mintType "MELT" with an output of netherite ingots will function.
-			netherite=true
+			netherite=false
 			
 #Wallet Settings
 [wallet]
@@ -106,7 +106,7 @@
 		#Range: 3 -> 6400
 		itemCapacity3=576
 		
-		#The amount of item storage added by the first Item Capacity Upgrade (Diamond)
+		#The amount of item storage added by the first Item Capacity Upgrade (Netherite)
 		#Range: 4 -> 6400
 		itemCapacity4=1152
 		
