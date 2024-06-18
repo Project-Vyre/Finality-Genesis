@@ -1,4 +1,5 @@
 // requires: reliquary
+// requires: create
 
 let reliquary_shots = [
   'reliquary:bullets/exorcism_bullet',
