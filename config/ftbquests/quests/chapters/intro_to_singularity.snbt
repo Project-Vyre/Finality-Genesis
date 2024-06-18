@@ -605,6 +605,11 @@
 					item: "kubejs:deconstructor"
 					type: "item"
 				}
+				{
+					id: "71CD15A1B8C9A74E"
+					item: "summoningrituals:altar"
+					type: "item"
+				}
 			]
 			title: "Convenient Utilities Ch.3"
 			x: -3.0d
