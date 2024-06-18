@@ -85,6 +85,11 @@ const set = {
       "effect": "luck",
       "duration": 400,
       "amplifier": 5
+    },
+    {
+      "effect": "night_vision",
+      "duration": 400,
+      "amplifier": 1
     }
   ]
 }
