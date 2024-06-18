@@ -313,14 +313,10 @@
 		{
 			can_repeat: true
 			dependencies: ["464C6D59436C1B33"]
+			description: ["Work in progress."]
 			disable_toast: true
 			id: "3C3B0C4783CCC42E"
-			rewards: [{
-				id: "39781B690E27142A"
-				item: "kubejs:final_singularity"
-				type: "item"
-			}]
-			subtitle: "Got any Entropy Coins to convert?"
+			subtitle: "Got any Entropy Coins to spend?"
 			tasks: [{
 				consume_items: true
 				disable_toast: true
@@ -328,7 +324,7 @@
 				item: "kubejs:entropy_coin"
 				type: "item"
 			}]
-			title: "Entropy Coin to H.E.A Conversion"
+			title: "Entropy Coin Shop"
 			x: 0.0d
 			y: 8.5d
 		}
