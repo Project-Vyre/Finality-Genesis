@@ -477,7 +477,8 @@ let modBlacklist = {
   strange: 'Strange Lucky Blocks',
   lucky: 'Lucky Blocks',
   twilightforest: 'Twilight Forest',
-  createunlimited: 'Create: Unlimited'
+  createunlimited: 'Create: Unlimited',
+  theoneprobe: 'The One Probe'
 }
 
 for (let [id, name] of Object.entries(modBlacklist)) {
