@@ -24,6 +24,17 @@ ClientEvents.lang('en_us', event => {
       .setPalette($Palette.PURPLE)
       .build()
   )
+  event.addAll(
+    'kubejs',
+    createTooltip('malum:raw_soulstone')
+      .addSummary('An _essential_ material for the dark magics in Malum.')
+      .addBehaviour([
+        'Renewal',
+        'Throw other ores into the _Weeping Well_ to make _more_ Raw Soulstone.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
   /*
   event.addAll('malum',
       createTooltip('malum:runewood_sign')
