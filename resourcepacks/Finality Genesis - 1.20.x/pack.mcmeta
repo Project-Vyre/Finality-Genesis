@@ -7,15 +7,15 @@
 		],
 		"description": [
 			{
-				"text": "Shaders for "
+				"text": "Core shaders for "
 			},
 			{
 				"text": "Finality Genesis",
 				"color": "#FFEB8C",
-				"bold": true
+				"bold": false
 			},
 			{
-				"text": ".\n"
+				"text": ". "
 			},
 			{
 				"text": "OPTIONAL!",
