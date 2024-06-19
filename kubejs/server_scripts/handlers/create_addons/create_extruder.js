@@ -3,6 +3,7 @@
 
 /**
  * @file Server handler for Create Mehcanical Extruder.
+ * @version 1.20.1
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
@@ -61,7 +62,7 @@ ServerEvents.recipes(event => {
     event.recipes.create_mechanical_extruder.extruding(Item.of('malum:cthonic_gold').withChance(0.12), [
       Item.of('malum:twisted_rock'),
       Fluid.of('kubejs:condensed_universal_entropy')
-    ]).requiredBonks(6).withCatalyst('malum:block_of_cthonic_gold').id('finality:malum/extruder_cthonic_gold')
+    ]).requiredBonks(6).withCatalyst('malum:cthonic_gold_ore').id('finality:malum/extruder_cthonic_gold')
   }
   if (Platform.isLoaded('quark')) {
     event.recipes.create_mechanical_extruder.extruding(Item.of('quark:shale'), [
