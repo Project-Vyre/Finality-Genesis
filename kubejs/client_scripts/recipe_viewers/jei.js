@@ -260,6 +260,12 @@ JEIEvents.hideItems(event => {
   }
 })
 
+JEIEvents.addItems(event => {
+  if (Platform.isLoaded('delightful')) {
+    event.add('delightful:green_tea_leaf')
+  }
+})
+
 JEIEvents.hideFluids(event => {
   if (Platform.isLoaded('mysticalagradditions')) {
     event.hide('mysticalagradditions:molten_inferium')
@@ -268,13 +274,6 @@ JEIEvents.hideFluids(event => {
     event.hide('mysticalagradditions:molten_imperium')
     event.hide('mysticalagradditions:molten_supremium')
     event.hide('mysticalagradditions:molten_soulium')
-  }
-})
-
-
-JEIEvents.addItems(event => {
-  if (Platform.isLoaded('delightful')) {
-    event.add('delightful:green_tea_leaf')
   }
 })
 
