@@ -1,25 +1,23 @@
-// priority: 10
-// requires: bcc
-// requires: netjs
-// ignored: true
-
 /**
  * @file Client side modpack update checker.
  * @author KostromDan <https://github.com/KostromDan> Original script author
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
-const $BCC = Java.tryLoadClass('dev.wuffs.bcc.BCCForge')
-// const $ConfirmScreen = Java.loadClass('net.minecraft.client.gui.screens.ConfirmScreen')
+// priority: 10
+// requires: netjs
+// ignored: false
+
 let modpack_name = 'Finality Genesis'
 let url_id = 'ichBTqwH'
+let version = '0.1.0-build.13'
 
 NetworkEvents.dataReceived('update_notifier_check', event => {
   check_updates()
 })
 
 function check_updates() {
-  let version = $BCC.PingData.version
+  // let version = $BCC.PingData.version
   let current = JsonIO.read('kubejs/update_notifier.json') ?? {}
   if (!("enabled" in current)) { current["enabled"] = true }
   if (!("skipped_versions" in current)) { current["skipped_versions"] = [] }
@@ -32,7 +30,7 @@ function check_updates() {
       let latest_version = json_result['version']
       current = JsonIO.read('kubejs/update_notifier.json')
       if (version < latest_version) {
-        console.log(`${modpack_name}-logging: An update for the modpack is available! ${latest_version} is out. Currently running ${version}`)
+        console.log(`${modpack_name}: An update for the modpack is available! ${latest_version} is out. Currently running ${version}`)
         if (current["enabled"] && !current['skipped_versions'].contains(latest_version)) {
           Client.player.tell(Component.join([
             Component.white(`\nAn update for `),
@@ -110,9 +108,9 @@ NetworkEvents.dataReceived('update_notifier_skip', event => {
     ]))
   } else {
     Client.player.tell(Component.join([
-      Component.white(`\nVersion`),
+      Component.white(`\nVersion `),
       Component.green(version),
-      Component.white("is already skipped!\n"),
+      Component.white(" is already skipped!\n"),
     ]))
   }
   JsonIO.write('kubejs/update_notifier.json', current)
@@ -131,7 +129,7 @@ NetworkEvents.dataReceived('update_notifier_enable', event => {
   switcher(true)
   Client.player.tell(Component.join([
     Component.white(`\nUpdate notifier is`),
-    Component.green('enabled'),
+    Component.green(' enabled '),
     Component.white("!\n"),
   ]))
 })

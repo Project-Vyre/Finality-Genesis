@@ -1,13 +1,12 @@
-// priority: 2
-// requires: bcc
-// requires: netjs
-// ignored: true
-
 /**
  * @file Reads from and writes to the update_notifier.json file.
  * @author KostromDan <https://github.com/KostromDan> Original script author
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
+
+// priority: 2
+// requires: netjs
+// ignored: false
 
 StartupEvents.init(event => {
   let current = JsonIO.read('kubejs/update_notifier.json') ?? {}
