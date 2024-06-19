@@ -1,5 +1,6 @@
 /**
  * @file Server side modpack update checker.
+ * @version 0.1.2
  * @author KostromDan <https://github.com/KostromDan> Original script author
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
@@ -12,23 +13,33 @@ let TIME_INTERVAL = 20 * 60
 let modpack_name = 'Finality Genesis'
 let url_id = 'ichBTqwH'
 let version = '0.1.0-build.13'
-
-function check_updates() {
-  let server = Utils.server
-  let players = server.players
-  players.forEach(player => { check_updates_for(player) })
+let client_data = {
+  url_id: url_id,
+  modpack_name: modpack_name,
+  version: version
 }
 
-function check_updates_for(player) { player.sendData('update_notifier_check', {}) }
+function checkUpdates() {
+  let server = Utils.server
+  let players = server.players
+  players.forEach(player => { checkUpdatesForPlayer(player) })
+}
+
+function checkUpdatesForPlayer(player) {
+  player.sendData('update_notifier_check', client_data)
+}
 
 PlayerEvents.loggedIn(event => {
   let player = event.player
-  Utils.server.scheduleInTicks(120, e => { check_updates_for(player) })
+  player.sendData('update_notifier_update_client_data', client_data)
+  Utils.server.scheduleInTicks(120, e => {
+    checkUpdatesForPlayer(player)
+  })
 })
 
 ServerEvents.loaded(event => {
   Utils.server.scheduleInTicks(TIME_INTERVAL, e => {
-    check_updates()
+    checkUpdates()
     e.reschedule()
   })
 
@@ -54,18 +65,26 @@ ServerEvents.loaded(event => {
 ServerEvents.commandRegistry(event => {
   const { commands: Commands, arguments: Arguments } = event;
   event.register(
-    Commands.literal("update_notifier").then(Commands.literal("skip").then(Commands.argument('version', Arguments.STRING.create(event)).executes(ctx => {
-      let player = ctx.source.player
-      player.sendData('update_notifier_skip', { version: Arguments.STRING.getResult(ctx, "version") })
-      return 1
-    }))).then(Commands.literal("enable").executes(ctx => {
-      let player = ctx.source.player
-      player.sendData('update_notifier_enable', {})
-      return 1
-    })).then(Commands.literal("clean_skip_list").executes(ctx => {
-      let player = ctx.source.player
-      player.sendData('update_notifier_clean_skip_list', {})
-      return 1
-    }))
+    Commands.literal('update_notifier')
+      .then(Commands.literal('skip').then(Commands.argument('version', Arguments.STRING.create(event)).executes(ctx => {
+        let player = ctx.source.player
+        player.sendData('update_notifier_skip', { version: Arguments.STRING.getResult(ctx, "version") })
+        return 1
+      })))
+      /*.then(Commands.literal('check').executes(ctx => {
+        let player = ctx.source.player
+        player.sendData('update_notifier_check')
+        return 1
+      }))*/
+      .then(Commands.literal("enable").executes(ctx => {
+        let player = ctx.source.player
+        player.sendData('update_notifier_enable', {})
+        return 1
+      }))
+      .then(Commands.literal("clean_skip_list").executes(ctx => {
+        let player = ctx.source.player
+        player.sendData('update_notifier_clean_skip_list', {})
+        return 1
+      }))
   )
 })
