@@ -1,18 +1,4 @@
 {
-  "json.schemas": [
-    {
-      "fileMatch": [
-        "/lang/*.json"
-      ],
-      "url": "./.vscode/probe.lang-schema.json"
-    },
-    {
-      "fileMatch": [
-        "/probe/docs/*.json"
-      ],
-      "url": "./.vscode/probe.doc-schema.json"
-    }
-  ],
   "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
   "editor.detectIndentation": true,
   "editor.indentSize": "tabSize",
