@@ -7,7 +7,7 @@
 	#The name of the modpack
 	modpackName = "Finality Genesis"
 	#The version of the modpack
-	modpackVersion = "0.1.0-beta.16-mc1.20.1"
+	modpackVersion = "0.1.0-beta.17-mc1.20.1"
 	#Use the metadata.json to determine the modpack version
 	#ONLY ENABLE THIS IF YOU KNOW WHAT YOU ARE DOING
 	useMetadata = false
