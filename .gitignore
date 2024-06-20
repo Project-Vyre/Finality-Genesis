@@ -51,6 +51,7 @@ essential/lwjgl3-natives
 essential/*-metadata
 
 # Ignore folders 
+.probe/*
 backups/
 crash-reports/
 downloads/
