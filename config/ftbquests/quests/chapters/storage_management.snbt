@@ -6,7 +6,7 @@
 	hide_quest_details_until_startable: true
 	icon: "minecraft:chest"
 	id: "32CC85BACCD9E454"
-	order_index: 3
+	order_index: 1
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
@@ -102,6 +102,11 @@
 		}
 		{
 			dependencies: ["1229F8883A381F07"]
+			description: [
+				"The Tesseract is more like a transportation device than a storage device, despite having some capacity."
+				""
+				"You can create an unlimited amount of channels as well."
+			]
 			id: "6359967C28611C4B"
 			subtitle: "Transporting items, fluids and energy through space and time."
 			tasks: [{

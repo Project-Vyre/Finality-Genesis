@@ -1,31 +1,282 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
+	default_quest_shape: "rsquare"
 	filename: "reliquary"
-	group: "668E3EA3A7A91B79"
+	group: "6855847200ADBE3A"
+	hide_quest_until_deps_visible: true
 	icon: "reliquary:holy_hand_grenade"
 	id: "1F87E8208E1E2F7A"
-	order_index: 1
+	order_index: 6
 	quest_links: [ ]
-	quests: [{
-		dependencies: ["4A691BB889286C89"]
-		description: ["Hello! This quest tree is still a work in progress due to how much content there is to explain from the Reliquary mod."]
-		id: "0957EE73CFDC6897"
-		tasks: [{
-			id: "0767C79CF7960709"
-			item: {
-				Count: 1
-				id: "reliquary:alkahestry_tome"
-				tag: {
-					Damage: 1001
+	quests: [
+		{
+			dependencies: ["400EDFF433438689"]
+			description: ["Hello! This quest tree is still a work in progress due to how much content there is to explain from the Reliquary mod."]
+			id: "0957EE73CFDC6897"
+			rewards: [{
+				id: "56CF4E0E80E71FB9"
+				type: "xp_levels"
+				xp_levels: 15
+			}]
+			subtitle: "Duplication if it was a book."
+			tasks: [{
+				id: "0767C79CF7960709"
+				item: {
+					Count: 1
+					id: "reliquary:alkahestry_tome"
+					tag: {
+						Damage: 1001
+					}
 				}
-			}
-			title: "Duplication 2.0"
-			type: "item"
-		}]
-		x: 0.0d
-		y: 0.0d
-	}]
-	subtitle: ["Even more artifacts!"]
+				title: "Duplication 2.0"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			hide: true
+			hide_dependency_lines: false
+			hide_dependent_lines: true
+			icon: "summoningrituals:altar"
+			id: "400EDFF433438689"
+			rewards: [{
+				id: "26161A81F13D0C4C"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "Magic rituals, vials and more!"
+			tasks: [
+				{
+					id: "18BA6950ECFDE4BB"
+					item: "summoningrituals:altar"
+					type: "item"
+				}
+				{
+					id: "106C429EF72CDB90"
+					item: "reliquary:empty_potion_vial"
+					type: "item"
+				}
+				{
+					id: "2ED14964EF63B240"
+					title: "Click me when you know how to use the Summoning Altar!"
+					type: "checkmark"
+				}
+			]
+			title: "First Steps into Reliquary"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["400EDFF433438689"]
+			id: "50720B985BB43C16"
+			rewards: [{
+				id: "4E7FA511E906E5DC"
+				type: "xp_levels"
+				xp_levels: 15
+			}]
+			shape: "rsquare"
+			subtitle: "It's uhhh... glowing water."
+			tasks: [{
+				id: "1F794453BA17BB0E"
+				item: "reliquary:glowing_water"
+				type: "item"
+			}]
+			title: "Holy Water?"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["400EDFF433438689"]
+			id: "0E0074E5B7A8175F"
+			tasks: [{
+				id: "612A985BA2F69230"
+				item: "reliquary:angelheart_vial"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["400EDFF433438689"]
+			hide_dependent_lines: true
+			id: "66342A6B2D7B07DE"
+			tasks: [{
+				id: "5FCB62F56307A1E8"
+				item: "reliquary:angelic_feather"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["400EDFF433438689"]
+			id: "49338DA4E210A421"
+			tasks: [{
+				id: "6DCAAE3A903233DB"
+				item: "reliquary:aphrodite_potion"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["400EDFF433438689"]
+			id: "7136A616829A0D54"
+			tasks: [{
+				id: "7AA6368151F3E812"
+				item: "reliquary:fertile_potion"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6F045DC683122E8F"]
+			id: "44D2026F50E99AF3"
+			tasks: [{
+				id: "7E41BE3F3CB97BDB"
+				item: "reliquary:destruction_catalyst"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["61360DB59C51C7AA"]
+			id: "6F045DC683122E8F"
+			tasks: [{
+				id: "493083D2FA16BF67"
+				item: "reliquary:infernal_tear"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["6F045DC683122E8F"]
+			id: "395061FF6A4A5F4C"
+			tasks: [{
+				id: "79225C5D73C8517B"
+				item: "reliquary:hero_medallion"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["400EDFF433438689"]
+			hide_dependency_lines: false
+			id: "61360DB59C51C7AA"
+			tasks: [{
+				id: "6941A39752646B99"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						Parent: {
+							Items: [ ]
+						}
+					}
+					id: "reliquary:void_tear"
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["61360DB59C51C7AA"]
+			id: "406D92D1345C7E45"
+			tasks: [{
+				id: "5FEC7836EBDD5A50"
+				item: "reliquary:emperor_chalice"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"6F045DC683122E8F"
+				"406D92D1345C7E45"
+			]
+			id: "61312E0726BB5F4C"
+			tasks: [{
+				id: "6BF03E4508DA7274"
+				item: "reliquary:infernal_chalice"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["50720B985BB43C16"]
+			id: "5F4FF38DF7B4CDB0"
+			tasks: [{
+				id: "39710595AF6CFA36"
+				item: "reliquary:holy_hand_grenade"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"0E0074E5B7A8175F"
+				"66342A6B2D7B07DE"
+			]
+			id: "1021733CDE445408"
+			tasks: [{
+				id: "6F559309400D20E0"
+				item: "reliquary:phoenix_down"
+				type: "item"
+			}]
+			x: 3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["61360DB59C51C7AA"]
+			id: "69EA983F7AD30154"
+			tasks: [{
+				id: "7CC5E6B99F3C1E8C"
+				item: "reliquary:midas_touchstone"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["400EDFF433438689"]
+			id: "5DD123DCC2A19D4A"
+			tasks: [{
+				id: "70CBFC8214966CC7"
+				item: "reliquary:shears_of_winter"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"5DD123DCC2A19D4A"
+				"6941A39752646B99"
+			]
+			id: "04F3161D3C42260A"
+			tasks: [{
+				id: "0A7C384AACE238A2"
+				item: "reliquary:glacial_staff"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -2.0d
+		}
+	]
+	subtitle: [
+		"Even more artifacts!"
+		"Work in progress."
+	]
 	title: "Reliquary"
 }

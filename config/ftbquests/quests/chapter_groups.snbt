@@ -1,9 +1,9 @@
 {
 	chapter_groups: [
 		{ id: "3875EE4E33A6FF87", title: "Stat Upgrades" }
-		{ id: "668E3EA3A7A91B79", title: "Useful Utilities" }
 		{ id: "6855847200ADBE3A", title: "The World" }
 		{ id: "2B2D0B6DE31DE8D3", title: "Sustenance" }
+		{ id: "668E3EA3A7A91B79", title: "Useful Utilities" }
 		{ id: "4B44486C4CFAE9FB", title: "Architecture and Decor" }
 	]
 }

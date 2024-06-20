@@ -21,6 +21,8 @@
 			description: [
 				"&dHello! The 1.20.1 port of this modpack is a work in progress and is in a beta state. Please report any bugs you encounter on the Finality Genesis GitHub Issues page, thank you!&r"
 				""
+				"Notice: If you randomly hear music throughout the world, assume that a mob spawned in with a &bSophisticated Backpack&r with the music upgrade."
+				""
 				"If you wish to play the modpack on its intended difficulty, set the difficulty to &cHard&r. For obvious reasons, this is optional."
 				""
 				"Quests on this chapter are not expected to be completed on the first few days."

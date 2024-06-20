@@ -1,0 +1,134 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "rats"
+	group: "6855847200ADBE3A"
+	hide_quest_until_deps_visible: true
+	icon: "rats:cheese"
+	id: "70E40FD10E2577B1"
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"First step to taming a Wild Rat is by making a lot of Cheese for your new friend."
+				""
+				"Second step is to drop the Cheese on the ground. They may eat a lot before considering you their owner."
+			]
+			id: "5B90BDECEA22753D"
+			rewards: [{
+				id: "097D40430D7D6BA6"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			subtitle: "Some are adorable... others not so much."
+			tasks: [{
+				id: "71FC3FE6B2435B8E"
+				item: "rats:cheese"
+				type: "item"
+			}]
+			title: "Introduction to Rats"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["143C8106E5E062A4"]
+			id: "441A43632CBA7D58"
+			rewards: [{
+				id: "7068DC842455A8A4"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
+			subtitle: "The physical manifestation."
+			tasks: [{
+				id: "0BBE753C2FE2A0CA"
+				item: "rats:plague_scythe"
+				type: "item"
+			}]
+			title: "Black Death Scythe"
+			x: -3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			id: "143C8106E5E062A4"
+			rewards: [{
+				id: "4CA99AD89D9BB045"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			tasks: [{
+				id: "04DE78FB6C7A7205"
+				item: "rats:plague_tome"
+				type: "item"
+			}]
+			x: -3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5B90BDECEA22753D"]
+			id: "167363E6C536554A"
+			rewards: [{
+				id: "1276E99468DFE1EA"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
+			subtitle: "They await your instructions."
+			tasks: [
+				{
+					id: "6F208ADC3B0CFBD4"
+					item: "rats:cheese_stick"
+					type: "item"
+				}
+				{
+					id: "23EDA436A6B97753"
+					item: "rats:radius_stick"
+					type: "item"
+				}
+				{
+					id: "7848405063544A80"
+					item: "rats:patrol_stick"
+					type: "item"
+				}
+				{
+					id: "4DE3F093A4F9B326"
+					item: "rats:rat_whistle"
+					type: "item"
+				}
+				{
+					id: "4102E1FB583B51F7"
+					item: "rats:rat_flute"
+					type: "item"
+				}
+			]
+			title: "Rat Conductor"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5B90BDECEA22753D"]
+			description: ["The basic rat upgrade is used as the basis for all the other rat upgrades. R-Click to see all recipe uses."]
+			id: "1F65C8B22785D80F"
+			rewards: [{
+				id: "4CB55B814D4030AE"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			subtitle: "Small, but mighty!"
+			tasks: [{
+				id: "026E4A2B54D9305E"
+				item: "rats:rat_upgrade_basic"
+				type: "item"
+			}]
+			title: "Talented Rats"
+			x: -1.5d
+			y: 0.0d
+		}
+	]
+	subtitle: [
+		"Build your rat empire!"
+		"Work in progress."
+	]
+	title: "Rats"
+}

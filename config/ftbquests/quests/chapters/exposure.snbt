@@ -5,7 +5,7 @@
 	group: "668E3EA3A7A91B79"
 	icon: "exposure:camera"
 	id: "5FD5CBBF5D8545DF"
-	order_index: 2
+	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
