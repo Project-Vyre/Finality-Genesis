@@ -169,6 +169,7 @@ ClientEvents.highPriorityAssets(event => {
     "sponge_bucket",
     "coarse_to_dirt",
     "enderman_blocks",
+    "endermites",
     "dragon_blocks",
     "piglin_repellent",
     "portal_trick",
