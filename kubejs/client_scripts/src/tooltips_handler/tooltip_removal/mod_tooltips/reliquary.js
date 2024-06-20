@@ -2,6 +2,8 @@
 // requires: create
 
 let reliquary_shots = [
+  'reliquary:shears_of_winter',
+  'reliquary:holy_hand_grenade',
   'reliquary:bullets/exorcism_bullet',
   'reliquary:bullets/blaze_bullet',
   'reliquary:bullets/ender_bullet',

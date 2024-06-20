@@ -4,6 +4,32 @@
 ClientEvents.lang('en_us', event => {
   event.addAll(
     'kubejs',
+    createTooltip('reliquary:holy_hand_grenade')
+      .addSummary('A _powerful_ explosive that doesn\'t break blocks or hurt the wielder.')
+      .addBehaviour([
+        'The Fine Text',
+        'Certain mobs don\'t get hurt by this explosive.'
+      ])
+      .setPalette($Palette.YELLOW)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('reliquary:shears_of_winter')
+      .addSummary('Shears that can harvest with the power of the cold air.')
+      .addBehaviour([
+        'On L-Click',
+        'Harvest _individual_ blocks like usual.'
+      ])
+      .addBehaviour([
+        'On held R-Click',
+        'Shears in a large area of effect around the player.'
+      ])
+      .setPalette($Palette.BLUE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
     createTooltip('reliquary:bullets/exorcism_bullet')
       .addSummary('Highly effective against the _Undead_.')
       .setPalette($Palette.RED)

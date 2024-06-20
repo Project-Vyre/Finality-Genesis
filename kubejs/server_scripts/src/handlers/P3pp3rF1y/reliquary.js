@@ -30,6 +30,7 @@ ServerEvents.recipes(event => {
     { id: 'reliquary:rod_of_lyssa' },
     { id: 'reliquary:void_tear' },
     { id: 'reliquary:witherless_rose' },
+    { id: 'reliquary:shears_of_winter' },
     { id: 'reliquary:gold_nugget' }
   ])
   event.recipes.summoningrituals.altar('minecraft:book')
@@ -256,4 +257,14 @@ ServerEvents.recipes(event => {
     .dayTime('day')
     .weather('clear')
     .id('kubejs:reliquary/ritual/witherless_rose')
+  event.recipes.summoningrituals.altar('minecraft:shears')
+    .itemOutput('reliquary:shears_of_winter')
+    .input([
+      'reliquary:frozen_core',
+      '2x minecraft:diamond'
+    ])
+    .dayTime('night')
+    .weather('rain')
+    .blockBelow('minecraft:blue_ice')
+    .id('kubejs:reliquary/ritual/shears_of_winter')
 })
