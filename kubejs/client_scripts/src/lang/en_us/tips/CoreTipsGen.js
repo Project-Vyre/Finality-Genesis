@@ -273,6 +273,7 @@ createTip("sand_haunting", "Sand can be haunted into Soul Sand which can be wash
 createTip("symmetry_wand_building", "The Wand of Symmetry is helpful in building your structures symmetrically and will usually mirror blocks placed exactly. There are some exceptions, however.")
 createTip("symmetry_wand_excavation", "The Wand of Symmetry can be used to quickly excavate an area with the Octagonal setting. Just keep in mind that 8 blocks will be broken at the same time, so your tool durability will be used up quicker.")
 createTip("nothing_is_worthless", "What was once worthless is now valuable. From Cobblestone you can get Gravel. From Gravel you can get Iron Nuggets.")
+createTip("encasing_cogwheels", "You can use either andesite or brass casing to close off shaft connection points. Right clicking with a wrench opens that connection point back up.")
 // create wrench tips 101
 createTip("wrench_1", "Wrenches can instantly pick up Create's blocks, simply Shift + R-click with it in your main hand. Stop wasting your pickaxe or axe durability!")
 createTip("wrench_2", "Create's Wrench can instantly pick up Hoppers.")
@@ -310,4 +311,10 @@ if (Platform.isLoaded("jei")
   jeiTip("search_bar", "While in your inventory screen, press <rainb>Ctrl + F</rainb> to quickly access JEI's search bar.")
   jeiTip("recipes_shortcut", "Hovering over an item and pressing R will show all recipe methods on how to get that item.")
   jeiTip("usage_shortcut", "Hovering over an item and pressing U will show all recipe uses for that item.")
+}
+if (Platform.isLoaded("sophisticatedbackpacks")) {
+  finJokeTip("random_backpack_music", "While exploring the world, you may hear music regardless of distance to them. Assume that it's an entity with a musical backpack.")
+}
+if (Platform.isLoaded("rats")) {
+  finTip("rat_taming", "Wild Rats will become loyal friends when you drop Cheese for them.")
 }
