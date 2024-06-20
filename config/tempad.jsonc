@@ -28,7 +28,7 @@
      * The amount of fuel that the timedoor will consume on opening of the timedoor.
      * Type: Integer
      */
-    "timedoorFuelAmount": 180,
+    "timedoorFuelAmount": 10,
     /*
      * The amount of fuel that the timedoor can hold.
      * Type: Integer
