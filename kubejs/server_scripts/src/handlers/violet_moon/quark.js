@@ -55,9 +55,9 @@ ServerEvents.recipes(event => {
     ], {
       W: [
         'quark:ancient_planks',
-        'quark:blossom_planks',
+        'minecraft:blossom_planks',
         'quark:azalea_planks',
-        'quark:bamboo_planks' // deprecate in 1.20.x+
+        'minecraft:bamboo_planks' // deprecate in 1.20.x+
       ]
     }).id('finality:quark/crafting/vanilla_chest_fallback')
   }
@@ -75,7 +75,7 @@ ServerEvents.recipes(event => {
       'S S'
     ], {
       S: '#forge:rods/wooden',
-      P: 'quark:bamboo_planks'
+      P: 'minecraft:bamboo_planks'
     }).id('finality:quark/bamboo_ladder')
     event.shaped('4x quark:ancient_ladder', [
       'S S',
@@ -83,7 +83,7 @@ ServerEvents.recipes(event => {
       'S S'
     ], {
       S: '#forge:rods/wooden',
-      P: 'quark:bamboo_planks'
+      P: 'quark:ancient_planks'
     }).id('finality:quark/ancient_ladder')
     // deprecate in 1.20.1+
     event.shaped('4x quark:blossom_ladder', [
@@ -92,7 +92,7 @@ ServerEvents.recipes(event => {
       'S S'
     ], {
       S: '#forge:rods/wooden',
-      P: 'quark:bamboo_planks'
+      P: 'minecraft:blossom_planks'
     }).id('finality:quark/blossom_ladder')
     event.shaped('4x quark:azalea_ladder', [
       'S S',
@@ -100,7 +100,7 @@ ServerEvents.recipes(event => {
       'S S'
     ], {
       S: '#forge:rods/wooden',
-      P: 'quark:bamboo_planks'
+      P: 'quark:azalea_planks'
     }).id('finality:quark/azalea_ladder')
   }
 })
