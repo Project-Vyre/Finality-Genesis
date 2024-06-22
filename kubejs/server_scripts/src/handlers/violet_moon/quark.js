@@ -92,7 +92,7 @@ ServerEvents.recipes(event => {
       'S S'
     ], {
       S: '#forge:rods/wooden',
-      P: 'minecraft:blossom_planks'
+      P: 'quark:blossom_planks'
     }).id('finality:quark/blossom_ladder')
     event.shaped('4x quark:azalea_ladder', [
       'S S',
