@@ -1,0 +1,12 @@
+
+["Integrated Villages"]
+
+	###########################################################################################################
+	## General settings.
+	###########################################################################################################
+	["Integrated Villages".General]
+		# Whether or not vanilla villages should be disabled.
+		# Default: true
+		#
+		"Disable Vanilla Villages" = true
+
