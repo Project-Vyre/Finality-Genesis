@@ -16,7 +16,7 @@
 // requires: salt
 // requires: supplementaries
 
-const WOOD_TYPES = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'crimson', 'warped']
+const WOOD_TYPES = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'crimson', 'warped', 'cherry']
 const STANDARD_ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
 const STANDARD_TOOLS_ALL = ['pickaxe', 'axe', 'hoe', 'shovel', 'sword']
 let STONEPLATES = ['stone', 'polished_blackstone']
