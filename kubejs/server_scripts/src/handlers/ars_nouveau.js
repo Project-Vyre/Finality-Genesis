@@ -29,14 +29,26 @@ ServerEvents.recipes(event => {
   if (Platform.isLoaded('aether')) {
     event.shapeless('ars_nouveau:novice_spell_book', [
         'minecraft:book',
-        'aether:gravitite_shovel',
-        'aether:gravitite_pickaxe',
-        'aether:gravitite_axe',
-        'aether:gravitite_sword',
+        'aether:zanite_shovel',
+        'aether:zanite_pickaxe',
+        'aether:zanite_axe',
+        'aether:zanite_sword',
         'minecraft:amethyst_shard',
         'create:andesite_alloy',
         'minecraft:golden_carrot'
     ]).id('kubejs:novice_spell_book_from_zanite')
+  }
+  if (Platform.isLoaded('malum')) {
+    event.shapeless('ars_nouveau:novice_spell_book', [
+      'minecraft:book',
+      'malum:soul_stained_steel_shovel',
+      'malum:soul_stained_steel_pickaxe',
+      'malum:soul_stained_steel_axe',
+      'malum:soul_stained_steel_sword',
+      'minecraft:amethyst_shard',
+      'create:andesite_alloy',
+      'minecraft:golden_carrot'
+  ]).id('kubejs:novice_spell_book_from_zanite')
   }
   event.shapeless('ars_nouveau:apprentice_spell_book', [
       'ars_nouveau:novice_spell_book',
