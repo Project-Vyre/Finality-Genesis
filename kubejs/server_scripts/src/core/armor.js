@@ -96,9 +96,9 @@ const set = {
 
 const sets = [set];
 
-PlayerEvents.tick(check => {
-  const { headArmorItem, chestArmorItem, legsArmorItem, feetArmorItem } = check.player;
-  if (check.player.level.time % 100 === 0) {
+PlayerEvents.tick(event => {
+  const { headArmorItem, chestArmorItem, legsArmorItem, feetArmorItem } = event.player;
+  if (event.player.level.time % 100 === 0) {
     for (let armorSet in sets) {
       if (headArmorItem.id === sets[armorSet].name + '_helmet' &&
         chestArmorItem.id === sets[armorSet].name + '_chestplate' &&
@@ -106,7 +106,7 @@ PlayerEvents.tick(check => {
         feetArmorItem.id === sets[armorSet].name + '_boots'
       ) {
         for (let x in sets[armorSet].effects) {
-          check.player.potionEffects.add(
+          event.player.potionEffects.add(
             sets[armorSet].effects[x].effect,
             sets[armorSet].effects[x].duration,
             sets[armorSet].effects[x].amplifier,
@@ -117,4 +117,20 @@ PlayerEvents.tick(check => {
       }
     }
   }
+  /*
+  if (event.player.getHeadArmorItem() === 'kubejs:final_helmet' &&
+    event.player.getHeadArmorItem() === 'kubejs:final_chestplate' &&
+    event.player.getHeadArmorItem() === 'kubejs:final_leggings' &&
+    event.player.getHeadArmorItem() === 'kubejs:final_boots'
+  ) {
+    if (event.player.jumping) {
+      event.player.tell('Rocket jump!')
+      event.player.level.createExplosion()
+        .exploder(event.entity.player)
+        .strength(10)
+        .explosionMode('mob')
+        .explode();
+    }
+  }
+  */
 })

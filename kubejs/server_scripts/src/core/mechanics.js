@@ -1,0 +1,123 @@
+/**
+ * @file Handles mechanics for items.
+ * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
+ * @author Liopyu <https://github.com/liopyu> Slapped me into my senses 
+ */
+
+// ignored: false
+
+ItemEvents.firstLeftClicked(event => {
+  const { item, level, player, entity } = event
+  if (player.shiftKeyDown && item.getId() == 'create:mysterious_cuckoo_clock') {
+    let cuckoo_explosion = player.block.createExplosion()
+    cuckoo_explosion.exploder(event.player)
+      .explosionMode('mob')
+      .causesFire(false)
+      .strength(5)
+      .explode();
+    player.inventory.clear(item)
+  }
+  /*
+  let explosion_box = AABB.of(
+    event.player.pos.x() - 15,
+    event.player.pos.y() - 5,
+    event.player.pos.z() - 15,
+    event.player.pos.x() + 15,
+    event.player.pos.y() + 5,
+    event.player.pos.z() + 15
+  )
+  if (item.getId() == 'kubejs:final_sword') {
+    level.getEntitiesWithin(explosion_box).forEach(entity => {
+      if (entity == null) return
+      if (entity.item) { return }
+      if (entity.getType() == 'minecraft:lightning_bolt') { return }
+      if (entity.getType() == 'minecraft:end_crystal') { return }
+      if (entity.getType() == 'minecraft:area_effect_cloud') { return }
+      if (!entity.isPlayer()) {
+        let sword_explosion = entity.block.createExplosion()
+        sword_explosion.exploder(entity)
+          .explosionMode('mob')
+          .causesFire(false)
+          .strength(0)
+          .explode();
+      }
+    })
+  }
+  */
+})
+
+ItemEvents.firstRightClicked(event => {
+  const { item, level, player, entity } = event
+  let lightningBolt = entity.block.createEntity('minecraft:lightning_bolt')
+  let playerAABB = player.boundingBox.inflate(5)
+  let myBoundingBox = AABB.of(
+    player.pos.x() - 20,
+    player.pos.y() - 5,
+    player.pos.z() - 20,
+    player.pos.x() + 20,
+    player.pos.y() + 10,
+    player.pos.z() + 20
+  )
+  if (item.getId() == 'kubejs:final_sword') {
+    level.getEntitiesWithin(myBoundingBox).forEach(entity => {
+      if (entity == null) { return }
+      if (entity.item) { return }
+      if (entity.getType() == 'minecraft:lightning_bolt') { return }
+      if (entity.getType() == 'minecraft:end_crystal') { return }
+      if (entity.getType() == 'minecraft:area_effect_cloud') { return }
+      if (!entity.isPlayer()) {
+        entity.block.createEntity('minecraft:lightning_bolt').spawn()
+        entity.block.createEntity('minecraft:end_crystal').spawn()
+      }
+    })
+  }
+})
+/*
+ItemEvents.rightClicked('minecraft:powder_snow_bucket', event => {
+  let explosion = event.entity.block.createExplosion().explode()
+  let lightningBolt = event.entity.block.createEntity('minecraft:lightning_bolt')
+  let playerAABB = event.player.boundingBox.inflate(5)
+  let myBoundingBox = AABB.of(
+    event.player.pos.x() - 10,
+    event.player.pos.y() - 5,
+    event.player.pos.z() - 10,
+    event.player.pos.x() + 10,
+    event.player.pos.y() + 5,
+    event.player.pos.z() + 10
+  )
+  event.level.getEntitiesWithin(myBoundingBox).forEach(entity => {
+    if (entity == null) return
+    //do something
+    //event.player.tell('Freeze!')
+    // if entity is NOT the player do...
+    if (!entity.isPlayer()) {
+      //entity.setSecondsOnFire(100)
+      //event.entity.isGlowing()
+      lightningBolt
+      //event.entity.potionEffects.add('minecraft:wither', 200, 255, false, false)
+      //entity.spawnLightning(entity.pos.x, entity.pos.y, entity.pos.z, false)
+      //event.entity.setIsInPowderSnow(true)
+      //event.entity.level.spawnFireworks(event.entity.pos.x, event.entity.pos.y, event.entity.pos.z)
+    }
+  })
+})
+*/
+/*
+ItemEvents.firstLeftClicked('kubejs:iridium_sword', event => {
+  let playerAABB = event.player.boundingBox.inflate(10)
+  event.level.getEntitiesWithin(playerAABB).forEach(entity => {
+    if (entity == null) return
+    //do something
+    event.entity.setIsInPowderSnow(true)
+    event.player.tell('Freeze!')
+  })
+  //
+  //let myBoundingBox = AABB.of(player.pos.x() - 10, player.pos.y() - 5, player.pos.z() - 10, player.pos.x() + 10, player.pos.y() + 5, player.pos.z() + 10)
+  //event.level.getEntitiesWithin(myBoundingBox).forEach(entity => {
+  //    if (entity == null) return
+  //    //do something
+  //    event.entity
+  //  })
+  //
+})
+*/
