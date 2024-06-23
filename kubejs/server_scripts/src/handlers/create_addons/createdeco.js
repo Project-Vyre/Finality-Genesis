@@ -85,6 +85,10 @@ let cdeco_lamp_mats = [
   'zinc'
 ]
 
+ServerEvents.tags('item', event => {
+  event.add('forge:nuggets/netherite', 'createdeco:netherite_nugget')
+})
+
 ServerEvents.tags('block', event => {
   event.add('create:wrench_pickup', [
     'createdeco:gold_bars',

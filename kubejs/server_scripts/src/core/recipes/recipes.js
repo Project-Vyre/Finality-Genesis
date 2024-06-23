@@ -285,7 +285,7 @@ ServerEvents.recipes(event => {
   ], {
     C: 'create:clipboard',
     S: 'create:sturdy_sheet',
-    N: 'kubejs:netherite_nugget'
+    N: '#forge:nuggets/netherite'
   }).id('finality:mechanical_crafting/duplicator')
   /**
    * QoL
