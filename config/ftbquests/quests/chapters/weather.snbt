@@ -1,0 +1,112 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "weather"
+	group: "6855847200ADBE3A"
+	hide_quest_until_deps_visible: true
+	icon: "weather2:weather_item"
+	id: "00BAE53C163478D1"
+	order_index: 1
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: ["Firstly you will need to make a bunch of these mini tornado items. They are &aessential&r in Weather2's recipes."]
+			id: "10E31E0B1F80D16E"
+			subtitle: "Just a minor inconvenience..."
+			tasks: [{
+				id: "471D8D517605ABC7"
+				item: "weather2:weather_item"
+				type: "item"
+			}]
+			title: "Introduction to Weather"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["24548507A1D491AC"]
+			id: "5248BF67A1CC96D8"
+			subtitle: "In case you want to know if there's a storm heading your way."
+			tasks: [{
+				id: "5E002850E54FFD91"
+				item: "weather2:tornado_siren"
+				type: "item"
+			}]
+			title: "Tornado Alert!"
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["10E31E0B1F80D16E"]
+			id: "75F98967D5AF6460"
+			subtitle: "Should help predict the weather ahead of time."
+			tasks: [{
+				id: "5411DF8EE4428151"
+				item: "weather2:weather_forecast"
+				type: "item"
+			}]
+			title: "What's the weather?"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["10E31E0B1F80D16E"]
+			id: "33D70963BC753D21"
+			subtitle: "Playing a dangerous game of tornado ping pong."
+			tasks: [{
+				id: "042F2EC730D696D3"
+				item: "weather2:weather_deflector"
+				type: "item"
+			}]
+			title: "The Weather Deflector!"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["10E31E0B1F80D16E"]
+			id: "24548507A1D491AC"
+			subtitle: "My tornado senses are tingling!"
+			tasks: [{
+				id: "758D18B09D39CD22"
+				item: "weather2:tornado_sensor"
+				type: "item"
+			}]
+			title: "Tornado Sensor"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["10E31E0B1F80D16E"]
+			id: "499EED63C698609C"
+			tasks: [
+				{
+					id: "615D28C96DDEF73D"
+					item: "weather2:anemometer"
+					type: "item"
+				}
+				{
+					id: "414FD6FAB20318DD"
+					item: "weather2:wind_vane"
+					type: "item"
+				}
+			]
+			title: "Meteorologist Tools"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["499EED63C698609C"]
+			id: "69B0CB12E8B7764D"
+			tasks: [{
+				id: "2996EFD9D9D0E112"
+				item: "weather2:wind_turbine"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+	]
+	subtitle: ["Welcome to tornado alley."]
+	title: "Weather"
+}

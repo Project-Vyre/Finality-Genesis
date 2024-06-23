@@ -6,7 +6,7 @@
 	hide_quest_until_deps_visible: true
 	icon: "grimoireofgaia:experience_diamond"
 	id: "4B83C16E8E21E942"
-	order_index: 2
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{

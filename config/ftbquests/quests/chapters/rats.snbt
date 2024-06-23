@@ -6,7 +6,7 @@
 	hide_quest_until_deps_visible: true
 	icon: "rats:cheese"
 	id: "70E40FD10E2577B1"
-	order_index: 7
+	order_index: 9
 	quest_links: [ ]
 	quests: [
 		{

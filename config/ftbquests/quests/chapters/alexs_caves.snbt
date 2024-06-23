@@ -1,0 +1,169 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "alexs_caves"
+	group: "6855847200ADBE3A"
+	hide_quest_until_deps_visible: true
+	icon: "alexscaves:cave_book"
+	id: "289B07C085993B57"
+	order_index: 0
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: [
+				"- Stone Tablets are not renewable, so take your type to translate them and do not break the ones that will only ever exist in this world."
+				""
+				"- You only get exactly 5 chances per word."
+				""
+				"To unlock the rest of the book's entries, you will need to use the codices (plural for codex) that you get from translating the Stone Tablets."
+			]
+			icon: "alexscaves:spelunkery_table"
+			id: "43D2849E1DC5F19B"
+			subtitle: "First you will need these."
+			tasks: [
+				{
+					id: "4F03B5866F5266F4"
+					item: "alexscaves:cave_book"
+					type: "item"
+				}
+				{
+					id: "1676C1EA527967D0"
+					item: "minecraft:paper"
+					type: "item"
+				}
+				{
+					id: "6AC6011D3C293688"
+					item: "alexscaves:spelunkery_table"
+					type: "item"
+				}
+			]
+			title: "Introduction to Alex's Caves"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["43D2849E1DC5F19B"]
+			id: "6759322D5B1931CB"
+			subtitle: "Oooh magnets!"
+			tasks: [{
+				biome: "alexscaves:magnetic_caves"
+				icon: "alexscaves:quarry_smasher"
+				id: "052C118A86570F85"
+				type: "biome"
+			}]
+			title: "The Magnetic Caves"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["43D2849E1DC5F19B"]
+			description: [
+				"I suggest making a full hazmat suit set prior to your expedition inside the Toxic Caves."
+				""
+				"However, you will still need to venture into them to acquire the materials to do so."
+			]
+			id: "7298504FA950DE68"
+			subtitle: "Don't forget your Rad-Away!"
+			tasks: [
+				{
+					biome: "alexscaves:toxic_caves"
+					icon: "alexscaves:fissile_core"
+					id: "657A664EB8A7EE29"
+					type: "biome"
+				}
+				{
+					id: "719F1D089946C6B6"
+					item: {
+						Count: 1
+						id: "alexscaves:hazmat_mask"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "048091285E274392"
+					item: {
+						Count: 1
+						id: "alexscaves:hazmat_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "293C8BE3FEBAD8D3"
+					item: {
+						Count: 1
+						id: "alexscaves:hazmat_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "150614E456825704"
+					item: {
+						Count: 1
+						id: "alexscaves:hazmat_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "The Toxic Caves"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["43D2849E1DC5F19B"]
+			id: "2232A08B337BA69E"
+			subtitle: "Subnautica!"
+			tasks: [{
+				biome: "alexscaves:abyssal_chasm"
+				icon: "alexscaves:floater"
+				id: "4EED9B77E5529E70"
+				type: "biome"
+			}]
+			title: "The Abyssal Chasm"
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["43D2849E1DC5F19B"]
+			id: "14032D427A7915E8"
+			subtitle: "Where the dinosaurs still live."
+			tasks: [{
+				biome: "alexscaves:primordial_caves"
+				icon: "alexscaves:amber_curiosity"
+				id: "4382F83C46175B05"
+				type: "biome"
+			}]
+			title: "The Primordial Caves"
+			x: -2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["43D2849E1DC5F19B"]
+			id: "4FA5F920464F172C"
+			subtitle: "Darkness."
+			tasks: [{
+				biome: "alexscaves:forlorn_hollows"
+				icon: "alexscaves:pure_darkness"
+				id: "4A318460D02FF08D"
+				type: "biome"
+			}]
+			title: "The Forlorn Hollows"
+			x: 0.0d
+			y: 3.0d
+		}
+	]
+	title: "Alex's Caves"
+}
