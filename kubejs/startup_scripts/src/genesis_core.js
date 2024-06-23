@@ -675,7 +675,7 @@ StartupEvents.registry('block', event => {
   event.create('kubejs:deepslate_iridium_ore')
     .soundType('deepslate')
     .hardness(10)
-    .resistance(5)
+    .resistance(100)
     .requiresTool(true)
     .tagBlock('minecraft:mineable/pickaxe')
     .tagBlock('forge:needs_netherite_tool')
