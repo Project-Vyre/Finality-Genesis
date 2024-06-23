@@ -266,7 +266,8 @@ ClientEvents.lang('en_us', event => {
     'tetra:forged_vent',
     'tetra:forged_workbench',
     'tetra:core_extractor',
-    'tetra:extractor_pipe'
+    'tetra:extractor_pipe',
+    'tetra:transfer_unit'
   ]
   for (let i = 0; i < forged_blocks.length; i++) {
     let element = forged_blocks[i];
@@ -282,6 +283,17 @@ ClientEvents.lang('en_us', event => {
         .build()
     )
   }
+  event.addAll(
+    'tetra',
+    createTooltip('tetra:forged_crate')
+      .addSummary('Found in the ancient ruins located deep undergrund in _cold_ or _mountainous_ biomes.')
+      .addBehaviour([
+        'To Open',
+        'Requires _special_ tools to open.'
+      ])
+      .setPalette($Palette.GRAY)
+      .build()
+  )
   event.addAll(
     'tetra',
     createTooltip('tetra:hammer_base')
