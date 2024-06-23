@@ -268,3 +268,7 @@ ServerEvents.recipes(event => {
     .blockBelow('minecraft:blue_ice')
     .id('kubejs:reliquary/ritual/shears_of_winter')
 })
+
+ServerEvents.tags('item', event => {
+  event.add('forge:shears', 'reliquary:shears_of_winter')
+})
