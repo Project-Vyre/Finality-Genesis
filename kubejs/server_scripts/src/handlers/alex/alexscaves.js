@@ -8,6 +8,7 @@
 // requires: kubejs_create
 
 ServerEvents.recipes(event => {
+  event.remove({ id: 'alexscaves:polarity_armor_trim_smithing_template' })
   event.recipes.create.deploying('2x alexscaves:polarity_armor_trim_smithing_template', [
     'alexscaves:polarity_armor_trim_smithing_template',
     'kubejs:duplicator'

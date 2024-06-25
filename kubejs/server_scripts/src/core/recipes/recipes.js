@@ -95,7 +95,6 @@ ServerEvents.recipes(event => {
       `minecraft:${wood}_slab`
     ], `${wood}_planks`).processingTime(50).id(`finality:${wood}_pressure_plate`)
   }
-  event.remove({ id: 'minecraft:netherite_upgrade_smithing_template' })
   event.shaped('minecraft:light_weighted_pressure_plate', [
     'G',
     'R'
@@ -317,6 +316,7 @@ ServerEvents.recipes(event => {
   ]
   for (let i = 0; i < template_duplication.length; i++) {
     let element = template_duplication[i];
+    event.remove({ id: 'minecraft:' + element })
     event.recipes.create.deploying('2x minecraft:' + element, [
       'minecraft:' + element,
       'kubejs:duplicator'
