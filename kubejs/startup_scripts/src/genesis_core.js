@@ -119,9 +119,6 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
   standardNoDisplay('deepslate_shard')
   standardNoDisplay('trident_pole')
   standardNoDisplay('trident_prong')
-  if (Platform.isLoaded('constructionwand')) {
-    fireResistantCustom('construction_core_diamond', '§bActivated Construction Diamond Crystal', 'construction_diamond', 16, true)
-  }
   event.create('kubejs:dormant_singularity_core')
     .rarity('uncommon')
     .texture('kubejs:item/dormant_singularity_core')
