@@ -8,6 +8,13 @@
 // requires: kubejs_create
 
 ServerEvents.recipes(event => {
+
+  event.recipes.minecraft.smoking(
+    'neapolitan:dried_banana',
+    'neapolitan:banana'
+  ).cookingTime(100).xp(0.35).id('neapolitan:banana/dried_banana_from_smoking')
+  
+  event.remove({ id: 'neapolitan:banana/primal_armor_trim_smithing_template' })
   event.recipes.create.deploying('2x neapolitan:primal_armor_trim_smithing_template', [
     'neapolitan:primal_armor_trim_smithing_template',
     'kubejs:duplicator'
