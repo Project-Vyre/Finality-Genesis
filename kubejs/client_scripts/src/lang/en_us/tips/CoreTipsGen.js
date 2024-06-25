@@ -286,6 +286,9 @@ specialCreateTip("use_wrench_not_pickaxe", "Remember to use your Wrench instead 
 // thank you for bringing this up firekylea1205
 createTip("mixer_minimum_rpm", "Did you know the absolute minimum required RPM for Mechanical Mixers is actually 30 RPM? 32 RPM is more commonly known, however.")
 createTip("blast_proof_vaults", "Create's Item Vaults are actually blast proof, but this is not stated anywhere. Thanks Kryppers for sharing this fact!")
+createTip("blaze_burner_smoking_catalyst", "Blaze Burners by default behave like a Smoking catalyst block for use with Encased Fans until fed fuel.")
+createTip("blaze_burner_blast_catalyst", "Blaze Burners when fed turn into a Blasting catalyst block for use with Encased Fans.")
+createTip("empty_blaze_burner_smoking_catalyst", "Lit Empty Blaze Burners can be used as a Smoking catalyst block for Encased Fans.")
 /**
  * Create Addons
  */

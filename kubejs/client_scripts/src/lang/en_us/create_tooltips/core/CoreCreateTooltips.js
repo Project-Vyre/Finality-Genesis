@@ -552,14 +552,42 @@ ClientEvents.lang('en_us', event => {
     'minecraft',
     createTooltip('minecraft:nether_wart')
       .addSummary('A _red_ fungus used in _potion brewing_. Primarily used for brewing _Awkward Potions_.')
-      .addBehaviour([
-        'When haunted',
-        'Absorbs soul energy to _re-awaken_.'
-      ])
       .setPalette($Palette.RED)
       .build()
   )
+  event.addAll(
+    'create',
+    createTooltip('create:empty_blaze_burner')
+      .addSummary('Seems like _something_ is missing...')
+      .addBehaviour([
+        'When lit',
+        'Behaves like a _smoking_ catalyst for use with Encased Fans.'
+      ])
+      .addBehaviour([
+        'On R-Click with a Soul item',
+        'Changes into soulfire. Behaves like a _haunting_ catalyst for use with Encased Fans.'
+      ])
+      .build()
+  )
+  event.addAll(
+    'create',
+    createTooltip('create:blaze_burner')
+      .addSummary('The Blaze is now comfortable in its new home.')
+      .addBehaviour([
+        'Fan Catalyst - Smoking',
+        'When not fed, the Blaze acts as a _smoking_ catalyst for use with Encased Fans.'
+      ])
+      .addBehaviour([
+        'Fan Catalyst - Blasting',
+        'When fed, the Blaze acts as a _blasting_ catalyst for use with Encased Fans'
+      ])
+      .build()
+  )
   if (Platform.isLoaded('finality')) {
+    event.addAll('minecraft', {
+      "block.minecraft.nether_wart.tooltip.condition1": "When haunted",
+      "block.minecraft.nether_wart.tooltip.behaviour1": "Absorbs soul energy to _re-awaken_."
+    })
     event.addAll(
       'finality',
       createTooltip('finality:living_nether_wart')
@@ -762,6 +790,20 @@ ClientEvents.lang('en_us', event => {
       "block.farmersdelight.skillet.tooltip.condition3": "On left click",
       "block.farmersdelight.skillet.tooltip.behaviour3": "Can be utilized as a weapon."
     })
+    event.addAll(
+      'farmersdelight',
+      createTooltip('farmersdelight:tree_bark')
+        .addSummary('A piece of tree bark. Useful for making _compost_ or paper.')
+        .addBehaviour([
+          'Acquisition',
+          'Use an _axe_ and _right click_ any log placed on a _Cutting Board_.'
+        ])
+        .addBehaviour([
+          'Notice',
+          'Sometimes the recipe may not show up visually but the recipe still works in-game.'
+        ])
+        .build()
+    )
   }
   if (Platform.isLoaded('better_beacons')) {
     event.addAll('kubejs', {
