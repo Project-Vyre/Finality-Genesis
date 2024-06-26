@@ -49,18 +49,20 @@ ServerEvents.recipes(event => {
     'farmersdelight:organic_compost',
     'minecraft:clock'
   ]).keepHeldItem().id('finality:farmersdelight/item_application/clock_accelerated_rich_soil')
-  /**
-   * REMOVE ONCE THE CONFLICTING MOD IS FOUND!
-   */
-  /*
+  // REMOVE ONCE THE CONFLICTING MOD IS FOUND!
   for (let i = 0; i < WOOD_TYPES.length; i++) {
     let element = WOOD_TYPES[i];
+    /*
     event.recipes.farmersdelight.cutting([
       'minecraft:stripped_' + element + '_log',
       'farmersdelight:tree_bark'
     ], 'minecraft:' + element + '_log', '#forge:tools/axes').id('kubejs:farmersdelight/cutting/' + element + '_log_fallback')
+    */
+    event.recipes.create.milling([
+      'minecraft:stripped_' + element + '_log',
+      'farmersdelight:tree_bark'
+    ], 'minecraft:' + element + '_log').processingTime(150).id('kubejs:farmersdelight/milling/' + element + '_log_fallback')
   }
-  */
   if (!Platform.isLoaded('farmersrespite') && Platform.isLoaded('create_central_kitchen')) {
     event.remove([
       'create_central_kitchen:mixing/lime_green_tea',
