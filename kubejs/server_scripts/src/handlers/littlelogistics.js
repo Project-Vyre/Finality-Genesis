@@ -8,15 +8,28 @@
  */
 
 ServerEvents.recipes(event => {
+  event.remove([
+    { id: 'littlelogistics:rapid_hopper' },
+    { id: 'littlelogistics:fluid_hopper' },
+    { id: 'littlelogistics:vessel_charger' },
+    { id: 'littlelogistics:tug_route' },
+    { id: 'littlelogistics:barge' },
+    { id: 'littlelogistics:fluid_barge' },
+    { id: 'littlelogistics:fishing_barge' },
+    { id: 'littlelogistics:seater_barge' },
+    { id: 'littlecontraptions:contraption_barge' },
+    { id: 'littlelogistics:tug' },
+    { id: 'littlelogistics:energy_tug' },
+    { id: 'littlelogistics:locomotive_route' },
+    { id: 'littlelogistics:seater_car' },
+    { id: 'littlelogistics:chest_car' },
+    { id: 'littlelogistics:fluid_car' },
+    { id: 'littlelogistics:steam_locomotive' },
+    { id: 'littlelogistics:energy_locomotive' },
+    { id: 'littlelogistics:barge_dock' },
+    { id: 'littlelogistics:tug_dock' }
+  ])
   // rapid hopper
-  event.shaped('kubejs:denied_result', [
-    'GHG',
-    ' R '
-  ], {
-    G: 'minecraft:gold_ingot',
-    H: 'minecraft:hopper',
-    R: 'minecraft:redstone_block'
-  }).id('littlelogistics:rapid_hopper')
   event.shaped('littlelogistics:rapid_hopper', [
     'BHB',
     ' E '
@@ -26,13 +39,6 @@ ServerEvents.recipes(event => {
     E: 'create:electron_tube'
   }).id('finality:littlelogistics/shaped/rapid_hopper')
   // fluid hopper
-  event.shaped('kubejs:denied_result', [
-    'GHG',
-    ' G '
-  ], {
-    G: '#forge:glass/colorless',
-    H: 'minecraft:hopper'
-  }).id('littlelogistics:fluid_hopper')
   event.shaped('littlelogistics:fluid_hopper', [
     'FHF',
     ' S '
@@ -42,15 +48,6 @@ ServerEvents.recipes(event => {
     S: 'create:spout'
   }).id('finality:littlelogistics/shaped/fluid_hopper')
   // vessel charger
-  event.shaped('kubejs:denied_result', [
-    ' G ',
-    ' I ',
-    'RIR'
-  ], {
-    G: 'minecraft:gold_ingot',
-    I: 'minecraft:iron_ingot',
-    R: 'minecraft:redstone_block'
-  }).id('littlelogistics:vessel_charger')
   event.shaped('littlelogistics:vessel_charger', [
     ' I ',
     ' A ',
@@ -62,29 +59,12 @@ ServerEvents.recipes(event => {
   }).id('finality:littlelogistics/shaped/vessel_charger')
   // all little boat components
   // tug route
-  event.shaped('kubejs:denied_result', [
-    ' R ',
-    'GWG',
-    ' R '
-  ], {
-    R: 'minecraft:redstone',
-    G: 'minecraft:iron_nugget',
-    W: 'littlelogistics:transmitter_component'
-  }).id('littlelogistics:tug_route')
   event.shapeless('littlelogistics:tug_route', [
     'create:linked_controller',
     'create:copper_nugget',
     'minecraft:kelp'
   ]).id('finality:littlelogistics/shapeless/tug_route')
   // chest barge
-  event.shaped('kubejs:denied_result', [
-    'SCS',
-    'III'
-  ], {
-    S: 'minecraft:stick',
-    C: 'minecraft:chest',
-    I: 'minecraft:iron_ingot'
-  }).id('littlelogistics:barge')
   event.shaped('littlelogistics:barge', [
     'SCS',
     'DDD'
@@ -94,14 +74,6 @@ ServerEvents.recipes(event => {
     D: 'create:industrial_iron_block'
   }).id('finality:littlelogistics/shaped/barge')
   // fluid barge
-  event.shaped('kubejs:denied_result', [
-    'G G',
-    ' G ',
-    'III'
-  ], {
-    G: '#forge:glass/colorless',
-    I: 'minecraft:iron_ingot'
-  }).id('littlelogistics:fluid_barge')
   event.shaped('littlelogistics:fluid_barge', [
     ' F ',
     'DDD'
@@ -110,13 +82,6 @@ ServerEvents.recipes(event => {
     D: 'create:industrial_iron_block'
   }).id('finality:littlelogistics/shaped/fluid_barge')
   // fishing barge
-  event.shaped('kubejs:denied_result', [
-    'FFF',
-    'III'
-  ], {
-    F: 'minecraft:fishing_rod',
-    I: 'minecraft:iron_ingot'
-  }).id('littlelogistics:fishing_barge')
   event.shaped('littlelogistics:fishing_barge', [
     'F F',
     'III'
@@ -125,14 +90,6 @@ ServerEvents.recipes(event => {
     I: 'create:industrial_iron_block'
   }).id('finality:littlelogistics/shaped/fishing_barge')
   // seater barge
-  event.shaped('kubejs:denied_result', [
-    'GSG',
-    'III'
-  ], {
-    G: '#minecraft:signs',
-    S: '#minecraft:wooden_stairs',
-    I: 'minecraft:iron_ingot'
-  }).id('littlelogistics:seater_barge')
   event.shaped('littlelogistics:seater_barge', [
     'GSG',
     'DDD'
@@ -142,14 +99,6 @@ ServerEvents.recipes(event => {
     D: 'create:industrial_iron_block'
   }).id('finality:littlelogistics/shaped/seater_barge')
   // contraption barge
-  event.shaped('kubejs:denied_result', [
-    'BAB',
-    'III'
-  ], {
-    B: 'create:brass_ingot',
-    A: 'create:andesite_alloy',
-    I: 'minecraft:iron_ingot'
-  }).id('littlecontraptions:contraption_barge')
   event.shaped('littlecontraptions:contraption_barge', [
     'BAB',
     'DDD'
@@ -159,15 +108,6 @@ ServerEvents.recipes(event => {
     D: 'create:industrial_iron_block'
   }).id('finality:littlecontraptions/shaped/contraption_barge')
   // tug (steam tug in-game)
-  event.shaped('kubejs:denied_result', [
-    ' I ',
-    'PFP',
-    'III'
-  ], {
-    I: 'minecraft:iron_ingot',
-    P: 'minecraft:piston',
-    F: 'minecraft:furnace',
-  }).id('littlelogistics:tug')
   event.shaped('littlelogistics:tug', [
     '  W',
     'FBF',
@@ -179,16 +119,6 @@ ServerEvents.recipes(event => {
     I: 'create:industrial_iron_block'
   }).id('finality:littlelogistics/shaped/tug')
   // energy tug
-  event.shaped('kubejs:denied_result', [
-    ' I ',
-    'PCP',
-    'DDD'
-  ], {
-    I: 'minecraft:iron_ingot',
-    P: 'minecraft:piston',
-    C: 'littlelogistics:vessel_charger',
-    D: 'create:industrial_iron_block'
-  }).id('littlelogistics:energy_tug')
   event.shaped('littlelogistics:energy_tug', [
     ' I ',
     'MAM',
@@ -200,28 +130,12 @@ ServerEvents.recipes(event => {
   }).id('finality:littlelogistics/shaped/energy_tug')
   // all little train components
   // locomotive route
-  event.shaped('kubejs:denied_result', [
-    ' G ',
-    'RWR',
-    ' G '
-  ], {
-    R: 'minecraft:redstone',
-    G: 'minecraft:iron_nugget',
-    W: 'littlelogistics:transmitter_component'
-  }).id('littlelogistics:locomotive_route')
   event.shapeless('littlelogistics:locomotive_route', [
     'create:linked_controller',
     'create:industrial_iron_block',
     'minecraft:iron_nugget'
-  ])
+  ]).id('finality:littlelogistics/shapeless/locomotive_route')
   // train car
-  event.shaped('kubejs:denied_result', [
-    'WWW',
-    'I I'
-  ], {
-    W: '#minecraft:planks',
-    I: 'minecraft:iron_ingot'
-  }).id('littlelogistics:seater_car')
   event.shaped('littlelogistics:seater_car', [
     'DDD',
     'I I'
@@ -230,13 +144,6 @@ ServerEvents.recipes(event => {
     I: 'minecraft:iron_ingot'
   }).id('finality:littlelogistics/shaped/seater_car')
   // chest car
-  event.shaped('kubejs:denied_result', [
-    'H',
-    'C'
-  ], {
-    H: 'minecraft:chest',
-    C: 'littlelogistics:seater_car'
-  }).id('littlelogistics:chest_car')
   event.shaped('littlelogistics:chest_car', [
     'H',
     'C'
@@ -249,14 +156,6 @@ ServerEvents.recipes(event => {
     '#forge:chests/wooden'
   ]).id('finality:littlelogistics/deploying/chest_car')
   // fluid car
-  event.shaped('kubejs:denied_result', [
-    'G G',
-    ' G ',
-    ' S '
-  ], {
-    G: '#forge:glass/colorless',
-    S: 'littlelogistics:seater_car'
-  }).id('littlelogistics:fluid_car')
   event.shaped('littlelogistics:fluid_car', [
     'F',
     'S'
@@ -269,16 +168,6 @@ ServerEvents.recipes(event => {
     'create:fluid_tank'
   ]).id('finality:littlelogistics/deploying/fluid_car')
   // steam locomotive
-  event.shaped('kubejs:denied_result', [
-    ' I ',
-    'PFP',
-    'ISI'
-  ], {
-    I: 'minecraft:iron_ingot',
-    P: 'minecraft:piston',
-    F: 'minecraft:furnace',
-    S: 'littlelogistics:seater_car'
-  }).id('littlelogistics:steam_locomotive')
   event.shaped('littlelogistics:steam_locomotive', [
     'W  ',
     'FFB',
@@ -291,16 +180,6 @@ ServerEvents.recipes(event => {
     S: 'littlelogistics:seater_car'
   }).id('finality:littlelogistics/shaped/steam_locomotive')
   // energy locomotive
-  event.shaped('kubejs:denied_result', [
-    ' I ',
-    'PVP',
-    'ISI'
-  ], {
-    I: 'minecraft:iron_ingot',
-    P: 'minecraft:piston',
-    V: 'littlelogistics:vessel_charger',
-    S: 'littlelogistics:seater_car'
-  }).id('littlelogistics:energy_locomotive')
   event.shaped('littlelogistics:energy_locomotive', [
     ' I ',
     'MAM',
@@ -314,15 +193,6 @@ ServerEvents.recipes(event => {
   }).id('finality:littlelogistics/shaped/energy_locomotive')
   // blocks
   // barge dock
-  event.shaped('2x kubejs:denied_result', [
-    'SSS',
-    'SVS',
-    'III'
-  ], {
-    S: '#forge:stone',
-    V: 'littlelogistics:spring',
-    I: 'minecraft:iron_ingot'
-  }).id('littlelogistics:barge_dock')
   event.shaped('2x littlelogistics:barge_dock', [
     'SSS',
     'SVS',
@@ -333,15 +203,6 @@ ServerEvents.recipes(event => {
     I: 'create:industrial_iron_block'
   }).id('finality:littlelogistics/shaped/barge_dock')
   // tug dock
-  event.shaped('2x kubejs:denied_result', [
-    'SSS',
-    'VSV',
-    'III'
-  ], {
-    S: '#forge:stone',
-    V: 'littlelogistics:spring',
-    I: 'minecraft:iron_ingot'
-  }).id('littlelogistics:tug_dock')
   event.shaped('2x littlelogistics:tug_dock', [
     'SSS',
     'VSV',

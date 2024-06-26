@@ -13,21 +13,9 @@ let quarkWoods = [
 ]
 
 ServerEvents.recipes(event => {
-  event.shaped('kubejs:denied_result', [
-    'ILI',
-    'ILI',
-    ' I '
-  ], {
-    I: 'minecraft:iron_ingot',
-    L: '#minecraft:logs'
-  }).id('quark:tweaks/crafting/utility/misc/easy_hopper')
-  event.shaped('4x kubejs:denied_result', [
-    'LLL',
-    'L L',
-    'LLL'
-  ], {
-    L: '#minecraft:logs'
-  }).id('quark:tweaks/crafting/utility/chests/mixed_chest_wood_but_without_exclusions')
+  event.remove([
+    { id: 'quark:tweaks/crafting/utility/misc/easy_hopper' }
+  ])
   event.recipes.create.compacting(
     '3x minecraft:iron_ingot',
     '8x quark:iron_plate'

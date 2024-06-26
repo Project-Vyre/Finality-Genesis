@@ -26,6 +26,13 @@ ServerEvents.recipes(event => {
     event.shapeless(`minecraft:${insert}_planks`, [
       `woodworks:${insert}_boards`
     ]).id(`finality:woodworks/${insert}_boards_revert`)
+    event.recipes.minecraft.crafting_shaped(`4x woodworks:${insert}_chest`, [
+      'PPP',
+      'P P',
+      'PPP'
+    ], {
+      P: `minecraft:${insert}_log`
+    }).id(`finality:woodworks/${insert}_chests_from_logs`)
   }
 })
 
