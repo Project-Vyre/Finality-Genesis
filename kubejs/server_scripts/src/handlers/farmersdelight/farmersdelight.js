@@ -33,12 +33,6 @@ ServerEvents.recipes(event => {
     H: 'minecraft:water_bucket',
     W: 'minecraft:wooden_shovel'
   }).id('farmersdelight:cooking_pot')
-  event.recipes.kubejs.shaped('farmersdelight:cutting_board', [
-    'TC'
-  ], {
-    T: 'minecraft:stick',
-    C: '#minecraft:slabs'
-  }).id('finality:farmersdelight/crafting/smol_cutting_board')
   event.recipes.create.cutting('2x farmersdelight:cutting_board', '#minecraft:wooden_slabs')
     .processingTime(100)
     .id('finality:farmersdelight/cutting/cutting_board')
@@ -55,7 +49,19 @@ ServerEvents.recipes(event => {
     'farmersdelight:organic_compost',
     'minecraft:clock'
   ]).keepHeldItem().id('finality:farmersdelight/item_application/clock_accelerated_rich_soil')
-  if (!Platform.isLoaded('farmersrespite')) {
+  /**
+   * REMOVE ONCE THE CONFLICTING MOD IS FOUND!
+   */
+  /*
+  for (let i = 0; i < WOOD_TYPES.length; i++) {
+    let element = WOOD_TYPES[i];
+    event.recipes.farmersdelight.cutting([
+      'minecraft:stripped_' + element + '_log',
+      'farmersdelight:tree_bark'
+    ], 'minecraft:' + element + '_log', '#forge:tools/axes').id('kubejs:farmersdelight/cutting/' + element + '_log_fallback')
+  }
+  */
+  if (!Platform.isLoaded('farmersrespite') && Platform.isLoaded('create_central_kitchen')) {
     event.remove([
       'create_central_kitchen:mixing/lime_green_tea',
       'create_central_kitchen:mixing/pomegranate_black_tea'

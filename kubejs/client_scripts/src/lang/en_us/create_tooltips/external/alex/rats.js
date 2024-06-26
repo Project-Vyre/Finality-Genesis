@@ -17,10 +17,16 @@ ClientEvents.lang('en_us', event => {
       .setPalette($Palette.YELLOW)
       .build()
   )
+  if (Platform.isLoaded('neapolitan')) {
+    event.addAll('kubejs', {
+      'item.rats.cheese.tooltip.condition2': 'Recipe Conflict - Neapolitan',
+      'item.rats.cheese.tooltip.behaviour2': 'Due to Neapolitan overriding the cauldron\'s expected behaviour, a recipe has been generated as a workaround.'
+    })
+  }
   event.addAll(
     'kubejs',
     createTooltip('rats:raw_rat')
-      .addSummary('Very repulsive.')
+      .addSummary('The cold and lifeless body of a rat. You find it very repulsive.')
       .addBehaviour([
         'If it was your pet rat...',
         'You _monster_.'

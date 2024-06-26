@@ -33,35 +33,260 @@ ServerEvents.recipes(event => {
     { id: 'reliquary:shears_of_winter' },
     { id: 'reliquary:gold_nugget' }
   ])
-  event.recipes.summoningrituals.altar('minecraft:book')
-    .itemOutput('reliquary:alkahestry_tome')
-    .input([
-      'reliquary:molten_core',
-      'reliquary:witch_hat',
-      'reliquary:eye_of_the_storm',
-      'reliquary:slime_pearl',
-      'reliquary:nebulous_heart',
-      'minecraft:wither_skeleton_skull',
-      'reliquary:chelicerae',
-      'reliquary:catalyzing_gland',
-      'kubejs:duplicator'
-    ])
-    .dayTime('night')
-    .weather('clear')
-    .id('kubejs:reliquary/altar/alkahestry_tome');
-  event.recipes.summoningrituals.altar('minecraft:leather')
-    .itemOutput('reliquary:mercy_cross')
-    .input([
-      '4x minecraft:gold_ingot',
-      'reliquary:withered_rib',
-      'minecraft:wither_skeleton_skull',
-      'reliquary:rib_bone',
-      'reliquary:zombie_heart'
-    ])
-    .sacrifice('minecraft:sheep')
-    .dayTime('day')
-    .weather('clear')
-    .id('kubejs:reliquary/ritual/mercy_cross');
+  if (!Platform.isLoaded('weather2')) {
+    event.recipes.summoningrituals.altar('minecraft:book')
+      .itemOutput('reliquary:alkahestry_tome')
+      .input([
+        'reliquary:molten_core',
+        'reliquary:witch_hat',
+        'reliquary:eye_of_the_storm',
+        'reliquary:slime_pearl',
+        'reliquary:nebulous_heart',
+        'minecraft:wither_skeleton_skull',
+        'reliquary:chelicerae',
+        'reliquary:catalyzing_gland',
+        'kubejs:duplicator'
+      ])
+      .dayTime('night')
+      .weather('clear')
+      .id('kubejs:reliquary/altar/alkahestry_tome');
+    event.recipes.summoningrituals.altar('minecraft:leather')
+      .itemOutput('reliquary:mercy_cross')
+      .input([
+        '4x minecraft:gold_ingot',
+        'reliquary:withered_rib',
+        'minecraft:wither_skeleton_skull',
+        'reliquary:rib_bone',
+        'reliquary:zombie_heart'
+      ])
+      .sacrifice('minecraft:sheep')
+      .dayTime('day')
+      .weather('clear')
+      .id('kubejs:reliquary/ritual/mercy_cross');
+    event.recipes.summoningrituals.altar('minecraft:feather')
+      .itemOutput('reliquary:angelic_feather')
+      .input([
+        'reliquary:nebulous_heart',
+        'reliquary:bat_wing',
+        'reliquary:fertile_essence'
+      ])
+      .dayTime('day')
+      .weather('clear')
+      .id('kubejs:reliquary/altar/angelic_feather');
+    event.recipes.summoningrituals.altar('minecraft:flint_and_steel')
+      .itemOutput('reliquary:destruction_catalyst')
+      .input([
+        'reliquary:molten_core',
+        'reliquary:catalyzing_gland',
+        'reliquary:infernal_tear'
+      ])
+      .dayTime('day')
+      .weather('clear')
+      .id('kubejs:reliquary/altar/destruction_catalyst');
+    event.recipes.summoningrituals.altar('minecraft:emerald')
+      .itemOutput('reliquary:emperor_chalice')
+      .input([
+        'minecraft:gold_ingot',
+        'minecraft:bucket',
+        'reliquary:void_tear'
+      ])
+      .weather('clear')
+      .dayTime('night')
+      .id('kubejs:reliquary/altar/emperor_chalice');
+    event.recipes.summoningrituals.altar('minecraft:ghast_tear')
+      .itemOutput('reliquary:void_tear')
+      .input([
+        'reliquary:nebulous_heart',
+        'reliquary:slime_pearl',
+        'minecraft:crying_obsidian'
+      ])
+      .dayTime('night')
+      .weather('thunder')
+      .id('kubejs:reliquary/ritual/void_tear');
+    event.recipes.summoningrituals.altar('kubejs:gold_coin')
+      .itemOutput('reliquary:fortune_coin')
+      .input([
+        'minecraft:emerald',
+        'reliquary:nebulous_heart',
+        'reliquary:slime_pearl',
+        'reliquary:bat_wing'
+      ])
+      .dayTime('day')
+      .weather('clear')
+      .id('kubejs:reliquary/ritual/fortune_coin');
+    event.recipes.summoningrituals.altar('reliquary:ice_magus_rod')
+      .itemOutput('reliquary:glacial_staff')
+      .input([
+        'reliquary:void_tear',
+        'reliquary:frozen_core',
+        'reliquary:shears_of_winter'
+      ])
+      .dayTime('night')
+      .weather('thunder')
+      .id('kubejs:reliquary/ritual/glacial_staff');
+    event.recipes.summoningrituals.altar('reliquary:fortune_coin')
+      .itemOutput('reliquary:hero_medallion')
+      .input([
+        'reliquary:nebulous_heart',
+        'reliquary:witch_hat',
+        'reliquary:infernal_tear'
+      ])
+      .weather('clear')
+      .id('kubejs:reliquary/ritual/hero_medallion');
+    event.recipes.summoningrituals.altar('reliquary:nebulous_heart')
+      .itemOutput('reliquary:kraken_shell')
+      .input('3x reliquary:kraken_shell_fragment')
+      .weather('thunder')
+      .id('kubejs:reliquary/ritual/kraken_shell');
+    event.recipes.summoningrituals.altar('minecraft:fishing_rod')
+      .itemOutput('reliquary:rod_of_lyssa')
+      .input([
+        'reliquary:infernal_claw',
+        'reliquary:bat_wing',
+        'reliquary:nebulous_heart'
+      ])
+      .weather('rain')
+      .id('kubejs:reliquary/ritual/rod_of_lyssa');
+    event.recipes.summoningrituals.altar('minecraft:rose_bush')
+      .itemOutput('reliquary:witherless_rose')
+      .input([
+        '4x reliquary:fertile_essence',
+        '4x minecraft:nether_star'
+      ])
+      .dayTime('day')
+      .weather('clear')
+      .id('kubejs:reliquary/ritual/witherless_rose');
+    event.recipes.summoningrituals.altar('minecraft:shears')
+      .itemOutput('reliquary:shears_of_winter')
+      .input([
+        'reliquary:frozen_core',
+        '2x minecraft:diamond'
+      ])
+      .dayTime('night')
+      .weather('rain')
+      .blockBelow('minecraft:blue_ice')
+      .id('kubejs:reliquary/ritual/shears_of_winter');
+  } else {
+    event.recipes.summoningrituals.altar('minecraft:book')
+      .itemOutput('reliquary:alkahestry_tome')
+      .input([
+        'reliquary:molten_core',
+        'reliquary:witch_hat',
+        'reliquary:eye_of_the_storm',
+        'reliquary:slime_pearl',
+        'reliquary:nebulous_heart',
+        'minecraft:wither_skeleton_skull',
+        'reliquary:chelicerae',
+        'reliquary:catalyzing_gland',
+        'kubejs:duplicator'
+      ])
+      .dayTime('night')
+      .id('kubejs:reliquary/altar/alkahestry_tome');
+    event.recipes.summoningrituals.altar('minecraft:leather')
+      .itemOutput('reliquary:mercy_cross')
+      .input([
+        '4x minecraft:gold_ingot',
+        'reliquary:withered_rib',
+        'minecraft:wither_skeleton_skull',
+        'reliquary:rib_bone',
+        'reliquary:zombie_heart'
+      ])
+      .sacrifice('minecraft:sheep')
+      .dayTime('day')
+      .id('kubejs:reliquary/ritual/mercy_cross');
+    event.recipes.summoningrituals.altar('minecraft:feather')
+      .itemOutput('reliquary:angelic_feather')
+      .input([
+        'reliquary:nebulous_heart',
+        'reliquary:bat_wing',
+        'reliquary:fertile_essence'
+      ])
+      .dayTime('day')
+      .id('kubejs:reliquary/altar/angelic_feather');
+    event.recipes.summoningrituals.altar('minecraft:flint_and_steel')
+      .itemOutput('reliquary:destruction_catalyst')
+      .input([
+        'reliquary:molten_core',
+        'reliquary:catalyzing_gland',
+        'reliquary:infernal_tear'
+      ])
+      .dayTime('day')
+      .id('kubejs:reliquary/altar/destruction_catalyst');
+    event.recipes.summoningrituals.altar('minecraft:emerald')
+      .itemOutput('reliquary:emperor_chalice')
+      .input([
+        'minecraft:gold_ingot',
+        'minecraft:bucket',
+        'reliquary:void_tear'
+      ])
+      .dayTime('night')
+      .id('kubejs:reliquary/altar/emperor_chalice');
+    event.recipes.summoningrituals.altar('minecraft:ghast_tear')
+      .itemOutput('reliquary:void_tear')
+      .input([
+        'reliquary:nebulous_heart',
+        'reliquary:slime_pearl',
+        'minecraft:crying_obsidian'
+      ])
+      .dayTime('night')
+      .id('kubejs:reliquary/ritual/void_tear');
+    event.recipes.summoningrituals.altar('kubejs:gold_coin')
+      .itemOutput('reliquary:fortune_coin')
+      .input([
+        'minecraft:emerald',
+        'reliquary:nebulous_heart',
+        'reliquary:slime_pearl',
+        'reliquary:bat_wing'
+      ])
+      .dayTime('day')
+      .id('kubejs:reliquary/ritual/fortune_coin');
+    event.recipes.summoningrituals.altar('reliquary:ice_magus_rod')
+      .itemOutput('reliquary:glacial_staff')
+      .input([
+        'reliquary:void_tear',
+        'reliquary:frozen_core',
+        'reliquary:shears_of_winter'
+      ])
+      .dayTime('night')
+      .id('kubejs:reliquary/ritual/glacial_staff');
+    event.recipes.summoningrituals.altar('reliquary:fortune_coin')
+      .itemOutput('reliquary:hero_medallion')
+      .input([
+        'reliquary:nebulous_heart',
+        'reliquary:witch_hat',
+        'reliquary:infernal_tear'
+      ])
+      .id('kubejs:reliquary/ritual/hero_medallion');
+    event.recipes.summoningrituals.altar('reliquary:nebulous_heart')
+      .itemOutput('reliquary:kraken_shell')
+      .input('3x reliquary:kraken_shell_fragment')
+      .id('kubejs:reliquary/ritual/kraken_shell');
+    event.recipes.summoningrituals.altar('minecraft:fishing_rod')
+      .itemOutput('reliquary:rod_of_lyssa')
+      .input([
+        'reliquary:infernal_claw',
+        'reliquary:bat_wing',
+        'reliquary:nebulous_heart'
+      ])
+      .id('kubejs:reliquary/ritual/rod_of_lyssa');
+    event.recipes.summoningrituals.altar('minecraft:rose_bush')
+      .itemOutput('reliquary:witherless_rose')
+      .input([
+        '4x reliquary:fertile_essence',
+        '4x minecraft:nether_star'
+      ])
+      .dayTime('day')
+      .id('kubejs:reliquary/ritual/witherless_rose');
+    event.recipes.summoningrituals.altar('minecraft:shears')
+      .itemOutput('reliquary:shears_of_winter')
+      .input([
+        'reliquary:frozen_core',
+        '2x minecraft:diamond'
+      ])
+      .dayTime('night')
+      .blockBelow('minecraft:blue_ice')
+      .id('kubejs:reliquary/ritual/shears_of_winter');
+  }
   // angelheart
   event.recipes.kubejs.shapeless('reliquary:angelheart_vial', [
     'reliquary:empty_potion_vial',
@@ -96,46 +321,6 @@ ServerEvents.recipes(event => {
     'reliquary:empty_potion_vial',
     Fluid.of('kubejs:aphrodite_mixture', 250)
   ]).id('kubejs:reliquary/filling/aphrodite_potion')
-  event.recipes.summoningrituals.altar('minecraft:feather')
-    .itemOutput('reliquary:angelic_feather')
-    .input([
-      'reliquary:nebulous_heart',
-      'reliquary:bat_wing',
-      'reliquary:fertile_essence'
-    ])
-    .dayTime('day')
-    .weather('clear')
-    .id('kubejs:reliquary/altar/angelic_feather');
-  event.recipes.summoningrituals.altar('minecraft:flint_and_steel')
-    .itemOutput('reliquary:destruction_catalyst')
-    .input([
-      'reliquary:molten_core',
-      'reliquary:catalyzing_gland',
-      'reliquary:infernal_tear'
-    ])
-    .dayTime('day')
-    .weather('clear')
-    .id('kubejs:reliquary/altar/destruction_catalyst');
-  event.recipes.summoningrituals.altar('minecraft:emerald')
-    .itemOutput('reliquary:emperor_chalice')
-    .input([
-      'minecraft:gold_ingot',
-      'minecraft:bucket',
-      'reliquary:void_tear'
-    ])
-    .weather('clear')
-    .dayTime('night')
-    .id('kubejs:reliquary/altar/emperor_chalice')
-  event.recipes.summoningrituals.altar('minecraft:ghast_tear')
-    .itemOutput('reliquary:void_tear')
-    .input([
-      'reliquary:nebulous_heart',
-      'reliquary:slime_pearl',
-      'minecraft:crying_obsidian'
-    ])
-    .dayTime('night')
-    .weather('thunder')
-    .id('kubejs:reliquary/ritual/void_tear');
   event.recipes.create.milling([
     'minecraft:gold_nugget'
   ], 'reliquary:bullets/empty_bullet')
@@ -159,27 +344,6 @@ ServerEvents.recipes(event => {
     'reliquary:empty_potion_vial',
     Fluid.of('kubejs:fertile_mixture', 250)
   ]).id('kubejs:reliquary/filling/fertile_potion')
-  event.recipes.summoningrituals.altar('kubejs:gold_coin')
-    .itemOutput('reliquary:fortune_coin')
-    .input([
-      'minecraft:emerald',
-      'reliquary:nebulous_heart',
-      'reliquary:slime_pearl',
-      'reliquary:bat_wing'
-    ])
-    .dayTime('day')
-    .weather('clear')
-    .id('kubejs:reliquary/ritual/fortune_coin')
-  event.recipes.summoningrituals.altar('reliquary:ice_magus_rod')
-    .itemOutput('reliquary:glacial_staff')
-    .input([
-      'reliquary:void_tear',
-      'reliquary:frozen_core',
-      'reliquary:shears_of_winter'
-    ])
-    .dayTime('night')
-    .weather('thunder')
-    .id('kubejs:reliquary/ritual/glacial_staff')
   event.recipes.create.mixing(Fluid.of('kubejs:glowing_water'), [
     'minecraft:glowstone_dust',
     'minecraft:gunpowder',
@@ -200,15 +364,6 @@ ServerEvents.recipes(event => {
     event.recipes.create.deploying('kubejs:incomplete_handgun', ['kubejs:incomplete_handgun', 'minecraft:iron_ingot']),
     event.recipes.create.deploying('kubejs:incomplete_handgun', ['kubejs:incomplete_handgun', 'reliquary:barrel_assembly'])
   ]).transitionalItem('kubejs:incomplete_handgun').loops(1).id('kubejs:reliquary/sequenced_assembly/handgun')
-  event.recipes.summoningrituals.altar('reliquary:fortune_coin')
-    .itemOutput('reliquary:hero_medallion')
-    .input([
-      'reliquary:nebulous_heart',
-      'reliquary:witch_hat',
-      'reliquary:infernal_tear'
-    ])
-    .weather('clear')
-    .id('kubejs:reliquary/ritual/hero_medallion');
   event.recipes.summoningrituals.altar('reliquary:infernal_claws')
     .itemOutput('reliquary:infernal_chalice')
     .input([
@@ -225,11 +380,6 @@ ServerEvents.recipes(event => {
       'reliquary:infernal_claw'
     ])
     .id('kubejs:reliquary/ritual/infernal_tear');
-  event.recipes.summoningrituals.altar('reliquary:nebulous_heart')
-    .itemOutput('reliquary:kraken_shell')
-    .input('3x reliquary:kraken_shell_fragment')
-    .weather('thunder')
-    .id('kubejs:reliquary/ritual/kraken_shell');
   event.recipes.summoningrituals.altar('minecraft:anvil')
     .itemOutput('reliquary:midas_touchstone')
     .input([
@@ -239,34 +389,6 @@ ServerEvents.recipes(event => {
       'reliquary:void_tear'
     ])
     .id('kubejs:reliquary/ritual/midas_touchstone');
-  event.recipes.summoningrituals.altar('minecraft:fishing_rod')
-    .itemOutput('reliquary:rod_of_lyssa')
-    .input([
-      'reliquary:infernal_claw',
-      'reliquary:bat_wing',
-      'reliquary:nebulous_heart'
-    ])
-    .weather('rain')
-    .id('kubejs:reliquary/ritual/rod_of_lyssa');
-  event.recipes.summoningrituals.altar('minecraft:rose_bush')
-    .itemOutput('reliquary:witherless_rose')
-    .input([
-      '4x reliquary:fertile_essence',
-      '4x minecraft:nether_star'
-    ])
-    .dayTime('day')
-    .weather('clear')
-    .id('kubejs:reliquary/ritual/witherless_rose')
-  event.recipes.summoningrituals.altar('minecraft:shears')
-    .itemOutput('reliquary:shears_of_winter')
-    .input([
-      'reliquary:frozen_core',
-      '2x minecraft:diamond'
-    ])
-    .dayTime('night')
-    .weather('rain')
-    .blockBelow('minecraft:blue_ice')
-    .id('kubejs:reliquary/ritual/shears_of_winter')
 })
 
 ServerEvents.tags('item', event => {

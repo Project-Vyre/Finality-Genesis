@@ -363,6 +363,12 @@ JEIEvents.information(event => {
     event.addItem('endrem:exotic_eye', ['Created by combining multiple exotic ingredients using a Crafting Core.'])
   }
   if (Platform.isLoaded('farmersdelight')) {
+    event.addItem('farmersdelight:tree_bark', [
+      Component.join([
+        Component.of('[Farmer\'s Delight Tip]\n').darkRed(),
+        Component.of('Even if the recipe does not show up in JEI due to a mod conflict, you can still strip logs placed on a Cutting Board to get Tree Bark.')
+      ]) 
+    ])
     event.addItem([
       'farmersdelight:wild_cabbages',
       'farmersdelight:cabbage_seeds'

@@ -4,11 +4,15 @@
  */
 
 // requires: destroy
+// requires: farmersdelight
 // requires: createaddition
 // requires: kubejs_create
 
 ServerEvents.recipes(event => {
-  event.remove({ id: 'destroy:compat/createaddition/crafting/diamond_grid_sandpaper' })
+  event.remove([
+    { id: 'destroy:compat/createaddition/crafting/diamond_grid_sandpaper' },
+    { id: 'destroy:compat/farmersdelight/cutting/onion' }
+  ])
   if (Ingredient.of('#forge:raw_materials/sulfur').stacks.size() == 0) {
     event.remove({ id: 'destroy:milling/sulfur' })
   }

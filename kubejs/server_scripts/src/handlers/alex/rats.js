@@ -14,4 +14,8 @@ ServerEvents.recipes(event => {
     'rats:potato_pancake',
     'minecraft:baked_potato'
   ).id('kubejs:rats/pressing/potato_pancake')
+  event.recipes.create.mixing(
+    'rats:block_of_cheese',
+    Fluid.of('minecraft:milk')
+  ).id('kubejs:rats/mixing/cheese_curdling_from_milk')
 })
