@@ -58,10 +58,10 @@ ServerEvents.recipes(event => {
       'farmersdelight:tree_bark'
     ], 'minecraft:' + element + '_log', '#forge:tools/axes').id('kubejs:farmersdelight/cutting/' + element + '_log_fallback')
     */
-    event.recipes.create.milling([
+    event.recipes.create.cutting([
       'minecraft:stripped_' + element + '_log',
       'farmersdelight:tree_bark'
-    ], 'minecraft:' + element + '_log').processingTime(150).id('kubejs:farmersdelight/milling/' + element + '_log_fallback')
+    ], 'minecraft:' + element + '_log').processingTime(50).id('create:cutting/' + element + '_log')
   }
   if (!Platform.isLoaded('farmersrespite') && Platform.isLoaded('create_central_kitchen')) {
     event.remove([

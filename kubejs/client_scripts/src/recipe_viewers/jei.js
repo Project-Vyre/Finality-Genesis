@@ -366,7 +366,11 @@ JEIEvents.information(event => {
     event.addItem('farmersdelight:tree_bark', [
       Component.join([
         Component.of('[Farmer\'s Delight Tip]\n').darkRed(),
-        Component.of('Even if the recipe does not show up in JEI due to a mod conflict, you can still strip logs placed on a Cutting Board to get Tree Bark.')
+        Component.of('Even if the '),
+        Component.of('Cutting Board').gold(),
+        Component.of(' recipe does not show up in JEI due to a '),
+        Component.of('mod conflict').darkRed(),
+        Component.of(',  you can still strip logs placed on a Cutting Board to get your Tree Bark.')
       ]) 
     ])
     event.addItem([
