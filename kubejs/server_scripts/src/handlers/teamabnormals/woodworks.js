@@ -7,6 +7,9 @@
 // requires: woodworks
 // requires: kubejs_create
 
+let logs = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'cherry']
+let hyphae = ['crimson', 'warped']
+
 ServerEvents.recipes(event => {
   console.log('Applying chest compat recipes for Woodworks...')
   for (let i = 0; i < WOOD_TYPES.length; i++) {
@@ -26,6 +29,9 @@ ServerEvents.recipes(event => {
     event.shapeless(`minecraft:${insert}_planks`, [
       `woodworks:${insert}_boards`
     ]).id(`finality:woodworks/${insert}_boards_revert`)
+  }
+  for (let i = 0; i < logs.length; i++) {
+    let insert = logs[i];
     event.recipes.minecraft.crafting_shaped(`4x woodworks:${insert}_chest`, [
       'PPP',
       'P P',
@@ -33,6 +39,16 @@ ServerEvents.recipes(event => {
     ], {
       P: `minecraft:${insert}_log`
     }).id(`finality:woodworks/${insert}_chests_from_logs`)
+  }
+  for (let i = 0; i < hyphae.length; i++) {
+    let insert = hyphae[i];
+    event.recipes.minecraft.crafting_shaped(`4x woodworks:${insert}_chest`, [
+      'PPP',
+      'P P',
+      'PPP'
+    ], {
+      P: `minecraft:${insert}_hyphae`
+    }).id(`finality:woodworks/${insert}_chests_from_hyphae`)
   }
 })
 
