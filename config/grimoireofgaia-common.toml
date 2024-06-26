@@ -59,7 +59,7 @@
 #Spawn settings
 [Spawn]
 	#Mobs only spawn after a certain amount of days have passed [Default: false]
-	spawnDaysPassed = false
+	spawnDaysPassed = true
 	#Amount of days required to have passed before they can start spawning [Default: 3]
 	#Range: > 1
 	spawnDaysSet = 3
