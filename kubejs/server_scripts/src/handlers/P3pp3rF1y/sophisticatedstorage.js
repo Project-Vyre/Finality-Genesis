@@ -464,6 +464,15 @@ ServerEvents.recipes(event => {
   /**
    * STORAGE BLOCKS
    */
+  if (Platform.isLoaded('woodworks')) {
+    for (let i = 0; i < WOOD_TYPES.length; i++) {
+      let element = WOOD_TYPES[i];
+      event.recipes.minecraft.crafting_shapeless(Item.of('sophisticatedstorage:chest', `{woodType:"${element}"}`), [
+        'woodworks:' + element + '_chest',
+        'minecraft:redstone_torch'
+      ]).id(`kubejs:sophisticatedstorage/${element}_chest_from_woodworks_${element}_chest`)
+    }
+  }
   /*
   for (let i = 0; i < WOOD_TYPES.length; i++) {
     let element = WOOD_TYPES[i]; // Item.of('sophisticatedstorage:copper_barrel', '{woodType:"acacia"}')
