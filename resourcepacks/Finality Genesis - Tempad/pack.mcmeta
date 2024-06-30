@@ -1,0 +1,27 @@
+{
+	"pack": {
+		"pack_format": 9,
+		"supported_formats": [
+			15,
+			24
+		],
+		"description": [
+			{
+				"text": "Tempad retexture for "
+			},
+			{
+				"text": "Finality Genesis",
+				"color": "#FFEB8C",
+				"bold": true
+			},
+			{
+				"text": ". "
+			},
+			{
+				"text": "OPTIONAL!",
+				"color": "#FF3D4A",
+				"bold": true
+			}
+		]
+	}
+}
