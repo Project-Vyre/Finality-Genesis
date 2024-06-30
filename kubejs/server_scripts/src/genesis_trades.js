@@ -112,6 +112,17 @@ MoreJSEvents.wandererTrades(event => {
       'minecraft:emerald'
     ], 'caupona:wolfberry_sapling')
   }
+  if (Platform.isLoaded('enigmaticlegacy') && Platform.isLoaded('ars_nouveau')) {
+    event.addTrade(1, [
+      'kubejs:gold_coin',
+      'ars_nouveau:earth_essence'
+    ], 'enigmaticlegacy:earth_heart')
+  } else if (Platform.isLoaded('enigmaticlegacy') && !Platform.isLoaded('ars_nouveau')) {
+    event.addTrade(1, [
+      'kubejs:gold_coin',
+      'minecraft:grass_block'
+    ], 'enigmaticlegacy:earth_heart')
+  }
   if (Platform.isLoaded('fruittrees')) {
     let fruittrees_saplings = [
       'cherry',
