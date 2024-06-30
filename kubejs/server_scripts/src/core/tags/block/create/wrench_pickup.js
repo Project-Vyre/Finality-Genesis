@@ -39,7 +39,6 @@ ServerEvents.tags('block', event => {
     'minecraft:lightning_rod',
     '#minecraft:doors',
     '#minecraft:trapdoors',
-    '#forge:chests',
     '#minecraft:shulker_boxes',
     '#minecraft:planks',
     '#minecraft:wooden_slabs',
@@ -54,8 +53,10 @@ ServerEvents.tags('block', event => {
     'minecraft:chain',
     'minecraft:cartography_table',
     'minecraft:ladder',
+    'kubejs:bloodfire_bars',
     'kubejs:iridium_block',
-    'kubejs:high_entropy_alloy_block'
+    'kubejs:high_entropy_alloy_block',
+    '#forge:chests',
   ])
   let CMD = [
     'command_block',
