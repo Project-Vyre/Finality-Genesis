@@ -35,7 +35,7 @@ ClientEvents.lang('en_us', event => {
     createTooltip('weather2:weather_deflector')
       .addSummary('Deflects all kinds of dangerous weather _away_ from its vicinity.')
       .addBehaviour([
-        'Range',
+        'When placed',
         'Has an effective radius of 150 blocks.'
       ])
       .build()
