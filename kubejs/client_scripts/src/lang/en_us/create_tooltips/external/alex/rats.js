@@ -17,6 +17,24 @@ ClientEvents.lang('en_us', event => {
       .setPalette($Palette.YELLOW)
       .build()
   )
+  event.addAll(
+    'kubejs',
+    createTooltip('rats:plastic_waste')
+      .addSummary('Can be _recycled_ by smelting.')
+      .addBehaviour([
+        'Renewal',
+        'Can be purchased from the Rats pet shop owner.'
+      ])
+      .setPalette($Palette.GRAY)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('rats:raw_plastic')
+      .addSummary('It\'s recycled plastic! Can now be used to make decorations and toys for your _adorable_ and _loving_ pet rats.')
+      .setPalette($Palette.GREEN)
+      .build()
+  )
   if (Platform.isLoaded('neapolitan')) {
     event.addAll('kubejs', {
       'item.rats.cheese.tooltip.condition2': 'Recipe Conflict - Neapolitan',

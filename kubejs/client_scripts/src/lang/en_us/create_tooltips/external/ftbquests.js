@@ -14,15 +14,24 @@ ClientEvents.lang('en_us', event => {
     "item.ftbquests.book.tooltip.behaviour2": "You can also _access_ quests by opening your _inventory screen_ and _looking_ at the _top left_ corner of your screen.",
     "item.ftbquests.book.tooltip.condition3": "Chunk pre-generation",
     "item.ftbquests.book.tooltip.behaviour3": "Type _/chunky start minecraft:overworld_ to _pregenerate chunks_ in hopes of reducing TPS lag while exploring. This command is also available for _other dimensions_.",
-    "item.ftbquests.book.tooltip.condition4": "Default Keybinds - Crawling",
-    "item.ftbquests.book.tooltip.behaviour4": "Press _X_ to _crawl_ which allows you to get into _one block spaces_. Very useful!",
-    "item.ftbquests.book.tooltip.condition5": "Default Keybinds - Camera Zoom",
-    "item.ftbquests.book.tooltip.behaviour5": "Press _C_ to _zoom in_. _Scroll_ to _adjust_ zoom level.",
-    "item.ftbquests.book.tooltip.condition6": "Default Keybinds - Sitting",
-    "item.ftbquests.book.tooltip.behaviour6": "Press _N_ to _toggle_ the _sitting position_.",
-    "item.ftbquests.book.tooltip.condition7": "Default Keybinds - Real Camera",
-    "item.ftbquests.book.tooltip.behaviour7": "Don't like the camera being attached to the player head realistically? Press _F6_ to _toggle_ the perspective.",
+    "item.ftbquests.book.tooltip.control1": "Default Keybinds - Camera Zoom",
+    "item.ftbquests.book.tooltip.action1": "Press _C_ to _zoom in_. _Scroll_ to _adjust_ zoom level.",
+
   })
+  if (Platform.isLoaded('personality')) {
+    event.addAll('kubejs', {
+      "item.ftbquests.book.tooltip.control2": "Default Keybinds - Crawling",
+      "item.ftbquests.book.tooltip.action2": "Press _X_ to _crawl_ which allows you to get into _one block spaces_. Very useful!",
+      "item.ftbquests.book.tooltip.control3": "Default Keybinds - Sitting",
+      "item.ftbquests.book.tooltip.action3": "Press _N_ to _toggle_ the _sitting position_.",
+    })
+  }
+  if (Platform.isLoaded('realcamera')) {
+    event.addAll('kubejs', {
+      "item.ftbquests.book.tooltip.control4": "Default Keybinds - Real Camera",
+      "item.ftbquests.book.tooltip.action4": "Don't like the camera being attached to the player head realistically? Press _F6_ to _toggle_ the perspective."
+    })
+  }
   if (Platform.isLoaded('findme')) {
     event.addAll('kubejs', {
       "item.ftbquests.book.tooltip.condition8": "Default Keybinds - FindMe",
