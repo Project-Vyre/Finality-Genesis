@@ -50,8 +50,10 @@ ServerEvents.recipes(event => {
     'minecraft:clock'
   ]).keepHeldItem().id('finality:farmersdelight/item_application/clock_accelerated_rich_soil')
   // REMOVE ONCE THE CONFLICTING MOD IS FOUND!
-  for (let i = 0; i < WOOD_TYPES.length; i++) {
-    let element = WOOD_TYPES[i];
+  let normal_wood = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'mangrove', 'cherry']
+  let nether_wood = ['crimson', 'warped']
+  for (let i = 0; i < normal_wood.length; i++) {
+    let element = normal_wood[i];
     /*
     event.recipes.farmersdelight.cutting([
       'minecraft:stripped_' + element + '_log',
@@ -61,7 +63,14 @@ ServerEvents.recipes(event => {
     event.recipes.create.cutting([
       'minecraft:stripped_' + element + '_log',
       'farmersdelight:tree_bark'
-    ], 'minecraft:' + element + '_log').processingTime(50).id('create:cutting/' + element + '_log')
+    ], 'minecraft:' + element + '_log').processingTime(50).id('kubejs:farmersdelight/cutting/tree_bark_from_' + element + '_log_fallback')
+  }
+  for (let i = 0; i < nether_wood.length; i++) {
+    let element = nether_wood[i];
+    event.recipes.create.cutting([
+      'minecraft:stripped_' + element + '_stem',
+      'farmersdelight:tree_bark'
+    ], 'minecraft:' + element + '_hyphae').processingTime(50).id('kubejs:farmersdelight/cutting/tree_bark_from_' + element + '_stem_fallback')
   }
   if (!Platform.isLoaded('farmersrespite') && Platform.isLoaded('create_central_kitchen')) {
     event.remove([
