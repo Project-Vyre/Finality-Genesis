@@ -37,11 +37,6 @@ ItemEvents.tooltip(event => {
       text.remove(1)
     })
   }
-  if (Platform.isLoaded('exposure')) {
-    event.addAdvanced('exposure:camera', (item, advanced, text) => {
-      text.remove(1)
-    })
-  }
   if (Platform.isLoaded('tesseract')) {
     event.addAdvanced('tesseract:tesseract', (item, advanced, text) => {
       text.remove(1)

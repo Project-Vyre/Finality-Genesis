@@ -12,7 +12,7 @@
 	#Signed Album item will have an enchantment glint.
 	SignedAlbumGlint = true
 	#Details about Camera configuring will be shown in Camera item tooltip.
-	CameraDetailsInTooltip = true
+	CameraDetailsInTooltip = false
 	#Film Roll Frames will be shown in the camera tooltip.
 	#Default: true
 	CameraFilmFramesTooltip = true

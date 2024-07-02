@@ -29,6 +29,10 @@ ClientEvents.lang('en_us', event => {
         'Opens the _configuration_ screen for components.'
       ])
       .addBehaviour([
+        'On R-Click with item',
+        '_Installs_ / _swaps_ attachment(s) on the camera.'
+      ])
+      .addBehaviour([
         'On Sneak while taking a photo',
         'Shows the camera controls.'
       ])
@@ -50,8 +54,12 @@ ClientEvents.lang('en_us', event => {
     createTooltip('exposure:black_and_white_film')
       .addSummary('Takes a photograph in monocrhomatic _black and white_.')
       .addBehaviour([
-        'When in Lightroom',
-        'Requires only a _water bottle_ to develop the film.'
+        'On R-Click',
+        'Allows you to _rename_ the film.'
+      ])
+      .addBehaviour([
+        'To develop',
+        'Needs to be combined with a _water bottle_ to develop the film.'
       ])
       .setPalette($Palette.GRAY_AND_WHITE)
       .build()
@@ -66,16 +74,12 @@ ClientEvents.lang('en_us', event => {
     createTooltip('exposure:color_film')
       .addSummary('Takes a photograph in _color_. It does require a more complex mix to develop it, however.')
       .addBehaviour([
-        'Requires Awkward Potion',
-        'An Awkward potion is made with _1x Nether Wart_ and _water_ The water can also be contained in a heated _Basin_ for automated potion brewing.'
+        'On R-Click',
+        'Allows you to _rename_ the film.'
       ])
       .addBehaviour([
-        'Requires Mundane Potion',
-        'A Mundane Potion can be made with any of the following options with a plain _water bottle_ or water in a heated _Basin_, though REI / JEI will show you all the possibilities... _Blaze Powder_, _Spider Eye_, _Sugar_, _Redstone_...'
-      ])
-      .addBehaviour([
-        'Requires Thick Potion',
-        'A Thick Potion can only be brewed with _Glowstone Dust_.'
+        'To develop',
+        'Requires one of each of these potions: Awkward, Mundane and Thick.'
       ])
       .setPalette($Palette.GRAY_AND_GOLD)
       .build()
@@ -84,16 +88,8 @@ ClientEvents.lang('en_us', event => {
     createTooltip('exposure:developed_color_film')
       .addSummary('The next step is to _wash_ the film with a _certain mixture of potions_.')
       .addBehaviour([
-        'Requires Awkward Potion',
-        'An Awkward potion is made with _1x Nether Wart_ and _water_ The water can also be contained in a heated _Basin_ for automated potion brewing.'
-      ])
-      .addBehaviour([
-        'Requires Mundane Potion',
-        'A Mundane Potion can be made with any of the following options with a plain _water bottle_ or water in a heated _Basin_, though REI / JEI will show you all the possibilities... _Blaze Powder_, _Spider Eye_, _Sugar_, _Redstone_...'
-      ])
-      .addBehaviour([
-        'Requires Thick Potion',
-        'A Thick Potion can only be brewed with _Glowstone Dust_.'
+        'To develop',
+        'Requires one of each of these potions: Awkward, Mundane and Thick.'
       ])
       .setPalette($Palette.GRAY_AND_GOLD)
       .build()
@@ -107,8 +103,34 @@ ClientEvents.lang('en_us', event => {
       ])
       .build()
   )
+  event.addAll('exposure',
+    createTooltip('exposure:interplanar_projector')
+      .addSummary('Allows projecting an image from another plane. _Consumed on use._')
+      .addBehaviour([
+        'On R-Click',
+        'Changes _rendering_ mode.'
+      ])
+      .addBehaviour([
+        'When renamed to file path',
+        'This _"other plane"_ is your file system. You _must_ rename it to something that can _fit_ when renaming the item. For example _E:\\Pictures\\furina.png_'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
 })
 /*
+.addBehaviour([
+  'Requires Awkward Potion',
+  'An Awkward potion is made with _1x Nether Wart_ and _water_ The water can also be contained in a heated _Basin_ for automated potion brewing.'
+])
+.addBehaviour([
+  'Requires Mundane Potion',
+  'A Mundane Potion can be made with any of the following options with a plain _water bottle_ or water in a heated _Basin_, though REI / JEI will show you all the possibilities... _Blaze Powder_, _Spider Eye_, _Sugar_, _Redstone_...'
+])
+.addBehaviour([
+  'Requires Thick Potion',
+  'A Thick Potion can only be brewed with _Glowstone Dust_.'
+])
 blockT('exposure', 'lightroom', 'LIGHTROOM')
 blockSu('exposure', 'lightroom',
     'Where your photographs come to life. Have some _paper_ ready to print your photos onto!'
