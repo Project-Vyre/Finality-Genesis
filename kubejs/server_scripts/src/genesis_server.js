@@ -363,6 +363,24 @@ PlayerEvents.inventoryChanged(event => {
     default:
       break;
   }
+  if ((item.getId() == 'minecraft:spawner' && !player.isCreative() && item.hasNBT())
+    && item.nbt?.BlockEntityTag?.SpawnData?.entity?.id == 'minecraft:wandering_trader'
+  ) {
+    player.inventory.clear(item.strongNBT())
+    player.tell([
+      Component.of('System: ').bold().green(),
+      Component.of('That item is not allowed.').red()
+    ])
+  }
+  if ((item.getId() == 'minecraft:spawner' && !player.isCreative() && item.hasNBT())
+    && item.nbt?.BlockEntityTag?.SpawnData?.entity?.id == 'minecraft:villager'
+  ) {
+    player.inventory.clear(item.strongNBT())
+    player.tell([
+      Component.of('System: ').bold().green(),
+      Component.of('That item is not allowed.').red()
+    ])
+  }
   if (Platform.isLoaded('createaddition')) {
     switch (item.getId()) {
       case 'createaddition:diamond_grit':
