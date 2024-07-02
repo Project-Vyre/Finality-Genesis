@@ -45,6 +45,12 @@ MoreJSEvents.villagerTrades(event => {
       'minecraft:ink_sac'
     ], 'supplementaries:antique_ink')
   }
+  if (Platform.isLoaded('tetra')) {
+    event.addTrade('minecraft:weaponsmith', 5, [
+      'kubejs:entropy_coin',
+      '2x tetra:dragon_sinew'
+    ], 'tetra:planar_stabilizer')
+  }
   //coinTrade(event)
 })
 
@@ -159,6 +165,20 @@ MoreJSEvents.wandererTrades(event => {
       'minecraft:glowstone_dust',
       'minecraft:emerald'
     ], 'quark:glow_shroom')
+  }
+  if (Platform.isLoaded('tetra')) {
+    event.addTrade(2, [
+      'kubejs:entropy_coin',
+      'tetra:dragon_sinew'
+    ], 'tetra:planar_stabilizer')
+    event.addTrade(2, [
+      'kubejs:entropy_coin',
+      'tetra:dragon_sinew'
+    ], 'tetra:earthpiercer')
+    event.addTrade(2, [
+      'kubejs:entropy_coin',
+      'tetra:dragon_sinew'
+    ], 'tetra:stonecutter')
   }
 })
 

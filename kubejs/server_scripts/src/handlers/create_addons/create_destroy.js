@@ -11,7 +11,11 @@
 ServerEvents.recipes(event => {
   event.remove([
     { id: 'destroy:compat/createaddition/crafting/diamond_grid_sandpaper' },
-    { id: 'destroy:compat/farmersdelight/cutting/onion' }
+    { id: 'destroy:compat/farmersdelight/cutting/onion' },
+    {
+      mod: 'destroy',
+      output: 'minecraft:name_tag'
+    }
   ])
   if (Ingredient.of('#forge:raw_materials/sulfur').stacks.size() == 0) {
     event.remove({ id: 'destroy:milling/sulfur' })

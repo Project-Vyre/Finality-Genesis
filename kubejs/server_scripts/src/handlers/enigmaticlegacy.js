@@ -1,5 +1,5 @@
 // requires: enigmaticlegacy
-// requires: extendedcrafting
+// requires: summoningrituals
 // requires: kubejs_create
 
 /**
@@ -22,13 +22,19 @@ ServerEvents.recipes(event => {
     '4x enigmaticlegacy:etherium_scraps',
     '2x create:powdered_obsidian'
   ]).superheated().id('finality:etherium_ingot_creation')
-  event.custom({
-    type: 'extendedcrafting:combination',
-    powerCost: 5000000,
-    input: { item: 'enigmaticlegacy:cosmic_heart' },
-    ingredients: Array(44).fill(Ingredient.of('extendedcrafting:the_ultimate_block').toJson()),
-    result: { item: 'enigmaticlegacy:enigmatic_item' }
-  }).id('finality:heart_of_creation')
+  event.recipes.summoningrituals.altar('enigmaticlegacy:cosmic_heart')
+    .itemOutput('enigmaticlegacy:enigmatic_item')
+    .input('44x kubejs:high_entropy_alloy_block')
+    .id('kubejs:altar/heart_of_creation')
+  if (Platform.isLoaded('extendedcrafting')) {
+    event.custom({
+      type: 'extendedcrafting:combination',
+      powerCost: 5000000,
+      input: { item: 'enigmaticlegacy:cosmic_heart' },
+      ingredients: Array(44).fill(Ingredient.of('extendedcrafting:the_ultimate_block').toJson()),
+      result: { item: 'enigmaticlegacy:enigmatic_item' }
+    }).id('finality:heart_of_creation')
+  }
   if (Platform.isLoaded('quark')) {
     event.shaped(Item.of('enigmaticlegacy:earth_heart'), [
       'PSP',
