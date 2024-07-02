@@ -347,7 +347,8 @@ ServerEvents.recipes(event => {
   event.recipes.create.mixing(Fluid.of('kubejs:glowing_water'), [
     'minecraft:glowstone_dust',
     'minecraft:gunpowder',
-    'minecraft:nether_wart'
+    'minecraft:nether_wart',
+    Fluid.of('minecraft:water')
   ]).id('kubejs:reliquary/mixing/glowing_water')
   event.recipes.create.filling('reliquary:glowing_water', [
     'reliquary:empty_potion_vial',
