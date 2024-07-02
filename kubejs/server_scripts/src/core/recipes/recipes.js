@@ -473,6 +473,10 @@ ServerEvents.recipes(event => {
     'minecraft:wither_skeleton_skull',
     Item.of('minecraft:coal').withChance(0.25)
   ], 'minecraft:skeleton_skull').id('finality:haunting/wither_skeleton_skull')
+  event.recipes.create.haunting([
+    'kubejs:bloodfire_bars',
+    Item.of('minecraft:blaze_powder').withChance(0.12)
+  ], 'minecraft:iron_bars').id('finality:haunting/bloodfire_bars')
   /**
    * ITEM APPLICATION
    */
@@ -585,6 +589,9 @@ ServerEvents.recipes(event => {
   /**
    * >-----<
    */
+  event.recipes.create.sequenced_assembly('minecraft:dripstone', 'minecraft:stone', [
+    event.recipes.create.filling('kubejs:dripstone_transitional_stone', ['kubejs:dripstone_transitional_stone', Fluid.of('minecraft:water', 250)])
+  ]).transitionalItem('kubejs:dripstone_transitional_stone').loops(16).id('kubejs:sequenced_assembly/dripstone_dripping')
   // IRIDIUM
   event.shaped('kubejs:raw_iridium_block', [
     'III',
