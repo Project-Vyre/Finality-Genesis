@@ -275,6 +275,16 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .tag('forge:armors/boots')
     .tag('kubejs:iridium_armor')
 
+  event.create('kubejs:crimson_moons_semblance', 'sword').tier('balemoon_bloodfire')
+    .formattedDisplayName(Component.string("Crimson Moon's Semblance").color(0xFF0000))
+    .rarity('epic')
+    .texture('kubejs:item/crimson_moons_semblance')
+    .fireResistant(true)
+    .tag('minecraft:swords')
+    .tag('forge:swords')
+    .tag('forge:tools')
+    .tag('forge:tools/sword')
+    .tag('forge:tools/swords')
   event.create('kubejs:unstable_entropy_particles')
     .rarity('epic')
     .texture('kubejs:item/unstable_entropy')
@@ -524,7 +534,14 @@ ItemEvents.toolTierRegistry(event => {
   event.add('iridium_tool', tier => {
     tier.uses = -1
     tier.speed = 64
-    tier.attackDamageBonus = 46.0
+    tier.attackDamageBonus = 12.0
+    tier.level = 5
+    tier.enchantmentValue = 30
+  })
+  event.add('balemoon_bloodfire', tier => {
+    tier.uses = -1
+    tier.speed = 128
+    tier.attackDamageBonus = 124
     tier.level = 5
     tier.enchantmentValue = 30
   })
@@ -540,7 +557,7 @@ ItemEvents.toolTierRegistry(event => {
 ItemEvents.armorTierRegistry(event => {
   event.add('iridium_armor', tier => {
     tier.durabilityMultiplier = -1
-    tier.slotProtections = [20, 20, 20, 20]
+    tier.slotProtections = [6, 16, 12, 6]
     tier.enchantmentValue = 30
     tier.equipSound = 'minecraft:item.armor.equip_netherite'
     tier.toughness = 80

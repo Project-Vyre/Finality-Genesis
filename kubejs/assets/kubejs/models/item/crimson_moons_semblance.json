@@ -1,0 +1,15 @@
+{
+  "parent": "item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "kubejs:item/crimson_moons_semblance_handheld"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "kubejs:item/crimson_moons_semblance_gui"
+    },
+    "fixed": {
+      "parent": "kubejs:item/crimson_moons_semblance_gui"
+    }
+  }
+}

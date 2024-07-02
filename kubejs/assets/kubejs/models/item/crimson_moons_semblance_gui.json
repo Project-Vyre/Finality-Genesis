@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "kubejs:item/crimson_moons_semblance_gui"
+  }
+}
