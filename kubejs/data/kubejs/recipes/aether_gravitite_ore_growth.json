@@ -2,18 +2,18 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "modid": "alexscaves",
+      "modid": "aether",
       "type": "supermartijn642corelib:mod_loaded"
     }
   ],
   "recipe": {
     "type": "oregrowth:ore_growth",
-    "base": "alexscaves:coprolite_coal_ore",
+    "base": "aether:gravitite_ore",
     "stages": 4,
-    "spawn_chance": 0.3,
+    "spawn_chance": 0.15,
     "growth_chance": 0.1,
     "result": {
-      "item": "minecraft:coal",
+      "item": "aether:enchanted_gravitite",
       "count": 1
     }
   }

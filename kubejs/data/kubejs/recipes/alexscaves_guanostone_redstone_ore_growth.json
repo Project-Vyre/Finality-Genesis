@@ -2,9 +2,6 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "type": "oregrowth:default_recipes"
-    },
-    {
       "modid": "alexscaves",
       "type": "supermartijn642corelib:mod_loaded"
     }
@@ -14,7 +11,7 @@
     "base": "alexscaves:guanostone_redstone_ore",
     "stages": 4,
     "spawn_chance": 0.3,
-    "growth_chance": 0.3,
+    "growth_chance": 0.1,
     "result": {
       "item": "minecraft:redstone",
       "count": 1

@@ -1,19 +1,14 @@
 {
   "type": "supermartijn642corelib:conditional",
-  "conditions": [
-    {
-      "modid": "ad_astra",
-      "type": "supermartijn642corelib:mod_loaded"
-    }
-  ],
+  "conditions": [],
   "recipe": {
     "type": "oregrowth:ore_growth",
-    "base": "ad_astra:glacio_ice_shard_ore",
+    "base": "minecraft:gold_ore",
     "stages": 4,
     "spawn_chance": 0.2,
     "growth_chance": 0.1,
     "result": {
-      "item": "ad_astra:ice_shard",
+      "item": "minecraft:raw_gold",
       "count": 1
     }
   }

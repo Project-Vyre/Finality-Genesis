@@ -2,18 +2,21 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "modid": "ad_astra",
-      "type": "supermartijn642corelib:mod_loaded"
+      "condition": {
+        "modid": "spelunkery",
+        "type": "supermartijn642corelib:mod_loaded"
+      },
+      "type": "supermartijn642corelib:not"
     }
   ],
   "recipe": {
     "type": "oregrowth:ore_growth",
-    "base": "ad_astra:deepslate_ostrum_ore",
+    "base": "minecraft:deepslate_diamond_ore",
     "stages": 4,
     "spawn_chance": 0.1,
     "growth_chance": 0.1,
     "result": {
-      "item": "ad_astra:raw_ostrum",
+      "item": "minecraft:diamond",
       "count": 1
     }
   }

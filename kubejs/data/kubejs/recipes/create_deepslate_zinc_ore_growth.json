@@ -2,18 +2,18 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "modid": "alexscaves",
+      "modid": "create",
       "type": "supermartijn642corelib:mod_loaded"
     }
   ],
   "recipe": {
     "type": "oregrowth:ore_growth",
-    "base": "alexscaves:coprolite_coal_ore",
+    "base": "create:deepslate_zinc_ore",
     "stages": 4,
-    "spawn_chance": 0.3,
+    "spawn_chance": 0.2,
     "growth_chance": 0.1,
     "result": {
-      "item": "minecraft:coal",
+      "item": "create:raw_zinc",
       "count": 1
     }
   }

@@ -2,9 +2,6 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
-      "type": "oregrowth:default_recipes"
-    },
-    {
       "modid": "ad_astra",
       "type": "supermartijn642corelib:mod_loaded"
     }
@@ -14,7 +11,7 @@
     "base": "ad_astra:deepslate_desh_ore",
     "stages": 4,
     "spawn_chance": 0.1,
-    "growth_chance": 0.02,
+    "growth_chance": 0.1,
     "result": {
       "item": "ad_astra:raw_desh",
       "count": 1
