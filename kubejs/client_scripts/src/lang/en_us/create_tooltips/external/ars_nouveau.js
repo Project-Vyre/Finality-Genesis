@@ -214,6 +214,21 @@ ClientEvents.lang('en_us', event => {
   )
   event.addAll(
     'kubejs',
+    createTooltip('ars_nouveau:storage_lectern')
+      .addSummary('Storage management, with magic!')
+      .addBehaviour([
+        'Requirements',
+        'Both a _Bookwyrm Charm_ and _Dominion Wand_ are required to utilize its basic function to behave as a storage interface.'
+      ])
+      .addBehaviour([
+        'Linking',
+        'Shift + right click a chest or storage inventory first with the _Dominion Wand_ then right click the Storage Lectern to link.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
     createTooltip('ars_nouveau:dowsing_rod')
       .addSummary('Grants _Magic Find_ and _Scrying_ on use, causing magical creatures to _glow_ and Amethyst to be revealed through blocks.')
       .addBehaviour([
