@@ -2,6 +2,14 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
+      "modid": "kubejs",
+      "type": "supermartijn642corelib:mod_loaded"
+    },
+    {
+      "modid": "ars_nouveau",
+      "type": "supermartijn642corelib:mod_loaded"
+    },
+    {
       "modid": "create",
       "type": "supermartijn642corelib:mod_loaded"
     }
@@ -13,7 +21,7 @@
     "spawn_chance": 0.2,
     "growth_chance": 0.1,
     "result": {
-      "item": "create:raw_zinc",
+      "item": "kubejs:zinc_ore_essence",
       "count": 1
     }
   }

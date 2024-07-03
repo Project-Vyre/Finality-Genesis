@@ -2,6 +2,18 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
+      "modid": "kubejs",
+      "type": "supermartijn642corelib:mod_loaded"
+    },
+    {
+      "modid": "ars_nouveau",
+      "type": "supermartijn642corelib:mod_loaded"
+    },
+    {
+      "modid": "create",
+      "type": "supermartijn642corelib:mod_loaded"
+    },
+    {
       "modid": "alexscaves",
       "type": "supermartijn642corelib:mod_loaded"
     }
@@ -13,7 +25,7 @@
     "spawn_chance": 0.3,
     "growth_chance": 0.1,
     "result": {
-      "item": "minecraft:coal",
+      "item": "kubejs:coal_ore_essence",
       "count": 1
     }
   }

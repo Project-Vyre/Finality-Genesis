@@ -1,6 +1,19 @@
 {
   "type": "supermartijn642corelib:conditional",
-  "conditions": [],
+  "conditions": [
+    {
+      "modid": "kubejs",
+      "type": "supermartijn642corelib:mod_loaded"
+    },
+    {
+      "modid": "ars_nouveau",
+      "type": "supermartijn642corelib:mod_loaded"
+    },
+    {
+      "modid": "create",
+      "type": "supermartijn642corelib:mod_loaded"
+    }
+  ],
   "recipe": {
     "type": "oregrowth:ore_growth",
     "base": "minecraft:iron_ore",
@@ -8,7 +21,7 @@
     "spawn_chance": 0.2,
     "growth_chance": 0.1,
     "result": {
-      "item": "minecraft:raw_iron",
+      "item": "kubejs:iron_ore_essence",
       "count": 1
     }
   }

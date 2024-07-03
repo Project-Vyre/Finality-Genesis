@@ -2,6 +2,18 @@
   "type": "supermartijn642corelib:conditional",
   "conditions": [
     {
+      "modid": "kubejs",
+      "type": "supermartijn642corelib:mod_loaded"
+    },
+    {
+      "modid": "ars_nouveau",
+      "type": "supermartijn642corelib:mod_loaded"
+    },
+    {
+      "modid": "create",
+      "type": "supermartijn642corelib:mod_loaded"
+    },
+    {
       "modid": "aether",
       "type": "supermartijn642corelib:mod_loaded"
     }
@@ -13,7 +25,7 @@
     "spawn_chance": 0.15,
     "growth_chance": 0.1,
     "result": {
-      "item": "aether:zanite_gemstone",
+      "item": "kubejs:zanite_ore_essence",
       "count": 1
     }
   }
