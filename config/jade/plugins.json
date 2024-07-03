@@ -110,5 +110,8 @@
     "crafting_blueprint": true,
     "goggles.detailed": false,
     "placard": true
+  },
+  "waystones": {
+    "waystone": true
   }
 }

@@ -97,5 +97,6 @@
   "supplementaries:present": null,
   "supplementaries:safe": null,
   "tesseract:remove_default": null,
-  "tesseract:tesseract": null
+  "tesseract:tesseract": null,
+  "waystones:waystone": null
 }
