@@ -12,7 +12,8 @@ let kjsItems = {
   final_hoe: 'scythe',
   final_katana: 'katana',
   final_scythe: 'scythe',
-  crystal_lance: 'lance'
+  crystal_lance: 'lance',
+  crimson_moons_semblance: 'scythe'
 }
 
 let finalityItems = {
