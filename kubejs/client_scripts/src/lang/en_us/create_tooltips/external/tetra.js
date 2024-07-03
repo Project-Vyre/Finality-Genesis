@@ -15,6 +15,10 @@ ClientEvents.lang('en_us', event => {
         'Acquisition',
         'Right click a Crafting Table _with_ a hammer from Tetra.'
       ])
+      .addBehaviour([
+        'The Fine Text',
+        'Netherite tools made with Tetra are _not_ unbreakable. This is outside of my control.'
+      ])
       .setPalette($Palette.GRAY)
       .build()
   )
