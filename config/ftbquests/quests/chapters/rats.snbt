@@ -125,6 +125,24 @@
 			x: -1.5d
 			y: 0.0d
 		}
+		{
+			dependencies: ["5B90BDECEA22753D"]
+			description: [
+				"Don't stare at it too long, Stelle."
+				""
+				"Anyways, Trash Cans are utilized for making more Garbage Pile blocks which are used for making more rats spawn."
+			]
+			id: "4C8F53E80FD17DB7"
+			subtitle: "It's a trash can."
+			tasks: [{
+				id: "0C0ADB4D532D91E7"
+				item: "rats:trash_can"
+				type: "item"
+			}]
+			title: "Literal Trash"
+			x: 0.0d
+			y: 1.5d
+		}
 	]
 	subtitle: [
 		"Build your rat empire!"

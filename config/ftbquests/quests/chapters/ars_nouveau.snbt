@@ -164,11 +164,13 @@
 		{
 			dependencies: ["356C4FF1F5E355E9"]
 			id: "40427C571EE5DD58"
+			subtitle: "A foundational material."
 			tasks: [{
 				id: "7AFE6095A2485430"
 				item: "ars_nouveau:source_gem"
 				type: "item"
 			}]
+			title: "Create a Source Gem"
 			x: 0.0d
 			y: -4.5d
 		}
@@ -244,13 +246,21 @@
 				"40427C571EE5DD58"
 				"32E9D5D5BD7DAC59"
 			]
+			icon: "ars_nouveau:enchanting_apparatus"
 			id: "091E0C610F8580D8"
 			shape: "octagon"
-			tasks: [{
-				id: "56D960EC0664E2AF"
-				item: "ars_nouveau:enchanting_apparatus"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "56D960EC0664E2AF"
+					item: "ars_nouveau:enchanting_apparatus"
+					type: "item"
+				}
+				{
+					id: "5363A6B3E0D7059A"
+					item: "ars_nouveau:arcane_core"
+					type: "item"
+				}
+			]
 			x: -1.5d
 			y: -4.5d
 		}
@@ -267,7 +277,11 @@
 			y: -1.0d
 		}
 		{
-			dependencies: ["644DDF9B31F9AD1F"]
+			dependencies: [
+				"644DDF9B31F9AD1F"
+				"7AFE6095A2485430"
+				"282FF7EAF8FC58FC"
+			]
 			hide: true
 			id: "620FD233BD3F47A5"
 			shape: "hexagon"
@@ -306,11 +320,13 @@
 		{
 			dependencies: ["091E0C610F8580D8"]
 			id: "7EF1BC41AD8D65FC"
+			subtitle: "Instruct relays, bookwyrms and more."
 			tasks: [{
 				id: "39644DC1A0DC908D"
 				item: "ars_nouveau:dominion_wand"
 				type: "item"
 			}]
+			title: "Dominion Wand"
 			x: -2.5d
 			y: -5.5d
 		}
@@ -949,6 +965,167 @@
 			title: "Fire Elemental Attunements"
 			x: 8.5d
 			y: 2.5d
+		}
+		{
+			dependencies: ["4DF2C4AF2998388D"]
+			id: "3D5C1E94AEE1525E"
+			shape: "rsquare"
+			subtitle: "An arcane glass cannon."
+			tasks: [
+				{
+					id: "214B4226FEAB2D71"
+					item: {
+						Count: 1
+						id: "ars_nouveau:sorcerer_hood"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "169FA2B542E76AEE"
+					item: {
+						Count: 1
+						id: "ars_nouveau:sorcerer_robes"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "50D3788AF162F043"
+					item: {
+						Count: 1
+						id: "ars_nouveau:sorcerer_leggings"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "0E3A3E77CB5ACB6F"
+					item: {
+						Count: 1
+						id: "ars_nouveau:sorcerer_boots"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "Sorceror's Set"
+			x: -10.0d
+			y: -8.5d
+		}
+		{
+			dependencies: ["58E50E3ADD6879BF"]
+			description: ["Before you create any of the armor sets, you need to make threads and the Alteration Table."]
+			id: "4DF2C4AF2998388D"
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "57E5BAD2B802B43A"
+					item: "ars_nouveau:blank_thread"
+					type: "item"
+				}
+				{
+					id: "2D9BAEC7D8CF3B8D"
+					item: "ars_nouveau:alteration_table"
+					type: "item"
+				}
+			]
+			title: "Armor Modification"
+			x: -8.0d
+			y: -8.5d
+		}
+		{
+			dependencies: ["4DF2C4AF2998388D"]
+			id: "1881BCF053D48A5B"
+			shape: "rsquare"
+			subtitle: "An arcane tank set."
+			tasks: [
+				{
+					id: "1F78D5764FA4D641"
+					item: {
+						Count: 1
+						id: "ars_nouveau:battlemage_hood"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "655802C26119FC9E"
+					item: {
+						Count: 1
+						id: "ars_nouveau:battlemage_robes"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "708A52812CEA6D58"
+					item: {
+						Count: 1
+						id: "ars_nouveau:battlemage_leggings"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "521AE5F6A37EE68A"
+					item: {
+						Count: 1
+						id: "ars_nouveau:battlemage_boots"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: -8.5d
+		}
+		{
+			dependencies: ["4DF2C4AF2998388D"]
+			id: "79631E638D08F38A"
+			shape: "rsquare"
+			subtitle: "A balance."
+			tasks: [
+				{
+					id: "77FDBC253DA45A1F"
+					item: {
+						Count: 1
+						id: "ars_nouveau:arcanist_hood"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "764BE50575788BA5"
+					item: {
+						Count: 1
+						id: "ars_nouveau:arcanist_robes"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "6469A5AFFB22F924"
+					item: {
+						Count: 1
+						id: "ars_nouveau:arcanist_leggings"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "38D79BA49EFF2B71"
+					item: {
+						Count: 1
+						id: "ars_nouveau:arcanist_boots"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "The Arcanist's Set"
+			x: -8.0d
+			y: -10.5d
 		}
 	]
 	subtitle: [

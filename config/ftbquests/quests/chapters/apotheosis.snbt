@@ -220,17 +220,18 @@
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
 			description: [
-				"The &dVial of Arcane Extraction&r allows you to &akeep&r the &l&5gem(s)&r socketed in your &bAffixed item&r, but it &l&cdestroys&r your &bAffixed item&r in the process."
+				"The &aSigil of Withdrawal&r allows you to &cdestroy&r all of the &l&5gem(s)&r socketed in your &bAffixed item&r."
 				""
 				"Use it in a &6Smithing Table&r."
 			]
 			id: "292255F2891C4C7F"
-			subtitle: "The gem is saved, but the item is gone!"
+			subtitle: "The gems are gone, but your item is safe."
 			tasks: [{
 				id: "0D863DF077349F1F"
-				item: "apotheosis:vial_of_extraction"
+				item: "apotheosis:sigil_of_withdrawal"
 				type: "item"
 			}]
+			title: "Sigil of Withdrawal"
 			x: -3.0d
 			y: 3.5d
 		}
@@ -245,9 +246,10 @@
 			subtitle: "You monster, what have you done?"
 			tasks: [{
 				id: "7093EDBEAC46001D"
-				item: "apotheosis:vial_of_expulsion"
+				item: "apotheosis:sigil_of_socketing"
 				type: "item"
 			}]
+			title: "Sigil of Socketing"
 			x: 3.0d
 			y: 3.5d
 		}
@@ -539,11 +541,19 @@
 				}
 			]
 			subtitle: "This is for giving regular items Affixes."
-			tasks: [{
-				id: "3B604826BCC1040B"
-				item: "apotheosis:simple_reforging_table"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "3B604826BCC1040B"
+					item: "apotheosis:simple_reforging_table"
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "66108A0697803835"
+					item: "apotheosis:sigil_of_rebirth"
+					type: "item"
+				}
+			]
 			title: "Reforging 101 - Simple Reforging Table"
 			x: 0.0d
 			y: 16.5d
@@ -653,6 +663,17 @@
 			title: "Precise Slicing"
 			x: 2.5d
 			y: 5.0d
+		}
+		{
+			id: "28FEFF611AA7F8CA"
+			tasks: [{
+				id: "500FECE646A49044"
+				item: "apotheosis:sigil_of_unnaming"
+				type: "item"
+			}]
+			title: "Sigil of Unnaming"
+			x: 3.0d
+			y: 2.5d
 		}
 	]
 	subtitle: ["Apotheosis is that one mod that makes everything powerful."]

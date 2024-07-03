@@ -139,8 +139,21 @@
 				type: "item"
 			}]
 			title: "Introduction to Sophisticated Storage"
-			x: 1.5d
+			x: 2.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["1229F8883A381F07"]
+			id: "16A0492D4152E409"
+			subtitle: "Storage access, with magic!"
+			tasks: [{
+				id: "77B5ACA2689988CB"
+				item: "ars_nouveau:storage_lectern"
+				type: "item"
+			}]
+			title: "The Magical Storage Lectern"
+			x: 1.5d
+			y: -1.5d
 		}
 	]
 	subtitle: ["Organization is your best friend."]
