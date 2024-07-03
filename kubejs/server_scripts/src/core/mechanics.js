@@ -60,14 +60,56 @@ ItemEvents.firstRightClicked(event => {
   )
   if (item.getId() == 'kubejs:final_sword') {
     level.getEntitiesWithin(myBoundingBox).forEach(entity => {
-      if (entity == null) { return }
-      if (entity.item) { return }
-      if (entity.getType() == 'minecraft:lightning_bolt') { return }
-      if (entity.getType() == 'minecraft:end_crystal') { return }
-      if (entity.getType() == 'minecraft:area_effect_cloud') { return }
+      switch (entity.getType()) {
+        case null: return
+        case 'minecraft:item': return
+        case 'minecraft:lightning_bolt': return
+        case 'minecraft:end_crystal': return
+        case 'minecraft:area_effect_cloud': return
+        case 'minecraft:falling_block': return
+        default:
+          break;
+      }
       if (!entity.isPlayer()) {
         entity.block.createEntity('minecraft:lightning_bolt').spawn()
-        entity.block.createEntity('minecraft:end_crystal').spawn()
+        //entity.block.createEntity('minecraft:end_crystal').spawn()
+      }
+    })
+  }
+})
+let explosion_counter = 0
+ItemEvents.rightClicked(event => {
+  const { item, level, player, entity } = event
+  let lightningBolt = entity.block.createEntity('minecraft:lightning_bolt')
+  let playerAABB = player.boundingBox.inflate(5)
+  let myBoundingBox = AABB.of(
+    player.pos.x() - 20,
+    player.pos.y() - 5,
+    player.pos.z() - 20,
+    player.pos.x() + 20,
+    player.pos.y() + 10,
+    player.pos.z() + 20
+  )
+  if (item.getId() == 'kubejs:final_sword') {
+    level.getEntitiesWithin(myBoundingBox).forEach(entity => {
+      switch (entity.getType()) {
+        case null: return
+        case 'minecraft:item': return
+        case 'minecraft:lightning_bolt': return
+        case 'minecraft:end_crystal': return
+        case 'minecraft:area_effect_cloud': return
+        case 'minecraft:falling_block': return
+        default:
+          break;
+      }
+      if (!entity.isPlayer()) {
+        if (explosion_counter++ % 7 != 0) return
+        entity.block.createExplosion()
+          .exploder(player)
+          .explosionMode('none')
+          .causesFire(false)
+          .strength(5)
+          .explode();
       }
     })
   }
