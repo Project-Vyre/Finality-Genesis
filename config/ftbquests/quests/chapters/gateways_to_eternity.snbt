@@ -43,7 +43,7 @@
 					Count: 1
 					id: "gateways:gate_pearl"
 					tag: {
-						gateway: "gateways:enderman_gate_small"
+						gateway: "kubejs:boss_gate_small"
 					}
 				}
 				type: "item"
