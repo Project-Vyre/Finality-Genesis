@@ -28,11 +28,12 @@ ServerEvents.recipes(event => {
    */
   function auto(output, input) {
     event.recipes.create.mixing([
-      '9x ' + output,
+      '8x ' + output,
       Item.of('create:experience_nugget').withChance(0.25)
     ], [
-      `kubejs:${input}_ore_essence`,
-      'ars_nouveau:manipulation_essence'
+      `8x kubejs:${input}_ore_essence`,
+      'ars_nouveau:manipulation_essence',
+      Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:mundane"}')
     ]).id('kubejs:oregrowth/mixing/' + input + 'ore_essence_resolve')
     event.recipes.create.compacting([
       output,
@@ -63,11 +64,12 @@ ServerEvents.recipes(event => {
   }
   if (Platform.isLoaded('alexscaves')) {
     event.recipes.create.mixing([
-      '9x alexscaves:uranium',
+      '8x alexscaves:uranium',
       Item.of('create:experience_nugget').withChance(0.25)
     ], [
-      'kubejs:uranium_ore_essence',
+      '8x kubejs:uranium_ore_essence',
       'ars_nouveau:manipulation_essence',
+      Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:mundane"}'),
       'alexscaves:radrock'
     ]).id('kubejs:oregrowth/mixing/alexscaves_uranium_ore_essence_resolve')
     event.recipes.create.compacting([
@@ -80,11 +82,12 @@ ServerEvents.recipes(event => {
   }
   if (Platform.isLoaded('destroy')) {
     event.recipes.create.mixing([
-      '9x destroy:fluorite',
+      '8x destroy:fluorite',
       Item.of('create:experience_nugget').withChance(0.25)
     ], [
-      'kubejs:destroy_fluorite_ore_essence',
-      'ars_nouveau:manipulation_essence'
+      '8x kubejs:destroy_fluorite_ore_essence',
+      'ars_nouveau:manipulation_essence',
+      Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:mundane"}')
     ]).id('kubejs:oregrowth/mixing/destroy_fluorite_ore_essence_resolve')
     event.recipes.create.compacting([
       'destroy:fluorite',
@@ -94,11 +97,12 @@ ServerEvents.recipes(event => {
     ]).id('kubejs:oregrowth/compacting/destroy_fluorite_ore_essence_resolve')
 
     event.recipes.create.mixing([
-      '9x destroy:raw_nickel',
+      '8x destroy:raw_nickel',
       Item.of('create:experience_nugget').withChance(0.25)
     ], [
-      'kubejs:nickel_ore_essence',
-      'ars_nouveau:manipulation_essence'
+      '8x kubejs:nickel_ore_essence',
+      'ars_nouveau:manipulation_essence',
+      Fluid.of('create:potion', 250, '{Bottle:"REGULAR",Potion:"minecraft:mundane"}')
     ]).id('kubejs:oregrowth/mixing/destroy_nickel_ore_essence_resolve')
     event.recipes.create.compacting([
       'destroy:raw_nickel',
