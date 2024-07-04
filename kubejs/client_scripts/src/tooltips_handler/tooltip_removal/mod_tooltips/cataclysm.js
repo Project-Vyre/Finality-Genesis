@@ -40,10 +40,17 @@ ItemEvents.tooltip(event => {
     text.remove(1)
     text.remove(1)
   })
+  event.addAdvanced('cataclysm:monstrous_helm', (item, advanced, text) => {
+    text.remove(1)
+    text.remove(1)
+  })
   event.addAdvanced('cataclysm:ignitium_helmet', (item, advanced, text) => {
     text.remove(1)
   })
   event.addAdvanced('cataclysm:ignitium_chestplate', (item, advanced, text) => {
+    text.remove(1)
+  })
+  event.addAdvanced('cataclysm:ignitium_leggings', (item, advanced, text) => {
     text.remove(1)
   })
   event.addAdvanced('cataclysm:ignitium_boots', (item, advanced, text) => {
