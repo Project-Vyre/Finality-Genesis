@@ -1,5 +1,5 @@
 // requires: oregrowth
-// requires: ad_astra
+// requires: malum
 // requires: create
 // requires: ars_nouveau
 
@@ -15,11 +15,11 @@ let malumOreGrowth = [
 StartupEvents.registry('item', event => {
   for (let element of malumOreGrowth) {
     event.create('kubejs:' + element + '_ore_essence')
-      .texture('kubejs:item/essence_' + coreOreGrowthProperties[element].texture)
-      .color(coreOreGrowthProperties[element].color)
+      .texture('kubejs:item/essence_' + malumOreGrowthProperties[element].texture)
+      .color(malumOreGrowthProperties[element].color)
       .formattedDisplayName(
-        Component.string(coreOreGrowthProperties[element].name + ' ' + 'Ore Essence')
-          .color(coreOreGrowthProperties[element].color)
+        Component.string(malumOreGrowthProperties[element].name + ' ' + 'Ore Essence')
+          .color(malumOreGrowthProperties[element].color)
       )
       .rarity('uncommon')
       .tag('create:upright_on_belt')
