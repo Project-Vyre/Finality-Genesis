@@ -122,12 +122,52 @@ MoreJSEvents.wandererTrades(event => {
     event.addTrade(1, [
       'kubejs:gold_coin',
       'ars_nouveau:earth_essence'
-    ], 'enigmaticlegacy:earth_heart')
+    ], 'enigmaticlegacy:earth_heart').maxUses(1)
+    event.addTrade(2, [
+      '32x kubejs:gold_coin',
+      'ars_nouveau:fire_essence'
+    ], 'enigmaticlegacy:blazing_core').maxUses(1)
   } else if (Platform.isLoaded('enigmaticlegacy') && !Platform.isLoaded('ars_nouveau')) {
     event.addTrade(1, [
       'kubejs:gold_coin',
       'minecraft:grass_block'
-    ], 'enigmaticlegacy:earth_heart')
+    ], 'enigmaticlegacy:earth_heart').maxUses(1)
+    event.addTrade(2, [
+      '32x kubejs:gold_coin',
+      'create:blaze_cake'
+    ], 'enigmaticlegacy:blazing_core').maxUses(1)
+  }
+  if (Platform.isLoaded('enigmaticlegacy')) {
+    event.addTrade(1, [
+      'kubejs:copper_coin'
+    ], 'enigmaticlegacy:recall_potion')
+    event.addTrade(1, [
+      '16x kubejs:gold_coin'
+    ], 'enigmaticlegacy:mending_mixture').maxUses(16)
+    event.addTrade(2, [
+      '32x kubejs:gold_coin',
+      'minecraft:clock'
+    ], 'enigmaticlegacy:angel_blessing').maxUses(1)
+    event.addTrade(2, [
+      '16x kubejs:gold_coin',
+      'minecraft:lightning_rod'
+    ], 'enigmaticlegacy:ocean_stone').maxUses(1)
+    event.addTrade(2, [
+      '16x kubejs:gold_coin',
+      'minecraft:obsidian'
+    ], 'enigmaticlegacy:golem_heart').maxUses(1)
+    event.addTrade(2, [
+      'kubejs:entropy_coin',
+      'minecraft:chorus_fruit'
+    ], 'enigmaticlegacy:void_pearl').maxUses(1)
+    event.addTrade(2, [
+      'kubejs:gold_coin',
+      'minecraft:crying_obsidian'
+    ], 'enigmaticlegacy:void_stone').maxUses(1)
+    event.addTrade(2, [
+      'kubejs:entropy_coin',
+      'minecraft:chorus_fruit'
+    ], 'enigmaticlegacy:eye_of_nebula').maxUses(1)
   }
   if (Platform.isLoaded('fruittrees')) {
     let fruittrees_saplings = [
