@@ -97,6 +97,18 @@ ServerEvents.recipes(event => {
     D: 'apotheosis:gem_dust',
     E: 'minecraft:ender_pearl'
   }).id('finality:boss_gate_small')
+  event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:endless/artifact_mimic_gate"}'), [
+    '  L  ',
+    ' ADA ',
+    'LDEDL',
+    ' ADA ',
+    '  L  '
+  ], {
+    A: 'minecraft:diamond',
+    L: 'minecraft:emerald',
+    D: 'apotheosis:gem_dust',
+    E: 'minecraft:ender_eye'
+  }).id('kubejs:mechanical_crafting/artifact_mimic_gate')
   if (Platform.isLoaded('cataclysm') &&
     Platform.isLoaded('aquamirae') &&
     Platform.isLoaded('irons_spellbooks')

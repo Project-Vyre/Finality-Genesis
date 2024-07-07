@@ -1,0 +1,100 @@
+{
+  "conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "adventure"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "kubejs"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "artifacts"
+    }
+  ],
+  "type": "gateways:endless",
+  "size": "large",
+  "color": "rainbow",
+  "base_wave": {
+    "entities": [
+      {
+        "type": "apotheosis:boss",
+        "boss": "kubejs:artifact_mimic"
+      }
+    ],
+    "rewards": [
+      {
+        "type": "apotheosis:affix",
+        "rarity": "apotheosis:epic",
+        "rolls": 9
+      }
+    ],
+    "max_wave_time": 800,
+    "setup_time": 100
+  },
+  "modifiers": [
+    {
+      "application_mode": {
+        "type": "gateways:after_every_n_waves",
+        "waves": 3,
+        "max": 10
+      },
+      "entities": [
+        {
+          "type": "apotheosis:boss",
+          "boss": "kubejs:artifact_mimic",
+          "count": 3
+        }
+      ],
+      "rewards": [
+        {
+          "type": "apotheosis:affix",
+          "rarity": "apotheosis:epic",
+          "rolls": 9
+        }
+      ],
+      "max_wave_time": -40,
+      "setup_time": -10
+    },
+    {
+      "application_mode": {
+        "type": "gateways:after_every_n_waves",
+        "waves": 5,
+        "max": 3
+      },
+      "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "multiply_total",
+          "value": 0.15
+        },
+        {
+          "attribute": "generic.armor",
+          "operation": "multiply_total",
+          "value": 0.5
+        },
+        {
+          "attribute": "generic.attack_damage",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.75
+        },
+        {
+          "attribute": "generic.knockback_resistance",
+          "operation": "ADDITION",
+          "value": 0.75
+        },
+        {
+          "attribute": "generic.movement_speed",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 0.10
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "boss_event": {
+    "mode": "name_plate"
+  },
+  "spawn_algorithm": "gateways:inward_spiral"
+}
