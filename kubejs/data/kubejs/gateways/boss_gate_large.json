@@ -483,12 +483,5 @@
     }
   ],
   "completion_xp": 2500,
-  "spawn_range": 5,
-  "failures": [
-    {
-      "type": "summon",
-      "entity": "alexsmobs:farseer",
-      "count": 14
-    }
-  ]
+  "spawn_range": 5
 }
