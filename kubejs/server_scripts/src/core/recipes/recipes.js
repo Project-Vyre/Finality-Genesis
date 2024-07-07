@@ -1267,6 +1267,14 @@ ServerEvents.recipes(event => {
     'minecraft:dragon_egg',
     'minecraft:glass_bottle'
   ]).keepIngredient('minecraft:dragon_egg').id('finality:dragon_breath')
+  event.recipes.create.emptying([
+    Fluid.of('kubejs:dragon_breath'),
+    'minecraft:dragon_egg'
+  ], 'minecraft:dragon_egg').id('kubejs:emptying/dragon_egg')
+  event.recipes.create.filling('minecraft:dragon_breath', [
+    'minecraft:glass_bottle',
+    Fluid.of('kubejs:dragon_breath', 250)
+  ]).id('kubejs:filling/dragon_breath_bottle')
   event.shapeless('create:mechanical_piston', [
     'supplementaries:soap', 'create:sticky_mechanical_piston'
   ]).id('finality:mechanical_piston_soap_washing')
