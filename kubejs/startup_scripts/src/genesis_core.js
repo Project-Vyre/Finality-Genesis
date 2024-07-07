@@ -80,7 +80,10 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .texture('kubejs:item/netherite_sheet')
     .fireResistant(true)
     .tag('forge:plates/netherite')
-
+  event.create('kubejs:netherite_rod')
+    .texture('kubejs:item/netherite_rod')
+    .fireResistant(true)
+    .tag('forge:rods/netherite')
   /**
    * 
    * @param {string} itemId 
@@ -941,6 +944,11 @@ StartupEvents.registry('fluid', event => {
   MOLTEN_METAL('molten_zinc', '§3Molten Zinc', 0xD3E8D6)
   MOLTEN_METAL('molten_brass', '§eMolten Brass', 0xFDD686)
   MOLTEN_METAL('molten_netherite', '§8Molten Netherite', 0x7E6059)
+  event.create('kubejs:dragon_breath')
+    .thickTexture(0xB600FF)
+    .noBlock()
+    .noBucket()
+    .displayName('Dragon\'s Breath')
   // work in progress .stillTexture('finality:block/still_entropy').flowingTexture('finality:block/flowing_entropy')
   event.create('kubejs:condensed_universal_entropy')
     .thickTexture(0x7800FF)
