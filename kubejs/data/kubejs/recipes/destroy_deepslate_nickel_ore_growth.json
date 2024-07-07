@@ -23,7 +23,7 @@
     "base": "destroy:deepslate_nickel_ore",
     "stages": 4,
     "spawn_chance": 0.2,
-    "growth_chance": 0.1,
+    "growth_chance": 0.25,
     "result": {
       "item": "kubejs:nickel_ore_essence",
       "count": 1

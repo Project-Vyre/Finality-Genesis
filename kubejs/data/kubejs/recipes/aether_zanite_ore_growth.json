@@ -23,7 +23,7 @@
     "base": "aether:zanite_ore",
     "stages": 3,
     "spawn_chance": 0.15,
-    "growth_chance": 0.1,
+    "growth_chance": 0.2,
     "result": {
       "item": "kubejs:zanite_ore_essence",
       "count": 1

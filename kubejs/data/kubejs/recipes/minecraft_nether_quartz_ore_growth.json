@@ -19,7 +19,7 @@
     "base": "minecraft:nether_quartz_ore",
     "stages": 4,
     "spawn_chance": 0.2,
-    "growth_chance": 0.1,
+    "growth_chance": 0.3,
     "result": {
       "item": "kubejs:quartz_ore_essence",
       "count": 1

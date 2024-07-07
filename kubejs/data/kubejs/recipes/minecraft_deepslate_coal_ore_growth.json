@@ -19,7 +19,7 @@
     "base": "minecraft:deepslate_coal_ore",
     "stages": 4,
     "spawn_chance": 0.3,
-    "growth_chance": 0.1,
+    "growth_chance": 0.4,
     "result": {
       "item": "kubejs:coal_ore_essence",
       "count": 1

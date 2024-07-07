@@ -26,7 +26,7 @@
     "base": "minecraft:emerald_ore",
     "stages": 4,
     "spawn_chance": 0.1,
-    "growth_chance": 0.1,
+    "growth_chance": 0.15,
     "result": {
       "item": "kubejs:emerald_ore_essence",
       "count": 1

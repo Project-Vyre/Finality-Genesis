@@ -19,7 +19,7 @@
     "base": "create:deepslate_zinc_ore",
     "stages": 4,
     "spawn_chance": 0.2,
-    "growth_chance": 0.1,
+    "growth_chance": 0.25,
     "result": {
       "item": "kubejs:zinc_ore_essence",
       "count": 1

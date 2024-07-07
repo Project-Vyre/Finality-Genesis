@@ -30,7 +30,7 @@
     "base": "alexscaves:guanostone_redstone_ore",
     "stages": 4,
     "spawn_chance": 0.3,
-    "growth_chance": 0.1,
+    "growth_chance": 0.3,
     "result": {
       "item": "kubejs:redstone_ore_essence",
       "count": 1

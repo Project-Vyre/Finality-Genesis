@@ -19,7 +19,7 @@
     "base": "minecraft:deepslate_gold_ore",
     "stages": 4,
     "spawn_chance": 0.2,
-    "growth_chance": 0.1,
+    "growth_chance": 0.2,
     "result": {
       "item": "kubejs:gold_ore_essence",
       "count": 1

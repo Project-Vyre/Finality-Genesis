@@ -22,7 +22,7 @@
     "type": "oregrowth:ore_growth",
     "base": "aether:gravitite_ore",
     "stages": 4,
-    "spawn_chance": 0.15,
+    "spawn_chance": 0.1,
     "growth_chance": 0.1,
     "result": {
       "item": "kubejs:gravitite_ore_essence",

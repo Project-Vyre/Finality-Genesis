@@ -23,7 +23,7 @@
     "base": "alexscaves:radrock_uranium_ore",
     "stages": 4,
     "spawn_chance": 0.2,
-    "growth_chance": 0.1,
+    "growth_chance": 0.2,
     "result": {
       "item": "kubejs:uranium_ore_essence",
       "count": 1
