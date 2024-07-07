@@ -8,5 +8,5 @@ spawnChanceScalar = 1.0
 
 # Global scalar for the growth chance of ore growth recipes. For example, if set to 0.5, all crystals will be half as likely to grow.
 # Allowed range: 0.01 ~ 10.0 - Default: 1.0
-growthChanceScalar = 0.1
+growthChanceScalar = 1.0
 
