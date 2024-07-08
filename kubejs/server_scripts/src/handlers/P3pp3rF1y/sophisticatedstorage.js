@@ -9,6 +9,20 @@
 
 // I apparently forgot I never commit this file sooo starting from scratch, again.
 
+let sophisticated_wood = [
+  'acacia',
+  'birch',
+  'crimson',
+  'dark_oak',
+  'jungle',
+  'oak',
+  'spruce',
+  'warped',
+  'mangrove',
+  'cherry',
+  'bamboo'
+]
+
 let itemIds = [
   'pickup',
   'filter',
@@ -473,17 +487,156 @@ ServerEvents.recipes(event => {
       ]).id(`kubejs:sophisticatedstorage/${element}_chest_from_woodworks_${element}_chest`)
     }
   }
-  /*
-  for (let i = 0; i < WOOD_TYPES.length; i++) {
-    let element = WOOD_TYPES[i]; // Item.of('sophisticatedstorage:copper_barrel', '{woodType:"acacia"}')
-    event.recipes.minecraft.crafting_shaped(Item.of('sophisticatedstorage:copper_barrel', `{woodType:"${element}"}`), [
-      'CCC',
-      'CBC',
-      'CCC'
+  event.remove([
+    // barrels
+    { id: 'sophisticatedstorage:acacia_barrel' },
+    { id: 'sophisticatedstorage:birch_barrel' },
+    { id: 'sophisticatedstorage:crimson_barrel' },
+    { id: 'sophisticatedstorage:dark_oak_barrel' },
+    { id: 'sophisticatedstorage:jungle_barrel' },
+    { id: 'sophisticatedstorage:oak_barrel' },
+    { id: 'sophisticatedstorage:spruce_barrel' },
+    { id: 'sophisticatedstorage:spruce_barrel_from_vanilla_barrel' },
+    { id: 'sophisticatedstorage:warped_barrel' },
+    { id: 'sophisticatedstorage:mangrove_barrel' },
+    { id: 'sophisticatedstorage:cherry_barrel' },
+    { id: 'sophisticatedstorage:bamboo_barrel' },
+    // chests
+    { id: 'sophisticatedstorage:acacia_chest' },
+    { id: 'sophisticatedstorage:birch_chest' },
+    { id: 'sophisticatedstorage:crimson_chest' },
+    { id: 'sophisticatedstorage:dark_oak_chest' },
+    { id: 'sophisticatedstorage:jungle_chest' },
+    { id: 'sophisticatedstorage:oak_chest' },
+    { id: 'sophisticatedstorage:spruce_chest' },
+    { id: 'sophisticatedstorage:warped_chest' },
+    { id: 'sophisticatedstorage:mangrove_chest' },
+    { id: 'sophisticatedstorage:cherry_chest' },
+    { id: 'sophisticatedstorage:bamboo_chest' },
+    // Limited I
+    { id: 'sophisticatedstorage:acacia_limited_barrel_1' },
+    { id: 'sophisticatedstorage:birch_limited_barrel_1' },
+    { id: 'sophisticatedstorage:crimson_limited_barrel_1' },
+    { id: 'sophisticatedstorage:dark_oak_limited_barrel_1' },
+    { id: 'sophisticatedstorage:jungle_limited_barrel_1' },
+    { id: 'sophisticatedstorage:oak_limited_barrel_1' },
+    { id: 'sophisticatedstorage:spruce_limited_barrel_1' },
+    { id: 'sophisticatedstorage:warped_limited_barrel_1' },
+    { id: 'sophisticatedstorage:mangrove_limited_barrel_1' },
+    { id: 'sophisticatedstorage:cherry_limited_barrel_1' },
+    { id: 'sophisticatedstorage:bamboo_limited_barrel_1' },
+    // Limited II
+    { id: 'sophisticatedstorage:acacia_limited_barrel_2' },
+    { id: 'sophisticatedstorage:birch_limited_barrel_2' },
+    { id: 'sophisticatedstorage:crimson_limited_barrel_2' },
+    { id: 'sophisticatedstorage:dark_oak_limited_barrel_2' },
+    { id: 'sophisticatedstorage:jungle_limited_barrel_2' },
+    { id: 'sophisticatedstorage:oak_limited_barrel_2' },
+    { id: 'sophisticatedstorage:spruce_limited_barrel_2' },
+    { id: 'sophisticatedstorage:warped_limited_barrel_2' },
+    { id: 'sophisticatedstorage:mangrove_limited_barrel_2' },
+    { id: 'sophisticatedstorage:cherry_limited_barrel_2' },
+    { id: 'sophisticatedstorage:bamboo_limited_barrel_2' },
+    // Limited III
+    { id: 'sophisticatedstorage:acacia_limited_barrel_3' },
+    { id: 'sophisticatedstorage:birch_limited_barrel_3' },
+    { id: 'sophisticatedstorage:crimson_limited_barrel_3' },
+    { id: 'sophisticatedstorage:dark_oak_limited_barrel_3' },
+    { id: 'sophisticatedstorage:jungle_limited_barrel_3' },
+    { id: 'sophisticatedstorage:oak_limited_barrel_3' },
+    { id: 'sophisticatedstorage:spruce_limited_barrel_3' },
+    { id: 'sophisticatedstorage:warped_limited_barrel_3' },
+    { id: 'sophisticatedstorage:mangrove_limited_barrel_3' },
+    { id: 'sophisticatedstorage:cherry_limited_barrel_3' },
+    { id: 'sophisticatedstorage:bamboo_limited_barrel_3' },
+    // Limited IV
+    { id: 'sophisticatedstorage:acacia_limited_barrel_4' },
+    { id: 'sophisticatedstorage:birch_limited_barrel_4' },
+    { id: 'sophisticatedstorage:crimson_limited_barrel_4' },
+    { id: 'sophisticatedstorage:dark_oak_limited_barrel_4' },
+    { id: 'sophisticatedstorage:jungle_limited_barrel_4' },
+    { id: 'sophisticatedstorage:oak_limited_barrel_4' },
+    { id: 'sophisticatedstorage:spruce_limited_barrel_4' },
+    { id: 'sophisticatedstorage:warped_limited_barrel_4' },
+    { id: 'sophisticatedstorage:mangrove_limited_barrel_4' },
+    { id: 'sophisticatedstorage:cherry_limited_barrel_4' },
+    { id: 'sophisticatedstorage:bamboo_limited_barrel_4' },
+    // shulker box
+    { id: 'minecraft:shulker_box_from_vanilla_shulker_box' },
+    { id: 'sophisticatedstorage:shulker_box' }
+  ])
+  event.recipes.minecraft.crafting_shapeless(Item.of('sophisticatedstorage:barrel', '{woodType:"spruce"}'), [
+    'minecraft:barrel',
+    'create:electron_tube'
+  ]).id('kubejs:sophisticatedstorage/spruce_barrel_from_vanilla_barrel')
+  for (let i = 0; i < sophisticated_wood.length; i++) {
+    let element = sophisticated_wood[i]; // Item.of('sophisticatedstorage:copper_barrel', '{woodType:"acacia"}')
+    event.recipes.minecraft.crafting_shaped(Item.of('sophisticatedstorage:barrel', `{woodType:"${element}"}`), [
+      'PSP',
+      'PEP',
+      'PSP'
     ], {
-      C: 'create:copper_sheet',
-      B: Item.of('sophisticatedstorage:barrel', `{woodType:"${element}"}`).weakNBT()
-    }).id(`kubejs:sophisticatedstorage/${element}_copper_barrel`)
+      P: `minecraft:${element}_planks`,
+      S: `minecraft:${element}_slab`,
+      E: 'create:electron_tube'
+    }).id(`kubejs:sophisticatedstorage/${element}_barrel`)
+    event.recipes.minecraft.crafting_shaped(Item.of('sophisticatedstorage:chest', `{woodType:"${element}"}`), [
+      'PPP',
+      'PEP',
+      'PPP'
+    ], {
+      P: `minecraft:${element}_planks`,
+      E: 'create:electron_tube'
+    }).id(`kubejs:sophisticatedstorage/${element}_chest`)
+    // limited
+    event.recipes.minecraft.crafting_shaped(Item.of('sophisticatedstorage:limited_barrel_1', `{woodType:"${element}"}`), [
+      'PSP',
+      'PEP',
+      'PPP'
+    ], {
+      P: `minecraft:${element}_planks`,
+      S: `minecraft:${element}_slab`,
+      E: 'create:electron_tube'
+    }).id(`kubejs:sophisticatedstorage/${element}_limited_barrel_1`)
+    event.recipes.minecraft.crafting_shaped(Item.of('sophisticatedstorage:limited_barrel_2', `{woodType:"${element}"}`), [
+      'PPP',
+      'SES',
+      'PPP'
+    ], {
+      P: `minecraft:${element}_planks`,
+      S: `minecraft:${element}_slab`,
+      E: 'create:electron_tube'
+    }).id(`kubejs:sophisticatedstorage/${element}_limited_barrel_2`)
+    event.recipes.minecraft.crafting_shaped(Item.of('sophisticatedstorage:limited_barrel_3', `{woodType:"${element}"}`), [
+      'PSP',
+      'PEP',
+      'SPS'
+    ], {
+      P: `minecraft:${element}_planks`,
+      S: `minecraft:${element}_slab`,
+      E: 'create:electron_tube'
+    }).id(`kubejs:sophisticatedstorage/${element}_limited_barrel_3`)
+    event.recipes.minecraft.crafting_shaped(Item.of('sophisticatedstorage:limited_barrel_4', `{woodType:"${element}"}`), [
+      'SPS',
+      'PEP',
+      'SPS'
+    ], {
+      P: `minecraft:${element}_planks`,
+      S: `minecraft:${element}_slab`,
+      E: 'create:electron_tube'
+    }).id(`kubejs:sophisticatedstorage/${element}_limited_barrel_4`)
   }
-  */
+  event.recipes.minecraft.crafting_shapeless('sophisticatedstorage:shulker_box', [
+    'minecraft:shulker_box',
+    'create:electron_tube'
+  ]).id('kubejs:sophisticatedstorage/shulker_box_from_vanilla_shulker_box')
+  event.recipes.minecraft.crafting_shaped('sophisticatedstorage:shulker_box', [
+    ' S ',
+    'EC ',
+    ' S '
+  ], {
+    C: '#forge:chests',
+    S: 'minecraft:shulker_shell',
+    E: 'create:electron_tube'
+  }).id('kubejs:sophisticatedstorage/shulker_box')
 })
