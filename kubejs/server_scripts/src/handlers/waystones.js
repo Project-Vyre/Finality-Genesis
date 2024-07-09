@@ -8,6 +8,10 @@
 
 ServerEvents.recipes(event => {
   event.remove([
+    { id: 'waystones:waystone' },
+    { id: 'waystones:mossy_waystone' },
+    { id: 'waystones:sandy_waystone' },
+    { id: 'waystones:sharestone' },
     { id: 'waystones:warp_stone' },
     { id: 'waystones:warp_dust' },
     { id: 'waystones:return_scroll' },
@@ -15,6 +19,61 @@ ServerEvents.recipes(event => {
     { id: 'waystones:warp_scroll' },
     { id: 'waystones:warp_plate' }
   ])
+  event.recipes.create.mechanical_crafting('waystones:waystone', [
+    ' SSS ',
+    'SSSSS',
+    ' SSS ',
+    ' SSS ',
+    ' SWS ',
+    ' SSS ',
+    ' SSS ',
+    'SOOOS'
+  ], {
+    S: 'minecraft:stone_bricks',
+    W: 'waystones:warp_stone',
+    O: 'minecraft:obsidian'
+  }).id('kubejs:waystones/mechanical_crafting/waystone')
+  event.recipes.create.mechanical_crafting('waystones:mossy_waystone', [
+    ' SSS ',
+    'SSSSS',
+    ' SSS ',
+    ' SSS ',
+    ' SWS ',
+    ' SSS ',
+    ' SSS ',
+    'SOOOS'
+  ], {
+    S: 'minecraft:mossy_stone_bricks',
+    W: 'waystones:warp_stone',
+    O: 'minecraft:obsidian'
+  }).id('kubejs:waystones/mechanical_crafting/mossy_waystone')
+  event.recipes.create.mechanical_crafting('waystones:sandy_waystone', [
+    ' SSS ',
+    'SSSSS',
+    ' SSS ',
+    ' SSS ',
+    ' SWS ',
+    ' SSS ',
+    ' SSS ',
+    'SOOOS'
+  ], {
+    S: 'minecraft:chiseled_sandstone',
+    W: 'waystones:warp_stone',
+    O: 'minecraft:obsidian'
+  }).id('kubejs:waystones/mechanical_crafting/sandy_waystone')
+  event.recipes.create.mechanical_crafting('waystones:sharestone', [
+    'SSSSS',
+    ' SSS ',
+    ' S S ',
+    ' SWS ',
+    ' S S ',
+    ' SSS ',
+    'SOOOS'
+  ], {
+    S: 'minecraft:stone_bricks',
+    W: 'waystones:warp_stone',
+    O: 'minecraft:obsidian'
+  }).id('kubejs:waystones/mechanical_crafting/sharestone')
   event.recipes.minecraft.crafting_shaped('waystones:warp_stone', [
     'AAA',
     'AEA',

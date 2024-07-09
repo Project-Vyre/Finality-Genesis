@@ -16,8 +16,8 @@ ServerEvents.recipes(event => {
     Q: 'create:iron_sheet',
     R: 'create:rose_quartz_lamp',
     T: 'minecraft:tinted_glass',
-    B: 'minecraft:beacon'
-  }).id('finality:tempad')
+    B: 'minecraft:clock'
+  }).id('kubejs:tempad')
   event.recipes.create.mechanical_crafting('tempad:he_who_remains_tempad', [
     ' UUU ',
     'UTPTU',
@@ -30,5 +30,5 @@ ServerEvents.recipes(event => {
     E: 'kubejs:electron_tube_singularity',
     P: 'kubejs:precision_mechanism_singularity',
     B: 'kubejs:ender_pearl_singularity'
-  }).id('finality:mechanical_crafting/overseers_tempad')
+  }).id('kubejs:tempad/mechanical_crafting/overseers_tempad')
 })
