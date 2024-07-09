@@ -1,0 +1,225 @@
+{
+  "conditions": [
+    {
+      "type": "apotheosis:module",
+      "module": "adventure"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "kubejs"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "ars_nouveau"
+    }
+  ],
+  "entity": "ars_nouveau:wilden_stalker",
+  "weight": 45,
+  "quality": 4,
+  "size": {
+    "width": 2,
+    "height": 2
+  },
+  "valid_gear_sets": ["#overworld"],
+  "dimensions": ["minecraft:overworld"],
+  "min_rarity": "uncommon",
+  "max_rarity": "mythic",
+  "stats": {
+    "uncommon": {
+      "enchant_chance": 0.25,
+      "enchantment_levels": [12, 8, 20, 14],
+      "effects": [
+        {
+          "effect": "minecraft:fire_resistance",
+          "chance": 1.0
+        }
+      ],
+      "attribute_modifiers": [
+        {
+          "attribute": "minecraft:generic.max_health",
+          "operation": "ADDITION",
+          "value": {
+            "min": 20,
+            "steps": 4,
+            "step": 10
+          }
+        },
+        {
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "MULTIPLY_BASE",
+          "value": {
+            "min": 0.15,
+            "steps": 5,
+            "step": 0.01
+          }
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "MULTIPLY_BASE",
+          "value": {
+            "min": 0.2,
+            "steps": 20,
+            "step": 0.01
+          }
+        },
+        {
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "ADDITION",
+          "value": 0.3
+        }
+      ]
+    },
+    "rare": {
+      "enchant_chance": 0.35,
+      "enchantment_levels": [15, 10, 23, 17],
+      "effects": [
+        {
+          "effect": "minecraft:fire_resistance",
+          "chance": 1.0
+        }
+      ],
+      "attribute_modifiers": [
+        {
+          "attribute": "minecraft:generic.max_health",
+          "operation": "ADDITION",
+          "value": {
+            "min": 40,
+            "steps": 5,
+            "step": 10
+          }
+        },
+        {
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "MULTIPLY_BASE",
+          "value": {
+            "min": 0.15,
+            "steps": 10,
+            "step": 0.01
+          }
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "MULTIPLY_BASE",
+          "value": {
+            "min": 0.25,
+            "steps": 25,
+            "step": 0.01
+          }
+        },
+        {
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "ADDITION",
+          "value": 0.4
+        }
+      ]
+    },
+    "epic": {
+      "enchant_chance": 0.8,
+      "enchantment_levels": [30, 24, 50, 40],
+      "effects": [
+        {
+          "effect": "minecraft:fire_resistance",
+          "chance": 1.0
+        }
+      ],
+      "attribute_modifiers": [
+        {
+          "attribute": "minecraft:generic.max_health",
+          "operation": "ADDITION",
+          "value": {
+            "min": 50,
+            "steps": 25,
+            "step": 2
+          }
+        },
+        {
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "MULTIPLY_BASE",
+          "value": {
+            "min": 0.2,
+            "steps": 25,
+            "step": 0.01
+          }
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "MULTIPLY_BASE",
+          "value": {
+            "min": 0.6,
+            "steps": 35,
+            "step": 0.01
+          }
+        },
+        {
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "ADDITION",
+          "value": 0.85
+        },
+        {
+          "attribute": "minecraft:generic.armor",
+          "operation": "ADDITION",
+          "value": 4
+        },
+        {
+          "attribute": "minecraft:generic.armor_toughness",
+          "operation": "ADDITION",
+          "value": 2
+        }
+      ]
+    },
+    "mythic": {
+      "enchant_chance": 0.85,
+      "enchantment_levels": [32, 25, 60, 50],
+      "effects": [
+        {
+          "effect": "minecraft:fire_resistance",
+          "chance": 1.0
+        }
+      ],
+      "attribute_modifiers": [
+        {
+          "attribute": "minecraft:generic.max_health",
+          "operation": "ADDITION",
+          "value": {
+            "min": 75,
+            "steps": 25,
+            "step": 2
+          }
+        },
+        {
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "MULTIPLY_BASE",
+          "value": {
+            "min": 0.3,
+            "steps": 35,
+            "step": 0.01
+          }
+        },
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "operation": "MULTIPLY_BASE",
+          "value": {
+            "min": 0.7,
+            "steps": 35,
+            "step": 0.01
+          }
+        },
+        {
+          "attribute": "minecraft:generic.knockback_resistance",
+          "operation": "ADDITION",
+          "value": 0.95
+        },
+        {
+          "attribute": "minecraft:generic.armor",
+          "operation": "ADDITION",
+          "value": 6
+        },
+        {
+          "attribute": "minecraft:generic.armor_toughness",
+          "operation": "ADDITION",
+          "value": 3
+        }
+      ]
+    }
+  }
+}
