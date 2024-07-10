@@ -1318,6 +1318,11 @@ ServerEvents.recipes(event => {
     R: '#forge:rope',
     L: '#forge:leather'
   }).id('finality:supplementaries_quiver')
+  event.recipes.create.mixing('6x supplementaries:soap', [
+    '4x supplementaries:ash',
+    'minecraft:porkchop',
+    Fluid.of('minecraft:water')
+  ]).id('kubejs:mixing/supplementaries/soap')
   event.recipes.create.filling('supplementaries:bomb_blue', [
     'supplementaries:bomb',
     Fluid.of('kubejs:condensed_universal_entropy', 25)
