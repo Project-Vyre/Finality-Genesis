@@ -9,6 +9,15 @@
 // requires: kubejs_create
 
 ServerEvents.recipes(event => {
+  // Why did you remove the TNT recipe?
+  event.recipes.minecraft.crafting_shaped('minecraft:tnt', [
+    'GSG',
+    'SGS',
+    'GSG'
+  ], {
+    G: 'minecraft:gunpowder',
+    S: '#minecraft:sand'
+  }).id('kubejs:tnt_recipe_restore_if_destroy_present')
   event.remove([
     { id: 'destroy:compat/createaddition/crafting/diamond_grid_sandpaper' },
     { id: 'destroy:compat/farmersdelight/cutting/onion' },
