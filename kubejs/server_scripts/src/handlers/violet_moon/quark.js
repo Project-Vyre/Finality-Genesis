@@ -92,6 +92,16 @@ ServerEvents.recipes(event => {
       P: 'quark:azalea_planks'
     }).id('finality:quark/azalea_ladder')
   }
+  if (Platform.isLoaded('productivebees')) {
+    event.recipes.minecraft.crafting_shaped('productivebees:inactive_dragon_egg', [
+      'SSS',
+      'SES',
+      'SSS'
+    ], {
+      S: 'quark:dragon_scale',
+      E: '#forge:eggs'
+    }).id('kubejs:productivebees/inactive_dragon_egg')
+  }
 })
 
 ServerEvents.tags('item', event => {
