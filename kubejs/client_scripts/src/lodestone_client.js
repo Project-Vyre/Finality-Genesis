@@ -8,8 +8,6 @@
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
-console.info('Genesis client scripts loaded. You will see this line every time client resources reload.')
-
 const $ScreenshakeHandler = Java.loadClass('team.lodestar.lodestone.handlers.ScreenshakeHandler')
 const $ScreenshakeInstance = Java.loadClass('team.lodestar.lodestone.systems.screenshake.ScreenshakeInstance')
 const $Easing = Java.loadClass('team.lodestar.lodestone.systems.easing.Easing')
