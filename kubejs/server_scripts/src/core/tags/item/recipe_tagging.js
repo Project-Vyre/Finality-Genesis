@@ -30,4 +30,8 @@ ServerEvents.tags('item', event => {
     'minecraft:rotten_flesh',
     'minecraft:egg'
   ])
+  event.add('kubejs:sand_singularities', [
+    'kubejs:sand_singularity',
+    'kubejs:red_sand_singularity'
+  ])
 })
