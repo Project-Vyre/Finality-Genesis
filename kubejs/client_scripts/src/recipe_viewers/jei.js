@@ -217,6 +217,11 @@ JEIEvents.hideItems(event => {
     event.hide('malum:copper_nugget')
   }
 
+  if (Platform.isLoaded('pipez')) {
+    event.hide('pipez:wrench')
+    event.hide('pipez:filter_destination_tool')
+  }
+
   if (Platform.isLoaded('headhunter_mod') && Platform.isLoaded('apotheosis')) {
     event.hide([
       'headhunter_mod:vertical_beam_spawn_egg',
@@ -371,7 +376,7 @@ JEIEvents.information(event => {
         Component.of(' recipe does not show up in JEI due to a '),
         Component.of('mod conflict').darkRed(),
         Component.of(',  you can still strip logs placed on a Cutting Board to get your Tree Bark.')
-      ]) 
+      ])
     ])
     event.addItem([
       'farmersdelight:wild_cabbages',
