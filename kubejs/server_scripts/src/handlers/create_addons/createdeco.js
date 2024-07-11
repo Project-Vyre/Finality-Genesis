@@ -66,6 +66,17 @@ ServerEvents.recipes(event => {
   event.recipes.create.mixing(Fluid.of('kubejs:molten_iron', 90), 'createdeco:industrial_iron_sheet')
     .heated()
     .id('finality:createdeco/basin/industrial_iron_sheet_melting')
+  event.remove([
+    { id: 'create:industrial_iron_block_from_iron_ingots_stonecutting' },
+    {
+      mod: 'createdeco',
+      type: 'create:compacting',
+      output: 'create:industrial_iron_block'
+    },
+    {
+      id: 'createdeco:compacting/industrial_iron_ingot'
+    }
+  ])
 })
 
 let cdeco_lamp_colors = [
