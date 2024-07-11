@@ -500,7 +500,7 @@ PlayerEvents.inventoryChanged(event => {
 })
 
 let modBlacklist = {
-  ae2: 'Applied Energistics 2',
+  // ae2: 'Applied Energistics 2',
   createcasing: 'Create Encased',
   createdieselgenerators: 'Create: Diesel Generators',
   create_confectionery: 'Create Confectionery',

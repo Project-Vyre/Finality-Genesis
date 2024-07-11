@@ -993,7 +993,7 @@ StartupEvents.registry('fluid', event => {
 */
 
 let blacklist = {
-  ae2: 'This mod does not belong in this variant of the modpack. Make your own storage systems.',
+  // ae2: 'This mod does not belong in this variant of the modpack. Make your own storage systems.',
   createcasing: 'Not supported.',
   createdieselgenerators: 'Not supported.',
   create_confectionery: 'MCreator mod.',
@@ -1031,5 +1031,11 @@ StartupEvents.postInit(event => {
   }
   if (!Platform.isLoaded('embeddium') && Platform.isLoaded('rubidium') && Platform.isLoaded('textanimator')) {
     console.error('This mod is not supported: rubidium - Reason: Embeddium has replaced Rubidium. <shake>Stop using Rubidium.</shake>')
+  }
+  if (!Platform.isLoaded('jei') && Platform.isLoaded('emi')) {
+    console.error('For a smoother experience, keep JEI installed and remove EMI.')
+  }
+  if (!Platform.isLoaded('rei') && Platform.isLoaded('emi')) {
+    console.error('For a smoother experience, keep REI installed and remove EMI.')
   }
 })
