@@ -545,6 +545,15 @@ ServerEvents.recipes(event => {
     ]).transitionalItem('kubejs:incomplete_' + insert + '_singularity').loops(9).id('finality:sequenced_assembly/' + insert + '_singularity')
   }
 
+  event.recipes.create.mechanical_crafting('kubejs:tnt_singularity', [
+    'GSG',
+    'SGS',
+    'GSG'
+  ], {
+    G: 'kubejs:gunpowder_singularity',
+    S: '#kubejs:sand_singularities'
+  }).id('kubejs:mechanical_crafting/tnt_singularity')
+
   event.recipes.create.sequenced_assembly([
     Item.of('kubejs:potion_base_singularity').withChance(25.0),
     Item.of('kubejs:errored_result').withChance(25.0),
@@ -658,7 +667,7 @@ ServerEvents.recipes(event => {
   ], 'create:precision_mechanism', [
     event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'kubejs:lapis_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'kubejs:glowstone_singularity']),
-    event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),
+    event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'kubejs:potion_base_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),
     event.recipes.create.deploying('kubejs:incomplete_ascendant_mechanism', ['kubejs:incomplete_ascendant_mechanism', 'create:experience_block']),
     event.recipes.create.pressing('kubejs:incomplete_ascendant_mechanism', 'kubejs:incomplete_ascendant_mechanism')
@@ -680,7 +689,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.deploying('kubejs:incomplete_logistics_mechanism', ['kubejs:incomplete_logistics_mechanism', 'kubejs:track_singularity'])
   ]).transitionalItem('kubejs:incomplete_logistics_mechanism').loops(1).id('finality:sequenced_assembly/logistics_mechanism')
 
-  event.recipes.create.compacting('kubejs:final_singularity', [
+  event.recipes.create.compacting('kubejs:final_singularity_stage_nulla', [
     'kubejs:terra_mechanism',
     'kubejs:gluttony_mechanism',
     'kubejs:metallurgy_mechanism',
@@ -690,13 +699,13 @@ ServerEvents.recipes(event => {
     'kubejs:genesis_mechanism',
     'kubejs:logistics_mechanism',
     'kubejs:ascendant_mechanism'
-  ]).id('finality:compacting/final_singularity_from_primordial_mechanisms')
+  ]).id('finality:compacting/final_singularity_stage_nulla')
 
   event.recipes.create.crushing([
     '32x kubejs:unstable_entropy_particles',
     Item.of('kubejs:unstable_entropy_particles', 32).withChance(0.25),
-    Item.of('kubejs:final_singularity').withChance(0.75)
-  ], 'kubejs:final_singularity').processingTime(500).id('finality:crushing/final_singularity')
+    Item.of('kubejs:final_singularity_stage_nulla').withChance(0.75)
+  ], 'kubejs:final_singularity_stage_nulla').processingTime(500).id('finality:crushing/final_singularity')
 
   event.recipes.create.mechanical_crafting('kubejs:command_block', [
     'IIGIIGII',
@@ -708,7 +717,7 @@ ServerEvents.recipes(event => {
     'IIQPPQII',
     'IIGIIGII'
   ], {
-    I: 'kubejs:high_entropy_alloy',
+    I: 'kubejs:high_entropy_alloy_block',
     G: '#forge:glass/colorless',
     R: 'kubejs:redstone_singularity',
     U: 'kubejs:null_matter',
@@ -727,7 +736,7 @@ ServerEvents.recipes(event => {
     'IIQPPQII',
     'IIGIIGII'
   ], {
-    I: 'kubejs:high_entropy_alloy',
+    I: 'kubejs:high_entropy_alloy_block',
     G: '#forge:glass/colorless',
     R: 'kubejs:redstone_singularity',
     U: 'kubejs:null_matter',
@@ -746,7 +755,7 @@ ServerEvents.recipes(event => {
     'IIQPPQII',
     'IIGIIGII'
   ], {
-    I: 'kubejs:high_entropy_alloy',
+    I: 'kubejs:high_entropy_alloy_block',
     G: '#forge:glass/colorless',
     R: 'kubejs:redstone_singularity',
     U: 'kubejs:null_matter',
