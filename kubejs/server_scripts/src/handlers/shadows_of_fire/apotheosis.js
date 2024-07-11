@@ -51,46 +51,48 @@ let END_GEMS = [
 ]
 
 ServerEvents.recipes(event => {
-  event.custom({
-    "type": "apotheosis:spawner_modifier",
-    "conditions": [
-      {
-        "type": "apotheosis:module",
-        "module": "spawner"
-      }
-    ],
-    "mainhand": {
-      "item": "kubejs:stable_entropy_particles"
-    },
-    "stat_changes": [
-      {
-        "id": "ignore_conditions",
-        "value": true
-      }
-    ]
-  }).id('finality:spawner/ignore_conditions')
-  event.custom({
-    "type": "apotheosis:spawner_modifier",
-    "conditions": [
-      {
-        "type": "apotheosis:module",
-        "module": "spawner"
-      }
-    ],
-    "mainhand": {
-      "item": "kubejs:stable_entropy_particles"
-    },
-    "offhand": {
-      "item": "minecraft:quartz"
-    },
-    "consumes_offhand": false,
-    "stat_changes": [
-      {
-        "id": "ignore_conditions",
-        "value": false
-      }
-    ]
-  }).id('finality:spawner/ignore_conditions_inverted')
+  if (!Platform.isLoaded('productivebees')) {
+    event.custom({
+      "type": "apotheosis:spawner_modifier",
+      "conditions": [
+        {
+          "type": "apotheosis:module",
+          "module": "spawner"
+        }
+      ],
+      "mainhand": {
+        "item": "kubejs:stable_entropy_particles"
+      },
+      "stat_changes": [
+        {
+          "id": "ignore_conditions",
+          "value": true
+        }
+      ]
+    }).id('finality:spawner/ignore_conditions')
+    event.custom({
+      "type": "apotheosis:spawner_modifier",
+      "conditions": [
+        {
+          "type": "apotheosis:module",
+          "module": "spawner"
+        }
+      ],
+      "mainhand": {
+        "item": "kubejs:stable_entropy_particles"
+      },
+      "offhand": {
+        "item": "minecraft:quartz"
+      },
+      "consumes_offhand": false,
+      "stat_changes": [
+        {
+          "id": "ignore_conditions",
+          "value": false
+        }
+      ]
+    }).id('finality:spawner/ignore_conditions_inverted')
+  }
   event.recipes.create.deploying('apotheosis:ancient_material', [
     'apotheosis:mythic_material',
     'kubejs:stable_entropy_particles'
