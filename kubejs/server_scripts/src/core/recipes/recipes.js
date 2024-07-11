@@ -770,37 +770,6 @@ ServerEvents.recipes(event => {
     Fluid.of('kubejs:condensed_universal_entropy', 90)
   ]).superheated().id('finality:mixing/iridium_ingot_from_netherite')
   // HIGH ENTROPY ALLOY / FINAL
-  event.recipes.create.mixing([
-    Item.of('kubejs:unstable_entropy_particles').withChance(0.50),
-    Item.of('kubejs:errored_result').withChance(0.25),
-    Item.of('create:experience_nugget').withChance(0.25)
-  ], [
-    'create:chromatic_compound',
-    'create:railway_casing',
-    'minecraft:netherite_block',
-    'create:brass_block',
-    'create:andesite_alloy_block',
-    'minecraft:diamond_block',
-    'minecraft:amethyst_shard',
-    '2x minecraft:chorus_fruit',
-    Fluid.of('kubejs:condensed_universal_entropy', 1000)
-  ]).superheated().id('finality:mixing/unstable_entropy_creation1')
-  event.recipes.create.mixing([
-    '9x kubejs:unstable_entropy_particles',
-    Item.of('kubejs:unstable_entropy_particles', 9).withChance(0.50),
-    Item.of('kubejs:errored_result').withChance(0.25),
-    Item.of('create:experience_block').withChance(0.12)
-  ], [
-    'kubejs:amethyst_singularity',
-    'kubejs:brass_singularity',
-    'kubejs:andesite_alloy_singularity',
-    'kubejs:diamond_singularity',
-    'create:chromatic_compound',
-    'kubejs:netherite_singularity',
-    'kubejs:sturdy_sheet_singularity',
-    Fluid.of('kubejs:condensed_universal_entropy'),
-    'kubejs:electron_tube_singularity'
-  ]).id('finality:mixing/unstable_entropy_creation_from_singularities')
   event.recipes.create.mixing('kubejs:unstable_entropy_particles', [
     'kubejs:errored_result',
     Fluid.of('kubejs:condensed_universal_entropy', 250)
