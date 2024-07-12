@@ -89,6 +89,7 @@ JEIEvents.addItems(event => {
   event.add([
     'minecraft:dragon_egg',
     'minecraft:structure_void',
+    'create:placard',
     'create:chromatic_compound',
     'create:refined_radiance',
     'create:shadow_steel',
