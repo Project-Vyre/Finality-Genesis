@@ -7,12 +7,6 @@ let ars_armor = [
 ]
 
 ItemEvents.modification(event => {
-  event.modify('ars_nouveau:enchanters_sword', item => {
-    item.maxDamage = -1
-  })
-  event.modify('ars_nouveau:enchanters_shield', item => {
-    item.maxDamage = -1
-  })
   for (let i = 0; i < ars_armor.length; i++) {
     let element = ars_armor[i];
     event.modify('ars_nouveau:' + element + '_boots', item => { item.maxDamage = -1 })
