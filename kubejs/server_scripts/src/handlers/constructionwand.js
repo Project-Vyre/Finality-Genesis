@@ -13,9 +13,9 @@ ServerEvents.recipes(event => {
     ' S ',
     'S  '
   ], {
-    S: 'minecraft:stick',
+    S: 'kubejs:netherite_rod',
     C: 'minecraft:end_crystal'
-  }).id('finality:constructionwand_infinity')
+  }).id('kubejs:constructionwand/infinity_wand')
 })
 
 /*
