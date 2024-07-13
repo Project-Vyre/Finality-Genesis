@@ -3,7 +3,8 @@
   "failed_reloads_per_session": 5,
   "default_packs": [
     "create:legacy_copper",
-    "file/Finality Genesis - 1.20.x",
+    "file/Pretty_Pipez_1_20.zip",
+    "file/Finality Genesis - Block Outline",
     "file/Nicer-Rain-1.0.0.zip",
     "file/Enhanced Audio r6.zip",
     "file/Enhanced Audio Ambience r1.zip"
@@ -13,6 +14,8 @@
   },
   "pack_overrides": {
     "genesis_resources": [
+      "create:legacy_copper",
+      "file/Pretty_Pipez_1_20.zip",
       "file/Nicer-Rain-1.0.0.zip",
       "file/Enhanced Audio r6.zip",
       "file/Enhanced Audio Ambience r1.zip"
