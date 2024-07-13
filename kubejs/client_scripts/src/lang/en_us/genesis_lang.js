@@ -448,6 +448,7 @@ ClientEvents.lang('en_us', event => {
       "kubejs.zombie_gate_small": "Small Zombie Gate",
       "kubejs.zombie_gate": "Zombie Gate",
       "kubejs.zombie_gate_large": "Large Zombie Gate",
+      "kubejs.bastion_salvation": "Bastion's Salvation",
       "kubejs.boss_gate_small": "Small Apothic Boss Gate",
       "kubejs.boss_gate": "Apothic Boss Gate",
       "kubejs.boss_gate_large": "Large Apothic Boss Gate",
@@ -457,7 +458,9 @@ ClientEvents.lang('en_us', event => {
       "kubejs.mass_destruction_boss_gate_large": "Bosses of Mass Destruction Gate",
       "kubejs.endless/artifact_mimic_gate": "Endless Artifact Mimic Gate",
       "item.apotheosis.gem.kubejs:eversor": "Eversor Gem",
-      "item.apotheosis.gem.kubejs:acuti_ora": "Acuti Ora Gem"
+      "item.apotheosis.gem.kubejs:acuti_ora": "Acuti Ora Gem",
+      "name.kubejs.skill_check": "Skill Check",
+      "rewards.gateways.loot_table.bastion_treasure": "Bastion Treasure Loot"
     })
   }
   if (Platform.isLoaded('create_bic_bit')) {
