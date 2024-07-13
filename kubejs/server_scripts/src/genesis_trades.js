@@ -72,6 +72,10 @@ MoreJSEvents.wandererTrades(event => {
     '2x kubejs:gold_coin',
     'create:precision_mechanism'
   ], 'kubejs:deepslate_iridium_ore').maxUses(9)
+  event.addTrade(2, [
+    '64x kubejs:netherite_coin',
+    'kubejs:iridium_block'
+  ], 'minecraft:sniffer_egg').maxUses(1)
   if (Platform.isLoaded('apotheosis')) {
     event.addTrade(1, [
       'minecraft:sculk',
