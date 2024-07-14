@@ -17,7 +17,8 @@ ServerEvents.recipes(event => {
     '#minecraft:wooden_slabs',
     '#minecraft:logs',
     '#minecraft:wooden_slabs'
-  ]).id('finality:summoning_altar_i_tried_fitting')
+  ]).id('kubejs:summoning_altar_i_tried_fitting')
+
   event.recipes.summoningrituals.altar('minecraft:echo_shard')
     .input([
       'minecraft:soul_sand',
@@ -40,7 +41,7 @@ ServerEvents.recipes(event => {
         })
     )
     .recipeTime(10)
-    .id('finality:summoning/warden')
+    .id('kubejs:altar/warden')
 
   event.recipes.summoningrituals.altar('minecraft:emerald')
     .input([
@@ -56,7 +57,7 @@ ServerEvents.recipes(event => {
         .spread(3, 0, 3)
     )
     .recipeTime(25)
-    .id('finality:summoning/witch')
+    .id('kubejs:altar/witch')
 
   event.recipes.summoningrituals.altar('minecraft:bow')
     .input([
@@ -70,7 +71,7 @@ ServerEvents.recipes(event => {
         .spread(3, 0, 3)
     )
     .recipeTime(25)
-    .id('finality:summoning/stray')
+    .id('kubejs:altar/stray')
 
   event.recipes.summoningrituals.altar('minecraft:rotten_flesh')
     .input([
@@ -84,7 +85,7 @@ ServerEvents.recipes(event => {
         .spread(3, 0, 3)
     )
     .recipeTime(25)
-    .id('finality:summoning/drowned')
+    .id('kubejs:altar/drowned')
 
   event.recipes.summoningrituals.altar('minecraft:rotten_flesh')
     .input([
@@ -98,7 +99,7 @@ ServerEvents.recipes(event => {
         .spread(3, 0, 3)
     )
     .recipeTime(25)
-    .id('finality:summoning/husk')
+    .id('kubejs:altar/husk')
 
   event.recipes.summoningrituals.altar('minecraft:black_dye')
     .input([
@@ -112,7 +113,7 @@ ServerEvents.recipes(event => {
         .spread(3, 0, 3)
     )
     .recipeTime(25)
-    .id('finality:summoning/squid')
+    .id('kubejs:altar/squid')
 
   event.recipes.summoningrituals.altar('minecraft:black_dye')
     .input([
@@ -127,7 +128,7 @@ ServerEvents.recipes(event => {
         .spread(3, 0, 3)
     )
     .recipeTime(25)
-    .id('finality:summoning/glow_squid')
+    .id('kubejs:altar/glow_squid')
 
   event.recipes.summoningrituals.altar('create:dough')
     .input([
@@ -144,7 +145,21 @@ ServerEvents.recipes(event => {
         .data({ Size: 3 })
     )
     .recipeTime(25)
-    .id('finality:summoning/slime')
+    .id('kubejs:altar/slime')
+
+  event.recipes.summoningrituals.altar('kubejs:iridium_sword')
+    .itemOutput('kubejs:crimson_moons_semblance')
+    .input([
+      '64x kubejs:bloodfire_bars',
+      '4x create:brass_nugget',
+      '64x create:cogwheel',
+      '64x create:large_cogwheel',
+      '64x kubejs:null_matter',
+      'kubejs:blaze_cake_singularity'
+    ])
+    .dayTime('night')
+    .recipeTime(250)
+    .id('kubejs:altar/crimson_moons_semblance')
 
   if (Platform.isLoaded('lilwings')) {
 
@@ -160,7 +175,7 @@ ServerEvents.recipes(event => {
           .spread(3, 0, 3)
       )
       .recipeTime(25)
-      .id('finality:summoning/aponi_butterfly')
+      .id('kubejs:altar/aponi_butterfly')
 
     event.recipes.summoningrituals.altar('lilwings:paper_wings')
       .input([
@@ -174,7 +189,7 @@ ServerEvents.recipes(event => {
           .spread(3, 0, 3)
       )
       .recipeTime(25)
-      .id('finality:summoning/butter_gold_butterfly')
+      .id('kubejs:altar/butter_gold_butterfly')
 
     event.recipes.summoningrituals.altar('lilwings:paper_wings')
       .input([
@@ -188,7 +203,7 @@ ServerEvents.recipes(event => {
           .spread(3, 0, 3)
       )
       .recipeTime(25)
-      .id('finality:summoning/cloudy_puff_butterfly')
+      .id('kubejs:altar/cloudy_puff_butterfly')
 
     event.recipes.summoningrituals.altar('lilwings:paper_wings')
       .input([
@@ -201,7 +216,7 @@ ServerEvents.recipes(event => {
           .spread(3, 0, 3)
       )
       .recipeTime(25)
-      .id('finality:summoning/crystal_puff_butterfly')
+      .id('kubejs:altar/crystal_puff_butterfly')
 
     event.recipes.summoningrituals.altar('lilwings:paper_wings')
       .input([
@@ -216,7 +231,7 @@ ServerEvents.recipes(event => {
           .spread(3, 0, 3)
       )
       .recipeTime(25)
-      .id('finality:summoning/grayling_butterfly')
+      .id('kubejs:altar/grayling_butterfly')
 
     event.recipes.summoningrituals.altar('lilwings:paper_wings')
       .input([
@@ -230,7 +245,7 @@ ServerEvents.recipes(event => {
           .spread(3, 0, 3)
       )
       .recipeTime(25)
-      .id('finality:summoning/painted_panther_butterfly')
+      .id('kubejs:altar/painted_panther_butterfly')
 
     event.recipes.summoningrituals.altar('lilwings:paper_wings')
       .input([
@@ -244,7 +259,7 @@ ServerEvents.recipes(event => {
           .spread(3, 0, 3)
       )
       .recipeTime(25)
-      .id('finality:summoning/red_applefly_butterfly')
+      .id('kubejs:altar/red_applefly_butterfly')
 
     event.recipes.summoningrituals.altar('lilwings:paper_wings')
       .input([
@@ -258,7 +273,7 @@ ServerEvents.recipes(event => {
           .spread(3, 0, 3)
       )
       .recipeTime(25)
-      .id('finality:summoning/shroom_skipper_butterfly')
+      .id('kubejs:altar/shroom_skipper_butterfly')
 
     event.recipes.summoningrituals.altar('lilwings:paper_wings')
       .input([
@@ -275,7 +290,7 @@ ServerEvents.recipes(event => {
           .spread(3, 0, 3)
       )
       .recipeTime(25)
-      .id('finality:summoning/swallow_tail_butterfly')
+      .id('kubejs:altar/swallow_tail_butterfly')
 
     event.recipes.summoningrituals.altar('lilwings:paper_wings')
       .input([
@@ -289,7 +304,7 @@ ServerEvents.recipes(event => {
           .spread(3, 0, 3)
       )
       .recipeTime(25)
-      .id('finality:summoning/swamp_hopper_butterfly')
+      .id('kubejs:altar/swamp_hopper_butterfly')
 
     event.recipes.summoningrituals.altar('lilwings:paper_wings')
       .input([
@@ -303,7 +318,7 @@ ServerEvents.recipes(event => {
           .spread(3, 0, 3)
       )
       .recipeTime(25)
-      .id('finality:summoning/white_fox_butterfly')
+      .id('kubejs:altar/white_fox_butterfly')
 
   }
 })
