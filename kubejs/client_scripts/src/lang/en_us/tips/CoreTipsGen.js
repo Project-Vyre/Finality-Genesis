@@ -211,6 +211,12 @@ finTip("tooltips", "Always read tooltips! I am not responsible for any damages t
 finTip("lapis_from_witches", "Witches now drop Lapis Lazuli in addition to previous item drops.")
 finTip("zinc_from_creepers", "Creepers now drop Zinc Nuggets in addition to previous item drops.")
 finTip("main_gameplay_tip", "Automation is everything! Just DO IT!")
+finTip("wither_skulls_from_bone_blocks", "You can haunt a Bone Block to convert it into a Skeleton Skull which can then be haunted into a Wither Skeleton Skull.")
+if (Platform.isLoaded('alexscaves')) {
+  finTip("cave_tablets", "Cave tablets are not renewable. Don't mess up when translating them!")
+  finTip("entry_adding_cave_book", "Right clicking with a Cave Codex adds entries to the Cave Compendium.")
+  finTip("cave_maps", "Combine a Cave Codex with a Map to find the nearest cave biome from Alex's Caves.")
+}
 if (Platform.isLoaded("apotheosis")) {
   finTip("spawners", "Spawners now drop Structure Void which can be used to recraft them. Use the Capturing enchantment to acquire Spawn Eggs.")
 }
