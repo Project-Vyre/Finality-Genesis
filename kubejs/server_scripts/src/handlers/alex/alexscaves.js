@@ -13,4 +13,20 @@ ServerEvents.recipes(event => {
     'alexscaves:polarity_armor_trim_smithing_template',
     'kubejs:duplicator'
   ]).keepHeldItem().id('kubejs:deploying/polarity_armor_trim_smithing_template')
+  let alexscaves_sherds = [
+    'dinosaur',
+    'footprint',
+    'guardian',
+    'hero'
+  ]
+  for (let i = 0; i < alexscaves_sherds.length; i++) {
+    let element = alexscaves_sherds[i];
+    event.recipes.create.deploying([
+      'alexscaves:' + element + '_pottery_sherd',
+      Item.of('alexscaves:' + element + '_pottery_sherd', 2).withChance(0.02)
+    ], [
+      'alexscaves:' + element + '_pottery_sherd',
+      'kubejs:duplicator'
+    ]).keepHeldItem().id('kubejs:alexscaves/deploying/' + element + '_pottery_sherd_duplication')
+  }
 })

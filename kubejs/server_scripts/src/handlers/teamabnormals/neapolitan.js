@@ -8,17 +8,31 @@
 // requires: kubejs_create
 
 ServerEvents.recipes(event => {
-
   event.recipes.minecraft.smoking(
     'neapolitan:dried_banana',
     'neapolitan:banana'
   ).cookingTime(100).xp(0.35).id('neapolitan:banana/dried_banana_from_smoking')
-  
   event.remove({ id: 'neapolitan:banana/primal_armor_trim_smithing_template' })
   event.recipes.create.deploying('2x neapolitan:primal_armor_trim_smithing_template', [
     'neapolitan:primal_armor_trim_smithing_template',
     'kubejs:duplicator'
   ]).keepHeldItem().id('finality:neapolitan/deploying/primal_armor_trim_smithing_template')
+  let neapolitan_sherds = [
+    'reflection',
+    'scream',
+    'snack',
+    'spider'
+  ]
+  for (let i = 0; i < neapolitan_sherds.length; i++) {
+    let element = neapolitan_sherds[i];
+    event.recipes.create.deploying([
+      'neapolitan:' + element + '_pottery_sherd',
+      Item.of('neapolitan:' + element + '_pottery_sherd', 2).withChance(0.02)
+    ], [
+      'neapolitan:' + element + '_pottery_sherd',
+      'kubejs:duplicator'
+    ]).keepHeldItem().id('kubejs:neapolitan/deploying/' + element + '_pottery_sherd_duplication')
+  }
   console.log('Neapolitan detected! Forcefully overriding recipe to use Create\'s Bar of Chocolate.')
   event.recipes.create.compacting(
     'create:bar_of_chocolate',
