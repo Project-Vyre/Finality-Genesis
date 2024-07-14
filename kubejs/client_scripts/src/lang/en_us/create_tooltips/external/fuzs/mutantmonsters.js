@@ -12,7 +12,7 @@ ClientEvents.lang('en_us', event => {
   event.addAll(
     'mutantmonsters',
     createTooltip('mutantmonsters:endersoul_hand')
-      .addSummary('Obtained from a defeated Mutant Enderman. Used for making _Chemical X_ or as a _weapon_.')
+      .addSummary('Obtained from a defeated Mutant Enderman. Used for making _Chemical X_ or can be utilized a _weapon_ itself.')
       .setPalette($Palette.PURPLE)
       .build()
   )
