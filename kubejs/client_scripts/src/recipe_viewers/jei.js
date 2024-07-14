@@ -337,7 +337,7 @@ JEIEvents.information(event => {
     event.addItem('endrem:rogue_eye', ['Usually found in Jungle Temples.'])
     event.addItem('endrem:cursed_eye', ['Usually found in Bastions.'])
     event.addItem('endrem:evil_eye', ['Usually acquired from a Master Cleric.'])
-    event.addItem('endrem:guardian_eye', ['Usually acquired from slaying Elder Guardians.'])
+    event.addItem('endrem:guardian_eye', ['Usually acquired from slaying Guardians.'])
     event.addItem('endrem:magical_eye', ['Acquired from slaying Evokers.'])
     event.addItem('endrem:wither_eye', ['Obviously only drops from the Wither.'])
     event.addItem('endrem:witch_eye', ['Requires a Witch Pupil to craft.'])
