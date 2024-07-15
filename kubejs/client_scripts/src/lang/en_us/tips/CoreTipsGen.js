@@ -295,6 +295,7 @@ createTip("blast_proof_vaults", "Create's Item Vaults are actually blast proof, 
 createTip("blaze_burner_smoking_catalyst", "Blaze Burners by default behave like a Smoking catalyst block for use with Encased Fans until fed fuel.")
 createTip("blaze_burner_blast_catalyst", "Blaze Burners when fed turn into a Blasting catalyst block for use with Encased Fans.")
 createTip("empty_blaze_burner_smoking_catalyst", "Lit Empty Blaze Burners can be used as a Smoking catalyst block for Encased Fans.")
+createTip("pasting_with_clipboards", "You can copy and paste configurations for Item Filters and Filter Slots with the clipboard.")
 /**
  * Create Addons
  */
