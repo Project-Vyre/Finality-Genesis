@@ -32,7 +32,8 @@ const vanillaSingularityProperties = {
   sea_lantern: { top: 0x529680, bottom: 0x48635B, name: 'Sea Lantern' },
   soul_sand: { top: 0x49372C, bottom: 0x352922, name: 'Soul Sand' },
   soul_soil: { top: 0x352922, bottom: 0x46EFF4, name: 'Soul Soil' },
-  tinted_glass: { top: 0x35283B, bottom: 0x272528, name: 'Tinted Glass' }
+  tinted_glass: { top: 0x35283B, bottom: 0x272528, name: 'Tinted Glass' },
+  tnt: { top: 0xD88F50, bottom: 0xB11527, name: 'TNT' }
 }
 let vanillaSingularities = [
   'amethyst',
@@ -59,7 +60,8 @@ let vanillaSingularities = [
   'sea_lantern',
   'soul_sand',
   'soul_soil',
-  'tinted_glass'
+  'tinted_glass',
+  'tnt'
 ]
 
 const concreteSingularityProperties = {
@@ -190,6 +192,97 @@ StartupEvents.registry('item', event => {
     .texture('layer1', 'kubejs:item/monochromatic_singularity_overlay')
     .rarity('epic')
     .tag('create:upright_on_belt')
+  // final singularity
+  event.create('kubejs:final_singularity_stage_nulla')
+    .texture('layer0', 'kubejs:item/incomplete_singularity')
+    .color(0, 0xD6CCFF)
+    .formattedDisplayName(
+      Component.join([
+        Component.of('|').color(0xD6CCFF).obfuscated(),
+        Component.of('Final Singularity').color(0xD6CCFF),
+        Component.of('|').color(0xD6CCFF).obfuscated(),
+        Component.of(' - ').white(),
+        Component.of('Stage: ').white(),
+        Component.of('N').lightPurple()
+      ])
+    )
+    .rarity('epic')
+    .fireResistant(true)
+    .tag('create:upright_on_belt')
+  event.create('kubejs:final_singularity_stage_one')
+    .texture('layer0', 'kubejs:item/singularity')
+    .texture('layer1', 'kubejs:item/shifting_singularity_overlay')
+    .color(0, 0x918AAD)
+    .color(1, 0xD6CCFF)
+    .formattedDisplayName(
+      Component.join([
+        Component.of('|').color(0xD6CCFF).obfuscated(),
+        Component.of('Final Singularity').color(0xD6CCFF),
+        Component.of('|').color(0xD6CCFF).obfuscated(),
+        Component.of(' - ').white(),
+        Component.of('Stage: ').white(),
+        Component.of('I').lightPurple()
+      ])
+    )
+    .rarity('epic')
+    .fireResistant(true)
+    .tag('create:upright_on_belt')
+  event.create('kubejs:final_singularity_stage_two')
+    .texture('layer0', 'kubejs:item/singularity')
+    .texture('layer1', 'kubejs:item/negative_singularity_overlay')
+    .color(0, 0x918AAD)
+    .color(1, 0xD6CCFF)
+    .formattedDisplayName(
+      Component.join([
+        Component.of('|').color(0xD6CCFF).obfuscated(),
+        Component.of('Final Singularity').color(0xD6CCFF),
+        Component.of('|').color(0xD6CCFF).obfuscated(),
+        Component.of(' - ').white(),
+        Component.of('Stage: ').white(),
+        Component.of('II').lightPurple()
+      ])
+    )
+    .rarity('epic')
+    .fireResistant(true)
+    .tag('create:upright_on_belt')
+  event.create('kubejs:final_singularity_stage_three')
+    .texture('layer0', 'kubejs:item/singularity')
+    .texture('layer1', 'kubejs:item/null_matter')
+    .texture('layer2', 'kubejs:item/null_matter_overlay')
+    .color(0, 0x918AAD)
+    .color(1, 0xD6CCFF)
+    .formattedDisplayName(
+      Component.join([
+        Component.of('|').color(0xD6CCFF).obfuscated(),
+        Component.of('Final Singularity').color(0xD6CCFF),
+        Component.of('|').color(0xD6CCFF).obfuscated(),
+        Component.of(' - ').white(),
+        Component.of('Stage: ').white(),
+        Component.of('III').lightPurple()
+      ])
+    )
+    .rarity('epic')
+    .fireResistant(true)
+    .tag('create:upright_on_belt')
+  event.create('kubejs:final_singularity_stage_four')
+    .texture('layer0', 'kubejs:item/null_matter')
+    .texture('layer1', 'kubejs:item/shifting_singularity_overlay')
+    .texture('layer2', 'kubejs:item/null_matter_overlay')
+    .color(0, 0x918AAD)
+    .color(1, 0xD6CCFF)
+    .formattedDisplayName(
+      Component.join([
+        Component.of('|').color(0xD6CCFF).obfuscated(),
+        Component.of('Final Singularity').color(0xD6CCFF),
+        Component.of('|').color(0xD6CCFF).obfuscated(),
+        Component.of(' - ').white(),
+        Component.of('Stage: ').white(),
+        Component.of('IV').lightPurple()
+      ])
+    )
+    .rarity('epic')
+    .fireResistant(true)
+    .tag('create:upright_on_belt')
   event.create('kubejs:final_singularity')
     .texture('layer0', 'kubejs:item/null_matter')
     .texture('layer1', 'kubejs:item/singularity_overlay')
@@ -197,10 +290,14 @@ StartupEvents.registry('item', event => {
     .color(0, 0x918AAD)
     .color(1, 0xD6CCFF)
     .formattedDisplayName(
-      Component.string('Final Singularity')
-        .color(0xD6CCFF)
+      Component.join([
+        Component.of('|').obfuscated(),
+        Component.of('True Final Singularity'),
+        Component.of('|').obfuscated()
+      ]).color(0xD6CCFF)
     )
     .rarity('epic')
+    .fireResistant(true)
     .tag('create:upright_on_belt')
   if (Platform.isLoaded('create_bic_bit')) {
     event.create('kubejs:speculaas_singularity').tag('create:upright_on_belt')
