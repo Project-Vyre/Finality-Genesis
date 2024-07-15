@@ -134,6 +134,17 @@ ClientEvents.lang('en_us', event => {
   )
   event.addAll(
     'kubejs',
+    createTooltip('ars_nouveau:ritual_brazier')
+      .addSummary('Requires the use of any ritual item to ignite.')
+      .addBehaviour([
+        'On R-Click when ignited',
+        '_Starts_ the ritual. You _must_ drop any ingredients beforehand onto the Ritual Brazier itself.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
     createTooltip('ars_nouveau:magebloom')
       .addSummary('It feels soft to the touch.')
       .addBehaviour([
