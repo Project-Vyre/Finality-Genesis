@@ -18,8 +18,20 @@ ServerEvents.recipes(event => {
     G: 'minecraft:gunpowder',
     S: '#minecraft:sand'
   }).id('kubejs:tnt_recipe_restore_if_destroy_present')
+  event.recipes.create.mechanical_crafting('16x minecraft:tnt', [
+    ' PSP ',
+    'PTETP',
+    'PTETP',
+    'PTTTP',
+    ' PPP '
+  ], {
+    P: '#destroy:plastic',
+    S: 'minecraft:string',
+    E: '#destroy:explosive/primary',
+    T: 'destroy:tnt_tablet'
+  }).id('destroy:mechanical_crafting/tnt_block')
   event.remove([
-    { id: 'destroy:compat/createaddition/crafting/diamond_grid_sandpaper' },
+    { output: 'createaddition:diamond_grit_sandpaper' },
     { id: 'destroy:compat/farmersdelight/cutting/onion' },
     {
       mod: 'destroy',
