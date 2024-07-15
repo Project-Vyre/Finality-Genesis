@@ -203,6 +203,9 @@ StartupEvents.registry('item', event => {
   }
   transitionalItem('incomplete_cpu_shape', '§aIncomplete CPU Substrate Shape', 'shapes/incomplete_cpu')
   transitionalItem('incomplete_cpu_substrate_shape', '§aIncomplete CPU Substrate Shape', 'shapes/incomplete_cpu_substrate')
+  event.create('kubejs:incomplete_star_of_light_shape', 'create:sequenced_assembly')
+    .formattedDisplayName(Component.string('Incomplete Star of Light Shape').yellow())
+    .texture('kubejs:item/incomplete_star_of_light_shape')
   event.create('kubejs:incomplete_copper_coin', 'create:sequenced_assembly')
     .texture('kubejs:item/copper_coin')
   event.create('kubejs:incomplete_iron_coin', 'create:sequenced_assembly')
