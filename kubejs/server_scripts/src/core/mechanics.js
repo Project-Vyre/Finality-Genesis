@@ -6,6 +6,8 @@
 
 // ignored: false
 
+let explosion_counter = 0
+
 ItemEvents.firstLeftClicked(event => {
   const { item, level, player, entity } = event
   if (player.shiftKeyDown && item.getId() == 'create:mysterious_cuckoo_clock') {
@@ -76,8 +78,20 @@ ItemEvents.firstRightClicked(event => {
       }
     })
   }
+  if (item.getId() == 'kubejs:crimson_moons_semblance') {
+    let arrow = event.entity.level.getBlock(event.entity.x, event.entity.y + 0.1, event.entity.z).createEntity('minecraft:fireball')
+    let speed = 0.1
+    let motionX = event.entity.lookAngle.x() * speed;
+    let motionY = event.entity.lookAngle.y() * speed;
+    let motionZ = event.entity.lookAngle.z() * speed;
+    // Create a Vec3 for the motion
+    let motionVec3 = new Vec3d(motionX, motionY, motionZ)
+    arrow.persistentData.CrimsonFireball = true
+    arrow.setDeltaMovement(motionVec3)
+    arrow.spawn()
+  }
 })
-let explosion_counter = 0
+
 ItemEvents.rightClicked(event => {
   const { item, level, player, entity } = event
   let lightningBolt = entity.block.createEntity('minecraft:lightning_bolt')
@@ -114,6 +128,19 @@ ItemEvents.rightClicked(event => {
     })
   }
 })
+
+LevelEvents.tick(event => {
+  // Run tick method once a second
+  if (event.server.tickCount % 20 != 0) return
+  event.level.getEntities().forEach(entity => {
+    if (entity.type != 'minecraft:fireball') return
+    if (!entity.persistentData.CrimsonFireball) return
+    if (entity.age > 200) {
+      entity.remove('discarded')
+    }
+  })
+})
+
 /*
 ItemEvents.rightClicked('minecraft:powder_snow_bucket', event => {
   let explosion = event.entity.block.createExplosion().explode()
