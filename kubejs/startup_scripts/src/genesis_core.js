@@ -154,6 +154,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .rarity('epic')
     .maxStackSize(1)
     .fireResistant(true)
+  // IRIDIUM
   event.create('kubejs:raw_iridium')
     .texture('kubejs:item/raw_iridium')
     .rarity('rare')
@@ -179,6 +180,12 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .texture('kubejs:item/iridium_rod')
     .fireResistant(true)
     .rarity('rare')
+  event.create('kubejs:iridium_upgrade_smithing_template', 'smithing_template')
+    .appliesTo('Netherite Equipment')
+    .ingredients('Ingots & Miscellaneous')
+    .rarity('rare')
+    .texture('kubejs:item/iridium_upgrade_smithing_template')
+    .fireResistant(true)
   event.create('kubejs:iridium_pickaxe', 'pickaxe').tier('iridium_tool')
     .rarity('rare')
     .texture('kubejs:item/iridium_pickaxe')
@@ -495,6 +502,84 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .maxStackSize(64)
     .fireResistant(true)
     .glow(true)
+  event.create('kubejs:left_parentheses')
+    .rarity('epic')
+    .texture('kubejs:item/special_characters/left_parentheses')
+    .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
+  event.create('kubejs:right_parentheses')
+    .rarity('epic')
+    .texture('kubejs:item/special_characters/right_parentheses')
+    .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
+  event.create('kubejs:left_bracket')
+    .rarity('epic')
+    .texture('kubejs:item/special_characters/left_bracket')
+    .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
+  event.create('kubejs:right_bracket')
+    .rarity('epic')
+    .texture('kubejs:item/special_characters/right_bracket')
+    .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
+  event.create('kubejs:left_brace')
+    .rarity('epic')
+    .texture('kubejs:item/special_characters/left_brace')
+    .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
+  event.create('kubejs:right_brace')
+    .rarity('epic')
+    .texture('kubejs:item/special_characters/right_brace')
+    .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
+  event.create('kubejs:left_chevron')
+    .rarity('epic')
+    .texture('kubejs:item/special_characters/left_chevron')
+    .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
+  event.create('kubejs:right_chevron')
+    .rarity('epic')
+    .texture('kubejs:item/special_characters/right_chevron')
+    .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
+  event.create('kubejs:exclamation_mark')
+    .rarity('epic')
+    .texture('kubejs:item/special_characters/exclamation_mark')
+    .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
+  event.create('kubejs:full_point')
+    .rarity('epic')
+    .texture('kubejs:item/special_characters/full_point')
+    .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
+  event.create('kubejs:equality_sign')
+    .rarity('epic')
+    .texture('kubejs:item/special_characters/equality_sign')
+    .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
+  event.create('kubejs:plus_sign')
+    .rarity('epic')
+    .texture('kubejs:item/special_characters/plus_sign')
+    .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
+  event.create('kubejs:minus_sign')
+    .rarity('epic')
+    .texture('kubejs:item/special_characters/minus_sign')
+    .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
   for (let [item, name] of Object.entries(global.RGBWCMY)) {
     RGBWCMYK_OBJECTS(item, name)
   }
@@ -544,7 +629,7 @@ ItemEvents.toolTierRegistry(event => {
   event.add('balemoon_bloodfire', tier => {
     tier.uses = -1
     tier.speed = 128
-    tier.attackDamageBonus = 124
+    tier.attackDamageBonus = 252
     tier.level = 5
     tier.enchantmentValue = 30
   })
@@ -696,8 +781,12 @@ StartupEvents.registry('block', event => {
     .requiresTool(true)
     .tagBlock('minecraft:mineable/pickaxe')
     .tagBlock('forge:needs_netherite_tool')
+    .tagBlock('forge:ores')
+    .tagBlock('forge:ores_in_ground/deepslate')
     .item(ctx => {
       ctx.rarity('rare')
+      ctx.tag('forge:ores')
+      ctx.tag('forge:ores_in_ground/deepslate')
     })
   event.create('kubejs:raw_iridium_block')
     .soundType('stone')
@@ -706,9 +795,11 @@ StartupEvents.registry('block', event => {
     .requiresTool(true)
     .tagBlock('minecraft:mineable/pickaxe')
     .tagBlock('forge:needs_netherite_tool')
+    .tagBlock('forge:storage_blocks')
     .item(ctx => {
       ctx.rarity('rare')
       ctx.fireResistant(true)
+      ctx.tag('forge:storage_blocks')
     })
   event.create('kubejs:iridium_block')
     .soundType('netherite_block')
@@ -719,10 +810,12 @@ StartupEvents.registry('block', event => {
     .tagBlock('minecraft:dragon_immune')
     .tagBlock('minecraft:mineable/pickaxe')
     .tagBlock('forge:needs_netherite_tool')
+    .tagBlock('forge:storage_blocks')
     .item(ctx => {
       ctx.rarity('rare')
       ctx.fireResistant(true)
       ctx.tag('kubejs:iridium_blocks')
+      ctx.tag('forge:storage_blocks')
     })
   event.create('kubejs:iridium_block_connecting')
     .textureAll('kubejs:block/iridium_block_connecting')
@@ -843,9 +936,11 @@ StartupEvents.registry('block', event => {
     .tagBlock('minecraft:dragon_immune')
     .tagBlock('minecraft:mineable/pickaxe')
     .tagBlock('forge:needs_netherite_tool')
+    .tagBlock('forge:storage_blocks')
     .item(ctx => {
       ctx.rarity('epic')
       ctx.fireResistant(true)
+      ctx.tag('forge:storage_blocks')
     })
   event.create('kubejs:high_entropy_alloy_block_connecting')
     .textureAll('kubejs:block/high_entropy_alloy_block_connecting')
@@ -878,8 +973,9 @@ StartupEvents.registry('block', event => {
       .blockEntity(entityInfo => {
         entityInfo.inventory(9, 1)
         entityInfo.rightClickOpensInventory()
-        entityInfo.serverTick(1200, 0, entity => {
-          entity.inventory.insertItem('kubejs:high_entropy_alloy_block', false)
+        entityInfo.serverTick(240, 0, entity => {
+          entity.inventory.insertItem('kubejs:zero', false)
+          entity.inventory.insertItem('kubejs:one', false)
         })
         entityInfo.attachCapability(
           CapabilityBuilder.ITEM.blockEntity()
@@ -936,7 +1032,12 @@ StartupEvents.registry('fluid', event => {
    * @param {HEX} color 
    */
   let MOLTEN_METAL = (fluidId, displayName, color) => {
-    event.create('kubejs:' + fluidId).displayName(displayName).thickTexture(color).bucketColor(color).luminosity(15)
+    event.create('kubejs:' + fluidId)
+      .displayName(displayName)
+      .thickTexture(color)
+      .bucketColor(color)
+      .luminosity(15)
+      .tag('minecraft:lava')
   }
   MOLTEN_METAL('molten_iron', '§cMolten Iron', 0xFF8423)
   MOLTEN_METAL('molten_gold', '§eMolten Gold', 0xFDF55F)
@@ -994,6 +1095,10 @@ StartupEvents.registry('fluid', event => {
 
 let blacklist = {
   // ae2: 'This mod does not belong in this variant of the modpack. Make your own storage systems.',
+  canary: 'Not supported.',
+  saturn: 'Not supported.',
+  pluto: 'Not supported.',
+  smoothboot: 'Not supported',
   createcasing: 'Not supported.',
   createdieselgenerators: 'Not supported.',
   create_confectionery: 'MCreator mod.',
@@ -1026,14 +1131,19 @@ StartupEvents.postInit(event => {
       console.error(`This mod is not supported: ${mod} - Reason: ${reason}`)
     }
   }
-  if (!Platform.isLoaded('embeddium') && Platform.isLoaded('rubidium')) {
-    console.error('This mod is not supported: rubidium - Reason: Embeddium has replaced Rubidium. Stop using Rubidium.')
-  }
-  if (!Platform.isLoaded('embeddium') && Platform.isLoaded('rubidium') && Platform.isLoaded('textanimator')) {
-    console.error('This mod is not supported: rubidium - Reason: Embeddium has replaced Rubidium. <shake>Stop using Rubidium.</shake>')
+  if (Platform.isClientEnvironment()) {
+    if (!Platform.isLoaded('embeddium') && Platform.isLoaded('rubidium')) {
+      console.error('This mod is not supported: rubidium - Reason: Embeddium has replaced Rubidium. Stop using Rubidium.')
+    }
+    if (Platform.isLoaded('oculus')) {
+      console.error('Oculus / Iris Shaders are incompatible with a few of the mods in this modpack. Please remove them.')
+    }
+    if (!Platform.isLoaded('fancymenu')) {
+      console.error('It appears that you have removed FancyMenu. Reinstall it to get information for the latest updates.')
+    }
   }
   if (!Platform.isLoaded('jei') && Platform.isLoaded('emi')) {
-    console.error('For a smoother experience, keep JEI installed and remove EMI.')
+    console.error('For a better experience, keep both JEI and EMI installed to let EMI read custom information for JEI.')
   }
   if (!Platform.isLoaded('rei') && Platform.isLoaded('emi')) {
     console.error('For a smoother experience, keep REI installed and remove EMI.')
