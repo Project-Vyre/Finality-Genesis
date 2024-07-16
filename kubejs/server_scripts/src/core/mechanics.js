@@ -91,6 +91,19 @@ ItemEvents.firstRightClicked(event => {
     end_ball.setDeltaMovement(motionVec3)
     end_ball.spawn()
   }
+  if (item.getId() == 'kubejs:final_pickaxe') {
+    let tnt = event.entity.level.getBlock(event.entity.x, event.entity.y + 0.5, event.entity.z).createEntity('minecraft:tnt')
+    let speed = 3.0
+    let motionX = event.entity.lookAngle.x() * speed;
+    let motionY = event.entity.lookAngle.y() * speed;
+    let motionZ = event.entity.lookAngle.z() * speed;
+
+    let motionVec3 = new Vec3d(motionX, motionY, motionZ)
+    //tnt.persistentData.FinalPickaxeProjectile = true
+    tnt.setOwner(player)
+    tnt.setDeltaMovement(motionVec3)
+    tnt.spawn()
+  }
   if (item.getId() == 'kubejs:crimson_moons_semblance') {
     let fire_ball = event.entity.level.getBlock(event.entity.x, event.entity.y + 0.5, event.entity.z).createEntity('minecraft:fireball')
     let speed = 5.0
