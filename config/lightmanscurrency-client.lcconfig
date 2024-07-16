@@ -29,10 +29,10 @@
 	
 	#The corner of the screen that the overlay should be drawn on.
 	#Options: TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT
-	displayCorner=BOTTOM_LEFT
+	displayCorner=BOTTOM_RIGHT
 	
 	#The position offset from the defined corner.
-	displayOffset=5,-5
+	displayOffset=-5,-5
 	
 	#Whether the wallets contents should be displayed as a coin item, or as value text.
 	#Options: ITEMS_WIDE, ITEMS_NARROW, TEXT
