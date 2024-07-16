@@ -79,28 +79,30 @@ ItemEvents.firstRightClicked(event => {
     })
   }
   if (item.getId() == 'kubejs:final_scythe') {
-    let end_ball = event.entity.level.getBlock(event.entity.x, event.entity.y + 0.1, event.entity.z).createEntity('minecraft:dragon_fireball')
-    let speed = 1.0
+    let end_ball = event.entity.level.getBlock(event.entity.x, event.entity.y + 0.5, event.entity.z).createEntity('minecraft:dragon_fireball')
+    let speed = 3.0
     let motionX = event.entity.lookAngle.x() * speed;
     let motionY = event.entity.lookAngle.y() * speed;
     let motionZ = event.entity.lookAngle.z() * speed;
 
     let motionVec3 = new Vec3d(motionX, motionY, motionZ)
     end_ball.persistentData.FinalScytheProjectile = true
+    end_ball.setOwner(player)
     end_ball.setDeltaMovement(motionVec3)
     end_ball.spawn()
   }
   if (item.getId() == 'kubejs:crimson_moons_semblance') {
-    let arrow = event.entity.level.getBlock(event.entity.x, event.entity.y + 0.1, event.entity.z).createEntity('minecraft:fireball')
-    let speed = 0.1
+    let fire_ball = event.entity.level.getBlock(event.entity.x, event.entity.y + 0.5, event.entity.z).createEntity('minecraft:fireball')
+    let speed = 5.0
     let motionX = event.entity.lookAngle.x() * speed;
     let motionY = event.entity.lookAngle.y() * speed;
     let motionZ = event.entity.lookAngle.z() * speed;
     // Create a Vec3 for the motion
     let motionVec3 = new Vec3d(motionX, motionY, motionZ)
-    arrow.persistentData.CrimsonFireball = true
-    arrow.setDeltaMovement(motionVec3)
-    arrow.spawn()
+    fire_ball.persistentData.CrimsonFireball = true
+    fire_ball.setOwner(player)
+    fire_ball.setDeltaMovement(motionVec3)
+    fire_ball.spawn()
   }
 })
 

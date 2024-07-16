@@ -7,8 +7,6 @@
 // requires: entityjs
 // ignored: false
 
-// Requires EntityJS fix...
-
 EntityJSEvents.modifyEntity(event => {
   event.modify('minecraft:fireball', modifyBuilder => {
     modifyBuilder.tick(entity => global.crimson_moon(entity))
