@@ -42,7 +42,7 @@ ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:0
 renderClouds:"false"
-resourcePacks:["vanilla","mod_resources","create:legacy_copper","Moonlight Mods Dynamic Assets","create:destroy_create_patches","builtin/aether_tips","file/Finality Genesis - 1.20.x"]
+resourcePacks:["vanilla","mod_resources","Moonlight Mods Dynamic Assets","create:destroy_create_patches","builtin/aether_tips","file/Finality Genesis - Block Outline"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us
@@ -75,7 +75,7 @@ glDebugVerbosity:1
 skipMultiplayerWarning:false
 skipRealms32bitWarning:false
 hideMatchedNames:true
-joinedFirstServer:false
+joinedFirstServer:true
 hideBundleTutorial:false
 syncChunkWrites:true
 showAutosaveIndicator:true
@@ -84,8 +84,8 @@ onlyShowSecureChat:false
 panoramaScrollSpeed:1.0
 telemetryOptInExtra:false
 onboardAccessibility:false
-soundCategory_master:0.5066225165562914
-soundCategory_music:1.0
+soundCategory_master:0.5
+soundCategory_music:0.25
 soundCategory_record:1.0
 soundCategory_weather:1.0
 soundCategory_block:1.0
