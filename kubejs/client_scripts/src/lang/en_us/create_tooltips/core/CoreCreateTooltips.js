@@ -644,15 +644,6 @@ ClientEvents.lang('en_us', event => {
         .build()
     )
   }
-  if (Platform.isLoaded('fusion')) {
-    event.addAll(
-      'kubejs',
-      createTooltip('kubejs:high_entropy_alloy_block_connecting')
-        .addSummary('The _connecting_ variant.')
-        .setPalette($Palette.PURPLE)
-        .build()
-    )
-  }
   if (Platform.isLoaded('summoningrituals')) {
     event.addAll(
       'summoningrituals',
