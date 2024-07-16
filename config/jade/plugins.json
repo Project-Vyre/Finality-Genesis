@@ -91,6 +91,9 @@
     "lightroom": true,
     "photograph_frame": true
   },
+  "pipez": {
+    "pipe": true
+  },
   "reliquary": {
     "pedestal": true,
     "altar": true,
