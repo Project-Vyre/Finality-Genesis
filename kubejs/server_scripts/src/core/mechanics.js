@@ -78,6 +78,18 @@ ItemEvents.firstRightClicked(event => {
       }
     })
   }
+  if (item.getId() == 'kubejs:final_scythe') {
+    let end_ball = event.entity.level.getBlock(event.entity.x, event.entity.y + 0.1, event.entity.z).createEntity('minecraft:dragon_fireball')
+    let speed = 1.0
+    let motionX = event.entity.lookAngle.x() * speed;
+    let motionY = event.entity.lookAngle.y() * speed;
+    let motionZ = event.entity.lookAngle.z() * speed;
+
+    let motionVec3 = new Vec3d(motionX, motionY, motionZ)
+    end_ball.persistentData.FinalScytheProjectile = true
+    end_ball.setDeltaMovement(motionVec3)
+    end_ball.spawn()
+  }
   if (item.getId() == 'kubejs:crimson_moons_semblance') {
     let arrow = event.entity.level.getBlock(event.entity.x, event.entity.y + 0.1, event.entity.z).createEntity('minecraft:fireball')
     let speed = 0.1
@@ -133,11 +145,19 @@ LevelEvents.tick(event => {
   // Run tick method once a second
   if (event.server.tickCount % 20 != 0) return
   event.level.getEntities().forEach(entity => {
-    if (entity.type != 'minecraft:fireball') return
-    if (!entity.persistentData.CrimsonFireball) return
+
+    if (entity.type != 'minecraft:fireball') {
+      return
+    } else if (!entity.persistentData.CrimsonFireball) { return }
+
+    if (entity.type != 'minecraft:dragon_fireball') {
+      return
+    } else if (!entity.persistentData.FinalScytheProjectile) { return }
+
     if (entity.age > 200) {
       entity.remove('discarded')
     }
+
   })
 })
 
