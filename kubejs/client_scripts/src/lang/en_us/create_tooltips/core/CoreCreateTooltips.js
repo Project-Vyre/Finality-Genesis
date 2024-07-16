@@ -77,6 +77,7 @@ let YELLOW_REGISTRY = [
 ]
 let RED_REGISTRY = [
   'kubejs:removed_item',
+  'kubejs:crimson_moons_semblance',
   'minecraft:nether_star',
   'minecraft:netherrack'
 ]
@@ -388,6 +389,10 @@ ClientEvents.lang('en_us', event => {
     "item.kubejs.removed_item.tooltip.behaviour1": "Output item _removed_.",
     "item.kubejs.crystal_lance.tooltip": "CRYSTAL LANCE",
     "item.kubejs.crystal_lance.tooltip.summary": "Translates into _Crystal Spear_. Can be dual wielded.",
+    "item.kubejs.crimson_moons_semblance.tooltip": "CRIMSON MOONS SEMBLANCE",
+    "item.kubejs.crimson_moons_semblance.tooltip.summary": "It feels _hot_ to the touch.",
+    "item.kubejs.crimson_moons_semblance.tooltip.condition1": "On R-Click",
+    "item.kubejs.crimson_moons_semblance.tooltip.behaviour1": "Summons a _Fireball_ that can be hit to send towards enemies.",
     // Entropy Related
     "block.kubejs.command_block.tooltip": "COMMAND BLOCK",
     "block.kubejs.command_block.tooltip.summary": "Not actually a true command block, but it can still do _certain_ things.",
@@ -419,8 +424,10 @@ ClientEvents.lang('en_us', event => {
     "item.kubejs.final_sword.tooltip.behaviour4": "Strangely, you remember wielding it in a different universe where it went by the name _Gran Faust_ instead.",
     "item.kubejs.final_scythe.tooltip": "FINAL SCYTHE",
     "item.kubejs.final_scythe.tooltip.summary": "Sweeping away life with ease.",
-    "item.kubejs.final_scythe.tooltip.condition1": "Caution!",
-    "item.kubejs.final_scythe.tooltip.behaviour1": "Don't _accidentally_ hit your friends! Also _not usable_ for argricultural purposes.",
+    "item.kubejs.final_scythe.tooltip.condition1": "On R-Click",
+    "item.kubejs.final_scythe.tooltip.behaviour1": "Summons a _Dragon Fireball_ in the direction you are looking at.",
+    "item.kubejs.final_scythe.tooltip.condition2": "Caution!",
+    "item.kubejs.final_scythe.tooltip.behaviour2": "Don't _accidentally_ hit your friends! Also _not usable_ for argricultural purposes.",
     "item.kubejs.final_katana.tooltip": "FINAL KATANA",
     "item.kubejs.final_katana.tooltip.summary": "Its name roughly translates into _Speed Shading_. Fast and deadly to the point your enemies can't see you attack.",
     "item.kubejs.final_katana.tooltip.condition1": "Caution!",
