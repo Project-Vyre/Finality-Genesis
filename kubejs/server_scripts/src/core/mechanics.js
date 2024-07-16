@@ -141,6 +141,7 @@ ItemEvents.rightClicked(event => {
   }
 })
 
+/*
 LevelEvents.tick(event => {
   // Run tick method once a second
   if (event.server.tickCount % 20 != 0) return
@@ -160,6 +161,7 @@ LevelEvents.tick(event => {
 
   })
 })
+*/
 
 /*
 ItemEvents.rightClicked('minecraft:powder_snow_bucket', event => {
