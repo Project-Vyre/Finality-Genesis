@@ -15,7 +15,7 @@
   ],
   "entity": "irons_spellbooks:citadel_keeper",
   "weight": 0,
-  "quality": 2,
+  "quality": 0,
   "size": {
     "width": 1,
     "height": 3

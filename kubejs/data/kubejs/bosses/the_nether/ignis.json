@@ -15,7 +15,7 @@
   ],
   "entity": "cataclysm:ignis",
   "weight": 0,
-  "quality": 4,
+  "quality": 0,
   "size": {
     "width": 2,
     "height": 3

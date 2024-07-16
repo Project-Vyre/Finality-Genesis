@@ -15,7 +15,7 @@
   ],
   "entity": "cataclysm:the_harbinger",
   "weight": 0,
-  "quality": 4,
+  "quality": 0,
   "size": {
     "width": 1,
     "height": 2

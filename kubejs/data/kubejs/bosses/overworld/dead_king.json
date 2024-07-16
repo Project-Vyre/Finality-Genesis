@@ -15,7 +15,7 @@
   ],
   "entity": "irons_spellbooks:dead_king",
   "weight": 0,
-  "quality": 3,
+  "quality": 0,
   "size": {
     "width": 1,
     "height": 3

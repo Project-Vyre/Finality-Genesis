@@ -1,7 +1,7 @@
 {
   "entity": "minecraft:wither",
   "weight": 0,
-  "quality": 3,
+  "quality": 0,
   "size": {
     "width": 3,
     "height": 3
