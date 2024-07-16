@@ -127,6 +127,14 @@
       }
     ]
   },
+  "pulcinella_battle_theme": {
+    "sounds": [
+      {
+        "name": "kubejs:pulcinella_battle_theme",
+        "stream": true
+      }
+    ]
+  },
   "sandrone_battle_theme": {
     "sounds": [
       {

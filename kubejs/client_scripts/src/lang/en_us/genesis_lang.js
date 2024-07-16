@@ -48,6 +48,24 @@ let LETTERS = {
   y: 'Y',
   z: 'Z'
 }
+let SPECIAL_CHARACTERS = {
+  octothorpe: 'Hashtag',
+  slash: '/ (Slash)',
+  at_sign: '@ (At) Sign',
+  left_parentheses: '(',
+  right_parentheses: ')',
+  left_bracket: '[',
+  right_bracket: ']',
+  left_brace: '{',
+  right_brace: '}',
+  left_chevron: '<',
+  right_chevron: '>',
+  exclamation_mark: '!',
+  full_point: '.',
+  equality_sign: '=',
+  plus_sign: '+',
+  minus_sign: '-'
+}
 
 let CMD = {
   command_block: 'Command Block',
@@ -159,6 +177,13 @@ ClientEvents.lang('en_us', event => {
         'Number ' + name
       )
     }
+    for (let [special, name] of Object.entries(SPECIAL_CHARACTERS)) {
+      event.add(
+        'kubejs',
+        'item.kubejs.' + special,
+        name
+      )
+    }
     event.add(
       'kubejs',
       'item.kubejs.octothorpe',
@@ -209,9 +234,6 @@ ClientEvents.lang('en_us', event => {
       "item.kubejs.errored_result": "§4<shake>Errored Result</shake>",
       "item.kubejs.removed_item": "§4<shake>Removed Item</shake>",
       "item.kubejs.qubit": "<rainb>Qubit</rainb>",
-      "item.kubejs.octothorpe": "<rainb>Hashtag</rainb>",
-      "item.kubejs.slash": "<rainb>Slash</rainb>",
-      "item.kubejs.at_sign": "<rainb>At Sign</rainb>",
       "block.kubejs.condensed_universal_entropy": "<rainb>Condensed Universal Entropy</rainb>",
       "fluid.kubejs.condensed_universal_entropy": "<rainb>Condensed Universal Entropy</rainb>",
       "item.kubejs.condensed_universal_entropy_bucket": "<rainb>Condensed Universal Entropy Bucket</rainb>",
@@ -281,6 +303,13 @@ ClientEvents.lang('en_us', event => {
         'kubejs',
         'item.kubejs.' + number,
         '<rainb>Number ' + name + '</rainb>'
+      )
+    }
+    for (let [special, name] of Object.entries(SPECIAL_CHARACTERS)) {
+      event.add(
+        'kubejs',
+        'item.kubejs.' + special,
+        '<rainb>' + name + '</rainb>'
       )
     }
     if (Platform.isLoaded('paxeljs')) {
@@ -360,6 +389,7 @@ ClientEvents.lang('en_us', event => {
     'open_up': 'Cjbeards - Open Up',
     'open_up_inst': 'Cjbeards - Open Up (Instrumental)',
     'pantalone_battle_theme': 'Farabi Hasan Music - Pantalone Double Phase Battle Theme (Fan-Made) | Genshin Impact',
+    'pulcinella_battle_theme': 'Farabi Hasan Music - Pulcinella Double Phase Boss Theme (Fan-Made) | Genshin Impact',
     'sandrone_battle_theme': 'Farabi Hasan Music - Sandrone Marionette Double Phase Battle Theme (Fan-Made) | Genshin Impact',
     'silent_night': 'Cjbeards - Silent Night',
     'worst_nightmare': 'Cjbeards - Worst Nightmare',

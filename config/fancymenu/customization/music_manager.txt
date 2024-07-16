@@ -3,13 +3,13 @@ type = fancymenu_layout
 layout-meta {
   identifier = %fancymenu:universal_layout%
   render_custom_elements_behind_vanilla = true
-  last_edited_time = 1718443725040
+  last_edited_time = 1721166680446
   is_enabled = true
   randommode = false
   randomgroup = 1
   randomonlyfirsttime = false
   layout_index = 0
-  [loading_requirement_container_meta:2ad3f714-7101-4d2c-9d64-e8a69898058a-1718621988039] = [groups:][instances:40cb319c-ff96-4fed-8bc1-109facfd5aaf-1718108199603;]
+  [loading_requirement_container_meta:e78b6585-8deb-4b36-851e-a44c349622dc-1721166650795] = [groups:][instances:40cb319c-ff96-4fed-8bc1-109facfd5aaf-1718108199603;]
   [loading_requirement:fancymenu_loading_requirement_is_world_loaded][requirement_mode:if_not][req_id:40cb319c-ff96-4fed-8bc1-109facfd5aaf-1718108199603] = 
 }
 
@@ -41,6 +41,7 @@ element {
   audio_instance_10 = [source:local]/config/fancymenu/assets/menu_music/farabi_hasan_music_columbina_battle_phase_1and2.ogg
   audio_instance_11 = [source:local]/config/fancymenu/assets/menu_music/cjbeards_black_white_red.ogg
   audio_instance_12 = [source:local]/config/fancymenu/assets/menu_music/cjbeards_worst_nightmare.ogg
+  audio_instance_13 = [source:local]/config/fancymenu/assets/menu_music/farabi_hasan_music_pulcinella_phase_2.ogg
   play_mode = shuffle
   looping = true
   volume = 1.0
