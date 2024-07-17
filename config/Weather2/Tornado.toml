@@ -26,7 +26,7 @@
 	#Treat block grab list as a blacklist instead of whitelist
 	Storm_Tornado_GrabListBlacklistMode = false
 	#Enable Storm_Tornado_GrabCond_List to use, add registered block names or block tags to list, for tags, indicate with #, use commas to separate values, if namespace missing, 'minecraft:' is automatically used
-	Storm_Tornado_GrabList = "#flowers, #cave_vines, #saplings, #leaves, #small_flowers, #tall_flowers, #flowers, #fire, #replaceable_plants, #wall_post_override"
+	Storm_Tornado_GrabList = "#leaves, #fire, #wall_post_override"
 	#Max amount of flying entity blocks allowed active, if it goes over this, it stops turning destroyed blocks into entities
 	#Range: > -2147483648
 	Storm_Tornado_maxFlyingEntityBlocks = 200
