@@ -54,10 +54,6 @@ ServerEvents.recipes(event => {
     Fluid.of('create:chocolate'),
     Fluid.of('minecraft:lava')
   ]).requiredBonks(1).withCatalyst('kubejs:repeating_command_block').id('finality:repeating_command_block/scoria_compat')
-  event.recipes.create_mechanical_extruder.extruding(Item.of('kubejs:raw_iridium'), [
-    Fluid.of('kubejs:condensed_universal_entropy'),
-    Item.of('kubejs:deepslate_iridium_ore')
-  ]).requiredBonks(1).withCatalyst('minecraft:crying_obsidian').id('finality:extruding/raw_iridium')
   if (Platform.isLoaded('malum')) {
     event.recipes.create_mechanical_extruder.extruding(Item.of('malum:cthonic_gold').withChance(0.12), [
       Item.of('malum:twisted_rock'),
