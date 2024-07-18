@@ -102,6 +102,14 @@ ServerEvents.recipes(event => {
       E: '#forge:eggs'
     }).id('kubejs:productivebees/inactive_dragon_egg')
   }
+  if (Platform.isLoaded('woodworks')) {
+    for (let i = 0; i < WOOD_TYPES.length; i++) {
+      let element = WOOD_TYPES[i];
+      event.recipes.minecraft.crafting_shapeless('woodworks:' + element + '_chest', [
+        'quark:' + element + '_chest'
+      ]).id('kubejs:' + element + 'quark_chest_to_' + element + '_woodworks_chest')
+    }
+  }
 })
 
 ServerEvents.tags('item', event => {
