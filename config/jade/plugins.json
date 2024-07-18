@@ -5,8 +5,8 @@
     "harvest_tool.show_unbreakable": true,
     "animal_owner": true,
     "harvest_tool.effective_tool": true,
-    "item_storage.normal_amount": 9,
     "item_storage": true,
+    "item_storage.normal_amount": 9,
     "harvest_tool": true,
     "armor_stand": true,
     "fluid_storage.detailed": false,
@@ -63,12 +63,24 @@
     "ench": true,
     "spawner": true
   },
+  "lootr": {
+    "info": true
+  },
   "oregrowth": {
     "ore_growth_hint": true,
     "ore_growth_icon": true
   },
-  "lootr": {
-    "info": true
+  "ae2": {
+    "part_icon": true,
+    "charger": true,
+    "debug": true,
+    "part_tooltip": true,
+    "grid_node_state": true,
+    "pattern_provider": true,
+    "part_mod_name": true,
+    "power_storage": true,
+    "crafting_monitor": true,
+    "part_name": true
   },
   "productivebees": {
     "solitary_nest": true,
