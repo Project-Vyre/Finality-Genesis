@@ -392,7 +392,7 @@ ClientEvents.lang('en_us', event => {
     "item.kubejs.crimson_moons_semblance.tooltip": "CRIMSON MOONS SEMBLANCE",
     "item.kubejs.crimson_moons_semblance.tooltip.summary": "It feels _hot_ to the touch.",
     "item.kubejs.crimson_moons_semblance.tooltip.condition1": "On R-Click",
-    "item.kubejs.crimson_moons_semblance.tooltip.behaviour1": "Summons a _Fireball_ that can be hit to send towards enemies.",
+    "item.kubejs.crimson_moons_semblance.tooltip.behaviour1": "Sends a fast _Fireball_ that flies in the direction you are looking at..",
     // Entropy Related
     "block.kubejs.command_block.tooltip": "COMMAND BLOCK",
     "block.kubejs.command_block.tooltip.summary": "Not actually a true command block, but it can still do _certain_ things.",
