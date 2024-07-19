@@ -61,7 +61,9 @@ let SPECIAL_CHARACTERS = {
   left_chevron: '<',
   right_chevron: '>',
   exclamation_mark: '!',
+  ampersand: '&',
   full_point: '.',
+  comma: ',',
   equality_sign: '=',
   plus_sign: '+',
   minus_sign: '-'
