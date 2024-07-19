@@ -6,6 +6,52 @@ let VANILLANOTSTANDARD = ['ender_pearl', 'gunpowder', 'sea_lantern', 'glowstone'
 let CREATEITEMS = ['electron_tube', 'rose_quartz']
 let CREATEVALUED = ['brass', 'zinc']
 
+let RNG1 = 0
+let RNG2 = 0
+let RNG3 = 0
+let RNG4 = 0
+let RNG5 = 0
+let RNG6 = 0
+let enRI1 = [
+  'kubejs:monochromatic_singularity',
+  'kubejs:concrete_black_singularity',
+  'kubejs:concrete_white_singularity'
+]
+let enRI2 = [
+  'kubejs:watermelon_shape',
+  'create:sequenced_gearshift',
+  'kubejs:green_circle',
+  'kubejs:star_of_light_shape'
+]
+let enRI3 = [
+  'kubejs:green_rectangle',
+  'kubejs:white_rectangle'
+]
+let enRI4 = [
+  'kubejs:high_entropy_alloy_nugget',
+  'kubejs:iridium_nugget',
+  'kubejs:netherite_nugget'
+]
+let enRI5 = [
+  'kubejs:blue_circle',
+  'kubejs:white_circle',
+  'kubejs:blue_rectangle_corner'
+]
+let enRI6 = [
+  'kubejs:emitter_shape',
+  'kubejs:magenta_rectangle_corner',
+  'kubejs:magenta_rectangle_right_half',
+  'kubejs:magenta_rectangle_left_half'
+]
+RNG1 = Utils.random.nextInt(0, enRI1.length - 1)
+RNG2 = Utils.random.nextInt(0, enRI2.length - 1)
+RNG3 = Utils.random.nextInt(0, enRI3.length - 1)
+RNG4 = Utils.random.nextInt(0, enRI4.length - 1)
+RNG5 = Utils.random.nextInt(0, enRI5.length - 1)
+RNG6 = Utils.random.nextInt(0, enRI5.length - 1)
+
+// Usage: enRI1[RNG1]
+
 ServerEvents.recipes(event => {
   // singularity creation step 1
   event.recipes.create.mechanical_crafting('kubejs:dormant_singularity_core', [
@@ -599,6 +645,10 @@ ServerEvents.recipes(event => {
       event.recipes.create.pressing('kubejs:incomplete_salt_singularity', 'kubejs:incomplete_salt_singularity'),
       event.recipes.create.pressing('kubejs:incomplete_salt_singularity', 'kubejs:incomplete_salt_singularity')
     ]).transitionalItem('kubejs:incomplete_salt_singularity').loops(9).id('finality:sequenced_assembly/salt_singularity')
+    event.recipes.create.mixing('2x kubejs:gunpowder_singularity', [
+      '2x kubejs:salt_singularity',
+      'kubejs:coal_singularity'
+    ]).id('kubejs:mixing/gunpowder_singularity_from_salt_singularity')
   }
 
   // mechanism crafting
@@ -616,6 +666,8 @@ ServerEvents.recipes(event => {
     'kubejs:gluttony_mechanism'
   ], 'create:precision_mechanism', [
     event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'create:sweet_roll']),
+    event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'create:honeyed_apple']),
+    event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'create:chocolate_glazed_cherries']),
     event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'kubejs:honey_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'kubejs:chocolate_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'kubejs:builders_tea_singularity'])
@@ -702,11 +754,109 @@ ServerEvents.recipes(event => {
   ]).id('finality:compacting/final_singularity_stage_nulla')
 
   event.recipes.create.crushing([
+    'kubejs:unstable_entropy_particles',
+    Item.of('kubejs:final_singularity_stage_nulla').withChance(0.50)
+  ], 'kubejs:final_singularity_stage_nulla').processingTime(500).id('kubejs:crushing/final_singularity_stage_nulla')
+
+  event.recipes.create.crushing([
     '32x kubejs:unstable_entropy_particles',
     Item.of('kubejs:unstable_entropy_particles', 32).withChance(0.25),
-    Item.of('kubejs:final_singularity_stage_nulla').withChance(0.75)
-  ], 'kubejs:final_singularity_stage_nulla').processingTime(500).id('finality:crushing/final_singularity')
+    Item.of('kubejs:final_singularity').withChance(0.75)
+  ], 'kubejs:final_singularity').processingTime(500).id('finality:crushing/final_singularity')
 
+  event.recipes.create.mixing('kubejs:final_singularity_stage_one', [
+    'kubejs:final_singularity_stage_nulla',
+    'kubejs:uncolored_circle_corner',
+    'kubejs:uncolored_rectangle_corner',
+    'kubejs:uncolored_windmill_corner',
+    'kubejs:uncolored_star_corner'
+  ]).id('kubejs:mixing/final_singularity_stage_one')
+  event.recipes.create.mechanical_crafting('kubejs:final_singularity_stage_two', [
+    '/UPGRADE',
+    '@ {     ',
+    'STAGE 2 ',
+    '}       '
+  ], {
+    '/': 'kubejs:slash',
+    U: 'kubejs:letter_u',
+    P: 'kubejs:letter_p',
+    G: 'kubejs:letter_g',
+    R: 'kubejs:letter_r',
+    A: 'kubejs:letter_a',
+    D: 'kubejs:letter_d',
+    E: 'kubejs:letter_e',
+    '@': 'kubejs:final_singularity_stage_one',
+    S: 'kubejs:letter_s',
+    T: 'kubejs:letter_t',
+    '2': 'kubejs:two',
+    '{': 'kubejs:left_brace',
+    '}': 'kubejs:right_brace'
+  }).id('kubejs:final_singularity_stage_two')
+  event.recipes.create.mechanical_crafting('kubejs:final_singularity_stage_three', [
+    'IF (@ == ',
+    'T2) {    ',
+    '  W+C+R  ',
+    '}        '
+  ], {
+    I: 'kubejs:letter_i',
+    F: 'kubejs:letter_f',
+    '(': 'kubejs:left_parentheses',
+    ')': 'kubejs:right_parentheses',
+    '=': 'kubejs:equality_sign',
+    T: 'kubejs:letter_t',
+    '2': 'kubejs:two',
+    '{': 'kubejs:left_brace',
+    '}': 'kubejs:right_brace',
+    '+': 'kubejs:plus_sign',
+    W: 'kubejs:color_white',
+    C: 'kubejs:color_cyan',
+    R: 'kubejs:color_red',
+    '@': 'kubejs:final_singularity_stage_two'
+  }).id('kubejs:final_singularity_stage_three')
+  // note to self in the morning I forgot what I was doing here... probably mixing complex shapes
+  event.recipes.create.mixing('kubejs:final_singularity_stage_four', [
+    'kubejs:tnt_singularity',
+    'kubejs:blaze_cake_singularity',
+    'kubejs:final_singularity_stage_three',
+    'kubejs:watermelon_shape',
+    'kubejs:star_of_light_shape',
+    'kubejs:potion_base_singularity',
+    enRI1[RNG1]
+  ]).id('kubejs:final_singularity_stage_four')
+  event.recipes.create.mechanical_crafting('kubejs:final_singularity', [
+    'COMPONENT',
+    '.JOIN([  ',
+    'CM.OF(@),',
+    'CM.OF(0),',
+    'CM.OF(!),',
+    'CM.OF(#) ',
+    '])       ',
+    '.COLOR(4)'
+  ], {
+    C: 'kubejs:letter_c',
+    O: 'kubejs:letter_o',
+    M: 'kubejs:letter_m',
+    P: 'kubejs:letter_p',
+    N: 'kubejs:letter_n',
+    E: 'kubejs:letter_e',
+    T: 'kubejs:letter_t',
+    J: 'kubejs:letter_j',
+    I: 'kubejs:letter_i',
+    F: 'kubejs:letter_f',
+    L: 'kubejs:letter_l',
+    R: 'kubejs:letter_r',
+    ',': 'kubejs:comma',
+    '(': 'kubejs:left_parentheses',
+    ')': 'kubejs:right_parentheses',
+    '[': 'kubejs:left_bracket',
+    ']': 'kubejs:right_bracket',
+    '.': 'kubejs:full_point',
+    '#': 'kubejs:cpu_shape',
+    '!': enRI6[RNG6],// 'kubejs:emitter_shape',
+    '4': enRI1[RNG1],// 'kubejs:final_singularity_stage_four',
+    '@': enRI1[RNG1],// 'kubejs:chromatic_concrete_singularity',
+    '0': enRI1[RNG1]// 'kubejs:monochromatic_singularity'
+  }).id('kubejs:final_singularity')
   event.recipes.create.mechanical_crafting('kubejs:command_block', [
     'IIGIIGII',
     'IIQPPQII',
@@ -763,34 +913,22 @@ ServerEvents.recipes(event => {
     Q: 'create:rose_quartz_lamp',
     P: 'create:powered_toggle_latch'
   }).id('finality:mechanical_crafting/repeating_command_block')
-  /*
-  let RNG1 = 0
-  let RNG2 = 0
-  let RNG3 = 0
-  let RNG4 = 0
-  let RNG5 = 0
-  enRI1 = [
-      'create:sequenced_gearshift',
-  ]
-  enRI2 = [
-      'extendedcrafting:crystaltine_nugget'
-  ]
-  enRI3 = [
-      'kubejs:cpu_shape'
-  ]
-  enRI4 = [
-      'kubejs:blueprint_shape'
-  ]
-  enRI5 = [
-      []
-  ]
-  RNG1 = Utils.random.nextInt(0, enRI1.length - 1)
-  RNG2 = Utils.random.nextInt(0, enRI2.length - 1)
-  RNG3 = Utils.random.nextInt(0, enRI3.length - 1)
-  RNG4 = Utils.random.nextInt(0, enRI4.length - 1)
-  RNG5 = Utils.random.nextInt(0, enRI5.length - 1)
-  event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', enRI1[RNG1]])
-  */
+  /**
+   * event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', enRI1[RNG1]])
+   * original order
+   * 'kubejs:null_matter'
+   * 'kubejs:final_singularity'
+   * 'kubejs:qubit'
+   * 'kubejs:cpu_shape'
+   * 'kubejs:blueprint_shape'
+   * 'kubejs:emitter_shape'
+   * enRI1[RNG1]
+   * enRI2[RNG2]
+   * enRI3[RNG3]
+   * enRI4[RNG4]
+   * enRI5[RNG5]
+   * enRI6[RNG6]
+   **/
   event.recipes.create.sequenced_assembly([
     Item.of('kubejs:entropy_mechanism').withChance(80.0),
     Item.of('kubejs:errored_result').withChance(0.75),
@@ -805,10 +943,10 @@ ServerEvents.recipes(event => {
     'minecraft:grass_block'
   ], 'create:precision_mechanism', [
     event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:null_matter']),
-    event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'create:sequenced_gearshift']),
+    event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:final_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:qubit']),
     event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:cpu_shape']),
     event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:blueprint_shape']),
     event.recipes.create.deploying('kubejs:incomplete_entropy_mechanism', ['kubejs:incomplete_entropy_mechanism', 'kubejs:emitter_shape'])
-  ]).transitionalItem('kubejs:incomplete_entropy_mechanism').loops(3).id('finality:sequenced_assembly/entropy_mechanism_creation')
+  ]).transitionalItem('kubejs:incomplete_entropy_mechanism').loops(9).id('finality:sequenced_assembly/entropy_mechanism_creation')
 })

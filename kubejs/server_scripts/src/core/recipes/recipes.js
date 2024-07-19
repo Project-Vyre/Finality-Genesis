@@ -320,19 +320,52 @@ ServerEvents.recipes(event => {
     event.recipes.create.deploying('2x minecraft:' + element, [
       'minecraft:' + element,
       'kubejs:duplicator'
-    ]).keepHeldItem().id('finality:deploying/' + element + '_duplication')
+    ]).keepHeldItem().id('kubejs:deploying/' + element + '_duplication')
   }
   let item_duplication = {
     asurine: 'create:asurine',
     crimsite: 'create:crimsite',
     ochrum: 'create:ochrum',
-    veridium: 'create:veridium'
+    veridium: 'create:veridium',
+    iridium_upgrade_smithing_template: 'kubejs:iridium_upgrade_smithing_template'
   }
   for (let [recipeId, itemId] of Object.entries(item_duplication)) {
     event.recipes.create.deploying(Item.of(itemId, 2), [
       itemId,
       'kubejs:duplicator'
-    ]).keepHeldItem().id('finality:deploying/' + recipeId + '_duplication')
+    ]).keepHeldItem().id('kubejs:deploying/' + recipeId + '_duplication')
+  }
+  let sherd_duplication = [
+    'angler',
+    'archer',
+    'arms_up',
+    'blade',
+    'brewer',
+    'burn',
+    'danger',
+    'explorer',
+    'friend',
+    'heart',
+    'heartbreak',
+    'howl',
+    'miner',
+    'mourner',
+    'plenty',
+    'prize',
+    'sheaf',
+    'shelter',
+    'skull',
+    'snort'
+  ]
+  for (let i = 0; i < sherd_duplication.length; i++) {
+    let element = sherd_duplication[i];
+    event.recipes.create.deploying([
+      'minecraft:' + element + '_pottery_sherd',
+      Item.of('minecraft:' + element + '_pottery_sherd', 2).withChance(0.125)
+    ], [
+      'minecraft:' + element + '_pottery_sherd',
+      'kubejs:duplicator'
+    ]).keepHeldItem().id('kubejs:deploying/' + element + '_pottery_sherd_duplication')
   }
   event.recipes.minecraft.crafting_shaped('minecraft:ender_pearl', [
     'TTT',
@@ -424,9 +457,14 @@ ServerEvents.recipes(event => {
     Item.of('minecraft:netherite_scrap').withChance(0.0002)
   ], 'minecraft:netherrack').processingTime(250).id('finality:crushing/netherrack')
   event.recipes.create.crushing([
-    Item.of('minecraft:gold_nugget', 5).withChance(0.25),
-    Item.of('create:experience_nugget', 2).withChance(0.12)
-  ], 'minecraft:gilded_blackstone').processingTime(250).id('finality:crushing/gilded_blackstone')
+    '18x minecraft:gold_nugget',
+    Item.of('create:experience_nugget').withChance(0.75)
+  ], 'minecraft:gilded_blackstone').processingTime(400).id('create:crushing/gilded_blackstone')
+  event.recipes.create.crushing([
+    '2x minecraft:coal',
+    Item.of('minecraft:coal').withChance(0.25),
+    Item.of('create:experience_nugget').withChance(0.125)
+  ], 'minecraft:deepslate_coal_ore').processingTime(300).id('create:crushing/deepslate_coal_ore')
   event.recipes.create.crushing([
     Item.of('kubejs:deepslate_shard', 9).withChance(0.75),
     Item.of('minecraft:gravel').withChance(0.12)
@@ -452,7 +490,7 @@ ServerEvents.recipes(event => {
   ]).id('finality:filling/netherite_ingot_from_spout')
   event.recipes.create.filling('minecraft:gilded_blackstone', [
     'minecraft:blackstone',
-    Fluid.of('kubejs:molten_gold', 50)
+    Fluid.of('kubejs:molten_gold', 180)
   ]).id('finality:filling/gilded_blackstone')
   /**
    * HAUNTING
@@ -592,7 +630,24 @@ ServerEvents.recipes(event => {
   event.recipes.create.sequenced_assembly('minecraft:dripstone_block', 'minecraft:stone', [
     event.recipes.create.filling('kubejs:dripstone_transitional_stone', ['kubejs:dripstone_transitional_stone', Fluid.of('minecraft:water', 250)])
   ]).transitionalItem('kubejs:dripstone_transitional_stone').loops(16).id('kubejs:sequenced_assembly/dripstone_dripping')
+  // NETHERITE
+  event.shaped('minecraft:netherite_ingot', [
+    'NNN',
+    'NNN',
+    'NNN'
+  ], {
+    N: 'kubejs:netherite_nugget'
+  }).id('kubejs:netherite_ingot_from_nuggets')
+  event.recipes.create.cutting(
+    '2x kubejs:netherite_rod',
+    'minecraft:netherite_ingot'
+  ).id('kubejs:cutting/netherite_rod')
   // IRIDIUM
+  event.recipes.create.mixing('kubejs:iridium_upgrade_smithing_template', [
+    'minecraft:netherite_upgrade_smithing_template',
+    'kubejs:deepslate_shard',
+    Fluid.of('kubejs:condensed_universal_entropy', 250)
+  ]).id('kubejs:mixing/iridium_upgrade_smithing_template')
   event.shaped('kubejs:raw_iridium_block', [
     'III',
     'III',
@@ -681,64 +736,36 @@ ServerEvents.recipes(event => {
     '2x kubejs:iridium_rod',
     'kubejs:iridium_ingot'
   ).processingTime(200).id('finality:cutting/iridium_rod')
-  event.shaped('kubejs:iridium_helmet', [
-    'III',
-    'I I'
-  ], {
-    I: 'kubejs:iridium_ingot'
-  }).id('finality:iridium_helmet')
-  event.shaped('kubejs:iridium_chestplate', [
-    'I I',
-    'III',
-    'III'
-  ], {
-    I: 'kubejs:iridium_ingot'
-  }).id('finality:iridium_chestplate')
-  event.shaped('kubejs:iridium_leggings', [
-    'III',
-    'I I',
-    'I I'
-  ], {
-    I: 'kubejs:iridium_ingot'
-  }).id('finality:iridium_leggings')
-  event.shaped('kubejs:iridium_boots', [
-    'I I',
-    'I I'
-  ], {
-    I: 'kubejs:iridium_ingot'
-  }).id('finality:iridium_boots')
-  event.shaped('kubejs:iridium_sword', [
-    'E',
-    'E',
-    'S'
-  ], {
-    E: 'kubejs:iridium_ingot',
-    S: 'kubejs:iridium_rod'
-  }).id('finality:crafting/iridium_sword')
-  event.shaped('kubejs:iridium_pickaxe', [
-    'EEE',
-    ' S ',
-    ' S '
-  ], {
-    E: 'kubejs:iridium_ingot',
-    S: 'kubejs:iridium_rod'
-  }).id('finality:crafting/iridium_pickaxe')
-  event.shaped('kubejs:iridium_axe', [
-    'EE',
-    'ES',
-    ' S'
-  ], {
-    E: 'kubejs:iridium_ingot',
-    S: 'kubejs:iridium_rod'
-  }).id('finality:crafting/iridium_axe')
-  event.shaped('kubejs:iridium_shovel', [
-    'E',
-    'S',
-    'S'
-  ], {
-    E: 'kubejs:iridium_ingot',
-    S: 'kubejs:iridium_rod'
-  }).id('finality:crafting/iridium_shovel')
+  event.recipes.minecraft.smithing_transform(
+    'kubejs:iridium_sword',
+    'kubejs:iridium_upgrade_smithing_template',
+    'minecraft:netherite_sword',
+    'kubejs:iridium_ingot'
+  ).id('kubejs:iridium_sword_smithing')
+  event.recipes.minecraft.smithing_transform(
+    'kubejs:iridium_pickaxe',
+    'kubejs:iridium_upgrade_smithing_template',
+    'minecraft:netherite_pickaxe',
+    'kubejs:iridium_ingot'
+  ).id('kubejs:iridium_pickaxe_smithing')
+  event.recipes.minecraft.smithing_transform(
+    'kubejs:iridium_axe',
+    'kubejs:iridium_upgrade_smithing_template',
+    'minecraft:netherite_axe',
+    'kubejs:iridium_ingot'
+  ).id('kubejs:iridium_axe_smithing')
+  event.recipes.minecraft.smithing_transform(
+    'kubejs:iridium_shovel',
+    'kubejs:iridium_upgrade_smithing_template',
+    'minecraft:netherite_shovel',
+    'kubejs:iridium_ingot'
+  ).id('kubejs:iridium_shovel_smithing')
+  event.recipes.minecraft.smithing_transform(
+    'kubejs:iridium_hoe',
+    'kubejs:iridium_upgrade_smithing_template',
+    'minecraft:netherite_hoe',
+    'kubejs:iridium_ingot'
+  ).id('kubejs:iridium_hoe_smithing')
   if (Platform.isLoaded('paxeljs')) {
     event.shaped('kubejs:iridium_paxel', [
       'ABC',
@@ -751,14 +778,30 @@ ServerEvents.recipes(event => {
       S: 'kubejs:iridium_rod'
     }).id('finality:crafting/iridium_paxel')
   }
-  event.shaped('kubejs:iridium_hoe', [
-    'EE',
-    ' S',
-    ' S'
-  ], {
-    E: 'kubejs:iridium_ingot',
-    S: 'kubejs:iridium_rod'
-  }).id('finality:crafting/iridium_hoe')
+  event.recipes.minecraft.smithing_transform(
+    'kubejs:iridium_helmet',
+    'kubejs:iridium_upgrade_smithing_template',
+    'minecraft:netherite_helmet',
+    'kubejs:iridium_ingot'
+  ).id('kubejs:iridium_helmet_smithing')
+  event.recipes.minecraft.smithing_transform(
+    'kubejs:iridium_chestplate',
+    'kubejs:iridium_upgrade_smithing_template',
+    'minecraft:netherite_chestplate',
+    'kubejs:iridium_ingot'
+  ).id('kubejs:iridium_chestplate_smithing')
+  event.recipes.minecraft.smithing_transform(
+    'kubejs:iridium_leggings',
+    'kubejs:iridium_upgrade_smithing_template',
+    'minecraft:netherite_leggings',
+    'kubejs:iridium_ingot'
+  ).id('kubejs:iridium_leggings_smithing')
+  event.recipes.minecraft.smithing_transform(
+    'kubejs:iridium_boots',
+    'kubejs:iridium_upgrade_smithing_template',
+    'minecraft:netherite_boots',
+    'kubejs:iridium_ingot'
+  ).id('kubejs:iridium_boots_smithing')
   event.recipes.create.mixing('kubejs:iridium_nugget', [
     'kubejs:netherite_nugget',
     'create:brass_nugget',
@@ -770,10 +813,12 @@ ServerEvents.recipes(event => {
     Fluid.of('kubejs:condensed_universal_entropy', 90)
   ]).superheated().id('finality:mixing/iridium_ingot_from_netherite')
   // HIGH ENTROPY ALLOY / FINAL
+  /*
   event.recipes.create.mixing('kubejs:unstable_entropy_particles', [
     'kubejs:errored_result',
     Fluid.of('kubejs:condensed_universal_entropy', 250)
   ]).id('finality:mixing/errored_result_recycling')
+  */
   event.recipes.create.sequenced_assembly([
     Item.of('kubejs:stable_entropy_particles').withChance(0.75),
     Item.of('kubejs:unstable_entropy_particles').withChance(0.25)
@@ -836,19 +881,21 @@ ServerEvents.recipes(event => {
     'EEE   EEE',
     'ECE   ECE',
     'EEE   EEE',
-    'EEEEEEEEE',
-    'EEEEEEEEE',
-    'EEEEEEEEE',
+    'EEEEFEEEE',
+    'EEEFMFEEE',
+    'EEEEFEEEE',
     'EEEEEEEEE',
     'EEEEEEEEE',
     'EEEEEEEEE'
   ], {
     E: 'kubejs:high_entropy_alloy_block',
+    F: 'kubejs:final_singularity',
+    M: 'kubejs:entropy_mechanism',
     C: 'kubejs:chain_command_block'
   }).id('finality:mechanical_crafting/final_chestplate')
   event.recipes.create.mechanical_crafting('kubejs:final_leggings', [
     'EEEEEEEEE',
-    'EEEEEEEEE',
+    'EEEFFFEEE',
     'EEEEEEEEE',
     'EEE   EEE',
     'EEE   EEE',
@@ -857,17 +904,19 @@ ServerEvents.recipes(event => {
     'EEE   EEE',
     'EEE   EEE'
   ], {
-    E: 'kubejs:high_entropy_alloy_block'
+    E: 'kubejs:high_entropy_alloy_block',
+    F: 'kubejs:final_singularity'
   }).id('finality:mechanical_crafting/final_leggings')
   event.recipes.create.mechanical_crafting('kubejs:final_boots', [
     'EEE   EEE',
     'EEE   EEE',
     'EEE   EEE',
-    'EEE   EEE',
-    'EEE   EEE',
+    'EFE   EFE',
+    'EFE   EFE',
     'EEE   EEE'
   ], {
-    E: 'kubejs:high_entropy_alloy_block'
+    E: 'kubejs:high_entropy_alloy_block',
+    F: 'kubejs:final_singularity'
   }).id('finality:mechanical_crafting/final_boots')
   // FINAL ITEMS & TOOLS
   event.recipes.create.mechanical_crafting('kubejs:final_sword', [
@@ -1154,6 +1203,12 @@ ServerEvents.recipes(event => {
     'create:mechanical_arm',
     'create:clockwork_bearing',
   ]).id('finality:music_disc_sandrone_battle_theme')
+  event.recipes.create.mixing('kubejs:music_disc_pulcinella_battle_theme', [
+    'minecraft:music_disc_5',
+    'kubejs:netherite_rod',
+    '4x minecraft:feather',
+    '2x minecraft:yellow_dye'
+  ]).id('finality:music_disc_pulcinella_battle_theme')
   // Shimmer Recipes
   event.recipes.create.mixing(Fluid.of('kubejs:shimmer', 1000), [
     'create:refined_radiance',
@@ -1206,14 +1261,6 @@ ServerEvents.recipes(event => {
     'minecraft:apple',
     Fluid.of('kubejs:molten_gold', 720)
   ]).id('finality:filling/golden_apple')
-  // netherite nugget related
-  event.shaped('minecraft:netherite_ingot', [
-    'NNN',
-    'NNN',
-    'NNN'
-  ], {
-    N: 'kubejs:netherite_nugget'
-  }).id('finality:netherite_ingot_from_nuggets')
   event.shapeless('9x kubejs:netherite_nugget', 'minecraft:netherite_ingot').id('finality:netherite_nugget')
   // chorus fruit in overworld
   event.recipes.create.filling('minecraft:chorus_fruit', [

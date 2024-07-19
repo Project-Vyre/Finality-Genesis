@@ -556,9 +556,21 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .maxStackSize(64)
     .fireResistant(true)
     .glow(true)
+  event.create('kubejs:ampersand')
+    .rarity('epic')
+    .texture('kubejs:item/special_characters/ampersand')
+    .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
   event.create('kubejs:full_point')
     .rarity('epic')
     .texture('kubejs:item/special_characters/full_point')
+    .maxStackSize(64)
+    .fireResistant(true)
+    .glow(true)
+  event.create('kubejs:comma')
+    .rarity('epic')
+    .texture('kubejs:item/special_characters/comma')
     .maxStackSize(64)
     .fireResistant(true)
     .glow(true)
@@ -1094,7 +1106,6 @@ StartupEvents.registry('fluid', event => {
 */
 
 let blacklist = {
-  // ae2: 'This mod does not belong in this variant of the modpack. Make your own storage systems.',
   canary: 'Not supported.',
   saturn: 'Not supported.',
   pluto: 'Not supported.',

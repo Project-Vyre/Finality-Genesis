@@ -192,6 +192,19 @@ StartupEvents.registry('item', event => {
     .texture('layer1', 'kubejs:item/monochromatic_singularity_overlay')
     .rarity('epic')
     .tag('create:upright_on_belt')
+  if (Platform.isLoaded('ae2')) {
+    event.create('kubejs:sky_stone_dust_singularity')
+      .texture('layer0', 'kubejs:item/singularity')
+      .texture('layer1', 'kubejs:item/singularity_overlay')
+      .color(0, 0x394139)
+      .color(1, 0x9FFC9A)
+      .formattedDisplayName(
+        Component.string('Sky Stone Singularity')
+          .color(0x9AD0FC)
+      )
+      .rarity('epic')
+      .tag('create:upright_on_belt')
+  }
   // final singularity
   event.create('kubejs:final_singularity_stage_nulla')
     .texture('layer0', 'kubejs:item/incomplete_singularity')

@@ -161,6 +161,21 @@ ServerEvents.recipes(event => {
   BINARYCONVERSION('octothorpe', '00100011')
   BINARYCONVERSION('slash', '00101111')
   BINARYCONVERSION('at_sign', '01000000')
+  BINARYCONVERSION('left_parentheses', '00101000')
+  BINARYCONVERSION('right_parentheses', '00101001')
+  BINARYCONVERSION('left_bracket', '01011011')
+  BINARYCONVERSION('right_bracket', '01011101')
+  BINARYCONVERSION('left_brace', '01111011')
+  BINARYCONVERSION('right_brace', '01111101')
+  BINARYCONVERSION('left_chevron', '00111100')
+  BINARYCONVERSION('right_chevron', '00111110')
+  BINARYCONVERSION('exclamation_mark', '00100001')
+  BINARYCONVERSION('ampersand', '00100110')
+  BINARYCONVERSION('comma', '00101100')
+  BINARYCONVERSION('full_point', '00101110')
+  BINARYCONVERSION('equality_sign', '00111101')
+  BINARYCONVERSION('plus_sign', '00101011')
+  BINARYCONVERSION('minus_sign', '00101101')
   event.recipes.create.mechanical_crafting('kubejs:qubit', [
     '/FIX Q'
   ], {
@@ -269,6 +284,14 @@ ServerEvents.recipes(event => {
         .id(`finality:${color}_${shape}_right_half_halving`)
     }
   }
+  event.recipes.create.sequenced_assembly('kubejs:star_of_light_shape', 'kubejs:red_star', [
+    event.recipes.create.deploying('kubejs:incomplete_star_of_light_shape', ['kubejs:incomplete_star_of_light_shape', 'kubejs:yellow_circle']),
+    event.recipes.create.deploying('kubejs:incomplete_star_of_light_shape', ['kubejs:incomplete_star_of_light_shape', 'kubejs:white_star'])
+  ]).transitionalItem('kubejs:incomplete_star_of_light_shape').loops(1).id('kubejs:sequenced_assembly/star_of_light')
+  event.recipes.create.deploying('kubejs:watermelon_shape', [
+    'kubejs:green_circle_corner',
+    'kubejs:red_circle_corner'
+  ]).id('kubejs:deploying/watermelon_shape')
   event.recipes.create.mechanical_crafting('kubejs:blueprint_shape_base', [
     'RC',
     'CC'
@@ -314,9 +337,13 @@ ServerEvents.recipes(event => {
     T: 'minecraft:tinted_glass',
     B: 'minecraft:barrel'
   }).id('finality:crafting/null_storage_block')
-  event.recipes.create.mixing('kubejs:qubit', [
+  event.recipes.create.mixing([
+    Item.of('kubejs:qubit').withChance(0.125),
+    Item.of('kubejs:errored_result').withChance(0.125)
+  ], [
     'kubejs:zero',
-    'kubejs:one'
+    'kubejs:one',
+    'kubejs:chromatic_concrete_singularity'
   ]).superheated().id('finality:mixing/qubit')
   event.recipes.create.sequenced_assembly([
     Item.of('kubejs:zero').withChance(0.10),
