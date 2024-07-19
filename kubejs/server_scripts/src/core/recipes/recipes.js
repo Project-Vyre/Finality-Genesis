@@ -627,6 +627,12 @@ ServerEvents.recipes(event => {
   /**
    * >-----<
    */
+  event.recipes.minecraft.crafting_shaped('2x create:rose_quartz', [
+    'QQ',
+    'QQ'
+  ], {
+    Q: 'create:rose_quartz_block'
+  }).id('kubejs:rose_quartz_block_decompression')
   event.recipes.create.sequenced_assembly('minecraft:dripstone_block', 'minecraft:stone', [
     event.recipes.create.filling('kubejs:dripstone_transitional_stone', ['kubejs:dripstone_transitional_stone', Fluid.of('minecraft:water', 250)])
   ]).transitionalItem('kubejs:dripstone_transitional_stone').loops(16).id('kubejs:sequenced_assembly/dripstone_dripping')
