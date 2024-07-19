@@ -42,11 +42,11 @@ if (standard_skilljs) {
     }
     if (!player.cooldowns.isOnCooldown(item) && player.isShiftKeyDown()) {
       player.addItemCooldown(item, 120)
-      player.tell('120 seconds have passed, at the cost of your life.')
+      player.tell('150 seconds have passed, at the cost of your life.')
       player.setSaturation(0)
       player.potionEffects.add('minecraft:wither', 200, 3, false, false)
       player.potionEffects.add('minecraft:hunger', 200, 255, false, false)
-      Utils.server.runCommandSilent('time add 120s')
+      Utils.server.runCommandSilent('time add 150s')
     }
   })
 }
