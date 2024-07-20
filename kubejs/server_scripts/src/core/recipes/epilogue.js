@@ -667,7 +667,7 @@ ServerEvents.recipes(event => {
   ], 'create:precision_mechanism', [
     event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'create:sweet_roll']),
     event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'create:honeyed_apple']),
-    event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'create:chocolate_glazed_cherries']),
+    event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'create:chocolate_glazed_berries']),
     event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'kubejs:honey_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'kubejs:chocolate_singularity']),
     event.recipes.create.deploying('kubejs:incomplete_gluttony_mechanism', ['kubejs:incomplete_gluttony_mechanism', 'kubejs:builders_tea_singularity'])
