@@ -7,9 +7,6 @@
 // ignored: false
 
 const $EntropyMode = Java.loadClass('appeng.recipes.entropy.EntropyMode')
-const $RecipeSchema = Java.loadClass('dev.latvian.mods.kubejs.recipe.schema.RecipeSchema')
-const $MapRecipeComponent = Java.loadClass('dev.latvian.mods.kubejs.recipe.component.MapRecipeComponent')
-const $RecipeComponentBuilderMap = Java.loadClass('dev.latvian.mods.kubejs.recipe.component.RecipeComponentBuilderMap')
 
 StartupEvents.recipeSchemaRegistry(event => {
   const Component = event.components.get.bind(event.components)

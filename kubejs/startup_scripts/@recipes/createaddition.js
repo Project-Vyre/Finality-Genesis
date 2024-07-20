@@ -6,9 +6,6 @@
 // requires: createaddition
 // ignored: true
 
-const $RecipeSchema = Java.loadClass('dev.latvian.mods.kubejs.recipe.schema.RecipeSchema')
-const $RecipeComponentBuilder = Java.loadClass('dev.latvian.mods.kubejs.recipe.component.RecipeComponentBuilder')
-
 StartupEvents.recipeSchemaRegistry(event => {
   const Components = event.components
 
