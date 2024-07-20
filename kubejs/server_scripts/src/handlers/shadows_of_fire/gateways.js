@@ -173,18 +173,32 @@ ServerEvents.recipes(event => {
     D: 'apotheosis:gem_dust',
     E: 'minecraft:ender_pearl'
   }).id('kubejs:boss_gate_small')
-  event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:endless/artifact_mimic_gate"}'), [
-    '  L  ',
-    ' ADA ',
-    'LDEDL',
-    ' ADA ',
-    '  L  '
+  event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:bastion_salvation"}'), [
+    ' NBN ',
+    'NGGGN',
+    'BGEGB',
+    'NGGGN',
+    ' BBB '
   ], {
-    A: 'minecraft:diamond',
-    L: 'minecraft:emerald',
-    D: 'apotheosis:gem_dust',
-    E: 'minecraft:ender_eye'
-  }).id('kubejs:mechanical_crafting/artifact_mimic_gate')
+    B: 'minecraft:polished_blackstone_bricks',
+    N: 'kubejs:netherite_nugget',
+    G: 'minecraft:gilded_blackstone',
+    E: 'minecraft:nether_star'
+  }).id('kubejs:bastion_salvation_gate')
+  if (Platform.isLoaded('artifacts')) {
+    event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:endless/artifact_mimic_gate"}'), [
+      '  L  ',
+      ' ADA ',
+      'LDEDL',
+      ' ADA ',
+      '  L  '
+    ], {
+      A: 'minecraft:diamond',
+      L: 'minecraft:emerald',
+      D: 'apotheosis:gem_dust',
+      E: 'minecraft:ender_eye'
+    }).id('kubejs:mechanical_crafting/artifact_mimic_gate')
+  }
   if (Platform.isLoaded('cataclysm') &&
     Platform.isLoaded('aquamirae') &&
     Platform.isLoaded('irons_spellbooks')
