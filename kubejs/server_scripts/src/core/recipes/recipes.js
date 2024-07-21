@@ -651,7 +651,9 @@ ServerEvents.recipes(event => {
   // IRIDIUM
   event.recipes.create.mixing('kubejs:iridium_upgrade_smithing_template', [
     'minecraft:netherite_upgrade_smithing_template',
+    'create:sturdy_sheet',
     'kubejs:deepslate_shard',
+    'kubejs:iridium_nugget',
     Fluid.of('kubejs:condensed_universal_entropy', 250)
   ]).id('kubejs:mixing/iridium_upgrade_smithing_template')
   event.shaped('kubejs:raw_iridium_block', [
