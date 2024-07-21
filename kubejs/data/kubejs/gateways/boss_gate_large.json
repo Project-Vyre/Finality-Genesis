@@ -56,7 +56,7 @@
         {
           "attribute": "generic.movement_speed",
           "operation": "MULTIPLY_TOTAL",
-          "value": 0.10
+          "value": 0.1
         }
       ],
       "rewards": [
@@ -99,7 +99,7 @@
         {
           "attribute": "generic.movement_speed",
           "operation": "MULTIPLY_TOTAL",
-          "value": 0.10
+          "value": 0.1
         }
       ],
       "rewards": [
@@ -137,7 +137,7 @@
         {
           "attribute": "generic.movement_speed",
           "operation": "MULTIPLY_TOTAL",
-          "value": 0.10
+          "value": 0.1
         }
       ],
       "rewards": [
@@ -190,7 +190,7 @@
         {
           "attribute": "generic.movement_speed",
           "operation": "MULTIPLY_TOTAL",
-          "value": 0.10
+          "value": 0.1
         }
       ],
       "rewards": [
@@ -228,12 +228,12 @@
         {
           "attribute": "generic.knockback_resistance",
           "operation": "ADDITION",
-          "value": 0.10
+          "value": 0.1
         },
         {
           "attribute": "generic.movement_speed",
           "operation": "MULTIPLY_TOTAL",
-          "value": 0.10
+          "value": 0.1
         }
       ],
       "rewards": [
@@ -266,17 +266,17 @@
         {
           "attribute": "generic.attack_damage",
           "operation": "MULTIPLY_TOTAL",
-          "value": 1.50
+          "value": 1.5
         },
         {
           "attribute": "generic.knockback_resistance",
           "operation": "ADDITION",
-          "value": 0.10
+          "value": 0.1
         },
         {
           "attribute": "generic.movement_speed",
           "operation": "MULTIPLY_TOTAL",
-          "value": 0.10
+          "value": 0.1
         }
       ],
       "rewards": [
@@ -309,17 +309,17 @@
         {
           "attribute": "generic.attack_damage",
           "operation": "MULTIPLY_TOTAL",
-          "value": 1.50
+          "value": 1.5
         },
         {
           "attribute": "generic.knockback_resistance",
           "operation": "ADDITION",
-          "value": 0.10
+          "value": 0.1
         },
         {
           "attribute": "generic.movement_speed",
           "operation": "MULTIPLY_TOTAL",
-          "value": 0.10
+          "value": 0.1
         }
       ],
       "rewards": [
@@ -357,12 +357,12 @@
         {
           "attribute": "generic.knockback_resistance",
           "operation": "ADDITION",
-          "value": 0.10
+          "value": 0.1
         },
         {
           "attribute": "generic.movement_speed",
           "operation": "MULTIPLY_TOTAL",
-          "value": 0.10
+          "value": 0.1
         }
       ],
       "rewards": [
@@ -404,12 +404,12 @@
         {
           "attribute": "generic.knockback_resistance",
           "operation": "ADDITION",
-          "value": 0.10
+          "value": 0.1
         },
         {
           "attribute": "generic.movement_speed",
           "operation": "MULTIPLY_TOTAL",
-          "value": 0.10
+          "value": 0.1
         }
       ],
       "rewards": [
@@ -442,12 +442,12 @@
         {
           "attribute": "generic.attack_damage",
           "operation": "MULTIPLY_TOTAL",
-          "value": 2.50
+          "value": 2.5
         },
         {
           "attribute": "generic.knockback_resistance",
           "operation": "ADDITION",
-          "value": 0.10
+          "value": 0.1
         }
       ],
       "rewards": [
