@@ -1,4 +1,5 @@
 // requires: gateways
+// requires: summoningrituals
 // requires: create
 
 /**
@@ -198,6 +199,19 @@ ServerEvents.recipes(event => {
       D: 'apotheosis:gem_dust',
       E: 'minecraft:ender_eye'
     }).id('kubejs:mechanical_crafting/artifact_mimic_gate')
+  }
+  if (Platform.isLoaded('cataclysm')) {
+    event.recipes.summoningrituals.altar('minecraft:nether_star')
+      .itemOutput(Item.of('gateways:gate_pearl', '{gateway:"kubejs:cataclysm_boss_gate"}'))
+      .input([
+        'cataclysm:mech_eye',
+        'cataclysm:flame_eye',
+        'cataclysm:void_eye',
+        'cataclysm:monstrous_eye',
+        'minecraft:amethyst_shard'
+      ])
+      .blockBelow('minecraft:end_stone')
+      .id('kubejs:cataclysm_boss_gate')
   }
   if (Platform.isLoaded('cataclysm') &&
     Platform.isLoaded('aquamirae') &&
