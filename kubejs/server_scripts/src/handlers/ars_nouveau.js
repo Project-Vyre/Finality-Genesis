@@ -60,4 +60,12 @@ ServerEvents.recipes(event => {
     '4x ars_nouveau:magebloom_fiber',
     Item.of('ars_nouveau:magebloom_fiber', 4).withChance(0.12)
   ], 'ars_nouveau:magebloom').processingTime(150).id('kubejs:milling/compat/ars_nouveau/magebloom_fiber')
+  event.recipes.ars_nouveau.imbuement(
+    'create:andesite_alloy', 1,
+    'minecraft:andesite',
+    250, [
+    { item: 'minecraft:clock' },
+    { item: '#forge:nuggets/iron' },
+    { item: 'kubejs:netherite_nugget' }
+  ]).id('kubejs:imbuement_andesite_alloy')
 })
