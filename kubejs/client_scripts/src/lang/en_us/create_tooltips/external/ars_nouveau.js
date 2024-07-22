@@ -129,6 +129,14 @@ ClientEvents.lang('en_us', event => {
         'Requirements',
         'An _Arcane Core_ must be placed _below_ the Enchanting Apparatus, along with _Arcane Pedestals_ surrounding it. _Source Jars_ may also be required if the recipe needs Source.'
       ])
+      .addBehaviour([
+        'Starbuncle Transport',
+        'If you wish to _take out_ items from an _Enchanting Apparatus_ after it is done crafting, you can _link_ them to a chest where you will then replace it with the _Enchanting Apparatus_.'
+      ])
+      .addBehaviour([
+        'Additional Info',
+        'Please note that Create\'s Mechanical Arms do not work with these!'
+      ])
       .setPalette($Palette.PURPLE)
       .build()
   )
