@@ -36,7 +36,7 @@ ClientEvents.lang('en_us', event => {
       .addSummary('Deflects all kinds of dangerous weather _away_ from its vicinity.')
       .addBehaviour([
         'When placed',
-        'Has an effective radius of 150 blocks.'
+        'Has an effective radius of 300 blocks.'
       ])
       .build()
   )

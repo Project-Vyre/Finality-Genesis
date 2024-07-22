@@ -55,40 +55,40 @@
 	Storm_PercentChanceOf_Hail = 80
 	#-
 	#Range: > -2147483648
-	Storm_PercentChanceOf_F0_Tornado = 70
+	Storm_PercentChanceOf_F0_Tornado = 29
 	#-
 	#Range: > -2147483648
-	Storm_PercentChanceOf_C0_Cyclone = 70
+	Storm_PercentChanceOf_C0_Cyclone = 29
 	#-
 	#Range: > -2147483648
-	Storm_PercentChanceOf_F1_Tornado = 50
+	Storm_PercentChanceOf_F1_Tornado = 40
 	#-
 	#Range: > -2147483648
-	Storm_PercentChanceOf_C1_Cyclone = 50
+	Storm_PercentChanceOf_C1_Cyclone = 40
 	#-
 	#Range: > -2147483648
-	Storm_PercentChanceOf_F2_Tornado = 40
+	Storm_PercentChanceOf_F2_Tornado = 24
 	#-
 	#Range: > -2147483648
-	Storm_PercentChanceOf_C2_Cyclone = 40
+	Storm_PercentChanceOf_C2_Cyclone = 24
 	#-
 	#Range: > -2147483648
-	Storm_PercentChanceOf_F3_Tornado = 30
+	Storm_PercentChanceOf_F3_Tornado = 6
 	#-
 	#Range: > -2147483648
-	Storm_PercentChanceOf_C3_Cyclone = 30
+	Storm_PercentChanceOf_C3_Cyclone = 6
 	#-
 	#Range: > -2147483648
-	Storm_PercentChanceOf_F4_Tornado = 20
+	Storm_PercentChanceOf_F4_Tornado = 2
 	#-
 	#Range: > -2147483648
-	Storm_PercentChanceOf_C4_Cyclone = 20
+	Storm_PercentChanceOf_C4_Cyclone = 2
 	#-
 	#Range: > -2147483648
-	Storm_PercentChanceOf_F5_Tornado = 10
+	Storm_PercentChanceOf_F5_Tornado = 1
 	#Also known as full blown hurricane
 	#Range: > -2147483648
-	Storm_PercentChanceOf_C5_Cyclone = 10
+	Storm_PercentChanceOf_C5_Cyclone = 1
 	#-
 	#Range: > -2147483648
 	Storm_ParticleSpawnDelay = 3
@@ -133,7 +133,7 @@
 	Lightning_StartsFires = false
 	#-
 	#Range: > -2147483648
-	Storm_Deflector_RadiusOfStormRemoval = 150
+	Storm_Deflector_RadiusOfStormRemoval = 300
 	#The minimum stage a storm has to be at to be removed, stages are: 0 = anything, 1 = thunder, 2 = high wind, 3 = hail, 4 = F0/C0, 5 = F1/C1, 6 = F2/C2, 7 = F3/C3, 8 = F4/C4, 9 = F5/C5
 	#Range: > -2147483648
 	Storm_Deflector_MinStageRemove = 1
