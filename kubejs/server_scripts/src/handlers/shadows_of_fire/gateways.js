@@ -186,6 +186,13 @@ ServerEvents.recipes(event => {
     G: 'minecraft:gilded_blackstone',
     E: 'minecraft:nether_star'
   }).id('kubejs:bastion_salvation_gate')
+  if (Platform.isLoaded('ars_nouveau')) {
+    event.recipes.ars_nouveau.enchanting_apparatus(Item.of('gateways:gate_pearl', '{gateway:"kubejs:wilden_gate"}'), [
+      'ars_nouveau:wilden_wing',
+      'ars_nouveau:wilden_horn',
+      'ars_nouveau:wilden_spike'
+    ], 'minecraft:nether_star', false, 2000).id('kubejs:wilden_gate')
+  }
   if (Platform.isLoaded('artifacts')) {
     event.recipes.create.mechanical_crafting(Item.of('gateways:gate_pearl', '{gateway:"kubejs:endless/artifact_mimic_gate"}'), [
       '  L  ',

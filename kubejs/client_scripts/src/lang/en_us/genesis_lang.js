@@ -489,6 +489,7 @@ ClientEvents.lang('en_us', event => {
       "kubejs.mutant_boss_gate_large": "Large Mutant Boss Gate",
       "kubejs.mass_destruction_boss_gate_large": "Bosses of Mass Destruction Gate",
       "kubejs.endless/artifact_mimic_gate": "Endless Artifact Mimic Gate",
+      "kubejs.wilden_gate": "Wilden Gate",
       "item.apotheosis.gem.kubejs:eversor": "Eversor Gem",
       "item.apotheosis.gem.kubejs:acuti_ora": "Acuti Ora Gem",
       "name.kubejs.skill_check": "Skill Check",
