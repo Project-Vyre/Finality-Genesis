@@ -110,6 +110,26 @@ ServerEvents.recipes(event => {
     I: 'create:iron_sheet',
     L: 'minecraft:leather'
   }).id('kubejs:sophisticatedbackpacks/upgrade_base')
+  if (Platform.isLoaded('farmersdelight')) {
+    event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:upgrade_base', [
+      'SIS',
+      'ILI',
+      'SIS'
+    ], {
+      S: 'minecraft:string',
+      I: 'create:iron_sheet',
+      L: 'farmersdelight:canvas'
+    }).id('kubejs:sophisticatedbackpacks/upgrade_base_from_canvas')
+    event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:backpack', [
+      'SAS',
+      'SCS',
+      'AAA'
+    ], {
+      S: 'minecraft:string',
+      A: 'farmersdelight:canvas',
+      C: '#forge:chests/wooden',
+    }).id('kubejs:sophisticatedbackpacks/backpack_from_canvas')
+  }
   /**
    * UPGRADE MODULES
    */
