@@ -650,8 +650,12 @@ ClientEvents.lang('en_us', event => {
       createTooltip('summoningrituals:altar')
         .addSummary('An altar that _summons_ either _mobs_, _items_ or even in-world events.')
         .addBehaviour([
+          'Where recipes?',
+          'To see all recipes, press _[U]_ while hovering over this in your inventory.'
+        ])
+        .addBehaviour([
           'Usage Instructions',
-          'The _ritual catalyst_ has to be placed _last_ in order for the ritual to start. _Prepare_ the _ritual ingredients_ first. In the recipe viewer, the _ritual catalyst_ is located in the center. Press _[U]_ _WHILE HOVERING_ over the _summoning altar_ item in your inventory _with your cursor_ to see _all_ summoning rituals.'
+          'The _ritual catalyst_ has to be placed _last_ in order for the ritual to start. _Prepare_ the _ritual ingredients_ first.'
         ])
         .addBehaviour([
           'On R-Click with item',
@@ -661,6 +665,10 @@ ClientEvents.lang('en_us', event => {
           'On Sneak + R-Click with empty hand',
           'The altar _returns_ items in the order you gave it.'
         ])
+        .addBehaviour([
+          'Additional Info',
+          'Some items may have a _conflicting_ right click function and may refuse to be used as the ritual catalyst! To work around this, use a _Hopper_.'
+        ])
         .setPalette($Palette.RED)
         .build()
     )
@@ -669,8 +677,12 @@ ClientEvents.lang('en_us', event => {
       createTooltip('summoningrituals:indestructible_altar')
         .addSummary('This is the _indestructible_ version of the altar, normally found in custom structures and not planned to be craftable. Currently this is _unobtainable_ as no structures generate with it present.')
         .addBehaviour([
+          'Where recipes?',
+          'To see all recipes, press _[U]_ while hovering over this in your inventory.'
+        ])
+        .addBehaviour([
           'Usage Instructions',
-          'The _ritual catalyst_ has to be placed _last_ in order for the ritual to start. _Prepare_ the _ritual ingredients_ first. In the recipe viewer, the _ritual catalyst_ is located in the center. Press _[U]_ _WHILE HOVERING_ over the _summoning altar_ item in your inventory _with your cursor_ to see _all_ summoning rituals.'
+          'The _ritual catalyst_ has to be placed _last_ in order for the ritual to start. _Prepare_ the _ritual ingredients_ first.'
         ])
         .addBehaviour([
           'On R-Click with item',
@@ -679,6 +691,10 @@ ClientEvents.lang('en_us', event => {
         .addBehaviour([
           'On Sneak + R-Click with empty hand',
           'The altar _returns_ items in the order you gave it.'
+        ])
+        .addBehaviour([
+          'Additional Info',
+          'Some items may have a _conflicting_ right click function and may refuse to be used as the ritual catalyst! To work around this, use a _Hopper_.'
         ])
         .setPalette($Palette.RED)
         .build()
