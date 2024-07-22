@@ -498,7 +498,7 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .glow(true)
   event.create('kubejs:at_sign')
     .rarity('epic')
-    .texture('kubejs:item/special_characters/at_sign')
+    .texture('kubejs:item/national_characters/at_sign')
     .maxStackSize(64)
     .fireResistant(true)
     .glow(true)
