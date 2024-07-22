@@ -102,6 +102,101 @@ ClientEvents.lang('en_us', event => {
       .setPalette($Palette.PURPLE)
       .build()
   )
+  // SOURCE RELAYS
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:redstone_relay')
+      .addSummary('Operates _similarly_ to the Source Relay, but exclusively for wireless redstone signal transport. Has to be linked with other _Redstone Relays_.')
+      .addBehaviour([
+        'Additional Info',
+        'Takes input from one side and outputs in all other directions. Multiple Redstone Relays _can_ be connected together.'
+      ])
+      .setPalette($Palette.RED)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:relay')
+      .addSummary('Enables the _transport_ of Source between Source Jars and other Source Relays.')
+      .addBehaviour([
+        'To pull from Source Jars',
+        'First use the _Dominion Wand_ on the Source Jar, and then on the _Relay_.'
+      ])
+      .addBehaviour([
+        'To send',
+        'First use the _Dominion Wand_ on the _Relay_, and then on the Source Jar _or_ another _Relay_ that you want to send the _Source_ to.'
+      ])
+      .addBehaviour([
+        'To clear connections',
+        'Sneak and _right click_ with the Dominion Wand _on_ the Relay.'
+      ])
+      .addBehaviour([
+        'Additional Info',
+        'Has a range limit of 30 blocks, which all variations of Source Relays share _except_ the Warper variant.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:relay_collector')
+      .addSummary('Operates _similarly_ to the Source Relay.')
+      .addBehaviour([
+        'Passive - Collector',
+        'Automatically _takes_ from Source Jars that it is not linked to within 5 blocks.'
+      ])
+      .addAction([
+        'Control Info',
+        'See the _instructions_ or _tooltip_ for the Source Relay for more information.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:relay_deposit')
+      .addSummary('Operates _similarly_ to the Source Relay.')
+      .addBehaviour([
+        'Passive - Depositor',
+        'Automatically _deposits_ from Source Jars that it is not linked to within 5 blocks.'
+      ])
+      .addAction([
+        'Control Info',
+        'See the _instructions_ or _tooltip_ for the Source Relay for more information.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:relay_splitter')
+      .addSummary('Operates _similarly_ to the Source Relay. Also has a _larger_ through-put than the Source Relay which aids in helping split the Source amongst all assigned Source Jars.')
+      .addBehaviour([
+        'Passive - Splitter',
+        'Supports taking from _and_ transferring to multiple Source Jars at once.'
+      ])
+      .addAction([
+        'Control Info',
+        'See the _instructions_ or _tooltip_ for the Source Relay for more information.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:relay_warp')
+      .addSummary('Operates _similarly_ to the Source Relay, but with infinite range between _other_ Warp relays.')
+      .addBehaviour([
+        'Additional Info',
+        'For distances _beyond_ 30 blocks, there is a chance that some Source will be _lost_ during warp.'
+      ])
+      .addAction([
+        'Control Info',
+        'See the _instructions_ or _tooltip_ for the Source Relay for more information.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
   event.addAll(
     'kubejs',
     createTooltip('ars_nouveau:imbuement_chamber')
@@ -491,6 +586,480 @@ ClientEvents.lang('en_us', event => {
       .addBehaviour([
         'Additional Info',
         'Additional levels increase the speed at which the items repair. This perk applies to _all_ relevant items, not only the item within this perk.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  // wilden drops
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:wilden_horn')
+      .addSummary('Drops from _Wilden Hunters_ found in Wilden Dens.')
+      .addBehaviour([
+        'Alternatively...',
+        'Can be summoned with the _Tablet of Summon Wilden_.'
+      ])
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:wilden_spike')
+      .addSummary('Drops from _Wilden Guardians_ found in Wilden Dens.')
+      .addBehaviour([
+        'Alternatively...',
+        'Can be summoned with the _Tablet of Summon Wilden_.'
+      ])
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:wilden_wing')
+      .addSummary('Drops from _Wilden Stalkers_ found in Wilden Dens.')
+      .addBehaviour([
+        'Alternatively...',
+        'Can be summoned with the _Tablet of Summon Wilden_.'
+      ])
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:drygmy_shard')
+      .addSummary('Obtained by giving a Drygmy a _Wilden Horn_.')
+      .build()
+  )
+  // CHARMS
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:bookwyrm_charm')
+      .addSummary('Used to summon a Bookwyrm.')
+      .addBehaviour([
+        'Acquisition',
+        'Obtained by augmenting a _Ritual of Awakening_ by dropping a Book and Quill into the _Ritual Brazier_ before finishing the ritual.'
+      ])
+      .addBehaviour([
+        'On R-Click on Storage Lectern',
+        'Connects inventories to the _Storage Lectern_. See the Storage Lectern tooltip for additional information.'
+      ])
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:amethyst_golem_charm')
+      .addSummary('Used to summon an Amethyst Golem.')
+      .addBehaviour([
+        'Acquisition',
+        'Obtained by performing the _Ritual of Awakening_ near Budding Amethyst.'
+      ])
+      .build()
+  )
+  /**
+   * RITUAL TABLETS
+   */
+  let ritual_default = 'A tablet used with the _Ritual Brazier_. _Consumed_ on use. Augmentation items _may_ be required beforehand.'
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_burrowing')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'On ritual success',
+        'Digs four adjacent holes to bedrock, dropping any blocks.'
+      ])
+      .setPalette($Palette.GREEN)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_challenge')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'On ritual success',
+        'Summons an illager raid when used inside a village.'
+      ])
+      .addBehaviour([
+        'Augmentation I',
+        'An _Emerald_ may be dropped into the _Ritual Brazier_ to _increase_ the difficulty of the raid to the _maximum_ amount, making Totems of Undying accessible on _easier_ world difficulties.'
+      ])
+      .addBehaviour([
+        'Augmentation II',
+        'Augmenting has _no effect_ on Hard difficulty.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_binding')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'Usage',
+        'The Ritual of Binding converts nearby _eligible_ entities into _Bound Scripts_ which are then used for summoning a _Familiar_. For more information, see the section on Familiars in the _Worn Notebook_ or _Spell Book_.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_awakening')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'When used with nearby Archwood trees at the base',
+        'Awakens them into _Weald Walkers_ which can be given a position in the world to _guard_ against hostile mobs. They will _heal_ over time and turn into _Weald Waddlers_ if they die.'
+      ])
+      .addBehaviour([
+        'When used with Budding Amethyst nearby',
+        'Awakens them into _Amethyst Golems_.'
+      ])
+      .addBehaviour([
+        'When augmented with a Book and Quill',
+        'Creates a _Bookwyrm Charm_.'
+      ])
+      .setPalette($Palette.GREEN)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_disintegration')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'On ritual success',
+        'Destroys nearby monsters and _converts_ them into _Experience Gems_ worth _twice_ as much experience. Monsters destroyed this way will _not_ drop items.'
+      ])
+      .addBehaviour([
+        'Additional Info',
+        'This ritual _consumes_ Source each time a monster is destroyed.'
+      ])
+      .setPalette($Palette.RED)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_sunrise')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'On ritual success',
+        'Sets the _time_ to day.'
+      ])
+      .setPalette($Palette.RED)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_cloudshaping')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'Usage',
+        'This ritual can _change_ the weather at a moment\'s notice. By _default_ this ritual will set the weather to _clear_.'
+      ])
+      .addBehaviour([
+        'Augmentation I',
+        'Augmenting with _Gunpowder_ will cause rain to fall from the skies.'
+      ])
+      .addBehaviour([
+        'Augmentation II',
+        'Augmenting with a _Lapis Block_ will cause a storm.'
+      ])
+      .setPalette($Palette.BLUE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_flight')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'On ritual success',
+        'Grants nearby players the _Flight_ effect when they _jump_, allowing Creative Flight for a short time. If the player is nearby, this ritual will _refresh_ their Flight buff.'
+      ])
+      .addBehaviour([
+        'Additional Info',
+        'Each time this ritual grants _or_ refreshes flight, it will expend source from _nearby_ Source Jars.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_conjure_island_plains')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'On ritual success',
+        'Creates an _island_ of grass and dirt in a circle around the ritual, converting the area to a _Plains biome_. Default radius is 7 blocks.'
+      ])
+      .addBehaviour([
+        'Augmentation I',
+        'Augmenting with a _Frostaya_ will create a _Snow Plains biome_ instead.'
+      ])
+      .addBehaviour([
+        'Augmentation II',
+        'Augmenting with _Source Gems_ will increase the radius by 1 for each gem.'
+      ])
+      .addBehaviour([
+        'Requirements',
+        'Source _must_ be provided nearby as blocks are generated.'
+      ])
+      .setPalette($Palette.GREEN)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_restoration')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'On ritual success',
+        '_Heals_ nearby entities or _harms_ undead over time.'
+      ])
+      .addBehaviour([
+        'Additional Info',
+        'Zombie Villagers will be _instantly_ cured and will offer discounts if a player was nearby.'
+      ])
+      .addBehaviour([
+        'Requirements',
+        'This ritual requires Source to operate.'
+      ])
+      .setPalette($Palette.GREEN)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_animal_summon')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'On ritual success',
+        'Summon a _random variety_ of wild animals _native_ to the biome the ritual occurs in.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_forestation')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'On ritual success',
+        'Places _grown_ Oak and Birch trees, and applies bonemeal in a 7x7 circular area.'
+      ])
+      .addBehaviour([
+        'Augmentation I',
+        'Augmenting with a Source Gem will _increase_ the radius by 1 for each gem.'
+      ])
+      .addBehaviour([
+        'Augmentation II',
+        'Augmenting with a _Brown Mushroom_ will convert the area to Podzol and spawn Taiga biome resources.'
+      ])
+      .addBehaviour([
+        'Augmentation III',
+        'Augmenting with _Glow Berries_ will spawn Jungle biome resources.'
+      ])
+      .setPalette($Palette.GREEN)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_warping')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'Requirements',
+        '_Before_ starting the ritual, you must first augment the ritual with an _inscribed_ Warp Scroll with a set location.'
+      ])
+      .addBehaviour([
+        'On ritual success',
+        'Warps all nearby entities to the set location on a _Warp Scroll_.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_moonfall')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'On ritual success',
+        'Sets the _time_ to night.'
+      ])
+      .setPalette($Palette.BLUE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_containment')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'Requirements',
+        'Mobs and Containment Jars must be _within 3 blocks_ of the Ritual Brazier.'
+      ])
+      .addBehaviour([
+        'On ritual success',
+        'Captures a nearby entity and places it into any nearby _placed_ Containment Jars.'
+      ])
+      .addBehaviour([
+        'Additional Info',
+        'After the first capture, this ritual requires additional Source to continue.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_scrying')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'Requirements',
+        'Throw the block you are searching for into the _Ritual Brazier_ before starting.'
+      ])
+      .addBehaviour([
+        'Augmentation - Duration Extension',
+        'Drop _Manipulation Essence_ to increase the duration to _15 minutes_.'
+      ])
+      .addBehaviour([
+        'On ritual success',
+        'Grants vision of a given block through any other block for a given time.'
+      ])
+      .addBehaviour([
+        'Vision Info',
+        '_White particles_ signify that you are _very_ close. _Green_ is semi-far. _Blue particles_ signify that the blocks are very far from you.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_gravity')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'On ritual success',
+        'Grants nearby players the _Gravity_ effect, forcing them to the ground for a short time. If the player is nearby, this ritual will refresh their Gravity debuff.'
+      ])
+      .addBehaviour([
+        'Additional Info',
+        'Each time this ritual grants _or_ refreshes gravity, it will expend Source from nearby Source Jars.'
+      ])
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_flowering')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'On ritual success',
+        'Populates the nearby area with flowers and grass.'
+      ])
+      .addBehaviour([
+        'Augmentation I',
+        'Augmenting with a _Source Gem_ will increase the radius by 1 for each gem.'
+      ])
+      .addBehaviour([
+        'Augmentation II',
+        'Augmenting with _Sand_ will replace flowers with Cacti and Dead Bushes.'
+      ])
+      .setPalette($Palette.GREEN)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_sanctuary')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'On ritual success',
+        '_Denies_ hostile mobs from naturally spawning in a 32 block radius.'
+      ])
+      .addBehaviour([
+        'Augmentation I',
+        'Augment with _Rotten Flesh_ to increase the radius by 1 each, up to a maximum of 128.'
+      ])
+      .addBehaviour([
+        'Requirements',
+        'Costs Source if a spawn is denied.'
+      ])
+      .setPalette($Palette.BLUE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_fertility')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'Usage',
+        'Periodically causes nearby animals to _breed_ if possible.'
+      ])
+      .addBehaviour([
+        'Requirements',
+        'Requires Source to operate, and will also have no effect if there are _twenty or more_ animals nearby.'
+      ])
+      .setPalette($Palette.GREEN)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_overgrowth')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'Usage',
+        'Occasionally bone meals blocks in the area around it.'
+      ])
+      .addBehaviour([
+        'Requirements',
+        'This ritual requires Source to operate.'
+      ])
+      .addBehaviour([
+        'Augmentation I',
+        'If _augmented_ with a _Bone Block_, this ritual will instead force baby animals to grow faster.'
+      ])
+      .setPalette($Palette.GREEN)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_conjure_island_desert')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'On ritual success',
+        'Creates an _island_ of sand and sandstone in a circle around the ritual, converting the area to a _Desert biome_. Default radius is 7 blocks.'
+      ])
+      .addBehaviour([
+        'Augmentation I',
+        'Augmenting with a _Terracotta_ will create a _Badlands biome_ instead.'
+      ])
+      .addBehaviour([
+        'Augmentation II',
+        'Augmenting with _Source Gems_ will increase the radius by 1 for each gem.'
+      ])
+      .addBehaviour([
+        'Requirements',
+        'Source _must_ be provided nearby as blocks are generated.'
+      ])
+      .setPalette($Palette.RED)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_harvest')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'On ritual success',
+        'Casts the _Harvest_ effect on nearby crops.'
+      ])
+      .addBehaviour([
+        'Requirements',
+        'Consumes Source each time a set of crops is harvested.'
+      ])
+      .addBehaviour([
+        'Additional Info',
+        'If an inventory is adjacent to the _Ritual Brazier_, the items will be automaitcally be _deposited_ in them before dropping on the ground if the storage is full.'
+      ])
+      .setPalette($Palette.GREEN)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:ritual_wilden_summon')
+      .addSummary(ritual_default)
+      .addBehaviour([
+        'Without augments',
+        'This ritual will summon a _random variety_ of Wilden monsters for a short duration.'
+      ])
+      .addBehaviour([
+        'With augments',
+        'When augmented with a _Wilden Spike_, _Wilden Horn_ and a _Wilden Wing_, this ritual will summon the _Wilden Chimera_, a challenging and destructive monster. Please note that summoning the Wilden Chimera will _destroy blocks_ around the _Ritual Brazier_.'
       ])
       .setPalette($Palette.PURPLE)
       .build()

@@ -16,9 +16,11 @@ let ars_single_line = [
   'wixie_shards',
   'spell_bow',
   'enchanters_sword',
-  'dowsing_rod'
+  'dowsing_rod',
+  'bookwyrm_charm',
+  'amethyst_golem_charm',
+  'drygmy_shard'
 ]
-
 let threads = [
   'depths',
   'heights',
@@ -40,6 +42,33 @@ let threads = [
   'wixie',
   'repairing'
 ]
+let wilden_drops = ['horn', 'spike', 'wing']
+let tablets = [
+  'burrowing',
+  'challenge',
+  'binding',
+  'awakening',
+  'disintegration',
+  'sunrise',
+  'cloudshaping',
+  'flight',
+  'conjure_island_plains',
+  'restoration',
+  'animal_summon',
+  'forestation',
+  'warping',
+  'moonfall',
+  'containment',
+  'scrying',
+  'gravity',
+  'flowering',
+  'sanctuary',
+  'fertility',
+  'overgrowth',
+  'conjure_island_desert',
+  'harvest',
+  'wilden_summon'
+]
 
 ItemEvents.tooltip(event => {
   for (let i = 0; i < ars_single_line.length; i++) {
@@ -54,6 +83,19 @@ ItemEvents.tooltip(event => {
   for (let i = 0; i < threads.length; i++) {
     let element = threads[i];
     event.addAdvanced('ars_nouveau:thread_' + element, (item, advanced, text) => {
+      text.remove(1)
+    })
+  }
+  for (let i = 0; i < wilden_drops.length; i++) {
+    let element = wilden_drops[i];
+    event.addAdvanced('ars_nouveau:wilden_' + element, (item, advanced, text) => {
+      text.remove(1)
+    })
+  }
+  for (let i = 0; i < tablets.length; i++) {
+    let element = tablets[i];
+    event.addAdvanced('ars_nouveau:ritual_' + element, (item, advanced, text) => {
+      text.remove(1)
       text.remove(1)
     })
   }
