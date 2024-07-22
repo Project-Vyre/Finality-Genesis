@@ -24,6 +24,7 @@ let enRI2 = [
   'kubejs:star_of_light_shape'
 ]
 let enRI3 = [
+  'kubejs:cpu_shape',
   'kubejs:green_rectangle',
   'kubejs:white_rectangle'
 ]
@@ -33,6 +34,7 @@ let enRI4 = [
   'kubejs:netherite_nugget'
 ]
 let enRI5 = [
+  'kubejs:blueprint_shape',
   'kubejs:blue_circle',
   'kubejs:white_circle',
   'kubejs:blue_rectangle_corner'
@@ -821,15 +823,17 @@ ServerEvents.recipes(event => {
     'kubejs:watermelon_shape',
     'kubejs:star_of_light_shape',
     'kubejs:potion_base_singularity',
+    enRI3[RNG3],
+    enRI5[RNG5],
     enRI1[RNG1]
   ]).id('kubejs:final_singularity_stage_four')
   event.recipes.create.mechanical_crafting('kubejs:final_singularity', [
     'COMPONENT',
     '.JOIN([  ',
-    'CM.OF(@),',
-    'CM.OF(0),',
-    'CM.OF(!),',
-    'CM.OF(#) ',
+    'CM.OF(a),',
+    'CM.OF(b),',
+    'CM.OF(c),',
+    'CM.OF(d) ',
     '])       ',
     '.COLOR(4)'
   ], {
@@ -851,11 +855,11 @@ ServerEvents.recipes(event => {
     '[': 'kubejs:left_bracket',
     ']': 'kubejs:right_bracket',
     '.': 'kubejs:full_point',
-    '#': 'kubejs:cpu_shape',
-    '!': enRI6[RNG6],// 'kubejs:emitter_shape',
-    '4': enRI1[RNG1],// 'kubejs:final_singularity_stage_four',
-    '@': enRI1[RNG1],// 'kubejs:chromatic_concrete_singularity',
-    '0': enRI1[RNG1]// 'kubejs:monochromatic_singularity'
+    'a': enRI1[RNG1], // 'kubejs:chromatic_concrete_singularity',
+    'b': enRI2[RNG2], // 'kubejs:monochromatic_singularity'
+    'c': enRI6[RNG6], // 'kubejs:emitter_shape',
+    'd': enRI3[RNG3], // 'kubejs:cpu_shape',
+    '4': 'kubejs:final_singularity_stage_four'// 'kubejs:final_singularity_stage_four'
   }).id('kubejs:final_singularity')
   event.recipes.create.mechanical_crafting('kubejs:command_block', [
     'IIGIIGII',
