@@ -34,6 +34,7 @@ config/roughlyenoughitems/hints.json
 config/jei/world/server/*
 enigmatic_persistence.dat
 o_prof
+observable_announce
 config/voicechat/username-cache.json
 blacksmith.jar
 config/aether/*
