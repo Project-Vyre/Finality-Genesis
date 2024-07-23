@@ -220,7 +220,6 @@ JEIEvents.hideItems(event => {
 
   if (Platform.isLoaded('pipez')) {
     event.hide('pipez:wrench')
-    event.hide('pipez:filter_destination_tool')
   }
 
   if (Platform.isLoaded('headhunter_mod') && Platform.isLoaded('apotheosis')) {

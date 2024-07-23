@@ -44,6 +44,16 @@ ServerEvents.recipes(event => {
     E: 'pipez:energy_pipe',
     F: 'pipez:fluid_pipe'
   }).id('kubejs:pipez/universal_pipe')
+  event.recipes.create.mechanical_crafting('pipez:filter_destination_tool', [
+    'III',
+    'RGR',
+    'IBI'
+  ], {
+    I: 'create:sturdy_sheet',
+    R: 'create:electron_tube',
+    G: '#forge:glass_panes/colorless',
+    B: '#minecraft:buttons'
+  }).id('kubejs:pipez/filter_destination_tool')
   if (Platform.isLoaded('mekanism')) {
     event.recipes.create.mechanical_crafting('pipez:gas_pipe', [
       'IIII',
