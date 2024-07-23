@@ -12,6 +12,7 @@ ServerEvents.recipes(event => {
     { id: 'waystones:mossy_waystone' },
     { id: 'waystones:sandy_waystone' },
     { id: 'waystones:sharestone' },
+    { id: 'waystones:portstone' },
     { id: 'waystones:warp_stone' },
     { id: 'waystones:warp_dust' },
     { id: 'waystones:return_scroll' },
@@ -74,6 +75,15 @@ ServerEvents.recipes(event => {
     W: 'waystones:warp_stone',
     O: 'minecraft:obsidian'
   }).id('kubejs:waystones/mechanical_crafting/sharestone')
+  event.recipes.create.mechanical_crafting('waystones:portstone', [
+    ' S ',
+    'SWS',
+    'AAA'
+  ], {
+    S: 'minecraft:stone_bricks',
+    W: 'waystones:warp_stone',
+    A: 'minecraft:polished_andesite'
+  }).id('kubejs:waystones/mechanical_crafting/portstone')
   event.recipes.minecraft.crafting_shaped('waystones:warp_stone', [
     'AAA',
     'AEA',
