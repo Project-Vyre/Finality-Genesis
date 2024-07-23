@@ -193,7 +193,7 @@ StartupEvents.registry('item', event => {
     .rarity('epic')
     .tag('create:upright_on_belt')
   if (Platform.isLoaded('ae2')) {
-    event.create('kubejs:sky_stone_dust_singularity')
+    event.create('kubejs:sky_stone_singularity')
       .texture('layer0', 'kubejs:item/singularity')
       .texture('layer1', 'kubejs:item/singularity_overlay')
       .color(0, 0x394139)
