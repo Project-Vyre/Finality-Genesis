@@ -50,7 +50,7 @@ RNG2 = Utils.random.nextInt(0, enRI2.length - 1)
 RNG3 = Utils.random.nextInt(0, enRI3.length - 1)
 RNG4 = Utils.random.nextInt(0, enRI4.length - 1)
 RNG5 = Utils.random.nextInt(0, enRI5.length - 1)
-RNG6 = Utils.random.nextInt(0, enRI5.length - 1)
+RNG6 = Utils.random.nextInt(0, enRI6.length - 1)
 
 // Usage: enRI1[RNG1]
 
