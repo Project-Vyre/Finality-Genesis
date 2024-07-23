@@ -12,7 +12,7 @@ let TIME_INTERVAL = 20 * 60
 
 let modpack_name = 'Finality Genesis'
 let url_id = 'ichBTqwH'
-let version = '0.1.0-beta.21'
+let version = '0.1.0-beta.22'
 let client_data = {
   url_id: url_id,
   modpack_name: modpack_name,
