@@ -6,7 +6,7 @@
 	hide_quest_until_deps_visible: true
 	icon: "reliquary:holy_hand_grenade"
 	id: "1F87E8208E1E2F7A"
-	order_index: 8
+	order_index: 9
 	quest_links: [ ]
 	quests: [
 		{

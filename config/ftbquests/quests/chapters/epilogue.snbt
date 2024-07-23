@@ -615,6 +615,21 @@
 					item: "kubejs:final_hoe"
 					type: "item"
 				}
+				{
+					id: "1F52B4D325AF6A83"
+					item: "kubejs:final_lance"
+					type: "item"
+				}
+				{
+					id: "651DB8F15A3C2941"
+					item: "kubejs:final_scythe"
+					type: "item"
+				}
+				{
+					id: "2AD446D010A970C4"
+					item: "kubejs:final_katana"
+					type: "item"
+				}
 			]
 			title: "&l<rainb>Instrumenta Omnipotens</rainb>"
 			x: -3.0d
@@ -886,10 +901,10 @@
 				"16EFBAF2CDCCCA8C"
 			]
 			id: "1E1D3F1D96D2D774"
-			size: 2.0d
+			size: 1.0d
 			tasks: [{
 				id: "15AE2DD45E11D798"
-				item: "kubejs:final_singularity"
+				item: "kubejs:final_singularity_stage_nulla"
 				type: "item"
 			}]
 			x: 0.0d

@@ -509,12 +509,17 @@
 			id: "23744C5D8A153163"
 			rewards: [
 				{
-					id: "12E55DAB35AF24DA"
+					id: "7939519A1CDF07DF"
+					item: "create:empty_blaze_burner"
+					type: "item"
+				}
+				{
+					id: "12FE93EDD3AC1863"
 					item: "minecraft:diamond"
 					type: "item"
 				}
 				{
-					id: "0BD42467276E6488"
+					id: "3C1550B051D50A93"
 					type: "xp"
 					xp: 250
 				}
@@ -522,6 +527,7 @@
 			shape: "hexagon"
 			subtitle: "You got it, now what?"
 			tasks: [{
+				consume_items: true
 				id: "39F16EECF25DED7C"
 				item: "create:empty_blaze_burner"
 				type: "item"

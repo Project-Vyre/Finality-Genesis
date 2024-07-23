@@ -222,9 +222,16 @@
 			description: [
 				"The &aSigil of Withdrawal&r allows you to &cdestroy&r all of the &l&5gem(s)&r socketed in your &bAffixed item&r."
 				""
-				"Use it in a &6Smithing Table&r."
+				"The &7Sigil of Unnaming&r allows you to remove the affixes."
+				""
+				"Use them in a &6Smithing Table&r."
 			]
 			id: "292255F2891C4C7F"
+			rewards: [{
+				id: "17BA6260556F6E06"
+				item: "apotheosis:sigil_of_unnaming"
+				type: "item"
+			}]
 			subtitle: "The gems are gone, but your item is safe."
 			tasks: [{
 				id: "0D863DF077349F1F"
@@ -238,12 +245,12 @@
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
 			description: [
-				"The &6Vial of Searing Expulsion&r allows you to &l&cdestroy&r the &l&5gem(s)&r socketed inside your &bAffixed item&r and allows you to keep your said Affixed item."
+				"The &9Sigil of Socketing&r allows you to &l&aadd&r sockets to your affixed equipment."
 				""
 				"Use it in a &6Smithing Table&r."
 			]
 			id: "7C48CEAB862B2C27"
-			subtitle: "You monster, what have you done?"
+			subtitle: "Adding sockets to your items!"
 			tasks: [{
 				id: "7093EDBEAC46001D"
 				item: "apotheosis:sigil_of_socketing"
@@ -478,7 +485,7 @@
 			}]
 			title: "Ultimate Item Reforging - The Reforging Table"
 			x: 0.0d
-			y: 18.5d
+			y: 18.0d
 		}
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
@@ -665,15 +672,24 @@
 			y: 5.0d
 		}
 		{
-			id: "28FEFF611AA7F8CA"
-			tasks: [{
-				id: "500FECE646A49044"
-				item: "apotheosis:sigil_of_unnaming"
+			dependencies: ["3718E49C5B96FBFA"]
+			description: ["The Augmentation Table requires &6Sigils of Enchancement&r as fuel."]
+			id: "5E27393462550EA6"
+			rewards: [{
+				count: 4
+				id: "08DBA7B9003DB05F"
+				item: "apotheosis:sigil_of_enhancement"
 				type: "item"
 			}]
-			title: "Sigil of Unnaming"
-			x: 3.0d
-			y: 2.5d
+			subtitle: "You can now change your affix AND upgrade it."
+			tasks: [{
+				id: "7A4713960DD78CFA"
+				item: "apotheosis:augmenting_table"
+				type: "item"
+			}]
+			title: "The Augmentation Table"
+			x: 0.0d
+			y: 19.5d
 		}
 	]
 	subtitle: ["Apotheosis is that one mod that makes everything powerful."]

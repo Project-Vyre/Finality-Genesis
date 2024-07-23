@@ -5,7 +5,7 @@
 	group: "6855847200ADBE3A"
 	icon: "ars_nouveau:archmage_spell_book"
 	id: "2AA25BC4CFE80649"
-	order_index: 5
+	order_index: 6
 	quest_links: [ ]
 	quests: [
 		{
@@ -23,8 +23,14 @@
 		}
 		{
 			dependencies: ["06A37230A8CE3CD4"]
+			description: [
+				"Once Source is made, it has to go somewhere."
+				""
+				"Sourcelinks and most Relays can transport Source into these Source Jars."
+			]
 			id: "0A65D0229666E8DF"
 			shape: "octagon"
+			subtitle: "It has to go somewhere, right?"
 			tasks: [{
 				id: "644DDF9B31F9AD1F"
 				item: "ars_nouveau:source_jar"
@@ -151,7 +157,10 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["40427C571EE5DD58"]
+			dependencies: [
+				"40427C571EE5DD58"
+				"356C4FF1F5E355E9"
+			]
 			id: "32E9D5D5BD7DAC59"
 			tasks: [{
 				id: "0B63BE2E7A1A9253"
@@ -233,6 +242,7 @@
 			dependencies: ["620FD233BD3F47A5"]
 			id: "7E105797895F8B49"
 			shape: "hexagon"
+			subtitle: "Long distance Source transport, with a risk!"
 			tasks: [{
 				id: "2282EC9708403B0B"
 				item: "ars_nouveau:relay_warp"
@@ -368,36 +378,32 @@
 			dependencies: ["56D960EC0664E2AF"]
 			hide: true
 			id: "298DF1FBF45DE62C"
-			tasks: [{
-				id: "4068592D0627D098"
-				item: {
-					Count: 1
-					id: "ars_nouveau:enchanters_sword"
-					tag: {
-						Damage: 0
+			tasks: [
+				{
+					id: "4068592D0627D098"
+					item: {
+						Count: 1
+						id: "ars_nouveau:enchanters_sword"
+						tag: {
+							Damage: 0
+						}
 					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					id: "62BDEF1ABC9BBD46"
+					item: {
+						Count: 1
+						id: "ars_nouveau:enchanters_shield"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Enchanter Warrior"
 			x: 3.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["56D960EC0664E2AF"]
-			hide: true
-			id: "32576FE64A488304"
-			tasks: [{
-				id: "23E253784EB3D93C"
-				item: {
-					Count: 1
-					id: "ars_nouveau:enchanters_shield"
-					tag: {
-						Damage: 0
-					}
-				}
-				type: "item"
-			}]
-			x: 4.5d
 			y: 4.0d
 		}
 		{
@@ -413,7 +419,7 @@
 				}
 				type: "item"
 			}]
-			x: 8.5d
+			x: 7.0d
 			y: 4.0d
 		}
 		{
@@ -429,7 +435,7 @@
 				}
 				type: "item"
 			}]
-			x: 6.5d
+			x: 5.0d
 			y: 4.0d
 		}
 		{
@@ -440,7 +446,7 @@
 				item: "ars_nouveau:pierce_arrow"
 				type: "item"
 			}]
-			x: 5.5d
+			x: 4.0d
 			y: 5.0d
 		}
 		{
@@ -451,7 +457,7 @@
 				item: "ars_nouveau:split_arrow"
 				type: "item"
 			}]
-			x: 7.5d
+			x: 6.0d
 			y: 5.0d
 		}
 		{
@@ -462,7 +468,7 @@
 				item: "ars_nouveau:amplify_arrow"
 				type: "item"
 			}]
-			x: 6.5d
+			x: 5.0d
 			y: 5.5d
 		}
 		{
@@ -613,33 +619,26 @@
 				}
 				type: "item"
 			}]
-			x: 10.5d
+			x: 8.0d
 			y: 4.0d
 		}
 		{
 			dependencies: ["36E7D0C53B6BD807"]
-			description: ["(placeholder text)"]
+			description: [
+				"In order to make spells, you must first create &dGlyphs&r with the &bScribe's Table&r."
+				""
+				"Right click with your &dSpell Book&r in your main hand in order to see all the available &dGlyphs&r that can be crafted."
+			]
 			hide: true
+			icon: "ars_nouveau:glyph_touch"
 			id: "6C62EA09DFF5DEAE"
 			shape: "rsquare"
 			subtitle: "Multi-purpose spells for your use."
-			tasks: [
-				{
-					id: "5B8EEB997EEF20F0"
-					item: "ars_nouveau:glyph_projectile"
-					type: "item"
-				}
-				{
-					id: "3598739AC7B35E39"
-					item: "ars_nouveau:glyph_touch"
-					type: "item"
-				}
-				{
-					id: "36A16E6A3C267E81"
-					item: "ars_nouveau:glyph_self"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "7FB8AAAD0C18809F"
+				title: "Click me once you're done."
+				type: "checkmark"
+			}]
 			title: "Introduction to Spell Casting"
 			x: 3.0d
 			y: 0.0d
@@ -676,8 +675,8 @@
 				item: "ars_nouveau:glyph_orbit"
 				type: "item"
 			}]
-			x: 10.5d
-			y: 0.0d
+			x: 5.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["36E7D0C53B6BD807"]
@@ -689,7 +688,7 @@
 				item: "ars_nouveau:glyph_split"
 				type: "item"
 			}]
-			x: 10.5d
+			x: 8.0d
 			y: 1.0d
 		}
 		{
@@ -702,7 +701,7 @@
 				item: "ars_nouveau:glyph_underfoot"
 				type: "item"
 			}]
-			x: 5.0d
+			x: 4.0d
 			y: 0.0d
 		}
 		{
@@ -779,6 +778,7 @@
 			hide: true
 			id: "7A14D1573D68D07C"
 			shape: "rsquare"
+			subtitle: "Everything utility related."
 			tasks: [
 				{
 					id: "69A33A674835BEAE"
@@ -848,7 +848,7 @@
 			]
 			title: "Utility Attunements"
 			x: 3.0d
-			y: 2.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["02F721F5C94BEDF8"]
@@ -860,8 +860,8 @@
 				item: "ars_nouveau:glyph_intangible"
 				type: "item"
 			}]
-			x: 10.5d
-			y: 2.5d
+			x: 8.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -885,8 +885,8 @@
 				}
 			]
 			title: "Water Elemental Attunements"
-			x: 9.5d
-			y: 2.5d
+			x: 7.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["6A892CD71E3C8AA5"]
@@ -918,11 +918,6 @@
 					type: "item"
 				}
 				{
-					id: "310F262395C0433D"
-					title: "Animate Block (Only on 1.19.2!)"
-					type: "checkmark"
-				}
-				{
 					id: "541BB73E1E7FC698"
 					item: "ars_nouveau:glyph_summon_vex"
 					type: "item"
@@ -937,10 +932,15 @@
 					item: "ars_nouveau:glyph_summon_decoy"
 					type: "item"
 				}
+				{
+					id: "2E942DEAF04AEEB6"
+					item: "ars_nouveau:glyph_animate_block"
+					type: "item"
+				}
 			]
 			title: "Ally Attunements"
 			x: 4.0d
-			y: 2.5d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -963,8 +963,8 @@
 				}
 			]
 			title: "Fire Elemental Attunements"
-			x: 8.5d
-			y: 2.5d
+			x: 6.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["4DF2C4AF2998388D"]
@@ -1015,7 +1015,11 @@
 		}
 		{
 			dependencies: ["58E50E3ADD6879BF"]
-			description: ["Before you create any of the armor sets, you need to make threads and the Alteration Table."]
+			description: [
+				"Before you create any of the armor sets, you need to make threads and the Alteration Table."
+				""
+				"Blank Threads can be used to make other armor augments such as the Thread of Repairing."
+			]
 			id: "4DF2C4AF2998388D"
 			shape: "rsquare"
 			tasks: [

@@ -274,6 +274,23 @@
 			x: 0.0d
 			y: 1.5d
 		}
+		{
+			dependencies: ["63EB9837EBD48510"]
+			id: "11472156079C4EF1"
+			tasks: [{
+				id: "418510316E4A37FE"
+				item: {
+					Count: 1
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "kubejs:bastion_salvation"
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: -4.5d
+		}
 	]
 	subtitle: ["Eternal mob loot. Quest tree work in progress."]
 	title: "Gateways to Eternity"

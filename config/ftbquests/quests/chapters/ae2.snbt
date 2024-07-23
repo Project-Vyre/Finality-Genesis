@@ -1,0 +1,91 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "ae2"
+	group: "6855847200ADBE3A"
+	hide_quest_until_deps_visible: true
+	icon: "ae2:singularity"
+	id: "704BE125DC1524EA"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["15149B4F5A4E32C0"]
+			icon: "ae2:inscriber"
+			id: "64164F00B745E7FC"
+			subtitle: "You'll need a bunch of these..."
+			tasks: [
+				{
+					id: "55BD1486EDD56FAB"
+					item: "ae2:inscriber"
+					type: "item"
+				}
+				{
+					id: "3907C5C8EAC9B185"
+					item: "ae2:printed_calculation_processor"
+					type: "item"
+				}
+				{
+					id: "1CD7A98F956A2911"
+					item: "ae2:printed_engineering_processor"
+					type: "item"
+				}
+				{
+					id: "45A82720DFCCE4DF"
+					item: "ae2:printed_logic_processor"
+					type: "item"
+				}
+				{
+					id: "71BF89BCEAF97F47"
+					item: "ae2:printed_silicon"
+					type: "item"
+				}
+			]
+			title: "Inscribing"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4A691BB889286C89"]
+			description: ["Inside these &bMysterious Cubes&r you will find Inscriber Presses."]
+			icon: "ae2:meteorite_compass"
+			id: "15149B4F5A4E32C0"
+			subtitle: "You will need to find yourself some Mysterious Cubes to start off."
+			tasks: [
+				{
+					id: "4A702B122439E294"
+					item: "ae2:meteorite_compass"
+					type: "item"
+				}
+				{
+					id: "262573DE2E501476"
+					item: "ae2:calculation_processor_press"
+					type: "item"
+				}
+				{
+					id: "519DF02F4A79F8C5"
+					item: "ae2:engineering_processor_press"
+					type: "item"
+				}
+				{
+					id: "0137BE2D1C90D8DD"
+					item: "ae2:logic_processor_press"
+					type: "item"
+				}
+				{
+					id: "3675F9CE900DEE19"
+					item: "ae2:silicon_press"
+					type: "item"
+				}
+			]
+			title: "Meteorite Discovery"
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	subtitle: [
+		"Logistics incarnate."
+		"Work in progress!"
+	]
+	title: "Applied Energistics 2"
+}

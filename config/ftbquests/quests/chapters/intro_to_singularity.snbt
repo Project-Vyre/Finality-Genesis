@@ -612,6 +612,17 @@
 					item: "summoningrituals:altar"
 					type: "item"
 				}
+				{
+					id: "47D090D0F1DB4831"
+					item: {
+						Count: 1
+						id: "scannable:scanner"
+						tag: {
+							energy: 5000
+						}
+					}
+					type: "item"
+				}
 			]
 			title: "Convenient Utilities Ch.3"
 			x: -3.0d
@@ -1079,6 +1090,11 @@
 				{
 					id: "4BEDEE986C0213EC"
 					item: "kubejs:music_disc_black_white_red"
+					type: "item"
+				}
+				{
+					id: "577B9E3D748B7517"
+					item: "kubejs:music_disc_pulcinella_battle_theme"
 					type: "item"
 				}
 			]
