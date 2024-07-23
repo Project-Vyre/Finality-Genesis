@@ -623,8 +623,78 @@ ClientEvents.lang('en_us', event => {
   )
   event.addAll(
     'kubejs',
+    createTooltip('ars_nouveau:wilden_tribute')
+      .addSummary('Obtained by defeating the _Wilden Chimera_ which is summoned with an augmented _Ritual of Summon Wilden_.')
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
     createTooltip('ars_nouveau:drygmy_shard')
       .addSummary('Obtained by giving a Drygmy a _Wilden Horn_.')
+      .build()
+  )
+  // ESSENCES
+  let essences_default = 'Magical Essences _created_ in an _Imbuement Chamber_.'
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:abjuration_essence')
+      .addSummary(essences_default)
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:conjuration_essence')
+      .addSummary(essences_default)
+      .setPalette($Palette.BLUE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:air_essence')
+      .addSummary(essences_default)
+      .setPalette($Palette.YELLOW)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:earth_essence')
+      .addSummary(essences_default)
+      .addBehaviour([
+        'On R-Click on Dirt',
+        'Converts it into a Grass Block'
+      ])
+      .setPalette($Palette.GREEN)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:fire_essence')
+      .addSummary(essences_default)
+      .addBehaviour([
+        'Additional Info',
+        'Can be used as a _fuel_ source.'
+      ])
+      .setPalette($Palette.RED)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:manipulation_essence')
+      .addSummary(essences_default)
+      .addBehaviour([
+        'Additional Info',
+        'Can be scribed onto a _Spell Parchment_ or _Caster_ tool to permanently _hide_ the spell glyphs.'
+      ])
+      .setPalette($Palette.YELLOW)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:water_essence')
+      .addSummary(essences_default)
+      .setPalette($Palette.BLUE)
       .build()
   )
   // CHARMS
@@ -650,6 +720,20 @@ ClientEvents.lang('en_us', event => {
         'Acquisition',
         'Obtained by performing the _Ritual of Awakening_ near Budding Amethyst.'
       ])
+      .build()
+  )
+  // PARCHMENT
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:spell_parchment')
+      .addSummary('Can be _inscribed_ with a spell at the _Scribes Table_.')
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:caster_tome')
+      .addSummary('Casts a spell at _half_ the cost or the user\'s _entire_ manabar, whichever is _smaller_.')
+      .setPalette($Palette.PURPLE)
       .build()
   )
   /**

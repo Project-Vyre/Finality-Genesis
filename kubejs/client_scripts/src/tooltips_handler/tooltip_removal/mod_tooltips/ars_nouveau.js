@@ -19,7 +19,19 @@ let ars_single_line = [
   'dowsing_rod',
   'bookwyrm_charm',
   'amethyst_golem_charm',
-  'drygmy_shard'
+  'drygmy_shard',
+  'spell_parchment',
+  'caster_tome',
+  'wilden_tribute',
+  'abjuration_essence',
+  'conjuration_essence',
+  'air_essence',
+  'water_essence'
+]
+let ars_two_lines = [
+  'earth_essence',
+  'fire_essence',
+  'manipulation_essence'
 ]
 let threads = [
   'depths',
@@ -74,6 +86,13 @@ ItemEvents.tooltip(event => {
   for (let i = 0; i < ars_single_line.length; i++) {
     let element = ars_single_line[i];
     event.addAdvanced('ars_nouveau:' + element, (item, advanced, text) => {
+      text.remove(1)
+    })
+  }
+  for (let i = 0; i < ars_two_lines.length; i++) {
+    let element = ars_two_lines[i];
+    event.addAdvanced('ars_nouveau:' + element, (item, advanced, text) => {
+      text.remove(1)
       text.remove(1)
     })
   }
