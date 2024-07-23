@@ -42,8 +42,8 @@ let enRI5 = [
 let enRI6 = [
   'kubejs:emitter_shape',
   'kubejs:magenta_rectangle_corner',
-  'kubejs:magenta_rectangle_right_half',
-  'kubejs:magenta_rectangle_left_half'
+  'kubejs:magenta_right_half_rectangle',
+  'kubejs:magenta_left_half_rectangle'
 ]
 RNG1 = Utils.random.nextInt(0, enRI1.length - 1)
 RNG2 = Utils.random.nextInt(0, enRI2.length - 1)
