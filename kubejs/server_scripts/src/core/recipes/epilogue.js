@@ -19,9 +19,10 @@ let enRI1 = [
 ]
 let enRI2 = [
   'kubejs:watermelon_shape',
-  'create:sequenced_gearshift',
   'kubejs:green_circle',
-  'kubejs:star_of_light_shape'
+  'kubejs:star_of_light_shape',
+  'kubejs:green_circle_corner',
+  'kubejs:red_circle_corner'
 ]
 let enRI3 = [
   'kubejs:cpu_shape',
@@ -52,7 +53,15 @@ RNG4 = Utils.random.nextInt(0, enRI4.length - 1)
 RNG5 = Utils.random.nextInt(0, enRI5.length - 1)
 RNG6 = Utils.random.nextInt(0, enRI6.length - 1)
 
-// Usage: enRI1[RNG1]
+/*
+Usage:
+enRI1[RNG1]
+enRI2[RNG2]
+enRI3[RNG3]
+enRI4[RNG4]
+enRI5[RNG5]
+enRI6[RNG6]
+*/
 
 ServerEvents.recipes(event => {
   // singularity creation step 1
@@ -771,7 +780,8 @@ ServerEvents.recipes(event => {
     'kubejs:uncolored_circle_corner',
     'kubejs:uncolored_rectangle_corner',
     'kubejs:uncolored_windmill_corner',
-    'kubejs:uncolored_star_corner'
+    'kubejs:uncolored_star_corner',
+    enRI4[RNG4]
   ]).id('kubejs:mixing/final_singularity_stage_one')
   event.recipes.create.mechanical_crafting('kubejs:final_singularity_stage_two', [
     '/UPGRADE',
