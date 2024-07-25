@@ -93,8 +93,48 @@ ServerEvents.recipes(event => {
   ], Item.of('productivebees:configurable_comb', '{EntityTag:{type:"productivebees:rose_quartz"}}').strongNBT())
     .heated()
     .id('kubejs:productivebees/mixing/comb_rose_quartz')
+  event.custom({
+    "type": "productivebees:centrifuge",
+    "ingredient": {
+      "type": "forge:nbt",
+      "item": "productivebees:configurable_honeycomb",
+      "nbt": {
+        "EntityTag": {
+          "type": "productivebees:obsidian"
+        }
+      }
+    },
+    "outputs": [
+      {
+        "item": {
+          "item": "minecraft:obsidian"
+        },
+        "chance": 40
+      },
+      {
+        "item": {
+          "tag": "forge:wax"
+        }
+      },
+      {
+        "fluid": {
+          "fluid": "productivebees:honey"
+        },
+        "amount": 50
+      }
+    ],
+    "conditions": [
+      {
+        "type": "forge:not",
+        "value": {
+          "type": "forge:tag_empty",
+          "tag": "forge:dusts/obsidian"
+        }
+      }
+    ]
+  }).id('productivebees:centrifuge/honeycomb_obsidian_dust')
   event.recipes.create.mixing([
-    Item.of('create:powdered_obsidian', 20).withChance(0.50),
+    Item.of('minecraft:obsidian', 4).withChance(0.40),
     Fluid.of('productivebees:honey', 200)
   ], Item.of('productivebees:configurable_comb', '{EntityTag:{type:"productivebees:obsidian"}}').strongNBT())
     .heated()
