@@ -594,6 +594,27 @@ ClientEvents.lang('en_us', event => {
       ])
       .build()
   )
+  event.addAll(
+    'kubejs',
+    createTooltip('kubejs:final_singularity_stage_one')
+      .addSummary('The guaranteed output recipe for this item changes _every_ world load.')
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('kubejs:final_singularity_stage_four')
+      .addSummary('The guaranteed output recipe for this item changes _every_ world load.')
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('kubejs:final_singularity')
+      .addSummary('Parts of this recipe change _every_ world load.')
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
   if (Platform.isLoaded('finality')) {
     event.addAll('minecraft', {
       "block.minecraft.nether_wart.tooltip.condition1": "When haunted",
