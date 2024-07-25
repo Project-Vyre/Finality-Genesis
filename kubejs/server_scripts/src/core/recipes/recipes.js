@@ -720,6 +720,14 @@ ServerEvents.recipes(event => {
     Item.of('create:experience_nugget').withChance(0.75),
     Item.of('minecraft:cobbled_deepslate').withChance(0.125)
   ], 'kubejs:deepslate_iridium_ore').processingTime(450).id('finality:crushing/deepslate_iridium_ore')
+  event.recipes.create.crushing([
+    '9x kubejs:crushed_raw_iridium',
+    Item.of('create:experience_nugget', 9).withChance(0.75)
+  ], 'kubejs:raw_iridium_block').processingTime(450).id('kubejs:crushing/raw_iridium_block')
+  event.recipes.create.crushing([
+    'kubejs:crushed_raw_iridium',
+    Item.of('create:experience_nugget').withChance(0.75)
+  ], 'kubejs:raw_iridium').processingTime(450).id('kubejs:crushing/raw_iridium')
   event.recipes.minecraft.smelting(
     'kubejs:iridium_ingot',
     'kubejs:crushed_raw_iridium'
