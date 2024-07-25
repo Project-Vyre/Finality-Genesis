@@ -352,39 +352,82 @@ ClientEvents.lang('en_us', event => {
       .setPalette($Palette.PURPLE)
       .build()
   )
+  /**
+   * Enchanter's Items
+   */
+  let enchanter_default = 'Can be _inscribed_ with a spell at the _Scribe\'s Table_.'
+  let enchanter_inscribe = [
+    'To Inscribe',
+    'Place on the Scribes Table first then _Shift_ + R-Click_ with a _Spell Book_ in your main hand that has a configured spell.'
+  ]
   event.addAll(
     'kubejs',
     createTooltip('ars_nouveau:enchanters_sword')
-      .addSummary('Can be inscribed with a spell at the _Scribes Table_.')
-      .addBehaviour([
-        'To Inscribe',
-        'Place on the Scribes Table first then _Shift_ + R-Click_ with a _Spell Book_ in your main hand that has a configured spell.'
-      ])
+      .addSummary(enchanter_default)
+      .addBehaviour(enchanter_inscribe)
       .setPalette($Palette.PURPLE)
       .build()
   )
   event.addAll(
     'kubejs',
     createTooltip('ars_nouveau:spell_bow')
-      .addSummary('Can be inscribed with a spell at the _Scribes Table_.')
-      .addBehaviour([
-        'To Inscribe',
-        'Place on the Scribes Table first then _Shift_ + _R-Click_ with a _Spell Book_ in your main hand that has a configured spell.'
-      ])
+      .addSummary(enchanter_default)
+      .addBehaviour(enchanter_inscribe)
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:spell_crossbow')
+      .addSummary(enchanter_default)
+      .addBehaviour(enchanter_inscribe)
       .setPalette($Palette.PURPLE)
       .build()
   )
   event.addAll(
     'kubejs',
     createTooltip('ars_nouveau:wand')
-      .addSummary('Can be inscribed with a spell at the _Scribes Table_.')
+      .addSummary(enchanter_default)
+      .addBehaviour(enchanter_inscribe)
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:enchanters_mirror')
+      .addSummary(enchanter_default)
+      .addBehaviour(enchanter_inscribe)
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('ars_nouveau:enchanters_shield')
+      .addSummary('An enhanced shield that _repairs itself_ over time using the wearer\'s mana.')
       .addBehaviour([
-        'To Inscribe',
-        'Place on the Scribes Table first then _Shift_ + _R-Click_ with a _Spell Book_ in your main hand that has a configured spell.'
+        'On blocking damage',
+        'Grants increased _Mana Regeneration_ and _Spell Damage_ for a short duration.'
       ])
       .setPalette($Palette.PURPLE)
       .build()
   )
+  // augment arrows
+  let arrow_augment = '_Augments_ spells when used with either an Enchanter\'s Bow or Crossbow.'
+  let enchanter_arrows = [
+    'amplify',
+    'split',
+    'pierce'
+  ]
+  for (let i = 0; i < enchanter_arrows.length; i++) {
+    let element = enchanter_arrows[i];
+    event.addAll(
+      'kubejs',
+      createTooltip('ars_nouveau:' + element + '_arrow')
+        .addSummary(arrow_augment)
+        .setPalette($Palette.PURPLE)
+        .build()
+    )
+  }
   event.addAll(
     'kubejs',
     createTooltip('ars_nouveau:wixie_shards')
