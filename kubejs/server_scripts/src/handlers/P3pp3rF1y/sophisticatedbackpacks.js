@@ -229,7 +229,7 @@ ServerEvents.recipes(event => {
     M: 'minecraft:glistering_melon_slice',
     D: 'create:deployer'
   }).id('kubejs:sophisticatedbackpacks/feeding_upgrade')
-  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:advanced_feeding_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:advanced_feeding_upgrade', [
     ' S ',
     'CBC',
     'RRR'
@@ -238,9 +238,9 @@ ServerEvents.recipes(event => {
     C: 'create:brass_casing',
     B: 'sophisticatedbackpacks:feeding_upgrade',
     R: 'create:mechanical_arm'
-  }).id('kubejs:sophisticatedbackpacks/mechanical_crafting/advanced_feeding_upgrade')
+  }).id('kubejs:sophisticatedbackpacks/advanced_feeding_upgrade')
   // compacting
-  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:compacting_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:compacting_upgrade', [
     'EPE',
     'PBP',
     'EPE'
@@ -248,8 +248,8 @@ ServerEvents.recipes(event => {
     E: 'create:electron_tube',
     P: 'create:mechanical_piston',
     B: 'sophisticatedbackpacks:upgrade_base'
-  }).id('kubejs:sophisticatedbackpacks/mechanical_crafting/compacting_upgrade')
-  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:advanced_compacting_upgrade', [
+  }).id('kubejs:sophisticatedbackpacks/compacting_upgrade')
+  event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:advanced_compacting_upgrade', [
     'NPN',
     'PBP',
     'NPN'
@@ -257,17 +257,17 @@ ServerEvents.recipes(event => {
     N: 'kubejs:null_matter',
     P: 'create:mechanical_piston',
     B: 'sophisticatedbackpacks:compacting_upgrade'
-  }).id('kubejs:sophisticatedbackpacks/mechanical_crafting/advanced_compacting_upgrade')
+  }).id('kubejs:sophisticatedbackpacks/advanced_compacting_upgrade')
   // void
-  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:void_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:void_upgrade', [
     ' A ',
     'ABA',
     ' A '
   ], {
     A: 'kubejs:awakened_singularity_core',
     B: 'sophisticatedbackpacks:upgrade_base'
-  }).id('kubejs:sophisticatedbackpacks/mechanical_crafting/void_upgrade')
-  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:advanced_void_upgrade', [
+  }).id('kubejs:sophisticatedbackpacks/void_upgrade')
+  event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:advanced_void_upgrade', [
     'NAN',
     'ABA',
     'NAN'
@@ -275,9 +275,9 @@ ServerEvents.recipes(event => {
     N: 'kubejs:null_matter',
     A: 'kubejs:awakened_singularity_core',
     B: 'sophisticatedbackpacks:void_upgrade'
-  }).id('kubejs:sophisticatedbackpacks/mechanical_crafting/advanced_void_upgrade')
+  }).id('kubejs:sophisticatedbackpacks/advanced_void_upgrade')
   // restock
-  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:restock_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:restock_upgrade', [
     ' P ',
     'IUI',
     'ECE'
@@ -288,7 +288,7 @@ ServerEvents.recipes(event => {
     E: 'create:electron_tube',
     C: 'create:chute'
   }).id('kubejs:sophisticatedbackpacks/restock_upgrade')
-  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:advanced_restock_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:advanced_restock_upgrade', [
     ' P ',
     'IUI',
     'ECE'
@@ -300,7 +300,7 @@ ServerEvents.recipes(event => {
     C: 'create:smart_chute'
   }).id('kubejs:sophistactedbackpacks/advanced_restock_upgrade')
   // deposit
-  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:deposit_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:deposit_upgrade', [
     ' P ',
     'IUI',
     'ECE'
@@ -311,7 +311,7 @@ ServerEvents.recipes(event => {
     E: 'create:electron_tube',
     C: 'create:chute'
   }).id('kubejs:sophisticatedbackpacks/deposit_upgrade')
-  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:advanced_deposit_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:advanced_deposit_upgrade', [
     ' P ',
     'IUI',
     ' C '
@@ -322,7 +322,7 @@ ServerEvents.recipes(event => {
     C: 'create:smart_chute'
   }).id('kubejs:sophisticatedbackpacks/advanced_deposit_upgrade')
   // refill
-  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:refill_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:refill_upgrade', [
     ' P ',
     'IUI',
     'ECE'
@@ -333,7 +333,7 @@ ServerEvents.recipes(event => {
     E: 'create:electron_tube',
     C: 'create:chute'
   }).id('kubejs:sophisticatedbackpacks/refill_upgrade')
-  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:advanced_refill_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:advanced_refill_upgrade', [
     ' P ',
     'IUI',
     ' C '
@@ -344,7 +344,7 @@ ServerEvents.recipes(event => {
     C: 'create:smart_chute'
   }).id('kubejs:sophisticatedbackpacks/advanced_refill_upgrade')
   // inception
-  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:inception_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:inception_upgrade', [
     'INI',
     'NUN',
     'INI'
@@ -487,7 +487,7 @@ ServerEvents.recipes(event => {
     M: 'create:mechanical_pump',
     U: 'sophisticatedbackpacks:upgrade_base'
   }).id('kubejs:sophisticatedbackpacks/pump_upgrade')
-  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:advanced_pump_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:advanced_pump_upgrade', [
     ' B ',
     'SUS',
     ' B '
@@ -496,7 +496,7 @@ ServerEvents.recipes(event => {
     S: 'create:smart_fluid_pipe',
     U: 'sophisticatedbackpacks:pump_upgrade'
   }).id('kubejs:sophisticatedbackpacks/advanced_pump_upgrade')
-  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:xp_pump_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:xp_pump_upgrade', [
     'LEL',
     'OUO',
     'LEL'

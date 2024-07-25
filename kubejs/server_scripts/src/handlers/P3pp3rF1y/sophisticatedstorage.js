@@ -304,7 +304,7 @@ ServerEvents.recipes(event => {
     M: 'minecraft:glistering_melon_slice',
     D: 'create:deployer'
   }).id('kubejs:sophisticatedstorage/feeding_upgrade')
-  event.recipes.create.mechanical_crafting('sophisticatedstorage:advanced_feeding_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedstorage:advanced_feeding_upgrade', [
     ' S ',
     'CBC',
     'RRR'
@@ -313,9 +313,9 @@ ServerEvents.recipes(event => {
     C: 'create:brass_casing',
     B: 'sophisticatedstorage:feeding_upgrade',
     R: 'create:mechanical_arm'
-  }).id('kubejs:sophisticatedstorage/mechanical_crafting/advanced_feeding_upgrade')
+  }).id('kubejs:sophisticatedstorage/advanced_feeding_upgrade')
   // compacting
-  event.recipes.create.mechanical_crafting('sophisticatedstorage:compacting_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedstorage:compacting_upgrade', [
     'EPE',
     'PBP',
     'EPE'
@@ -323,8 +323,8 @@ ServerEvents.recipes(event => {
     E: 'create:electron_tube',
     P: 'create:mechanical_piston',
     B: 'sophisticatedstorage:upgrade_base'
-  }).id('kubejs:sophisticatedstorage/mechanical_crafting/compacting_upgrade')
-  event.recipes.create.mechanical_crafting('sophisticatedstorage:advanced_compacting_upgrade', [
+  }).id('kubejs:sophisticatedstorage/compacting_upgrade')
+  event.recipes.minecraft.crafting_shaped('sophisticatedstorage:advanced_compacting_upgrade', [
     'NPN',
     'PBP',
     'NPN'
@@ -332,17 +332,17 @@ ServerEvents.recipes(event => {
     N: 'kubejs:null_matter',
     P: 'create:mechanical_piston',
     B: 'sophisticatedstorage:compacting_upgrade'
-  }).id('kubejs:sophisticatedstorage/mechanical_crafting/advanced_compacting_upgrade')
+  }).id('kubejs:sophisticatedstorage/advanced_compacting_upgrade')
   // void
-  event.recipes.create.mechanical_crafting('sophisticatedstorage:void_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedstorage:void_upgrade', [
     ' A ',
     'ABA',
     ' A '
   ], {
     A: 'kubejs:awakened_singularity_core',
     B: 'sophisticatedstorage:upgrade_base'
-  }).id('kubejs:sophisticatedstorage/mechanical_crafting/void_upgrade')
-  event.recipes.create.mechanical_crafting('sophisticatedstorage:advanced_void_upgrade', [
+  }).id('kubejs:sophisticatedstorage/void_upgrade')
+  event.recipes.minecraft.crafting_shaped('sophisticatedstorage:advanced_void_upgrade', [
     'NAN',
     'ABA',
     'NAN'
@@ -446,7 +446,7 @@ ServerEvents.recipes(event => {
     U: 'sophisticatedstorage:upgrade_base',
     E: 'create:electron_tube'
   }).id('kubejs:sophisticatedstorage/hopper_upgrade')
-  event.recipes.create.mechanical_crafting('sophisticatedstorage:advanced_hopper_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedstorage:advanced_hopper_upgrade', [
     ' C ',
     'BUB',
     ' B '
