@@ -775,6 +775,13 @@ ServerEvents.recipes(event => {
     Item.of('kubejs:final_singularity').withChance(0.75)
   ], 'kubejs:final_singularity').processingTime(500).id('finality:crushing/final_singularity')
 
+  event.recipes.create.mixing(Item.of('kubejs:final_singularity_stage_one').withChance(0.125), [
+    'kubejs:final_singularity_stage_nulla',
+    'kubejs:uncolored_circle_corner',
+    'kubejs:uncolored_rectangle_corner',
+    'kubejs:uncolored_windmill_corner',
+    'kubejs:uncolored_star_corner'
+  ]).id('kubejs:final_singularity_stage_one_stable')
   event.recipes.create.mixing('kubejs:final_singularity_stage_one', [
     'kubejs:final_singularity_stage_nulla',
     'kubejs:uncolored_circle_corner',
@@ -782,7 +789,7 @@ ServerEvents.recipes(event => {
     'kubejs:uncolored_windmill_corner',
     'kubejs:uncolored_star_corner',
     enRI4[RNG4]
-  ]).id('kubejs:mixing/final_singularity_stage_one')
+  ]).id('kubejs:final_singularity_stage_one_random')
   event.recipes.create.mechanical_crafting('kubejs:final_singularity_stage_two', [
     '/UPGRADE',
     '@ {     ',
@@ -826,6 +833,14 @@ ServerEvents.recipes(event => {
     '@': 'kubejs:final_singularity_stage_two'
   }).id('kubejs:final_singularity_stage_three')
   // note to self in the morning I forgot what I was doing here... probably mixing complex shapes
+  event.recipes.create.mixing(Item.of('kubejs:final_singularity_stage_four').withChance(0.125), [
+    'kubejs:tnt_singularity',
+    'kubejs:blaze_cake_singularity',
+    'kubejs:final_singularity_stage_three',
+    'kubejs:watermelon_shape',
+    'kubejs:star_of_light_shape',
+    'kubejs:potion_base_singularity'
+  ]).id('kubejs:final_singularity_stage_four_stable')
   event.recipes.create.mixing('kubejs:final_singularity_stage_four', [
     'kubejs:tnt_singularity',
     'kubejs:blaze_cake_singularity',
@@ -836,7 +851,7 @@ ServerEvents.recipes(event => {
     enRI3[RNG3],
     enRI5[RNG5],
     enRI1[RNG1]
-  ]).id('kubejs:final_singularity_stage_four')
+  ]).id('kubejs:final_singularity_stage_four_random')
   event.recipes.create.mechanical_crafting('kubejs:final_singularity', [
     'COMPONENT',
     '.JOIN([  ',
@@ -865,7 +880,7 @@ ServerEvents.recipes(event => {
     '[': 'kubejs:left_bracket',
     ']': 'kubejs:right_bracket',
     '.': 'kubejs:full_point',
-    'a': enRI1[RNG1], // 'kubejs:chromatic_concrete_singularity',
+    'a': 'kubejs:chromatic_concrete_singularity',
     'b': enRI2[RNG2], // 'kubejs:monochromatic_singularity'
     'c': enRI6[RNG6], // 'kubejs:emitter_shape',
     'd': enRI3[RNG3], // 'kubejs:cpu_shape',
