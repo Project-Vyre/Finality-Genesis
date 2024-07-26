@@ -18,7 +18,7 @@ ServerEvents.recipes(event => {
     'CGC'
   ], {
     C: 'ae2:certus_quartz_dust',
-    G: '#forge:glass/colorless'
+    G: '#forge:glass_panes/colorless'
   }).id('ae2:network/parts/quartz_fiber_part')
   event.recipes.create.deploying('ae2:fluix_upgrade_smithing_template', [
     'create:iron_sheet',
