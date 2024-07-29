@@ -55,6 +55,11 @@
           maxY: 0,
         },
         {
+          id: "minecraft:deepslate_redstone_ore",
+          weight: 10.0,
+          maxY: 0,
+        },
+        {
           id: "minecraft:deepslate_iron_ore",
           weight: 15.0,
           maxY: 0,
@@ -65,7 +70,7 @@
           maxY: 0,
         },
         {
-          id: "create:deepslate_copper_ore",
+          id: "minecraft:deepslate_copper_ore",
           weight: 15.0,
           maxY: 0,
         },
