@@ -102,6 +102,9 @@
     # If true, tools with area of effect abilities will not have those abilities disabled when player holds Shift (crouches). [default: false, synchronized: yes]
     B:DisableAOEShiftSuppression=false
 
+    # Whether or not Eldritch Frying Pan should be enabled. [default: true, synchronized: yes]
+    B:EldritchFryingPanEnabled=true
+
     # Whether or not Emblem of Bloodstained Valor should be enabled. [default: true, synchronized: yes]
     B:EmblemofBloodstainedValorEnabled=true
 
@@ -406,6 +409,33 @@
     # Health regeneration increase provided by Scroll of a Thousand Curses for each curse, as percentage. [range: 0 ~ 32768, default: 4, synchronized: yes]
     I:CursedScrollRegenBoost=4
 
+    # The chance for Heart of the Earth to be obtained from suspicious blocks (default is 3%). [range: 0.0 ~ 32768.0, default: 0.03, synchronized: yes]
+    D:CustomLootEarthHeartChance=0.03
+
+    # The base armor value of The Voracious Pan. [range: 0.0 ~ 32768.0, default: 4.0, synchronized: yes]
+    D:EldritchPanArmorValue=4.0
+
+    # The base attack damage of The Voracious Pan. [range: 0.0 ~ 32768.0, default: 31.0, synchronized: yes]
+    D:EldritchPanAttackDamage=31.0
+
+    # The base attack speed of The Voracious Pan. [range: -32768.0 ~ 32768.0, default: -3.2, synchronized: yes]
+    D:EldritchPanAttackSpeed=-3.2
+
+    # Base Hungersteal value of The Voracious Pan. [range: 0.0 ~ 32768.0, default: 2.0, synchronized: yes]
+    D:EldritchPanHungerSteal=2.0
+
+    # Base Lifesteal fraction of The Voracious Pan. [range: 0.0 ~ 32768.0, default: 0.15, synchronized: yes]
+    D:EldritchPanLifeSteal=0.15
+
+    # Base armor gain from unique mob kills for The Voracious Pan. [range: 0.0 ~ 32768.0, default: 0.5, synchronized: yes]
+    D:EldritchPanUniqueArmorGain=0.5
+
+    # Base damage gain from unique mob kills for The Voracious Pan. [range: 0.0 ~ 32768.0, default: 0.5, synchronized: yes]
+    D:EldritchPanUniqueDamageGain=0.5
+
+    # How many unique mob kills will count towards increasing the stats of The Voracious Pan. [range: 0 ~ 32768, default: 100, synchronized: yes]
+    I:EldritchPanUniqueGainLimit=100
+
     # Chance that Dimensional Anchor will not spend a charge upon player respawn [range: 0 ~ 32768, default: 35, synchronized: yes]
     I:EndAnchorChargeSaveChance=35
 
@@ -542,6 +572,30 @@
 
     # Modifier for Magic Damage vulnerability applied by Heart of the Golem. Default value of 2.0 means that player will receive twice as much damage from magic. [range: 1.0 ~ 256.0, default: 2.0, synchronized: yes]
     D:GolemHeartVulnerabilityModifier=2.0
+
+    # Damage boost granted by the Growing Bloodlust, per level of effect. [range: 0.0 ~ 100.0, default: 0.05, synchronized: yes]
+    D:GrowingBloodlustDamageBoost=0.05
+
+    # How much health Growing Bloodlust leaves the player with, as a fraction of max health. [range: 0.0 ~ 32768.0, default: 0.3, synchronized: yes]
+    D:GrowingBloodlustHealthLossLimit=0.3
+
+    # How often the player loses 1 HP at level one of Growing Bloodlust, in ticks. [range: 0 ~ 32768, default: 160, synchronized: yes]
+    I:GrowingBloodlustHealthLossTicks=160
+
+    # Lifesteal granted by the Growing Bloodlust, per level of effect. [range: 0.0 ~ 100.0, default: 0.025, synchronized: yes]
+    D:GrowingBloodlustLifestealBoost=0.025
+
+    # How lock the The Voracious Pan needs to be held, in ticks, to increase the strength of the Growing Bloodlust effect by one level. [range: 0 ~ 32768, default: 300, synchronized: yes]
+    I:GrowingBloodlustTicksPerLevel=300
+
+    # Damage boost granted by the Growing Hunger, per level of effect. [range: 0.0 ~ 100.0, default: 0.1, synchronized: yes]
+    D:GrowingHungerDamageBoost=0.1
+
+    # Exhaustion applied by Growing Hunger every 4 ticks, per level of effect. [range: 0.0 ~ 32768.0, default: 0.5, synchronized: yes]
+    D:GrowingHungerExhaustionGain=0.5
+
+    # How lock the The Voracious Pan needs to be held, in ticks, to increase the strength of the Growing Hunger effect by one level. [range: 0 ~ 32768, default: 300, synchronized: yes]
+    I:GrowingHungerTicksPerLevel=300
 
     # Range of active/passive abilities of Heart of the Guardian. [range: 0 ~ 32768, default: 24, synchronized: yes]
     I:GuardianHeartAbilityRange=24
@@ -761,6 +815,9 @@
 
     # Defines how much damage bearers of the ring receive from any source. Measured as percentage. [range: 0 ~ 32768, default: 200, synchronized: yes]
     I:CursedRingPainModifier=200
+
+    # A fraction of time the player should bear the Seven Curses to use Abyssal Artifacts. [range: 0.0 ~ 32768.0, default: 0.995, synchronized: yes]
+    D:CursedRingSuperCursedTime=0.995
 
     # If true, Ring of the Seven Curses will be equipped into player's ring slot right away when entering a new world, instead of just being added to their inventory. [default: false, synchronized: yes]
     B:CursedRingUltraHardcore=false
