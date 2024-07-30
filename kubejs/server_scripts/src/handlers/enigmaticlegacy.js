@@ -24,7 +24,15 @@ ServerEvents.recipes(event => {
   ]).superheated().id('finality:etherium_ingot_creation')
   event.recipes.summoningrituals.altar('enigmaticlegacy:cosmic_heart')
     .itemOutput('enigmaticlegacy:enigmatic_item')
-    .input('44x kubejs:high_entropy_alloy_block')
+    .input([
+      '64x kubejs:high_entropy_alloy_block',
+      'kubejs:final_singularity_stage_nulla',
+      'kubejs:final_singularity_stage_one',
+      'kubejs:final_singularity_stage_two',
+      'kubejs:final_singularity_stage_three',
+      'kubejs:final_singularity_stage_four',
+      'kubejs:final_singularity'
+    ])
     .id('kubejs:altar/heart_of_creation')
   if (Platform.isLoaded('extendedcrafting')) {
     event.custom({
