@@ -220,7 +220,7 @@
 		{
 			dependencies: ["0EB2D84D0683C5C5"]
 			description: [
-				"The &aSigil of Withdrawal&r allows you to &cdestroy&r all of the &l&5gem(s)&r socketed in your &bAffixed item&r."
+				"The &aSigil of Withdrawal&r allows you to &cextract&r all of the &l&5gem(s)&r socketed in your &bAffixed item&r."
 				""
 				"The &7Sigil of Unnaming&r allows you to remove the affixes."
 				""
@@ -232,7 +232,7 @@
 				item: "apotheosis:sigil_of_unnaming"
 				type: "item"
 			}]
-			subtitle: "The gems are gone, but your item is safe."
+			subtitle: "The gems are extracted and your item is safe."
 			tasks: [{
 				id: "0D863DF077349F1F"
 				item: "apotheosis:sigil_of_withdrawal"
