@@ -596,6 +596,17 @@ ClientEvents.lang('en_us', event => {
   )
   event.addAll(
     'kubejs',
+    createTooltip('kubejs:bloodfire_bars')
+      .addSummary('These bars feel like they have a hot aura around them.')
+      .addBehaviour([
+        'When used with Encased Fans',
+        'Behaves like a _blasting_ fan catalyst.'
+      ])
+      .setPalette($Palette.RED)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
     createTooltip('kubejs:final_singularity_stage_one')
       .addSummary('The guaranteed output recipe for this item changes _every_ world load.')
       .setPalette($Palette.PURPLE)
