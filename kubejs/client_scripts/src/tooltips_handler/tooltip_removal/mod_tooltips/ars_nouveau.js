@@ -26,7 +26,6 @@ let ars_single_line = [
   'amethyst_golem_charm',
   'drygmy_shard',
   'spell_parchment',
-  'caster_tome',
   'wilden_tribute',
   'abjuration_essence',
   'conjuration_essence',

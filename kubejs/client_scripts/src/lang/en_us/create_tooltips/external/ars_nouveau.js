@@ -772,13 +772,6 @@ ClientEvents.lang('en_us', event => {
       .addSummary('Can be _inscribed_ with a spell at the _Scribes Table_.')
       .build()
   )
-  event.addAll(
-    'kubejs',
-    createTooltip('ars_nouveau:caster_tome')
-      .addSummary('Casts a spell at _half_ the cost or the user\'s _entire_ manabar, whichever is _smaller_.')
-      .setPalette($Palette.PURPLE)
-      .build()
-  )
   /**
    * RITUAL TABLETS
    */
