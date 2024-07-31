@@ -367,6 +367,12 @@ JEIEvents.information(event => {
     event.addItem('endrem:undead_soul', ['Acquired from slaying a skeleton horse.'])
     event.addItem('endrem:exotic_eye', ['Created by combining multiple exotic ingredients using a Crafting Core.'])
   }
+  if (Platform.isLoaded('etched')) {
+    event.addItem('etched:blank_music_disc', [
+      'Smelt any Music Disc to obtain.\n',
+      'The smelting recipe is just invisible for no apparent reason.\n'
+    ])
+  }
   if (Platform.isLoaded('farmersdelight')) {
     event.addItem('farmersdelight:tree_bark', [
       Component.join([
