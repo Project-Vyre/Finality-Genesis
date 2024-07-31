@@ -380,7 +380,11 @@ ServerEvents.recipes(event => {
       .id('kubejs:productivebees/mixing/comb_scrapped')
   }
   event.remove([
-    { id: 'productivebees:upgrades/base' }
+    { id: 'productivebees:upgrades/base' },
+    {
+      mod: 'productivebees',
+      output: 'minecraft:obsidian'
+    }
   ])
   event.recipes.minecraft.crafting_shaped('productivebees:upgrade_base', [
     'H',
