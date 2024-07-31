@@ -39,7 +39,7 @@
 			#1) Every - protected from all entities not owned by a player that has chunk access.
 			#2) Not Party - all entities, except owned by a player in the same party as you.
 			#3) Not Ally - all entities, except owned by a player in any party allied by yours.
-			blocksFromOther = 2
+			blocksFromOther = 0
 			#When enabled, instead of always simply using the direct "Protect Blocks From Mobs/Other" option for block interactions coming from non-player entities, if the entity (e.g. an arrow) has an owner (e.g. a player), then the block protection option corresponding to the owner is used (e.g. "Protect Blocks From Players").
 			#Chunk access is always tested against the owner, whether this is enabled or not.
 			blocksRedirect = false
