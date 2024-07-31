@@ -1,0 +1,12 @@
+{
+	icon: "kubejs:final_singularity"
+	id: "2DF27CCD0FCB4607"
+	loot_size: 1
+	order_index: 26
+	rewards: [
+		{ item: "functionalstorage:netherite_upgrade" }
+		{ item: "sophisticatedstorage:stack_upgrade_tier_5" }
+		{ item: "sophisticatedbackpacks:stack_upgrade_tier_4" }
+	]
+	title: "Storage Shop"
+}

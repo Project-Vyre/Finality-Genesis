@@ -327,18 +327,25 @@
 		{
 			can_repeat: true
 			dependencies: ["464C6D59436C1B33"]
-			description: ["Work in progress."]
+			description: ["That should be enough, right?"]
 			disable_toast: true
 			id: "3C3B0C4783CCC42E"
-			subtitle: "Got any Entropy Coins to spend?"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "3952CE074311A85E"
+				table_id: 3310845896245855751L
+				type: "choice"
+			}]
+			subtitle: "For your bulk storage needs."
 			tasks: [{
 				consume_items: true
+				count: 8L
 				disable_toast: true
 				id: "21015316199D78BE"
 				item: "kubejs:entropy_coin"
 				type: "item"
 			}]
-			title: "Entropy Coin Shop"
+			title: "Bulk Storage Shop"
 			x: 0.0d
 			y: 8.5d
 		}
@@ -496,20 +503,6 @@
 			}]
 			title: "Work in Progress (Gold)"
 			x: 2.5d
-			y: 4.5d
-		}
-		{
-			dependencies: ["464C6D59436C1B33"]
-			id: "59D3137606DED95B"
-			subtitle: "For your mass storage needs."
-			tasks: [{
-				consume_items: true
-				id: "52CFD8600AD44AE4"
-				item: "kubejs:netherite_coin"
-				type: "item"
-			}]
-			title: "Something Shop? (Netherite)"
-			x: -2.5d
 			y: 4.5d
 		}
 		{

@@ -623,6 +623,11 @@
 					}
 					type: "item"
 				}
+				{
+					id: "661678347CAB44D0"
+					item: "kubejs:duplicator"
+					type: "item"
+				}
 			]
 			title: "Convenient Utilities Ch.3"
 			x: -3.0d
