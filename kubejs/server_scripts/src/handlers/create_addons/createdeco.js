@@ -46,7 +46,7 @@ ServerEvents.recipes(event => {
     }
   ])
   COIN_MELT_HEATED('iron', 'iron')
-  COIN_MELT_HEATED('iron', 'industrial_iron')
+  // COIN_MELT_HEATED('iron', 'industrial_iron')
   COIN_MELT_HEATED('gold', 'gold')
   COIN_MELT_HEATED('copper', 'copper')
   COIN_MELT_HEATED('zinc', 'zinc')
@@ -55,7 +55,7 @@ ServerEvents.recipes(event => {
     'createdeco:netherite_coin'
   ]).superheated().id('finality:createdeco/netherite_coin_melting')
   COINSTACK_MELTING('iron', 'iron')
-  COINSTACK_MELTING('iron', 'industrial_iron')
+  // COINSTACK_MELTING('iron', 'industrial_iron')
   COINSTACK_MELTING('gold', 'gold')
   COINSTACK_MELTING('copper', 'copper')
   COINSTACK_MELTING('zinc', 'zinc')
@@ -63,9 +63,12 @@ ServerEvents.recipes(event => {
   event.recipes.create.mixing(Fluid.of('kubejs:molten_netherite', 40), [
     'createdeco:netherite_coinstack'
   ]).superheated().id('finality:createdeco/netherite_coinstack_melting')
-  event.recipes.create.mixing(Fluid.of('kubejs:molten_iron', 90), 'createdeco:industrial_iron_sheet')
-    .heated()
-    .id('finality:createdeco/basin/industrial_iron_sheet_melting')
+  /*
+  event.recipes.create.mixing(
+    Fluid.of('kubejs:molten_iron', 10),
+    'createdeco:industrial_iron_sheet'
+  ).heated().id('finality:createdeco/basin/industrial_iron_sheet_melting')
+  */
   event.remove([
     { id: 'create:industrial_iron_block_from_iron_ingots_stonecutting' },
     {
