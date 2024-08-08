@@ -3,7 +3,7 @@
 // requires: roughlyenoughresources
 // requires: roughlyenoughprofessions
 // requires: create
-// ignored: true
+// ignored: false
 
 /**
  * @file Responsible for handling REI grouping, hiding, adding, etc.

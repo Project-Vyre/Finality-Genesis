@@ -1,0 +1,363 @@
+{
+	"basics": {
+		"favorites": [],
+		"hiddenFavorites": [],
+		"displayHistory": [],
+		"cheating": false,
+		"favoritesEnabled": true,
+		"reduceMotion": false,
+		"keyBindings": {
+			"useNativeKeybinds": false,
+			"recipeKeybind": {
+				"keyCode": "key.keyboard.r",
+				"modifier": 0
+			},
+			"usageKeybind": {
+				"keyCode": "key.keyboard.u",
+				"modifier": 0
+			},
+			"hideKeybind": {
+				"keyCode": "key.keyboard.o",
+				"modifier": 2
+			},
+			"previousPageKeybind": {
+				"keyCode": "key.keyboard.unknown",
+				"modifier": 0
+			},
+			"nextPageKeybind": {
+				"keyCode": "key.keyboard.unknown",
+				"modifier": 0
+			},
+			"focusSearchFieldKeybind": {
+				"keyCode": "key.keyboard.f",
+				"modifier": 2
+			},
+			"copyRecipeIdentifierKeybind": {
+				"keyCode": "key.mouse.middle",
+				"modifier": 0
+			},
+			"favoriteKeybind": {
+				"keyCode": "key.keyboard.a",
+				"modifier": 0
+			},
+			"exportImageKeybind": {
+				"keyCode": "key.keyboard.f8",
+				"modifier": 0
+			},
+			"previousScreenKeybind": {
+				"keyCode": "key.keyboard.backspace",
+				"modifier": 0
+			}
+		},
+		// Declares whether REI is visible.
+		"overlayVisible": true,
+		"cheatingStyle": "GRAB"
+	},
+	"appearance": {
+		"recipeScreenType": "ORIGINAL",
+		// Declares the appearance of REI windows.
+		"theme": "LIGHT",
+		"layout": {
+			// Declares the position of the search field.
+			"searchFieldLocation": "CENTER",
+			// Declares the position of the config button.
+			"configButtonLocation": "LOWER",
+			// Declares whether the craftable filter button is enabled.
+			"showCraftableOnlyButton": true
+		},
+		// Declares the appearance of recipe's border.
+		"recipeBorder": "DEFAULT",
+		// Declares whether entry panel is scrolled.
+		"scrollingEntryListWidget": false,
+		// Declares whether entry panel should be invisible when not searching
+		"hideEntryPanelIfIdle": false,
+		"rainbow": false,
+		"horizontalEntriesBoundaries": 1.0,
+		"verticalEntriesBoundaries": 1.0,
+		"horizontalEntriesBoundariesColumns": 9,
+		"verticalEntriesBoundariesRows": 1000,
+		"horizontalEntriesBoundariesAlignment": 1.0,
+		"verticalEntriesBoundariesAlignment": 0.5,
+		"favoritesHorizontalEntriesBoundaries": 1.0,
+		"favoritesHorizontalEntriesBoundariesColumns": 50,
+		"syntaxHighlightingMode": "COLORFUL",
+		"isFocusModeZoomed": false
+	},
+	"functionality": {
+		"inputMethod": null,
+		// Declares whether REI should remove the recipe book.
+		"disableRecipeBook": true,
+		// Declares whether mob effects should be on the left side instead of the right side.
+		"leftSideMobEffects": false,
+		// Declares whether subsets is enabled.
+		"isSubsetsEnabled": false,
+		"allowInventoryHighlighting": true,
+		"itemCheatingMode": "REI_LIKE"
+	},
+	"advanced": {
+		"tooltips": {
+			// Declares whether REI should append mod names to entries.
+			"appendModNames": true,
+			// Declares whether favorites tooltip should be displayed.
+			"displayFavoritesTooltip": false,
+			"displayIMEHints": true
+		},
+		"layout": {
+			// The ordering of the items on the entry panel.
+			"entryPanelOrdering": "REGISTRY_ASCENDING",
+			// Declares the maximum amount of recipes displayed in a page if possible.
+			"maxRecipesPerPage": 8,
+			// Declares the maximum amount of recipes displayed in a page if possible.
+			"maxRecipesPageHeight": 300,
+			// Declares whether entry rendering time should be debugged.
+			"debugRenderTimeRequired": false,
+			// Merges displays with equal contents under 1 display.
+			"mergeDisplayUnderOne": true,
+			"favoriteAddWidgetMode": "ALWAYS_VISIBLE"
+		},
+		"accessibility": {
+			"entrySize": 1.0,
+			// Declares the position of the entry panel.
+			"displayPanelLocation": "RIGHT",
+			// Declares how the scrollbar in composite screen should act.
+			"compositeScrollBarPermanent": false,
+			"toastDisplayedOnCopyIdentifier": true,
+			// Declares whether REI should use compact tabs for categories.
+			"useCompactTabs": false,
+			// Declares whether REI should use compact tab buttons for categories.
+			"useCompactTabButtons": false
+		},
+		"search": {
+			// Declares whether search time should be debugged.
+			"debugSearchTimeRequired": false,
+			// Declares whether REI should search async.
+			"asyncSearch": true,
+			// Declares how many entries should be grouped one async search.
+			"asyncSearchPartitionSize": 100,
+			"patchAsyncThreadCrash": true,
+			"tooltipSearch": "ALWAYS",
+			"tagSearch": "PREFIX",
+			"identifierSearch": "ALWAYS",
+			"modSearch": "PREFIX"
+		},
+		"commands": {
+			// Declares the command used to change gamemode.
+			"gamemodeCommand": "/gamemode {gamemode}",
+			// Declares the command used in servers to cheat items.
+			"giveCommand": "/give {player_name} {item_identifier}{nbt} {count}",
+			// Declares the command used to change weather.
+			"weatherCommand": "/weather {weather}",
+			// Declares the command used to change time.
+			"timeCommand": "/time set {time}"
+		},
+		"miscellaneous": {
+			// Declares whether arrows in containers should be clickable.
+			"clickableRecipeArrows": true,
+			"registerRecipesInAnotherThread": true,
+			"newFastEntryRendering": true,
+			"cachingFastEntryRendering": false,
+			"cachingDisplayLookup": true,
+			"categorySettings": {
+				"filteringQuickCraftCategories": { },
+				"categoryOrdering": [
+					"minecraft:plugins/crafting",
+					"minecraft:plugins/smelting",
+					"minecraft:plugins/smoking",
+					"minecraft:plugins/blasting",
+					"minecraft:plugins/campfire",
+					"minecraft:plugins/stone_cutting",
+					"minecraft:plugins/fuel",
+					"minecraft:plugins/brewing",
+					"minecraft:plugins/composting",
+					"minecraft:plugins/stripping",
+					"minecraft:plugins/smithing",
+					"minecraft:plugins/anvil",
+					"minecraft:plugins/beacon_base",
+					"minecraft:plugins/beacon_payment",
+					"minecraft:plugins/tilling",
+					"minecraft:plugins/pathing",
+					"minecraft:plugins/waxing",
+					"minecraft:plugins/wax_scraping",
+					"minecraft:plugins/oxidizing",
+					"minecraft:plugins/oxidation_scraping",
+					"createaddition:rolling",
+					"createaddition:charging",
+					"createaddition:liquid_burning",
+					"drinkbeer:brewing",
+					"create_enchantment_industry:disenchanting",
+					"functionalstorage:dissolution",
+					"malum:spirit_infusion",
+					"malum:spirit_transmutation",
+					"malum:spirit_focusing",
+					"malum:spirit_rite",
+					"malum:spirit_repair",
+					"malum:runeworking",
+					"malum:weeping_well",
+					"some_assembly_required:sandwiching_station",
+					"woodworks:sawing",
+					"reliquary:alkahestry_crafting",
+					"reliquary:alkahestry_charging",
+					"reliquary:mortar",
+					"reliquary:cauldron",
+					"reliquary:infernal_tear",
+					"ftbquests:quest",
+					"ftbquests:loot_crate",
+					"ae2:item_transformation",
+					"ae2:condenser",
+					"ae2:inscriber",
+					"ae2:charger",
+					"ae2:attunement",
+					"ae2:certus_growth",
+					"ae2:entropy",
+					"alexscaves:spelunkery_table",
+					"alexscaves:nuclear_furnace",
+					"clayworks:baking",
+					"waystones:warp_plate",
+					"destroy:aging",
+					"destroy:centrifugation",
+					"destroy:charging",
+					"destroy:distillation",
+					"destroy:extrusion",
+					"destroy:mutation",
+					"destroy:obliteration",
+					"destroy:reaction",
+					"destroy:generic_reaction",
+					"destroy:electrolysis",
+					"create_mechanical_extruder:extruding",
+					"create_central_kitchen:cutting_board_deploying",
+					"sootychimneys:soot_covering",
+					"sootychimneys:soot_scraping",
+					"create:milling",
+					"create:crushing",
+					"create:pressing",
+					"create:fan_washing",
+					"create:fan_smoking",
+					"create:fan_blasting",
+					"create:fan_haunting",
+					"create:mixing",
+					"create:automatic_shapeless",
+					"create:automatic_brewing",
+					"create:packing",
+					"create:automatic_packing",
+					"create:sawing",
+					"create:block_cutting",
+					"create:wood_cutting",
+					"create:sandpaper_polishing",
+					"create:item_application",
+					"create:deploying",
+					"create:spout_filling",
+					"create:draining",
+					"create:automatic_shaped",
+					"create:mechanical_crafting",
+					"create:sequenced_assembly",
+					"create:mystery_conversion",
+					"cobblegen:cobble",
+					"cobblegen:stone",
+					"cobblegen:basalt",
+					"caupona:aspic_thawing_brazier",
+					"caupona:aspic_thawing_pot",
+					"caupona:boiling",
+					"caupona:bowl_draining",
+					"caupona:bowl_filling",
+					"caupona:dolium_resting",
+					"caupona:pot_resting",
+					"caupona:stew_cooking",
+					"caupona:frying",
+					"the_bumblezone:queen_trades",
+					"the_bumblezone:queen_color_randomizer_trades",
+					"productivebees:advanced_beehive",
+					"productivebees:bee_breeding",
+					"productivebees:bee_conversion",
+					"productivebees:centrifuge",
+					"productivebees:block_centrifuge",
+					"productivebees:bee_fishing",
+					"productivebees:bee_spawning",
+					"productivebees:bee_flowering",
+					"productivebees:incubation",
+					"productivebees:block_conversion",
+					"productivebees:item_conversion",
+					"productivebees:bottler",
+					"refurbished_furniture:freezer_solidifying",
+					"refurbished_furniture:cutting_board_slicing",
+					"refurbished_furniture:frying_pan_cooking",
+					"refurbished_furniture:microwave_heating",
+					"refurbished_furniture:toaster_heating",
+					"refurbished_furniture:grill_cooking",
+					"refurbished_furniture:cutting_board_combining",
+					"refurbished_furniture:workbench_constructing",
+					"refurbished_furniture:oven_baking",
+					"cataclysm:weapon_infusion",
+					"cataclysm:altar_of_amethyst",
+					"farmersdelight:cooking",
+					"farmersdelight:cutting",
+					"farmersdelight:decomposition",
+					"rats:chef",
+					"rats:cauldron",
+					"architects_palette:warping",
+					"aether:enchanting",
+					"aether:repairing",
+					"aether:freezing",
+					"aether:incubation",
+					"aether:fuel",
+					"aether:ambrosium_enchanting",
+					"aether:swet_ball_conversion",
+					"aether:icestone_freezable",
+					"aether:accessory_freezable",
+					"aether:placement_conversion",
+					"aether:item_placement_ban",
+					"aether:block_placement_ban",
+					"ars_nouveau:glyph_recipe",
+					"ars_nouveau:crush",
+					"ars_nouveau:imbuement",
+					"ars_nouveau:enchanting_apparatus",
+					"ars_nouveau:enchantment_apparatus",
+					"ars_nouveau:armor_upgrade",
+					"lightmanscurrency:coin_mint",
+					"lightmanscurrency:ticket_station",
+					"rechiseled:chiseling",
+					"salt:salt_evaporation",
+					"salt:salt_crystal_growing",
+					"exposure:photograph_printing",
+					"exposure:photograph_stacking",
+					"oregrowth:ore_growth",
+					"apotheosis:smithing",
+					"apotheosis:salvaging",
+					"apotheosis:gem_cutting",
+					"apotheosis:enchanting",
+					"apotheosis:spawner_modifiers",
+					"apotheosis:fletching",
+					"lychee:item_burning/minecraft/default",
+					"summoningrituals:altar",
+					"cobblegen:fluid_interaction_cobble",
+					"cobblegen:fluid_interaction_stone",
+					"cobblegen:fluid_interaction_basalt",
+					"jeed:effects",
+					"aether:incubating",
+					"roughlyenoughprofessions:plugins/profession",
+					"roughlyenoughresources:the_end_worldgen_category",
+					"roughlyenoughresources:overworld_worldgen_category",
+					"roughlyenoughresources:spatial_storage_worldgen_category",
+					"roughlyenoughresources:the_nether_worldgen_category",
+					"roughlyenoughresources:dream_worldgen_category",
+					"roughlyenoughresources:the_bumblezone_worldgen_category",
+					"roughlyenoughresources:the_aether_worldgen_category",
+					"roughlyenoughresources:nightmare_worldgen_category",
+					"roughlyenoughresources:loot_category",
+					"roughlyenoughresources:entity_loot_category",
+					"roughlyenoughitems:plugins/information",
+					"minecraft:plugins/tag"
+				],
+				"hiddenCategories": []
+			}
+		},
+		"filtering": {
+			"filteredStacks": [],
+			"shouldFilterDisplays": true,
+			"filteringRules": [
+				"{id:\"roughlyenoughitems:manual\",rule:{}}",
+				"{id:\"roughlyenoughitems:basic\",rule:{}}",
+				"{id:\"roughlyenoughitems:hidden_from_recipe_viewers\",rule:{}}"
+			]
+		}
+	}
+}
