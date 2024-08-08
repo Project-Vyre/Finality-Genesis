@@ -425,10 +425,6 @@ ClientEvents.lang('en_us', event => {
     "death.attack.create.cuckoo_clock_explosion.player": "%1$s was blown up by tampered cuckoo clock",
     "death.attack.create.run_over": "%1$s was run over by %2$s"
   })
-  if (Platform.isLoaded('roughlyenoughitems')) {
-    // Corrected from Recipe Id: to Recipe ID: for consistency.
-    event.add('roughlyenoughitems', 'text.rei.recipe_id', '\n%sRecipe ID: %s')
-  }
   if (Platform.isLoaded('alexsmobs')) {
     event.addAll('alexsmobs', {
       "alexsmobs.potion.soulsteal.desc": "Your attacks are granted life-steal.",

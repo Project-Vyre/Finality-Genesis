@@ -1,0 +1,4 @@
+{
+  "text.rei.recipe_id": "\n%sRecipe ID: %s",
+  "config.rei.options.list.zoom.desc": "The size of the entries. Increasing the zoom amount may also improve performance as less entries are on the screen at the same time. Hold Ctrl and scroll with your mouse wheel while the cursor is on the entries panel to adjust the zoom level."
+}
