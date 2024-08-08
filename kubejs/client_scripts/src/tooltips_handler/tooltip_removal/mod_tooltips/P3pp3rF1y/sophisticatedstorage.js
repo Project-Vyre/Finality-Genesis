@@ -21,7 +21,8 @@ let soph_storage_mono = [
   'pump_upgrade',
   'xp_pump_upgrade',
   'compression_upgrade',
-  'hopper_upgrade'
+  'hopper_upgrade',
+  'controller'
 ]
 let soph_storage_duo = [
   'advanced_pickup_upgrade',
@@ -31,7 +32,8 @@ let soph_storage_duo = [
   'compacting_upgrade',
   'advanced_compacting_upgrade',
   'advanced_void_upgrade',
-  'advanced_hopper_upgrade'
+  'advanced_hopper_upgrade',
+  'storage_link'
 ]
 let soph_storage_trio = [
   'advanced_pump_upgrade'
