@@ -11,7 +11,59 @@ let void_upgrade = '_Voids_ items selected in the filter.'
 let pump_upgrade = 'Pumps fluids between the storage block and adjacent blocks, if applicable.'
 let hopper_upgrade = 'Pulls items from storage blocks on top and / or pushes them to storage blocks below.'
 
+let storage_blocks = [
+  'barrel',
+  'copper_barrel',
+  'iron_barrel',
+  'gold_barrel',
+  'diamond_barrel',
+  'netherite_barrel',
+  'chest',
+  'copper_chest',
+  'iron_chest',
+  'gold_chest',
+  'diamond_chest',
+  'netherite_chest',
+  'limited_barrel_1',
+  'limited_copper_barrel_1',
+  'limited_iron_barrel_1',
+  'limited_gold_barrel_1',
+  'limited_diamond_barrel_1',
+  'limited_netherite_barrel_1',
+  'limited_barrel_2',
+  'limited_copper_barrel_2',
+  'limited_iron_barrel_2',
+  'limited_gold_barrel_2',
+  'limited_diamond_barrel_2',
+  'limited_netherite_barrel_2',
+  'limited_barrel_3',
+  'limited_copper_barrel_3',
+  'limited_iron_barrel_3',
+  'limited_gold_barrel_3',
+  'limited_diamond_barrel_3',
+  'limited_netherite_barrel_3',
+  'limited_barrel_4',
+  'limited_copper_barrel_4',
+  'limited_iron_barrel_4',
+  'limited_gold_barrel_4',
+  'limited_diamond_barrel_4',
+  'limited_netherite_barrel_4'
+]
+
 ClientEvents.lang('en_us', event => {
+  for (let i = 0; i < storage_blocks.length; i++) {
+    let element = storage_blocks[i];
+    event.addAll(
+      'kubejs',
+      createTooltip('sophisticatedstorage:' + element)
+        .addSummary('An advanced* storage solution!')
+        .addBehaviour([
+          'Additional Info',
+          '*Requires _Packing Tape_ to prevent item spillage into the world.'
+        ])
+        .build()
+    )
+  }
   event.addAll(
     'kubejs',
     createTooltip('sophisticatedstorage:basic_tier_upgrade')
@@ -206,6 +258,23 @@ ClientEvents.lang('en_us', event => {
       .addBehaviour([
         'Advanced Upgrade',
         '_Faster_ and with input / output options.'
+      ])
+      .build()
+  )
+  // Controller Blocks
+  event.addAll(
+    'kubejs',
+    createTooltip('sophisticatedstorage:controller')
+      .addSummary('Allows depositing and transporting items to and from a _connected multiblock_ of storage blocks.')
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('sophisticatedstorage:storage_link')
+      .addSummary('Connects separate storage multiblocks to the _Controller_.')
+      .addBehaviour([
+        'Linking',
+        'Use the _Storage Tool_ to link to the _Controller_.'
       ])
       .build()
   )
