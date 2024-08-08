@@ -20,14 +20,7 @@ const WOOD_TYPES = ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'm
 const STANDARD_ARMOR = ['helmet', 'chestplate', 'leggings', 'boots']
 const STANDARD_TOOLS_ALL = ['pickaxe', 'axe', 'hoe', 'shovel', 'sword']
 let STONEPLATES = ['stone', 'polished_blackstone']
-let FOUNDATION_NONMETAL = [
-  'coal',
-  'redstone',
-  'quartz',
-  'diamond',
-  'emerald',
-  'lapis_lazuli'
-]
+let FOUNDATION_NONMETAL = ['coal', 'redstone', 'quartz', 'diamond', 'emerald', 'lapis_lazuli']
 let CURSEDRECIPES = [
   'iron_ingot_from_smelting_iron_ore',
   'iron_ingot_from_blasting_iron_ore',
@@ -59,6 +52,64 @@ const COLOR = [
   'red',
   'black',
   'yellow'
+]
+
+let template_duplication = [
+  'netherite_upgrade_smithing_template',
+  'sentry_armor_trim_smithing_template',
+  'vex_armor_trim_smithing_template',
+  'wild_armor_trim_smithing_template',
+  'coast_armor_trim_smithing_template',
+  'dune_armor_trim_smithing_template',
+  'wayfinder_armor_trim_smithing_template',
+  'raiser_armor_trim_smithing_template',
+  'shaper_armor_trim_smithing_template',
+  'host_armor_trim_smithing_template',
+  'ward_armor_trim_smithing_template',
+  'silence_armor_trim_smithing_template',
+  'tide_armor_trim_smithing_template',
+  'snout_armor_trim_smithing_template',
+  'rib_armor_trim_smithing_template',
+  'eye_armor_trim_smithing_template',
+  'spire_armor_trim_smithing_template'
+]
+let item_duplication = {
+  asurine: 'create:asurine',
+  crimsite: 'create:crimsite',
+  ochrum: 'create:ochrum',
+  veridium: 'create:veridium',
+  iridium_upgrade_smithing_template: 'kubejs:iridium_upgrade_smithing_template'
+}
+let sherd_duplication = [
+  'angler',
+  'archer',
+  'arms_up',
+  'blade',
+  'brewer',
+  'burn',
+  'danger',
+  'explorer',
+  'friend',
+  'heart',
+  'heartbreak',
+  'howl',
+  'miner',
+  'mourner',
+  'plenty',
+  'prize',
+  'sheaf',
+  'shelter',
+  'skull',
+  'snort'
+]
+
+let iridium_blocks = [
+  'iridium_block_connecting',
+  'ornate_iridium_block_connecting',
+  'ornate_iridium_pillar_connecting',
+  'iridium_quartz_block_connecting',
+  'iridium_tiles',
+  'iridium_tiles_connecting'
 ]
 
 ServerEvents.recipes(event => {
@@ -295,25 +346,6 @@ ServerEvents.recipes(event => {
   event.recipes.minecraft.blasting('create:zinc_block', 'create:raw_zinc_block')
     .cookingTime(900).xp(6.3)
     .id('finality:blasting/zinc_block_from_raw_zinc_block')
-  let template_duplication = [
-    'netherite_upgrade_smithing_template',
-    'sentry_armor_trim_smithing_template',
-    'vex_armor_trim_smithing_template',
-    'wild_armor_trim_smithing_template',
-    'coast_armor_trim_smithing_template',
-    'dune_armor_trim_smithing_template',
-    'wayfinder_armor_trim_smithing_template',
-    'raiser_armor_trim_smithing_template',
-    'shaper_armor_trim_smithing_template',
-    'host_armor_trim_smithing_template',
-    'ward_armor_trim_smithing_template',
-    'silence_armor_trim_smithing_template',
-    'tide_armor_trim_smithing_template',
-    'snout_armor_trim_smithing_template',
-    'rib_armor_trim_smithing_template',
-    'eye_armor_trim_smithing_template',
-    'spire_armor_trim_smithing_template'
-  ]
   for (let i = 0; i < template_duplication.length; i++) {
     let element = template_duplication[i];
     event.remove({ id: 'minecraft:' + element })
@@ -322,41 +354,12 @@ ServerEvents.recipes(event => {
       'kubejs:duplicator'
     ]).keepHeldItem().id('kubejs:deploying/' + element + '_duplication')
   }
-  let item_duplication = {
-    asurine: 'create:asurine',
-    crimsite: 'create:crimsite',
-    ochrum: 'create:ochrum',
-    veridium: 'create:veridium',
-    iridium_upgrade_smithing_template: 'kubejs:iridium_upgrade_smithing_template'
-  }
   for (let [recipeId, itemId] of Object.entries(item_duplication)) {
     event.recipes.create.deploying(Item.of(itemId, 2), [
       itemId,
       'kubejs:duplicator'
     ]).keepHeldItem().id('kubejs:deploying/' + recipeId + '_duplication')
   }
-  let sherd_duplication = [
-    'angler',
-    'archer',
-    'arms_up',
-    'blade',
-    'brewer',
-    'burn',
-    'danger',
-    'explorer',
-    'friend',
-    'heart',
-    'heartbreak',
-    'howl',
-    'miner',
-    'mourner',
-    'plenty',
-    'prize',
-    'sheaf',
-    'shelter',
-    'skull',
-    'snort'
-  ]
   for (let i = 0; i < sherd_duplication.length; i++) {
     let element = sherd_duplication[i];
     event.recipes.create.deploying([
@@ -683,14 +686,6 @@ ServerEvents.recipes(event => {
   event.shapeless('9x kubejs:iridium_nugget', [
     'kubejs:iridium_ingot'
   ]).id('finality:iridium_ingot_decompression')
-  let iridium_blocks = [
-    'iridium_block_connecting',
-    'ornate_iridium_block_connecting',
-    'ornate_iridium_pillar_connecting',
-    'iridium_quartz_block_connecting',
-    'iridium_tiles',
-    'iridium_tiles_connecting'
-  ]
   for (let i = 0; i < iridium_blocks.length; i++) {
     let blockId = iridium_blocks[i];
     event.recipes.minecraft.stonecutting(
@@ -1234,12 +1229,21 @@ ServerEvents.recipes(event => {
   event.recipes.create.compacting([
     'create:cinder_flour',
     Item.of('create:cinder_flour').withChance(0.50),
-    Item.of('minecraft:netherite_scrap').withChance(0.50),
-    Item.of('kubejs:netherite_nugget').withChance(0.12)
+    'minecraft:netherite_scrap',
+    Item.of('minecraft:netherite_scrap').withChance(0.25)
   ], [
     Fluid.of('kubejs:shimmer', 750),
     'minecraft:netherrack',
-  ]).id('finality:compacting/netherite_scrap_renewal')
+  ]).id('kubejs:compacting/netherrack_shimmer_convert')
+  event.recipes.create.compacting([
+    '9x create:cinder_flour',
+    Item.of('create:cinder_flour', 9).withChance(0.50),
+    '9x minecraft:netherite_scrap',
+    Item.of('minecraft:netherite_scrap', 9).withChance(0.25)
+  ], [
+    Fluid.of('kubejs:shimmer', 750),
+    'kubejs:compressed_netherrack'
+  ]).id('kubejs:compacting/compressed_netherrack_shimmer_convert')
   event.recipes.create.compacting([
     Item.of('minecraft:raw_gold', 9).withChance(0.25),
     Item.of('minecraft:raw_copper', 9).withChance(0.25),
