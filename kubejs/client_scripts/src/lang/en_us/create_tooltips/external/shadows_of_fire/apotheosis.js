@@ -1,15 +1,91 @@
 // requires: apotheosis
 // requires: create
 
+let reforging_default = 'Uses Sigils of Rebirth and Rarity Materials to _reforge_ items, granting them an affixed name or reforging them if they already have one.'
+
 ClientEvents.lang('en_us', event => {
-  YELLOW_PALETTE('apotheosis:vial_of_expulsion')
-  PURPLE_PALETTE('apotheosis:vial_of_extraction')
-  event.addAll('apotheosis', {
-    "item.apotheosis.vial_of_expulsion.tooltip": "VIAL OF EXPULSION",
-    "item.apotheosis.vial_of_expulsion.tooltip.summary": "Used in a _Smithing Table_ to _destroy_ socketed Apothic Gems and _preserve_ the Affixed item.",
-    "item.apotheosis.vial_of_extraction.tooltip": "VIAL OF EXTRACTION",
-    "item.apotheosis.vial_of_extraction.tooltip.summary": "Used in a _Smithing Table_ to _preserve_ socketed Apothic Gems at the cost of _destroying_ the Affixed item."
-  })
+  event.addAll(
+    'kubejs',
+    createTooltip('apotheosis:salvaging_table')
+      .addSummary('Breaks down _Affix_ items into _Rarity Materials_ or Gems into _Gem Dust_.')
+      .addBehaviour([
+        'When connected to an item output',
+        '_Automatically_ salvages an item with no player intervention. Useful for mob farms that produce affixed items, armor and gems.'
+      ])
+      .addBehaviour([
+        'Additional Info',
+        'Items _without_ an Affix will _not_ be automatically salvaged. There are exceptions, however, such as Horse Armor. For more info in any recipe viewer, check uses by pressing _[R]_.'
+      ])
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('apotheosis:sigil_of_socketing')
+      .addSummary('A sigil utilized in _adding_ an additional Gem socket to an affixed item.')
+      .addBehaviour([
+        'When used in Smithing Table',
+        'Adds one _Gem Socket_ to an affixed item.'
+      ])
+      .setPalette($Palette.BLUE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('apotheosis:sigil_of_withdrawal')
+      .addSummary('A sigil utilized in removing _all_ socketed Gems from an item.')
+      .addBehaviour([
+        'When used in Smithing Table',
+        'Removes all socketed _Gems_ from an affixed item.'
+      ])
+      .setPalette($Palette.GREEN)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('apotheosis:sigil_of_rebirth')
+      .addSummary('A sigil utilized as _fuel_ with _Reforging Tables_.')
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('apotheosis:sigil_of_enhancement')
+      .addSummary('A sigil utilized as _fuel_ with the _Augmentation Table_.')
+      .setPalette($Palette.YELLOW)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('apotheosis:sigil_of_unnaming')
+      .addSummary('A sigil utilized to remove the affixed name from an item.')
+      .addBehaviour([
+        'When used in Smithing Table',
+        '_Removes_ the affixed name from an item.'
+      ])
+      .setPalette($Palette.GRAY)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('apotheosis:simple_reforging_table')
+      .addSummary(reforging_default)
+      .setPalette($Palette.BLUE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('apotheosis:reforging_table')
+      .addSummary(reforging_default)
+      .setPalette($Palette.PURPLE)
+      .build()
+  )
+  event.addAll(
+    'kubejs',
+    createTooltip('apotheosis:augmenting_table')
+      .addSummary('Uses Sigils of Enhancement to augment _individual_ affixes in an affixed item.')
+      .setPalette($Palette.YELLOW)
+      .build()
+  )
   event.addAll(
     'kubejs',
     createTooltip('kubejs:eversor_gem_info')
