@@ -222,6 +222,14 @@ ServerEvents.recipes(event => {
     H: 'create:chute',
     C: '#forge:chests/wooden'
   }).id('finality:hopper')
+  event.shaped('6x minecraft:rail', [
+    'I I',
+    'ISI',
+    'I I'
+  ], {
+    I: '#forge:ingots/iron',
+    S: '#forge:rods/wooden'
+  }).id('minecraft:rail')
   event.shaped('minecraft:trident', [
     'PPP',
     ' A ',

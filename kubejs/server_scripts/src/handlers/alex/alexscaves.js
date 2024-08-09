@@ -7,18 +7,19 @@
 // requires: alexscaves
 // requires: kubejs_create
 
+let alexscaves_sherds = [
+  'dinosaur',
+  'footprint',
+  'guardian',
+  'hero'
+]
+
 ServerEvents.recipes(event => {
   event.remove({ id: 'alexscaves:polarity_armor_trim_smithing_template' })
   event.recipes.create.deploying('2x alexscaves:polarity_armor_trim_smithing_template', [
     'alexscaves:polarity_armor_trim_smithing_template',
     'kubejs:duplicator'
   ]).keepHeldItem().id('kubejs:deploying/polarity_armor_trim_smithing_template')
-  let alexscaves_sherds = [
-    'dinosaur',
-    'footprint',
-    'guardian',
-    'hero'
-  ]
   for (let i = 0; i < alexscaves_sherds.length; i++) {
     let element = alexscaves_sherds[i];
     event.recipes.create.deploying([

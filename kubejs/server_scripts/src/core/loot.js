@@ -55,6 +55,9 @@ LootJS.modifiers(event => {
   event.addBlockLootModifier('minecraft:grass')
     .randomChance(0.05)
     .addLoot('kubejs:lemon_seed')
+  /**
+   * ENTITIES
+   */
   event.addEntityLootModifier('minecraft:creeper')
     .randomChance(0.25).addLoot('create:zinc_nugget')
     .randomChanceWithLooting(0.50, 1).addLoot('2x create:zinc_nugget')
