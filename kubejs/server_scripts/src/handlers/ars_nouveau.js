@@ -8,7 +8,15 @@
 
 // requires: ars_nouveau
 // requires: kubejs_create
+// requires: lootjs
 // ignored: false
+
+const DRYGMY_UUID = '[I;1946194541,268914259,-2012236738,1743961897]'
+const onlyDrygmy = builder => {
+  builder.matchKiller(entity => {
+    entity.nbt(`{UUID:${DRYGMY_UUID}}`)
+  })
+}
 
 ServerEvents.recipes(event => {
   event.remove([
@@ -68,4 +76,16 @@ ServerEvents.recipes(event => {
     { item: '#forge:nuggets/iron' },
     { item: 'kubejs:netherite_nugget' }
   ]).id('kubejs:imbuement_andesite_alloy')
+})
+
+ServerEvents.tags('entity_type', event => {
+  if (Platform.isLoaded('productivebees')) {
+    event.add('ars_nouveau:drygmy_blacklist', [/productivebees:.+/])
+  }
+})
+
+LootJS.modifiers(event => {
+  onlyDrygmy(
+    event.addEntityLootModifier("minecraft:wither").addLoot('minecraft:nether_star')
+  )
 })
