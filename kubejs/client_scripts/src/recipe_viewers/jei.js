@@ -322,11 +322,19 @@ JEIEvents.information(event => {
       '_Copies_ color channels from the Ender Tank onto the bucket.'
     ])
   }
-  if (Platform.isLoaded('endrem') && !Platform.isLoaded('extendedcrafting')) {
-    event.addItem('minecraft:ender_eye', [
-      'There is a certain eye that can only be acquired from enchanting.',
-      'It is very rare, however.'
-    ])
+  if (Platform.isLoaded('endrem') && Platform.isLoaded('summoningrituals') && !Platform.isLoaded('extendedcrafting')) {
+    event.addItem('endrem:black_eye', ['Can be found in lost treasure chests.'])
+    event.addItem('endrem:corrupted_eye', ['Found in Pillager Outposts.'])
+    event.addItem('endrem:lost_eye', ['Usually found in Mineshafts.'])
+    event.addItem('endrem:evil_eye', ['Usually acquired from a Master Cleric.'])
+    event.addItem('endrem:guardian_eye', ['Usually acquired from slaying Guardians.'])
+    event.addItem('endrem:wither_eye', ['Obviously only drops from the Wither.'])
+    event.addItem('endrem:witch_eye', ['Requires a Witch Pupil to craft.'])
+    event.addItem('endrem:undead_eye', ['Requires a skeleton horse to be slain in order to acquire the Undead Soul.'])
+    event.addItem('endrem:undead_soul', ['Acquired from slaying a skeleton horse.'])
+    event.addItem('endrem:witch_pupil', ['Drops from Witches.'])
+  }
+  if (Platform.isLoaded('endrem') && !Platform.isLoaded('summoningrituals') && !Platform.isLoaded('extendedcrafting')) {
     event.addItem('endrem:black_eye', ['Can be found in lost treasure chests.'])
     event.addItem('endrem:cold_eye', ['Found in igloos.'])
     event.addItem('endrem:corrupted_eye', ['Found in Pillager Outposts.'])
@@ -495,6 +503,11 @@ JEIEvents.information(event => {
     event.addItem('neapolitan:adzuki_beans', [
       'Can only be grown in non-tilled soil.',
       'Does not require water!'
+    ])
+  }
+  if (Platform.isLoaded('railways')) {
+    event.addItem('railways:riveted_locometal', [
+      'Crafted using an Iron Block in a Stonecutter.'
     ])
   }
   if (Platform.isLoaded('tempad')) {
