@@ -1,6 +1,5 @@
 // priority: 3
 // requires: roughlyenoughitems
-// requires: roughlyenoughresources
 // requires: roughlyenoughprofessions
 // requires: create
 // ignored: false
@@ -607,7 +606,8 @@ REIEvents.groupEntries(event => {
     'minecraft:dark_oak_log',
     'minecraft:mangrove_log',
     'minecraft:crimson_stem',
-    'minecraft:warped_stem'
+    'minecraft:warped_stem',
+    'minecraft:cherry_log'
   ])
   event.groupItems('minecraft:rei_groups/minecraft_woods', 'Minecraft Bark Wood Blocks', [
     'minecraft:oak_wood',
@@ -618,7 +618,8 @@ REIEvents.groupEntries(event => {
     'minecraft:dark_oak_wood',
     'minecraft:mangrove_wood',
     'minecraft:crimson_hyphae',
-    'minecraft:warped_hyphae'
+    'minecraft:warped_hyphae',
+    'minecraft:cherry_wood'
   ])
   event.groupItems('minecraft:rei_groups/minecraft_stripped_logs', 'Minecraft Stripped Logs', [
     'minecraft:stripped_oak_log',
@@ -629,7 +630,8 @@ REIEvents.groupEntries(event => {
     'minecraft:stripped_dark_oak_log',
     'minecraft:stripped_mangrove_log',
     'minecraft:stripped_crimson_stem',
-    'minecraft:stripped_warped_stem'
+    'minecraft:stripped_warped_stem',
+    'minecraft:stripped_cherry_log'
   ])
   event.groupItems('minecraft:rei_groups/minecraft_stripped_woods', 'Minecraft Stripped Woods', [
     'minecraft:stripped_oak_wood',
@@ -640,7 +642,62 @@ REIEvents.groupEntries(event => {
     'minecraft:stripped_dark_oak_wood',
     'minecraft:stripped_mangrove_wood',
     'minecraft:stripped_crimson_hyphae',
-    'minecraft:stripped_warped_hyphae'
+    'minecraft:stripped_warped_hyphae',
+    'minecraft:stripped_cherry_wood'
+  ])
+  event.groupItems('minecraft:rei_groups/minecraft_wooden_slabs', 'Minecraft Wooden Slabs', [
+    'minecraft:oak_slab',
+    'minecraft:spruce_slab',
+    'minecraft:birch_slab',
+    'minecraft:jungle_slab',
+    'minecraft:acacia_slab',
+    'minecraft:dark_oak_wood',
+    'minecraft:mangrove_slab',
+    'minecraft:cherry_slab'
+  ])
+  event.groupItems('minecraft:rei_groups/minecraft_fences', 'Minecraft Fences', [
+    'minecraft:oak_fence',
+    'minecraft:spruce_fence',
+    'minecraft:birch_fence',
+    'minecraft:jungle_fence',
+    'minecraft:acacia_fence',
+    'minecraft:dark_oak_fence',
+    'minecraft:mangrove_fence',
+    'minecraft:cherry_fence'
+  ])
+  event.groupItems('minecraft:rei_grups/minecraft_fence_gates', 'Minecraft Fence Gates', [
+    'minecraft:oak_fence_gate',
+    'minecraft:spruce_fence_gate',
+    'minecraft:birch_fence_gate',
+    'minecraft:jungle_fence_gate',
+    'minecraft:acacia_fence_gate',
+    'minecraft:dark_oak_fence_gate',
+    'minecraft:mangrove_fence_gate',
+    'minecraft:cherry_fence_gate'
+  ])
+  event.groupItem('minecraft:rei_groups/minecraft_walls', 'Minecraft Walls', [
+    'minecraft:cobblestone_wall',
+    'minecraft:mossy_cobblestone_wall',
+    'minecraft:brick_wall',
+    'minecraft:prismarine_wall',
+    'minecraft:red_sandstone_wall',
+    'minecraft:mossy_stone_brick_wall',
+    'minecraft:granite_wall',
+    'minecraft:stone_brick_wall',
+    'minecraft:mud_brick_wall',
+    'minecraft:nether_brick_wall',
+    'minecraft:andesite_wall',
+    'minecraft:red_nether_brick_wall',
+    'minecraft:sandstone_wall',
+    'minecraft:end_stone_brick_wall',
+    'minecraft:diorite_wall',
+    'minecraft:blackstone_wall',
+    'minecraft:polished_blackstone_wall',
+    'minecraft:polished_blackstone_brick_wall',
+    'minecraft:cobbled_deepslate_wall',
+    'minecraft:polished_deepslate_wall',
+    'minecraft:deepslate_brick_wall',
+    'minecraft:deepslate_tile_wall'
   ])
   event.groupItems('minecraft:rei_groups/minecraft_dyes', 'Minecraft Dyes', [
     'minecraft:black_dye',
@@ -1091,6 +1148,11 @@ REIEvents.groupEntries(event => {
     event.groupItemsByTag('quark:rei_groups/quark_runes', 'Quark Runes', 'quark:runes')
     event.groupSameItem('quark:rei_groups/seed_pouches', 'Quark Seed Pouches', 'quark:seed_pouch')
     event.groupSameItem('quark:rei_groups/ancient_tomes', 'Quark Ancient Tomes', 'quark:ancient_tome')
+  }
+  if (Platform.isLoaded('reliquary')) {
+    event.groupSameItem('reliquary:rei_groups/potions', 'Condensed Potions', 'reliquary:potion')
+    event.groupSameItem('reliquary:rei_groups/splash_potions', 'Splash Condensed Potions', 'reliquary:splash_potion')
+    event.groupSameItem('reliquary:rei_groups/lingering_potions', 'Lingering Condensed Potions', 'reliquary:lingering_potion')
   }
   if (Platform.isLoaded('v_slab_compat') && Platform.isLoaded('quark')) {
     event.groupItemsByTag('v_slab_compat:rei_groups/vertical_slabs', 'Vertical Slab Compat', 'quark:vertical_slabs')
