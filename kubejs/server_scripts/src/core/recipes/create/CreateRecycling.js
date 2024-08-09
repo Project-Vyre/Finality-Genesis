@@ -267,6 +267,12 @@ ServerEvents.recipes(event => {
     'create:fluid_tank',
     'kubejs:deconstructor'
   ]).keepHeldItem().id('finality:deploying/fluid_tank_deconstruction')
+  event.recipes.create.deploying([
+    '4x minecraft:string'
+  ], [
+    '#minecraft:wool',
+    'kubejs:deconstructor'
+  ]).keepHeldItem().id('kubejs:deploying/wool_deconstruction')
   // BANNER DECONSTRUCTION
   for (let id of COLOR) {
     event.recipes.create.deploying([
