@@ -24,6 +24,18 @@ ServerEvents.recipes(event => {
     'create:iron_sheet',
     'ae2:fluix_crystal'
   ]).id('kubejs:ae2/deploying/tools/fluix_upgrade_smithing_template')
+  event.recipes.create.filling('ae2:flawless_budding_quartz', [
+    'ae2:damaged_budding_quartz',
+    Fluid.of('kubejs:condensed_universal_order', 750)
+  ]).id('kubejs:filling/ae2/damaged_to_flawless_budding_quartz')
+  event.recipes.create.filling('ae2:flawless_budding_quartz', [
+    'ae2:chipped_budding_quartz',
+    Fluid.of('kubejs:condensed_universal_order', 500)
+  ]).id('kubejs:filling/ae2/chipped_to_flawless_budding_quartz')
+  event.recipes.create.filling('ae2:flawless_budding_quartz', [
+    'ae2:flawed_budding_quartz',
+    Fluid.of('kubejs:condensed_universal_order', 250)
+  ]).id('kubejs:filling/ae2/flawed_to_flawless_budding_quartz')
   event.forEachRecipe({ mod: 'ae2' }, recipe => {
     recipe.replaceInput('#forge:ingots/iron', 'kubejs:iridium_ingot')
     recipe.replaceInput('minecraft:sticky_piston', 'create:sticky_mechanical_piston')
