@@ -1,6 +1,11 @@
 // requires: pipez
 // requires: create
 
+let default_pipe_filtering = [
+  'Filtering Info',
+  'To filter what a pipe transports, an _Advanced Pipe Upgrade_ is required.'
+]
+
 ClientEvents.lang('en_us', event => {
   event.addAll(
     'pipez',
@@ -10,6 +15,7 @@ ClientEvents.lang('en_us', event => {
         'On R-Click with Wrench',
         'Changes the _pipe form_ between input, output and closed. _Output_ form does not have the lip around the pipe and has a very tiny air gap.'
       ])
+      .addBehaviour(default_pipe_filtering)
       .build()
   )
   event.addAll(
@@ -20,6 +26,7 @@ ClientEvents.lang('en_us', event => {
         'On R-Click with Wrench',
         'Changes the _pipe form_ between input, output and closed. _Output_ form does not have the lip around the pipe and has a very tiny air gap.'
       ])
+      .addBehaviour(default_pipe_filtering)
       .build()
   )
   event.addAll(
@@ -30,6 +37,7 @@ ClientEvents.lang('en_us', event => {
         'On R-Click with Wrench',
         'Changes the _pipe form_ between input, output and closed. _Output_ form does not have the lip around the pipe and has a very tiny air gap.'
       ])
+      .addBehaviour(default_pipe_filtering)
       .build()
   )
   event.addAll(
@@ -40,6 +48,7 @@ ClientEvents.lang('en_us', event => {
         'On R-Click with Wrench',
         'Changes the _pipe form_ between input, output and closed. _Output_ form does not have the lip around the pipe and has a very tiny air gap.'
       ])
+      .addBehaviour(default_pipe_filtering)
       .build()
   )
 })

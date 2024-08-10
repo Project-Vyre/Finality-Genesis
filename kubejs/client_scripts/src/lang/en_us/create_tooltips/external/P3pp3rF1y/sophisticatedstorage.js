@@ -242,7 +242,15 @@ ClientEvents.lang('en_us', event => {
   event.addAll(
     'kubejs',
     createTooltip('sophisticatedstorage:compression_upgrade')
-      .addSummary('Automatically compresses / decompresses items.')
+      .addSummary('Automatically compresses / decompresses items. Recommended for use in Limited Barrels.')
+      .addBehaviour([
+        'Additional Info - 1',
+        'When in Barrels, Chests or Shulker Boxes, the compression order is from most compacted form on the _leftmost_ side to the most uncompressed form on the _rightmost_ slots with an indicator.'
+      ])
+      .addBehaviour([
+        'Additional Info - 2',
+        'Slots marked with an _X_ after an item is placed inside a compression slot indicate that the item is unable to be compressed / decompressed any further. However, you can reposition the item itself on any of the five slots when in a Barrel, Chest or Shulker Box.'
+      ])
       .build()
   )
   event.addAll(
