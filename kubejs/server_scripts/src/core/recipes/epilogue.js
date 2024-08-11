@@ -766,14 +766,34 @@ ServerEvents.recipes(event => {
 
   event.recipes.create.crushing([
     'kubejs:unstable_entropy_particles',
-    Item.of('kubejs:final_singularity_stage_nulla').withChance(0.50)
+    Item.of('kubejs:unstable_entropy_particles').withChance(0.25),
+    'kubejs:final_singularity_stage_nulla'
   ], 'kubejs:final_singularity_stage_nulla').processingTime(500).id('kubejs:crushing/final_singularity_stage_nulla')
-
+  event.recipes.create.crushing([
+    '8x kubejs:unstable_entropy_particles',
+    Item.of('kubejs:unstable_entropy_particles', 8).withChance(0.25),
+    'kubejs:final_singularity_stage_one'
+  ], 'kubejs:final_singularity_stage_one').processingTime(500).id('kubejs:crushing/final_singularity_stage_one')
+  event.recipes.create.crushing([
+    '16x kubejs:unstable_entropy_particles',
+    Item.of('kubejs:unstable_entropy_particles', 16).withChance(0.25),
+    'kubejs:final_singularity_stage_two'
+  ], 'kubejs:final_singularity_stage_two').processingTime(500).id('kubejs:crushing/final_singularity_stage_two')
+  event.recipes.create.crushing([
+    '24x kubejs:unstable_entropy_particles',
+    Item.of('kubejs:unstable_entropy_particles', 24).withChance(0.25),
+    'kubejs:final_singularity_stage_three'
+  ], 'kubejs:final_singularity_stage_three').processingTime(500).id('kubejs:crushing/final_singularity_stage_three')
   event.recipes.create.crushing([
     '32x kubejs:unstable_entropy_particles',
     Item.of('kubejs:unstable_entropy_particles', 32).withChance(0.25),
-    Item.of('kubejs:final_singularity').withChance(0.75)
-  ], 'kubejs:final_singularity').processingTime(500).id('finality:crushing/final_singularity')
+    'kubejs:final_singularity_stage_four'
+  ], 'kubejs:final_singularity_stage_four').processingTime(500).id('kubejs:crushing/final_singularity_stage_four')
+  event.recipes.create.crushing([
+    '64x kubejs:unstable_entropy_particles',
+    Item.of('kubejs:unstable_entropy_particles', 64).withChance(0.25),
+    'kubejs:final_singularity'
+  ], 'kubejs:final_singularity').processingTime(500).id('kubejs:crushing/final_singularity')
 
   event.recipes.create.mixing(Item.of('kubejs:final_singularity_stage_one').withChance(0.125), [
     'kubejs:final_singularity_stage_nulla',
