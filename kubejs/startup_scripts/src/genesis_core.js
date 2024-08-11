@@ -632,7 +632,7 @@ ItemEvents.toolTierRegistry(event => {
     tier.enchantmentValue = 30
   })
   event.add('iridium_tool', tier => {
-    tier.uses = -1
+    tier.uses = 8192
     tier.speed = 64
     tier.attackDamageBonus = 12.0
     tier.level = 5
@@ -646,7 +646,7 @@ ItemEvents.toolTierRegistry(event => {
     tier.enchantmentValue = 30
   })
   event.add('final_tool', tier => {
-    tier.uses = -1
+    tier.uses = 16777216
     tier.speed = 256.0
     tier.attackDamageBonus = 69995.0
     tier.level = 5
@@ -709,7 +709,7 @@ ItemEvents.modification(event => {
       item.maxDamage = 1024
     })
     event.modify(`minecraft:netherite_${tool}`, item => {
-      item.maxDamage = -1
+      item.maxDamage = 4096
     })
   }
   event.modify('minecraft:shears', item => {
