@@ -74,6 +74,7 @@ let template_duplication = [
   'spire_armor_trim_smithing_template'
 ]
 let item_duplication = {
+  blue_ice: 'minecraft:blue_ice',
   asurine: 'create:asurine',
   crimsite: 'create:crimsite',
   ochrum: 'create:ochrum',
@@ -554,6 +555,10 @@ ServerEvents.recipes(event => {
     Item.of('minecraft:glowstone_dust').withChance(0.25),
     Item.of('minecraft:bone').withChance(0.12)
   ], 'minecraft:soul_soil').id('finality:splashing/soul_soil')
+  event.recipes.create.splashing(
+    '2x minecraft:blue_ice',
+    'minecraft:blue_ice'
+  ).id('kubejs:splashing/blue_ice_crystal_growth')
   /**
    * MILLING
    */
