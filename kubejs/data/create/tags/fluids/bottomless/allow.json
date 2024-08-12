@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "kubejs:mushroom_stew",
+    "kubejs:lemon_juice",
+    "kubejs:condensed_universal_entropy",
+    "kubejs:condensed_universal_order",
+    "kubejs:shimmer",
+    "kubejs:molten_iron",
+    "kubejs:molten_gold",
+    "kubejs:molten_copper",
+    "kubejs:molten_zinc",
+    "kubejs:molten_brass",
+    "kubejs:molten_netherite"
+  ]
+}
