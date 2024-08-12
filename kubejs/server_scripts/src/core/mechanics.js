@@ -78,6 +78,17 @@ ItemEvents.firstRightClicked(event => {
       }
     })
   }
+  if (item.getId() == 'kubejs:final_lance') {
+    let arrow = event.entity.level.getBlock(event.entity.x, event.entity.y + 1.2, event.entity.z).createEntity('minecraft:arrow')
+    let speed = 50.0
+    let motionX = event.entity.lookAngle.x() * speed;
+    let motionY = event.entity.lookAngle.y() * speed;
+    let motionZ = event.entity.lookAngle.z() * speed;
+    let motionVec3 = new Vec3d(motionX, motionY, motionZ)
+    arrow.setOwner(player)
+    arrow.setDeltaMovement(motionVec3)
+    arrow.spawn()
+  }
   if (item.getId() == 'kubejs:final_scythe') {
     let end_ball = event.entity.level.getBlock(event.entity.x, event.entity.y + 0.5, event.entity.z).createEntity('minecraft:dragon_fireball')
     let speed = 3.0
@@ -103,6 +114,38 @@ ItemEvents.firstRightClicked(event => {
     tnt.setOwner(player)
     tnt.setDeltaMovement(motionVec3)
     tnt.spawn()
+  }
+  if (item.getId() == 'kubejs:final_axe') {
+    let fangBox = AABB.of(
+      player.pos.x() - 20,
+      player.pos.y() - 5,
+      player.pos.z() - 20,
+      player.pos.x() + 20,
+      player.pos.y() + 10,
+      player.pos.z() + 20
+    )
+    level.getEntitiesWithin(fangBox).forEach(entity => {
+      switch (entity.getType()) {
+        case null: return
+        case 'minecraft:item': return
+        case 'minecraft:lightning_bolt': return
+        case 'minecraft:end_crystal': return
+        case 'minecraft:area_effect_cloud': return
+        case 'minecraft:falling_block': return
+        case 'minecraft:evoker_fangs': return
+        case 'minecraft:item_frame': return
+        case 'minecraft:glow_item_frame': return
+        default:
+          if (!entity.isPlayer()) {
+            if (event.player.isShiftKeyDown()) {
+              entity.setIsInPowderSnow(true)
+              entity.potionEffects.add('minecraft:slowness', 200, 255, false, false)
+              entity.block.createEntity('minecraft:evoker_fangs').spawn()
+            }
+          }
+          break;
+      }
+    })
   }
   if (item.getId() == 'kubejs:crimson_moons_semblance') {
     let fire_ball = event.entity.level.getBlock(event.entity.x, event.entity.y + 0.5, event.entity.z).createEntity('minecraft:fireball')
