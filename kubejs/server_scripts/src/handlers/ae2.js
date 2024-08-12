@@ -86,19 +86,19 @@ ServerEvents.recipes(event => {
   event.recipes.create.deploying('ae2:printed_engineering_processor', [
     'minecraft:diamond',
     'ae2:engineering_processor_press'
-  ]).id('kubejs:ae2/inscriber/engineering_processor_print')
+  ]).keepHeldItem().id('kubejs:ae2/inscriber/engineering_processor_print')
   event.recipes.create.deploying('ae2:printed_calculation_processor', [
     'ae2:certus_quartz_crystal',
     'ae2:calculation_processor_press'
-  ]).id('kubejs:ae2/inscriber/calculation_processor_print')
+  ]).keepHeldItem().id('kubejs:ae2/inscriber/calculation_processor_print')
   event.recipes.create.deploying('ae2:printed_logic_processor', [
     'create:golden_sheet',
     'ae2:logic_processor_press'
-  ]).id('kubejs:ae2/inscriber/logic_processor_print')
+  ]).keepHeldItem().id('kubejs:ae2/inscriber/logic_processor_print')
   event.recipes.create.deploying('ae2:printed_silicon', [
     'ae2:silicon',
     'ae2:silicon_press'
-  ]).id('kubejs:ae2/inscriber/silicon_print')
+  ]).keepHeldItem().id('kubejs:ae2/inscriber/silicon_print')
   // cables
   event.recipes.ars_nouveau.enchanting_apparatus('ae2:fluix_pearl', [
     'ae2:fluix_crystal',
