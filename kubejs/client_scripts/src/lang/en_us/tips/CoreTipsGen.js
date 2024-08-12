@@ -197,7 +197,7 @@ finTip("difficulty", "If you did not heed my warning, expect to die many times o
 finTip("deepslate_shards", "Cobbled Deepslate can now be used to make Deepslate Shards which can be haunted to produce Echo Shards.")
 finTip("diorite_andesite", "Combining Cobblestone and Diorite is an easy way to automate Andesite production.")
 finTip("dragon_breath", "You can now extract Dragon Breath an unlimited amount of from the Dragon Egg by combining it with a bottle in the crafting grid.")
-finTip("fd_rotten_flesh_use", "Rotten Flesh can be used to make Organic Compost which trns into Rich Soil.")
+finTip("fd_rotten_flesh_use", "Rotten Flesh can be used to make Organic Compost which turns into Rich Soil.")
 finTip("rotten_flesh_haunting", "Rotten Flesh can now be haunted and turned into Phantom Membrane.")
 finTip("flax", "Start a Flax plant farm as early as possible. It will help in the long term with making Windmill Sails.")
 finTip("gateway_pearls", "<rainb>Gateway Pearls</rainb> are a fast way of obtaining a lot of loot from a specific mob. Just be prepared for combat.")
