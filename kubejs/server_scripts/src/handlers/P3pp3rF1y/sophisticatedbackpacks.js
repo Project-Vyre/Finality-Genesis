@@ -318,7 +318,7 @@ ServerEvents.recipes(event => {
   ], {
     P: 'minecraft:diamond',
     I: 'create:brass_sheet',
-    U: 'sophisticatedbackpacks:advanced_deposit_upgrade',
+    U: 'sophisticatedbackpacks:deposit_upgrade',
     C: 'create:smart_chute'
   }).id('kubejs:sophisticatedbackpacks/advanced_deposit_upgrade')
   // refill
@@ -340,7 +340,7 @@ ServerEvents.recipes(event => {
   ], {
     P: 'minecraft:diamond',
     I: 'create:brass_sheet',
-    U: 'sophisticatedbackpacks:upgrade_base',
+    U: 'sophisticatedbackpacks:refill_upgrade',
     C: 'create:smart_chute'
   }).id('kubejs:sophisticatedbackpacks/advanced_refill_upgrade')
   // inception
@@ -448,7 +448,7 @@ ServerEvents.recipes(event => {
     'create:electron_tube',
     'create:electron_tube'
   ]).id('kubejs:sophisticatedbackpacks/tool_swapper_upgrade')
-  event.recipes.create.mechanical_crafting('sophisticatedbackpacks:advanced_tool_swapper_upgrade', [
+  event.recipes.minecraft.crafting_shaped('sophisticatedbackpacks:advanced_tool_swapper_upgrade', [
     ' B ',
     'BUB',
     ' B '
