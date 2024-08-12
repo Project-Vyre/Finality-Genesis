@@ -88,6 +88,9 @@ ServerEvents.recipes(event => {
 })
 
 ServerEvents.tags('item', event => {
+  event.add('malum:scythe', [
+    'kubejs:final_scythe'
+  ])
   event.add('malum:soul_hunter_weapon', [
     'kubejs:final_scythe',
     'kubejs:final_katana'
