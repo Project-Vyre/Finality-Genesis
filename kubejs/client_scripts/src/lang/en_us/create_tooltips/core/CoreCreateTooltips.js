@@ -146,6 +146,16 @@ ClientEvents.lang('en_us', event => {
   GRAY_PALETTE('create:shadow_steel')
   event.addAll(
     'kubejs',
+    createTooltip('create:hose_pulley')
+      .addSummary('By default, any volume of fluid will be considered bottomless at _*10,000 fluid source blocks_ which would normally require a hole that is _25x25x16_ in volume. That is _Length_ * _Width_ * _Height_ for those who don\'t know how to calculate volume. Please _DO NOT_ issue a bug report if you have not read the additional text below.')
+      .addBehaviour([
+        'Additional Info',
+        '*Sometimes some fluids may require _more than 10,000_ fluid source blocks due to Create\'s Hose Pulley being weird. A hole that is _25x25x17_ in volume fixes this issue. _However_, Hose Pulleys are _unable_ to output _more than 10,050_ fluid source blocks due to a weird bug in Create itself.'
+      ])
+      .build()
+  )
+  event.addAll(
+    'kubejs',
     createTooltip('minecraft:obsidian')
       .addSummary('_Infinitely_ renewable but takes forever to break automatically.')
       .addBehaviour([
