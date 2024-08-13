@@ -153,14 +153,10 @@ function groupChippedTags(modName, event, exclude) {
 
 REIEvents.hide('item', event => {
   event.hide([
-    /^kubejs.*[_:\/]incomplete(?![a-zA-Z0-9]).*/,
     /^create.*[_:\/]andesite_encased(?![a-zA-Z0-9]).*/,
     /^create.*[_:\/]brass_encased(?![a-zA-Z0-9]).*/,
     'create:copper_backtank_placeable',
     'create:netherite_backtank_placeable',
-    'create:incomplete_track',
-    'create:incomplete_precision_mechanism',
-    'create:unprocessed_obsidian_sheet',
     'create:schematic'
   ])
   REI_CREATE_COMPAT_ORES.forEach(ore => {
@@ -581,11 +577,6 @@ REIEvents.information(event => {
 })
 
 REIEvents.groupEntries(event => {
-  event.groupSameItem('minecraft:rei_groups/all_regular_potions', 'All Regular Potions', 'minecraft:potion')
-  event.groupSameItem('minecraft:rei_groups/all_splash_potions', 'All Splash Potions', 'minecraft:splash_potion')
-  event.groupSameItem('minecraft:rei_groups/all_lingering_potions', 'All Lingering Potions', 'minecraft:lingering_potion')
-  event.groupSameItem('minecraft:rei_groups/all_tipped_arrows', 'All Tipped Arrows', 'minecraft:tipped_arrow')
-  event.groupSameItem('minecraft:rei_groups/all_enchantment_books', 'All Enchantment Books', 'minecraft:enchanted_book')
   event.groupItems('minecraft:rei_groups/minecraft_signs', 'Minecraft Signs', [
     'minecraft:oak_sign',
     'minecraft:spruce_sign',
@@ -675,7 +666,7 @@ REIEvents.groupEntries(event => {
     'minecraft:mangrove_fence_gate',
     'minecraft:cherry_fence_gate'
   ])
-  event.groupItem('minecraft:rei_groups/minecraft_walls', 'Minecraft Walls', [
+  event.groupItems('minecraft:rei_groups/minecraft_walls', 'Minecraft Walls', [
     'minecraft:cobblestone_wall',
     'minecraft:mossy_cobblestone_wall',
     'minecraft:brick_wall',
