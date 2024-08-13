@@ -418,10 +418,28 @@ REIEvents.information(event => {
       '_Copies_ color channels from the Ender Tank onto the bucket.'
     ])
   }
-  if (Platform.isLoaded('endrem')) {
-    event.addItem('minecraft:ender_eye', 'Acquisition', [
-      'There is a certain eye that can only be acquired from enchanting.',
-      'It is very rare, however.'
+  if (Platform.isLoaded('endrem') && Platform.isLoaded('summoningrituals') && !Platform.isLoaded('extendedcrafting')) {
+    event.addItem(['minecraft:ender_eye', 'endrem:cryptic_eye'], 'Acquisition', [
+      'There is a certain cryptic eye that can only be acquired from enchanting this.',
+      'It is very rare, however.',
+      'If you do happen to be unlucky, you can mix an Ender Eye with 1x Block of Experience, 1x Ender Eye and 250mb of Condensed Universal Entropy.'
+    ])
+    event.addItem('endrem:black_eye', 'Acquisition', ['Can be found in lost treasure chests.'])
+    event.addItem('endrem:corrupted_eye', 'Acquisition', ['Found in Pillager Outposts.'])
+    event.addItem('endrem:lost_eye', 'Acquisition', ['Usually found in Mineshafts.'])
+    event.addItem('endrem:evil_eye', 'Acquisition', ['Usually acquired from a Master Cleric.'])
+    event.addItem('endrem:guardian_eye', 'Acquisition', ['Usually acquired from slaying Guardians.'])
+    event.addItem('endrem:wither_eye', 'Acquisition', ['Obviously only drops from the Wither.'])
+    event.addItem('endrem:witch_eye', 'Acquisition', ['Requires a Witch Pupil to craft.'])
+    event.addItem('endrem:undead_eye', 'Acquisition', ['Requires a skeleton horse to be slain in order to acquire the Undead Soul.'])
+    event.addItem('endrem:undead_soul', 'Acquisition', ['Acquired from slaying a skeleton horse.'])
+    event.addItem('endrem:witch_pupil', 'Acquisition', ['Drops from Witches.'])
+  }
+  if (Platform.isLoaded('endrem') && !Platform.isLoaded('summoningrituals') && !Platform.isLoaded('extendedcrafting')) {
+    event.addItem(['minecraft:ender_eye', 'endrem:cryptic_eye'], 'Acquisition', [
+      'There is a certain cryptic eye that can only be acquired from enchanting this.',
+      'It is very rare, however.',
+      'If you do happen to be unlucky, you can mix an Ender Eye with 1x Block of Experience, 1x Ender Eye and 250mb of Condensed Universal Entropy.'
     ])
     event.addItem('endrem:black_eye', 'Acquisition', ['Can be found in lost treasure chests.'])
     event.addItem('endrem:cold_eye', 'Acquisition', ['Found in igloos.'])
@@ -433,6 +451,30 @@ REIEvents.information(event => {
     event.addItem('endrem:cursed_eye', 'Acquisition', ['Usually found in Bastions.'])
     event.addItem('endrem:evil_eye', 'Acquisition', ['Usually acquired from a Master Cleric.'])
     event.addItem('endrem:guardian_eye', 'Acquisition', ['Usually acquired from slaying Guardians.'])
+    event.addItem('endrem:magical_eye', 'Acquisition', ['Acquired from slaying Evokers.'])
+    event.addItem('endrem:wither_eye', 'Acquisition', ['Obviously only drops from the Wither.'])
+    event.addItem('endrem:witch_eye', 'Acquisition', ['Requires a Witch Pupil to craft.'])
+    event.addItem('endrem:undead_eye', 'Acquisition', ['Requires a skeleton horse to be slain in order to acquire the Undead Soul.'])
+    event.addItem('endrem:undead_soul', 'Acquisition', ['Acquired from slaying a skeleton horse.'])
+    event.addItem('endrem:exotic_eye', 'Acquisition', ['Created by combining multiple exotic ingredients using a Mechanical Mixer and a Basin.'])
+    event.addItem('endrem:witch_pupil', 'Acquisition', ['Drops from Witches.'])
+  }
+  if (Platform.isLoaded('endrem') && Platform.isLoaded('extendedcrafting')) {
+    event.addItem(['minecraft:ender_eye', 'endrem:cryptic_eye'], 'Acquisition', [
+      'There is a certain cryptic eye that can only be acquired from enchanting this.',
+      'It is very rare, however.',
+      'If you do happen to be unlucky, you can mix an Ender Eye with 1x Block of Experience, 1x Ender Eye and 250mb of Condensed Universal Entropy.'
+    ])
+    event.addItem('endrem:black_eye', 'Acquisition', ['Can be found in lost treasure chests.'])
+    event.addItem('endrem:cold_eye', 'Acquisition', ['Found in igloos.'])
+    event.addItem('endrem:corrupted_eye', 'Acquisition', ['Found in Pillager Outposts.'])
+    event.addItem('endrem:lost_eye', 'Acquisition', ['Usually found in Mineshafts.'])
+    event.addItem('endrem:nether_eye', 'Acquisition', ['Found in Nether Fortresses.'])
+    event.addItem('endrem:old_eye', 'Acquisition', ['Found in Desert Pyramids.'])
+    event.addItem('endrem:rogue_eye', 'Acquisition', ['Usually found in Jungle Temples.'])
+    event.addItem('endrem:cursed_eye', 'Acquisition', ['Usually found in Bastions.'])
+    event.addItem('endrem:evil_eye', 'Acquisition', ['Usually acquired from a Master Cleric.'])
+    event.addItem('endrem:guardian_eye', 'Acquisition', ['Usually acquired from slaying Elder Guardians.'])
     event.addItem('endrem:magical_eye', 'Acquisition', ['Acquired from slaying Evokers.'])
     event.addItem('endrem:wither_eye', 'Acquisition', ['Obviously only drops from the Wither.'])
     event.addItem('endrem:witch_eye', 'Acquisition', ['Requires a Witch Pupil to craft.'])
@@ -577,17 +619,10 @@ REIEvents.information(event => {
 })
 
 REIEvents.groupEntries(event => {
-  event.groupItems('minecraft:rei_groups/minecraft_signs', 'Minecraft Signs', [
-    'minecraft:oak_sign',
-    'minecraft:spruce_sign',
-    'minecraft:birch_sign',
-    'minecraft:jungle_sign',
-    'minecraft:acacia_sign',
-    'minecraft:dark_oak_sign',
-    'minecraft:mangrove_sign',
-    'minecraft:crimson_sign',
-    'minecraft:warped_sign'
-  ])
+  event.groupItems('minecraft:rei_groups/signs', 'Minecraft Signs', /^minecraft:.*_(?!hanging)_sign$/)
+  event.groupItems('minecraft:rei_groups/hanging_signs', 'Minecraft Hanging Signs', /^minecraft:.*_hanging_sign$/)
+  event.groupItemsByTag('kubejs:rei_groups/all_normal_signs', 'All Normal Signs', 'minecraft:signs')
+  event.groupItemsByTag('kubejs:rei_groups/all_hanging_signs', 'All Hanging Signs', 'minecraft:hanging_signs')
   event.groupItems('minecraft:rei_groups/minecraft_logs', 'Minecraft Logs', [
     'minecraft:oak_log',
     'minecraft:spruce_log',
@@ -636,60 +671,24 @@ REIEvents.groupEntries(event => {
     'minecraft:stripped_warped_hyphae',
     'minecraft:stripped_cherry_wood'
   ])
+  event.groupItems('minecraft:rei_groups/minecraft_planks', 'Minecraft Planks', /^minecraft:.*planks$/)
   event.groupItems('minecraft:rei_groups/minecraft_wooden_slabs', 'Minecraft Wooden Slabs', [
     'minecraft:oak_slab',
     'minecraft:spruce_slab',
     'minecraft:birch_slab',
     'minecraft:jungle_slab',
     'minecraft:acacia_slab',
-    'minecraft:dark_oak_wood',
+    'minecraft:dark_oak_slab',
     'minecraft:mangrove_slab',
-    'minecraft:cherry_slab'
+    'minecraft:cherry_slab',
+    'minecraft:crimson_slab',
+    'minecraft:warped_slab'
   ])
-  event.groupItems('minecraft:rei_groups/minecraft_fences', 'Minecraft Fences', [
-    'minecraft:oak_fence',
-    'minecraft:spruce_fence',
-    'minecraft:birch_fence',
-    'minecraft:jungle_fence',
-    'minecraft:acacia_fence',
-    'minecraft:dark_oak_fence',
-    'minecraft:mangrove_fence',
-    'minecraft:cherry_fence'
-  ])
-  event.groupItems('minecraft:rei_grups/minecraft_fence_gates', 'Minecraft Fence Gates', [
-    'minecraft:oak_fence_gate',
-    'minecraft:spruce_fence_gate',
-    'minecraft:birch_fence_gate',
-    'minecraft:jungle_fence_gate',
-    'minecraft:acacia_fence_gate',
-    'minecraft:dark_oak_fence_gate',
-    'minecraft:mangrove_fence_gate',
-    'minecraft:cherry_fence_gate'
-  ])
-  event.groupItems('minecraft:rei_groups/minecraft_walls', 'Minecraft Walls', [
-    'minecraft:cobblestone_wall',
-    'minecraft:mossy_cobblestone_wall',
-    'minecraft:brick_wall',
-    'minecraft:prismarine_wall',
-    'minecraft:red_sandstone_wall',
-    'minecraft:mossy_stone_brick_wall',
-    'minecraft:granite_wall',
-    'minecraft:stone_brick_wall',
-    'minecraft:mud_brick_wall',
-    'minecraft:nether_brick_wall',
-    'minecraft:andesite_wall',
-    'minecraft:red_nether_brick_wall',
-    'minecraft:sandstone_wall',
-    'minecraft:end_stone_brick_wall',
-    'minecraft:diorite_wall',
-    'minecraft:blackstone_wall',
-    'minecraft:polished_blackstone_wall',
-    'minecraft:polished_blackstone_brick_wall',
-    'minecraft:cobbled_deepslate_wall',
-    'minecraft:polished_deepslate_wall',
-    'minecraft:deepslate_brick_wall',
-    'minecraft:deepslate_tile_wall'
-  ])
+  event.groupItems('minecraft:rei_groups/minecraft_fences', 'Minecraft Fences', /^minecraft:.*fence$/)
+  event.groupItems('roughlyenoughitems:rei_groups/fences', 'All Fences', /^.*fence$/)
+  event.groupItems('minecraft:rei_grups/minecraft_fence_gates', 'Minecraft Fence Gates', /^minecraft:.*fence_gate$/)
+  event.groupItems('roughlyenoughitems:rei_groups/fence_gates', 'All Fence Gates', /^.*fence_gate$/)
+  event.groupItems('minecraft:rei_groups/minecraft_walls', 'Minecraft Walls', /^minecraft:.*_wall$/)
   event.groupItems('minecraft:rei_groups/minecraft_dyes', 'Minecraft Dyes', [
     'minecraft:black_dye',
     'minecraft:blue_dye',
@@ -787,12 +786,13 @@ REIEvents.groupEntries(event => {
     'minecraft:yellow_bed'
   ])
   event.groupItemsByTag('minecraft:rei_groups/shulker_boxes', 'Shulker Boxes', 'minecraft:shulker_boxes')
+  event.groupItemsByTag('kubejs:rei_groups/wooden_buttons', 'Wooden Buttons', 'minecraft:wooden_buttons')
+  event.groupItemsByTag('kubejs:rei_groups/stone_buttons', 'Stone Buttons', 'minecraft:stone_buttons')
   event.groupItemsByTag('minecraft:rei_groups/banners', 'Minecraft Banners', 'minecraft:banners')
-  event.groupItems('minecraft:rei_groups/infested_blocks', 'Minecraft Infested Blocks', /^$minecraft.*[_:\/]infested(?![a-zA-Z0-9]).*/)
-  event.groupItemsByTag('kubejs:rei_groups/all_normal_signs', 'All Normal Signs', 'minecraft:signs')
+  event.groupItems('minecraft:rei_groups/infested_blocks', 'Minecraft Infested Blocks', /^minecraft:infested_.*/)
   event.groupItems('kubejs:rei_groups/concrete_singularities', 'Concrete Singularities', /^kubejs:(concrete_+).*?(_singularity+)$/)
   event.groupItems('kubejs:rei_groups/minecraft_valued_singularities', 'Minecraft Valued Singularities', [
-    'kubejs:lapis_lazuli_singularity',
+    'kubejs:lapis_singularity',
     'kubejs:redstone_singularity',
     'kubejs:diamond_singularity',
     'kubejs:iron_singularity',
@@ -826,6 +826,7 @@ REIEvents.groupEntries(event => {
     'kubejs:sea_lantern_singularity'
   ])
   event.groupItems('kubejs:rei_groups/create_singularities', 'Create Singularities', [
+    'kubejs:blaze_cake_singularity',
     'kubejs:precision_mechanism_singularity',
     'kubejs:framed_glass_singularity',
     'kubejs:electron_tube_singularity',
@@ -860,6 +861,7 @@ REIEvents.groupEntries(event => {
   event.groupItemsByTag('create:rei_groups/seats', 'Create Seats', 'create:seats')
   if (Platform.isLoaded('farmersdelight')) {
     event.groupItemsByTag('farmersdelight:rei_groups/canvas_signs', 'Canvas Signs', 'farmersdelight:canvas_signs')
+    event.groupItemsByTag('farmersdelight:rei_groups/hanging_canvas_signs', 'Hanging Canvas Signs', 'farmersdelight:hanging_canvas_signs')
   }
   if (Platform.isLoaded('supplementaries')) {
     event.groupItemsByTag('supplementaries:rei_groups/hanging_signs', 'Hanging Signs', 'supplementaries:hanging_signs')
@@ -867,6 +869,10 @@ REIEvents.groupEntries(event => {
   }
   if (Platform.isLoaded('chalk')) {
     event.groupItems('chalk:rei_groups/chalk_all', 'All Chalks', [/^(chalk:).*(_chalk)$/])
+  }
+  if (Platform.isLoaded('scholar')) {
+    event.groupItemsByTag('scholar:rei_groups/writable_books', 'Writable Books', 'scholar:writable_books')
+    event.groupItemsByTag('scholar:rei_groups/written_books', 'Written Books', 'scholar:colored_written_books')
   }
   if (Platform.isLoaded('caupona')) {
     // caupona calcite columns
@@ -992,6 +998,71 @@ REIEvents.groupEntries(event => {
       'caupona:stone_brick_hypocaust_firebox'
     ])
   }
+  if (Platform.isLoaded('rechiseled') && Platform.isLoaded('rechiseledcreate')) {
+    event.groupItems('rechiseled:rei_groups/amethyst', 'Rechiseled - Amethyst', /^rechiseled:amethyst[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/acacia', 'Rechiseled - Acacia', /^rechiseled:acacia[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/bamboo', 'Rechiseled - Bamboo', /^rechiseled:bamboo[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/birch', 'Rechiseled - Birch', /^rechiseled:birch[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/cherry', 'Rechiseled - Cherry', /^rechiseled:cherry[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/crimson', 'Rechiseled - Crimson', /^rechiseled:crimson[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/dark_oak', 'Rechiseled - Dark Oak', /^rechiseled:dark_oak[a-z_]*/) // regex conflict
+    event.groupItems('rechiseled:rei_groups/jungle', 'Rechiseled - Jungle', /^rechiseled:jungle[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/mangrove', 'Rechiseled - Mangrove', /^rechiseled:mangrove[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/oak', 'Rechiseled - Oak', /^rechiseled:oak[a-z_]*/) // regex conflict
+    event.groupItems('rechiseled:rei_groups/spruce', 'Rechiseled - Spruce', /^rechiseled:spruce[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/warped', 'Rechiseled - Warped', /^rechiseled:warped[a-z_]*/)
+    // NOT WOOD
+    event.groupItems('rechiseled:rei_groups/blue_ice', 'Rechiseled - Blue Ice', /^rechiseled:blue_ice[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/bone_block', 'Rechiseled - Bone Block', /^rechiseled:bone[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/dirt', 'Rechiseled - Dirt', /^rechiseled:dirt[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/glowstone', 'Rechiseled - Glowstone', /^rechiseled:glowstone[a-z_]*/)
+    // Storage Blocks?
+    event.groupItems('rechiseled:rei_groups/coal', 'Rechiseled - Coal', /^rechiseled:coal[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/copper', 'Rechiseled - Copper', /^rechiseled:copper[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/diamond', 'Rechiseled - Diamond', /^rechiseled:diamond[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/emerald', 'Rechiseled - Emerald', /^rechiseled:emerald[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/gold', 'Rechiseled - Gold', /^rechiseled:gold[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/iron', 'Rechiseled - Iron', /^rechiseled:iron[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/lapis', 'Rechiseled - Lapis', /^rechiseled:lapis[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/netherite', 'Rechiseled - Netherite', /^rechiseled:netherite[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/quartz', 'Rechiseled - Quartz', /^rechiseled:quartz[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/redstone', 'Rechiseled - Redstone', /^rechiseled:redstone[a-z_]*/)
+    // STONE PALETTES
+    event.groupItems('rechiseled:rei_groups/andesite', 'Rechiseled - Andesite', /^rechiseled:andesite[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/basalt', 'Rechiseled - Basalt', /^rechiseled:basalt[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/blackstone', 'Rechiseled - Blackstone', /^rechiseled:blackstone[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/cobblestone', 'Rechiseled - Cobblestone', /^rechiseled:cobblestone[a-z_]*/) // regex conflict
+    event.groupItems('rechiseled:rei_groups/mossy_cobblestone', 'Rechiseled - Mossy Cobblestone', /^rechiseled:mossy_cobblestone[a-z_]*/) // regex conflict
+    event.groupItems('rechiseled:rei_groups/cobbled_deepslate', 'Rechiseled - Cobbled Deepslate', /^rechiseled:cobbled_deepslate[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/dark_prismarine', 'Rechiseled - Dark Prismarine', /^rechiseled:dark_prismarine[a-z_]*/) // regex conflict
+    event.groupItems('rechiseled:rei_groups/prismarine', 'Rechiseled - Prismarine', /^rechiseled:prismarine[a-z_]*/) // regex conflict
+    event.groupItems('rechiseled:rei_groups/diorite', 'Rechiseled - Diorite', /^rechiseled:diorite[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/end_stone', 'Rechiseled - End Stone', /^rechiseled:end_stone[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/granite', 'Rechiseled - Granite', /^rechiseled:granite[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/netherrack', 'Rechiseled - Netherrack', /^rechiseled:netherrack[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/nether_brick', 'Rechiseled - Nether Brick', /^rechiseled:nether_bricks[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/red_nether_brick', 'Rechiseled - Red Nether Brick', /^rechiseled:red_nether_bricks[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/obsidian', 'Rechiseled - Obsidian', /^rechiseled:obsidian[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/purpur', 'Rechiseled - Purpur', /^rechiseled:purpur[a-z_]*/)
+    event.groupItems('rechiseled:rei_groups/sandstone', 'Rechiseled - Sandstone', /^rechiseled:sandstone[a-z_]*/) // regex conflict
+    event.groupItems('rechiseled:rei_groups/red_sandstone', 'Rechiseled - Red Sandstone', /^rechiseled:red_sandstone[a-z_]*/) // regex conflict
+    event.groupItems('rechiseled:rei_groups/stone', 'Rechiseled - Stone', /^rechiseled:stone[a-z_]*/)
+    /**
+     * Rechiseled: Create
+     */
+    event.groupItems('rechiseledcreate:rei_groups/all_windows', 'Rechiseled: Create - Windows', /^rechiseledcreate.*[_:\/]window(?![a-z]).*/)
+  }
+  if (Platform.isLoaded('lightmanscurrency')) {
+    event.groupItemsByTag('lightmanscurrency:rei_groups/vending_machines_normal', 'Normal Vending Machines', 'lightmanscurrency:traders/vending_machine')
+    event.groupItemsByTag('lightmanscurrency:rei_groups/vending_machines_large', 'Large Vending Machines', 'lightmanscurrency:traders/large_vending_machine')
+    event.groupItemsByTag('lightmanscurrency:rei_groups/shelves_1x1', '1x1 Shelves', 'lightmanscurrency:traders/shelf')
+    event.groupItemsByTag('lightmanscurrency:rei_groups/shelves_2x2', '2x2 Shelves', 'lightmanscurrency:traders/shelf_2x2')
+    event.groupItemsByTag('lightmanscurrency:rei_groups/card_displays', 'Card Displays', 'lightmanscurrency:traders/card_display')
+    event.groupItemsByTag('lightmanscurrency:rei_groups/freezers', 'Freezers', 'lightmanscurrency:traders/freezer')
+    event.groupItems('lightmanscurrency:rei_groups/bookshelves', 'Bookshelves', /^lightmanscurrency:bookshelf_trader[a-z_]*/)
+    event.groupSameItem('lightmanscurrency:rei_groups/jars_of_sus', 'Jars of Sus', 'lightmanscurrency:sus_jar')
+    event.groupItems('lightmanscurrency:rei_groups/auction_stands', 'Auction Stands', /^lightmanscurrency:auction_stand_[a-z_]*/)
+  }
   if (Platform.isLoaded('createcafe')) {
     event.groupItems('createcafe:rei_groups/createcafe_all_items', 'Create Cafe Items', [/^(createcafe:).*$/])
     event.groupFluids('createcafe:rei_groups/createcafe_other_fluids', 'Create Cafe Basic Fluids', [
@@ -1059,8 +1130,21 @@ REIEvents.groupEntries(event => {
       'createcafe:banana_syrup',
     ])
   }
+  if (Platform.isLoaded('bellsandwhistles')) {
+    event.groupItems('bellsandwhistles:rei_groups/bellsandwhistles_all', 'All', /^(bellsandwhistles:).*$/)
+    event.groupItems('bellsandwhistles:rei_groups/pilots', 'Pilots', /^bellsandwhistles:.*pilot$/)
+    event.groupItems('bellsandwhistles:rei_groups/grab_rails', 'Grab Rails', /^bellsandwhistles:.*grab_rails$/)
+    event.groupItems('bellsandwhistles:rei_grups/bogie_steps', 'Bogie Steps', /^bellsandwhistles:.*bogie_steps$/)
+    event.groupItems('bellsandwhistles:rei_groups/door_steps', 'Door Steps', /^bellsandwhistles:.*door_step$/)
+  }
   if (Platform.isLoaded('createdeco')) {
     event.groupItems('createdeco:rei_groups/create_deco_all', 'Create Deco', [/^(createdeco:).*$/])
+  }
+  if (Platform.isLoaded('railways')) {
+    event.groupItems('railways:rei_groups/railways_all', 'All', [/^(railways:).*$/])
+    event.groupItems('railways:rei_groups/tracks', 'Regular Tracks', /^railways:track_.*$/)
+    event.groupItems('railways:rei_groups/narrow_tracks', 'Narrow Tracks', /^railways:track_.*(?!_narrow)$/)
+    event.groupItems('railways:rei_groups/narrow_tracks', 'Wide Tracks', /^railways:track_.*(?!_wide)$/)
   }
   if (Platform.isLoaded('sliceanddice')) {
     event.groupItems('sliceanddice:rei_groups/create_sliceanddice_all', 'Create Slice and Dice', [/^(sliceanddice:).*$/])
@@ -1070,6 +1154,15 @@ REIEvents.groupEntries(event => {
     event.groupSameItem('enderchests:rei_groups/shetiphian_enderchests_pouches', 'All Ender Pouches', 'enderchests:ender_pouch')
     event.groupSameItem('endertanks:rei_groups/shetiphian_endertanks', 'All Ender Tanks', 'endertanks:ender_tank')
     event.groupSameItem('endertanks:rei_groups/shetiphian_endertanks_buckets', 'All Ender Buckets', 'endertanks:ender_bucket')
+  }
+  if (Platform.isLoaded('ars_nouveau')) {
+    event.groupItems('ars_nouveau:rei_groups/glyphs', 'Spell Glyphs', [
+      /^ars_nouveau:glyph_.*/,
+      'ars_nouveau:wololo',
+      'ars_nouveau:rewind',
+      'ars_nouveau:reset',
+      'ars_nouveau:burst',
+    ])
   }
   /**
    * @author Hunter19823 <https://github.com/Hunter19823> https://discord.com/channels/303440391124942858/1145987527073865779
