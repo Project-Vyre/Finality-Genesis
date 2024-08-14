@@ -163,6 +163,10 @@ REIEvents.hide('item', event => {
     event.hide(`create:crushed_raw_${ore}`)
   })
 
+  if (Platform.isLoaded('ars_nouveau')) {
+    event.hide('ars_nouveau:magic_fire')
+    event.hide('ars_nouveau:debug')
+  }
   if (Platform.isLoaded('create_central_kitchen')
     && Platform.isLoaded('createcafe')
   ) {
@@ -789,6 +793,11 @@ REIEvents.groupEntries(event => {
   event.groupItemsByTag('kubejs:rei_groups/wooden_buttons', 'Wooden Buttons', 'minecraft:wooden_buttons')
   event.groupItemsByTag('kubejs:rei_groups/stone_buttons', 'Stone Buttons', 'minecraft:stone_buttons')
   event.groupItemsByTag('minecraft:rei_groups/banners', 'Minecraft Banners', 'minecraft:banners')
+  event.groupItems('minecraft:rei_groups/smithing_templates', 'Smithing Templates', /^minecraft:.*smithing_template$/)
+  event.groupItems('minecraft:rei_groups/pottery_sherds', 'Pottery Sherds', /^minecraft:.*pottery_sherds$/)
+  if (Platform.isLoaded('darkpaintings')) {
+    event.groupSameItem('minecraft:rei_groups/paintings', 'Paintings', 'minecraft:painting')
+  }
   event.groupItems('minecraft:rei_groups/infested_blocks', 'Minecraft Infested Blocks', /^minecraft:infested_.*/)
   event.groupItems('kubejs:rei_groups/concrete_singularities', 'Concrete Singularities', /^kubejs:(concrete_+).*?(_singularity+)$/)
   event.groupItems('kubejs:rei_groups/minecraft_valued_singularities', 'Minecraft Valued Singularities', [
@@ -1059,7 +1068,7 @@ REIEvents.groupEntries(event => {
     event.groupItemsByTag('lightmanscurrency:rei_groups/shelves_2x2', '2x2 Shelves', 'lightmanscurrency:traders/shelf_2x2')
     event.groupItemsByTag('lightmanscurrency:rei_groups/card_displays', 'Card Displays', 'lightmanscurrency:traders/card_display')
     event.groupItemsByTag('lightmanscurrency:rei_groups/freezers', 'Freezers', 'lightmanscurrency:traders/freezer')
-    event.groupItems('lightmanscurrency:rei_groups/bookshelves', 'Bookshelves', /^lightmanscurrency:bookshelf_trader[a-z_]*/)
+    event.groupItemsByTag('lightmanscurrency:rei_groups/bookshelves', 'Bookshelves', 'lightmanscurrency:traders/special/bookshelf')
     event.groupSameItem('lightmanscurrency:rei_groups/jars_of_sus', 'Jars of Sus', 'lightmanscurrency:sus_jar')
     event.groupItems('lightmanscurrency:rei_groups/auction_stands', 'Auction Stands', /^lightmanscurrency:auction_stand_[a-z_]*/)
   }
@@ -1134,7 +1143,7 @@ REIEvents.groupEntries(event => {
     event.groupItems('bellsandwhistles:rei_groups/bellsandwhistles_all', 'All', /^(bellsandwhistles:).*$/)
     event.groupItems('bellsandwhistles:rei_groups/pilots', 'Pilots', /^bellsandwhistles:.*pilot$/)
     event.groupItems('bellsandwhistles:rei_groups/grab_rails', 'Grab Rails', /^bellsandwhistles:.*grab_rails$/)
-    event.groupItems('bellsandwhistles:rei_grups/bogie_steps', 'Bogie Steps', /^bellsandwhistles:.*bogie_steps$/)
+    event.groupItems('bellsandwhistles:rei_groups/bogie_steps', 'Bogie Steps', /^bellsandwhistles:.*bogie_steps$/)
     event.groupItems('bellsandwhistles:rei_groups/door_steps', 'Door Steps', /^bellsandwhistles:.*door_step$/)
   }
   if (Platform.isLoaded('createdeco')) {
@@ -1163,6 +1172,19 @@ REIEvents.groupEntries(event => {
       'ars_nouveau:reset',
       'ars_nouveau:burst',
     ])
+    event.groupItems('ars_nouveau:rei_groups/threads', 'Threads', /^ars_nouveau:thread_.*/)
+    event.groupItems('ars_nouveau:rei_groups/sorcerer_set', 'Sorceror Armor Set', /^ars_nouveau:sorcerer_.*/)
+    event.groupItems('ars_nouveau:rei_groups/arcanist_set', 'Arcanist Armor Set', /^ars_nouveau:arcanist_.*/)
+    event.groupItems('ars_nouveau:rei_groups/battlemage_set', 'Battlemage Armor Set', /^ars_nouveau:battlemage_.*/)
+    event.groupItems('ars_nouveau:rei_groups/tokens', 'Tokens', [
+      /^ars_nouveau:.*_shards$/,
+      /^ars_nouveau:.*_shard$/
+    ])
+    event.groupItems('ars_nouveau:rei_groups/charms', 'Charms', /^ars_nouveau:.*_charm$/)
+    event.groupItems('ars_nouveau:rei_groups/bound_script', 'Familiar Bound Scripts', /^ars_nouveau:familiar.*/)
+    event.groupItems('ars_nouveau:rei_groups/rituals', 'Ritual Tablets', /^ars_nouveau:ritual_.*/)
+    event.groupItems('ars_nouveau:rei_groups/sourcelinks', 'Sourcelinks', /^ars_nouveau:.*_sourcelink$/)
+    event.groupItems('ars_nouveau:rei_groups/source_relays', 'Source Relays', /^ars_nouveau:relay_.*/)
   }
   /**
    * @author Hunter19823 <https://github.com/Hunter19823> https://discord.com/channels/303440391124942858/1145987527073865779
@@ -1237,6 +1259,65 @@ REIEvents.groupEntries(event => {
     event.groupSameItem('reliquary:rei_groups/potions', 'Condensed Potions', 'reliquary:potion')
     event.groupSameItem('reliquary:rei_groups/splash_potions', 'Splash Condensed Potions', 'reliquary:splash_potion')
     event.groupSameItem('reliquary:rei_groups/lingering_potions', 'Lingering Condensed Potions', 'reliquary:lingering_potion')
+    event.groupSameItem('reliquary:rei_groups/potion_essence', 'Potion Essence', 'reliquary:potion_essence')
+    event.groupSameItem('reliquary:rei_groups/tipped_arrows', 'Tipped Arrows', 'reliquary:tipped_arrow')
+    event.groupSameItem('reliquary:rei_groups/mob_charm_fragments', 'Mob Charm Fragments', 'reliquary:mob_charm_fragment')
+    event.groupSameItem('reliquary:rei_groups/mob_charms', 'Mob Charms', 'reliquary:mob_charm')
+    event.groupSameItem('reliquary:rei_groups/neutral_magazines', 'Neutral Magazines', 'reliquary:magazines/neutral_magazine')
+    event.groupSameItem('reliquary:rei_groups/neutral_bullets', 'Neutral Bullets', 'reliquary:bullets/neutral_bullet')
+  }
+  if (Platform.isLoaded('sophisticatedstorage')) {
+    event.groupSameItem('sophisticatedstorage:rei_groups/barrels', 'Basic Barrels', 'sophisticatedstorage:barrel')
+    event.groupSameItem('sophisticatedstorage:rei_groups/copper_barrels', 'Copper Barrels', 'sophisticatedstorage:copper_barrel')
+    event.groupSameItem('sophisticatedstorage:rei_groups/iron_barrels', 'Iron Barrels', 'sophisticatedstorage:iron_barrel')
+    event.groupSameItem('sophisticatedstorage:rei_groups/gold_barrels', 'Gold Barrels', 'sophisticatedstorage:gold_barrel')
+    event.groupSameItem('sophisticatedstorage:rei_groups/diamond_barrels', 'Diamond Barrels', 'sophisticatedstorage:diamond_barrel')
+    event.groupSameItem('sophisticatedstorage:rei_groups/netherite_barrels', 'Netherite Barrels', 'sophisticatedstorage:netherite_barrel')
+    event.groupSameItem('sophisticatedstorage:rei_groups/chests', 'Basic Chests', 'sophisticatedstorage:chest')
+    event.groupSameItem('sophisticatedstorage:rei_groups/copper_chests', 'Copper Chests', 'sophisticatedstorage:copper_chest')
+    event.groupSameItem('sophisticatedstorage:rei_groups/iron_chests', 'Iron Chest', 'sophisticatedstorage:iron_chest')
+    event.groupSameItem('sophisticatedstorage:rei_groups/gold_chests', 'Gold Chests', 'sophisticatedstorage:gold_chest')
+    event.groupSameItem('sophisticatedstorage:rei_groups/diamond_chests', 'Diamond Chests', 'sophisticatedstorage:diamond_chest')
+    event.groupSameItem('sophisticatedstorage:rei_groups/netherite_chests', 'Netherite Chests', 'sophisticatedstorage:netherite_chest')
+    // Shulker
+    event.groupSameItem('sophisticatedstorage:rei_groups/shulker_boxes', 'Basic Shulker Boxes', 'sophisticatedstorage:shulker_box')
+    event.groupSameItem('sophisticatedstorage:rei_groups/copper_shulker_boxes', 'Copper Shulker Boxes', 'sophisticatedstorage:copper_shulker_box')
+    event.groupSameItem('sophisticatedstorage:rei_groups/iron_shulker_boxes', 'Iron Shulker Boxes', 'sophisticatedstorage:iron_shulker_box')
+    event.groupSameItem('sophisticatedstorage:rei_groups/gold_shulker_boxes', 'Gold Shulker Boxes', 'sophisticatedstorage:gold_shulker_box')
+    event.groupSameItem('sophisticatedstorage:rei_groups/diamond_shulker_boxes', 'Diamond Shulker Boxes', 'sophisticatedstorage:diamond_shulker_box')
+    event.groupSameItem('sophisticatedstorage:rei_groups/netherite_shulker_boxes', 'Netherite Shulker Boxes', 'sophisticatedstorage:netherite_shulker_box')
+    // I
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_barrels_1', 'Limited Basic Barrels I', 'sophisticatedstorage:limited_barrel_1')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_copper_barrels_1', 'Limited Copper Barrels I', 'sophisticatedstorage:limited_copper_barrel_1')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_iron_barrels_1', 'Limited Iron Barrels I', 'sophisticatedstorage:limited_iron_barrel_1')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_gold_barrels_1', 'Limited Gold Barrels I', 'sophisticatedstorage:limited_gold_barrel_1')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_diamond_barrels_1', 'Limited Diamond Barrels I', 'sophisticatedstorage:limited_diamond_barrel_1')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_netherite_barrels_1', 'Limited Netherite Barrels I', 'sophisticatedstorage:limited_netherite_barrel_1')
+    // II
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_barrels_2', 'Limited Basic Barrels II', 'sophisticatedstorage:limited_barrel_2')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_copper_barrels_2', 'Limited Copper Barrels II', 'sophisticatedstorage:limited_copper_barrel_2')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_iron_barrels_2', 'Limited Iron Barrels II', 'sophisticatedstorage:limited_iron_barrel_2')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_gold_barrels_2', 'Limited Gold Barrels II', 'sophisticatedstorage:limited_gold_barrel_2')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_diamond_barrels_2', 'Limited Diamond Barrels II', 'sophisticatedstorage:limited_diamond_barrel_2')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_netherite_barrels_2', 'Limited Netherite Barrels II', 'sophisticatedstorage:limited_netherite_barrel_2')
+    // III
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_barrels_3', 'Limited Basic Barrels III', 'sophisticatedstorage:limited_barrel_3')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_copper_barrels_3', 'Limited Copper Barrels III', 'sophisticatedstorage:limited_copper_barrel_3')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_iron_barrels_3', 'Limited Iron Barrels III', 'sophisticatedstorage:limited_iron_barrel_3')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_gold_barrels_3', 'Limited Gold Barrels III', 'sophisticatedstorage:limited_gold_barrel_3')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_diamond_barrels_3', 'Limited Diamond Barrels III', 'sophisticatedstorage:limited_diamond_barrel_3')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_netherite_barrels_3', 'Limited Netherite Barrels III', 'sophisticatedstorage:limited_netherite_barrel_3')
+    // IV
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_barrels_4', 'Limited Basic Barrels IV', 'sophisticatedstorage:limited_barrel_4')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_copper_barrels_4', 'Limited Copper Barrels IV', 'sophisticatedstorage:limited_copper_barrel_4')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_iron_barrels_4', 'Limited Iron Barrels IV', 'sophisticatedstorage:limited_iron_barrel_4')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_gold_barrels_4', 'Limited Gold Barrels IV', 'sophisticatedstorage:limited_gold_barrel_4')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_diamond_barrels_4', 'Limited Diamond Barrels IV', 'sophisticatedstorage:limited_diamond_barrel_4')
+    event.groupSameItem('sophisticatedstorage:rei_groups/limited_netherite_barrels_4', 'Limited Netherite Barrels IV', 'sophisticatedstorage:limited_netherite_barrel_4')
+  }
+  if (Platform.isLoaded('productivebees')) {
+    event.groupSameItem('productivebees:rei_groups/honeycombs', 'Honeycombs', 'productivebees:configurable_honeycomb')
+    event.groupSameItem('productivebees:rei_groups/comb_blocks', 'Comb Blocks', 'productivebees:configurable_comb')
   }
   if (Platform.isLoaded('v_slab_compat') && Platform.isLoaded('quark')) {
     event.groupItemsByTag('v_slab_compat:rei_groups/vertical_slabs', 'Vertical Slab Compat', 'quark:vertical_slabs')
