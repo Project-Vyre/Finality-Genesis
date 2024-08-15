@@ -70,6 +70,7 @@ PlayerEvents.loggedIn(event => {
       ])
       lootrMsg(event)
       findMeMsg(event)
+      reiPluginReload(event)
     }
     if (Platform.isLoaded('ftbquests') &&
       Platform.isLoaded('supplementaries') &&
@@ -121,6 +122,7 @@ PlayerEvents.loggedIn(event => {
       ])
       lootrMsg(event)
       findMeMsg(event)
+      reiPluginReload(event)
     }
     if (Platform.isLoaded('ftbquests') &&
       Platform.isLoaded('supplementaries') &&
@@ -171,6 +173,7 @@ PlayerEvents.loggedIn(event => {
       ])
       lootrMsg(event)
       findMeMsg(event)
+      reiPluginReload(event)
     }
   } else if (event.player.persistentData.contains('firstjoin')) {
     event.player.tell([
@@ -219,6 +222,7 @@ PlayerEvents.loggedIn(event => {
     ])
     lootrMsg(event)
     findMeMsg(event)
+    reiPluginReload(event)
   }
 })
 
@@ -261,6 +265,32 @@ function findMeMsg(event) {
         Component.of('[Y] ').green(),
         Component.of('while hovering over an item to search nearby chests.'),
         Component.of('\n-----------------------------------------------------').green()
+      ])
+    })
+  }
+}
+
+function reiPluginReload(event) {
+  if (Platform.isLoaded('roughlyenoughitems')) {
+    event.server.scheduleInTicks(900, t => {
+      event.player.tell([
+        Component.of('-----------------------------------------------------\n'),
+        Component.of('Roughly Enough Items').gray(),
+        Component.of(' has replaced JEI, though it does '),
+        Component.of('occasionally').italic(),
+        Component.of(' experience issues with Create\'s Sequenced Assembly recipe type. '),
+        Component.of('To fix this click on the cogwheel next to the '),
+        Component.of('Search Bar ').bold(),
+        Component.of('then click '),
+        Component.of('More Options... ').bold().aqua(),
+        Component.of('From there, look at the '),
+        Component.of('left ').yellow(),
+        Component.of('hand side and look for a settings category labelled '),
+        Component.of('Reload & Reset').green(),
+        Component.of('. Click on '),
+        Component.of('Reload Plugins').bold().red(),
+        Component.of(' and that should fix the issue.'),
+        Component.of('\n-----------------------------------------------------')
       ])
     })
   }
