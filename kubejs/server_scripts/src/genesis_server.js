@@ -275,11 +275,11 @@ function reiPluginReload(event) {
     event.server.scheduleInTicks(900, t => {
       event.player.tell([
         Component.of('-----------------------------------------------------\n'),
-        Component.of('Roughly Enough Items').gray(),
+        Component.of('Roughly Enough Items').bold().gray(),
         Component.of(' has replaced JEI, though it does '),
         Component.of('occasionally').italic(),
-        Component.of(' experience issues with Create\'s Sequenced Assembly recipe type. '),
-        Component.of('To fix this click on the cogwheel next to the '),
+        Component.of(' experience issues with Create\'s Sequenced Assembly recipe type.\n'),
+        Component.of('\nTo fix this click on the cogwheel next to the '),
         Component.of('Search Bar ').bold(),
         Component.of('then click '),
         Component.of('More Options... ').bold().aqua(),
