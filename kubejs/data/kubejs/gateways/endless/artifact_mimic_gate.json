@@ -19,8 +19,7 @@
   "base_wave": {
     "entities": [
       {
-        "type": "apotheosis:boss",
-        "boss": "kubejs:artifact_mimic"
+        "entity": "artifacts:mimic"
       }
     ],
     "rewards": [
@@ -42,8 +41,7 @@
       },
       "entities": [
         {
-          "type": "apotheosis:boss",
-          "boss": "kubejs:artifact_mimic",
+          "entity": "artifacts:mimic",
           "count": 3
         }
       ],

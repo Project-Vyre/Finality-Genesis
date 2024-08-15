@@ -20,11 +20,15 @@
     {
       "entities": [
         {
-          "type": "apotheosis:boss",
-          "boss": "kubejs:overworld/amethyst_crab"
+          "entity": "cataclysm:amethyst_crab"
         }
       ],
       "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 15
+        },
         {
           "attribute": "generic.armor",
           "operation": "ADDITION",
@@ -58,11 +62,15 @@
     {
       "entities": [
         {
-          "type": "apotheosis:boss",
-          "boss": "kubejs:the_nether/netherite_monstrosity"
+          "entity": "cataclysm:netherite_monstrosity"
         }
       ],
       "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 10
+        },
         {
           "attribute": "generic.armor",
           "operation": "ADDITION",
@@ -96,19 +104,16 @@
     {
       "entities": [
         {
-          "type": "apotheosis:boss",
-          "boss": "kubejs:the_nether/ignited_revenant"
-        },
-        {
-          "type": "apotheosis:boss",
-          "boss": "kubejs:the_nether/ignited_revenant"
-        },
-        {
-          "type": "apotheosis:boss",
-          "boss": "kubejs:the_nether/ignited_revenant"
+          "entity": "cataclysm:ignited_revenant",
+          "count": 3
         }
       ],
       "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 10
+        },
         {
           "attribute": "generic.armor",
           "operation": "ADDITION",
@@ -142,11 +147,15 @@
     {
       "entities": [
         {
-          "type": "apotheosis:boss",
-          "boss": "kubejs:the_nether/ignis"
+          "entity": "cataclysm:ignis"
         }
       ],
       "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 10
+        },
         {
           "attribute": "generic.armor",
           "operation": "ADDITION",
@@ -180,15 +189,14 @@
     {
       "entities": [
         {
-          "type": "apotheosis:boss",
-          "boss": "kubejs:wither"
+          "entity": "minecraft:wither"
         }
       ],
       "modifiers": [
         {
           "attribute": "generic.max_health",
           "operation": "MULTIPLY_TOTAL",
-          "value": 2
+          "value": 7
         },
         {
           "attribute": "generic.attack_damage",
@@ -224,11 +232,15 @@
     {
       "entities": [
         {
-          "type": "apotheosis:boss",
-          "boss": "kubejs:overworld/the_harbinger"
+          "entity": "cataclysm:the_harbinger"
         }
       ],
       "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 10
+        },
         {
           "attribute": "generic.attack_damage",
           "operation": "MULTIPLY_TOTAL",
@@ -257,15 +269,16 @@
     {
       "entities": [
         {
-          "type": "apotheosis:boss",
-          "boss": "kubejs:the_end/ender_golem"
-        },
-        {
-          "type": "apotheosis:boss",
-          "boss": "kubejs:the_end/ender_golem"
+          "entity": "cataclysm:ender_golem",
+          "count": 2
         }
       ],
       "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 5
+        },
         {
           "attribute": "generic.armor",
           "operation": "ADDITION",
@@ -299,11 +312,15 @@
     {
       "entities": [
         {
-          "type": "apotheosis:boss",
-          "boss": "kubejs:the_end/ender_guardian"
+          "entity": "cataclysm:ender_guardian"
         }
       ],
       "modifiers": [
+        {
+          "attribute": "generic.max_health",
+          "operation": "MULTIPLY_TOTAL",
+          "value": 10
+        },
         {
           "attribute": "generic.armor",
           "operation": "ADDITION",
