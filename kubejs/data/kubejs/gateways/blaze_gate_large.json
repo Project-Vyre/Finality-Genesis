@@ -5,22 +5,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
+          "entity": "minecraft:blaze",
+          "count": 6
         }
       ],
       "rewards": [
@@ -36,22 +22,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
+          "entity": "minecraft:blaze",
+          "count": 6
         }
       ],
       "modifiers": [
@@ -94,28 +66,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
+          "entity": "minecraft:blaze",
+          "count": 8
         }
       ],
       "modifiers": [
@@ -158,34 +110,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
+          "entity": "minecraft:blaze",
+          "count": 10
         }
       ],
       "modifiers": [
@@ -228,46 +154,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
-        },
-        {
-          "entity": "minecraft:blaze"
+          "entity": "minecraft:blaze",
+          "count": 14
         }
       ],
       "modifiers": [

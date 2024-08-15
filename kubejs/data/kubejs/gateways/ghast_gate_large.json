@@ -1,4 +1,10 @@
 {
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "kubejs"
+    }
+  ],
   "size": "large",
   "color": "#F0F0F0",
   "leash_range": 64,
@@ -6,22 +12,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
+          "entity": "minecraft:ghast",
+          "count": 6
         }
       ],
       "rewards": [
@@ -37,22 +29,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
+          "entity": "minecraft:ghast",
+          "count": 6
         }
       ],
       "modifiers": [
@@ -95,28 +73,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
+          "entity": "minecraft:ghast",
+          "count": 8
         }
       ],
       "modifiers": [
@@ -159,34 +117,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
+          "entity": "minecraft:ghast",
+          "count": 10
         }
       ],
       "modifiers": [
@@ -229,46 +161,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
-        },
-        {
-          "entity": "minecraft:ghast"
+          "entity": "minecraft:ghast",
+          "count": 14
         }
       ],
       "modifiers": [

@@ -45,13 +45,13 @@
           "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         }
       ],
       "modifiers": [
@@ -109,13 +109,13 @@
           "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         }
       ],
       "modifiers": [
@@ -173,19 +173,19 @@
           "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         }
       ],
       "modifiers": [
@@ -246,28 +246,28 @@
           "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         },
         {
-          "entity": "minecraft:husk"
+          "entity": "minecraft:zombie"
         }
       ],
       "modifiers": [

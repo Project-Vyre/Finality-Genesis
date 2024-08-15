@@ -6,13 +6,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
+          "entity": "minecraft:creeper",
+          "count": 3
         }
       ],
       "rewards": [
@@ -28,13 +23,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
+          "entity": "minecraft:creeper",
+          "count": 3
         }
       ],
       "modifiers": [
@@ -77,19 +67,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
+          "entity": "minecraft:creeper",
+          "count": 5
         }
       ],
       "modifiers": [
@@ -132,22 +111,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
+          "entity": "minecraft:creeper",
+          "count": 6
         }
       ],
       "modifiers": [
@@ -190,25 +155,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
-        },
-        {
-          "entity": "minecraft:creeper"
+          "entity": "minecraft:creeper",
+          "count": 7
         }
       ],
       "modifiers": [

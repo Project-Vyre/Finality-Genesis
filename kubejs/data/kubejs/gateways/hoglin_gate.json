@@ -11,13 +11,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
+          "entity": "minecraft:hoglin",
+          "count": 3
         }
       ],
       "rewards": [
@@ -33,13 +28,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
+          "entity": "minecraft:hoglin",
+          "count": 3
         }
       ],
       "modifiers": [
@@ -82,19 +72,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
+          "entity": "minecraft:hoglin",
+          "count": 5
         }
       ],
       "modifiers": [
@@ -137,22 +116,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
+          "entity": "minecraft:hoglin",
+          "count": 6
         }
       ],
       "modifiers": [
@@ -195,25 +160,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
+          "entity": "minecraft:hoglin",
+          "count": 7
         }
       ],
       "modifiers": [

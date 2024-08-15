@@ -5,10 +5,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
+          "entity": "minecraft:slime",
+          "count": 2
         }
       ],
       "rewards": [
@@ -25,10 +23,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
+          "entity": "minecraft:slime",
+          "count": 2
         }
       ],
       "modifiers": [
@@ -72,16 +68,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
+          "entity": "minecraft:slime",
+          "count": 4
         }
       ],
       "modifiers": [
@@ -125,16 +113,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
+          "entity": "minecraft:slime",
+          "count": 4
         }
       ],
       "modifiers": [
@@ -178,19 +158,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
+          "entity": "minecraft:slime",
+          "count": 5
         }
       ],
       "modifiers": [

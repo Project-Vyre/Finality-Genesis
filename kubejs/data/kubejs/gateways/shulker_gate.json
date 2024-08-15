@@ -5,13 +5,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
+          "entity": "minecraft:shulker",
+          "count": 3
         }
       ],
       "rewards": [
@@ -27,13 +22,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
+          "entity": "minecraft:shulker",
+          "count": 3
         }
       ],
       "modifiers": [
@@ -76,19 +66,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
+          "entity": "minecraft:shulker",
+          "count": 5
         }
       ],
       "modifiers": [
@@ -131,22 +110,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
+          "entity": "minecraft:shulker",
+          "count": 6
         }
       ],
       "modifiers": [
@@ -189,25 +154,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
-        },
-        {
-          "entity": "minecraft:shulker"
+          "entity": "minecraft:shulker",
+          "count": 7
         }
       ],
       "modifiers": [

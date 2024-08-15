@@ -19,22 +19,8 @@
     {
       "entities": [
         {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
+          "entity": "ars_nouveau:wilden_stalker",
+          "count": 6
         }
       ],
       "rewards": [
@@ -50,22 +36,8 @@
     {
       "entities": [
         {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
+          "entity": "ars_nouveau:wilden_stalker",
+          "count": 6
         }
       ],
       "modifiers": [
@@ -108,28 +80,12 @@
     {
       "entities": [
         {
-          "entity": "ars_nouveau:wilden_stalker"
+          "entity": "ars_nouveau:wilden_stalker",
+          "count": 6
         },
         {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_hunter"
-        },
-        {
-          "entity": "ars_nouveau:wilden_hunter"
+          "entity": "ars_nouveau:wilden_hunter",
+          "count": 2
         }
       ],
       "modifiers": [
@@ -177,34 +133,12 @@
     {
       "entities": [
         {
-          "entity": "ars_nouveau:wilden_stalker"
+          "entity": "ars_nouveau:wilden_stalker",
+          "count": 5
         },
         {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_stalker"
-        },
-        {
-          "entity": "ars_nouveau:wilden_hunter"
-        },
-        {
-          "entity": "ars_nouveau:wilden_hunter"
-        },
-        {
-          "entity": "ars_nouveau:wilden_hunter"
-        },
-        {
-          "entity": "ars_nouveau:wilden_hunter"
-        },
-        {
-          "entity": "ars_nouveau:wilden_hunter"
+          "entity": "ars_nouveau:wilden_hunter",
+          "count": 5
         }
       ],
       "modifiers": [
@@ -252,46 +186,16 @@
     {
       "entities": [
         {
-          "entity": "ars_nouveau:wilden_guardian"
+          "entity": "ars_nouveau:wilden_stalker",
+          "count": 15
         },
         {
-          "entity": "ars_nouveau:wilden_guardian"
+          "entity": "ars_nouveau:wilden_hunter",
+          "count": 15
         },
         {
-          "entity": "ars_nouveau:wilden_guardian"
-        },
-        {
-          "entity": "ars_nouveau:wilden_guardian"
-        },
-        {
-          "entity": "ars_nouveau:wilden_guardian"
-        },
-        {
-          "entity": "ars_nouveau:wilden_guardian"
-        },
-        {
-          "entity": "ars_nouveau:wilden_guardian"
-        },
-        {
-          "entity": "ars_nouveau:wilden_guardian"
-        },
-        {
-          "entity": "ars_nouveau:wilden_guardian"
-        },
-        {
-          "entity": "ars_nouveau:wilden_guardian"
-        },
-        {
-          "entity": "ars_nouveau:wilden_guardian"
-        },
-        {
-          "entity": "ars_nouveau:wilden_guardian"
-        },
-        {
-          "entity": "ars_nouveau:wilden_guardian"
-        },
-        {
-          "entity": "ars_nouveau:wilden_guardian"
+          "entity": "ars_nouveau:wilden_guardian",
+          "count": 15
         }
       ],
       "modifiers": [

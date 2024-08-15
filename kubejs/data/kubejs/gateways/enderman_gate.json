@@ -1,4 +1,10 @@
 {
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "kubejs"
+    }
+  ],
   "size": "medium",
   "color": "#CC00FA",
   "leash_range": 64,
@@ -6,13 +12,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
+          "entity": "minecraft:enderman",
+          "count": 3
         }
       ],
       "rewards": [
@@ -28,13 +29,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
+          "entity": "minecraft:enderman",
+          "count": 3
         }
       ],
       "modifiers": [
@@ -77,19 +73,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
+          "entity": "minecraft:enderman",
+          "count": 5
         }
       ],
       "modifiers": [
@@ -132,22 +117,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
+          "entity": "minecraft:enderman",
+          "count": 6
         }
       ],
       "modifiers": [
@@ -190,25 +161,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
-        },
-        {
-          "entity": "minecraft:enderman"
+          "entity": "minecraft:enderman",
+          "count": 7
         }
       ],
       "modifiers": [

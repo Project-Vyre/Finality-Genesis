@@ -5,13 +5,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
+          "entity": "minecraft:slime",
+          "count": 3
         }
       ],
       "rewards": [
@@ -28,13 +23,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
+          "entity": "minecraft:slime",
+          "count": 3
         }
       ],
       "modifiers": [
@@ -78,19 +68,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
+          "entity": "minecraft:slime",
+          "count": 5
         }
       ],
       "modifiers": [
@@ -134,22 +113,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
+          "entity": "minecraft:slime",
+          "count": 6
         }
       ],
       "modifiers": [
@@ -193,25 +158,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
-        },
-        {
-          "entity": "minecraft:slime"
+          "entity": "minecraft:slime",
+          "count": 7
         }
       ],
       "modifiers": [

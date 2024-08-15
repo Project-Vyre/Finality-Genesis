@@ -11,13 +11,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
+          "entity": "minecraft:drowned",
+          "count": 3
         }
       ],
       "rewards": [
@@ -33,13 +28,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
+          "entity": "minecraft:drowned",
+          "count": 3
         }
       ],
       "modifiers": [
@@ -82,19 +72,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
+          "entity": "minecraft:drowned",
+          "count": 5
         }
       ],
       "modifiers": [
@@ -137,22 +116,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
+          "entity": "minecraft:drowned",
+          "count": 6
         }
       ],
       "modifiers": [
@@ -195,25 +160,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
-        },
-        {
-          "entity": "minecraft:drowned"
+          "entity": "minecraft:drowned",
+          "count": 7
         }
       ],
       "modifiers": [

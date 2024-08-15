@@ -11,10 +11,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
+          "entity": "minecraft:hoglin",
+          "count": 2
         }
       ],
       "rewards": [
@@ -30,10 +28,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
+          "entity": "minecraft:hoglin",
+          "count": 2
         }
       ],
       "modifiers": [
@@ -76,16 +72,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
+          "entity": "minecraft:hoglin",
+          "count": 4
         }
       ],
       "modifiers": [
@@ -128,16 +116,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
+          "entity": "minecraft:hoglin",
+          "count": 4
         }
       ],
       "modifiers": [
@@ -180,19 +160,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
-        },
-        {
-          "entity": "minecraft:hoglin"
+          "entity": "minecraft:hoglin",
+          "count": 5
         }
       ],
       "modifiers": [

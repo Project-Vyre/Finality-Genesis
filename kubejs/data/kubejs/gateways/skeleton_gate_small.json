@@ -5,10 +5,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:skeleton"
-        },
-        {
-          "entity": "minecraft:skeleton"
+          "entity": "minecraft:skeleton",
+          "count": 2
         }
       ],
       "rewards": [
@@ -24,10 +22,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:skeleton"
-        },
-        {
-          "entity": "minecraft:skeleton"
+          "entity": "minecraft:skeleton",
+          "count": 2
         }
       ],
       "modifiers": [
@@ -70,16 +66,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:skeleton"
-        },
-        {
-          "entity": "minecraft:skeleton"
-        },
-        {
-          "entity": "minecraft:skeleton"
-        },
-        {
-          "entity": "minecraft:skeleton"
+          "entity": "minecraft:skeleton",
+          "count": 4
         }
       ],
       "modifiers": [
@@ -122,16 +110,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:skeleton"
-        },
-        {
-          "entity": "minecraft:skeleton"
-        },
-        {
-          "entity": "minecraft:skeleton"
-        },
-        {
-          "entity": "minecraft:skeleton"
+          "entity": "minecraft:skeleton",
+          "count": 4
         }
       ],
       "modifiers": [
@@ -174,19 +154,8 @@
     {
       "entities": [
         {
-          "entity": "minecraft:skeleton"
-        },
-        {
-          "entity": "minecraft:skeleton"
-        },
-        {
-          "entity": "minecraft:skeleton"
-        },
-        {
-          "entity": "minecraft:skeleton"
-        },
-        {
-          "entity": "minecraft:skeleton"
+          "entity": "minecraft:skeleton",
+          "count": 5
         }
       ],
       "modifiers": [
