@@ -15,6 +15,8 @@
   "pack_overrides": {
     "genesis_resources": [
       "create:legacy_copper",
+      "file/Create Immersive Aircraft Warship ResoucePack v1.0.zip",
+      "file/Creative Immersive Aircrafts Resource Pack 1.20.1 - 2.0.zip",
       "file/Pretty_Pipez_1_20.zip",
       "file/Nicer-Rain-1.0.0.zip",
       "file/Enhanced Audio r6.zip",
