@@ -55,10 +55,10 @@ ServerEvents.recipes(event => {
     Fluid.of('minecraft:lava')
   ]).requiredBonks(1).withCatalyst('kubejs:repeating_command_block').id('finality:repeating_command_block/scoria_compat')
   if (Platform.isLoaded('malum')) {
-    event.recipes.create_mechanical_extruder.extruding(Item.of('malum:cthonic_gold').withChance(0.12), [
+    event.recipes.create_mechanical_extruder.extruding(Item.of('malum:cthonic_gold_fragment'), [
       Item.of('malum:twisted_rock'),
       Fluid.of('kubejs:condensed_universal_entropy')
-    ]).requiredBonks(6).withCatalyst('malum:cthonic_gold_ore').id('finality:malum/extruder_cthonic_gold')
+    ]).requiredBonks(4).withCatalyst('malum:cthonic_gold_ore').id('finality:malum/extruder_cthonic_gold')
   }
   if (Platform.isLoaded('quark')) {
     event.recipes.create_mechanical_extruder.extruding(Item.of('quark:shale'), [
