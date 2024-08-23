@@ -623,7 +623,30 @@ REIEvents.information(event => {
 })
 
 REIEvents.groupEntries(event => {
-  event.groupItems('minecraft:rei_groups/signs', 'Minecraft Signs', /^minecraft:.*_(?!hanging)_sign$/)
+  event.groupItems('minecraft:rei_groups/stone_ores', 'Stone Ores', [
+    'minecraft:coal_ore',
+    'minecraft:iron_ore',
+    'minecraft:copper_ore',
+    'minecraft:gold_ore',
+    'minecraft:redstone_ore',
+    'minecraft:emerald_ore',
+    'minecraft:lapis_ore',
+    'minecraft:diamond_ore',
+    'create:zinc_ore'
+  ])
+  event.groupItems('minecraft:rei_groups/deepslate_ores', 'Deepslate Ores', [
+    'minecraft:deepslate_coal_ore',
+    'minecraft:deepslate_iron_ore',
+    'minecraft:deepslate_copper_ore',
+    'minecraft:deepslate_gold_ore',
+    'minecraft:deepslate_redstone_ore',
+    'minecraft:deepslate_emerald_ore',
+    'minecraft:deepslate_lapis_ore',
+    'minecraft:deepslate_diamond_ore',
+    'create:deepslate_zinc_ore'
+  ])
+  // Copilot is scary good.
+  event.groupItems('minecraft:rei_groups/signs', 'Minecraft Signs', /^minecraft:(?!.*_hanging_sign$)[a-z_]+_sign$/)
   event.groupItems('minecraft:rei_groups/hanging_signs', 'Minecraft Hanging Signs', /^minecraft:.*_hanging_sign$/)
   event.groupItemsByTag('kubejs:rei_groups/all_normal_signs', 'All Normal Signs', 'minecraft:signs')
   event.groupItemsByTag('kubejs:rei_groups/all_hanging_signs', 'All Hanging Signs', 'minecraft:hanging_signs')
@@ -1314,6 +1337,60 @@ REIEvents.groupEntries(event => {
     event.groupSameItem('sophisticatedstorage:rei_groups/limited_gold_barrels_4', 'Limited Gold Barrels IV', 'sophisticatedstorage:limited_gold_barrel_4')
     event.groupSameItem('sophisticatedstorage:rei_groups/limited_diamond_barrels_4', 'Limited Diamond Barrels IV', 'sophisticatedstorage:limited_diamond_barrel_4')
     event.groupSameItem('sophisticatedstorage:rei_groups/limited_netherite_barrels_4', 'Limited Netherite Barrels IV', 'sophisticatedstorage:limited_netherite_barrel_4')
+  }
+  if (Platform.isLoaded('refurbished_furniture')) {
+    event.groupItems('refurbished_furniture:rei_groups/chairs', 'Chairs', /^refurbished_furniture:.*_chair$/)
+    event.groupItems('refurbished_furniture:rei_groups/tables', 'Tables', /^refurbished_furniture:.*_table$/)
+    event.groupItems('refurbished_furniture:rei_groups/desks', 'Desks', /^refurbished_furniture:.*_desk$/)
+    event.groupItems('refurbished_furniture:rei_grups/cutting_boards', 'Cutting Boards', /^refurbished_furniture:.*_cutting_board$/)
+    event.groupItems('refurbished_furniture:rei_grups/crates', 'Crates', /^refurbished_furniture:.*_crate$/)
+    event.groupItemsByTag('refurbished_furniture:rei_grups/grills', 'Grills', 'refurbished_furniture:grills')
+    event.groupItemsByTag('refurbished_furniture:rei_grups/coolers', 'Coolers', 'refurbished_furniture:coolers')
+    event.groupItems('refurbished_furniture:rei_grups/mail_boxes', 'Mail Boxes', /^refurbished_furniture:.*_mail_box$/)
+    event.groupItemsByTag('refurbished_furniture:rei_grups/trampolines', 'Trampolines', 'refurbished_furniture:trampolines')
+    event.groupItems('refurbished_furniture:rei_groups/hedges', 'Hedges', /^refurbished_furniture:.*_hedge$/)
+    event.groupItemsByTag('refurbished_furniture:rei_groups/sofas', 'Sofas', 'refurbished_furniture:sofas')
+    event.groupItemsByTag('refurbished_furniture:rei_groups/stools', 'Stools', 'refurbished_furniture:stools')
+    event.groupItemsByTag('refurbished_furniture:rei_groups/lamps', 'Lamps', 'refurbished_furniture:lamps')
+    event.groupItems('refurbished_furniture:rei_groups/stepping_stones', 'Stepping Stones', /^refurbished_furniture:.*_stepping_stones$/)
+    // bathroom
+    event.groupItems('refurbished_furniture:rei_groups/toilets', 'Toilets', /^refurbished_furniture:.*_toilet$/)
+    event.groupItems('refurbished_furniture:rei_groups/basins', 'Basins', /^refurbished_furniture:.*_basin$/)
+    event.groupItems('refurbished_furniture:rei_groups/bathtubs', 'Bathtubs', /^refurbished_furniture:.*_bath$/)
+    // kitchen related
+    event.groupItems('refurbished_furniture:rei_groups/storage_jars', 'Storage Jars', /^refurbished_furniture:.*_storage_jar$/)
+    /* Failed regex
+    /^refurbished_furniture:(?!kitchen).*_drawer$/
+    /^refurbished_furniture:(?!.*_hanging_sign$)[a-zA-Z_]+_sign$/
+    */ 
+    event.groupItems('refurbished_furniture:rei_groups/drawers', 'Wooden Drawers', /^refurbished_furniture:(?!.*_kitchen_drawer$)[a-z_]+_drawer$/)
+    event.groupItems('refurbished_furniture:rei_groups/kitchen_drawers', 'Kitchen Drawers', /^refurbished_furniture:.*_kitchen_drawer$/)
+    event.groupItems('refurbished_furniture:rei_groups/kitchen_cabinetry', 'Kitchen Cabinetry', /^refurbished_furniture:.*_kitchen_cabinetry$/)
+    event.groupItems('refurbished_furniture:rei_groups/kitchen_sinks', 'Kitchen Sinks', /^refurbished_furniture:.*_kitchen_sink$/)
+    event.groupItems('refurbished_furniture:rei_groups/storage_cabinets', 'Storage Cabinets', /^refurbished_furniture:(?!.*_kitchen_storage_cabinet$)[a-z_]+_storage_cabinet$/)
+    event.groupItems('refurbished_furniture:rei_groups/kitchen_storage_cabinets', 'Kitchen Storage Cabinets', /^refurbished_furniture:.*_kitchen_storage_cabinet$/)
+    event.groupItems('refurbished_furniture:rei_groups/light_mode', 'Light Mode Appliances', [
+      'refurbished_furniture:light_fridge',
+      'refurbished_furniture:light_toaster',
+      'refurbished_furniture:light_microwave',
+      'refurbished_furniture:light_stove',
+      'refurbished_furniture:light_range_hood',
+      'refurbished_furniture:light_electricity_generator',
+      'refurbished_furniture:light_lightswitch',
+      'refurbished_furniture:light_ceiling_light',
+      /^refurbished_furniture:.*_light_ceiling_fan$/
+    ])
+    event.groupItems('refurbished_furniture:rei_groups/dark_mode', 'Dark Mode Appliances', [
+      'refurbished_furniture:dark_fridge',
+      'refurbished_furniture:dark_toaster',
+      'refurbished_furniture:dark_microwave',
+      'refurbished_furniture:dark_stove',
+      'refurbished_furniture:dark_range_hood',
+      'refurbished_furniture:dark_electricity_generator',
+      'refurbished_furniture:dark_lightswitch',
+      'refurbished_furniture:dark_ceiling_light',
+      /^refurbished_furniture:.*_dark_ceiling_fan$/
+    ])
   }
   if (Platform.isLoaded('productivebees')) {
     event.groupSameItem('productivebees:rei_groups/honeycombs', 'Honeycombs', 'productivebees:configurable_honeycomb')
