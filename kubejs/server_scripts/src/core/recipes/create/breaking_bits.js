@@ -338,8 +338,8 @@ ServerEvents.recipes(event => {
     B: 'minecraft:barrel'
   }).id('finality:crafting/null_storage_block')
   event.recipes.create.mixing([
-    Item.of('kubejs:qubit').withChance(0.125),
-    Item.of('kubejs:errored_result').withChance(0.125)
+    Item.of('kubejs:qubit').withChance(0.75),
+    Item.of('kubejs:errored_result').withChance(0.25)
   ], [
     'kubejs:zero',
     'kubejs:one',
