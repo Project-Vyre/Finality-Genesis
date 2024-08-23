@@ -258,6 +258,10 @@ REIEvents.hide('item', event => {
     ])
   }
 
+  if (Platform.isLoaded('pipez')) {
+    event.hide('pipez:wrench')
+  }
+
   if (!Platform.isLoaded('ad_astra')) {
     event.hide([
       'mysticalagriculture:steel_essence',
@@ -1362,7 +1366,7 @@ REIEvents.groupEntries(event => {
     /* Failed regex
     /^refurbished_furniture:(?!kitchen).*_drawer$/
     /^refurbished_furniture:(?!.*_hanging_sign$)[a-zA-Z_]+_sign$/
-    */ 
+    */
     event.groupItems('refurbished_furniture:rei_groups/drawers', 'Wooden Drawers', /^refurbished_furniture:(?!.*_kitchen_drawer$)[a-z_]+_drawer$/)
     event.groupItems('refurbished_furniture:rei_groups/kitchen_drawers', 'Kitchen Drawers', /^refurbished_furniture:.*_kitchen_drawer$/)
     event.groupItems('refurbished_furniture:rei_groups/kitchen_cabinetry', 'Kitchen Cabinetry', /^refurbished_furniture:.*_kitchen_cabinetry$/)
