@@ -7,6 +7,12 @@
 
 let tools = ['sword', 'shovel', 'pickaxe', 'axe', 'hoe']
 let final_tools = ['sword', 'shovel', 'pickaxe', 'axe', 'hoe', 'lance', 'scythe', 'katana']
+let mod_tools = [
+  'farmersdelight:netherite_knife',
+  'pickletweaks:netherite_paxel',
+  'pickletweaks:netheritesickle',
+  'pickletweaks:netherite_scythe'
+]
 
 PlayerEvents.inventoryChanged(event => {
   const { item } = event
@@ -22,6 +28,12 @@ PlayerEvents.inventoryChanged(event => {
   for (let i = 0; i < final_tools.length; i++) {
     let element = final_tools[i];
     if (item.hasNBT() && item.getId() == 'kubejs:final_' + element) {
+      item.nbt.merge({ Damage: 0, Unbreakable: 1 })
+    }
+  }
+  for (let i = 0; i < mod_tools.length; i++) {
+    let element = mod_tools[i];
+    if (item.hasNBT() && item.getId() == element) {
       item.nbt.merge({ Damage: 0, Unbreakable: 1 })
     }
   }
