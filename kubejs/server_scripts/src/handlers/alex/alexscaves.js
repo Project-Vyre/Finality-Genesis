@@ -23,8 +23,7 @@ ServerEvents.recipes(event => {
   for (let i = 0; i < alexscaves_sherds.length; i++) {
     let element = alexscaves_sherds[i];
     event.recipes.create.deploying([
-      'alexscaves:' + element + '_pottery_sherd',
-      Item.of('alexscaves:' + element + '_pottery_sherd', 2).withChance(0.125)
+      '2x alexscaves:' + element + '_pottery_sherd'
     ], [
       'alexscaves:' + element + '_pottery_sherd',
       'kubejs:duplicator'

@@ -26,8 +26,7 @@ ServerEvents.recipes(event => {
   for (let i = 0; i < neapolitan_sherds.length; i++) {
     let element = neapolitan_sherds[i];
     event.recipes.create.deploying([
-      'neapolitan:' + element + '_pottery_sherd',
-      Item.of('neapolitan:' + element + '_pottery_sherd', 2).withChance(0.125)
+      '2x neapolitan:' + element + '_pottery_sherd'
     ], [
       'neapolitan:' + element + '_pottery_sherd',
       'kubejs:duplicator'
