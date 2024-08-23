@@ -7,6 +7,53 @@
 // requires: kubejs_create
 
 ServerEvents.recipes(event => {
+  event.remove([
+    { id: 'productivebees:upgrades/base' },
+    { id: 'productivebees:upgrades/comb_block' },
+    { id: 'productivebees:upgrades/anti_teleport' },
+    { id: 'productivebees:upgrades/simulator' },
+    {
+      mod: 'productivebees',
+      output: 'minecraft:obsidian'
+    }
+  ])
+  event.shaped('productivebees:upgrade_base', [
+    'H',
+    'P'
+  ], {
+    H: 'productivebees:honey_treat',
+    P: 'create:placard'
+  }).id('kubejs:productivebees/upgrade_base')
+  // Other Upgrades
+  event.shaped('productivebees:upgrade_comb_block', [
+    'GWG',
+    'WUW',
+    'GWG'
+  ], {
+    G: 'productivebees:inactive_dragon_egg',
+    W: 'productivebees:wax_block',
+    U: 'productivebees:upgrade_productivity_4'
+  }).id('kubejs:productivebees/upgrades/upgrade_comb_block')
+  event.shaped('productivebees:upgrade_anti_teleport', [
+    'HEH',
+    'EUE',
+    'HEH'
+  ], {
+    H: '#forge:storage_blocks/honeycombs',
+    E: 'kubejs:ender_pearl_singularity',
+    U: 'productivebees:upgrade_base'
+  }).id('kubejs:productivebees/upgrades/upgrade_anti_teleport')
+  event.shaped('productivebees:upgrade_simulator', [
+    'HEH',
+    'BUB',
+    'HBH'
+  ], {
+    H: '#forge:storage_blocks/honeycombs',
+    E: 'kubejs:chromatic_concrete_singularity',
+    U: 'productivebees:upgrade_base',
+    B: 'kubejs:blaze_cake_singularity'
+  }).id('kubejs:productivebees/upgrades/upgrade_simulator')
+  // combs
   event.recipes.create.mixing([
     Item.of('minecraft:raw_copper', 4).withChance(0.50),
     Fluid.of('productivebees:honey', 200)
@@ -379,18 +426,4 @@ ServerEvents.recipes(event => {
       .heated()
       .id('kubejs:productivebees/mixing/comb_scrapped')
   }
-  event.remove([
-    { id: 'productivebees:upgrades/base' },
-    {
-      mod: 'productivebees',
-      output: 'minecraft:obsidian'
-    }
-  ])
-  event.recipes.minecraft.crafting_shaped('productivebees:upgrade_base', [
-    'H',
-    'P'
-  ], {
-    H: 'productivebees:honey_treat',
-    P: 'create:placard'
-  }).id('kubejs:productivebees/upgrade_base')
 })
