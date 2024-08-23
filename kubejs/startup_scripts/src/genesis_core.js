@@ -768,7 +768,7 @@ ItemEvents.modification(event => {
     item.maxDamage = 1820
   })
   event.modify('farmersdelight:netherite_knife', item => {
-    item.maxDamage = -1
+    item.maxDamage = 4096
   })
 })
 
