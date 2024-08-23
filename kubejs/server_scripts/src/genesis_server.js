@@ -293,6 +293,18 @@ function reiPluginReload(event) {
         Component.of('\n-----------------------------------------------------')
       ])
     })
+    event.server.scheduleInTicks(900, t => {
+      event.player.tell([
+        Component.of('-----------------------------------------------------\n'),
+        Component.of('If you still happen to be lagging when opening the inventory you can '),
+        Component.of('enable ').green(),
+        Component.of('Hide When Idle ').bold(),
+        Component.of('setting in REI\'s settings located in '),
+        Component.of('Layout').bold(),
+        Component.of(' to hide the entries list when the search bar is empty with no text.'),
+        Component.of('\n-----------------------------------------------------')
+      ])
+    })
   }
 }
 
