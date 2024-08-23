@@ -2,7 +2,7 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "square"
 	filename: "cataclysm"
-	group: ""
+	group: "4A8875A8A8C06088"
 	icon: "cataclysm:altar_of_fire"
 	id: "44955FEF08EBF071"
 	images: [{
@@ -540,7 +540,10 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["13186E7B0D6B6115"]
+			dependencies: [
+				"13186E7B0D6B6115"
+				"650B5FD6B6CAD69C"
+			]
 			hide: true
 			id: "54378BE3AEDD91A3"
 			min_required_dependencies: 1

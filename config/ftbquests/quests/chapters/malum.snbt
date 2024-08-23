@@ -11,8 +11,7 @@
 		}
 	}
 	id: "483F9D15A7662A70"
-	order_index: 7
-	progression_mode: "flexible"
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
@@ -81,9 +80,13 @@
 		{
 			dependencies: ["664F0A4CD1F442F9"]
 			description: [
-				"Soul Stone can be found in the world. Explore and mine!"
+				"Soul Stone can be found in the world. Explore and mine! You will also have to find Runewood trees or get Runewood saplings from a Wandering Trader who happens to be selling one."
 				""
-				"You will also have to find Runewood trees or get Runewood saplings from a Wandering Trader who happens to be selling one."
+				"Put the ingredients first, then the ritual catalyst last."
+				""
+				"If you need extra ingredients in additional slots in a recipe that requires the Spirit Altar, you can make Runewood Item Pedestals."
+				""
+				"Usually the ingredients on the right side of the recipe will be placed on these item pedestals."
 			]
 			icon: "malum:spirit_altar"
 			id: "09BC57F448E77F7A"

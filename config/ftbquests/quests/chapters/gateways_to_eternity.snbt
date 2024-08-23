@@ -19,7 +19,7 @@
 		x: 0.0d
 		y: 0.0d
 	}]
-	order_index: 2
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
@@ -37,6 +37,7 @@
 			]
 			hide_dependent_lines: true
 			id: "61165E1354B3FC40"
+			min_required_dependencies: 1
 			rewards: [{
 				id: "37113E6A32F94873"
 				item: {

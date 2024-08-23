@@ -2,18 +2,21 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "rsquare"
 	filename: "weather"
-	group: "6855847200ADBE3A"
+	group: "4A8875A8A8C06088"
 	hide_quest_until_deps_visible: true
 	icon: "weather2:weather_item"
 	id: "00BAE53C163478D1"
-	order_index: 1
-	progression_mode: "flexible"
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: [
+				"4A691BB889286C89"
+				"57A69334C4D4299A"
+			]
 			description: ["Firstly you will need to make a bunch of these mini tornado items. They are &aessential&r in Weather2's recipes."]
 			id: "10E31E0B1F80D16E"
+			min_required_dependencies: 2
 			subtitle: "Just a minor inconvenience..."
 			tasks: [{
 				id: "471D8D517605ABC7"
@@ -35,7 +38,7 @@
 			}]
 			title: "Tornado Alert!"
 			x: 0.0d
-			y: 3.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["10E31E0B1F80D16E"]
@@ -79,6 +82,7 @@
 		{
 			dependencies: ["10E31E0B1F80D16E"]
 			id: "499EED63C698609C"
+			subtitle: "Functional decorations."
 			tasks: [
 				{
 					id: "615D28C96DDEF73D"
@@ -98,6 +102,7 @@
 		{
 			dependencies: ["499EED63C698609C"]
 			id: "69B0CB12E8B7764D"
+			subtitle: "Harvesting the power of wind!"
 			tasks: [{
 				id: "2996EFD9D9D0E112"
 				item: "weather2:wind_turbine"

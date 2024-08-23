@@ -2,22 +2,39 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "ars_nouveau"
-	group: "6855847200ADBE3A"
+	group: "4A8875A8A8C06088"
 	icon: "ars_nouveau:archmage_spell_book"
 	id: "2AA25BC4CFE80649"
-	order_index: 6
+	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["4A691BB889286C89"]
+			description: [
+				"If you wish to increase your mana capacity you can do the following..."
+				""
+				"- Learn all the glyphs you can. By default, each glyph gives you 15 mana."
+				""
+				"- Enchant everything with Mana Boost and Mana Regen. Each level of Mana Boost will give you 25 mana. Each level of Mana Regen will give you 2 mana per second."
+				""
+				"- Use an Amulet of Mana Boost or Amulet of Mana Regen. These provide 50 mana, and 3 mana regen respectively."
+				""
+				"- Craft two Rings of Greater Discount, each of these reduce your spell cost by 20 mana."
+				""
+				"- Upgrade your Spell Book to the highest tier you can. Each book tier grants you 50 mana and 1 mana regen."
+				""
+				"- Put a Thread of Magic Capacity in the highest level slot that you can in your armor. This increases your max mana by 10% per level. Sorceror's Armor has the most amount of high level slots when upgraded to tier III which is the maximum."
+			]
 			hide: true
 			id: "5BE95A4CB26198C3"
 			shape: "rsquare"
+			subtitle: "Access to Tier I spell glyphs."
 			tasks: [{
 				id: "001150238AE711ED"
 				item: "ars_nouveau:novice_spell_book"
 				type: "item"
 			}]
+			title: "Your First Spell Book"
 			x: 0.0d
 			y: 0.0d
 		}
@@ -107,17 +124,22 @@
 		{
 			dependencies: ["5BE95A4CB26198C3"]
 			id: "1EFD7D19B4A9131D"
+			shape: "rsquare"
+			subtitle: "Access to Tier II spell glyphs."
 			tasks: [{
 				id: "36FBC8543608DF71"
 				item: "ars_nouveau:apprentice_spell_book"
 				type: "item"
 			}]
+			title: "The Apprentice's Spell Book"
 			x: 0.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["1EFD7D19B4A9131D"]
 			id: "68CFEF87E1B4C336"
+			shape: "rsquare"
+			subtitle: "Access to Tier III spell glyphs."
 			tasks: [{
 				id: "73794F3268159948"
 				item: "ars_nouveau:archmage_spell_book"
@@ -131,7 +153,11 @@
 				"5BE95A4CB26198C3"
 				"06A37230A8CE3CD4"
 			]
-			description: ["Want a minion or make copies of yourself? Start here."]
+			description: [
+				"Want a minion or make copies of yourself?"
+				""
+				"Your journey on making spells starts here."
+			]
 			id: "4DBB1C601AED08A3"
 			shape: "pentagon"
 			subtitle: "Where you will inscribe new spells."
@@ -145,14 +171,21 @@
 		}
 		{
 			dependencies: ["4A691BB889286C89"]
+			description: [
+				"If you have not acquired any gold yet, I would refrain from exploring this quest tree any further."
+				""
+				"If you do have gold, then proceed to learning Ars Nouveau's magic."
+			]
 			hide: true
 			id: "06A37230A8CE3CD4"
 			shape: "rsquare"
+			subtitle: "What's archwood used for?"
 			tasks: [{
 				id: "56752C33A86A89DA"
 				item: "ars_nouveau:archwood_planks"
 				type: "item"
 			}]
+			title: "Introduction to Ars Nouveau"
 			x: 0.0d
 			y: -1.5d
 		}
@@ -172,6 +205,11 @@
 		}
 		{
 			dependencies: ["356C4FF1F5E355E9"]
+			description: [
+				"Now that you have your first Imbuement Chamber, why don't you make your first Source Gem as well?"
+				""
+				"It will come in handy later."
+			]
 			id: "40427C571EE5DD58"
 			subtitle: "A foundational material."
 			tasks: [{
@@ -185,7 +223,9 @@
 		}
 		{
 			dependencies: ["06A37230A8CE3CD4"]
+			description: ["Imbuement Chambers main purpose is to make Source Gems and magical essences."]
 			id: "356C4FF1F5E355E9"
+			subtitle: "It's for imbuing and essence creation."
 			tasks: [{
 				id: "6A892CD71E3C8AA5"
 				item: "ars_nouveau:imbuement_chamber"
@@ -229,7 +269,9 @@
 		}
 		{
 			dependencies: ["40427C571EE5DD58"]
+			description: ["Source Gem Blocks are used in making Source Relays and Source Turrets."]
 			id: "7862BC3EBBD622EF"
+			subtitle: "Utilized in utilities."
 			tasks: [{
 				id: "282FF7EAF8FC58FC"
 				item: "ars_nouveau:source_gem_block"
@@ -256,9 +298,23 @@
 				"40427C571EE5DD58"
 				"32E9D5D5BD7DAC59"
 			]
+			description: [
+				"In order to use an Enchanting Apparatus you need 3 things."
+				""
+				"- A few Arcane Pedestals. The amount you need varies between each recipe."
+				"- 1x Arcane Core placed below the Enchanting Apparatus."
+				"- 1x Enchanting Apparatus placed directly above the Arcane Core."
+				""
+				"To use, you must &lplace your ingredients first&r by placing them on the Arcane Pedestals."
+				""
+				"Then, right click with the catalyst, or the item that needs to go inside the Enchanting Apparatus in the center to start the enchanting process."
+				""
+				"If &dSource&r is needed then simply utilize a Sourcelink with a Source Relay that is assigned to send Source to a Source Jar within the immediate vicinity of the Enchanting Apparatus."
+			]
 			icon: "ars_nouveau:enchanting_apparatus"
 			id: "091E0C610F8580D8"
 			shape: "octagon"
+			subtitle: "Advanced magical crafting."
 			tasks: [
 				{
 					id: "56D960EC0664E2AF"
@@ -342,30 +398,39 @@
 		}
 		{
 			dependencies: ["091E0C610F8580D8"]
+			description: [
+				"Unfortunately, these plants do not produce their own seeds."
+				""
+				"You must make more if you want to scale up your production."
+			]
 			id: "6011ADE0E4EC7917"
+			subtitle: "First steps into making magical fabric."
 			tasks: [{
 				id: "25EC38BAF16C3CDE"
 				item: "ars_nouveau:magebloom_crop"
 				type: "item"
 			}]
+			title: "Grow the Magebloom Seed"
 			x: -6.0d
 			y: -4.5d
 		}
 		{
 			dependencies: ["6011ADE0E4EC7917"]
 			id: "29C067F6758E7FAC"
+			subtitle: "It's soft and fluffy to the touch."
 			tasks: [{
 				id: "3731C8F796F7EA51"
 				item: "ars_nouveau:magebloom"
 				type: "item"
 			}]
+			title: "Harvest the Magebloom"
 			x: -8.0d
 			y: -4.5d
 		}
 		{
 			dependencies: ["29C067F6758E7FAC"]
 			id: "58E50E3ADD6879BF"
-			subtitle: "Important for making mage armor!"
+			subtitle: "Important for making Stabuncle beds and mage armor!"
 			tasks: [{
 				id: "1EEEBE1AFEB1E835"
 				item: "ars_nouveau:magebloom_fiber"
@@ -968,6 +1033,11 @@
 		}
 		{
 			dependencies: ["4DF2C4AF2998388D"]
+			description: [
+				"Using the recipe viewer, you can see that there are two additional tiers to upgrade your armor to have more slots."
+				""
+				"This requires the Enchanting Apparatus if you have not made it already."
+			]
 			id: "3D5C1E94AEE1525E"
 			shape: "rsquare"
 			subtitle: "An arcane glass cannon."
@@ -1022,6 +1092,7 @@
 			]
 			id: "4DF2C4AF2998388D"
 			shape: "rsquare"
+			subtitle: "You'll just need a few spools of magbebloom fiber..."
 			tasks: [
 				{
 					id: "57E5BAD2B802B43A"
@@ -1040,6 +1111,11 @@
 		}
 		{
 			dependencies: ["4DF2C4AF2998388D"]
+			description: [
+				"Using the recipe viewer, you can see that there are two additional tiers to upgrade your armor to have more slots."
+				""
+				"This requires the Enchanting Apparatus if you have not made it already."
+			]
 			id: "1881BCF053D48A5B"
 			shape: "rsquare"
 			subtitle: "An arcane tank set."
@@ -1086,6 +1162,11 @@
 		}
 		{
 			dependencies: ["4DF2C4AF2998388D"]
+			description: [
+				"Using the recipe viewer, you can see that there are two additional tiers to upgrade your armor to have more slots."
+				""
+				"This requires the Enchanting Apparatus if you have not made it already."
+			]
 			id: "79631E638D08F38A"
 			shape: "rsquare"
 			subtitle: "A balance."

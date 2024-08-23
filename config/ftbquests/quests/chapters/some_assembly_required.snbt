@@ -5,11 +5,14 @@
 	group: "2B2D0B6DE31DE8D3"
 	icon: "some_assembly_required:bread_slice"
 	id: "40B7C0560B900F0C"
-	order_index: 5
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["0AE06EB85B6E1CB6"]
+			dependencies: [
+				"0AE06EB85B6E1CB6"
+				"03F919758AA7E318"
+			]
 			hide: true
 			icon: "some_assembly_required:sandwiching_station"
 			id: "06CE3A2E506D1686"

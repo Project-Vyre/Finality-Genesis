@@ -14,7 +14,6 @@
 		y: 0.0d
 	}]
 	order_index: 0
-	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
@@ -261,7 +260,10 @@
 			y: 3.5d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: [
+				"4A691BB889286C89"
+				"03F919758AA7E318"
+			]
 			description: [
 				"This quest tree is a work in progress and is not completely documented."
 				""

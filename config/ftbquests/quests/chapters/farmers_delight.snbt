@@ -5,7 +5,7 @@
 	group: "2B2D0B6DE31DE8D3"
 	icon: "farmersdelight:cabbage_crate"
 	id: "2FD109D9011BFAE5"
-	order_index: 2
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
@@ -98,11 +98,19 @@
 		{
 			dependencies: ["3A93D1DBD84B9F94"]
 			id: "79A0F31208BE2DCD"
-			tasks: [{
-				id: "335F05D990A33848"
-				item: "farmersdelight:organic_compost"
-				type: "item"
-			}]
+			subtitle: "Rich soil makes crops grow faster. No bone meal required!"
+			tasks: [
+				{
+					id: "335F05D990A33848"
+					item: "farmersdelight:organic_compost"
+					type: "item"
+				}
+				{
+					id: "66AC69707D757189"
+					item: "farmersdelight:rich_soil"
+					type: "item"
+				}
+			]
 			title: "Composting 101"
 			x: 0.0d
 			y: -2.0d
@@ -219,6 +227,33 @@
 			title: "Barbeque on a Stick"
 			x: 2.0d
 			y: 4.0d
+		}
+		{
+			dependencies: ["3A93D1DBD84B9F94"]
+			description: ["Straw is acquired by simply breaking grass blocks with a knife in your main hand."]
+			id: "0FCB362E5ED41FA9"
+			subtitle: "It's a useful material!"
+			tasks: [{
+				id: "668E25CA5A9FFCB6"
+				item: "farmersdelight:straw"
+				type: "item"
+			}]
+			title: "Acquire some Straw"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0FCB362E5ED41FA9"]
+			id: "57E96C0715BA0A78"
+			subtitle: "For both utility and decor."
+			tasks: [{
+				id: "3CDBB84CF2A19D07"
+				item: "farmersdelight:canvas"
+				type: "item"
+			}]
+			title: "Canvas Material"
+			x: 3.0d
+			y: 0.0d
 		}
 	]
 	subtitle: [

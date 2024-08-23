@@ -2,7 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "create"
-	group: ""
+	group: "4A8875A8A8C06088"
+	hide_quest_until_deps_visible: true
 	icon: "create:brass_hand"
 	id: "62E40BF215C76563"
 	images: [{
@@ -13,8 +14,7 @@
 		x: 0.0d
 		y: 0.0d
 	}]
-	order_index: 1
-	progression_mode: "flexible"
+	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
@@ -219,6 +219,12 @@
 				"The Mechanical Mixer has a very involved recipe tree, expect to use it very frequently!"
 				""
 				"Hold [w] to Ponder to learn more!"
+				""
+				"For potion brewing, you may want to brew the potion first in a Brewing Stand to utilize in the Basin's recipe filter slot to resolve any recipe conflicts."
+				""
+				"For example, mixing Water in a heated Basin produces Salt. If you wanted to brew a Mundane Potion, first you would have to brew a Mundane Potion manually with the Brewing Stand and then right click the recipe filter slot in the Basin."
+				""
+				"This will tell it to only attempt to brew that potion fluid and not salt."
 			]
 			id: "400260FDC774443B"
 			rewards: [
@@ -464,7 +470,7 @@
 			}]
 			title: "Make some belts!"
 			x: 0.0d
-			y: 5.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
@@ -485,7 +491,7 @@
 			}]
 			title: "Introduction to Item Transportation"
 			x: 0.0d
-			y: 3.5d
+			y: 4.5d
 		}
 		{
 			dependencies: [
@@ -731,7 +737,7 @@
 			}]
 			title: "Intelligent Item Transportation and Management - Brass Tunnels"
 			x: 1.0d
-			y: 4.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["76DE1DB31C32A913"]
@@ -865,7 +871,7 @@
 			}]
 			title: "Intelligent Item Transportation and Management - Brass Funnels"
 			x: 1.5d
-			y: 3.5d
+			y: 4.5d
 		}
 		{
 			dependencies: [
@@ -1281,6 +1287,8 @@
 				"You can fully automate potions after being brewed with a Mechanical Mixer."
 				""
 				"Hold [w] to Ponder to learn more!"
+				""
+				"Also, did I mention Create has food items?"
 			]
 			id: "16B642E5E7DBE75D"
 			rewards: [
@@ -1303,8 +1311,8 @@
 				type: "item"
 			}]
 			title: "Craft the Spout"
-			x: -4.5d
-			y: -1.0d
+			x: -5.5d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -1992,7 +2000,7 @@
 			}]
 			title: "Basic Item Transportation and Management - Andesite Funnels"
 			x: -1.5d
-			y: 3.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["0044994A32BC5631"]
@@ -2024,7 +2032,7 @@
 			}]
 			title: "Basic Item Transportation and Management - Andesite Tunnels"
 			x: -1.0d
-			y: 4.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["770AD4193CC23EA3"]
@@ -2070,7 +2078,11 @@
 		}
 		{
 			dependencies: ["2E386081E5302CF5"]
-			description: ["In order for a body of fluid to be considered &d<shake>infinite</shake>&r it has to be 10,000 blocks in volume and some additional blocks because it can't be exactly 10,000 for some reason."]
+			description: [
+				"In order for a body of fluid to be considered &d<shake>infinite</shake>&r it has to be 10,000 blocks in volume and some additional blocks because it can't be exactly 10,000 for some reason."
+				""
+				"However, you may encounter issues with the Hose Pulley being unable to output more than 10,050 source blocks in a given area. This may require manual work on your end to fill up the final layer(s) if necessary."
+			]
 			id: "1DA9BAAA83A3959B"
 			rewards: [
 				{
@@ -2392,7 +2404,7 @@
 				}
 			]
 			title: "The Copper Age"
-			x: -3.5d
+			x: -5.5d
 			y: 0.0d
 		}
 		{
@@ -2896,8 +2908,8 @@
 				type: "item"
 			}]
 			title: "Craft the Item Drain"
-			x: -4.5d
-			y: 1.0d
+			x: -6.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["187E2B3FDE19DD4D"]
@@ -3244,7 +3256,7 @@
 				}
 			]
 			title: "Gone diving!"
-			x: -5.0d
+			x: -7.0d
 			y: 0.0d
 		}
 		{
@@ -3318,7 +3330,7 @@
 				}
 			]
 			title: "Lava Diving!"
-			x: -6.5d
+			x: -8.5d
 			y: 0.0d
 		}
 		{
@@ -3617,7 +3629,7 @@
 				item: "create:steam_whistle"
 				type: "item"
 			}]
-			x: -3.5d
+			x: -5.5d
 			y: -1.5d
 		}
 		{
@@ -3698,7 +3710,7 @@
 			}]
 			title: "Spin..."
 			x: -3.0d
-			y: 1.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["28094E43F612C0E4"]
@@ -3740,7 +3752,7 @@
 			]
 			title: "Fancy Doors and Trapdoors"
 			x: -3.0d
-			y: 3.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["0075BAE1BFBAA36D"]
@@ -4185,6 +4197,213 @@
 			title: "Create Utilities - The Copper Valve Handle"
 			x: -8.5d
 			y: -2.5d
+		}
+		{
+			dependencies: [
+				"16B642E5E7DBE75D"
+				"5A7DD92171EFE75A"
+			]
+			id: "1EA6C35978B35804"
+			min_required_dependencies: 2
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "08365B087CB7ED88"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "401214562B4E1F63"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					id: "259C3BD1343638FB"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+			]
+			subtitle: "Looks like a cinnamon bun, doesn't it?"
+			tasks: [{
+				consume_items: true
+				count: 64L
+				id: "0BC6D1E3361C0465"
+				item: "create:sweet_roll"
+				type: "item"
+			}]
+			title: "Sweet Rolls"
+			x: -5.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["16B642E5E7DBE75D"]
+			description: [
+				"If only chocolate glazed strawberries existed..."
+				""
+				"Anyways, put that chocolate factory to use!"
+			]
+			id: "17C1EF3E6F8C4277"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "1AE48A61FEA67C1E"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "2E233A6FD5804377"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					id: "51B7A3788CAA9A24"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+			]
+			subtitle: "Have a berry farm? Here you go!"
+			tasks: [{
+				consume_items: true
+				count: 64L
+				id: "2479D7019A3FFC01"
+				item: "create:chocolate_glazed_berries"
+				type: "item"
+			}]
+			title: "Chocolate Glazed Berries"
+			x: -4.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["16B642E5E7DBE75D"]
+			description: [
+				"Well, you can put those apples to use with Honey."
+				""
+				"Simply pour some honey with a Spout onto an Apple to make one Honeyed Apple."
+			]
+			id: "4113698DB8206F14"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "713685EB7A6245FE"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "2842BD4A38A2294B"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					id: "3B6591385A73E905"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+			]
+			subtitle: "There are so many apples from my tree farm..."
+			tasks: [{
+				consume_items: true
+				count: 64L
+				id: "01580C4257D4D29D"
+				item: "create:honeyed_apple"
+				type: "item"
+			}]
+			title: "Honeyed Apples"
+			x: -6.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["16B642E5E7DBE75D"]
+			id: "688AFB5EBF7FAFBF"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "15477BB7C645A9DB"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "545B2BFF8B03707D"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					id: "570BBF81E4CE01A8"
+					item: "minecraft:glass_bottle"
+					type: "item"
+				}
+			]
+			subtitle: "Invigorating! Thank you for the tea."
+			tasks: [{
+				consume_items: true
+				id: "2AA9261B13AD2356"
+				item: "create:builders_tea"
+				type: "item"
+			}]
+			title: "Builder's Tea"
+			x: -7.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"78AB1F02F29D15E3"
+				"074F12DE8761901F"
+			]
+			description: ["I'd like to buy all of your chocolate."]
+			id: "7C4601730EFD00D7"
+			rewards: [
+				{
+					count: 9
+					id: "446CF6E727EDFDBC"
+					item: "minecraft:diamond_block"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5ED0D4829533B10E"
+					table_id: 103743719166323827L
+					type: "random"
+				}
+				{
+					id: "27BFBB6684A1762E"
+					type: "xp_levels"
+					xp_levels: 30
+				}
+				{
+					id: "4FD69C1638350707"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+			]
+			subtitle: "Chocolate? Did you say chocolate? Chocolate?! CHOCOLAAAATEEE?!!!"
+			tasks: [{
+				consume_items: true
+				count: 1024L
+				id: "41F6F54169EC131C"
+				item: "create:bar_of_chocolate"
+				type: "item"
+			}]
+			title: "Make some chocolate."
+			x: -4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2314125F47BB10F2"]
+			id: "202708FB8ABECEB7"
+			subtitle: "You can now make your sentient fireplace into a sentient stovetop. Pretty neat right?"
+			tasks: [{
+				id: "4B84D412991DD993"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						Parent: { }
+					}
+					id: "create_central_kitchen:cooking_guide"
+				}
+				type: "item"
+			}]
+			title: "Create the Cooking Guide"
+			x: -5.5d
+			y: 4.5d
 		}
 	]
 	subtitle: [

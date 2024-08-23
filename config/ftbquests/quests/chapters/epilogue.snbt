@@ -3,7 +3,7 @@
 	default_quest_shape: "rsquare"
 	filename: "epilogue"
 	group: ""
-	icon: "kubejs:awakened_singularity_core"
+	icon: "kubejs:final_singularity_stage_three"
 	id: "3D91EE1209DFA21C"
 	images: [{
 		height: 64.0d
@@ -13,8 +13,7 @@
 		x: 0.0d
 		y: 0.0d
 	}]
-	order_index: 4
-	progression_mode: "flexible"
+	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
@@ -144,7 +143,7 @@
 			y: -18.0d
 		}
 		{
-			dependencies: ["16DE8734477FB97A"]
+			dependencies: ["3DBCAFA0B3D9B309"]
 			id: "53850BE8EF49D0AF"
 			subtitle: "The very mechanism used for manipulating the universe."
 			tasks: [{
@@ -594,48 +593,96 @@
 			tasks: [
 				{
 					id: "4F8370680B7192C9"
-					item: "kubejs:final_sword"
+					item: {
+						Count: 1
+						id: "kubejs:final_sword"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 				{
 					id: "4FE5862CECE32A8A"
-					item: "kubejs:final_pickaxe"
+					item: {
+						Count: 1
+						id: "kubejs:final_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 				{
 					id: "2700AE63E1262479"
-					item: "kubejs:final_axe"
+					item: {
+						Count: 1
+						id: "kubejs:final_axe"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 				{
 					id: "7AB11B0CE29F8EA8"
-					item: "kubejs:final_shovel"
+					item: {
+						Count: 1
+						id: "kubejs:final_shovel"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 				{
 					id: "7DF5B623D8502F9F"
-					item: "kubejs:final_hoe"
+					item: {
+						Count: 1
+						id: "kubejs:final_hoe"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 				{
 					id: "1F52B4D325AF6A83"
-					item: "kubejs:final_lance"
+					item: {
+						Count: 1
+						id: "kubejs:final_lance"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 				{
 					id: "651DB8F15A3C2941"
-					item: "kubejs:final_scythe"
+					item: {
+						Count: 1
+						id: "kubejs:final_scythe"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 				{
 					id: "2AD446D010A970C4"
-					item: "kubejs:final_katana"
+					item: {
+						Count: 1
+						id: "kubejs:final_katana"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 			]
 			title: "&l<rainb>Instrumenta Omnipotens</rainb>"
-			x: -3.0d
-			y: 15.0d
+			x: -1.0d
+			y: 17.0d
 		}
 		{
 			dependencies: ["7D62F82D07137026"]
@@ -665,8 +712,8 @@
 				}
 			]
 			title: "&l<rainb>Arma Omnipotens</rainb>"
-			x: 3.0d
-			y: 15.0d
+			x: 1.0d
+			y: 17.0d
 		}
 		{
 			dependencies: ["1544915BBE4467E4"]
@@ -868,14 +915,25 @@
 					item: "kubejs:high_entropy_alloy"
 					type: "item"
 				}
+				{
+					id: "72EB9D43B9C91A20"
+					item: "kubejs:duplicator"
+					type: "item"
+				}
 			]
 			title: "Presenting High Entropy Alloy"
 			x: 0.0d
-			y: 14.5d
+			y: 18.0d
 		}
 		{
 			dependencies: ["7D62F82D07137026"]
+			description: [
+				"If you already have the tools crafted, you can use a Deployer with any of the final tools on a Command Block to produce shapes."
+				""
+				"To color the shapes, you also need to make Shimmer which is made from Create's &eRefined Radiance&r, &dC.U.E&r and &9Water&r. The Basin does not need to be superheated either."
+			]
 			id: "16DE8734477FB97A"
+			subtitle: "They output binary, slowly."
 			tasks: [
 				{
 					id: "594D2922462C0776"
@@ -895,7 +953,7 @@
 			]
 			title: "Command Blocks"
 			x: 0.0d
-			y: 9.0d
+			y: 16.5d
 		}
 		{
 			dependencies: [
@@ -904,13 +962,48 @@
 			]
 			id: "1E1D3F1D96D2D774"
 			size: 1.0d
+			subtitle: "You finally made it here."
 			tasks: [{
 				id: "15AE2DD45E11D798"
 				item: "kubejs:final_singularity_stage_nulla"
 				type: "item"
 			}]
 			x: 0.0d
-			y: 18.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["16DE8734477FB97A"]
+			id: "3DBCAFA0B3D9B309"
+			tasks: [
+				{
+					id: "1564DDA976A4CB39"
+					item: "kubejs:final_singularity_stage_one"
+					type: "item"
+				}
+				{
+					id: "0411B3289F542B54"
+					item: "kubejs:final_singularity_stage_two"
+					type: "item"
+				}
+				{
+					id: "6984F345D292620E"
+					item: "kubejs:final_singularity_stage_three"
+					type: "item"
+				}
+				{
+					id: "4E4A8EAB2C9D2B68"
+					item: "kubejs:final_singularity_stage_four"
+					type: "item"
+				}
+				{
+					id: "4280C2BC14C91FB9"
+					item: "kubejs:final_singularity"
+					type: "item"
+				}
+			]
+			title: "Automation Mastered"
+			x: 0.0d
+			y: 13.5d
 		}
 	]
 	subtitle: ["<rainb>Are you sure you want to do this?</rainb>"]

@@ -1,0 +1,167 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "pipez"
+	group: "71A5625CEAEA7423"
+	hide_quest_until_deps_visible: true
+	icon: "pipez:universal_pipe"
+	id: "663C070346C66E8C"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"2FF7795C03DDC67B"
+				"515DBB49AEF66282"
+			]
+			description: [
+				"Pipes from Pipez are a more direct approach compared to Create."
+				""
+				"They're also server TPS friendly!"
+				""
+				"Sneak + right click on a pipe's end with Create's Wrench to set it to input (with a lip) or output (without a lip with a tiny air gap if the block is less than a full block)"
+				""
+				"Pipes can also be disconnected from each other by doing the same thing, except the air gap will be noticeable and greater than a pixel in air gap away."
+			]
+			hide: true
+			id: "2D015D8F497AD290"
+			shape: "rsquare"
+			subtitle: "Pipez for days."
+			tasks: [{
+				id: "63068B3CB19123A1"
+				title: "I see you've obtained Mechanical Crafters."
+				type: "checkmark"
+			}]
+			title: "Introduction to Pipez"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2D015D8F497AD290"]
+			id: "7E0C54E492F265BB"
+			shape: "rsquare"
+			subtitle: "Instant item transport!"
+			tasks: [{
+				id: "2A1DC2EA32935A0E"
+				item: "pipez:item_pipe"
+				type: "item"
+			}]
+			title: "Advanced Item Transport"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2D015D8F497AD290"]
+			id: "47D080363120E711"
+			shape: "rsquare"
+			subtitle: "Instant fluid transfer, with pipes!"
+			tasks: [{
+				id: "6E9E435BC0908FD7"
+				item: "pipez:fluid_pipe"
+				type: "item"
+			}]
+			title: "Advanced Fluid Plumbing"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2D015D8F497AD290"]
+			id: "1E119F8B2A92DEC6"
+			shape: "rsquare"
+			subtitle: "Energy transfer, with pipes!"
+			tasks: [{
+				id: "6584C7262BF16E4A"
+				item: "pipez:energy_pipe"
+				type: "item"
+			}]
+			title: "Advanced Energy Transport"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"47D080363120E711"
+				"7E0C54E492F265BB"
+				"1E119F8B2A92DEC6"
+			]
+			id: "52C6DBD3C912FA2D"
+			shape: "rsquare"
+			subtitle: "Transporting everywhere, with a single pipe."
+			tasks: [{
+				id: "2B267771A4758A09"
+				item: "pipez:universal_pipe"
+				type: "item"
+			}]
+			title: "Universal Pipe Transport"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2D015D8F497AD290"]
+			id: "307E6D63DED317DA"
+			subtitle: "A bit faster."
+			tasks: [{
+				id: "0A7FF716434A07C3"
+				item: "pipez:basic_upgrade"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["307E6D63DED317DA"]
+			id: "2913993624BF6E32"
+			subtitle: "A bit more faster."
+			tasks: [{
+				id: "6920089C52005322"
+				item: "pipez:improved_upgrade"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["2913993624BF6E32"]
+			id: "32707F440585D0E8"
+			subtitle: "Enables filtering."
+			tasks: [{
+				id: "1EDA88FBFF93F719"
+				item: "pipez:advanced_upgrade"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["32707F440585D0E8"]
+			id: "74F382D0B6F05E4D"
+			subtitle: "Fast and smart!"
+			tasks: [{
+				id: "75232D911728FC97"
+				item: "pipez:ultimate_upgrade"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["74F382D0B6F05E4D"]
+			description: [
+				"*Crashes with Fluid Tanks, Hose Pulleys, etc. based on our experiences with playtesting."
+				""
+				"Please use with caution!"
+			]
+			id: "4457D904A3BACC75"
+			subtitle: "Use this if you want to crash your world.*"
+			tasks: [{
+				id: "701F5392C904EE13"
+				item: "pipez:infinity_upgrade"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -7.5d
+		}
+	]
+	subtitle: ["Instantaneous pipe handling."]
+	title: "Pipez"
+}

@@ -14,12 +14,11 @@
 		y: -4.0d
 	}]
 	order_index: 0
-	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
 			description: [
-				"&dHello! The 1.20.1 port of this modpack is a work in progress and is in a beta state. Please report any bugs you encounter on the Finality Genesis GitHub Issues page, thank you!&r"
+				"&dHello! The 1.20.1 port of this modpack is a work in progress and is in a beta state. Please report any bugs you encounter on the Finality Genesis GitHub Issues page or through our Discord, thank you!&r"
 				""
 				"Notice: If you randomly hear music throughout the world, assume that a mob spawned in with a &bSophisticated Backpack&r with the music upgrade."
 				""
@@ -31,19 +30,21 @@
 				""
 				"If you are playing with friends, please do not forget to make a party with &aFTB Teams&r! Press &dE&r to open your inventory and look for three person figures on the top left corner."
 				""
-				"This modpack is not complete and development is ongoing, but the end goal is &6reachable&r."
-				"{@pagebreak}"
 				"Press &bX&r to crawl."
 				""
 				"Press &eY&r while your cursor is hovering over an item to find that same item in a nearby chest. White particles will show up inside of it through the walls."
 				""
 				"Also, take the time now to SET YOUR KEYBINDS and adjust volume levels if needed."
 				""
-				"Tips for using &l&2JEI&r are on the next few pages in addition to &eLootr&r chest info. Just don't say I didn't warn you if your Lootr chest blows up."
-				"{@pagebreak}"
-				"&aJEI Tips and Tricks&r"
+				"This modpack is not complete and development is ongoing, but the end goal is &6reachable&r."
 				""
-				"- &bLeft clicking&r items shows how to get them, with all the methods shown at the top of the recipe viewing window where all those tabs are."
+				"Tips for using &l&7REI&r are on the next few pages in addition to &eLootr&r chest info. Just don't say I didn't warn you if your Lootr chest blows up."
+				"{@pagebreak}"
+				"&l&7Roughly Enough Items&r &l&aTips and Tricks&r"
+				""
+				"There's a lot of things to unpack here. Don't forget to scroll!"
+				""
+				"- &aLeft clicking&r items shows how to get them, with all the methods shown at the top of the recipe viewing window where all those tabs are."
 				""
 				"- &3Right clicking&r items shows all the recipes that the item is used in."
 				""
@@ -51,11 +52,17 @@
 				""
 				"- Press &dCtrl + F&r to focus the search bar then start typing. "
 				""
-				"- If you want to clear the search bar instantly, do &cCtrl + A&r then press &cBackspace&r."
+				"- If you want to clear the search bar instantly, do &aCtrl + F&r then &cCtrl + A&r to select all the text before finally pressing &cBackspace&r to clear all of the selected text."
 				""
 				"- To search by mod, use &d@&r then type the modid of that mod. Examples: &d@create&r or &d@createaddition&r or &d@extendedcrafting&r"
 				""
-				"- To search by tags, use &b$&r then type the item tag you want to look up. Examples: &b$wood&r or &b$planks&r"
+				"- To search by tags, use &e#&r then type the item tag you want to look up. Examples: &e#wood&r or &e#planks&r"
+				""
+				"Addtional REI information can be found on the next page."
+				"{@pagebreak}"
+				"Sometimes, Create's Sequenced Assembly recipe type or other recipes may fail to be visible. To fix this, go to REI's Settings by clicking the little cogwheel next to the search bar and click &l&bMore Options...&r."
+				""
+				"From there, look at the left hand side and look for a settings category labelled &l&eReload \\& Reset&r and click &l&cReload Plugins&r. Try left clicking on the Precision Mechanism or another item that uses Sequenced Assembly and it should be displaying as normal."
 				""
 				"&l&eLootr&r info is on the next page."
 				"{@pagebreak}"
@@ -344,7 +351,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["0AE06EB85B6E1CB6"]
+			dependencies: ["13186E7B0D6B6115"]
 			description: [
 				"Instructions on how to use the Eccentric Tome are located in its tooltip. &b<wave>You're welcome!</wave>&r"
 				""
@@ -410,27 +417,6 @@
 					type: "item"
 				}
 				{
-					id: "1277B528ADC1D6F8"
-					item: {
-						Count: 1
-						id: "farmersdelight:skillet"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "7C06B649A52E60C0"
-					item: "farmersdelight:cooking_pot"
-					type: "item"
-				}
-				{
-					id: "0C4AF3D94C5361F1"
-					item: "farmersdelight:stove"
-					type: "item"
-				}
-				{
 					id: "2EFF728C6194E967"
 					item: {
 						Count: 1
@@ -488,6 +474,7 @@
 							]
 						}
 					}
+					match_nbt: false
 					type: "item"
 				}
 				{
@@ -495,10 +482,15 @@
 					item: "minecraft:fletching_table"
 					type: "item"
 				}
+				{
+					id: "59830CD9B1FC39DE"
+					item: "refurbished_furniture:post_box"
+					type: "item"
+				}
 			]
 			title: "Convenient Utilities Ch.2"
-			x: -1.5d
-			y: 1.5d
+			x: 0.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["2EF808209CCECE6A"]
@@ -624,20 +616,17 @@
 					type: "item"
 				}
 				{
-					id: "661678347CAB44D0"
-					item: "kubejs:duplicator"
+					id: "4B0026FA48D35100"
+					item: "tesseract:tesseract"
 					type: "item"
 				}
 			]
 			title: "Convenient Utilities Ch.3"
-			x: -3.0d
-			y: 1.5d
+			x: 0.0d
+			y: 7.5d
 		}
 		{
-			dependencies: [
-				"5E5E9241EB84A4E9"
-				"5098C9DA205BDE8A"
-			]
+			dependencies: ["5E5E9241EB84A4E9"]
 			description: ["Unlimited teleports, for all time."]
 			hide: true
 			icon: "tempad:he_who_remains_tempad"
@@ -663,8 +652,8 @@
 				type: "item"
 			}]
 			title: "He who remains..."
-			x: -3.0d
-			y: 3.0d
+			x: 0.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["0AE06EB85B6E1CB6"]
@@ -779,11 +768,11 @@
 				}
 			]
 			title: "Getting somewhere..."
-			x: 1.5d
-			y: 1.5d
+			x: 0.0d
+			y: 3.0d
 		}
 		{
-			dependencies: ["0AE06EB85B6E1CB6"]
+			dependencies: ["03F919758AA7E318"]
 			description: [
 				"This is also &overy&r important..."
 				""
@@ -810,7 +799,7 @@
 				type: "random"
 			}]
 			shape: "rsquare"
-			size: 3.0d
+			size: 1.0d
 			subtitle: "Click me to unlock Create's progression tree!"
 			tasks: [{
 				id: "580921EB09A555A0"
@@ -818,8 +807,8 @@
 				type: "checkmark"
 			}]
 			title: "Introduction to Create"
-			x: 0.0d
-			y: 4.5d
+			x: -1.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["03F919758AA7E318"]
@@ -869,8 +858,8 @@
 				type: "item"
 			}]
 			title: "Diamond Pickaxe Acquired!"
-			x: 3.0d
-			y: 1.5d
+			x: 0.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["13186E7B0D6B6115"]
@@ -916,11 +905,11 @@
 				}
 			]
 			title: "Useful Guidance"
-			x: 3.0d
-			y: 3.0d
+			x: 1.5d
+			y: 4.5d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["13186E7B0D6B6115"]
 			description: [
 				"Well, don't be worried about that."
 				""
@@ -937,6 +926,20 @@
 				"&8Netherite&r is also now renewable with the use of Crushing Wheels by crushing &4Netherrack&r."
 				""
 				"Netherrack can now be renewed with &cInstant Health II&r potions, fully automated."
+				""
+				"Go to the next page for bottomless fluids."
+				"{@pagebreak}"
+				"Create's Hose Pulleys allow you to pull from a bottomless fluid pit given that it is able to access at least &a10,000&r fluid source blocks."
+				""
+				"However a &cbug&r exists in Create itself where Hose Pulleys can only output &e10,050&r fluid source blocks before completely failing after &cexceeding&r that threshold."
+				""
+				"Once that threshold is passed, it will continue trying to output fluid source blocks but it will be immediately obvious on the last layer that it's unable to add any more fluid source blocks."
+				""
+				"Please take that into consideration when calculating the volume of your pit by &6Length&r x &6Width&r x &6Height&r."
+				""
+				"All of Finality's molten metals are allowed to be bottomless."
+				""
+				"Both Condensed Universal Entropy and Order are allowed to be bottomless fluids in addition to Shimmer and Lemonade."
 			]
 			hide: true
 			hide_dependency_lines: true
@@ -1003,11 +1006,11 @@
 				}
 			]
 			title: "A Heads Up: Infinite Materials"
-			x: 1.5d
-			y: -1.5d
+			x: -1.5d
+			y: 4.5d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["2FF7795C03DDC67B"]
 			hide: true
 			hide_dependency_lines: true
 			id: "4843FF760BED67F6"
@@ -1104,8 +1107,94 @@
 				}
 			]
 			title: "Menu Music Discs"
-			x: -1.5d
-			y: -1.5d
+			x: -3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["03F919758AA7E318"]
+			description: [
+				"Start off by making a Copper Wallet."
+				""
+				"Eventually, you will get enough materials to work your way up to a Netherite Wallet to keep your money safe."
+				""
+				"Completing this quest will unlock &bThe Shop&r."
+			]
+			id: "342B5D82265C163B"
+			shape: "rsquare"
+			subtitle: "Yes, they do."
+			tasks: [{
+				id: "19350196FFC2841E"
+				item: {
+					Count: 1
+					id: "lightmanscurrency:wallet_copper"
+					tag: { }
+				}
+				type: "item"
+			}]
+			title: "Coins exist?"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["650B5FD6B6CAD69C"]
+			description: [
+				"Throughout the world, you may find incomplete boats. These serve as templates."
+				""
+				"If you are too lazy to explore the world, you can also use the included schematics, once you have made an Empty Schematic from Create."
+				""
+				"You will need to complete these templates in a symmetrical manner with components and planks."
+				""
+				"Eventually, the boat scaffolding blocks will disappear and a blue hammer hologram will appear in certain places with the materials you need to put in."
+				""
+				"Unfortunately, you can't make your own boats."
+				""
+				"{@pagebreak}"
+				"Certain blocks are tagged with an item tag called &d\"alekiships:can_place_in_compartments\"&r which allows you to place blocks into the ship."
+			]
+			icon: "alekiships:anchor"
+			id: "5DD55DCC639D4511"
+			shape: "rsquare"
+			subtitle: "Explorin' the seas!"
+			tasks: [
+				{
+					id: "5DB4B27F0BB80110"
+					item: "alekiships:watercraft_frame_angled"
+					type: "item"
+				}
+				{
+					id: "3C865BE80D74EE73"
+					item: "alekiships:watercraft_frame_flat"
+					type: "item"
+				}
+				{
+					id: "3A165CAE315A522C"
+					item: "alekiships:anchor"
+					type: "item"
+				}
+				{
+					id: "68FCDDA294C37986"
+					item: "alekiships:oarlock"
+					type: "item"
+				}
+				{
+					id: "5BF1FD1077C7F52C"
+					item: "alekiships:cannon"
+					type: "item"
+				}
+				{
+					id: "48399DEAE7C649F8"
+					item: "alekiships:cleat"
+					type: "item"
+				}
+				{
+					id: "7EB15CA4B5D98F3E"
+					item: "alekiships:oar"
+					type: "item"
+				}
+			]
+			title: "Aleki's Ships - Boats for All!"
+			x: 3.0d
+			y: 4.5d
 		}
 	]
 	subtitle: ["This chapter serves both as an introduction and some awareness of utilities."]

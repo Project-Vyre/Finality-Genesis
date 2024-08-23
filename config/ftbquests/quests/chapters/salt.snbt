@@ -5,11 +5,14 @@
 	group: "2B2D0B6DE31DE8D3"
 	icon: "salt:salt"
 	id: "4591AE12FA394A76"
-	order_index: 4
+	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["0AE06EB85B6E1CB6"]
+			dependencies: [
+				"0AE06EB85B6E1CB6"
+				"224178669A9DC1DA"
+			]
 			description: ["Simply acquire some salt then combine it with a food item in your crafting grid to salt said food item."]
 			id: "3F6CCC653350CC37"
 			rewards: [{

@@ -132,7 +132,10 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: [
+				"4A691BB889286C89"
+				"13186E7B0D6B6115"
+			]
 			description: [
 				"The Heart Amulet is what contains your Heart Containers, which then increase how much health you have."
 				""
@@ -152,6 +155,7 @@
 			]
 			hide: true
 			id: "5F0954BDC6CBA6F5"
+			min_required_dependencies: 2
 			rewards: [{
 				id: "6A855529202974C7"
 				type: "xp"

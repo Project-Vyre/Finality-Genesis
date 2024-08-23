@@ -2,17 +2,22 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "rsquare"
 	filename: "ae2"
-	group: "6855847200ADBE3A"
+	group: "71A5625CEAEA7423"
 	hide_quest_until_deps_visible: true
 	icon: "ae2:singularity"
 	id: "704BE125DC1524EA"
-	order_index: 5
+	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["15149B4F5A4E32C0"]
+			dependencies: [
+				"15149B4F5A4E32C0"
+				"6FB2A838AFCFEA82"
+				"156BE80A247CCF5D"
+			]
 			icon: "ae2:inscriber"
 			id: "64164F00B745E7FC"
+			min_required_dependencies: 2
 			subtitle: "You'll need a bunch of these..."
 			tasks: [
 				{
@@ -42,12 +47,25 @@
 				}
 			]
 			title: "Inscribing"
-			x: 0.0d
-			y: 1.5d
+			x: 1.5d
+			y: 0.0d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
-			description: ["Inside these &bMysterious Cubes&r you will find Inscriber Presses."]
+			dependencies: [
+				"4A691BB889286C89"
+				"650B5FD6B6CAD69C"
+				"2FF7795C03DDC67B"
+				"4C847275ABA5869F"
+			]
+			description: [
+				"Inside these &bMysterious Cubes&r you will find Inscriber Presses."
+				""
+				"Just be careful not to break the &bFlawless&r Budding Certus Quartz blocks."
+				""
+				"If you want a stable source of Fe, you can use Alternators from Create: Crafts \\& Additions."
+				""
+				"You may have to configure the Connectors a little bit to push or pull energy around or use Energy Pipes from Pipez to make it an easier process."
+			]
 			icon: "ae2:meteorite_compass"
 			id: "15149B4F5A4E32C0"
 			subtitle: "You will need to find yourself some Mysterious Cubes to start off."
@@ -81,6 +99,326 @@
 			title: "Meteorite Discovery"
 			x: 0.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["332FBE563FD9C196"]
+			description: ["In order to power your AE2 systems, Fe is required."]
+			id: "428ED4CE3BCBDBC3"
+			subtitle: "An energy connection interface."
+			tasks: [
+				{
+					id: "6FB2A838AFCFEA82"
+					item: "ae2:energy_acceptor"
+					type: "item"
+				}
+				{
+					id: "156BE80A247CCF5D"
+					item: "ae2:cable_energy_acceptor"
+					type: "item"
+				}
+			]
+			title: "Accepting Energy!"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["428ED4CE3BCBDBC3"]
+			id: "3A2CB141B4BF4B89"
+			subtitle: "Fe generation, with fuel!"
+			tasks: [{
+				id: "4A57C8FA395A011E"
+				item: "ae2:vibration_chamber"
+				type: "item"
+			}]
+			title: "Vibration Chamber"
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["15149B4F5A4E32C0"]
+			description: ["Some blocks connect within the same block, so these wrenches are required for delicate handling of machinery."]
+			id: "6960B89EDFFE389D"
+			subtitle: "For delicate technology."
+			tasks: [{
+				id: "1FD5D06EAF6C49F2"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "ae2:quartz_wrench"
+					}
+				}
+				title: "Any #ae2:quartz_wrench"
+				type: "item"
+			}]
+			title: "The Tiny Wrench"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["15149B4F5A4E32C0"]
+			id: "332FBE563FD9C196"
+			tasks: [{
+				id: "4BF58B213802A452"
+				item: "ae2:quartz_fiber"
+				type: "item"
+			}]
+			title: "AE2 Cable Basics: Quartz Fiber"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["332FBE563FD9C196"]
+			id: "3B59A45679277208"
+			tasks: [{
+				id: "0796FA5F4CB39404"
+				item: "ae2:fluix_glass_cable"
+				type: "item"
+			}]
+			title: "AE2 Cable Basics: Fluix ME Glass Cable"
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3B59A45679277208"]
+			description: [
+				"What's the difference between both cables?"
+				""
+				"Well, they do the same exact thing but the smart cable variations show how many connections are available and the covered cable does not."
+			]
+			id: "0F8D26CE30422585"
+			subtitle: "Cables for days!"
+			tasks: [
+				{
+					id: "0C8D3BA39330483D"
+					item: "ae2:fluix_covered_cable"
+					type: "item"
+				}
+				{
+					id: "70C96C0159C8730C"
+					item: "ae2:fluix_smart_cable"
+					type: "item"
+				}
+			]
+			title: "Fluix ME Cables"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0F8D26CE30422585"]
+			id: "4DC19D024AB1873D"
+			subtitle: "Taking on the internet."
+			tasks: [
+				{
+					id: "5741D30A258776FD"
+					item: "ae2:fluix_covered_dense_cable"
+					type: "item"
+				}
+				{
+					id: "44320BFEA2A90B32"
+					item: "ae2:fluix_smart_dense_cable"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["438CF48F095B737A"]
+			description: ["Even more connections! Connections for days."]
+			id: "7C83FA2CC562AF9A"
+			subtitle: "Behold the controller!"
+			tasks: [{
+				id: "7A2CC5E111600D3A"
+				item: "ae2:controller"
+				type: "item"
+			}]
+			title: "The Controller"
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6CA80735CB034E36"]
+			id: "2E317343CA23339B"
+			tasks: [{
+				id: "60BF62F070C00C7B"
+				item: "ae2:cell_component_1k"
+				type: "item"
+			}]
+			title: "1k ME Storage Components"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2E317343CA23339B"]
+			id: "5BB0C121745C13D4"
+			tasks: [{
+				id: "740DCD12A89E5BF3"
+				item: "ae2:cell_component_4k"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5BB0C121745C13D4"]
+			id: "7B2477CF136952DB"
+			tasks: [{
+				id: "28E8ED573D6A3B21"
+				item: "ae2:cell_component_16k"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7B2477CF136952DB"]
+			id: "7BBDC3F5A940507F"
+			tasks: [{
+				id: "2053B038F2B12928"
+				item: "ae2:cell_component_64k"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7BBDC3F5A940507F"]
+			id: "54F5296BA4C558FD"
+			tasks: [{
+				id: "1F31B38969AF4A64"
+				item: "ae2:cell_component_256k"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["64164F00B745E7FC"]
+			id: "6CA80735CB034E36"
+			tasks: [{
+				id: "0BB72729C0E51DAD"
+				item: "ae2:logic_processor"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["64164F00B745E7FC"]
+			id: "438CF48F095B737A"
+			tasks: [{
+				id: "14BEA9AAC3E5E926"
+				item: "ae2:engineering_processor"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["64164F00B745E7FC"]
+			id: "521B06EE8E27B7CE"
+			tasks: [{
+				id: "5911BC741F5811F4"
+				item: "ae2:calculation_processor"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["15149B4F5A4E32C0"]
+			id: "5F7B32B19F583517"
+			tasks: [{
+				id: "507F87AEB3B05238"
+				item: "ae2:item_cell_housing"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["15149B4F5A4E32C0"]
+			id: "0CCA741252D97742"
+			tasks: [{
+				id: "18F80A7A8E35A8B8"
+				item: "ae2:fluid_cell_housing"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3D1A802FD6537CFF"]
+			id: "567B049F63EE2558"
+			tasks: [
+				{
+					id: "6275CCAEBC7FAD32"
+					item: "ae2:singularity"
+					type: "item"
+				}
+				{
+					id: "081922842D24C906"
+					item: "ae2:tiny_tnt"
+					type: "item"
+				}
+			]
+			title: "Creating a Data Singularity"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7BBDC3F5A940507F"]
+			id: "3D1A802FD6537CFF"
+			tasks: [{
+				id: "545DF2B61FF0C671"
+				item: "ae2:condenser"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["567B049F63EE2558"]
+			id: "652B910F98D09D0A"
+			subtitle: "Wormholes?"
+			tasks: [{
+				id: "212D3A22CBBC35DE"
+				item: "ae2:quantum_entangled_singularity"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["428ED4CE3BCBDBC3"]
+			id: "5F7F0DB67B700A88"
+			tasks: [{
+				id: "632B5E6F843A8BCE"
+				item: {
+					Count: 1
+					id: "ae2:energy_cell"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5F7F0DB67B700A88"]
+			id: "44B2A4503C499291"
+			tasks: [{
+				id: "57E37ADA07E18AD9"
+				item: {
+					Count: 1
+					id: "ae2:dense_energy_cell"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -4.5d
+			y: 1.5d
 		}
 	]
 	subtitle: [

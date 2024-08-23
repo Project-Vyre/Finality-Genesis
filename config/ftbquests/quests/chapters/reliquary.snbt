@@ -6,7 +6,7 @@
 	hide_quest_until_deps_visible: true
 	icon: "reliquary:holy_hand_grenade"
 	id: "1F87E8208E1E2F7A"
-	order_index: 9
+	order_index: 6
 	quest_links: [ ]
 	quests: [
 		{
@@ -35,7 +35,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["62D55614D95E7356"]
 			description: ["Many of Reliquary's artifacts require the Summoning Altar to create, so it is of utmost importance."]
 			hide: true
 			hide_dependency_lines: false

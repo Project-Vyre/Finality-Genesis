@@ -14,11 +14,11 @@
 		x: 0.0d
 		y: 0.0d
 	}]
-	order_index: 11
+	order_index: 8
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["0B28CEE35831A75F"]
 			description: [
 				"Don't worry, if you fall into the void you simply fall down back to the Overworld..."
 				""

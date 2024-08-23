@@ -7,7 +7,6 @@
 	icon: "minecraft:chest"
 	id: "32CC85BACCD9E454"
 	order_index: 1
-	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
@@ -120,7 +119,9 @@
 		}
 		{
 			dependencies: ["1229F8883A381F07"]
+			description: ["For your information, your backpack will keep its NBT data when it is upgraded using the shaped recipe."]
 			id: "17BAAE47FAB941C3"
+			shape: "hexagon"
 			tasks: [{
 				id: "4498F51394DF3D28"
 				item: "sophisticatedbackpacks:backpack"
@@ -132,18 +133,67 @@
 		}
 		{
 			dependencies: ["1229F8883A381F07"]
+			description: ["If you have already made a Barrel or Chest, you can utilize the Basic Tier Upgrade to upgrade a vanilla storage block into a Sophisticated Storage storage solution."]
 			id: "5BDC5533A3AB84D1"
-			tasks: [{
-				id: "48CA25D62E947AB0"
+			rewards: [{
+				id: "2089E210FA525F93"
 				item: "sophisticatedstorage:basic_tier_upgrade"
 				type: "item"
 			}]
+			shape: "hexagon"
+			subtitle: "Sophisticated Storage, for sophisticated storage solutions."
+			tasks: [
+				{
+					id: "72CB2362186B864C"
+					item: {
+						Count: 1
+						id: "sophisticatedstorage:barrel"
+						tag: {
+							woodType: "spruce"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1B889EA83EB8D08F"
+					item: {
+						Count: 1
+						id: "sophisticatedstorage:chest"
+						tag: {
+							uuid: [I;
+								-1802955342
+								1560300475
+								-1477787380
+								-60431196
+							]
+							woodType: "spruce"
+						}
+					}
+					type: "item"
+				}
+			]
 			title: "Introduction to Sophisticated Storage"
 			x: 2.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["1229F8883A381F07"]
+			description: [
+				"The following items are required to set up an Ars Nouveau storage system."
+				""
+				"- Storage Lectern"
+				"- Bookwyrm Charms"
+				"- Dominion Wand"
+				"- Chest or Barrel"
+				""
+				"At least 1 of each is required."
+				""
+				"First, right click the Storage Lectern with a Bookwyrm Charm in your main hand. This will summon a Bookwyrm that is linked to that Storage Lectern."
+				""
+				"After that, sneak + right click with the Dominion Wand in your main hand on the Storage Lectern. Do the same to a Chest or Barrel to link it to the Storage Lectern."
+				""
+				"A Sophisticated Storage Controller with Sophisticated Storage's storage blocks allows easier interfacing so you don't have to repeat the above step multiple times for each storage block."
+			]
 			id: "16A0492D4152E409"
 			subtitle: "Storage access, with magic!"
 			tasks: [{
@@ -154,6 +204,62 @@
 			title: "The Magical Storage Lectern"
 			x: 1.5d
 			y: -1.5d
+		}
+		{
+			dependencies: ["1229F8883A381F07"]
+			description: [
+				"AE2's quest tree is separate from here due to the mod's depth and complexity."
+				""
+				"However, here's a free Item Storage Cell to get you started."
+			]
+			icon: "ae2:singularity"
+			id: "7BD513644C310AAF"
+			rewards: [{
+				id: "2C3282CE8E09DF5F"
+				item: {
+					Count: 1
+					id: "ae2:item_storage_cell_16k"
+					tag: { }
+				}
+				type: "item"
+			}]
+			subtitle: "Short for Applied Energistics 2"
+			tasks: [{
+				id: "1628C478BBDD0977"
+				title: "Acknowledge the button!"
+				type: "checkmark"
+			}]
+			title: "Applied Energistics 2"
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5BDC5533A3AB84D1"]
+			id: "0EE78A71498C83CB"
+			shape: "square"
+			subtitle: "You'll need them."
+			tasks: [{
+				id: "4D20D7A67BC73C86"
+				item: "sophisticatedstorage:upgrade_base"
+				type: "item"
+			}]
+			title: "Sophisticated Storage Upgrades"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["17BAAE47FAB941C3"]
+			id: "12B5168B3AB4D0B9"
+			shape: "square"
+			subtitle: "You'll need these as well."
+			tasks: [{
+				id: "477B1C9E2FFF6B76"
+				item: "sophisticatedbackpacks:upgrade_base"
+				type: "item"
+			}]
+			title: "Sophisticated Backpack Upgrades"
+			x: 0.0d
+			y: 4.0d
 		}
 	]
 	subtitle: ["Organization is your best friend."]

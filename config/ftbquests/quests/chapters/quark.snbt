@@ -6,13 +6,17 @@
 	hide_quest_until_deps_visible: true
 	icon: "quark:diamond_heart"
 	id: "7E79A298F669C49E"
-	order_index: 12
-	progression_mode: "flexible"
+	order_index: 9
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: [
+				"4A691BB889286C89"
+				"03F919758AA7E318"
+				"13186E7B0D6B6115"
+			]
 			id: "00E01205D0F67F25"
+			min_required_dependencies: 3
 			tasks: [{
 				id: "612EFD47CC78CD71"
 				item: "quark:diamond_heart"

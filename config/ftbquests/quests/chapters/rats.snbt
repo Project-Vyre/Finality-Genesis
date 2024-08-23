@@ -6,13 +6,16 @@
 	hide_quest_until_deps_visible: true
 	icon: "rats:cheese"
 	id: "70E40FD10E2577B1"
-	order_index: 10
+	order_index: 7
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: [
+				"4A691BB889286C89"
+				"400260FDC774443B"
+			]
 			description: [
-				"First step to taming a Wild Rat is by making a lot of Cheese for your new friend."
+				"First step to taming a Wild Rat is by making a lot of Cheese for your new friend. You can do so by mixing milk in a Basin."
 				""
 				"Second step is to drop the Cheese on the ground. They may eat a lot before considering you their owner."
 			]
@@ -25,7 +28,7 @@
 			subtitle: "Some are adorable... others not so much."
 			tasks: [{
 				id: "71FC3FE6B2435B8E"
-				item: "rats:cheese"
+				item: "rats:block_of_cheese"
 				type: "item"
 			}]
 			title: "Introduction to Rats"
@@ -51,7 +54,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["71FC3FE6B2435B8E"]
 			id: "143C8106E5E062A4"
 			rewards: [{
 				id: "4CA99AD89D9BB045"

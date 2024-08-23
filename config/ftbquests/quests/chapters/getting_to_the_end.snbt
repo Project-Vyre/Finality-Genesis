@@ -13,13 +13,18 @@
 		x: 0.0d
 		y: 3.0d
 	}]
-	order_index: 5
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: [
 				"4A691BB889286C89"
 				"4E9DB5E5DA145FB7"
+			]
+			description: [
+				"My last piece of vague advice..."
+				""
+				"Use the End Crystals to your advantage."
 			]
 			hide: true
 			icon: "minecraft:end_portal_frame"
@@ -38,7 +43,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			hide: true
 			id: "168D0120F150BC28"
 			subtitle: "Find me in buried treasure."
@@ -58,10 +63,10 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			hide: true
 			id: "5AF53749F917D429"
-			subtitle: "Find me in igloos."
+			subtitle: "Love."
 			tasks: [{
 				id: "0540213F44030BB9"
 				item: {
@@ -73,12 +78,13 @@
 				}
 				type: "item"
 			}]
-			x: -1.5d
-			y: 4.5d
+			x: 2.5d
+			y: 4.0d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			hide: true
+			hide_dependency_lines: true
 			id: "2E2C02E5BD9E21F7"
 			subtitle: "Find me where I stalk villagers."
 			tasks: [{
@@ -96,8 +102,9 @@
 			y: 0.5d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			hide: true
+			hide_dependency_lines: true
 			id: "6C0BCC3A430B9FEB"
 			subtitle: "Find me in ancient mineshafts."
 			tasks: [{
@@ -115,10 +122,10 @@
 			y: 0.5d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			hide: true
 			id: "58C3EE597C33E90D"
-			subtitle: "Find me in the Nether Fortress."
+			subtitle: "Passion."
 			tasks: [{
 				id: "19761F1D28E842C1"
 				item: {
@@ -130,14 +137,14 @@
 				}
 				type: "item"
 			}]
-			x: 2.5d
-			y: 2.0d
+			x: 1.5d
+			y: 4.5d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			hide: true
 			id: "68BDA11046E98486"
-			subtitle: "Find me in ancient desert temples."
+			subtitle: "Contracts."
 			tasks: [{
 				id: "60F672CEB7CF7B50"
 				item: {
@@ -149,14 +156,14 @@
 				}
 				type: "item"
 			}]
-			x: 1.5d
+			x: -1.5d
 			y: 4.5d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			hide: true
 			id: "685B2504CF4E9E26"
-			subtitle: "Find me in the temple that contains malicious redstone."
+			subtitle: "Wisdom."
 			tasks: [{
 				id: "5EEC9A6676F1B84B"
 				item: {
@@ -168,14 +175,14 @@
 				}
 				type: "item"
 			}]
-			x: 2.5d
-			y: 4.0d
+			x: 0.0d
+			y: 6.0d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			hide: true
 			id: "65816DD85625C60E"
-			subtitle: "Find me in a Bastion."
+			subtitle: "Eternity."
 			tasks: [{
 				id: "0906B32D7A49EE41"
 				item: {
@@ -187,11 +194,11 @@
 				}
 				type: "item"
 			}]
-			x: 3.0d
-			y: 3.0d
+			x: -1.0d
+			y: 5.5d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			hide: true
 			id: "3262C302262A1AAC"
 			subtitle: "Acquire me from a Master Cleric."
@@ -210,7 +217,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			description: ["Only acquired from Elder Guardians in Ocean Monuments."]
 			hide: true
 			id: "1013541B6EC52CEF"
@@ -226,14 +233,15 @@
 				}
 				type: "item"
 			}]
-			x: -2.5d
-			y: 4.0d
+			x: -1.5d
+			y: 1.5d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			hide: true
+			hide_dependency_lines: true
 			id: "66725960700B2323"
-			subtitle: "I am used by someone with ill intentions."
+			subtitle: "Freedom."
 			tasks: [{
 				id: "153F6A1E52466B39"
 				item: {
@@ -245,12 +253,11 @@
 				}
 				type: "item"
 			}]
-			title: "Acquire the Magical Eye"
-			x: -1.5d
-			y: 1.5d
+			x: -2.5d
+			y: 4.0d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			hide: true
 			id: "3FFB8D0ADC19BCA1"
 			subtitle: "I bring destruction to the world."
@@ -270,7 +277,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			hide: true
 			id: "021DAFFB5B6C41D7"
 			subtitle: "I was once part of a master of potion brewing."
@@ -286,11 +293,11 @@
 				only_from_crafting: true
 				type: "item"
 			}]
-			x: -1.0d
-			y: 5.5d
+			x: 3.0d
+			y: 3.0d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			description: ["Only obtainable from Skeletal Horses."]
 			hide: true
 			id: "3F991D3B86EFF9EE"
@@ -306,14 +313,14 @@
 				}
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 2.5d
+			y: 2.0d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			hide: true
 			id: "3939C50171FAD48A"
-			subtitle: "I can only be created from your aquatic adventures."
+			subtitle: "Justice."
 			tasks: [{
 				id: "1C7BB2EBEF9AC5A0"
 				item: {
@@ -330,7 +337,7 @@
 			y: 5.5d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["41ADDCD19E1253FF"]
 			description: [
 				"Ancient texts say it can be acquired from an equally cryptic book that enchants items."
 				""
@@ -356,9 +363,18 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: [
+				"2FF7795C03DDC67B"
+				"13186E7B0D6B6115"
+			]
+			description: [
+				"Netherite gear is nowhere near enough for this fight."
+				""
+				"Taking down the Ender Dragon requires fast DPS and high mobility."
+			]
 			hide: true
 			id: "4E9DB5E5DA145FB7"
+			min_required_dependencies: 2
 			subtitle: "You won't get to the End that easily, however."
 			tasks: [{
 				advancement: "minecraft:story/follow_ender_eye"
@@ -366,7 +382,7 @@
 				id: "41ADDCD19E1253FF"
 				type: "advancement"
 			}]
-			title: "Find a Stronghold"
+			title: "The Stronghold"
 			x: 0.0d
 			y: 0.0d
 		}
