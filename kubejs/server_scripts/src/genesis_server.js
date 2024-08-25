@@ -228,7 +228,7 @@ PlayerEvents.loggedIn(event => {
 
 function lootrMsg(event) {
   if (Platform.isLoaded('lootr') && Platform.isLoaded('carryon')) {
-    event.server.scheduleInTicks(420, t => {
+    event.server.scheduleInTicks(500, t => {
       event.player.tell([
         Component.of('<rainb>-----------------------------------------------------</rainb>\n'),
         Component.of('Please remember that it\'s common courtesy to not break'),
@@ -255,7 +255,7 @@ function lootrMsg(event) {
 
 function findMeMsg(event) {
   if (Platform.isLoaded('findme')) {
-    event.server.scheduleInTicks(720, t => {
+    event.server.scheduleInTicks(800, t => {
       event.player.tell([
         Component.of('-----------------------------------------------------\n').green(),
         Component.of('Also another thing, '),
@@ -272,7 +272,7 @@ function findMeMsg(event) {
 
 function reiPluginReload(event) {
   if (Platform.isLoaded('roughlyenoughitems')) {
-    event.server.scheduleInTicks(900, t => {
+    event.server.scheduleInTicks(1200, t => {
       event.player.tell([
         Component.of('-----------------------------------------------------\n'),
         Component.of('Roughly Enough Items').bold().gray(),
@@ -293,7 +293,7 @@ function reiPluginReload(event) {
         Component.of('\n-----------------------------------------------------')
       ])
     })
-    event.server.scheduleInTicks(900, t => {
+    event.server.scheduleInTicks(1500, t => {
       event.player.tell([
         Component.of('-----------------------------------------------------\n'),
         Component.of('If you still happen to be lagging when opening the inventory you can '),
