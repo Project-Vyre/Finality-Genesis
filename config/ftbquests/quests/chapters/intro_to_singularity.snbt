@@ -8,6 +8,7 @@
 	images: [{
 		height: 2.8106701366297986d
 		image: "minecraft:textures/gui/presets/packtitle.png"
+		order: 1
 		rotation: 0.0d
 		width: 8.0d
 		x: 0.0d
@@ -22,14 +23,16 @@
 				""
 				"Notice: If you randomly hear music throughout the world, assume that a mob spawned in with a &bSophisticated Backpack&r with the music upgrade."
 				""
-				"If you wish to play the modpack on its intended difficulty, set the difficulty to &cHard&r. For obvious reasons, this is optional."
+				"If you wish to play the modpack on its intended difficulty, set the difficulty to &cHard&r. For obvious reasons, this is entirely optional."
 				""
-				"Quests on this chapter are not expected to be completed on the first few days."
+				"Quests on this chapter are also not expected to be completed on the first few Minecraft days."
 				""
 				"The rest of the chapters can be accessed after you click the &acheckmark&r here and move your cursor to the left edge of your screen."
 				""
 				"If you are playing with friends, please do not forget to make a party with &aFTB Teams&r! Press &dE&r to open your inventory and look for three person figures on the top left corner."
 				""
+				"Next page!"
+				"{@pagebreak}"
 				"Press &bX&r to crawl."
 				""
 				"Press &eY&r while your cursor is hovering over an item to find that same item in a nearby chest. White particles will show up inside of it through the walls."
@@ -870,18 +873,11 @@
 			]
 			icon: "minecraft:compass"
 			id: "650B5FD6B6CAD69C"
-			rewards: [
-				{
-					id: "5550D0D6DDAF20F5"
-					type: "xp_levels"
-					xp_levels: 30
-				}
-				{
-					id: "0D1D658A5E8614B7"
-					item: "artifacts:mimic_spawn_egg"
-					type: "item"
-				}
-			]
+			rewards: [{
+				id: "5550D0D6DDAF20F5"
+				type: "xp_levels"
+				xp_levels: 30
+			}]
 			shape: "rsquare"
 			subtitle: "For both explorers and those who seek a certain biome."
 			tasks: [
