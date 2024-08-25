@@ -1,12 +1,12 @@
 {
     "name": "Modified Recipes",
-    "icon": "extendedcrafting:basic_table",
+    "icon": "minecraft:crafting_table",
     "category": "patchouli:genesis/introduction",
     "flag": "mod:kubejs",
     "pages": [
         {
             "type": "patchouli:text",
-            "text": "This entry contains all the modified vanilla Minecraft recipes, for your convenience. This was all done to better integrate Create and ExtendedCrafting."
+            "text": "This entry contains all the modified vanilla Minecraft recipes, for your convenience. This was all done to better integrate Create with Minecraft."
         },
         {
             "type": "patchouli:crafting",

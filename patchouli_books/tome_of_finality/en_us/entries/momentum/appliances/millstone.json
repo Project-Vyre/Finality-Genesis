@@ -6,11 +6,11 @@
         {
             "type": "patchouli:spotlight",
             "item": "create:millstone",
-            "text": "Work in progress"
+            "text": "A useful block that allows for additional refining of materials and can accept items from the top via a Chute. Can also accept rotational force from the side or the bottom."
         },
         {
             "type": "patchouli:text",
-            "text": "Work in progress"
+            "text": "It is also important to note that Millstones can only process one item at a time from an entire stack where a pair of Crushing Wheels can process an entire stack at a time. Here are a few ideas to help you get started: $(li)Make more bread by turning Wheat into Flour, then into Dough. $(li)Dough can be used to make Slimeballs. $(li)Cobblestone can be turned into Gravel with a Millstone."
         }
     ]
 }

@@ -6,11 +6,11 @@
         {
             "type": "patchouli:spotlight",
             "item": "create:crushing_wheel",
-            "text": "Work in progress"
+            "text": "A giant pair of Crushing Wheels that can process players should they choose to get processed either by stupidity or accident. Unlike Millstones, Crushing Wheels can process an entire stack at a time which is significantly faster at scale. May also have additional recipes exclusive to Crushing Wheels."
         },
         {
             "type": "patchouli:text",
-            "text": "Work in progress"
+            "text": "For correct rotational direction, use a Gearbox behind both Crushing Wheels and a Shaft BETWEEN the gearboxes. This ensures they are always rotating in the correct direction in either a horizontal orientation with a conveyor belt or in a vertical position with Chutes/Smart Chutes on the top."
         }
     ]
 }
