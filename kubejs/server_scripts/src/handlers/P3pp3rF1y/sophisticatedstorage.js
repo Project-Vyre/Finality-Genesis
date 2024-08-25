@@ -606,6 +606,35 @@ ServerEvents.recipes(event => {
       E: 'create:electron_tube'
     }).id(`kubejs:sophisticatedstorage/${element}_limited_barrel_4`)
   }
+  // pump
+  event.recipes.minecraft.crafting_shaped('sophisticatedstorage:pump_upgrade', [
+    ' F ',
+    'MUM',
+    ' F '
+  ], {
+    F: 'create:fluid_tank',
+    M: 'create:mechanical_pump',
+    U: 'sophisticatedstorage:upgrade_base'
+  }).id('kubejs:sophisticatedstorage/pump_upgrade')
+  event.recipes.minecraft.crafting_shaped('sophisticatedstorage:advanced_pump_upgrade', [
+    ' B ',
+    'SUS',
+    ' B '
+  ], {
+    B: 'create:brass_sheet',
+    S: 'create:smart_fluid_pipe',
+    U: 'sophisticatedstorage:pump_upgrade'
+  }).id('kubejs:sophisticatedstorage/advanced_pump_upgrade')
+  event.recipes.minecraft.crafting_shaped('sophisticatedstorage:xp_pump_upgrade', [
+    'LEL',
+    'OUO',
+    'LEL'
+  ], {
+    L: 'minecraft:lapis_lazuli',
+    E: 'minecraft:ender_eye',
+    O: 'minecraft:experience_bottle',
+    U: 'sophisticatedstorage:advanced_pump_upgrade'
+  }).id('kubejs:sophisticatedstorage/xp_pump_upgrade')
   event.recipes.minecraft.crafting_shapeless('sophisticatedstorage:shulker_box', [
     'minecraft:shulker_box',
     'create:electron_tube'
