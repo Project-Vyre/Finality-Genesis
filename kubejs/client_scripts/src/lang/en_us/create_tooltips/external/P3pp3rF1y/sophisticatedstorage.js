@@ -236,7 +236,7 @@ ClientEvents.lang('en_us', event => {
   event.addAll(
     'kubejs',
     createTooltip('sophisticatedstorage:xp_pump_upgrade')
-      .addSummary('Pumps experience between the backpack and the player.')
+      .addSummary('Pumps experience between the storage block and the player.')
       .build()
   )
   event.addAll(
