@@ -94,7 +94,7 @@
 	Storm_ParticleSpawnDelay = 3
 	#-
 	#Range: > -2147483648
-	Player_Storm_Deadly_OddsTo1 = 30
+	Player_Storm_Deadly_OddsTo1 = 240
 	#-
 	#Range: > -2147483648
 	Player_Storm_Deadly_TimeBetweenInTicks = 72000
@@ -102,7 +102,7 @@
 	Server_Storm_Deadly_UseGlobalRate = true
 	#Used if Server_Storm_Deadly_UseGlobalRate is on, replaces use of Player_Storm_Deadly_OddsTo1
 	#Range: > -2147483648
-	Server_Storm_Deadly_OddsTo1 = 30
+	Server_Storm_Deadly_OddsTo1 = 240
 	#Used if Server_Storm_Deadly_UseGlobalRate is on, replaces use of Player_Storm_Deadly_TimeBetweenInTicks
 	#Range: > -2147483648
 	Server_Storm_Deadly_TimeBetweenInTicks = 72000
