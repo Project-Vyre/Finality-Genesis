@@ -396,17 +396,12 @@ ServerEvents.recipes(event => {
   ], 'create:tree_fertilizer', false, 6000).id('ae2:network/blocks/crystal_processing_growth_accelerator')
 
   event.recipes.create.mechanical_crafting('kubejs:sky_stone_singularity', [
-    ' LLLLLLL ',
-    'LLLRRRLLL',
-    'LLRRRRRLL',
-    'LRRRRRRRL',
-    'LRRRCRRRL',
-    'LRRRRRRRL',
-    'LLRRRRRLL',
-    'LLLRRRLLL',
-    ' LLLLLLL '
+    ' RRR ',
+    'RRRRR',
+    'RRCRR',
+    'RRRRR',
+    ' RRR '
   ], {
-    L: 'minecraft:crying_obsidian',
     R: 'ae2:sky_dust',
     C: 'kubejs:awakened_singularity_core'
   }).id('kubejs:ae2/mechanical_crafting/sky_stone_singularity')
