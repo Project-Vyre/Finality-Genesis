@@ -274,7 +274,11 @@ ClientEvents.lang('en_us', event => {
       "block.kubejs.command_block": "<rainb>Command Block</rainb>",
       "block.kubejs.chain_command_block": "<rainb>Chain Command Block",
       "block.kubejs.repeating_command_block": "<rainb>Repeating Command Block",
-      "block.kubejs.null_storage_block": "<rainb>Null Storage Block</rainb>"
+      "block.kubejs.null_storage_block": "<rainb>Null Storage Block</rainb>",
+      "string.kubejs.announcer.rainbow_line_start": "<rainb>-----------------------------------------------------</rainb>\n",
+      "string.kubejs.announcer.rainbow_line_end": "\n<rainb>-----------------------------------------------------</rainb>",
+      "string.kubejs.announcer.shake_line_start": "<shake>-----------------------------------------------------</shake>\n",
+      "string.kubejs.announcer.shake_line_end": "\n<shake>-----------------------------------------------------</shake>"
     })
     for (let [id, name] of Object.entries(compressedBlocks)) {
       event.add(

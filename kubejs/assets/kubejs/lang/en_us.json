@@ -1,3 +1,5 @@
 {
-  "item.kubejs.iridium_upgrade_smithing_template": "Iridium Upgrade"
+  "item.kubejs.iridium_upgrade_smithing_template": "Iridium Upgrade",
+  "string.kubejs.announcer.create_tip_header": "Create Tip\n",
+  "string.kubejs.announcer.did_you_know": "Did you know?\n"
 }
