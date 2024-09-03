@@ -25,14 +25,14 @@ ServerEvents.recipes(event => {
       'create:experience_block'
     ]).id('kubejs:unbkreakable_netherite_' + element)
     event.recipes.kubejs.shapeless(Item.of('kubejs:iridium_' + element).withNBT({ Unbreakable: 1 }), [
-      'minecraft:iridium_' + element,
+      'kubejs:iridium_' + element,
       'create:experience_block'
     ]).id('kubejs:unbkreakable_iridium_' + element)
   }
   for (let i = 0; i < final_tools.length; i++) {
     let element = final_tools[i];
     event.recipes.kubejs.shapeless(Item.of('kubejs:final_' + element).withNBT({ Unbreakable: 1 }), [
-      'minecraft:final_' + element,
+      'kubejs:final_' + element,
       'create:experience_block'
     ]).id('kubejs:unbkreakable_final_' + element)
   }
