@@ -611,6 +611,12 @@ ClientEvents.lang('en_us', event => {
       .build()
   )
   event.addAll(
+    'create',
+    createTooltip('create:experience_block')
+      .addSummary('Makes netherite, iridium and high entropy alloy tools _unbreakable_ at the cost of resetting back to their default state.')
+      .build()
+  )
+  event.addAll(
     'kubejs',
     createTooltip('kubejs:bloodfire_bars')
       .addSummary('These bars feel like they have a hot aura around them.')
