@@ -17,7 +17,7 @@
   "forge:ingots/invar": "null",
   "forge:rubber": "null",
   "forge:gems/ruby": "null",
-  "forge:ingots/platinum": "destroy:platinum_ingot",
+  "forge:ingots/platinum": "null",
   "forge:dusts/niter": "null",
   "forge:dusts/sulfur": "alexscaves:sulfur_dust",
   "forge:ingots/lead": "caupona:lead_ingot",
@@ -25,5 +25,5 @@
   "forge:gems/peridot": "null",
   "forge:ingots/chrome": "null",
   "forge:ingots/uranium": "null",
-  "forge:ingots/nickel": "destroy:nickel_ingot"
+  "forge:ingots/nickel": "null"
 }
