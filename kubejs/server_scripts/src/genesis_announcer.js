@@ -26,6 +26,8 @@ let CreateStandard = 0xC9974C
  */
 let CreateHighlighted = 0xF1DD79
 
+let createTipHeader = 'string.kubejs.announcer.create_tip_header'
+let finalityTipHeader = 'string.kubejs.announcer.finality_tip_header'
 let startRainbowLine = 'string.kubejs.announcer.rainbow_line_start'
 let endRainbowLine = 'string.kubejs.announcer.rainbow_line_end'
 
@@ -33,6 +35,10 @@ let debug_messages = false
 
 let DICE = 0
 
+/**
+ * 
+ * @param {Internal.TickEvent$ServerTickEvent_} event 
+ */
 function allMessages(event) {
   DICE = Utils.random.nextInt(0, 21)
   switch (DICE) {
@@ -49,75 +55,26 @@ function allMessages(event) {
        * toggle Comfy Reading on the bottom right corner of the screen while viewing a Ponder scene.
        */
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('Stuck? ').color(CreateHighlighted),
-        Component.of('Remember to hold <rainb>[w]</rainb> to Ponder!\n').color(CreateStandard),
-        Component.of('\nCertain ').bold().italic().color(CreateHighlighted),
-        Component.of('Ponders ').color(CreateHighlighted),
-        Component.of('for ').color(CreateStandard),
-        Component.of('Create ').color(CreateHighlighted),
-        Component.of('related blocks and items ').color(CreateStandard),
-        Component.of('can ').italic().color(CreateHighlighted),
-        Component.of('have ').underlined().color(CreateHighlighted),
-        Component.of('more ').italic().underlined().color(CreateHighlighted),
-        Component.of('than one').underlined().color(CreateHighlighted),
-        Component.of(' Ponder scene.\n').color(CreateStandard),
-        Component.of('\nCheck the ').color(CreateStandard),
-        Component.of('bottom of your screen').underlined().color(CreateHighlighted),
-        Component.of(' for the ').color(CreateStandard),
-        Component.of('controls').underlined().color(CreateHighlighted),
-        Component.of(' to see if there are any arrows ').color(CreateStandard),
-        Component.of('pointing ').italic().color(CreateHighlighted),
-        Component.of('to the right ').color(CreateHighlighted),
-        Component.of('to go to the ').color(CreateStandard),
-        Component.of('next scene').color(CreateHighlighted),
-        Component.of('!\n').color(CreateStandard),
-        Component.of('\nIf ').italic().color(CreateStandard),
-        Component.of('the Ponder scene is ').color(CreateStandard),
-        Component.of('too ').italic().color(CreateHighlighted),
-        Component.of('fast ').color(CreateHighlighted),
-        Component.of('for you, ').color(CreateStandard),
-        Component.of('click through ').color(CreateHighlighted),
-        Component.of('the ').color(CreateStandard),
-        Component.of('timeline bar').underlined().color(CreateHighlighted),
-        Component.of(' like you would in a ').color(CreateStandard),
-        Component.of('YouTube video ').red(),
-        Component.of('or ').italic().color(CreateStandard),
-        Component.of('toggle ').italic().color(CreateHighlighted),
-        Component.of('Comfy Reading ').color(CreateHighlighted),
-        Component.of('on the ').color(CreateStandard),
-        Component.of('bottom right corner ').color(CreateHighlighted),
-        Component.of('while viewing a Ponder scene.').color(CreateStandard),
-                  Component.translatable(endRainbowLine)
+        Component.translatable(createTipHeader).bold().color(CreateHighlighted),
+        Component.translatable('string.kubejs.announcer.ponder_tip.stuck').color(CreateStandard),
+        Component.translatable('string.kubejs.announcer.hold_w_to_ponder').color(CreateHighlighted),
+        Component.translatable('string.kubejs.announcer.ponder_tip.line_2').color(CreateStandard),
+        Component.translatable('string.kubejs.announcer.ponder_tip.line_3').color(CreateStandard),
+        Component.translatable('string.kubejs.announcer.ponder_tip.line_4').color(CreateStandard),
+        Component.translatable('string.kubejs.announcer.ponder_tip.comfy_reading').color(CreateHighlighted),
+        Component.translatable('string.kubejs.announcer.ponder_tip.line_4_cont').color(CreateStandard)
       ])
       break;
     case 1:
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('Some advice... \n'),
-        Component.of('\nDon\'t fight a battle that you know you will lose! '),
-        Component.of('Certain mobs '),
-        Component.of('will ').italic(),
-        Component.of('<shake>chase you down</shake> ').red(),
-        Component.of('for long distances. \n'),
-        Component.of('\nDo not say I never warned you!').red(),
-                  Component.translatable(endRainbowLine)
+        Component.translatable(finalityTipHeader).bold().lightPurple(),
+        Component.translatable('string.kubejs.announcer.finality_tip.choose_your_battles')
       ])
       break;
     case 2:
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('Wandering Traders ').bold().green(),
-        Component.of('can have trades that are either'),
-        Component.of(' very useful ').darkGreen(),
-        Component.of('or outright '),
-        Component.of('overpowered.\n').italic().aqua(),
-        Component.of('\nHave you encountered one that trades some '),
-        Component.of('emeralds ').green(),
-        Component.of('for a '),
-        Component.of('Beacon').aqua(),
-        Component.of('?'),
-                  Component.translatable(endRainbowLine)
+        Component.translatable(finalityTipHeader).bold().lightPurple(),
+        Component.translatable('string.kubejs.announcer.finality_tip.wandering_traders'),
       ])
       break;
     case 3:
@@ -132,72 +89,27 @@ function allMessages(event) {
        * You can thank me later! - CelestialAbyss
        */
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('Here is some information that is not well known by most... mentioned by ').color(CreateStandard),
-        Component.of('Kryppers\n').color(CreateHighlighted),
-        Component.of('\nCreate\'s ').color(CreateHighlighted),
-        Component.of('Item Vaults ').blue(),
-        Component.of('are actually ').color(CreateStandard),
-        Component.of('blast proof').bold().color(CreateHighlighted),
-        Component.of(', so you can ').color(CreateStandard),
-        Component.of('trust ').color(CreateHighlighted),
-        Component.of('them with ').color(CreateStandard),
-        Component.of('your valuables').color(CreateHighlighted),
-        Component.of('.\n').color(CreateStandard),
-        Component.of('\nThis is ').darkPurple(),
-        Component.of('not mentioned ').bold().italic().lightPurple(),
-        Component.of('in the base Ponder scene or ').darkPurple(),
-        Component.of('anywhere else ').lightPurple(),
-        Component.of('in base ').darkPurple(),
-        Component.of('Create ').lightPurple(),
-        Component.of('as of ').darkPurple(),
-        Component.of('0.5.1e').lightPurple(),
-        Component.of(' <wave>sooooo</wave> ').italic().lightPurple(),
-        Component.of('I had to write this information in the tooltip. \n').darkPurple(),
-        Component.of('\nYou can thank me later! - ').darkPurple(),
-        Component.of('CelestialAbyss').lightPurple(),
-                  Component.translatable(endRainbowLine)
+        Component.translatable(createTipHeader).bold().color(CreateHighlighted),
+        Component.translatable('string.kubejs.announcer.blastproof_item_vaults.line_1').color(CreateStandard),
+        Component.translatable('string.kubejs.announcer.blastproof_item_vaults.line_2').color(CreateHighlighted),
+        Component.translatable('string.kubejs.announcer.blastproof_item_vaults.line_3').italic().darkPurple()
       ])
       break;
     case 4:
+      /**
+       * Everything Brass related such as Brass Funnels, Brass Tunnels and Smart Chutes all have the capability
+       * to transfer a maximum stack size of 64 items in addition to transferring specific stack sizes.
+       * 
+       * Brass Tunnels are the only exception as they are unable to transfer specific stack sizes and require
+       * the assistance of Weighted Ejectors to do so.
+       * 
+       * I am sure you will find them quite enjoyable to use!
+       */
       // are the only exception as they are unable to transfer specific stack sizes and
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.translatable('string.kubejs.announcer.did_you_know').bold().green(),
-        Component.of('\nEverything ').color(CreateStandard),
-        Component.of('Brass ').bold().color(CreateHighlighted),
-        Component.of('related such as ').color(CreateStandard),
-        Component.of('Brass Funnels').color(CreateHighlighted),
-        Component.of(', ').color(CreateStandard),
-        Component.of('Brass Tunnels ').color(CreateHighlighted),
-        Component.of('and ').color(CreateStandard),
-        Component.of('Smart Chutes ').color(CreateHighlighted),
-        Component.of('all ').italic().color(CreateStandard),
-        Component.of('have the ').color(CreateStandard),
-        Component.of('capability ').color(CreateHighlighted),
-        Component.of('to').color(CreateStandard),
-        Component.of(' transfer ').color(CreateHighlighted),
-        Component.of('a ').color(CreateStandard),
-        Component.of('maximum stack size ').color(CreateHighlighted),
-        Component.of('of ').color(CreateStandard),
-        Component.of('64 items ').bold().green(),
-        Component.of('in addition to transferring ').color(CreateStandard),
-        Component.of('specific stack sizes').color(CreateHighlighted),
-        Component.of('.\n').color(CreateStandard),
-        Component.of('\nBrass Tunnels ').color(CreateHighlighted),
-        Component.of('are the ').color(CreateStandard),
-        Component.of('only ').italic().color(CreateStandard),
-        Component.of('exception as they are ').color(CreateStandard),
-        Component.of('unable ').red(),
-        Component.of('to transfer specific stack sizes and ').color(CreateStandard),
-        Component.of('require ').color(CreateHighlighted),
-        Component.of('the assistance of ').color(CreateStandard),
-        Component.of('Weighted Ejectors ').gold(),
-        Component.of('to do so.\n').color(CreateStandard),
-        Component.of('\nI am sure you will find them quite ').color(CreateStandard),
-        Component.of('enjoyable ').color(CreateHighlighted),
-        Component.of('to use!').color(CreateStandard),
-                  Component.translatable(endRainbowLine)
+        Component.translatable(createTipHeader).bold().color(CreateHighlighted),
+        Component.translatable('string.kubejs.announcer.brass_stack_size.line_1').color(CreateStandard),
+        Component.translatable('string.kubejs.announcer.brass_stack_size.line_2').color(CreateStandard)
       ])
       break;
     case 5:
@@ -211,54 +123,10 @@ function allMessages(event) {
        * Copper Diving Boots.
        */
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('A helpful ').color(CreateStandard),
-        Component.of('Create ').color(CreateHighlighted),
-        Component.of('tip...\n').color(CreateStandard),
-        Component.of('\nUnderwater exploration ').blue(),
-        Component.of('is made ').color(CreateStandard),
-        Component.of('easy ').italic().color(CreateHighlighted),
-        Component.of('with ').color(CreateStandard),
-        Component.of('Create\'s ').color(CreateHighlighted),
-        Component.of('diving gear comprised of the ').color(CreateStandard),
-        Component.of('Copper Diving Helmet, ').color(0xE9A36D),
-        Component.of('Copper Backtank ').color(0xE9A36D),
-        Component.of('and ').color(CreateStandard),
-        Component.of('Copper Diving Boots').color(0xE9A36D),
-        Component.of('. \n').color(CreateStandard),
-        Component.of('\nJust be sure to ').color(CreateStandard),
-        Component.of('fill').bold().color(CreateHighlighted),
-        Component.of(' your ').italic().color(CreateStandard),
-        Component.of('Copper Backtank ').color(0xE9A36D), //wit
-        Component.of('with ').italic().color(CreateStandard),
-        Component.of('Air Pressure ').gray(),
-        Component.of('by ').color(CreateStandard),
-        Component.of('supplying it ').color(CreateHighlighted),
-        Component.of('with ').color(CreateStandard),
-        Component.of('rotational force ').color(CreateHighlighted),
-        Component.of('through the ').color(CreateStandard),
-        Component.of('top').underlined().color(CreateHighlighted),
-        Component.of(' of ').color(CreateStandard),
-        Component.of('your ').italic().color(CreateStandard),
-        Component.of('Copper Backtank').color(0xE9A36D),
-        Component.of('.\n').color(CreateStandard),
-        Component.of('You can also ').color(CreateStandard),
-        Component.of('anchor yourself ').color(CreateHighlighted),
-        Component.of('to the floor in large bodies of water by ').color(CreateStandard),
-        Component.of('using ').color(CreateHighlighted),
-        Component.of('the ').color(CreateStandard),
-        Component.of('Copper Diving Boots').color(0xE9A36D),
-        Component.of('.\n').color(CreateStandard),
-        Component.of('\nThe ').color(CreateStandard),
-        Component.of('Copper Diving Equipment ').color(0xE9A36D),
-        Component.of('can be ').color(CreateStandard),
-        Component.of('upgraded ').color(CreateHighlighted),
-        Component.of('to ').color(CreateStandard),
-        Component.of('Netherite Diving Equipment ').darkGray(),
-        Component.of('once you have enough ').color(CreateStandard),
-        Component.of('Netherite ').darkGray(),
-        Component.of('to spare.').color(CreateStandard),
-                  Component.translatable(endRainbowLine)
+        Component.translatable(createTipHeader).bold().color(CreateHighlighted),
+        Component.translatable('string.kubejs.announcer.create_diving_gear.line_1').color(0xE9A36D), // 0xE9A36D
+        Component.translatable('string.kubejs.announcer.create_diving_gear.line_2').color(CreateHighlighted),
+        Component.translatable('string.kubejs.announcer.create_diving_gear.line_3').color(CreateStandard)
       ])
       break;
     case 6:
@@ -271,38 +139,13 @@ function allMessages(event) {
        */
       if (Platform.isLoaded('carryon')) {
         event.server.tell([
-          Component.translatable(startRainbowLine),
-          Component.of('Finality Tip\n').bold().lightPurple(),
-          Component.of('\nIn this modpack, spawners can be ').darkPurple(),
-          Component.of('crafted ').lightPurple(),
-          Component.of('with ').darkPurple(),
-          Component.of('Structure Void').lightPurple(),
-          Component.of('. They can also be ').darkPurple(),
-          Component.of('picked up ').lightPurple(),
-          Component.of('with the help of ').darkPurple(),
-          Component.of('Carry On ').lightPurple(),
-          Component.of('by ').darkPurple(),
-          Component.of('sneaking ').lightPurple(),
-          Component.of('and ').italic().darkPurple(),
-          Component.of('right clicking ').lightPurple(),
-          Component.of('while ').darkPurple(),
-          Component.of('both ').italic().lightPurple(),
-          Component.of('hands are ').lightPurple(),
-          Component.of('empty').underlined().lightPurple(),
-          Component.of(' when near it.').darkPurple(),
-                    Component.translatable(endRainbowLine)
+          Component.translatable(finalityTipHeader).bold().lightPurple(),
+          Component.translatable('string.kubejs.announcer.spawner_tip').darkPurple()
         ])
-      }
-      if (!Platform.isLoaded('carryon')) {
+      } else {
         event.server.tell([
-          Component.translatable(startRainbowLine),
-          Component.of('Finality Tip\n').bold().lightPurple(),
-          Component.of('\nIn this modpack, spawners can be ').darkPurple(),
-          Component.of('crafted ').lightPurple(),
-          Component.of('with ').darkPurple(),
-          Component.of('Structure Void').lightPurple(),
-          Component.of('.').darkPurple(),
-                    Component.translatable(endRainbowLine)
+          Component.translatable(finalityTipHeader).bold().lightPurple(),
+          Component.translatable('string.kubejs.announcer.spawner_tip').darkPurple()
         ])
       }
       break;
@@ -314,112 +157,83 @@ function allMessages(event) {
        * instead of destroying the belt in its entirety and ruining all of your work.
        */
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('Create Tip\n').bold().color(CreateHighlighted),
-        Component.of('\nYou can easily ').color(CreateStandard),
-        Component.of('shorten ').italic().color(CreateHighlighted),
-        Component.of('Mechanical Belts ').color(CreateHighlighted),
-        Component.of('with the ').color(CreateStandard),
-        Component.of('Wrench ').color(CreateHighlighted),
-        Component.of('by ').color(CreateStandard),
-        Component.of('[right-clicking] ').color(CreateHighlighted),
-        Component.of('on the ').color(CreateStandard),
-        Component.of('end').underlined().color(CreateHighlighted),
-        Component.of(' of the belt ').color(CreateHighlighted),
-        Component.of('instead of ').color(CreateStandard),
-        Component.of('<shake>destroying</shake>').red(),
-        Component.of(' the belt in its ').color(CreateStandard),
-        Component.of('<shake><wave><wiggle>entirety</wiggle></wave></shake>')
-          .bold()
-          .color(CreateHighlighted),
-        Component.of(' and ').italic().color(CreateStandard),
-        Component.of('ruining ').red(),
-        Component.of('all ').italic().color(CreateStandard),
-        Component.of('of your hard work.').color(CreateStandard),
-                  Component.translatable(endRainbowLine)
+        Component.translatable(createTipHeader).bold().color(CreateHighlighted),
+        Component.translatable('string.kubejs.announcer.create_belt_length').color(CreateStandard)
       ])
       break;
     case 8:
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('Create Tip\n').bold().color(CreateHighlighted),
-        Component.of('\nWhat was worthless is now ').color(CreateStandard),
-        Component.of('valuable').color(CreateHighlighted),
-        Component.of('.\n').color(CreateStandard),
-        Component.of('\nFrom ').color(CreateStandard),
-        Component.of('Cobblestone ').gray(),
-        Component.of('you can get ').color(CreateStandard),
-        Component.of('Gravel').gray(),
-        Component.of('.\n'),
-        Component.of('\nFrom ').color(CreateStandard),
-        Component.of('Gravel ').gray(),
-        Component.of('you can get ').color(CreateStandard),
-        Component.of('Iron Nuggets'),
-        Component.of('.').color(CreateStandard),
-                  Component.translatable(endRainbowLine)
+        Component.translatable(createTipHeader).bold().color(CreateHighlighted),
+        Component.translatable('string.kubejs.announcer.worthless_now_valuable').color(CreateStandard)
       ])
       break;
     case 9:
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('Just got back from a tea break...\n').darkPurple(),
-        Component.of('\nI hope you\'ve been using JEI or REI to check recipes. You ').darkPurple(),
-        Component.of('will ').italic().darkPurple(),
-        Component.of('find yourself lost very quickly.').darkPurple(),
-                  Component.translatable(endRainbowLine)
+        Component.of('<'),
+        Component.of('CelestialAbyss').lightPurple(),
+        Component.of('> '),
+        Component.translatable('string.kubejs.announcer.tea_break_recipe_viewer')
       ])
       break;
     case 10:
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('In case you have not found any ').darkPurple(),
-        Component.of('Iron Ore'),
-        Component.of(', have some ').darkPurple(),
-        Component.of('[free] ')
+        Component.of('<'),
+        Component.of('CelestialAbyss').lightPurple(),
+        Component.of('> '),
+        Component.translatable('string.kubejs.announcer.free_iron.line_1'),
+        Component.translatable('string.kubejs.announcer.free_iron.free_link')
           .lightPurple()
           .clickOpenUrl('https://www.youtube.com/watch?v=4xLVySuwbOo')
-          .hover('<wave>frEEeeeE?</wave>'),
-        Component.of('Raw Iron'),
-        Component.of(' as a form of assistance! Hopefully this helps.').darkPurple(),
-                  Component.translatable(endRainbowLine)
+          .hover(Component.translatable('string.kubejs.announcer.free_iron.free_hover')),
+        Component.translatable('string.kubejs.announcer.free_iron.line_2'),
       ])
       Utils.server.runCommandSilent('give @a minecraft:raw_iron 9')
+      event.server.tell([
+        Component.of('CelestialAbyss executed command give @a minecraft:raw_iron 9').italic().darkGray()
+      ])
       break;
     case 11:
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('Finality Tip\n').bold().lightPurple(),
-        Component.of('\nCampfires now regenerate your health when you are close to them. <wave>Cozy!</wave>').gold(),
-                  Component.translatable(endRainbowLine)
+        Component.translatable(finalityTipHeader).bold().lightPurple(),
+        Component.translatable('string.kubejs.announcer.campfire_regeneration').gold()
       ])
       break;
     case 12:
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('I would be a bit surprised if you have not noticed that the days are much longer than usual...\n').darkPurple(),
-        Component.of('This does mean that the nights are longer as a consequence, however.').darkPurple(),
-                  Component.translatable(endRainbowLine)
+        Component.of('<'),
+        Component.of('CelestialAbyss').lightPurple(),
+        Component.of('> '),
+        Component.translatable('string.kubejs.announcer.hourglass.line_1')
       ])
+      event.server.scheduleInTicks(75, t => {
+        event.server.tell([
+          Component.of('<'),
+          Component.of('CelestialAbyss').lightPurple(),
+          Component.of('> '),
+          Component.translatable('string.kubejs.announcer.hourglass.line_2')
+        ])
+      })
       break;
     case 13:
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('Running out of materials should be the least of your worries.\n').color(CreateStandard),
-        Component.of('Build ').color(CreateHighlighted),
-        Component.of('to your heart\'s desire!').color(CreateStandard),
-                  Component.translatable(endRainbowLine)
+        Component.of('<'),
+        Component.of('CelestialAbyss').lightPurple(),
+        Component.of('> '),
+        Component.translatable('string.kubejs.announcer.infinite_materials_building.line_1')
       ])
+      event.server.scheduleInTicks(75, t => {
+        event.server.tell([
+          Component.of('<'),
+          Component.of('CelestialAbyss').lightPurple(),
+          Component.of('> '),
+          Component.translatable('string.kubejs.announcer.infinite_materials_building.line_2')
+        ])
+      })
       break;
     case 14:
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('Create Tip\n').bold().color(CreateHighlighted),
-        Component.of('\nDid you know you can get ').color(CreateStandard),
-        Component.of('Lime Dye ').color(0xAAE23A),
-        Component.of('from ').color(CreateStandard),
-        Component.of('Sea Pickles').darkGreen(),
-        Component.of('?').color(CreateStandard),
-                  Component.translatable(endRainbowLine)
+        Component.translatable(createTipHeader).bold().color(CreateHighlighted),
+        Component.translatable('string.kubejs.announcer.sea_pickles_dye').color(0xAAE23A)
       ])
       break;
     case 15:
@@ -429,115 +243,65 @@ function allMessages(event) {
        * Shaft without breaking the entire belt and ruining your hard work.
        */
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('Create Tip\n').bold().color(CreateHighlighted),
-        Component.of('\nEver ').color(CreateStandard),
-        Component.of('accidentally ').color(CreateHighlighted),
-        Component.of('placed a Shaft ').color(CreateStandard),
-        Component.of('inside ').color(CreateHighlighted),
-        Component.of('a Mechanical Belt and want to ').color(CreateStandard),
-        Component.of('remove ').color(CreateHighlighted),
-        Component.of('it?\n').color(CreateStandard),
-        Component.of('\nDon\'t fear! Simply').color(CreateStandard),
-        Component.of(' [right-click] ').color(CreateHighlighted),
-        Component.of('with a ').color(CreateStandard),
-        Component.of('Wrench ').color(CreateHighlighted),
-        Component.of('while ').color(CreateStandard),
-        Component.of('not ').italic().color(CreateHighlighted),
-        Component.of('sneaking ').color(CreateHighlighted),
-        Component.of('to ').color(CreateStandard),
-        Component.of('safely retrieve ').color(CreateHighlighted),
-        Component.of('said Shaft ').color(CreateStandard),
-        Component.of('without ').italic().color(CreateStandard),
-        Component.of('breaking ').color(CreateHighlighted),
-        Component.of('the entire belt ').color(CreateStandard),
-        Component.of('and ').color(CreateStandard),
-        Component.of('ruining ').red(),
-        Component.of('your hard work.').color(CreateStandard),
-                  Component.translatable(endRainbowLine)
+        Component.translatable(createTipHeader).bold().color(CreateHighlighted),
+        Component.translatable('string.kubejs.announcer.accidental_shaft_belt.line_1').color(CreateStandard),
+        Component.translatable('string.kubejs.announcer.accidental_shaft_belt.r_click').color(CreateHighlighted),
+        Component.translatable('string.kubejs.announcer.accidental_shaft_belt.line_2').color(CreateStandard)
       ])
       break;
     case 16:
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('Create Tip\n').bold().color(CreateHighlighted),
-        Component.of('\nToolboxes ').color(CreateHighlighted),
-        Component.of('can be ').color(CreateStandard),
-        Component.of('remotely accessed ').color(CreateHighlighted),
-        Component.of('by pressing').color(CreateStandard),
-        Component.of(' [Left Alt] ').color(CreateHighlighted),
-        Component.of('while ').color(CreateStandard),
-        Component.of('within ').color(CreateHighlighted),
-        Component.of('a radius of 10 blocks.\n').color(CreateStandard),
-        Component.of('\nPlease note that this keybind can be changed for your comfort.')
-          .color(CreateStandard),
-                  Component.translatable(endRainbowLine)
+        Component.translatable(createTipHeader).bold().color(CreateHighlighted),
+        Component.translatable('string.kubejs.announcer.create_toolboxes').color(CreateStandard)
       ])
       break;
     case 17:
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('Don\'t have an idea where to start with ').color(CreateStandard),
-        Component.of('Create').color(CreateHighlighted),
-        Component.of('?\n').color(CreateStandard),
-        Component.of('\nStart by making ').color(CreateHighlighted),
-        Component.of('Andesite Alloy').color(0xB4C1B8),
-        Component.of(' which can be made with ').color(CreateStandard),
-        Component.of('two ').color(CreateHighlighted),
-        Component.of('Iron '),
-        Component.of('or ').color(CreateStandard),
-        Component.of('Zinc ').color(0xC1ECC9),
-        Component.of('nuggets ').color(CreateStandard),
-        Component.of('and ').italic().color(CreateStandard),
-        Component.of('two ').color(CreateHighlighted),
-        Component.of('Andesite').color(0x9AA49D),
-        Component.of('. There is also the Create quest tree in the quests screen to provide some form of').color(CreateStandard),
-        Component.of(' guidance ').color(CreateHighlighted),
-        Component.of('for you.\n').color(CreateStandard),
-        Component.of('\nLater on after you have made some progression, make a ').color(CreateStandard),
-        Component.of('Mechanical Mixer ').color(CreateHighlighted),
-        Component.of('which lets you make ').color(CreateStandard),
-        Component.of('Andesite Alloy').color(0xB4C1B8),
-        Component.of(' with a ').color(CreateStandard),
-        Component.of('1:1 ratio').color(CreateHighlighted),
-        Component.of(' in terms of material cost.').color(CreateStandard),
-                  Component.translatable(endRainbowLine)
+        Component.of('<'),
+        Component.of('CelestialAbyss').lightPurple(),
+        Component.of('> '),
+        Component.translatable('string.kubejs.announcer.create_start.line_1')
       ])
+      event.server.scheduleInTicks(75, t => {
+        event.server.tell([
+          Component.of('<'),
+          Component.of('CelestialAbyss').lightPurple(),
+          Component.of('> '),
+          Component.translatable('string.kubejs.announcer.create_start.line_2')
+        ])
+      })
+      event.server.scheduleInTicks(180, t => {
+        event.server.tell([
+          Component.of('<'),
+          Component.of('CelestialAbyss').lightPurple(),
+          Component.of('> '),
+          Component.translatable('string.kubejs.announcer.create_start.line_3')
+        ])
+      })
       break;
     case 18:
       if (!Platform.isLoaded('roughlyenoughitems')) {
         event.server.tell([
-          Component.translatable(startRainbowLine),
-          Component.of('Finality Tip\n').bold().lightPurple(),
-          Component.of('\nWant more customization in your recipe viewer? Try out '),
+          Component.translatable(finalityTipHeader).bold().lightPurple(),
+          Component.translatable('string.kubejs.announcer.rei.line_1'),
           Component.of('[Roughly Enough Items]')
             .gray()
             .clickOpenUrl('https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items')
-            .hover('Click me to download REI from CurseForge!'),
-          Component.of(' which lets you pin the recipe\'s window on the side for convenient viewing.\n'),
-          Component.of('No longer will you have to go back and forth, ever!'),
-          Component.translatable(endRainbowLine)
+            .hover(Component.translatable('string.kubejs.announcer.rei.hover_link')),
+          Component.translatable('string.kubejs.announcer.rei.line_2')
         ])
       } else {
         event.server.tell([
-          Component.translatable(startRainbowLine),
-          Component.of('Finality Tip\n').bold().lightPurple(),
-          Component.of('\nLooks like REI has been installed... Click and drag recipes and items to the top left corner for '),
-          Component.of('convenient').yellow(),
-          Component.of('viewing.\n'),
-          Component.of('No longer will you have to go back and forth, ever!'),
-          Component.translatable(endRainbowLine)
+          Component.translatable(finalityTipHeader).bold().lightPurple(),
+          Component.translatable('string.kubejs.announcer.rei_installed.line_1')
         ])
       }
       break;
     case 19:
       if (Platform.isLoaded('betterfortresses')) {
         event.server.tell([
-          Component.translatable(startRainbowLine),
-          Component.of('Finality Tip\n').bold().lightPurple(),
-          Component.of('\nDid you know every Nether Fortress has one guaranteed block of Ancient Debris somewhere?\n'),
-          Component.of('It\'s very well hidden under some lava, however. '),
-          Component.translatable(endRainbowLine)
+          Component.translatable(finalityTipHeader).bold().lightPurple(),
+          Component.translatable('string.kubejs.announcer.betternetherfortress.ancient_debris_hidden')
         ])
       } else if (!Platform.isLoaded('betterfortresses')) {
         event.server.tell([
@@ -556,23 +320,8 @@ function allMessages(event) {
        * returns the extra belt back into your inventory!
        */
       event.server.tell([
-        Component.translatable(startRainbowLine),
-        Component.of('Create Tip\n').bold().color(CreateHighlighted),
-        Component.of('You can ').color(CreateStandard),
-        Component.of('merge ').bold().color(CreateHighlighted),
-        Component.of('two ').color(CreateStandard),
-        Component.of('separate belts ').color(CreateHighlighted),
-        Component.of('into each other by ').color(CreateStandard),
-        Component.of('right-clicking ').aqua(),
-        Component.of('with a ').color(CreateStandard),
-        Component.of('Mechanical Belt ').color(CreateHighlighted),
-        Component.of('in your hand to ').color(CreateStandard),
-        Component.of('extend ').color(CreateHighlighted),
-        Component.of('one into the other. ').color(CreateStandard),
-        Component.of('It even ').color(CreateStandard),
-        Component.of('returns ').color(CreateHighlighted),
-        Component.of('the extra belt back into your inventory!').color(CreateStandard),
-        Component.translatable(endRainbowLine)
+        Component.translatable(createTipHeader).bold().color(CreateHighlighted),
+        Component.translatable('string.kubejs.announcer.belt_merging').color(CreateStandard)
       ])
       break;
     default:
@@ -596,9 +345,11 @@ if (debug_messages) {
   ItemEvents.rightClicked('minecraft:debug_stick', event => {
     allMessages(event)
   })
+  /*
   ServerEvents.tick(event => {
     let level = event.server.getLevel('minecraft:overworld')
     if (level.time % 60 !== 0) return
     allMessages(event)
   })
+  */
 }

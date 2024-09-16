@@ -170,7 +170,13 @@ ClientEvents.lang('en_us', event => {
       "block.kubejs.command_block": "Command Block",
       "block.kubejs.chain_command_block": "Chain Command Block",
       "block.kubejs.repeating_command_block": "Repeating Command Block",
-      "block.kubejs.null_storage_block": "Null Storage Block"
+      "block.kubejs.null_storage_block": "Null Storage Block",
+      "string.kubejs.announcer.rainbow_line_start": "-----------------------------------------------------\n",
+      "string.kubejs.announcer.rainbow_line_end": "-----------------------------------------------------",
+      "string.kubejs.announcer.shake_line_start": "-----------------------------------------------------\n",
+      "string.kubejs.announcer.shake_line_end": "-----------------------------------------------------",
+      "string.kubejs.announcer.hold_w_to_ponder": "Remember to hold [w] to Ponder!\n",
+      "string.kubejs.announcer.campfire_regeneration": "Campfires now regenerate your health when you are close to them. <wave>Cozy!</wave>"
     })
     for (let [number, name] of Object.entries(INTEGERS)) {
       event.add(
@@ -228,6 +234,41 @@ ClientEvents.lang('en_us', event => {
       )
     }
   }
+  event.addAll('kubejs', {
+    "item.kubejs.potion_base_singularity": "Potion Base Singularity",
+    "item.kubejs.blaze_cake_singularity": "Blaze Cake Singularity"
+  })
+  let discLang = {
+    'arlecchino_battle_theme': 'Farabi Hasan Music - Arlecchino Battle Theme Phase 1 & 2 (Fan-Made) | Genshin Impact',
+    'bad_deeds': 'Cjbeards - Bad Deeds',
+    'bad_deeds_inst': 'Cjbeards - Bad Deeds (Instrumental)',
+    'black_white_red': 'Cjbeards - Black White Red',
+    'black_white_red_inst': 'Cjbeards - Black White Red (Instrumental)',
+    'boo_hoo': 'Cjbeards - Boo Hoo',
+    'columbina_battle_theme': 'Farabi Hasan Music - Columbina Battle Phase 1 & 2 (Fan-Made) | Genshin Impact',
+    'from_the_shadows': 'Cjbeards - From the Shadows',
+    'get_away': 'Cjbeards - Get Away',
+    'get_away_inst': 'Cjbeards - Get Away (Instrumental)',
+    'heart_of_the_wicked': 'Cjbeards - Heart of the Wicked',
+    'mirror_mirror': 'Cjbeards - Mirror Mirror',
+    'mirror_mirror_inst': 'Cjbeards - Mirror Mirror (Instrumental)',
+    'open_up': 'Cjbeards - Open Up',
+    'open_up_inst': 'Cjbeards - Open Up (Instrumental)',
+    'pantalone_battle_theme': 'Farabi Hasan Music - Pantalone Double Phase Battle Theme (Fan-Made) | Genshin Impact',
+    'pulcinella_battle_theme': 'Farabi Hasan Music - Pulcinella Double Phase Boss Theme (Fan-Made) | Genshin Impact',
+    'sandrone_battle_theme': 'Farabi Hasan Music - Sandrone Marionette Double Phase Battle Theme (Fan-Made) | Genshin Impact',
+    'silent_night': 'Cjbeards - Silent Night',
+    'worst_nightmare': 'Cjbeards - Worst Nightmare',
+    'worst_nightmare_inst': 'Cjbeards - Worst Nightmare (Instrumental)'
+  }
+  for (let [id, txt] of Object.entries(discLang)) {
+    event.add('kubejs', `item.kubejs.music_disc_${id}`, 'Music Disc')
+    event.add('kubejs', `item.kubejs.music_disc_${id}.desc`, txt)
+  }
+  /* Not yet implemented.
+  event.add('block.kubejs.la_lettre_a_focalors', 'La Lettre a Focalors')
+  event.add('block.kubejs.pour_la_justice', 'Pour la Justice')
+  */
   if (Platform.isLoaded('textanimator')) {
     event.addAll('kubejs', {
       "item.kubejs.dormant_singularity_core": "§d<shake>Dormant Singularity Core</shake>",
@@ -278,7 +319,9 @@ ClientEvents.lang('en_us', event => {
       "string.kubejs.announcer.rainbow_line_start": "<rainb>-----------------------------------------------------</rainb>\n",
       "string.kubejs.announcer.rainbow_line_end": "\n<rainb>-----------------------------------------------------</rainb>",
       "string.kubejs.announcer.shake_line_start": "<shake>-----------------------------------------------------</shake>\n",
-      "string.kubejs.announcer.shake_line_end": "\n<shake>-----------------------------------------------------</shake>"
+      "string.kubejs.announcer.shake_line_end": "\n<shake>-----------------------------------------------------</shake>",
+      "string.kubejs.announcer.hold_w_to_ponder": "Remember to hold <rainb>[w]</rainb> to Ponder!\n",
+      "string.kubejs.announcer.campfire_regeneration": "Campfires now regenerate your health when you are close to them. <wave>Cozy!</wave>"
     })
     for (let [id, name] of Object.entries(compressedBlocks)) {
       event.add(
@@ -374,41 +417,6 @@ ClientEvents.lang('en_us', event => {
       )
     }
   }
-  event.addAll('kubejs', {
-    "item.kubejs.potion_base_singularity": "Potion Base Singularity",
-    "item.kubejs.blaze_cake_singularity": "Blaze Cake Singularity"
-  })
-  let discLang = {
-    'arlecchino_battle_theme': 'Farabi Hasan Music - Arlecchino Battle Theme Phase 1 & 2 (Fan-Made) | Genshin Impact',
-    'bad_deeds': 'Cjbeards - Bad Deeds',
-    'bad_deeds_inst': 'Cjbeards - Bad Deeds (Instrumental)',
-    'black_white_red': 'Cjbeards - Black White Red',
-    'black_white_red_inst': 'Cjbeards - Black White Red (Instrumental)',
-    'boo_hoo': 'Cjbeards - Boo Hoo',
-    'columbina_battle_theme': 'Farabi Hasan Music - Columbina Battle Phase 1 & 2 (Fan-Made) | Genshin Impact',
-    'from_the_shadows': 'Cjbeards - From the Shadows',
-    'get_away': 'Cjbeards - Get Away',
-    'get_away_inst': 'Cjbeards - Get Away (Instrumental)',
-    'heart_of_the_wicked': 'Cjbeards - Heart of the Wicked',
-    'mirror_mirror': 'Cjbeards - Mirror Mirror',
-    'mirror_mirror_inst': 'Cjbeards - Mirror Mirror (Instrumental)',
-    'open_up': 'Cjbeards - Open Up',
-    'open_up_inst': 'Cjbeards - Open Up (Instrumental)',
-    'pantalone_battle_theme': 'Farabi Hasan Music - Pantalone Double Phase Battle Theme (Fan-Made) | Genshin Impact',
-    'pulcinella_battle_theme': 'Farabi Hasan Music - Pulcinella Double Phase Boss Theme (Fan-Made) | Genshin Impact',
-    'sandrone_battle_theme': 'Farabi Hasan Music - Sandrone Marionette Double Phase Battle Theme (Fan-Made) | Genshin Impact',
-    'silent_night': 'Cjbeards - Silent Night',
-    'worst_nightmare': 'Cjbeards - Worst Nightmare',
-    'worst_nightmare_inst': 'Cjbeards - Worst Nightmare (Instrumental)'
-  }
-  for (let [id, txt] of Object.entries(discLang)) {
-    event.add('kubejs', `item.kubejs.music_disc_${id}`, 'Music Disc')
-    event.add('kubejs', `item.kubejs.music_disc_${id}.desc`, txt)
-  }
-  /* Not yet implemented.
-  event.add('block.kubejs.la_lettre_a_focalors', 'La Lettre a Focalors')
-  event.add('block.kubejs.pour_la_justice', 'Pour la Justice')
-  */
   event.addAll('create', {
     // create death messages
     "death.attack.create.crush": "%1$s was processed by Crushing Wheels, an unfortunate accident.",
@@ -516,6 +524,19 @@ ClientEvents.lang('en_us', event => {
       "eccentrictome.name": "Eccentric Tome (%s)",
       "item.eccentrictome.tome": "Eccentric Tome"
     })
+  }
+  if (Platform.isLoaded('carryon')) {
+    event.add(
+      'kubejs',
+      'string.kubejs.announcer.spawner_tip',
+      'In this modpack, spawners can be crafted with Structure Void. Is Structure Void renewable as well? Yup! Just need to craft Command Blocks or break other in-world spawners. They can also be picked up with the help of Carry On by sneaking and right clicking while BOTH hands are empty when near it.'
+    )
+  } else {
+    event.add(
+      'kubejs',
+      'string.kubejs.announcer.spawner_tip',
+      'In this modpack, spawners can be crafted with Structure Void. Is Structure Void renewable as well? Yup! Just need to craft Command Blocks or break other in-world spawners.'
+    )
   }
   if (Platform.isLoaded('createaddition')) {
     event.addAll('createaddition', {
