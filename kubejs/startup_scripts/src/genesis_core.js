@@ -115,9 +115,16 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
    * 
    * @param {string} color 
    * @param {string} displayNameString 
+   * @param {hexadecimal} hexcode
    */
-  function RGBWCMYK_OBJECTS(color, displayNameString) {
-    event.create(`kubejs:color_${color}`).displayName(`${displayNameString}`).texture(`kubejs:item/colors/${color}`).maxStackSize(64).fireResistant(true)
+  function RGBWCMYK_OBJECTS(color, displayNameString, hexcode) {
+    event.create(`kubejs:color_${color}`)
+      .displayName(`${displayNameString}`)
+      .texture('layer0', 'kubejs:item/shape_tint')
+      .color(0, hexcode)
+      .parentModel('kubejs:item/color')
+      .maxStackSize(64)
+      .fireResistant(true)
   }
   standardNoDisplay('deepslate_shard')
   standardNoDisplay('trident_pole')
@@ -592,9 +599,14 @@ StartupEvents.registry('item', event => { // Register new items here event.creat
     .maxStackSize(64)
     .fireResistant(true)
     .glow(true)
-  for (let [item, name] of Object.entries(global.RGBWCMY)) {
-    RGBWCMYK_OBJECTS(item, name)
-  }
+  RGBWCMYK_OBJECTS('uncolored', '§7Uncolored', 0xAAAAAA)
+  RGBWCMYK_OBJECTS('red', '§cColor Red', 0xFF0000)
+  RGBWCMYK_OBJECTS('green', '§aColor Green', 0x00FF00)
+  RGBWCMYK_OBJECTS('blue', '§9Color Blue', 0x0000FF)
+  RGBWCMYK_OBJECTS('white', '§lColor White', 0xFFFFFF)
+  RGBWCMYK_OBJECTS('cyan', '§bColor Cyan', 0x00FFFF)
+  RGBWCMYK_OBJECTS('magenta', '§dColor Magenta', 0xFF00FF)
+  RGBWCMYK_OBJECTS('yellow', '§eColor Yellow', 0xFFFF00)
   if (Platform.isLoaded('delightful')) {
     event.create('kubejs:dried_matcha_leaves')
       .texture('kubejs:item/dried_matcha_leaves')
