@@ -328,6 +328,28 @@ REIEvents.hide('item', event => {
     ])
   }
 
+  if (Platform.isLoaded('sophisticatedstorage')) {
+    event.hide([
+      'sophisticatedstorage:smelting_upgrade',
+      'sophisticatedstorage:auto_smelting_upgrade',
+      'sophisticatedstorage:smoking_upgrade',
+      'sophisticatedstorage:auto_smoking_upgrade',
+      'sophisticatedstorage:blasting_upgrade',
+      'sophisticatedstorage:auto_blasting_upgrade'
+    ])
+  }
+
+  if (Platform.isLoaded('sophisticatedbackpacks')) {
+    event.hide([
+      'sophisticatedbackpacks:smelting_upgrade',
+      'sophisticatedbackpacks:auto_smelting_upgrade',
+      'sophisticatedbackpacks:smoking_upgrade',
+      'sophisticatedbackpacks:auto_smoking_upgrade',
+      'sophisticatedbackpacks:blasting_upgrade',
+      'sophisticatedbackpacks:auto_blasting_upgrade'
+    ])
+  }
+
   if (Platform.isLoaded('malum') && Platform.isLoaded('create')) {
     event.hide('malum:copper_nugget')
   }
