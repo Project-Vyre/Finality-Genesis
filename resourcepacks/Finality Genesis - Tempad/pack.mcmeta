@@ -1,10 +1,6 @@
 {
 	"pack": {
-		"pack_format": 9,
-		"supported_formats": [
-			15,
-			24
-		],
+		"pack_format": 15
 		"description": [
 			{
 				"text": "Tempad retexture for "
