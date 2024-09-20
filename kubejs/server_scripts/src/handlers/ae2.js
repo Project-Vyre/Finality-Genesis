@@ -1,10 +1,12 @@
 /**
  * @file Server handler for AE2.
+ * @version 1201.G
  * @author CelestialAbyss <https://github.com/CelestialAbyss> Modpack lead
  */
 
 // requires: ae2
 // requires: ars_nouveau
+// requires: functionalstorage
 // requires: kubejs_create
 
 ServerEvents.recipes(event => {
