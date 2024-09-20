@@ -357,7 +357,8 @@
 					"just_enough_beacons:conduit_frame_block",
 					"ars_elemental:armor_upgrade",
 					"ars_elemental:netherite_upgrade",
-					"ars_additions:locate_structure"
+					"ars_additions:locate_structure",
+					"justenoughprofessions:professions"
 				],
 				"hiddenCategories": []
 			}

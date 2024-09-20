@@ -9,15 +9,6 @@
 	// Exclusive to NeoForge 21+.
 	// DEFAULT: `false`
 	"enableLightLevelOverlay": false,
-	// Overrides the number of stars rendered.
-	// DEFAULT: `1500`
-	"starCount": 1500,
-	// Overrides the scale of stars.
-	// DEFAULT: `0.1`
-	"starScale": 0.1,
-	// Overrides the brightness of stars.
-	// DEFAULT: `0.5`
-	"starBrightness": 0.5,
 	// If enabled, terrain fog will not be rendered.
 	// DEFAULT: `false`
 	"disableFog": false,
@@ -134,10 +125,6 @@
 	// Enable Chroma on block outlines.
 	// DEFAULT: `false`
 	"enableChromaBlockOutlines": true,
-	// If set, a chroma overlay will be drawn on block surfaces with the specified value used for transparency.
-	// Set to `0` to disable.
-	// DEFAULT: `0`
-	"chromaBlockShapeOverlay": 0.0,
 	// Enable Chroma on tooltip outlines.
 	// DEFAULT: `false`
 	"enableChromaToolTips": true,
