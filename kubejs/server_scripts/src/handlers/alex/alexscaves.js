@@ -29,4 +29,8 @@ ServerEvents.recipes(event => {
       'kubejs:duplicator'
     ]).keepHeldItem().id('kubejs:alexscaves/deploying/' + element + '_pottery_sherd_duplication')
   }
+  event.recipes.create.deploying('2x alexscaves:spelunkery_table', [
+    'alexscaves:spelunkery_table',
+    'kubejs:duplicator'
+  ]).keepHeldItem().id('kubejs:deploying/spelunkery_table_duplication')
 })
