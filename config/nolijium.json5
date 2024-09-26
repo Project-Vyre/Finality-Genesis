@@ -1,14 +1,36 @@
 {
-	// Changes the number of messages kept in chat history (100 in vanilla).
-	// DEFAULT: `100`
-	"maxChatHistory": 100,
-	// If enabled, useful information will be shown in the tooltips of links and clickable text in chat and other UIs.
-	// DEFAULT: `false`
-	"enableToolTipInfo": false,
 	// Show an overlay on blocks if the block light level above them is below 8.
 	// Exclusive to NeoForge 21+.
 	// DEFAULT: `false`
 	"enableLightLevelOverlay": false,
+	// Changes the number of messages kept in chat history (100 in vanilla).
+	// DEFAULT: `100`
+	"maxChatHistory": 100,
+	// If enabled, the chat history will not be cleared when you leave a server, and instead only be cleared when Minecraft is closed.
+	// DEFAULT: `false`
+	"keepChatHistory": false,
+	// If enabled, the server will be ignored if it instructs the client to close the chat bar (for example, if the player is teleported).
+	// DEFAULT: `false`
+	"keepChatBarOpen": false,
+	// Controls what happens to the unsent contents of the chat bar if it is closed by clicking escape or by the server.
+	// OPTIONS:
+	// 	`UNTIL_SENT`: Will always remember the unsent message/command unless the message was sent.
+	// 	`UNTIL_USER_CLOSED`: Will only remember the unsent message/command if the chat bar was closed by the server.
+	// 	`NEVER`: Will never remember the unsent message/command (same as vanilla).
+	// DEFAULT: `UNTIL_ESCAPED`
+	"rememberChatBarContents": "UNTIL_USER_CLOSED",
+	// If enabled, useful information will be shown in the tooltips of links and clickable text in chat and other UIs.
+	// DEFAULT: `false`
+	"enableToolTipInfo": false,
+	// Overrides the number of stars rendered.
+	// DEFAULT: `1500`
+	"starCount": 1500,
+	// Overrides the scale of stars.
+	// DEFAULT: `0.1`
+	"starScale": 0.1,
+	// Overrides the brightness of stars.
+	// DEFAULT: `0.5`
+	"starBrightness": 0.5,
 	// If enabled, terrain fog will not be rendered.
 	// DEFAULT: `false`
 	"disableFog": false,
@@ -125,6 +147,11 @@
 	// Enable Chroma on block outlines.
 	// DEFAULT: `false`
 	"enableChromaBlockOutlines": true,
+	// If set, a chroma overlay will be drawn on block surfaces with the specified value used for transparency.
+	// May look buggy on some blocks when `Fabulous!` rendering is enabled.
+	// Set to `0` to disable.
+	// DEFAULT: `0`
+	"chromaBlockShapeOverlay": 0.0,
 	// Enable Chroma on tooltip outlines.
 	// DEFAULT: `false`
 	"enableChromaToolTips": true,
@@ -142,6 +169,11 @@
 	"tooltipBorderEnd": -5277361,
 	"tooltipBackgroundStart": -265741808,
 	"tooltipBackgroundEnd": -265741808,
+	// Intended for advanced users and developers only. Colour format is 0xAARRGGBB.
+	// Alpha will only be applied to block faces. Outline will always be fully opaque when enabled.
+	// A value of `0` disables this setting.
+	// DEFAULT: `0`
+	"blockShapeOverlayOverride": 1694493580,
 	// Used internally. Don't modify this.
 	"configVersion": 1
 }
