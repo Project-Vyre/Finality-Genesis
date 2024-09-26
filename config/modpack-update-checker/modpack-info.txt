@@ -1,0 +1,17 @@
+Please note you may have to switch the Markdown mode with the small button in the bottom left area to be able to click on links on this page. Anyways...
+
+If Modpack Update Checker has prevented you from launching your world, you can modify the world's `level.dat` file through [**Visual Studio Code**](https://code.visualstudio.com/) with the [**NBT Viewer**](https://marketplace.visualstudio.com/items?itemName=Misodee.vscode-nbt) extension by Misode installed *or* through [NBTExplorer](https://github.com/jaquadro/NBTExplorer).
+
+The process of installing VSCode and the NBT Viewer extension should be fairly straightforward. As for NBTExplorer, you have to look for *Releases* and then download the artifact that has the `.msi` file extension and then run NBTExplorer from there.
+
+After opening the world's `world.dat` file, locate **modpackInfo** as you scroll down the **data** list after expanding it. Click the remove button in VSCode then just Ctrl + S to save your modifications.
+
+## Notes
+If you wish to read the changelog on a webpage with proper formatting, go here: https://github.com/Project-Vyre/Finality-Genesis/wiki/1.20.1
+Otherwise, refer to the changelogs on the left side.
+
+
+- Please note that I am not responsible for lost items, blocks, worlds, pets, etc. if I have mentioned breaking changes such as but not limited to:
+  - Mod removal
+  - Mod updates
+  - Mod updates with breaking changes

@@ -42,7 +42,7 @@ ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:0
 renderClouds:"false"
-resourcePacks:["vanilla","mod_resources","Moonlight Mods Dynamic Assets","create:destroy_create_patches","builtin/aether_tips","file/Finality Genesis - Block Outline"]
+resourcePacks:["create:legacy_copper","file/Pretty_Pipez_1_20.zip","file/Finality Genesis - Block Outline","file/Nicer-Rain-1.0.0.zip","file/Enhanced Audio r6.zip","file/Enhanced Audio Ambience r1.zip"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us
@@ -50,7 +50,7 @@ soundDevice:"OpenAL Soft on Wave Link Game (Elgato Wave:3)"
 chatVisibility:0
 chatOpacity:1.0
 chatLineSpacing:0.0
-textBackgroundOpacity:0.5
+textBackgroundOpacity:0.25
 backgroundForChatOnly:true
 hideServerAddress:false
 advancedItemTooltips:true

@@ -1,5 +1,5 @@
 {
-	"is_notified_at_this_launch": true,
+	"is_notified_at_this_launch": false,
 	"enabled": true,
 	"skipped_versions": []
 }
