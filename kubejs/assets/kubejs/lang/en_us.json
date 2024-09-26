@@ -3,8 +3,6 @@
   "string.kubejs.announcer.create_tip_header": "Create Tip ",
   "string.kubejs.announcer.finality_tip_header": "Finality Tip ",
   "string.kubejs.announcer.did_you_know": "Did you know?\n",
-  "string.kubejs.announcer.github_issues_hover": "Opens the Finality Genesis GitHub Issues page.",
-  "string.kubejs.announcer.embeddedt_discord_hover": "The link for embeddedt's Discord server.",
   "string.kubejs.announcer.ponder_tip.stuck": "Stuck? ",
   "string.kubejs.announcer.ponder_tip.line_2": "\nCertain Ponders for Create related blocks and items can have more than one Ponder Scene.\n",
   "string.kubejs.announcer.ponder_tip.line_3": "\nCheck the bottom of your screen for the controls to see if there are any arrows pointing to the right to go to the next scene!\n",
@@ -45,5 +43,16 @@
   "string.kubejs.announcer.hourglass.line_1": "I would be a bit surprised if you have not noticed that the days are much longer than usual...",
   "string.kubejs.announcer.hourglass.line_2": "This does mean that the nights are longer as a consequence, however.",
   "string.kubejs.announcer.infinite_materials_building.line_1": "Running out of materials should be the least of your worries. Build to your heart's desire!",
-  "string.kubejs.announcer.infinite_materials_building.line_2": "I have ensured that most, if not all items are infinitely renewable through some effort."
+  "string.kubejs.announcer.infinite_materials_building.line_2": "I have ensured that most, if not all items are infinitely renewable through some effort.",
+  "string.kubejs.server.first_world_load.line_1": "First world load! Lag may be present for a few minutes.",
+  "string.kubejs.server.welcome_back.line_1": "§a§lWelcome back!§r If the world has recently been loaded, lag may be present for a few minutes. Please allow some time for FPS to fully stabilize.",
+  "string.kubejs.server.github_issues_hover": "Opens the Finality Genesis GitHub Issues page.",
+  "string.kubejs.server.taumc_discord_hover": "The invite link for the TauMC Discord server.",
+  "string.kubejs.server.login.link_indicator": "Words enclosed with the §a§l[]§r brackets are usually links!",
+  "string.kubejs.server.login.welcome_back.link_indicator": "In case you didn't see previously, words enclosed with the [] brackets are links. So, feel free to mouse over them.",
+  "string.kubejs.server.login.welcome_back.tooltip_and_ponder": "Don't forget to read tooltips for some helpful info and hold [w] to ponder!",
+  "string.kubejs.server.login.embeddium_cvf": "If you experience §oany§r form of §cZ-fighting§r or §cflickering§r on blocks go to §a[Video Settings]§r < §a[Performance]§r then §cdisable§r the setting the says §3§lUse Compact Vertex Format§r.\nPlease note that this is only applicable with §dEmbeddium 0.2+§r and does not work with §dOculus§r installed!",
+  "string.kubejs.server.login.embeddium_cvf_issues.line_1": "If you encounter any bugs after disabling it, please report them here:\n",
+  "string.kubejs.server.login.embeddium_cvf_issues.line_2": "Thank you!",
+  "string.kubejs.server.login.open_chat": "You may need to open chat to see the full message."
 }
