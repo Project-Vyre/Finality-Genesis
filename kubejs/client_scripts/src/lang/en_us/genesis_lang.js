@@ -176,7 +176,8 @@ ClientEvents.lang('en_us', event => {
       "string.kubejs.announcer.shake_line_start": "-----------------------------------------------------\n",
       "string.kubejs.announcer.shake_line_end": "-----------------------------------------------------",
       "string.kubejs.announcer.hold_w_to_ponder": "Remember to hold [w] to Ponder!\n",
-      "string.kubejs.announcer.campfire_regeneration": "Campfires now regenerate your health when you are close to them. <wave>Cozy!</wave>"
+      "string.kubejs.announcer.campfire_regeneration": "Campfires now regenerate your health when you are close to them. Cozy!",
+      "string.kubejs.server.login.hold_w_to_ponder": "Do not forget to 'Hold [w] to Ponder' if you are stuck!"
     })
     for (let [number, name] of Object.entries(INTEGERS)) {
       event.add(
@@ -321,7 +322,8 @@ ClientEvents.lang('en_us', event => {
       "string.kubejs.announcer.shake_line_start": "<shake>-----------------------------------------------------</shake>\n",
       "string.kubejs.announcer.shake_line_end": "\n<shake>-----------------------------------------------------</shake>",
       "string.kubejs.announcer.hold_w_to_ponder": "Remember to hold <rainb>[w]</rainb> to Ponder!\n",
-      "string.kubejs.announcer.campfire_regeneration": "Campfires now regenerate your health when you are close to them. <wave>Cozy!</wave>"
+      "string.kubejs.announcer.campfire_regeneration": "Campfires now regenerate your health when you are close to them. <wave>Cozy!</wave>",
+      "string.kubejs.server.login.hold_w_to_ponder": "Do not forget to 'Hold <rainb>[w]</rainb> to Ponder' if you are stuck!"
     })
     for (let [id, name] of Object.entries(compressedBlocks)) {
       event.add(
