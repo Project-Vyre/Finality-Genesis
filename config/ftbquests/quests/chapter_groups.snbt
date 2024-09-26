@@ -1,6 +1,7 @@
 {
 	chapter_groups: [
 		{ id: "4A8875A8A8C06088", title: "Priority" }
+		{ id: "27FA2F2536E0CFEE", title: "The Endgame" }
 		{ id: "71A5625CEAEA7423", title: "Age of Technology" }
 		{ id: "3875EE4E33A6FF87", title: "Stat Upgrades" }
 		{ id: "6855847200ADBE3A", title: "The World" }

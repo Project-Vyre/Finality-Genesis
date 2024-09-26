@@ -52,11 +52,12 @@
 		}
 		{
 			dependencies: [
-				"4A691BB889286C89"
 				"650B5FD6B6CAD69C"
 				"2FF7795C03DDC67B"
 				"4C847275ABA5869F"
+				"1677FFD8F720E6B2"
 			]
+			dependency_requirement: "one_completed"
 			description: [
 				"Inside these &bMysterious Cubes&r you will find Inscriber Presses."
 				""

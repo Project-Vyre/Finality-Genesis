@@ -9,7 +9,7 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["28C6D239ADB777CF"]
 			description: [
 				"If you wish to increase your mana capacity you can do the following..."
 				""
@@ -170,7 +170,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["4A691BB889286C89"]
+			dependencies: ["28C6D239ADB777CF"]
 			description: [
 				"If you have not acquired any gold yet, I would refrain from exploring this quest tree any further."
 				""

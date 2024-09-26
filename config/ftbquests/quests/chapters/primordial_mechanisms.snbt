@@ -1,0 +1,310 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "primordial_mechanisms"
+	group: "27FA2F2536E0CFEE"
+	icon: "kubejs:entropy_mechanism"
+	id: "2C3566AD3F4DF1E0"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["7BFEF80899790FC7"]
+			description: [
+				"Ensure that you have fully automated Precision Mechanisms. While the task seems simple on paper, you also have to consider the fact that you have to handle the salvage that results from the process of making them without having the possibility of the production line ever stopping. "
+				""
+				"The only exception is if you run out of the materials used to make Precision Mechanisms in the first place. However, if you have made it this far then this shouldn't be a possibility, I hope?"
+			]
+			hide: true
+			id: "74B663ECEB73BDAD"
+			subtitle: "So, are you actually ready?"
+			tasks: [{
+				id: "3FA32886C1B24957"
+				item: "create:precision_mechanism"
+				type: "item"
+			}]
+			title: "Introduction to Primordial Mechanism Automation"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["74B663ECEB73BDAD"]
+			description: [
+				"The next few pages contain hints on how to automate this Primordial Mechanism."
+				"{@pagebreak}"
+				"Leaves can be automatically harvested through the use of Mechanical Harvesters or other methods, if applicable."
+				"{@pagebreak}"
+				"Cobblestone can be made with the use of Water touching non-source blocks of Lava."
+				""
+				"Automated collection is done with contraptions with Mechanical Drills with item storage attached or other methods, if applicable."
+				""
+				"*sigh* You should already know how Cobblestone is made and I know I don't need to tell anyone who plays Minecraft."
+				"{@pagebreak}"
+				"Coarse Dirt is made through the combination of Dirt and Gravel."
+				""
+				"- Dirt can be made by combining it with Bone Meal. The Bones can be acquired from Skeletons or from washing Soul Soil then crushing or milling those bones into Bone Meal."
+				""
+				"- Gravel is made from processing Cobblestone using a Millstone or Crushing Wheel."
+				"{@pagebreak}"
+				"Gunpowder can be automated from:"
+				""
+				"- Asurine which can be duplicated through the use of the Duplicator or by making Asurine with a Mechanical Extruder."
+				""
+				"- Creepers"
+				""
+				"- Combining Salt and Coal"
+				"{@pagebreak}"
+				"Coal can be automated from compressing Dried Kelp Blocks in a Basin that is heated."
+				""
+				"Please tell me you already have a kelp farm set up already. PLEASE."
+			]
+			id: "0F2E1642DE6351F0"
+			subtitle: "Nature."
+			tasks: [{
+				id: "45C81A14275CB1F9"
+				item: "kubejs:terra_mechanism"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["74B663ECEB73BDAD"]
+			description: [
+				"The next few pages contain hints on how to automate this Primordial Mechanism."
+				"{@pagebreak}"
+				"Create's Sweet Rolls as you know require two components:"
+				""
+				"- Bread"
+				""
+				"- Milk"
+				""
+				"Automating Bread production is as easy as connecting your existing wheat farms whether they are radial or linear, extracting the Wheat and then processing the Wheat through Millstones or Crushing Wheels to make more Bread than usual."
+				""
+				"Make Dough by bulk washing the Flour, then bulk smoke the dough to acquire Bread."
+				""
+				"As for Milk, have a Cow seated in a Create Seat then have a Deployer use a Bucket on the Cow to extract its Milk. Figure out how to loop the process of emptying the Bucket and then sending the Empty Bucket back to the Deployer for repeated use."
+				""
+				"The answer should be fairly obvious, at least I would think so."
+				"{@pagebreak}"
+				"Getting Apples in consistent amounts is going to be a bit tricky unless if you have a certain number of Oak Tree farms to overcome this inconsistency."
+				""
+				"The same applies to extracting Honey automatically from Beehives via Mechanical Pumps and Fluid Pipes. You will definitely need more than a few Beehives."
+				"{@pagebreak}"
+				"For Chocolate you want to make a Cocoa Bean farm and harvest them using Mechanical Harvesters. A Rope Pulley attached to a contraption will accomplish just that."
+				""
+				"As for the Milk if you were paying attention to page 2, you would already know how to handle that problem."
+				"{@pagebreak}"
+				"The leaves for Builder's Tea can also be farmed from your tree farms. Just add Mechanical Harvesters to get the leaf blocks."
+			]
+			id: "3D52A8726183B5E7"
+			subtitle: "Food."
+			tasks: [{
+				id: "62FEBC77604D6A11"
+				item: "kubejs:gluttony_mechanism"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["74B663ECEB73BDAD"]
+			description: [
+				"The next few pages contain hints on how to automate this Primordial Mechanism."
+				"{@pagebreak}"
+				"You already know how to get iron if you've made it this far. I don't need to elaborate further."
+				""
+				"The alternative is utilizing Crimsite."
+				"{@pagebreak}"
+				"Andesite can be easily automated from making Diorite and Cobblestone. Combine the output from your iron farms."
+				"{@pagebreak}"
+				"Copper from Veridium."
+				"{@pagebreak}"
+				"Zinc from Asurine."
+				"{@pagebreak}"
+				"Brass from combining Copper and Z- wait shouldn't you know this already?"
+				"{@pagebreak}"
+				"Gold from washing Red Sand. Washing Soul Sand has a lower yield for Gold Nuggets."
+				""
+				"The alternative is utilizing Ochrum."
+				"{@pagebreak}"
+				"Bottomless pit of Molten Netherite is the easiest solution."
+				""
+				"The intended way was from combining Netherrack and Shimmer."
+			]
+			id: "46CC293113919549"
+			subtitle: "Metallurgy."
+			tasks: [{
+				id: "0F5426664B47F848"
+				item: "kubejs:metallurgy_mechanism"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["74B663ECEB73BDAD"]
+			description: [
+				"The next few pages contain hints on how to automate this Primordial Mechanism."
+				"{@pagebreak}"
+				"The mixing recipe for making Amethyst with Iron Nuggets in a superheated Basin was the intended way, but since Ars Nouveau exists you can get your Amethyst that way as well."
+				"{@pagebreak}"
+				"Quartz is one of the byproducts of bulk washing Soul Sand."
+				"{@pagebreak}"
+				"Diamonds are the result of compressing Coal Blocks with some lava inside a superheated Basin."
+				"{@pagebreak}"
+				"Quartz, glass and some iron nuggets in a superheated Basin was the intended method of making Emeralds."
+				"{@pagebreak}"
+				"Rose Quartz is easy, simply combine the redstone byproduct of washing Crushed Raw Iron which you can get from crushing Crimsite."
+				""
+				"Combine with your Soul Sand factory that's already washing Soul Sand for Quartz."
+				""
+				"Easy, right?"
+			]
+			id: "52214F2FCA4320D8"
+			subtitle: "Lattices."
+			tasks: [{
+				id: "1CFA51CA19EA36F2"
+				item: "kubejs:lattice_mechanism"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["74B663ECEB73BDAD"]
+			description: [
+				"The next few pages contain hints on how to automate this Primordial Mechanism."
+				"{@pagebreak}"
+				"Cobblestone to Gravel to Sand into the bulk blasting conveyor belt."
+				""
+				"Use Mechanical Saw on Glass to make Framed Glass."
+				""
+				"Does that sense? I hope it does."
+				"{@pagebreak}"
+				"Combine the outputs of your Amethyst factory and Framed Glass factory to make Tinted Glass, simple."
+				"{@pagebreak}"
+				"Haunt &9Lapis Lazuli&r."
+				""
+				"Lapis Lazuli can be created through mechanical compaction or as a byproduct of washing &dCrushed Raw Iridium&r."
+			]
+			id: "1931C14E59DA34DA"
+			subtitle: "Glass."
+			tasks: [{
+				id: "0FA0DE316F7766B3"
+				item: "kubejs:amorphous_mechanism"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["74B663ECEB73BDAD"]
+			description: [
+				"The next few pages contain hints on how to automate this Primordial Mechanism."
+				"{@pagebreak}"
+				"I don't need to explain how to make Dirt and Sand then haunt both of them."
+				"{@pagebreak}"
+				"End Crystals will need a lot of Crying Obsidian and Experience Nuggets along with some Glass."
+			]
+			id: "096607C7E76BC8E0"
+			subtitle: "Darkness."
+			tasks: [{
+				id: "147077B043DB7686"
+				item: "kubejs:umbral_mechanism"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["74B663ECEB73BDAD"]
+			description: ["The next few pages contain hints on how to automate this Primordial Mechanism."]
+			id: "59FA36654CE2336F"
+			subtitle: "Creation."
+			tasks: [{
+				id: "3A16628A0ECDFBE2"
+				item: "kubejs:genesis_mechanism"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["74B663ECEB73BDAD"]
+			description: [
+				"The next few pages contain hints on how to automate this Primordial Mechanism."
+				"{@pagebreak}"
+				"Train Controls require three ingredients:"
+				""
+				"- Lever"
+				""
+				"- Train Casing"
+				""
+				"- Precision Mechanism"
+				""
+				"Train Casing requires Brass Casing and Sturdy Sheets to be automated."
+				"{@pagebreak}"
+				"An excess of Sturdy Sheets is needed for the Sturdy Sheet Singularity."
+				""
+				"Should be simple to make or collect lava. It can come from a bottomless pit or from the Nether via trains."
+				"{@pagebreak}"
+				"Tracks require a steady supply of Stone Slabs and Iron / Zinc Nuggets."
+				""
+				"Stone Slabs can be automatically made through the use of Mechanical Saws and setting a filter on them to make Stone Slabs only."
+				""
+				"Iron Nuggets can be made from iron farms or from washing Gravel."
+			]
+			id: "10054C388CEE0ED2"
+			subtitle: "Logistics."
+			tasks: [{
+				id: "2EDC40CFF432C9EA"
+				item: "kubejs:logistics_mechanism"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["74B663ECEB73BDAD"]
+			id: "42A20FC72E05B9A1"
+			subtitle: "Knowledge."
+			tasks: [{
+				id: "16458175D4A90EE9"
+				item: "kubejs:ascendant_mechanism"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"10054C388CEE0ED2"
+				"42A20FC72E05B9A1"
+				"59FA36654CE2336F"
+				"3D52A8726183B5E7"
+				"52214F2FCA4320D8"
+				"46CC293113919549"
+				"096607C7E76BC8E0"
+				"0F2E1642DE6351F0"
+				"1931C14E59DA34DA"
+			]
+			description: [
+				"Make this, then crush it repeatedly to get &dUnstable Entropy Particles&r."
+				""
+				"Please return to the primary Epligue quest tree."
+			]
+			id: "77575114FBBFFD36"
+			subtitle: "Stage 0."
+			tasks: [{
+				id: "262C707BDD865FAC"
+				item: "kubejs:final_singularity_stage_nulla"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.5d
+		}
+	]
+	subtitle: ["Consolidated precision."]
+	title: "Primordial Mechanisms"
+}

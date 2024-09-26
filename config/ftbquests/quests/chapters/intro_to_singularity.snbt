@@ -43,7 +43,8 @@
 				""
 				"Tips for using &l&7REI&r are on the next few pages in addition to &eLootr&r chest info. Just don't say I didn't warn you if your Lootr chest blows up."
 				"{@pagebreak}"
-				"&l&7Roughly Enough Items&r &l&aTips and Tricks&r"
+				"&l&7Roughly Enough Items&r / &l&2Just Enough Items&r"
+				"&l&aTips and Tricks&r"
 				""
 				"There's a lot of things to unpack here. Don't forget to scroll!"
 				""
@@ -60,6 +61,7 @@
 				"- To search by mod, use &d@&r then type the modid of that mod. Examples: &d@create&r or &d@createaddition&r or &d@extendedcrafting&r"
 				""
 				"- To search by tags, use &e#&r then type the item tag you want to look up. Examples: &e#wood&r or &e#planks&r"
+				"However, if using JEI use &b$&r instead."
 				""
 				"Addtional REI information can be found on the next page."
 				"{@pagebreak}"
@@ -485,18 +487,13 @@
 					item: "minecraft:fletching_table"
 					type: "item"
 				}
-				{
-					id: "59830CD9B1FC39DE"
-					item: "refurbished_furniture:post_box"
-					type: "item"
-				}
 			]
 			title: "Convenient Utilities Ch.2"
 			x: 0.0d
 			y: 6.0d
 		}
 		{
-			dependencies: ["2EF808209CCECE6A"]
+			dependencies: ["1E4655B38C025E5A"]
 			description: [
 				"&lThis quest node description has multiple pages that contain information for each item that does not explain its use through a tooltip.&r"
 				""
@@ -532,7 +529,11 @@
 				"{@pagebreak}"
 				"The &aCreate Chunk Loader&r makes it so that trains and moving contraptions are able to load chunks themselves instead of using an incompatible stationary chunk loader."
 			]
-			icon: "tempad:tempad"
+			icon: {
+				Count: 1
+				id: "tempad:tempad"
+				tag: { }
+			}
 			id: "5E5E9241EB84A4E9"
 			rewards: [
 				{
@@ -626,7 +627,7 @@
 			]
 			title: "Convenient Utilities Ch.3"
 			x: 0.0d
-			y: 7.5d
+			y: 9.0d
 		}
 		{
 			dependencies: ["5E5E9241EB84A4E9"]
@@ -656,7 +657,7 @@
 			}]
 			title: "He who remains..."
 			x: 0.0d
-			y: 9.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["0AE06EB85B6E1CB6"]
@@ -1002,8 +1003,8 @@
 				}
 			]
 			title: "A Heads Up: Infinite Materials"
-			x: -1.5d
-			y: 4.5d
+			x: 1.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["2FF7795C03DDC67B"]
@@ -1103,8 +1104,8 @@
 				}
 			]
 			title: "Menu Music Discs"
-			x: -3.0d
-			y: 4.5d
+			x: -1.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["03F919758AA7E318"]
@@ -1189,8 +1190,73 @@
 				}
 			]
 			title: "Aleki's Ships - Boats for All!"
-			x: 3.0d
+			x: 1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2EF808209CCECE6A"]
+			description: [
+				"Create's Blocks of Experience can make netherite, iridum and high entropy alloy tools unbreakable."
+				""
+				"However, this will also reset them back to their default state so please ensure that you have copies of your enchantments on hand before doing so!"
+			]
+			id: "1E4655B38C025E5A"
+			shape: "rsquare"
+			subtitle: "Eternity."
+			tasks: [{
+				id: "4B3ED203E51FE732"
+				item: "create:experience_block"
+				type: "item"
+			}]
+			title: "Unbreakable!"
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["03F919758AA7E318"]
+			description: ["Collecting Archwood will unlock visibility for the Ars Nouveau quest tree for guidance."]
+			id: "28C6D239ADB777CF"
+			shape: "rsquare"
+			subtitle: "That's a strange tree..."
+			tasks: [{
+				id: "258CE46FB4B54B18"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:logs/archwood"
+					}
+				}
+				title: "Any #forge:logs/archwood"
+				type: "item"
+			}]
+			title: "Archwood"
+			x: -1.5d
 			y: 4.5d
+		}
+		{
+			dependencies: ["13186E7B0D6B6115"]
+			description: [
+				"Observing this block will unlock visibility for the AE2 quest tree for guidance."
+				""
+				"However, it is highly recommended to learn Create and Ars Nouveau first as both mods are required in making AE2 items and blocks."
+				""
+				"Automation of &dIridium&r is also required."
+			]
+			id: "1677FFD8F720E6B2"
+			shape: "rsquare"
+			subtitle: "You stumble across a meteor. What's inside it?"
+			tasks: [{
+				icon: "ae2:mysterious_cube"
+				id: "489E4156AFBFC227"
+				observe_type: 0
+				timer: 0L
+				to_observe: "ae2:mysterious_cube"
+				type: "observation"
+			}]
+			title: "The Mysterious Cube"
+			x: -1.5d
+			y: 6.0d
 		}
 	]
 	subtitle: ["This chapter serves both as an introduction and some awareness of utilities."]

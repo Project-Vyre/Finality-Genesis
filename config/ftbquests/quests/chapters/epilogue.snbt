@@ -2,7 +2,7 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "rsquare"
 	filename: "epilogue"
-	group: ""
+	group: "27FA2F2536E0CFEE"
 	icon: "kubejs:final_singularity_stage_three"
 	id: "3D91EE1209DFA21C"
 	images: [{
@@ -13,7 +13,7 @@
 		x: 0.0d
 		y: 0.0d
 	}]
-	order_index: 2
+	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
@@ -22,12 +22,37 @@
 				"38E2EE3F3F2C2E6C"
 				"2FF7795C03DDC67B"
 			]
+			dependency_requirement: "one_completed"
 			description: [
-				"In all seriousness, good luck."
+				"In all seriousness, good luck. This quest tree is a general overview of what needs to be done."
+				""
+				"Seeing this quest node assumes you have made at least completed ONE of the quest nodes that require any of the following items:"
+				""
+				"- Mechanical Crafters"
+				""
+				"- Powdered Obsidian and Crushing Wheels"
+				""
+				"- Encased Fans"
+				""
+				"Additional quest trees have been made in this chapter group as well to provide more direct guidance."
+				""
+				"The next pages contain hints on what to do to make the &dWorldshaper&r which is the end goal to prove your ability in independent thinking."
+				""
+				"Please note that some processes have been made easier due to players complaining it takes too much effort. Well, I guess it's my bad for wanting to have my own take of Satisfactory, Factorio and shapez.io that I kept thinking out while sleeping."
 				""
 				"-+-"
 				""
-				"I am sorry that the background image doesn't align to the quest nodes 100% but it's a bit difficult with the scaling and grid differences."
+				"Also, I am sorry that the background image doesn't align to the quest nodes 100% but it's a bit difficult with the scaling and grid differences."
+				"{@pagebreak}"
+				"Here is what you need to do in text form:"
+				""
+				"Once you have automated &dAwakened Singularity Cores&r and &ePrecision Mechanisms&r, focus on automating the majority of singularities. However, not all of them are required and will change depending on what variation of the modpack you are playing on."
+				""
+				"&bBlue Ice Singularities&r are important in making &bCondensed Universal Order&r which is used to stabilize &dUnstable Entropy Particles&r. However, it is important to note that &bC.U.O&r can be made bottomless with the use of a Hose Pulley. Please read the tooltip for the Hose Pulley for the specifics."
+				""
+				"For the Precision Mechanisms used in making the Primordial Mechanisms, certain singularities and items need to be used in making them. Refer to the available recipe viewer of your choice to determine what is needed to make them. "
+				" "
+				"{ \"text\": \"See Primordial Mechanisms by clicking this text for a more detailed overview.\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"74B663ECEB73BDAD\" } }"
 			]
 			id: "7BFEF80899790FC7"
 			rewards: [{
