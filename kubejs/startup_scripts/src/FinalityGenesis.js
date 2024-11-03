@@ -1,0 +1,1 @@
+Platform.setModName('KubeJS', 'FinalityJS')
